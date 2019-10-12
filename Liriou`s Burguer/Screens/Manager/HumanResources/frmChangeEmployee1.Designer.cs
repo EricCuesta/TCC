@@ -509,6 +509,7 @@
             this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgMinimizar.TabIndex = 346;
             this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
             // 
             // imgVoltar
             // 
@@ -520,6 +521,7 @@
             this.imgVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgVoltar.TabIndex = 304;
             this.imgVoltar.TabStop = false;
+            this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
             // 
             // frmChangeEmployee1
             // 

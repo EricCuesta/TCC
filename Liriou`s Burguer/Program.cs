@@ -16,7 +16,7 @@ namespace Liriou_s_Burguer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Screens.frmSplash());
         }
     }
 }

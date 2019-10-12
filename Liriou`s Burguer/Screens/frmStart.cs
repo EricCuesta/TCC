@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Liriou_s_Burguer.Screens.Manager
+namespace Liriou_s_Burguer.Screens
 {
     public partial class frmStart : Form
     {

@@ -134,6 +134,7 @@
             this.menuInício.Name = "menuInício";
             this.menuInício.Size = new System.Drawing.Size(63, 25);
             this.menuInício.Text = "Início";
+            this.menuInício.Click += new System.EventHandler(this.menuInício_Click);
             // 
             // menuRH
             // 
@@ -157,6 +158,7 @@
             this.cadastrarFuncionárioToolStripMenuItem.Name = "cadastrarFuncionárioToolStripMenuItem";
             this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.cadastrarFuncionárioToolStripMenuItem.Text = "Cadastrar Funcionário";
+            this.cadastrarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFuncionárioToolStripMenuItem_Click);
             // 
             // consultarFuncionárioToolStripMenuItem
             // 
@@ -165,6 +167,7 @@
             this.consultarFuncionárioToolStripMenuItem.Name = "consultarFuncionárioToolStripMenuItem";
             this.consultarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.consultarFuncionárioToolStripMenuItem.Text = "Consultar Funcionário";
+            this.consultarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.consultarFuncionárioToolStripMenuItem_Click);
             // 
             // alterarFuncionárioToolStripMenuItem
             // 
@@ -173,6 +176,7 @@
             this.alterarFuncionárioToolStripMenuItem.Name = "alterarFuncionárioToolStripMenuItem";
             this.alterarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.alterarFuncionárioToolStripMenuItem.Text = "Alterar Funcionário";
+            this.alterarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.alterarFuncionárioToolStripMenuItem_Click);
             // 
             // demitirFuncionárioToolStripMenuItem
             // 
@@ -181,6 +185,7 @@
             this.demitirFuncionárioToolStripMenuItem.Name = "demitirFuncionárioToolStripMenuItem";
             this.demitirFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.demitirFuncionárioToolStripMenuItem.Text = "Demitir Funcionário";
+            this.demitirFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.demitirFuncionárioToolStripMenuItem_Click);
             // 
             // consultarCartãoDePontoToolStripMenuItem
             // 
@@ -189,6 +194,7 @@
             this.consultarCartãoDePontoToolStripMenuItem.Name = "consultarCartãoDePontoToolStripMenuItem";
             this.consultarCartãoDePontoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.consultarCartãoDePontoToolStripMenuItem.Text = "Consultar Cartão de Ponto";
+            this.consultarCartãoDePontoToolStripMenuItem.Click += new System.EventHandler(this.consultarCartãoDePontoToolStripMenuItem_Click);
             // 
             // MenuFinanceiro
             // 
@@ -703,20 +709,20 @@
             this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgMinimizar.TabIndex = 252;
             this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
             // 
             // imgFechar
             // 
             this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imgFechar.BackColor = System.Drawing.Color.Transparent;
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
             this.imgFechar.Location = new System.Drawing.Point(771, 31);
             this.imgFechar.Name = "imgFechar";
             this.imgFechar.Size = new System.Drawing.Size(25, 25);
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 251;
+            this.imgFechar.TabIndex = 253;
             this.imgFechar.TabStop = false;
-            this.imgFechar.UseWaitCursor = true;
             // 
             // frmPayroll
             // 
@@ -724,8 +730,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.imgFechar);
+            this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MenuLiriousBurger);
             this.Controls.Add(this.btnCalcular);
@@ -773,7 +779,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip MenuLiriousBurger;
         private System.Windows.Forms.ToolStripMenuItem menuInício;
@@ -831,5 +836,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblFolhaDePagamento;
+        private System.Windows.Forms.PictureBox imgFechar;
     }
 }

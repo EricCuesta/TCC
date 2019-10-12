@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagerMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.imgMinimizar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.imgMenu = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -42,7 +46,7 @@
             this.btnFinanceiro = new System.Windows.Forms.Button();
             this.panelSubMenuRecursosHumanos = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsultarCartãoDePonto = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnConsultarFuncionário = new System.Windows.Forms.Button();
@@ -56,32 +60,28 @@
             this.panel10 = new System.Windows.Forms.Panel();
             this.btnRecursosHumanos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.imgFechar = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.imgMenu = new System.Windows.Forms.PictureBox();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
+            this.imgFechar = new System.Windows.Forms.PictureBox();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMenu)).BeginInit();
             this.MenuVertical.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panelSubMenuRecursosHumanos.SuspendLayout();
             this.panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
             // 
             this.BarraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.BarraTitulo.Controls.Add(this.imgMinimizar);
             this.BarraTitulo.Controls.Add(this.imgFechar);
+            this.BarraTitulo.Controls.Add(this.imgMinimizar);
             this.BarraTitulo.Controls.Add(this.pictureBox1);
             this.BarraTitulo.Controls.Add(this.pictureBox2);
             this.BarraTitulo.Controls.Add(this.imgMenu);
@@ -90,6 +90,55 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(535, 50);
             this.BarraTitulo.TabIndex = 12;
+            // 
+            // imgMinimizar
+            // 
+            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
+            this.imgMinimizar.Location = new System.Drawing.Point(475, 4);
+            this.imgMinimizar.Name = "imgMinimizar";
+            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgMinimizar.TabIndex = 12;
+            this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(1031, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(1057, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
+            // imgMenu
+            // 
+            this.imgMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgMenu.Image = global::Liriou_s_Burguer.Properties.Resources.Menu;
+            this.imgMenu.Location = new System.Drawing.Point(6, 7);
+            this.imgMenu.Name = "imgMenu";
+            this.imgMenu.Size = new System.Drawing.Size(35, 35);
+            this.imgMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgMenu.TabIndex = 0;
+            this.imgMenu.TabStop = false;
+            this.imgMenu.Click += new System.EventHandler(this.imgMenu_Click);
             // 
             // MenuVertical
             // 
@@ -222,7 +271,7 @@
             // 
             this.panelSubMenuRecursosHumanos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panelSubMenuRecursosHumanos.Controls.Add(this.panel14);
-            this.panelSubMenuRecursosHumanos.Controls.Add(this.button1);
+            this.panelSubMenuRecursosHumanos.Controls.Add(this.btnConsultarCartãoDePonto);
             this.panelSubMenuRecursosHumanos.Controls.Add(this.panel4);
             this.panelSubMenuRecursosHumanos.Controls.Add(this.panel3);
             this.panelSubMenuRecursosHumanos.Controls.Add(this.btnConsultarFuncionário);
@@ -248,23 +297,24 @@
             this.panel14.Size = new System.Drawing.Size(5, 22);
             this.panel14.TabIndex = 4;
             // 
-            // button1
+            // btnConsultarCartãoDePonto
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(58, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 22);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Consultar Cartão de Ponto";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnConsultarCartãoDePonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConsultarCartãoDePonto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarCartãoDePonto.FlatAppearance.BorderSize = 0;
+            this.btnConsultarCartãoDePonto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultarCartãoDePonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnConsultarCartãoDePonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCartãoDePonto.Font = new System.Drawing.Font("Century Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCartãoDePonto.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarCartãoDePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarCartãoDePonto.Location = new System.Drawing.Point(58, 138);
+            this.btnConsultarCartãoDePonto.Name = "btnConsultarCartãoDePonto";
+            this.btnConsultarCartãoDePonto.Size = new System.Drawing.Size(189, 22);
+            this.btnConsultarCartãoDePonto.TabIndex = 21;
+            this.btnConsultarCartãoDePonto.Text = "Consultar Cartão de Ponto";
+            this.btnConsultarCartãoDePonto.UseVisualStyleBackColor = false;
+            this.btnConsultarCartãoDePonto.Click += new System.EventHandler(this.btnConsultarCartãoDePonto_Click);
             // 
             // panel4
             // 
@@ -299,6 +349,7 @@
             this.btnConsultarFuncionário.TabIndex = 13;
             this.btnConsultarFuncionário.Text = "Consultar Funcionário";
             this.btnConsultarFuncionário.UseVisualStyleBackColor = false;
+            this.btnConsultarFuncionário.Click += new System.EventHandler(this.btnConsultarFuncionário_Click);
             // 
             // panel6
             // 
@@ -325,6 +376,7 @@
             this.btnAlterarFuncionário.TabIndex = 14;
             this.btnAlterarFuncionário.Text = "Alterar Funcionário";
             this.btnAlterarFuncionário.UseVisualStyleBackColor = false;
+            this.btnAlterarFuncionário.Click += new System.EventHandler(this.btnAlterarFuncionário_Click);
             // 
             // panel5
             // 
@@ -351,6 +403,7 @@
             this.btnDemitirFuncionário.TabIndex = 15;
             this.btnDemitirFuncionário.Text = "Demitir Funcionário";
             this.btnDemitirFuncionário.UseVisualStyleBackColor = false;
+            this.btnDemitirFuncionário.Click += new System.EventHandler(this.btnDemitirFuncionário_Click);
             // 
             // panel2
             // 
@@ -377,6 +430,7 @@
             this.btnFolhaDePagamento.TabIndex = 16;
             this.btnFolhaDePagamento.Text = "Folha de Pagamento";
             this.btnFolhaDePagamento.UseVisualStyleBackColor = false;
+            this.btnFolhaDePagamento.Click += new System.EventHandler(this.btnFolhaDePagamento_Click);
             // 
             // btnCadastrarFuncionário
             // 
@@ -395,6 +449,7 @@
             this.btnCadastrarFuncionário.TabIndex = 11;
             this.btnCadastrarFuncionário.Text = "Cadastrar Funcionário";
             this.btnCadastrarFuncionário.UseVisualStyleBackColor = false;
+            this.btnCadastrarFuncionário.Click += new System.EventHandler(this.btnCadastrarFuncionário_Click);
             // 
             // panel10
             // 
@@ -424,6 +479,7 @@
             this.btnRecursosHumanos.TabIndex = 0;
             this.btnRecursosHumanos.Text = "Recursos Humanos";
             this.btnRecursosHumanos.UseVisualStyleBackColor = false;
+            this.btnRecursosHumanos.Click += new System.EventHandler(this.btnRecursosHumanos_Click);
             // 
             // panel1
             // 
@@ -432,66 +488,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(5, 26);
             this.panel1.TabIndex = 12;
-            // 
-            // imgMinimizar
-            // 
-            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(475, 4);
-            this.imgMinimizar.Name = "imgMinimizar";
-            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 12;
-            this.imgMinimizar.TabStop = false;
-            // 
-            // imgFechar
-            // 
-            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
-            this.imgFechar.Location = new System.Drawing.Point(506, 4);
-            this.imgFechar.Name = "imgFechar";
-            this.imgFechar.Size = new System.Drawing.Size(25, 25);
-            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 11;
-            this.imgFechar.TabStop = false;
-            this.imgFechar.UseWaitCursor = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1031, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1057, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // imgMenu
-            // 
-            this.imgMenu.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMenu.Image = global::Liriou_s_Burguer.Properties.Resources.Menu;
-            this.imgMenu.Location = new System.Drawing.Point(6, 7);
-            this.imgMenu.Name = "imgMenu";
-            this.imgMenu.Size = new System.Drawing.Size(35, 35);
-            this.imgMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMenu.TabIndex = 0;
-            this.imgMenu.TabStop = false;
             // 
             // imgLogotipo
             // 
@@ -502,6 +498,19 @@
             this.imgLogotipo.Size = new System.Drawing.Size(265, 81);
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;
+            // 
+            // imgFechar
+            // 
+            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
+            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
+            this.imgFechar.Location = new System.Drawing.Point(506, 4);
+            this.imgFechar.Name = "imgFechar";
+            this.imgFechar.Size = new System.Drawing.Size(25, 25);
+            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFechar.TabIndex = 254;
+            this.imgFechar.TabStop = false;
             // 
             // frmManagerMenu
             // 
@@ -516,18 +525,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager Menu";
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMenu)).EndInit();
             this.MenuVertical.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panelSubMenuRecursosHumanos.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -536,7 +545,6 @@
 
         private System.Windows.Forms.Panel BarraTitulo;
         private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox imgMenu;
@@ -552,7 +560,7 @@
         private System.Windows.Forms.Button btnFinanceiro;
         private System.Windows.Forms.Panel panelSubMenuRecursosHumanos;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsultarCartãoDePonto;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnConsultarFuncionário;
@@ -567,5 +575,6 @@
         private System.Windows.Forms.Button btnRecursosHumanos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox imgLogotipo;
+        private System.Windows.Forms.PictureBox imgFechar;
     }
 }

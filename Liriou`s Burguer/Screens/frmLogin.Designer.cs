@@ -1,4 +1,4 @@
-﻿namespace Liriou_s_Burguer.Screens.Manager
+﻿namespace Liriou_s_Burguer.Screens
 {
     partial class frmLogin
     {
@@ -35,17 +35,17 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgSenha = new System.Windows.Forms.PictureBox();
             this.imgEmail = new System.Windows.Forms.PictureBox();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
+            this.imgFechar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,21 +133,6 @@
             this.imgMinimizar.TabStop = false;
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
             // 
-            // imgFechar
-            // 
-            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar01;
-            this.imgFechar.Location = new System.Drawing.Point(368, 6);
-            this.imgFechar.Name = "imgFechar";
-            this.imgFechar.Size = new System.Drawing.Size(25, 25);
-            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 244;
-            this.imgFechar.TabStop = false;
-            this.imgFechar.UseWaitCursor = true;
-            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
-            // 
             // imgSenha
             // 
             this.imgSenha.Image = global::Liriou_s_Burguer.Properties.Resources.Senha;
@@ -172,9 +157,22 @@
             // 
             this.imgLogotipo.Location = new System.Drawing.Point(7, 37);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(386, 219);
+            this.imgLogotipo.Size = new System.Drawing.Size(386, 227);
             this.imgLogotipo.TabIndex = 235;
             this.imgLogotipo.TabStop = false;
+            // 
+            // imgFechar
+            // 
+            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
+            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar01;
+            this.imgFechar.Location = new System.Drawing.Point(368, 6);
+            this.imgFechar.Name = "imgFechar";
+            this.imgFechar.Size = new System.Drawing.Size(25, 25);
+            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFechar.TabIndex = 246;
+            this.imgFechar.TabStop = false;
             // 
             // frmLogin
             // 
@@ -182,8 +180,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(400, 500);
-            this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.imgFechar);
+            this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
@@ -200,10 +198,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,7 +210,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtEmail;
@@ -222,5 +219,6 @@
         private System.Windows.Forms.PictureBox imgSenha;
         private System.Windows.Forms.PictureBox imgEmail;
         private System.Windows.Forms.PictureBox imgLogotipo;
+        private System.Windows.Forms.PictureBox imgFechar;
     }
 }

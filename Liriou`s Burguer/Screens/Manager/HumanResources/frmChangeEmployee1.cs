@@ -16,5 +16,17 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             InitializeComponent();
         }
+
+        private void imgVoltar_Click(object sender, EventArgs e)
+        {
+            frmChangeEmployee changeEmployee = new frmChangeEmployee();
+            changeEmployee.Show();
+            Hide();
+        }
+
+        private void imgMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
