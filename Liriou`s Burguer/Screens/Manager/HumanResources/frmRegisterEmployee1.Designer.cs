@@ -132,7 +132,7 @@
             // nudFGTS
             // 
             this.nudFGTS.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudFGTS.Location = new System.Drawing.Point(490, 129);
+            this.nudFGTS.Location = new System.Drawing.Point(492, 129);
             this.nudFGTS.Name = "nudFGTS";
             this.nudFGTS.Size = new System.Drawing.Size(298, 23);
             this.nudFGTS.TabIndex = 389;
@@ -140,7 +140,7 @@
             // nudINSS
             // 
             this.nudINSS.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudINSS.Location = new System.Drawing.Point(489, 97);
+            this.nudINSS.Location = new System.Drawing.Point(491, 97);
             this.nudINSS.Name = "nudINSS";
             this.nudINSS.Size = new System.Drawing.Size(299, 23);
             this.nudINSS.TabIndex = 388;
@@ -148,7 +148,7 @@
             // nupPensãoAlimentícia
             // 
             this.nupPensãoAlimentícia.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nupPensãoAlimentícia.Location = new System.Drawing.Point(183, 129);
+            this.nupPensãoAlimentícia.Location = new System.Drawing.Point(185, 129);
             this.nupPensãoAlimentícia.Name = "nupPensãoAlimentícia";
             this.nupPensãoAlimentícia.Size = new System.Drawing.Size(210, 23);
             this.nupPensãoAlimentícia.TabIndex = 387;
@@ -156,7 +156,7 @@
             // nudImpostoDeRenda
             // 
             this.nudImpostoDeRenda.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudImpostoDeRenda.Location = new System.Drawing.Point(177, 97);
+            this.nudImpostoDeRenda.Location = new System.Drawing.Point(179, 97);
             this.nudImpostoDeRenda.Name = "nudImpostoDeRenda";
             this.nudImpostoDeRenda.Size = new System.Drawing.Size(216, 23);
             this.nudImpostoDeRenda.TabIndex = 386;
@@ -164,7 +164,7 @@
             // txtTérminoIntervalo
             // 
             this.txtTérminoIntervalo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTérminoIntervalo.Location = new System.Drawing.Point(548, 197);
+            this.txtTérminoIntervalo.Location = new System.Drawing.Point(550, 197);
             this.txtTérminoIntervalo.Mask = "00:00";
             this.txtTérminoIntervalo.Name = "txtTérminoIntervalo";
             this.txtTérminoIntervalo.Size = new System.Drawing.Size(40, 23);
@@ -175,7 +175,7 @@
             // txtTérminoServiço
             // 
             this.txtTérminoServiço.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTérminoServiço.Location = new System.Drawing.Point(748, 197);
+            this.txtTérminoServiço.Location = new System.Drawing.Point(750, 197);
             this.txtTérminoServiço.Mask = "00:00";
             this.txtTérminoServiço.Name = "txtTérminoServiço";
             this.txtTérminoServiço.Size = new System.Drawing.Size(40, 23);
@@ -186,7 +186,7 @@
             // txtInícioIntervalo
             // 
             this.txtInícioIntervalo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInícioIntervalo.Location = new System.Drawing.Point(335, 197);
+            this.txtInícioIntervalo.Location = new System.Drawing.Point(337, 197);
             this.txtInícioIntervalo.Mask = "00:00";
             this.txtInícioIntervalo.Name = "txtInícioIntervalo";
             this.txtInícioIntervalo.Size = new System.Drawing.Size(40, 23);
@@ -198,7 +198,7 @@
             // 
             this.lblTérminoServiço.AutoSize = true;
             this.lblTérminoServiço.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTérminoServiço.Location = new System.Drawing.Point(600, 199);
+            this.lblTérminoServiço.Location = new System.Drawing.Point(602, 199);
             this.lblTérminoServiço.Name = "lblTérminoServiço";
             this.lblTérminoServiço.Size = new System.Drawing.Size(143, 19);
             this.lblTérminoServiço.TabIndex = 382;
@@ -208,7 +208,7 @@
             // 
             this.dataGridView6.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(592, 194);
+            this.dataGridView6.Location = new System.Drawing.Point(594, 194);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 30);
             this.dataGridView6.TabIndex = 381;
@@ -217,7 +217,7 @@
             // 
             this.lblTérminoIntervalo.AutoSize = true;
             this.lblTérminoIntervalo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTérminoIntervalo.Location = new System.Drawing.Point(387, 199);
+            this.lblTérminoIntervalo.Location = new System.Drawing.Point(389, 199);
             this.lblTérminoIntervalo.Name = "lblTérminoIntervalo";
             this.lblTérminoIntervalo.Size = new System.Drawing.Size(155, 19);
             this.lblTérminoIntervalo.TabIndex = 380;
@@ -227,7 +227,7 @@
             // 
             this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(379, 194);
+            this.dataGridView5.Location = new System.Drawing.Point(381, 194);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(2, 30);
             this.dataGridView5.TabIndex = 379;
@@ -236,7 +236,7 @@
             // 
             this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(-2, 192);
+            this.dataGridView4.Location = new System.Drawing.Point(0, 192);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(800, 2);
             this.dataGridView4.TabIndex = 378;
@@ -245,7 +245,7 @@
             // 
             this.lblInícioIntervalo.AutoSize = true;
             this.lblInícioIntervalo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInícioIntervalo.Location = new System.Drawing.Point(193, 199);
+            this.lblInícioIntervalo.Location = new System.Drawing.Point(195, 199);
             this.lblInícioIntervalo.Name = "lblInícioIntervalo";
             this.lblInícioIntervalo.Size = new System.Drawing.Size(136, 19);
             this.lblInícioIntervalo.TabIndex = 377;
@@ -255,7 +255,7 @@
             // 
             this.lblInícioServiço.AutoSize = true;
             this.lblInícioServiço.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInícioServiço.Location = new System.Drawing.Point(11, 199);
+            this.lblInícioServiço.Location = new System.Drawing.Point(13, 199);
             this.lblInícioServiço.Name = "lblInícioServiço";
             this.lblInícioServiço.Size = new System.Drawing.Size(124, 19);
             this.lblInícioServiço.TabIndex = 376;
@@ -264,7 +264,7 @@
             // txtInícioServiço
             // 
             this.txtInícioServiço.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtInícioServiço.Location = new System.Drawing.Point(141, 197);
+            this.txtInícioServiço.Location = new System.Drawing.Point(143, 197);
             this.txtInícioServiço.Mask = "00:00";
             this.txtInícioServiço.Name = "txtInícioServiço";
             this.txtInícioServiço.Size = new System.Drawing.Size(40, 23);
@@ -276,7 +276,7 @@
             // 
             this.lblHorário.AutoSize = true;
             this.lblHorário.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorário.Location = new System.Drawing.Point(10, 162);
+            this.lblHorário.Location = new System.Drawing.Point(12, 162);
             this.lblHorário.Name = "lblHorário";
             this.lblHorário.Size = new System.Drawing.Size(86, 26);
             this.lblHorário.TabIndex = 374;
@@ -286,7 +286,7 @@
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(-2, 224);
+            this.dataGridView3.Location = new System.Drawing.Point(0, 224);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(800, 2);
             this.dataGridView3.TabIndex = 373;
@@ -295,7 +295,7 @@
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(185, 194);
+            this.dataGridView2.Location = new System.Drawing.Point(187, 194);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 372;
@@ -304,7 +304,7 @@
             // 
             this.lblINSS.AutoSize = true;
             this.lblINSS.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblINSS.Location = new System.Drawing.Point(407, 99);
+            this.lblINSS.Location = new System.Drawing.Point(409, 99);
             this.lblINSS.Name = "lblINSS";
             this.lblINSS.Size = new System.Drawing.Size(76, 19);
             this.lblINSS.TabIndex = 371;
@@ -314,7 +314,7 @@
             // 
             this.lblFGTS.AutoSize = true;
             this.lblFGTS.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFGTS.Location = new System.Drawing.Point(405, 131);
+            this.lblFGTS.Location = new System.Drawing.Point(407, 131);
             this.lblFGTS.Name = "lblFGTS";
             this.lblFGTS.Size = new System.Drawing.Size(79, 19);
             this.lblFGTS.TabIndex = 370;
@@ -324,7 +324,7 @@
             // 
             this.lblPensãoAlimentícia.AutoSize = true;
             this.lblPensãoAlimentícia.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPensãoAlimentícia.Location = new System.Drawing.Point(11, 131);
+            this.lblPensãoAlimentícia.Location = new System.Drawing.Point(13, 131);
             this.lblPensãoAlimentícia.Name = "lblPensãoAlimentícia";
             this.lblPensãoAlimentícia.Size = new System.Drawing.Size(166, 19);
             this.lblPensãoAlimentícia.TabIndex = 369;
@@ -334,7 +334,7 @@
             // 
             this.dataGridView26.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView26.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView26.Location = new System.Drawing.Point(-2, 156);
+            this.dataGridView26.Location = new System.Drawing.Point(0, 156);
             this.dataGridView26.Name = "dataGridView26";
             this.dataGridView26.Size = new System.Drawing.Size(800, 2);
             this.dataGridView26.TabIndex = 368;
@@ -343,7 +343,7 @@
             // 
             this.lblImpostoDeRenda.AutoSize = true;
             this.lblImpostoDeRenda.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImpostoDeRenda.Location = new System.Drawing.Point(11, 99);
+            this.lblImpostoDeRenda.Location = new System.Drawing.Point(13, 99);
             this.lblImpostoDeRenda.Name = "lblImpostoDeRenda";
             this.lblImpostoDeRenda.Size = new System.Drawing.Size(160, 19);
             this.lblImpostoDeRenda.TabIndex = 367;
@@ -353,7 +353,7 @@
             // 
             this.dataGridView24.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView24.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView24.Location = new System.Drawing.Point(399, 126);
+            this.dataGridView24.Location = new System.Drawing.Point(401, 126);
             this.dataGridView24.Name = "dataGridView24";
             this.dataGridView24.Size = new System.Drawing.Size(2, 30);
             this.dataGridView24.TabIndex = 366;
@@ -362,7 +362,7 @@
             // 
             this.dataGridView23.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView23.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView23.Location = new System.Drawing.Point(399, 94);
+            this.dataGridView23.Location = new System.Drawing.Point(401, 94);
             this.dataGridView23.Name = "dataGridView23";
             this.dataGridView23.Size = new System.Drawing.Size(2, 30);
             this.dataGridView23.TabIndex = 365;
@@ -371,7 +371,7 @@
             // 
             this.dataGridView22.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView22.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView22.Location = new System.Drawing.Point(-2, 124);
+            this.dataGridView22.Location = new System.Drawing.Point(0, 124);
             this.dataGridView22.Name = "dataGridView22";
             this.dataGridView22.Size = new System.Drawing.Size(800, 2);
             this.dataGridView22.TabIndex = 364;
@@ -380,7 +380,7 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(667, 36);
+            this.lblCargo.Location = new System.Drawing.Point(669, 36);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(54, 19);
             this.lblCargo.TabIndex = 363;
@@ -390,7 +390,7 @@
             // 
             this.cboDepartamento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamento.FormattingEnabled = true;
-            this.cboDepartamento.Location = new System.Drawing.Point(410, 58);
+            this.cboDepartamento.Location = new System.Drawing.Point(412, 58);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(185, 23);
             this.cboDepartamento.TabIndex = 362;
@@ -399,7 +399,7 @@
             // 
             this.dataGridView17.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView17.Location = new System.Drawing.Point(601, 32);
+            this.dataGridView17.Location = new System.Drawing.Point(603, 32);
             this.dataGridView17.Name = "dataGridView17";
             this.dataGridView17.Size = new System.Drawing.Size(2, 60);
             this.dataGridView17.TabIndex = 361;
@@ -408,7 +408,7 @@
             // 
             this.cboCargo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(609, 58);
+            this.cboCargo.Location = new System.Drawing.Point(611, 58);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(179, 23);
             this.cboCargo.TabIndex = 360;
@@ -417,7 +417,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(451, 36);
+            this.lblDepartamento.Location = new System.Drawing.Point(453, 36);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(113, 19);
             this.lblDepartamento.TabIndex = 359;
@@ -427,7 +427,7 @@
             // 
             this.dataGridView16.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView16.Location = new System.Drawing.Point(399, 62);
+            this.dataGridView16.Location = new System.Drawing.Point(401, 62);
             this.dataGridView16.Name = "dataGridView16";
             this.dataGridView16.Size = new System.Drawing.Size(2, 30);
             this.dataGridView16.TabIndex = 358;
@@ -436,7 +436,7 @@
             // 
             this.dataGridView12.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Location = new System.Drawing.Point(399, 32);
+            this.dataGridView12.Location = new System.Drawing.Point(401, 32);
             this.dataGridView12.Name = "dataGridView12";
             this.dataGridView12.Size = new System.Drawing.Size(2, 30);
             this.dataGridView12.TabIndex = 357;
@@ -445,7 +445,7 @@
             // 
             this.dtpDemissão.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDemissão.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDemissão.Location = new System.Drawing.Point(151, 66);
+            this.dtpDemissão.Location = new System.Drawing.Point(153, 66);
             this.dtpDemissão.Name = "dtpDemissão";
             this.dtpDemissão.Size = new System.Drawing.Size(242, 23);
             this.dtpDemissão.TabIndex = 356;
@@ -454,7 +454,7 @@
             // 
             this.lblDemissão.AutoSize = true;
             this.lblDemissão.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDemissão.Location = new System.Drawing.Point(11, 67);
+            this.lblDemissão.Location = new System.Drawing.Point(13, 67);
             this.lblDemissão.Name = "lblDemissão";
             this.lblDemissão.Size = new System.Drawing.Size(134, 19);
             this.lblDemissão.TabIndex = 355;
@@ -464,7 +464,7 @@
             // 
             this.dataGridView14.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView14.Location = new System.Drawing.Point(-2, 92);
+            this.dataGridView14.Location = new System.Drawing.Point(0, 92);
             this.dataGridView14.Name = "dataGridView14";
             this.dataGridView14.Size = new System.Drawing.Size(800, 2);
             this.dataGridView14.TabIndex = 354;
@@ -473,7 +473,7 @@
             // 
             this.dtpContratação.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpContratação.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpContratação.Location = new System.Drawing.Point(170, 35);
+            this.dtpContratação.Location = new System.Drawing.Point(172, 35);
             this.dtpContratação.Name = "dtpContratação";
             this.dtpContratação.Size = new System.Drawing.Size(223, 23);
             this.dtpContratação.TabIndex = 353;
@@ -482,7 +482,7 @@
             // 
             this.lblContratação.AutoSize = true;
             this.lblContratação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContratação.Location = new System.Drawing.Point(11, 36);
+            this.lblContratação.Location = new System.Drawing.Point(13, 36);
             this.lblContratação.Name = "lblContratação";
             this.lblContratação.Size = new System.Drawing.Size(153, 19);
             this.lblContratação.TabIndex = 352;
@@ -492,7 +492,7 @@
             // 
             this.dataGridView15.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView15.Location = new System.Drawing.Point(-2, 61);
+            this.dataGridView15.Location = new System.Drawing.Point(0, 61);
             this.dataGridView15.Name = "dataGridView15";
             this.dataGridView15.Size = new System.Drawing.Size(401, 2);
             this.dataGridView15.TabIndex = 351;

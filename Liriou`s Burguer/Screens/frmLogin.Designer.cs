@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRecuperarSenha = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -48,17 +48,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lblRecuperarSenha
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label1.Location = new System.Drawing.Point(142, 480);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 15);
-            this.label1.TabIndex = 243;
-            this.label1.Text = "Esqueceu a senha?";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblRecuperarSenha.AutoSize = true;
+            this.lblRecuperarSenha.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecuperarSenha.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lblRecuperarSenha.Location = new System.Drawing.Point(142, 480);
+            this.lblRecuperarSenha.Name = "lblRecuperarSenha";
+            this.lblRecuperarSenha.Size = new System.Drawing.Size(105, 15);
+            this.lblRecuperarSenha.TabIndex = 243;
+            this.lblRecuperarSenha.Text = "Esqueceu a senha?";
+            this.lblRecuperarSenha.Click += new System.EventHandler(this.lblRecuperarSenha_Click);
             // 
             // txtEmail
             // 
@@ -187,7 +187,7 @@
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.imgMinimizar);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRecuperarSenha);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.dataGridView2);
@@ -214,7 +214,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblRecuperarSenha;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.DataGridView dataGridView2;

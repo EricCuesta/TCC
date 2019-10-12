@@ -17,13 +17,6 @@ namespace Liriou_s_Burguer.Screens
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            frmRecovery recovery = new frmRecovery();
-            recovery.Show();
-            Hide();
-        }
-
         private void imgMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -32,6 +25,13 @@ namespace Liriou_s_Burguer.Screens
         private void imgFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblRecuperarSenha_Click(object sender, EventArgs e)
+        {
+            frmRecovery recovery = new frmRecovery();
+            recovery.Show();
+            Hide();
         }
 
         private void txtEmail_Click(object sender, EventArgs e)

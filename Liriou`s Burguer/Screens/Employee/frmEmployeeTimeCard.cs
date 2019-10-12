@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Liriou_s_Burguer.Screens.Manager.HumanResources
+namespace Liriou_s_Burguer.Screens.Employee
 {
-    public partial class frmConsultTimeCard : Form
+    public partial class frmEmployeeTimeCard : Form
     {
-        public frmConsultTimeCard()
+        public frmEmployeeTimeCard()
         {
             InitializeComponent();
+        }
+
+        private void cartãoDePontoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmUnavailability unavailability = new frmUnavailability();
+            unavailability.Show();
+            Hide();
         }
 
         private void imgMinimizar_Click(object sender, EventArgs e)

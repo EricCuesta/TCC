@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagerMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -61,8 +62,8 @@
             this.btnRecursosHumanos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
-            this.imgFechar = new System.Windows.Forms.PictureBox();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -74,7 +75,6 @@
             this.panelSubMenuRecursosHumanos.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -90,6 +90,19 @@
             this.BarraTitulo.Name = "BarraTitulo";
             this.BarraTitulo.Size = new System.Drawing.Size(535, 50);
             this.BarraTitulo.TabIndex = 12;
+            // 
+            // imgFechar
+            // 
+            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
+            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
+            this.imgFechar.Location = new System.Drawing.Point(506, 4);
+            this.imgFechar.Name = "imgFechar";
+            this.imgFechar.Size = new System.Drawing.Size(25, 25);
+            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFechar.TabIndex = 254;
+            this.imgFechar.TabStop = false;
             // 
             // imgMinimizar
             // 
@@ -161,7 +174,7 @@
             this.panel13.Controls.Add(this.panel7);
             this.panel13.Controls.Add(this.btnSuprimentos);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 337);
+            this.panel13.Location = new System.Drawing.Point(0, 182);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(265, 32);
             this.panel13.TabIndex = 23;
@@ -198,7 +211,7 @@
             this.panel12.Controls.Add(this.panel9);
             this.panel12.Controls.Add(this.btnEstoque);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 306);
+            this.panel12.Location = new System.Drawing.Point(0, 151);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(265, 31);
             this.panel12.TabIndex = 22;
@@ -235,7 +248,7 @@
             this.panel11.Controls.Add(this.panel8);
             this.panel11.Controls.Add(this.btnFinanceiro);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 276);
+            this.panel11.Location = new System.Drawing.Point(0, 121);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(265, 30);
             this.panel11.TabIndex = 21;
@@ -285,7 +298,7 @@
             this.panelSubMenuRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 111);
             this.panelSubMenuRecursosHumanos.Name = "panelSubMenuRecursosHumanos";
-            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(265, 165);
+            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(265, 10);
             this.panelSubMenuRecursosHumanos.TabIndex = 20;
             this.panelSubMenuRecursosHumanos.Visible = false;
             // 
@@ -499,19 +512,6 @@
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;
             // 
-            // imgFechar
-            // 
-            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
-            this.imgFechar.Location = new System.Drawing.Point(506, 4);
-            this.imgFechar.Name = "imgFechar";
-            this.imgFechar.Size = new System.Drawing.Size(25, 25);
-            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 254;
-            this.imgFechar.TabStop = false;
-            // 
             // frmManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -525,6 +525,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Manager Menu";
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -536,7 +537,6 @@
             this.panelSubMenuRecursosHumanos.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             this.ResumeLayout(false);
 
         }

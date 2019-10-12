@@ -57,6 +57,25 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.lblDataDaFolha = new System.Windows.Forms.Label();
+            this.dtpDataDaFolha = new System.Windows.Forms.DateTimePicker();
+            this.lblHorárioDeTrabalho = new System.Windows.Forms.Label();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.lblInício = new System.Windows.Forms.Label();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.lblInícioTérminoDoIntervalo = new System.Windows.Forms.Label();
+            this.lblTérmino = new System.Windows.Forms.Label();
+            this.lblHorárioInício = new System.Windows.Forms.Label();
+            this.lblHorárioInícioTérminoDoIntervalo = new System.Windows.Forms.Label();
+            this.lblHorarioTérmino = new System.Windows.Forms.Label();
+            this.dgvConsultarCartãoDePonto = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             this.MenuLiriousBurger.SuspendLayout();
@@ -66,6 +85,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCartãoDePonto)).BeginInit();
             this.SuspendLayout();
             // 
             // imgFechar
@@ -80,6 +104,7 @@
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgFechar.TabIndex = 372;
             this.imgFechar.TabStop = false;
+            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
             // 
             // imgMinimizar
             // 
@@ -93,6 +118,7 @@
             this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgMinimizar.TabIndex = 371;
             this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
             // 
             // MenuLiriousBurger
             // 
@@ -326,7 +352,7 @@
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(-4, 155);
+            this.dataGridView3.Location = new System.Drawing.Point(0, 155);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(800, 2);
             this.dataGridView3.TabIndex = 385;
@@ -344,17 +370,196 @@
             // 
             this.lblDataDaFolha.AutoSize = true;
             this.lblDataDaFolha.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataDaFolha.Location = new System.Drawing.Point(492, 98);
+            this.lblDataDaFolha.Location = new System.Drawing.Point(585, 96);
             this.lblDataDaFolha.Name = "lblDataDaFolha";
             this.lblDataDaFolha.Size = new System.Drawing.Size(106, 19);
             this.lblDataDaFolha.TabIndex = 387;
             this.lblDataDaFolha.Text = "Data da Folha:";
+            // 
+            // dtpDataDaFolha
+            // 
+            this.dtpDataDaFolha.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataDaFolha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataDaFolha.Location = new System.Drawing.Point(577, 120);
+            this.dtpDataDaFolha.Name = "dtpDataDaFolha";
+            this.dtpDataDaFolha.Size = new System.Drawing.Size(114, 23);
+            this.dtpDataDaFolha.TabIndex = 500;
+            // 
+            // lblHorárioDeTrabalho
+            // 
+            this.lblHorárioDeTrabalho.AutoSize = true;
+            this.lblHorárioDeTrabalho.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorárioDeTrabalho.Location = new System.Drawing.Point(5, 167);
+            this.lblHorárioDeTrabalho.Name = "lblHorárioDeTrabalho";
+            this.lblHorárioDeTrabalho.Size = new System.Drawing.Size(61, 38);
+            this.lblHorárioDeTrabalho.TabIndex = 501;
+            this.lblHorárioDeTrabalho.Text = "Hor. De \r\n  Trab.";
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(72, 157);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(2, 60);
+            this.dataGridView6.TabIndex = 502;
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Location = new System.Drawing.Point(0, 217);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.Size = new System.Drawing.Size(800, 2);
+            this.dataGridView7.TabIndex = 503;
+            // 
+            // lblInício
+            // 
+            this.lblInício.AutoSize = true;
+            this.lblInício.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInício.Location = new System.Drawing.Point(150, 160);
+            this.lblInício.Name = "lblInício";
+            this.lblInício.Size = new System.Drawing.Size(46, 19);
+            this.lblInício.TabIndex = 504;
+            this.lblInício.Text = "Início";
+            // 
+            // dataGridView8
+            // 
+            this.dataGridView8.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Location = new System.Drawing.Point(288, 157);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.Size = new System.Drawing.Size(2, 60);
+            this.dataGridView8.TabIndex = 505;
+            // 
+            // dataGridView9
+            // 
+            this.dataGridView9.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Location = new System.Drawing.Point(559, 157);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.Size = new System.Drawing.Size(2, 60);
+            this.dataGridView9.TabIndex = 506;
+            // 
+            // lblInícioTérminoDoIntervalo
+            // 
+            this.lblInícioTérminoDoIntervalo.AutoSize = true;
+            this.lblInícioTérminoDoIntervalo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInícioTérminoDoIntervalo.Location = new System.Drawing.Point(330, 160);
+            this.lblInícioTérminoDoIntervalo.Name = "lblInícioTérminoDoIntervalo";
+            this.lblInícioTérminoDoIntervalo.Size = new System.Drawing.Size(192, 19);
+            this.lblInícioTérminoDoIntervalo.TabIndex = 507;
+            this.lblInícioTérminoDoIntervalo.Text = "Início/Término do Intervalo";
+            // 
+            // lblTérmino
+            // 
+            this.lblTérmino.AutoSize = true;
+            this.lblTérmino.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTérmino.Location = new System.Drawing.Point(648, 160);
+            this.lblTérmino.Name = "lblTérmino";
+            this.lblTérmino.Size = new System.Drawing.Size(65, 19);
+            this.lblTérmino.TabIndex = 508;
+            this.lblTérmino.Text = "Término";
+            // 
+            // lblHorárioInício
+            // 
+            this.lblHorárioInício.AutoSize = true;
+            this.lblHorárioInício.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorárioInício.Location = new System.Drawing.Point(147, 186);
+            this.lblHorárioInício.Name = "lblHorárioInício";
+            this.lblHorárioInício.Size = new System.Drawing.Size(49, 19);
+            this.lblHorárioInício.TabIndex = 509;
+            this.lblHorárioInício.Text = "00:00";
+            // 
+            // lblHorárioInícioTérminoDoIntervalo
+            // 
+            this.lblHorárioInícioTérminoDoIntervalo.AutoSize = true;
+            this.lblHorárioInícioTérminoDoIntervalo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorárioInícioTérminoDoIntervalo.Location = new System.Drawing.Point(379, 186);
+            this.lblHorárioInícioTérminoDoIntervalo.Name = "lblHorárioInícioTérminoDoIntervalo";
+            this.lblHorárioInícioTérminoDoIntervalo.Size = new System.Drawing.Size(99, 19);
+            this.lblHorárioInícioTérminoDoIntervalo.TabIndex = 510;
+            this.lblHorárioInícioTérminoDoIntervalo.Text = "00:00 / 00:00";
+            // 
+            // lblHorarioTérmino
+            // 
+            this.lblHorarioTérmino.AutoSize = true;
+            this.lblHorarioTérmino.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorarioTérmino.Location = new System.Drawing.Point(657, 186);
+            this.lblHorarioTérmino.Name = "lblHorarioTérmino";
+            this.lblHorarioTérmino.Size = new System.Drawing.Size(49, 19);
+            this.lblHorarioTérmino.TabIndex = 511;
+            this.lblHorarioTérmino.Text = "00:00";
+            // 
+            // dgvConsultarCartãoDePonto
+            // 
+            this.dgvConsultarCartãoDePonto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarCartãoDePonto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna3,
+            this.Coluna4,
+            this.Coluna5,
+            this.Coluna6});
+            this.dgvConsultarCartãoDePonto.Location = new System.Drawing.Point(4, 223);
+            this.dgvConsultarCartãoDePonto.Name = "dgvConsultarCartãoDePonto";
+            this.dgvConsultarCartãoDePonto.Size = new System.Drawing.Size(792, 273);
+            this.dgvConsultarCartãoDePonto.TabIndex = 512;
+            // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Início";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.Width = 122;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Início do Intervalo";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.Width = 122;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.HeaderText = "Término do Intervalo";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.Width = 122;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.HeaderText = "Termino Serviço";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.Width = 122;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.HeaderText = "Total de Horas";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.Width = 131;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.HeaderText = "Total de Horas Extras";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.Width = 130;
             // 
             // frmConsultTimeCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.dgvConsultarCartãoDePonto);
+            this.Controls.Add(this.lblHorarioTérmino);
+            this.Controls.Add(this.lblHorárioInícioTérminoDoIntervalo);
+            this.Controls.Add(this.lblHorárioInício);
+            this.Controls.Add(this.lblTérmino);
+            this.Controls.Add(this.lblInícioTérminoDoIntervalo);
+            this.Controls.Add(this.dataGridView9);
+            this.Controls.Add(this.dataGridView8);
+            this.Controls.Add(this.lblInício);
+            this.Controls.Add(this.dataGridView7);
+            this.Controls.Add(this.dataGridView6);
+            this.Controls.Add(this.lblHorárioDeTrabalho);
+            this.Controls.Add(this.dtpDataDaFolha);
             this.Controls.Add(this.lblDataDaFolha);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.dataGridView3);
@@ -388,6 +593,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCartãoDePonto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +634,24 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.Label lblDataDaFolha;
+        private System.Windows.Forms.DateTimePicker dtpDataDaFolha;
+        private System.Windows.Forms.Label lblHorárioDeTrabalho;
+        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.Label lblInício;
+        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.Label lblInícioTérminoDoIntervalo;
+        private System.Windows.Forms.Label lblTérmino;
+        private System.Windows.Forms.Label lblHorárioInício;
+        private System.Windows.Forms.Label lblHorárioInícioTérminoDoIntervalo;
+        private System.Windows.Forms.Label lblHorarioTérmino;
+        private System.Windows.Forms.DataGridView dgvConsultarCartãoDePonto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
     }
 }

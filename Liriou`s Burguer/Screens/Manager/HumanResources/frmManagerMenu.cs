@@ -18,16 +18,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             InitializeComponent();
         }
 
-        private void imgMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void imgFechar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -117,6 +107,16 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             HideSubMenu();
             frmConsultTimeCard consultTimeCard = new frmConsultTimeCard();
             consultTimeCard.Show();
+        }
+
+        private void imgMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void imgFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -89,8 +89,8 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblNome = new System.Windows.Forms.Label();
-            this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
+            this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.MenuLiriousBurger.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
@@ -109,8 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuLiriousBurger
@@ -686,19 +686,6 @@
             this.lblNome.TabIndex = 486;
             this.lblNome.Text = "Nome:";
             // 
-            // imgMinimizar
-            // 
-            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(740, 31);
-            this.imgMinimizar.Name = "imgMinimizar";
-            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 363;
-            this.imgMinimizar.TabStop = false;
-            // 
             // imgFechar
             // 
             this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -711,6 +698,21 @@
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgFechar.TabIndex = 534;
             this.imgFechar.TabStop = false;
+            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
+            // 
+            // imgMinimizar
+            // 
+            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
+            this.imgMinimizar.Location = new System.Drawing.Point(740, 31);
+            this.imgMinimizar.Name = "imgMinimizar";
+            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgMinimizar.TabIndex = 363;
+            this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
             // 
             // frmRegisterEmployee
             // 
@@ -794,8 +796,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
