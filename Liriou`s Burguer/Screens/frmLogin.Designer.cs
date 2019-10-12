@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -39,6 +38,7 @@
             this.imgEmail = new System.Windows.Forms.PictureBox();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
@@ -60,32 +60,15 @@
             this.label1.Text = "Esqueceu a senha?";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // txtSenha
-            // 
-            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.ForeColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(71, 366);
-            this.txtSenha.Multiline = true;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(312, 27);
-            this.txtSenha.TabIndex = 242;
-            this.txtSenha.Text = "Senha do usuário";
-            this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
-            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
-            this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
-            // 
             // txtEmail
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(71, 292);
-            this.txtEmail.Multiline = true;
+            this.txtEmail.Location = new System.Drawing.Point(70, 300);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(312, 27);
+            this.txtEmail.Size = new System.Drawing.Size(313, 19);
             this.txtEmail.TabIndex = 241;
             this.txtEmail.Text = "Email do usuário";
             this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
@@ -178,6 +161,22 @@
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgFechar.TabIndex = 246;
             this.imgFechar.TabStop = false;
+            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSenha.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.ForeColor = System.Drawing.Color.White;
+            this.txtSenha.Location = new System.Drawing.Point(70, 374);
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(313, 19);
+            this.txtSenha.TabIndex = 247;
+            this.txtSenha.Text = "Senha do usuário";
+            this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
+            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
             // frmLogin
             // 
@@ -185,10 +184,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(400, 500);
+            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.dataGridView2);
@@ -216,7 +215,6 @@
 
         private System.Windows.Forms.PictureBox imgMinimizar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -225,5 +223,6 @@
         private System.Windows.Forms.PictureBox imgEmail;
         private System.Windows.Forms.PictureBox imgLogotipo;
         private System.Windows.Forms.PictureBox imgFechar;
+        private System.Windows.Forms.TextBox txtSenha;
     }
 }

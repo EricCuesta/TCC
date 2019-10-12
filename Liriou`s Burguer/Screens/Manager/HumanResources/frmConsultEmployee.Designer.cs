@@ -63,7 +63,7 @@
             this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -413,13 +413,13 @@
             this.Coluna9.Name = "Coluna9";
             this.Coluna9.Width = 120;
             // 
-            // txtCPF
+            // txtRG
             // 
-            this.txtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(537, 64);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(251, 23);
-            this.txtCPF.TabIndex = 250;
+            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(531, 64);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(257, 23);
+            this.txtRG.TabIndex = 250;
             // 
             // lblCPF
             // 
@@ -427,9 +427,9 @@
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.Location = new System.Drawing.Point(492, 66);
             this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(39, 19);
+            this.lblCPF.Size = new System.Drawing.Size(33, 19);
             this.lblCPF.TabIndex = 249;
-            this.lblCPF.Text = "CPF:";
+            this.lblCPF.Text = "RG:";
             // 
             // dataGridView7
             // 
@@ -481,7 +481,7 @@
             this.lblCadastrarFuncionário.AutoSize = true;
             this.lblCadastrarFuncionário.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarFuncionário.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrarFuncionário.Location = new System.Drawing.Point(257, 31);
+            this.lblCadastrarFuncionário.Location = new System.Drawing.Point(256, 29);
             this.lblCadastrarFuncionário.Name = "lblCadastrarFuncionário";
             this.lblCadastrarFuncionário.Size = new System.Drawing.Size(287, 28);
             this.lblCadastrarFuncionário.TabIndex = 243;
@@ -538,7 +538,7 @@
             this.Controls.Add(this.MenuLiriousBurger);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dgvConsultarFuncionário);
-            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.dataGridView7);
             this.Controls.Add(this.dataGridView3);
@@ -606,7 +606,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna9;
-        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView3;
