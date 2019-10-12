@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Liriou_s_Burguer
+namespace Liriou_s_Burguer.Screens
 {
-    public partial class Form1 : Form
+    public partial class frmRecovery : Form
     {
-        public Form1()
+        public frmRecovery()
         {
             InitializeComponent();
         }
