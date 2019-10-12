@@ -33,5 +33,44 @@ namespace Liriou_s_Burguer.Screens
         {
             Application.Exit();
         }
+
+        private void txtEmail_Click(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == "Email do usuário")
+                txtEmail.Clear();
+        }
+
+        private void txtEmail_Leave(object sender, EventArgs e)
+        {
+            if (txtEmail.Text == string.Empty)
+                txtEmail.Text = "Email do usuário";
+        }
+
+        private void txtSenha_Click(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "Senha do usuário")
+            {
+                txtSenha.Clear();
+                txtSenha.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txtSenha_Leave(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == string.Empty)
+            {
+                txtSenha.Text = "Senha do usuário";
+                txtSenha.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void txtSenha_Enter(object sender, EventArgs e)
+        {
+            if (txtSenha.Text == "Senha do usuário")
+            {
+                txtSenha.Clear();
+                txtSenha.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

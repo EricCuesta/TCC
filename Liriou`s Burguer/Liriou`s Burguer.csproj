@@ -190,7 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Business\" />
-    <Folder Include="Database\" />
+    <Folder Include="Database\Entities\" />
     <Folder Include="Screens\Employee\" />
     <Folder Include="Screens\Manager\Financial\" />
     <Folder Include="Screens\Manager\Stock\" />

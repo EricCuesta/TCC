@@ -71,7 +71,10 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(312, 27);
             this.txtSenha.TabIndex = 242;
-            this.txtSenha.Text = "Senha";
+            this.txtSenha.Text = "Senha do usuário";
+            this.txtSenha.Click += new System.EventHandler(this.txtSenha_Click);
+            this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
+            this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
             // txtEmail
             // 
@@ -84,7 +87,9 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(312, 27);
             this.txtEmail.TabIndex = 241;
-            this.txtEmail.Text = "Email";
+            this.txtEmail.Text = "Email do usuário";
+            this.txtEmail.Click += new System.EventHandler(this.txtEmail_Click);
+            this.txtEmail.Leave += new System.EventHandler(this.txtEmail_Leave);
             // 
             // btnEntrar
             // 
