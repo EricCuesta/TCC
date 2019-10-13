@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
-namespace Liriou_s_Burguer.Screens.Manager.HumanResources
+namespace Liriou_s_Burguer.Screens.Manager
 {
     public partial class frmManagerMenu : Form
     {
         public frmManagerMenu()
         {
             InitializeComponent();
+            CustomizeDesign();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -33,7 +34,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         private void imgMenu_Click(object sender, EventArgs e)
         {
             if (MenuVertical.Width == 40)
-                MenuVertical.Width = 240;
+                MenuVertical.Width = 265;
             else
                 MenuVertical.Width = 40;
         }
@@ -70,42 +71,42 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         private void btnCadastrarFuncionário_Click(object sender, EventArgs e)
         {
             HideSubMenu();
-            frmRegisterEmployee registerEmployee = new frmRegisterEmployee();
+            HumanResources.frmRegisterEmployee registerEmployee = new HumanResources.frmRegisterEmployee();
             registerEmployee.Show();
         }
 
         private void btnConsultarFuncionário_Click(object sender, EventArgs e)
         {
             HideSubMenu();
-            frmConsultEmployee consultEmployee = new frmConsultEmployee();
+            HumanResources.frmConsultEmployee consultEmployee = new HumanResources.frmConsultEmployee();
             consultEmployee.Show();
         }
 
         private void btnAlterarFuncionário_Click(object sender, EventArgs e)
         {
             HideSubMenu();
-            frmChangeEmployee changeEmployee = new frmChangeEmployee();
+            HumanResources.frmChangeEmployee changeEmployee = new HumanResources.frmChangeEmployee();
             changeEmployee.Show();
         }
 
         private void btnDemitirFuncionário_Click(object sender, EventArgs e)
         {
             HideSubMenu();
-            frmDismissEmployee dismissEmployee = new frmDismissEmployee();
+            HumanResources.frmDismissEmployee dismissEmployee = new HumanResources.frmDismissEmployee();
             dismissEmployee.Show();
         }
 
         private void btnFolhaDePagamento_Click(object sender, EventArgs e)
         {
             HideSubMenu();
-            frmPayroll payroll = new frmPayroll();
+            HumanResources.frmPayroll payroll = new HumanResources.frmPayroll();
             payroll.Show();
         }
 
         private void btnConsultarCartãoDePonto_Click(object sender, EventArgs e)
         {
             HideSubMenu();
-            frmConsultTimeCard consultTimeCard = new frmConsultTimeCard();
+            HumanResources.frmConsultTimeCard consultTimeCard = new HumanResources.frmConsultTimeCard();
             consultTimeCard.Show();
         }
 

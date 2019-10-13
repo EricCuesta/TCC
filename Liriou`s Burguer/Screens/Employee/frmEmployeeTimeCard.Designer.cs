@@ -28,138 +28,130 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.RichtxtObservação = new System.Windows.Forms.RichTextBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.dgvConsultarIndisponibilidade = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dtpIndisponibilidade = new System.Windows.Forms.DateTimePicker();
-            this.lblDataIndisponibilidade = new System.Windows.Forms.Label();
-            this.lblObservação = new System.Windows.Forms.Label();
+            this.lblSaída = new System.Windows.Forms.Label();
+            this.lblSaídaDoIntervalo = new System.Windows.Forms.Label();
+            this.lblEntradaDoIntervalo = new System.Windows.Forms.Label();
+            this.lblEntrada = new System.Windows.Forms.Label();
+            this.lblSaída1 = new System.Windows.Forms.Label();
+            this.lblSaídaDoIntervalo1 = new System.Windows.Forms.Label();
+            this.btnBaterPonto = new System.Windows.Forms.Button();
+            this.lblEntradaDoIntervalo1 = new System.Windows.Forms.Label();
+            this.lblEntrada1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblIndisponibilidade = new System.Windows.Forms.Label();
+            this.lblCartãoDePonto = new System.Windows.Forms.Label();
+            this.lblHorárioData = new System.Windows.Forms.Label();
             this.MenuLiriousBurger = new System.Windows.Forms.MenuStrip();
             this.cartãoDePontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cartãoDePontoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataDeIndisponibilidadeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarIndisponibilidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.inícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MenuLiriousBurger.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // lblSaída
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 91);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(470, 2);
-            this.dataGridView2.TabIndex = 242;
+            this.lblSaída.AutoSize = true;
+            this.lblSaída.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSaída.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSaída.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaída.Location = new System.Drawing.Point(673, 203);
+            this.lblSaída.Name = "lblSaída";
+            this.lblSaída.Size = new System.Drawing.Size(67, 28);
+            this.lblSaída.TabIndex = 241;
+            this.lblSaída.Text = "00:00";
             // 
-            // panel1
+            // lblSaídaDoIntervalo
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.RichtxtObservação);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(9, 118);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(452, 331);
-            this.panel1.TabIndex = 241;
+            this.lblSaídaDoIntervalo.AutoSize = true;
+            this.lblSaídaDoIntervalo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSaídaDoIntervalo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSaídaDoIntervalo.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaídaDoIntervalo.Location = new System.Drawing.Point(483, 203);
+            this.lblSaídaDoIntervalo.Name = "lblSaídaDoIntervalo";
+            this.lblSaídaDoIntervalo.Size = new System.Drawing.Size(67, 28);
+            this.lblSaídaDoIntervalo.TabIndex = 240;
+            this.lblSaídaDoIntervalo.Text = "00:00";
             // 
-            // RichtxtObservação
+            // lblEntradaDoIntervalo
             // 
-            this.RichtxtObservação.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RichtxtObservação.Location = new System.Drawing.Point(3, 3);
-            this.RichtxtObservação.Name = "RichtxtObservação";
-            this.RichtxtObservação.Size = new System.Drawing.Size(446, 325);
-            this.RichtxtObservação.TabIndex = 221;
-            this.RichtxtObservação.Text = "";
+            this.lblEntradaDoIntervalo.AutoSize = true;
+            this.lblEntradaDoIntervalo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEntradaDoIntervalo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEntradaDoIntervalo.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntradaDoIntervalo.Location = new System.Drawing.Point(271, 203);
+            this.lblEntradaDoIntervalo.Name = "lblEntradaDoIntervalo";
+            this.lblEntradaDoIntervalo.Size = new System.Drawing.Size(67, 28);
+            this.lblEntradaDoIntervalo.TabIndex = 239;
+            this.lblEntradaDoIntervalo.Text = "00:00";
             // 
-            // btnSalvar
+            // lblEntrada
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(182, 458);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(107, 30);
-            this.btnSalvar.TabIndex = 240;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.lblEntrada.AutoSize = true;
+            this.lblEntrada.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblEntrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblEntrada.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntrada.Location = new System.Drawing.Point(57, 203);
+            this.lblEntrada.Name = "lblEntrada";
+            this.lblEntrada.Size = new System.Drawing.Size(67, 28);
+            this.lblEntrada.TabIndex = 238;
+            this.lblEntrada.Text = "00:00";
             // 
-            // dgvConsultarIndisponibilidade
+            // lblSaída1
             // 
-            this.dgvConsultarIndisponibilidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarIndisponibilidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2});
-            this.dgvConsultarIndisponibilidade.Location = new System.Drawing.Point(483, 68);
-            this.dgvConsultarIndisponibilidade.Name = "dgvConsultarIndisponibilidade";
-            this.dgvConsultarIndisponibilidade.Size = new System.Drawing.Size(305, 420);
-            this.dgvConsultarIndisponibilidade.TabIndex = 239;
+            this.lblSaída1.AutoSize = true;
+            this.lblSaída1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaída1.Location = new System.Drawing.Point(684, 233);
+            this.lblSaída1.Name = "lblSaída1";
+            this.lblSaída1.Size = new System.Drawing.Size(46, 19);
+            this.lblSaída1.TabIndex = 237;
+            this.lblSaída1.Text = "Saída";
             // 
-            // Coluna1
+            // lblSaídaDoIntervalo1
             // 
-            this.Coluna1.HeaderText = "Data";
-            this.Coluna1.MaxInputLength = 100;
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.Width = 110;
+            this.lblSaídaDoIntervalo1.AutoSize = true;
+            this.lblSaídaDoIntervalo1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaídaDoIntervalo1.Location = new System.Drawing.Point(444, 233);
+            this.lblSaídaDoIntervalo1.Name = "lblSaídaDoIntervalo1";
+            this.lblSaídaDoIntervalo1.Size = new System.Drawing.Size(132, 19);
+            this.lblSaídaDoIntervalo1.TabIndex = 236;
+            this.lblSaídaDoIntervalo1.Text = "Saída do Intervalo";
             // 
-            // Coluna2
+            // btnBaterPonto
             // 
-            this.Coluna2.HeaderText = "Observação";
-            this.Coluna2.MaxInputLength = 100;
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.Width = 155;
+            this.btnBaterPonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnBaterPonto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBaterPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBaterPonto.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaterPonto.Location = new System.Drawing.Point(336, 464);
+            this.btnBaterPonto.Name = "btnBaterPonto";
+            this.btnBaterPonto.Size = new System.Drawing.Size(131, 30);
+            this.btnBaterPonto.TabIndex = 235;
+            this.btnBaterPonto.Text = "Bater Ponto";
+            this.btnBaterPonto.UseVisualStyleBackColor = false;
             // 
-            // dataGridView4
+            // lblEntradaDoIntervalo1
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(470, 61);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(2, 439);
-            this.dataGridView4.TabIndex = 238;
+            this.lblEntradaDoIntervalo1.AutoSize = true;
+            this.lblEntradaDoIntervalo1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntradaDoIntervalo1.Location = new System.Drawing.Point(222, 233);
+            this.lblEntradaDoIntervalo1.Name = "lblEntradaDoIntervalo1";
+            this.lblEntradaDoIntervalo1.Size = new System.Drawing.Size(149, 19);
+            this.lblEntradaDoIntervalo1.TabIndex = 234;
+            this.lblEntradaDoIntervalo1.Text = "Entrada do Intervalo";
             // 
-            // dtpIndisponibilidade
+            // lblEntrada1
             // 
-            this.dtpIndisponibilidade.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dtpIndisponibilidade.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpIndisponibilidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpIndisponibilidade.Location = new System.Drawing.Point(205, 64);
-            this.dtpIndisponibilidade.Name = "dtpIndisponibilidade";
-            this.dtpIndisponibilidade.Size = new System.Drawing.Size(254, 23);
-            this.dtpIndisponibilidade.TabIndex = 237;
-            // 
-            // lblDataIndisponibilidade
-            // 
-            this.lblDataIndisponibilidade.AutoSize = true;
-            this.lblDataIndisponibilidade.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataIndisponibilidade.Location = new System.Drawing.Point(12, 66);
-            this.lblDataIndisponibilidade.Name = "lblDataIndisponibilidade";
-            this.lblDataIndisponibilidade.Size = new System.Drawing.Size(187, 19);
-            this.lblDataIndisponibilidade.TabIndex = 236;
-            this.lblDataIndisponibilidade.Text = "Data de Indisponibilidade:";
-            // 
-            // lblObservação
-            // 
-            this.lblObservação.AutoSize = true;
-            this.lblObservação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservação.Location = new System.Drawing.Point(12, 96);
-            this.lblObservação.Name = "lblObservação";
-            this.lblObservação.Size = new System.Drawing.Size(94, 19);
-            this.lblObservação.TabIndex = 234;
-            this.lblObservação.Text = "Observação:";
+            this.lblEntrada1.AutoSize = true;
+            this.lblEntrada1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntrada1.Location = new System.Drawing.Point(59, 233);
+            this.lblEntrada1.Name = "lblEntrada1";
+            this.lblEntrada1.Size = new System.Drawing.Size(63, 19);
+            this.lblEntrada1.TabIndex = 233;
+            this.lblEntrada1.Text = "Entrada";
             // 
             // dataGridView1
             // 
@@ -168,19 +160,28 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 59);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 2);
-            this.dataGridView1.TabIndex = 233;
+            this.dataGridView1.TabIndex = 232;
             // 
-            // lblIndisponibilidade
+            // lblCartãoDePonto
             // 
-            this.lblIndisponibilidade.AutoSize = true;
-            this.lblIndisponibilidade.BackColor = System.Drawing.Color.Transparent;
-            this.lblIndisponibilidade.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIndisponibilidade.ForeColor = System.Drawing.Color.Black;
-            this.lblIndisponibilidade.Location = new System.Drawing.Point(300, 31);
-            this.lblIndisponibilidade.Name = "lblIndisponibilidade";
-            this.lblIndisponibilidade.Size = new System.Drawing.Size(226, 28);
-            this.lblIndisponibilidade.TabIndex = 232;
-            this.lblIndisponibilidade.Text = "Indisponibilidade";
+            this.lblCartãoDePonto.AutoSize = true;
+            this.lblCartãoDePonto.BackColor = System.Drawing.Color.Transparent;
+            this.lblCartãoDePonto.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCartãoDePonto.ForeColor = System.Drawing.Color.Black;
+            this.lblCartãoDePonto.Location = new System.Drawing.Point(300, 32);
+            this.lblCartãoDePonto.Name = "lblCartãoDePonto";
+            this.lblCartãoDePonto.Size = new System.Drawing.Size(206, 28);
+            this.lblCartãoDePonto.TabIndex = 231;
+            this.lblCartãoDePonto.Text = "Cartão de Ponto";
+            // 
+            // lblHorárioData
+            // 
+            this.lblHorárioData.AutoSize = true;
+            this.lblHorárioData.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorárioData.Location = new System.Drawing.Point(594, 65);
+            this.lblHorárioData.Name = "lblHorárioData";
+            this.lblHorárioData.Size = new System.Drawing.Size(0, 20);
+            this.lblHorárioData.TabIndex = 230;
             // 
             // MenuLiriousBurger
             // 
@@ -191,27 +192,28 @@
             this.MenuLiriousBurger.Location = new System.Drawing.Point(0, 0);
             this.MenuLiriousBurger.Name = "MenuLiriousBurger";
             this.MenuLiriousBurger.Size = new System.Drawing.Size(800, 29);
-            this.MenuLiriousBurger.TabIndex = 231;
+            this.MenuLiriousBurger.TabIndex = 229;
             this.MenuLiriousBurger.Text = "Liriou`s Burger";
             // 
             // cartãoDePontoToolStripMenuItem
             // 
             this.cartãoDePontoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cartãoDePontoToolStripMenuItem1});
+            this.inícioToolStripMenuItem,
+            this.dataDeIndisponibilidadeToolStripMenuItem});
             this.cartãoDePontoToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cartãoDePontoToolStripMenuItem.Name = "cartãoDePontoToolStripMenuItem";
             this.cartãoDePontoToolStripMenuItem.Size = new System.Drawing.Size(67, 25);
             this.cartãoDePontoToolStripMenuItem.Text = "Menu";
             // 
-            // cartãoDePontoToolStripMenuItem1
+            // dataDeIndisponibilidadeToolStripMenuItem
             // 
-            this.cartãoDePontoToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.cartãoDePontoToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.cartãoDePontoToolStripMenuItem1.Name = "cartãoDePontoToolStripMenuItem1";
-            this.cartãoDePontoToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
-            this.cartãoDePontoToolStripMenuItem1.Text = "Cartão de Ponto";
-            this.cartãoDePontoToolStripMenuItem1.Click += new System.EventHandler(this.cartãoDePontoToolStripMenuItem1_Click);
+            this.dataDeIndisponibilidadeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.dataDeIndisponibilidadeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.dataDeIndisponibilidadeToolStripMenuItem.Name = "dataDeIndisponibilidadeToolStripMenuItem";
+            this.dataDeIndisponibilidadeToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.dataDeIndisponibilidadeToolStripMenuItem.Text = "Data de Indisponibilidade";
+            this.dataDeIndisponibilidadeToolStripMenuItem.Click += new System.EventHandler(this.dataDeIndisponibilidadeToolStripMenuItem_Click);
             // 
             // imgFechar
             // 
@@ -219,11 +221,11 @@
             this.imgFechar.BackColor = System.Drawing.Color.Transparent;
             this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
-            this.imgFechar.Location = new System.Drawing.Point(770, 31);
+            this.imgFechar.Location = new System.Drawing.Point(771, 31);
             this.imgFechar.Name = "imgFechar";
             this.imgFechar.Size = new System.Drawing.Size(25, 25);
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 536;
+            this.imgFechar.TabIndex = 488;
             this.imgFechar.TabStop = false;
             this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
             // 
@@ -233,13 +235,22 @@
             this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(739, 31);
+            this.imgMinimizar.Location = new System.Drawing.Point(740, 31);
             this.imgMinimizar.Name = "imgMinimizar";
             this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
             this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 535;
+            this.imgMinimizar.TabIndex = 487;
             this.imgMinimizar.TabStop = false;
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            // 
+            // inícioToolStripMenuItem
+            // 
+            this.inícioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.inícioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.inícioToolStripMenuItem.Name = "inícioToolStripMenuItem";
+            this.inícioToolStripMenuItem.Size = new System.Drawing.Size(282, 26);
+            this.inícioToolStripMenuItem.Text = "Início";
+            this.inícioToolStripMenuItem.Click += new System.EventHandler(this.inícioToolStripMenuItem_Click);
             // 
             // frmEmployeeTimeCard
             // 
@@ -248,25 +259,23 @@
             this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.imgMinimizar);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.dgvConsultarIndisponibilidade);
-            this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dtpIndisponibilidade);
-            this.Controls.Add(this.lblDataIndisponibilidade);
-            this.Controls.Add(this.lblObservação);
+            this.Controls.Add(this.lblSaída);
+            this.Controls.Add(this.lblSaídaDoIntervalo);
+            this.Controls.Add(this.lblEntradaDoIntervalo);
+            this.Controls.Add(this.lblEntrada);
+            this.Controls.Add(this.lblSaída1);
+            this.Controls.Add(this.lblSaídaDoIntervalo1);
+            this.Controls.Add(this.btnBaterPonto);
+            this.Controls.Add(this.lblEntradaDoIntervalo1);
+            this.Controls.Add(this.lblEntrada1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblIndisponibilidade);
+            this.Controls.Add(this.lblCartãoDePonto);
+            this.Controls.Add(this.lblHorárioData);
             this.Controls.Add(this.MenuLiriousBurger);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEmployeeTimeCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Time Card";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarIndisponibilidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.MenuLiriousBurger.ResumeLayout(false);
             this.MenuLiriousBurger.PerformLayout();
@@ -278,22 +287,22 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox RichtxtObservação;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView dgvConsultarIndisponibilidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DateTimePicker dtpIndisponibilidade;
-        private System.Windows.Forms.Label lblDataIndisponibilidade;
-        private System.Windows.Forms.Label lblObservação;
+        private System.Windows.Forms.Label lblSaída;
+        private System.Windows.Forms.Label lblSaídaDoIntervalo;
+        private System.Windows.Forms.Label lblEntradaDoIntervalo;
+        private System.Windows.Forms.Label lblEntrada;
+        private System.Windows.Forms.Label lblSaída1;
+        private System.Windows.Forms.Label lblSaídaDoIntervalo1;
+        private System.Windows.Forms.Button btnBaterPonto;
+        private System.Windows.Forms.Label lblEntradaDoIntervalo1;
+        private System.Windows.Forms.Label lblEntrada1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblIndisponibilidade;
+        private System.Windows.Forms.Label lblCartãoDePonto;
+        private System.Windows.Forms.Label lblHorárioData;
         private System.Windows.Forms.MenuStrip MenuLiriousBurger;
         private System.Windows.Forms.ToolStripMenuItem cartãoDePontoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cartãoDePontoToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem dataDeIndisponibilidadeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inícioToolStripMenuItem;
         private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.PictureBox imgMinimizar;
     }

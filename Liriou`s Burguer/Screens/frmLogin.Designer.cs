@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.lblRecuperarSenha = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
@@ -51,6 +52,7 @@
             // lblRecuperarSenha
             // 
             this.lblRecuperarSenha.AutoSize = true;
+            this.lblRecuperarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRecuperarSenha.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecuperarSenha.ForeColor = System.Drawing.Color.DodgerBlue;
             this.lblRecuperarSenha.Location = new System.Drawing.Point(142, 480);
@@ -86,6 +88,7 @@
             this.btnEntrar.TabIndex = 240;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // dataGridView2
             // 
@@ -133,7 +136,7 @@
             // 
             // imgEmail
             // 
-            this.imgEmail.Image = global::Liriou_s_Burguer.Properties.Resources.E_mail;
+            this.imgEmail.Image = global::Liriou_s_Burguer.Properties.Resources.Email;
             this.imgEmail.Location = new System.Drawing.Point(20, 282);
             this.imgEmail.Name = "imgEmail";
             this.imgEmail.Size = new System.Drawing.Size(45, 45);
@@ -143,9 +146,11 @@
             // 
             // imgLogotipo
             // 
+            this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
             this.imgLogotipo.Location = new System.Drawing.Point(7, 37);
             this.imgLogotipo.Name = "imgLogotipo";
             this.imgLogotipo.Size = new System.Drawing.Size(386, 227);
+            this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 235;
             this.imgLogotipo.TabStop = false;
             // 

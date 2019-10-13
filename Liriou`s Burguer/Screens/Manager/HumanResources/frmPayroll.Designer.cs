@@ -723,6 +723,7 @@
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgFechar.TabIndex = 253;
             this.imgFechar.TabStop = false;
+            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
             // 
             // frmPayroll
             // 

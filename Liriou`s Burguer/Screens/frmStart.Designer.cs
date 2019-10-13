@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmStart));
             this.btnEntrar = new System.Windows.Forms.Button();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgGoogle = new System.Windows.Forms.PictureBox();
@@ -119,9 +120,11 @@
             // 
             // imgLogotipo
             // 
+            this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
             this.imgLogotipo.Location = new System.Drawing.Point(7, 37);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(386, 219);
+            this.imgLogotipo.Size = new System.Drawing.Size(386, 282);
+            this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 227;
             this.imgLogotipo.TabStop = false;
             // 

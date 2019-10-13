@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,8 +47,45 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BenefitsBusiness.cs" />
+    <Compile Include="Business\ClientBusiness.cs" />
+    <Compile Include="Business\CPPBusiness.cs" />
+    <Compile Include="Business\CRMBusiness.cs" />
+    <Compile Include="Business\DepartmentBusiness.cs" />
+    <Compile Include="Business\DiscountsBusiness.cs" />
+    <Compile Include="Business\EmployeesBusiness.cs" />
+    <Compile Include="Business\EnterpriseBusiness.cs" />
+    <Compile Include="Business\FinancialBusiness.cs" />
+    <Compile Include="Business\FunctionBusiness.cs" />
+    <Compile Include="Business\ProductBusiness.cs" />
+    <Compile Include="Business\ProviderBusiness.cs" />
+    <Compile Include="Business\StockBusiness.cs" />
+    <Compile Include="Business\SupplyBusiness.cs" />
+    <Compile Include="Business\TimeCardBusiness.cs" />
+    <Compile Include="Database\BenefitsDatabase.cs" />
+    <Compile Include="Database\ClientDatabase.cs" />
+    <Compile Include="Database\CPPDatabase.cs" />
+    <Compile Include="Database\CRMDatabase.cs" />
+    <Compile Include="Database\DepartmentDatabase.cs" />
+    <Compile Include="Database\DiscountsDatabase.cs" />
+    <Compile Include="Database\EmployeesDatabase.cs" />
+    <Compile Include="Database\EnterpriseDatabase.cs" />
+    <Compile Include="Database\FinancialDatabase.cs" />
+    <Compile Include="Database\FunctionDatabase.cs" />
+    <Compile Include="Database\ProductDatabase.cs" />
+    <Compile Include="Database\ProviderDatabase.cs" />
+    <Compile Include="Database\StockDatabase.cs" />
+    <Compile Include="Database\SupplyDatabase.cs" />
+    <Compile Include="Database\TimeCardDatabase.cs" />
+    <Compile Include="Model\UsuarioLogado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\Employee\frmEmployeeMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Employee\frmEmployeeMenu.Designer.cs">
+      <DependentUpon>frmEmployeeMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Employee\frmEmployeeTimeCard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,10 +146,10 @@
     <Compile Include="Screens\Manager\HumanResources\frmDismissEmployee.Designer.cs">
       <DependentUpon>frmDismissEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmManagerMenu.cs">
+    <Compile Include="Screens\Manager\frmManagerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmManagerMenu.Designer.cs">
+    <Compile Include="Screens\Manager\frmManagerMenu.Designer.cs">
       <DependentUpon>frmManagerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\HumanResources\frmPayroll.cs">
@@ -148,6 +186,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Screens\Employee\frmEmployeeMenu.resx">
+      <DependentUpon>frmEmployeeMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Employee\frmEmployeeTimeCard.resx">
       <DependentUpon>frmEmployeeTimeCard.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,7 +222,7 @@
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmDismissEmployee.resx">
       <DependentUpon>frmDismissEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmManagerMenu.resx">
+    <EmbeddedResource Include="Screens\Manager\frmManagerMenu.resx">
       <DependentUpon>frmManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmPayroll.resx">
@@ -207,7 +248,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Business\" />
     <Folder Include="Database\Entities\" />
     <Folder Include="Screens\Manager\Financial\" />
     <Folder Include="Screens\Manager\Stock\" />

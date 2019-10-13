@@ -17,10 +17,17 @@ namespace Liriou_s_Burguer.Screens.Employee
             InitializeComponent();
         }
 
-        private void dataDeIndisponibilidadeToolStripMenuItem_Click(object sender, EventArgs e)
+        private void inícioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmUnavailability unavailability = new frmUnavailability();
-            unavailability.Show();
+            frmEmployeeMenu employeeMenu = new frmEmployeeMenu();
+            employeeMenu.Show();
+            Hide();
+        }
+
+        private void cartãoDePontoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmEmployeeTimeCard employeeTimeCard = new frmEmployeeTimeCard();
+            employeeTimeCard.Show();
             Hide();
         }
 

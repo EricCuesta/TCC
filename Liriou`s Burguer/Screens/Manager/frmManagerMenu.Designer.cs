@@ -1,4 +1,4 @@
-﻿namespace Liriou_s_Burguer.Screens.Manager.HumanResources
+﻿namespace Liriou_s_Burguer.Screens.Manager
 {
     partial class frmManagerMenu
     {
@@ -79,7 +79,7 @@
             // 
             // BarraTitulo
             // 
-            this.BarraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.BarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
             this.BarraTitulo.Controls.Add(this.imgFechar);
             this.BarraTitulo.Controls.Add(this.imgMinimizar);
             this.BarraTitulo.Controls.Add(this.pictureBox1);
@@ -103,6 +103,7 @@
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgFechar.TabIndex = 254;
             this.imgFechar.TabStop = false;
+            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
             // 
             // imgMinimizar
             // 
@@ -174,7 +175,7 @@
             this.panel13.Controls.Add(this.panel7);
             this.panel13.Controls.Add(this.btnSuprimentos);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 182);
+            this.panel13.Location = new System.Drawing.Point(0, 376);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(265, 32);
             this.panel13.TabIndex = 23;
@@ -211,7 +212,7 @@
             this.panel12.Controls.Add(this.panel9);
             this.panel12.Controls.Add(this.btnEstoque);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 151);
+            this.panel12.Location = new System.Drawing.Point(0, 345);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(265, 31);
             this.panel12.TabIndex = 22;
@@ -248,7 +249,7 @@
             this.panel11.Controls.Add(this.panel8);
             this.panel11.Controls.Add(this.btnFinanceiro);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 121);
+            this.panel11.Location = new System.Drawing.Point(0, 315);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(265, 30);
             this.panel11.TabIndex = 21;
@@ -296,9 +297,9 @@
             this.panelSubMenuRecursosHumanos.Controls.Add(this.btnFolhaDePagamento);
             this.panelSubMenuRecursosHumanos.Controls.Add(this.btnCadastrarFuncionário);
             this.panelSubMenuRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 111);
+            this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 150);
             this.panelSubMenuRecursosHumanos.Name = "panelSubMenuRecursosHumanos";
-            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(265, 10);
+            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(265, 165);
             this.panelSubMenuRecursosHumanos.TabIndex = 20;
             this.panelSubMenuRecursosHumanos.Visible = false;
             // 
@@ -469,7 +470,7 @@
             this.panel10.Controls.Add(this.btnRecursosHumanos);
             this.panel10.Controls.Add(this.panel1);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 81);
+            this.panel10.Location = new System.Drawing.Point(0, 120);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(265, 30);
             this.panel10.TabIndex = 19;
@@ -506,9 +507,11 @@
             // 
             this.imgLogotipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.imgLogotipo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
             this.imgLogotipo.Location = new System.Drawing.Point(0, 0);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(265, 81);
+            this.imgLogotipo.Size = new System.Drawing.Size(265, 120);
+            this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;
             // 

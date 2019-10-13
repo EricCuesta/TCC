@@ -63,9 +63,9 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap E_mail {
+        internal static System.Drawing.Bitmap Email {
             get {
-                object obj = ResourceManager.GetObject("E-mail", resourceCulture);
+                object obj = ResourceManager.GetObject("Email", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

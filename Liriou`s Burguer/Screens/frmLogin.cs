@@ -72,5 +72,10 @@ namespace Liriou_s_Burguer.Screens
                 txtSenha.UseSystemPasswordChar = true;
             }
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

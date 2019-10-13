@@ -37,7 +37,7 @@
             this.consultarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.demitirFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.folhaDePagamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultarCartãoDePontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuFinanceiro = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSuprimento = new System.Windows.Forms.ToolStripMenuItem();
@@ -76,6 +76,7 @@
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.consultarCartãoDePontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             this.MenuLiriousBurger.SuspendLayout();
@@ -146,12 +147,14 @@
             this.menuInício.Name = "menuInício";
             this.menuInício.Size = new System.Drawing.Size(63, 25);
             this.menuInício.Text = "Início";
+            this.menuInício.Click += new System.EventHandler(this.menuInício_Click);
             // 
             // menuRH
             // 
             this.menuRH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.menuRH.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarFuncionárioToolStripMenuItem,
+            this.alterarFuncionárioToolStripMenuItem,
             this.consultarFuncionárioToolStripMenuItem,
             this.demitirFuncionárioToolStripMenuItem,
             this.folhaDePagamentoToolStripMenuItem,
@@ -168,40 +171,45 @@
             this.cadastrarFuncionárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.cadastrarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.cadastrarFuncionárioToolStripMenuItem.Name = "cadastrarFuncionárioToolStripMenuItem";
-            this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.cadastrarFuncionárioToolStripMenuItem.Text = "Cadastrar Funcionário";
+            this.cadastrarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarFuncionárioToolStripMenuItem_Click);
             // 
             // consultarFuncionárioToolStripMenuItem
             // 
             this.consultarFuncionárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.consultarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.consultarFuncionárioToolStripMenuItem.Name = "consultarFuncionárioToolStripMenuItem";
-            this.consultarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.consultarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.consultarFuncionárioToolStripMenuItem.Text = "Consultar Funcionário";
+            this.consultarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.consultarFuncionárioToolStripMenuItem_Click);
             // 
             // demitirFuncionárioToolStripMenuItem
             // 
             this.demitirFuncionárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.demitirFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.demitirFuncionárioToolStripMenuItem.Name = "demitirFuncionárioToolStripMenuItem";
-            this.demitirFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.demitirFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.demitirFuncionárioToolStripMenuItem.Text = "Demitir Funcionário";
+            this.demitirFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.demitirFuncionárioToolStripMenuItem_Click);
             // 
             // folhaDePagamentoToolStripMenuItem
             // 
             this.folhaDePagamentoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.folhaDePagamentoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
-            this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
             this.folhaDePagamentoToolStripMenuItem.Text = "Folha de Pagamento";
+            this.folhaDePagamentoToolStripMenuItem.Click += new System.EventHandler(this.folhaDePagamentoToolStripMenuItem_Click);
             // 
-            // consultarCartãoDePontoToolStripMenuItem
+            // alterarFuncionárioToolStripMenuItem
             // 
-            this.consultarCartãoDePontoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.consultarCartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.consultarCartãoDePontoToolStripMenuItem.Name = "consultarCartãoDePontoToolStripMenuItem";
-            this.consultarCartãoDePontoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
-            this.consultarCartãoDePontoToolStripMenuItem.Text = "Consultar Cartão de Ponto";
+            this.alterarFuncionárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.alterarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.alterarFuncionárioToolStripMenuItem.Name = "alterarFuncionárioToolStripMenuItem";
+            this.alterarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(254, 26);
+            this.alterarFuncionárioToolStripMenuItem.Text = "Alterar Funcionário";
+            this.alterarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.alterarFuncionárioToolStripMenuItem_Click);
             // 
             // MenuFinanceiro
             // 
@@ -305,7 +313,7 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.Location = new System.Drawing.Point(310, 97);
+            this.lblCargo.Location = new System.Drawing.Point(336, 98);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(54, 19);
             this.lblCargo.TabIndex = 384;
@@ -315,7 +323,7 @@
             // 
             this.cboDepartamento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamento.FormattingEnabled = true;
-            this.cboDepartamento.Location = new System.Drawing.Point(53, 120);
+            this.cboDepartamento.Location = new System.Drawing.Point(30, 120);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(185, 23);
             this.cboDepartamento.TabIndex = 383;
@@ -333,7 +341,7 @@
             // 
             this.cboCargo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(251, 120);
+            this.cboCargo.Location = new System.Drawing.Point(277, 121);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(178, 23);
             this.cboCargo.TabIndex = 381;
@@ -342,7 +350,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(94, 98);
+            this.lblDepartamento.Location = new System.Drawing.Point(71, 98);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(113, 19);
             this.lblDepartamento.TabIndex = 380;
@@ -380,9 +388,9 @@
             // 
             this.dtpDataDaFolha.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDataDaFolha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataDaFolha.Location = new System.Drawing.Point(577, 120);
+            this.dtpDataDaFolha.Location = new System.Drawing.Point(559, 120);
             this.dtpDataDaFolha.Name = "dtpDataDaFolha";
-            this.dtpDataDaFolha.Size = new System.Drawing.Size(114, 23);
+            this.dtpDataDaFolha.Size = new System.Drawing.Size(164, 23);
             this.dtpDataDaFolha.TabIndex = 500;
             // 
             // lblHorárioDeTrabalho
@@ -542,6 +550,15 @@
             this.Coluna6.Name = "Coluna6";
             this.Coluna6.Width = 130;
             // 
+            // consultarCartãoDePontoToolStripMenuItem
+            // 
+            this.consultarCartãoDePontoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.consultarCartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultarCartãoDePontoToolStripMenuItem.Name = "consultarCartãoDePontoToolStripMenuItem";
+            this.consultarCartãoDePontoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
+            this.consultarCartãoDePontoToolStripMenuItem.Text = "Consultar Cartão de Ponto";
+            this.consultarCartãoDePontoToolStripMenuItem.Click += new System.EventHandler(this.consultarCartãoDePontoToolStripMenuItem_Click);
+            // 
             // frmConsultTimeCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,7 +631,7 @@
         private System.Windows.Forms.ToolStripMenuItem consultarFuncionárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem demitirFuncionárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem folhaDePagamentoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultarCartãoDePontoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alterarFuncionárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem MenuFinanceiro;
         private System.Windows.Forms.ToolStripMenuItem MenuEstoque;
         private System.Windows.Forms.ToolStripMenuItem MenuSuprimento;
@@ -653,5 +670,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
+        private System.Windows.Forms.ToolStripMenuItem consultarCartãoDePontoToolStripMenuItem;
     }
 }
