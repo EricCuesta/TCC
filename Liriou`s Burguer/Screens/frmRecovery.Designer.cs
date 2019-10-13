@@ -64,7 +64,6 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.imgSenha = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelTítulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
@@ -254,7 +253,7 @@
             this.btnTelefone.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTelefone.Location = new System.Drawing.Point(3, 2);
             this.btnTelefone.Name = "btnTelefone";
-            this.btnTelefone.Size = new System.Drawing.Size(394, 26);
+            this.btnTelefone.Size = new System.Drawing.Size(397, 26);
             this.btnTelefone.TabIndex = 13;
             this.btnTelefone.Text = "Número do Telefone";
             this.btnTelefone.UseVisualStyleBackColor = false;
@@ -325,7 +324,7 @@
             this.btnCelular.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCelular.Location = new System.Drawing.Point(3, 2);
             this.btnCelular.Name = "btnCelular";
-            this.btnCelular.Size = new System.Drawing.Size(394, 26);
+            this.btnCelular.Size = new System.Drawing.Size(397, 26);
             this.btnCelular.TabIndex = 13;
             this.btnCelular.Text = "Número do Celular";
             this.btnCelular.UseVisualStyleBackColor = false;
@@ -396,7 +395,7 @@
             this.btnCPF.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCPF.Location = new System.Drawing.Point(3, 2);
             this.btnCPF.Name = "btnCPF";
-            this.btnCPF.Size = new System.Drawing.Size(394, 26);
+            this.btnCPF.Size = new System.Drawing.Size(397, 26);
             this.btnCPF.TabIndex = 13;
             this.btnCPF.Text = "CPF";
             this.btnCPF.UseVisualStyleBackColor = false;
@@ -467,7 +466,7 @@
             this.btnRG.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRG.Location = new System.Drawing.Point(3, 2);
             this.btnRG.Name = "btnRG";
-            this.btnRG.Size = new System.Drawing.Size(394, 26);
+            this.btnRG.Size = new System.Drawing.Size(397, 26);
             this.btnRG.TabIndex = 13;
             this.btnRG.Text = "RG";
             this.btnRG.UseVisualStyleBackColor = false;
@@ -478,7 +477,6 @@
             this.panelAlterarSenha.Controls.Add(this.txtSenha);
             this.panelAlterarSenha.Controls.Add(this.dataGridView1);
             this.panelAlterarSenha.Controls.Add(this.imgSenha);
-            this.panelAlterarSenha.Controls.Add(this.label4);
             this.panelAlterarSenha.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAlterarSenha.Location = new System.Drawing.Point(0, 278);
             this.panelAlterarSenha.Name = "panelAlterarSenha";
@@ -517,17 +515,6 @@
             this.imgSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgSenha.TabIndex = 248;
             this.imgSenha.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(132, 3);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(136, 23);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Alterar Senha";
             // 
             // frmRecovery
             // 
@@ -602,7 +589,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnRG;
         private System.Windows.Forms.Panel panelAlterarSenha;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox imgSenha;
