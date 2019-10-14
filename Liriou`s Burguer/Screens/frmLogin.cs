@@ -75,6 +75,13 @@ namespace Liriou_s_Burguer.Screens
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+            employees.ds_email = txtEmail.Text.Trim();
+            employees.ds_password = txtSenha.Text.Trim();
+
+            Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
+            busemp.Verificar(employees);
+
 
         }
     }

@@ -33,7 +33,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblAlterarFuncionário = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.MenuLiriousBurger = new System.Windows.Forms.MenuStrip();
+            this.MenuLiriousBurguer = new System.Windows.Forms.MenuStrip();
             this.menuInício = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRH = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -96,7 +96,7 @@
             this.imgFechar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.MenuLiriousBurger.SuspendLayout();
+            this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView21)).BeginInit();
@@ -170,27 +170,27 @@
             this.btnCadastrar.Text = "Demitir";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
-            // MenuLiriousBurger
+            // MenuLiriousBurguer
             // 
-            this.MenuLiriousBurger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.MenuLiriousBurger.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.MenuLiriousBurger.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuLiriousBurguer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.MenuLiriousBurguer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.MenuLiriousBurguer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuInício,
             this.menuRH,
             this.MenuFinanceiro,
             this.MenuEstoque,
             this.MenuSuprimento});
-            this.MenuLiriousBurger.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.MenuLiriousBurger.Location = new System.Drawing.Point(0, 0);
-            this.MenuLiriousBurger.Name = "MenuLiriousBurger";
-            this.MenuLiriousBurger.Size = new System.Drawing.Size(800, 29);
-            this.MenuLiriousBurger.TabIndex = 382;
-            this.MenuLiriousBurger.Text = "Liriou`s Burguer";
+            this.MenuLiriousBurguer.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.MenuLiriousBurguer.Location = new System.Drawing.Point(0, 0);
+            this.MenuLiriousBurguer.Name = "MenuLiriousBurguer";
+            this.MenuLiriousBurguer.Size = new System.Drawing.Size(800, 29);
+            this.MenuLiriousBurguer.TabIndex = 382;
+            this.MenuLiriousBurguer.Text = "Liriou`s Burguer";
             // 
             // menuInício
             // 
             this.menuInício.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuInício.ForeColor = System.Drawing.Color.White;
+            this.menuInício.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.menuInício.Name = "menuInício";
             this.menuInício.Size = new System.Drawing.Size(63, 25);
             this.menuInício.Text = "Início";
@@ -206,7 +206,7 @@
             this.folhaDePagamentoToolStripMenuItem,
             this.consultarCartãoDePontoToolStripMenuItem});
             this.menuRH.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuRH.ForeColor = System.Drawing.Color.White;
+            this.menuRH.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.menuRH.Name = "menuRH";
             this.menuRH.Size = new System.Drawing.Size(166, 25);
             this.menuRH.Text = "Recursos Humanos";
@@ -214,7 +214,7 @@
             // cadastrarFuncionárioToolStripMenuItem
             // 
             this.cadastrarFuncionárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.cadastrarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cadastrarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cadastrarFuncionárioToolStripMenuItem.Name = "cadastrarFuncionárioToolStripMenuItem";
             this.cadastrarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.cadastrarFuncionárioToolStripMenuItem.Text = "Cadastrar Funcionário";
@@ -223,7 +223,7 @@
             // consultarFuncionárioToolStripMenuItem
             // 
             this.consultarFuncionárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.consultarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.consultarFuncionárioToolStripMenuItem.Name = "consultarFuncionárioToolStripMenuItem";
             this.consultarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.consultarFuncionárioToolStripMenuItem.Text = "Consultar Funcionário";
@@ -232,7 +232,7 @@
             // alterarFuncionárioToolStripMenuItem
             // 
             this.alterarFuncionárioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.alterarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.alterarFuncionárioToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.alterarFuncionárioToolStripMenuItem.Name = "alterarFuncionárioToolStripMenuItem";
             this.alterarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.alterarFuncionárioToolStripMenuItem.Text = "Alterar Funcionário";
@@ -241,7 +241,7 @@
             // folhaDePagamentoToolStripMenuItem
             // 
             this.folhaDePagamentoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.folhaDePagamentoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.folhaDePagamentoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.folhaDePagamentoToolStripMenuItem.Name = "folhaDePagamentoToolStripMenuItem";
             this.folhaDePagamentoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.folhaDePagamentoToolStripMenuItem.Text = "Folha de Pagamento";
@@ -250,7 +250,7 @@
             // consultarCartãoDePontoToolStripMenuItem
             // 
             this.consultarCartãoDePontoToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.consultarCartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.consultarCartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.consultarCartãoDePontoToolStripMenuItem.Name = "consultarCartãoDePontoToolStripMenuItem";
             this.consultarCartãoDePontoToolStripMenuItem.Size = new System.Drawing.Size(291, 26);
             this.consultarCartãoDePontoToolStripMenuItem.Text = "Consultar Cartão de Ponto";
@@ -259,7 +259,7 @@
             // MenuFinanceiro
             // 
             this.MenuFinanceiro.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuFinanceiro.ForeColor = System.Drawing.Color.White;
+            this.MenuFinanceiro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.MenuFinanceiro.Name = "MenuFinanceiro";
             this.MenuFinanceiro.Size = new System.Drawing.Size(102, 25);
             this.MenuFinanceiro.Text = "Financeiro";
@@ -267,7 +267,7 @@
             // MenuEstoque
             // 
             this.MenuEstoque.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuEstoque.ForeColor = System.Drawing.Color.White;
+            this.MenuEstoque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.MenuEstoque.Name = "MenuEstoque";
             this.MenuEstoque.Size = new System.Drawing.Size(85, 25);
             this.MenuEstoque.Text = "Estoque";
@@ -275,7 +275,7 @@
             // MenuSuprimento
             // 
             this.MenuSuprimento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuSuprimento.ForeColor = System.Drawing.Color.White;
+            this.MenuSuprimento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.MenuSuprimento.Name = "MenuSuprimento";
             this.MenuSuprimento.Size = new System.Drawing.Size(111, 25);
             this.MenuSuprimento.Text = "Suprimento";
@@ -808,15 +808,15 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblAlterarFuncionário);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.MenuLiriousBurger);
+            this.Controls.Add(this.MenuLiriousBurguer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDismissEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dismiss Employee";
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.MenuLiriousBurger.ResumeLayout(false);
-            this.MenuLiriousBurger.PerformLayout();
+            this.MenuLiriousBurguer.ResumeLayout(false);
+            this.MenuLiriousBurguer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView21)).EndInit();
@@ -849,7 +849,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAlterarFuncionário;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.MenuStrip MenuLiriousBurger;
+        private System.Windows.Forms.MenuStrip MenuLiriousBurguer;
         private System.Windows.Forms.ToolStripMenuItem menuInício;
         private System.Windows.Forms.ToolStripMenuItem menuRH;
         private System.Windows.Forms.ToolStripMenuItem cadastrarFuncionárioToolStripMenuItem;

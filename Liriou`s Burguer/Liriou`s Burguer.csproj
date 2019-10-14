@@ -33,9 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -70,6 +76,42 @@
     <Compile Include="Database\DiscountsDatabase.cs" />
     <Compile Include="Database\EmployeesDatabase.cs" />
     <Compile Include="Database\EnterpriseDatabase.cs" />
+    <Compile Include="Database\Entities\LiriousDB.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiriousDB.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\LiriousDB.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\LiriousDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_benefits.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_department.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_discounts.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_employees.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_financial.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_function.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_timecard.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\FinancialDatabase.cs" />
     <Compile Include="Database\FunctionDatabase.cs" />
     <Compile Include="Database\ProductDatabase.cs" />
@@ -234,6 +276,14 @@
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee1.resx">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Database\Entities\LiriousDB.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LiriousDB.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database\Entities\LiriousDB.edmx.diagram">
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -248,7 +298,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Database\Entities\" />
     <Folder Include="Screens\Manager\Financial\" />
     <Folder Include="Screens\Manager\Stock\" />
     <Folder Include="Screens\Manager\Supplies\" />
@@ -309,6 +358,22 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Senha.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Entities\LiriousDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+      <LastGenOutput>LiriousDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Entities\LiriousDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+      <LastGenOutput>LiriousDB.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\Voltar01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

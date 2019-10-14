@@ -8,5 +8,6 @@ namespace Liriou_s_Burguer.Business
 {
     class BenefitsBusiness
     {
+
     }
 }

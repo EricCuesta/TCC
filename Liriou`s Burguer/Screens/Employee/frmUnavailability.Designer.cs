@@ -41,10 +41,10 @@
             this.lblObservação = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblIndisponibilidade = new System.Windows.Forms.Label();
-            this.MenuLiriousBurger = new System.Windows.Forms.MenuStrip();
+            this.MenuLiriousBurguer = new System.Windows.Forms.MenuStrip();
             this.cartãoDePontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cartãoDePontoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.inícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cartãoDePontoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -52,7 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvIndisponibilidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.MenuLiriousBurger.SuspendLayout();
+            this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             this.SuspendLayout();
@@ -183,17 +183,17 @@
             this.lblIndisponibilidade.TabIndex = 232;
             this.lblIndisponibilidade.Text = "Indisponibilidade";
             // 
-            // MenuLiriousBurger
+            // MenuLiriousBurguer
             // 
-            this.MenuLiriousBurger.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.MenuLiriousBurger.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuLiriousBurguer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.MenuLiriousBurguer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cartãoDePontoToolStripMenuItem});
-            this.MenuLiriousBurger.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.MenuLiriousBurger.Location = new System.Drawing.Point(0, 0);
-            this.MenuLiriousBurger.Name = "MenuLiriousBurger";
-            this.MenuLiriousBurger.Size = new System.Drawing.Size(800, 29);
-            this.MenuLiriousBurger.TabIndex = 231;
-            this.MenuLiriousBurger.Text = "Liriou`s Burger";
+            this.MenuLiriousBurguer.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+            this.MenuLiriousBurguer.Location = new System.Drawing.Point(0, 0);
+            this.MenuLiriousBurguer.Name = "MenuLiriousBurguer";
+            this.MenuLiriousBurguer.Size = new System.Drawing.Size(800, 29);
+            this.MenuLiriousBurguer.TabIndex = 231;
+            this.MenuLiriousBurguer.Text = "Liriou`s Burger";
             // 
             // cartãoDePontoToolStripMenuItem
             // 
@@ -201,28 +201,28 @@
             this.inícioToolStripMenuItem,
             this.cartãoDePontoToolStripMenuItem1});
             this.cartãoDePontoToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.cartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.cartãoDePontoToolStripMenuItem.Name = "cartãoDePontoToolStripMenuItem";
             this.cartãoDePontoToolStripMenuItem.Size = new System.Drawing.Size(67, 25);
             this.cartãoDePontoToolStripMenuItem.Text = "Menu";
             // 
-            // cartãoDePontoToolStripMenuItem1
-            // 
-            this.cartãoDePontoToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.cartãoDePontoToolStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.cartãoDePontoToolStripMenuItem1.Name = "cartãoDePontoToolStripMenuItem1";
-            this.cartãoDePontoToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
-            this.cartãoDePontoToolStripMenuItem1.Text = "Cartão de Ponto";
-            this.cartãoDePontoToolStripMenuItem1.Click += new System.EventHandler(this.cartãoDePontoToolStripMenuItem1_Click);
-            // 
             // inícioToolStripMenuItem
             // 
             this.inícioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.inícioToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.inícioToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.inícioToolStripMenuItem.Name = "inícioToolStripMenuItem";
             this.inícioToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
             this.inícioToolStripMenuItem.Text = "Início";
             this.inícioToolStripMenuItem.Click += new System.EventHandler(this.inícioToolStripMenuItem_Click);
+            // 
+            // cartãoDePontoToolStripMenuItem1
+            // 
+            this.cartãoDePontoToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.cartãoDePontoToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cartãoDePontoToolStripMenuItem1.Name = "cartãoDePontoToolStripMenuItem1";
+            this.cartãoDePontoToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
+            this.cartãoDePontoToolStripMenuItem1.Text = "Cartão de Ponto";
+            this.cartãoDePontoToolStripMenuItem1.Click += new System.EventHandler(this.cartãoDePontoToolStripMenuItem1_Click);
             // 
             // imgFechar
             // 
@@ -268,7 +268,7 @@
             this.Controls.Add(this.lblObservação);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblIndisponibilidade);
-            this.Controls.Add(this.MenuLiriousBurger);
+            this.Controls.Add(this.MenuLiriousBurguer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUnavailability";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -278,8 +278,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvIndisponibilidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.MenuLiriousBurger.ResumeLayout(false);
-            this.MenuLiriousBurger.PerformLayout();
+            this.MenuLiriousBurguer.ResumeLayout(false);
+            this.MenuLiriousBurguer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             this.ResumeLayout(false);
@@ -301,7 +301,7 @@
         private System.Windows.Forms.Label lblObservação;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblIndisponibilidade;
-        private System.Windows.Forms.MenuStrip MenuLiriousBurger;
+        private System.Windows.Forms.MenuStrip MenuLiriousBurguer;
         private System.Windows.Forms.ToolStripMenuItem cartãoDePontoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cartãoDePontoToolStripMenuItem1;
         private System.Windows.Forms.PictureBox imgFechar;

@@ -68,5 +68,10 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             Application.Exit();
         }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

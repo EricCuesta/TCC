@@ -13,5 +13,7 @@ namespace Liriou_s_Burguer.Model
         public static string cpf { get; set; }
         public static string telefone { get; set; }
         public static string celular { get; set; }
+        public static string emial { get; set; }
+        public static string senha { get; set; }
     }
 }

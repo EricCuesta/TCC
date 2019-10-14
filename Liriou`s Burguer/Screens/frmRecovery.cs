@@ -15,7 +15,7 @@ namespace Liriou_s_Burguer.Screens
         public frmRecovery()
         {
             InitializeComponent();
-            panelVerificador.Visible = true;
+            panelVerificador.Visible = false;
             btnVerificar.Visible = true;
             btnAlterar.Visible = false;
             panelAlterarSenha.Visible = false;
@@ -31,17 +31,71 @@ namespace Liriou_s_Burguer.Screens
 
         private void btnVerificar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
 
+                if (cboOpção.Text == "RG")
+                {
+                    ShowSubMenu(panelSubMenuRG);
+                    employees.ds_rg = mtxtRG.Text.Trim();
+                }
+                else if (cboOpção.Text == "CPF")
+                {
+                    ShowSubMenu(panelSubMenuCPF);
+                    employees.ds_cpf = mtxtCPF.Text.Trim();
+                }
+                else if (cboOpção.Text == "Número do Celular")
+                {
+                    ShowSubMenu(panelSubMenuCelular);
+                    employees.mr_cellphone = mtxtCelular.Text.Trim();
+                }
+                else if (cboOpção.Text == "Número do Telefone")
+                {
+                    ShowSubMenu(panelSubMenuTelefone);
+                    employees.mr_tellphone = mtxtTelefone.Text.Trim();
+                }
+
+                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
+                busemp.Verificar(employees);
+
+                Modificar();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+                employees.ds_password = txtSenha.Text.Trim();
 
+                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
+                busemp.AlterarRecuperação(employees);
+
+                MessageBox.Show("Senha Alterada com sucesso");
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void CustomizeDesign()
         {
-            panelSubMenuRG.Visible = true;
+            panelSubMenuRG.Visible = false;
             panelSubMenuCPF.Visible = false;
             panelSubMenuCelular.Visible = false;
             panelSubMenuTelefone.Visible = false;
@@ -72,6 +126,13 @@ namespace Liriou_s_Burguer.Screens
             }
         }
 
+        private void imgVoltar_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            Hide();
+        }
+
         private void imgMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -82,24 +143,24 @@ namespace Liriou_s_Burguer.Screens
             Application.Exit();
         }
 
-        private void btnRG_Click(object sender, EventArgs e)
+        private void cboOpção_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ShowSubMenu(panelSubMenuRG);
-        }
-
-        private void btnCPF_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelSubMenuCPF);
-        }
-
-        private void btnCelular_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelSubMenuCelular);
-        }
-
-        private void btnTelefone_Click(object sender, EventArgs e)
-        {
-            ShowSubMenu(panelSubMenuTelefone);
+            if (cboOpção.Text == "RG")
+            {
+                ShowSubMenu(panelSubMenuRG);
+            }
+            else if (cboOpção.Text == "CPF")
+            {
+                ShowSubMenu(panelSubMenuCPF);
+            }
+            else if (cboOpção.Text == "Número do Celular")
+            {
+                ShowSubMenu(panelSubMenuCelular);
+            }
+            else if (cboOpção.Text == "Número do Telefone")
+            {
+                ShowSubMenu(panelSubMenuTelefone);
+            }
         }
     }
 }

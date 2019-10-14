@@ -150,7 +150,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 170);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(265, 30);
+            this.panel2.Size = new System.Drawing.Size(265, 32);
             this.panel2.TabIndex = 238;
             // 
             // btnIndisponibilidade
@@ -166,7 +166,7 @@
             this.btnIndisponibilidade.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIndisponibilidade.Location = new System.Drawing.Point(4, 2);
             this.btnIndisponibilidade.Name = "btnIndisponibilidade";
-            this.btnIndisponibilidade.Size = new System.Drawing.Size(243, 26);
+            this.btnIndisponibilidade.Size = new System.Drawing.Size(242, 29);
             this.btnIndisponibilidade.TabIndex = 0;
             this.btnIndisponibilidade.Text = "Indisponibilidade";
             this.btnIndisponibilidade.UseVisualStyleBackColor = false;
@@ -177,7 +177,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
             this.panel3.Location = new System.Drawing.Point(0, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(5, 26);
+            this.panel3.Size = new System.Drawing.Size(5, 30);
             this.panel3.TabIndex = 12;
             // 
             // imgGoogle
@@ -236,7 +236,7 @@
             this.btnCartãoDePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCartãoDePonto.Location = new System.Drawing.Point(4, 2);
             this.btnCartãoDePonto.Name = "btnCartãoDePonto";
-            this.btnCartãoDePonto.Size = new System.Drawing.Size(243, 26);
+            this.btnCartãoDePonto.Size = new System.Drawing.Size(242, 26);
             this.btnCartãoDePonto.TabIndex = 0;
             this.btnCartãoDePonto.Text = "Cartão de Ponto";
             this.btnCartãoDePonto.UseVisualStyleBackColor = false;

@@ -68,12 +68,5 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             payroll.Show();
             Hide();
         }
-
-        private void consultarCartãoDePontoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultTimeCard consultTimeCard = new frmConsultTimeCard();
-            consultTimeCard.Show();
-            Hide();
-        }
     }
 }

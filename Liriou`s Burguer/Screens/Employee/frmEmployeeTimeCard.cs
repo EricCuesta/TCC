@@ -40,5 +40,10 @@ namespace Liriou_s_Burguer.Screens.Employee
         {
             Application.Exit();
         }
+
+        private void DataHora_Tick(object sender, EventArgs e)
+        {
+            lblHorárioData.Text = DateTime.Now.ToString("dd/MM/yyyy    hh:mm:ss");
+        }
     }
 }
