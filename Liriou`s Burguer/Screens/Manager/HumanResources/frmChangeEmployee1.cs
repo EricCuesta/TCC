@@ -28,5 +28,22 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

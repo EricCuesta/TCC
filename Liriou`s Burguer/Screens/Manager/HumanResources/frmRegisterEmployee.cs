@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Regex;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -71,7 +72,50 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+                Business.EmployeesBusiness business = new Business.EmployeesBusiness();
 
+                employees.nm_firstName = txtNome.Text.Trim();
+                employees.nm_lastName = txtSobrenome.Text.Trim();
+                employees.ds_sex = cboGênero.Text.Trim();
+                employees.dt_birth = Convert.ToDateTime(dtpNascimento.Value);
+                employees.ds_cpf = txtCPF.Text.Trim();
+                employees.ds_rg = txtRG.Text.Trim();
+                employees.ds_country = txtPaís.Text.Trim();
+                employees.ds_state = cboEstado.Text.Trim();
+                employees.ds_cep = lblCEP.Text.Trim();
+                employees.ds_complement = txtComplemento.Text.Trim();
+                employees.ds_address = txtEndereço.Text.Trim();
+                employees.mr_cellphone = txtCelular.Text.Trim();
+                employees.mr_tellphone = txtTelefone.Text.Trim();
+                employees.ds_email = txtEmail.Text.Trim();
+                employees.ds_password = txtSenha.Text;
+
+                string email = txtEmail.Text;
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(email);
+                if (match.Success)
+                    MessageBox.Show((email + " Está correto"));
+                else
+                    MessageBox.Show(email + " é um Email inválido!");
+
+                business.Inserir(employees);
+
+                frmRegisterEmployee1 tela = new frmRegisterEmployee1();
+                tela.Show();
+                this.Hide();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }

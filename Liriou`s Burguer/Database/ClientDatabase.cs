@@ -8,6 +8,52 @@ namespace Liriou_s_Burguer.Database
 {
     class ClientDatabase
     {
+        public void Inserir(Entities.tb_client client)
+        {
+            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
+            DB.tb_client.Add(client);
+
+            DB.SaveChanges();
+        }
+
+        public List<Entities.tb_client> Consultar()
+        {
+            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
+            List<Entities.tb_client> list = DB.tb_client.ToList();
+
+            return list;
+        }
+
+        public void Alterar(Entities.tb_client client)
+        {
+            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
+            Entities.tb_client list = DB.tb_client.First(t => t.id_client == client.id_client);
+            list.ds_Address = list.ds_Address;
+            list.ds_cellphone = list.ds_cellphone;
+            list.ds_cep = list.ds_cep;
+            list.ds_city = list.ds_city;
+            list.ds_country = list.ds_country;
+            list.ds_cpf = list.ds_cpf;
+            list.ds_email = list.ds_email;
+            list.ds_gender = list.ds_gender;
+            list.ds_note = list.ds_note;
+            list.ds_state = list.ds_state;
+            list.ds_tellphone = list.ds_tellphone;
+            list.dt_birth = list.dt_birth;
+            list.nm_firstName = list.nm_firstName;
+            list.nm_lastName = list.nm_lastName;
+            
+            DB.SaveChanges();
+        }
+
+        public void Remover(int id)
+        {
+            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
+            Entities.tb_client remover = DB.tb_client.First(t => t.id_client == id);
+
+            DB.tb_client.Remove(remover);
+            DB.SaveChanges();
+        }
 
     }
 }

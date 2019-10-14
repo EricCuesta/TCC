@@ -33,13 +33,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Regex, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Regex.1.0.0.0\lib\net20\System.Regex.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -76,41 +92,71 @@
     <Compile Include="Database\DiscountsDatabase.cs" />
     <Compile Include="Database\EmployeesDatabase.cs" />
     <Compile Include="Database\EnterpriseDatabase.cs" />
-    <Compile Include="Database\Entities\LiriousDB.Context.cs">
+    <Compile Include="Database\Entities\LiriousDatabase.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LiriousDB.Context.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Entities\LiriousDB.cs">
+    <Compile Include="Database\Entities\LiriousDatabase.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Entities\LiriousDB.Designer.cs">
+    <Compile Include="Database\Entities\LiriousDatabase.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LiriousDB.edmx</DependentUpon>
+      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_benefits.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_client.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_cpp.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_crm.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_department.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_discounts.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_employees.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_enterprise.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_financial.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_function.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_iten.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_product.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_provider.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_sale.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_stock.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_supply.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_timecard.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\FinancialDatabase.cs" />
     <Compile Include="Database\FunctionDatabase.cs" />
@@ -276,12 +322,12 @@
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee1.resx">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Database\Entities\LiriousDB.edmx">
+    <EntityDeploy Include="Database\Entities\LiriousDatabase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LiriousDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>LiriousDatabase.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Database\Entities\LiriousDB.edmx.diagram">
-      <DependentUpon>LiriousDB.edmx</DependentUpon>
+    <None Include="Database\Entities\LiriousDatabase.edmx.diagram">
+      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -363,17 +409,19 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\Entities\LiriousDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LiriousDB.edmx</DependentUpon>
-      <LastGenOutput>LiriousDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Database\Entities\LiriousDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LiriousDB.edmx</DependentUpon>
-      <LastGenOutput>LiriousDB.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\Voltar01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Entities\LiriousDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
+      <LastGenOutput>LiriousDatabase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Entities\LiriousDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
+      <LastGenOutput>LiriousDatabase.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

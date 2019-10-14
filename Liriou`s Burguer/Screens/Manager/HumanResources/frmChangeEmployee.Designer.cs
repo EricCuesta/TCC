@@ -30,8 +30,6 @@
         {
             this.cboID = new System.Windows.Forms.ComboBox();
             this.btnContinuar = new System.Windows.Forms.Button();
-            this.maskedtxtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.maskedtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.MenuLiriousBurguer = new System.Windows.Forms.MenuStrip();
             this.menuInício = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRH = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,27 +47,20 @@
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lblCelular = new System.Windows.Forms.Label();
             this.dataGridView21 = new System.Windows.Forms.DataGridView();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.dataGridView20 = new System.Windows.Forms.DataGridView();
             this.dataGridView19 = new System.Windows.Forms.DataGridView();
-            this.txtComplemento = new System.Windows.Forms.TextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
             this.lblEndereço = new System.Windows.Forms.Label();
             this.dataGridView13 = new System.Windows.Forms.DataGridView();
-            this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCEP = new System.Windows.Forms.Label();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.txtPaís = new System.Windows.Forms.TextBox();
             this.lblPaís = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblRG = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
@@ -82,18 +73,27 @@
             this.lblDependentes = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.lblSobrenome = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblNome = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblAlterarFuncionário = new System.Windows.Forms.Label();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtSobrenome = new System.Windows.Forms.TextBox();
+            this.txtCPF = new System.Windows.Forms.TextBox();
+            this.txtRG = new System.Windows.Forms.TextBox();
+            this.txtPaís = new System.Windows.Forms.TextBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtEndereço = new System.Windows.Forms.RichTextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtSenha = new System.Windows.Forms.TextBox();
             this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
@@ -137,24 +137,7 @@
             this.btnContinuar.TabIndex = 361;
             this.btnContinuar.Text = "Continuar";
             this.btnContinuar.UseVisualStyleBackColor = false;
-            // 
-            // maskedtxtTelefone
-            // 
-            this.maskedtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedtxtTelefone.Location = new System.Drawing.Point(487, 275);
-            this.maskedtxtTelefone.Mask = "(000) 0000-0000";
-            this.maskedtxtTelefone.Name = "maskedtxtTelefone";
-            this.maskedtxtTelefone.Size = new System.Drawing.Size(301, 23);
-            this.maskedtxtTelefone.TabIndex = 360;
-            // 
-            // maskedtxtCelular
-            // 
-            this.maskedtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedtxtCelular.Location = new System.Drawing.Point(80, 275);
-            this.maskedtxtCelular.Mask = "(+000) (999) 00000-9999";
-            this.maskedtxtCelular.Name = "maskedtxtCelular";
-            this.maskedtxtCelular.Size = new System.Drawing.Size(314, 23);
-            this.maskedtxtCelular.TabIndex = 359;
+            this.btnContinuar.Click += new System.EventHandler(this.btnContinuar_Click);
             // 
             // MenuLiriousBurguer
             // 
@@ -326,22 +309,6 @@
             this.dataGridView21.Size = new System.Drawing.Size(2, 30);
             this.dataGridView21.TabIndex = 352;
             // 
-            // txtSenha
-            // 
-            this.txtSenha.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(470, 307);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(318, 23);
-            this.txtSenha.TabIndex = 351;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(73, 307);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(321, 23);
-            this.txtEmail.TabIndex = 350;
-            // 
             // lblSenha
             // 
             this.lblSenha.AutoSize = true;
@@ -380,14 +347,6 @@
             this.dataGridView19.Size = new System.Drawing.Size(2, 30);
             this.dataGridView19.TabIndex = 346;
             // 
-            // txtComplemento
-            // 
-            this.txtComplemento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(562, 234);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(226, 23);
-            this.txtComplemento.TabIndex = 345;
-            // 
             // lblComplemento
             // 
             this.lblComplemento.AutoSize = true;
@@ -416,14 +375,6 @@
             this.dataGridView13.Name = "dataGridView13";
             this.dataGridView13.Size = new System.Drawing.Size(800, 2);
             this.dataGridView13.TabIndex = 341;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(575, 192);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(213, 23);
-            this.txtCidade.TabIndex = 340;
             // 
             // lblCEP
             // 
@@ -454,14 +405,6 @@
             this.lblEstado.TabIndex = 336;
             this.lblEstado.Text = "Estado:";
             // 
-            // txtPaís
-            // 
-            this.txtPaís.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaís.Location = new System.Drawing.Point(55, 192);
-            this.txtPaís.Name = "txtPaís";
-            this.txtPaís.Size = new System.Drawing.Size(174, 23);
-            this.txtPaís.TabIndex = 335;
-            // 
             // lblPaís
             // 
             this.lblPaís.AutoSize = true;
@@ -490,14 +433,6 @@
             this.dataGridView9.Size = new System.Drawing.Size(2, 30);
             this.dataGridView9.TabIndex = 332;
             // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(446, 160);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(342, 23);
-            this.txtRG.TabIndex = 331;
-            // 
             // lblRG
             // 
             this.lblRG.AutoSize = true;
@@ -507,14 +442,6 @@
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 330;
             this.lblRG.Text = "RG:";
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(56, 160);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(336, 23);
-            this.txtCPF.TabIndex = 329;
             // 
             // lblCPF
             // 
@@ -577,6 +504,7 @@
             this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGênero.FormattingEnabled = true;
             this.cboGênero.Location = new System.Drawing.Point(286, 128);
+            this.cboGênero.MaxLength = 1;
             this.cboGênero.Name = "cboGênero";
             this.cboGênero.Size = new System.Drawing.Size(218, 23);
             this.cboGênero.TabIndex = 322;
@@ -627,14 +555,6 @@
             this.dataGridView4.Size = new System.Drawing.Size(2, 30);
             this.dataGridView4.TabIndex = 317;
             // 
-            // txtSobrenome
-            // 
-            this.txtSobrenome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(505, 96);
-            this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(283, 23);
-            this.txtSobrenome.TabIndex = 316;
-            // 
             // lblSobrenome
             // 
             this.lblSobrenome.AutoSize = true;
@@ -644,14 +564,6 @@
             this.lblSobrenome.Size = new System.Drawing.Size(92, 19);
             this.lblSobrenome.TabIndex = 315;
             this.lblSobrenome.Text = "Sobrenome:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(71, 96);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(321, 23);
-            this.txtNome.TabIndex = 314;
             // 
             // dataGridView3
             // 
@@ -701,25 +613,6 @@
             this.lblAlterarFuncionário.TabIndex = 309;
             this.lblAlterarFuncionário.Text = "Alterar Funcionário";
             // 
-            // cboEstado
-            // 
-            this.cboEstado.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(309, 193);
-            this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(207, 23);
-            this.cboEstado.TabIndex = 365;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Location = new System.Drawing.Point(92, 225);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(348, 41);
-            this.richTextBox1.TabIndex = 366;
-            this.richTextBox1.Text = "";
-            // 
             // imgMinimizar
             // 
             this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -748,20 +641,149 @@
             this.imgFechar.TabStop = false;
             this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
             // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(73, 99);
+            this.txtNome.MaxLength = 32;
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(321, 23);
+            this.txtNome.TabIndex = 490;
+            // 
+            // txtSobrenome
+            // 
+            this.txtSobrenome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSobrenome.Location = new System.Drawing.Point(505, 98);
+            this.txtSobrenome.MaxLength = 32;
+            this.txtSobrenome.Name = "txtSobrenome";
+            this.txtSobrenome.Size = new System.Drawing.Size(283, 23);
+            this.txtSobrenome.TabIndex = 492;
+            // 
+            // txtCPF
+            // 
+            this.txtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Location = new System.Drawing.Point(58, 162);
+            this.txtCPF.MaxLength = 14;
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(336, 23);
+            this.txtCPF.TabIndex = 505;
+            // 
+            // txtRG
+            // 
+            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(446, 161);
+            this.txtRG.MaxLength = 16;
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(342, 23);
+            this.txtRG.TabIndex = 507;
+            // 
+            // txtPaís
+            // 
+            this.txtPaís.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaís.Location = new System.Drawing.Point(55, 193);
+            this.txtPaís.MaxLength = 32;
+            this.txtPaís.Name = "txtPaís";
+            this.txtPaís.Size = new System.Drawing.Size(174, 23);
+            this.txtPaís.TabIndex = 511;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Location = new System.Drawing.Point(305, 194);
+            this.cboEstado.MaxLength = 32;
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(207, 23);
+            this.cboEstado.TabIndex = 533;
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(575, 193);
+            this.txtCidade.MaxLength = 9;
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(213, 23);
+            this.txtCidade.TabIndex = 534;
+            // 
+            // txtEndereço
+            // 
+            this.txtEndereço.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.txtEndereço.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEndereço.Location = new System.Drawing.Point(92, 225);
+            this.txtEndereço.MaxLength = 128;
+            this.txtEndereço.Name = "txtEndereço";
+            this.txtEndereço.Size = new System.Drawing.Size(348, 41);
+            this.txtEndereço.TabIndex = 535;
+            this.txtEndereço.Text = "";
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(562, 236);
+            this.txtComplemento.MaxLength = 256;
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(226, 23);
+            this.txtComplemento.TabIndex = 536;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(80, 277);
+            this.txtCelular.MaxLength = 18;
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(312, 23);
+            this.txtCelular.TabIndex = 537;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(484, 277);
+            this.txtTelefone.MaxLength = 9;
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(312, 23);
+            this.txtTelefone.TabIndex = 538;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(73, 306);
+            this.txtEmail.MaxLength = 64;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(321, 23);
+            this.txtEmail.TabIndex = 539;
+            // 
+            // txtSenha
+            // 
+            this.txtSenha.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(482, 306);
+            this.txtSenha.MaxLength = 20;
+            this.txtSenha.Name = "txtSenha";
+            this.txtSenha.Size = new System.Drawing.Size(318, 23);
+            this.txtSenha.TabIndex = 540;
+            // 
             // frmChangeEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.imgFechar);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.txtSenha);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtComplemento);
+            this.Controls.Add(this.txtEndereço);
+            this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.cboEstado);
+            this.Controls.Add(this.txtPaís);
+            this.Controls.Add(this.txtRG);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtSobrenome);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.cboID);
             this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.btnContinuar);
-            this.Controls.Add(this.maskedtxtTelefone);
-            this.Controls.Add(this.maskedtxtCelular);
             this.Controls.Add(this.MenuLiriousBurguer);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.dataGridView23);
@@ -769,27 +791,20 @@
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.lblCelular);
             this.Controls.Add(this.dataGridView21);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblSenha);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.dataGridView20);
             this.Controls.Add(this.dataGridView19);
-            this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.lblComplemento);
             this.Controls.Add(this.lblEndereço);
             this.Controls.Add(this.dataGridView13);
-            this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.lblCEP);
             this.Controls.Add(this.dataGridView11);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.txtPaís);
             this.Controls.Add(this.lblPaís);
             this.Controls.Add(this.dataGridView10);
             this.Controls.Add(this.dataGridView9);
-            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblRG);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.dataGridView8);
             this.Controls.Add(this.dataGridView7);
@@ -802,9 +817,7 @@
             this.Controls.Add(this.lblDependentes);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.lblSobrenome);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.lblNome);
@@ -846,8 +859,6 @@
         private System.Windows.Forms.ComboBox cboID;
         private System.Windows.Forms.PictureBox imgMinimizar;
         private System.Windows.Forms.Button btnContinuar;
-        private System.Windows.Forms.MaskedTextBox maskedtxtTelefone;
-        private System.Windows.Forms.MaskedTextBox maskedtxtCelular;
         private System.Windows.Forms.MenuStrip MenuLiriousBurguer;
         private System.Windows.Forms.ToolStripMenuItem menuInício;
         private System.Windows.Forms.ToolStripMenuItem menuRH;
@@ -865,27 +876,20 @@
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.DataGridView dataGridView21;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.DataGridView dataGridView20;
         private System.Windows.Forms.DataGridView dataGridView19;
-        private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.Label lblEndereço;
         private System.Windows.Forms.DataGridView dataGridView13;
-        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblCEP;
         private System.Windows.Forms.DataGridView dataGridView11;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.TextBox txtPaís;
         private System.Windows.Forms.Label lblPaís;
         private System.Windows.Forms.DataGridView dataGridView10;
         private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblRG;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.DataGridView dataGridView7;
@@ -898,16 +902,25 @@
         private System.Windows.Forms.Label lblDependentes;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAlterarFuncionário;
-        private System.Windows.Forms.ComboBox cboEstado;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.PictureBox imgFechar;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtSobrenome;
+        private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.TextBox txtRG;
+        private System.Windows.Forms.TextBox txtPaís;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.RichTextBox txtEndereço;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtSenha;
     }
 }
