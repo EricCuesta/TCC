@@ -17,6 +17,20 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             InitializeComponent();
         }
 
+        Database.Entities.tb_employees employees;
+        Database.Entities.tb_discounts discounts;
+        Database.Entities.tb_function function;
+        Database.Entities.tb_timecard timecard;
+
+        public void CarregarFuncionario(Database.Entities.tb_employees employees, Database.Entities.tb_discounts discounts,
+                               Database.Entities.tb_function function, Database.Entities.tb_timecard timecard)
+        {
+            this.employees = employees;
+            this.discounts = discounts;
+            this.function = function;
+            this.timecard = timecard;
+        }
+
         private void imgMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -25,6 +39,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         private void imgVoltar_Click(object sender, EventArgs e)
         {
             frmRegisterEmployee registerEmployee = new frmRegisterEmployee();
+            registerEmployee.CarregarFuncionario(this.employees, discounts, function, timecard);
             registerEmployee.Show();
         }
 
@@ -32,6 +47,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
+                Database.Entities.tb_employees tbemployees = new Database.Entities.tb_employees();
 
             }
             catch (ArgumentException ex)
@@ -42,6 +58,11 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void frmRegisterEmployee1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

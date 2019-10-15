@@ -97,15 +97,22 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
                 Match match = regex.Match(email);
                 if (match.Success)
-                    MessageBox.Show((email + " Está correto"));
+                {
+                    //business.Inserir(employees);
+                    //business.Alterar(employees);
+
+                    frmRegisterEmployee1 tela = new frmRegisterEmployee1();
+                    tela.CarregarFuncionario(employees, discounts, function, timecard);
+                    tela.Show();
+                    Hide();
+                }
                 else
+                {
                     MessageBox.Show(email + " é um Email inválido!");
+                }
+                    
 
-                business.Inserir(employees);
-
-                frmRegisterEmployee1 tela = new frmRegisterEmployee1();
-                tela.Show();
-                Hide();
+              
             }
             catch (ArgumentException ex)
             {
@@ -117,5 +124,48 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             }
         }
 
+        private void mtxtCelular_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+
+        Database.Entities.tb_employees employees;
+        Database.Entities.tb_discounts discounts;
+        Database.Entities.tb_function function;
+        Database.Entities.tb_timecard timecard;
+
+        public void CarregarFuncionario(Database.Entities.tb_employees employees, Database.Entities.tb_discounts discounts,
+                               Database.Entities.tb_function function, Database.Entities.tb_timecard timecard)
+        {
+            this.employees = employees;
+            this.discounts = discounts;
+            this.function = function;
+            this.timecard = timecard;
+
+
+            txtNome.Text = employees.nm_firstName;
+            txtSobrenome.Text = employees.nm_lastName;
+            cboGênero.Text = employees.ds_sex;
+            dtpNascimento.Value = employees.dt_birth;
+            mtxtCPF.Text = employees.ds_rg;
+            mtxtRG.Text = employees.ds_cpf;
+            txtPaís.Text = employees.ds_country;
+            cboEstado.Text = employees.ds_state;
+            lblCEP.Text = employees.ds_cep;
+            txtComplemento.Text = employees.ds_complement;
+            txtEndereço.Text = employees.ds_address;
+            mtxtCelular.Text = employees.mr_cellphone;
+            mtxtTelefone.Text = employees.mr_tellphone;
+            txtEmail.Text = employees.ds_email;
+            txtSenha.Text = employees.ds_password;
+            
+
+        }
+
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.BackColor = Color.Blue;
+        }
     }
 }

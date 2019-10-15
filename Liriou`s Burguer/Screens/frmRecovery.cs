@@ -15,7 +15,7 @@ namespace Liriou_s_Burguer.Screens
         public frmRecovery()
         {
             InitializeComponent();
-            panelVerificador.Visible = false;
+            panelVerificador.Visible = true;
             btnVerificar.Visible = true;
             btnAlterar.Visible = false;
             panelAlterarSenha.Visible = false;
@@ -37,21 +37,25 @@ namespace Liriou_s_Burguer.Screens
 
                 if (cboOpção.Text == "RG")
                 {
+                    HideSubMenu();
                     ShowSubMenu(panelSubMenuRG);
                     employees.ds_rg = mtxtRG.Text.Trim();
                 }
                 else if (cboOpção.Text == "CPF")
                 {
+                    HideSubMenu();
                     ShowSubMenu(panelSubMenuCPF);
                     employees.ds_cpf = mtxtCPF.Text.Trim();
                 }
                 else if (cboOpção.Text == "Número do Celular")
                 {
+                    HideSubMenu();
                     ShowSubMenu(panelSubMenuCelular);
                     employees.mr_cellphone = mtxtCelular.Text.Trim();
                 }
                 else if (cboOpção.Text == "Número do Telefone")
                 {
+                    HideSubMenu();
                     ShowSubMenu(panelSubMenuTelefone);
                     employees.mr_tellphone = mtxtTelefone.Text.Trim();
                 }
@@ -147,18 +151,22 @@ namespace Liriou_s_Burguer.Screens
         {
             if (cboOpção.Text == "RG")
             {
+                HideSubMenu();
                 ShowSubMenu(panelSubMenuRG);
             }
             else if (cboOpção.Text == "CPF")
             {
+                HideSubMenu();
                 ShowSubMenu(panelSubMenuCPF);
             }
             else if (cboOpção.Text == "Número do Celular")
             {
+                HideSubMenu();
                 ShowSubMenu(panelSubMenuCelular);
             }
             else if (cboOpção.Text == "Número do Telefone")
             {
+                HideSubMenu();
                 ShowSubMenu(panelSubMenuTelefone);
             }
         }

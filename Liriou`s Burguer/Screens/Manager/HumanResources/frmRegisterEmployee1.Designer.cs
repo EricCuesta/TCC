@@ -671,6 +671,7 @@
             this.Name = "frmRegisterEmployee1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Employee";
+            this.Load += new System.EventHandler(this.frmRegisterEmployee1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValeTransporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValeAlimentação)).EndInit();

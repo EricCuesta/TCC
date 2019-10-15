@@ -43,12 +43,19 @@ namespace Liriou_s_Burguer.Database
             return list;
         }
 
-        public List<Entities.tb_employees> Login(string email, string senha)
+        public bool Login(string email, string senha)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_employees> list = DB.tb_employees.Where(t => t.ds_email == email && t.ds_password == senha).ToList();
+            bool v = DB.tb_employees.Any(t => t.ds_email == email && t.ds_password == senha);
 
-            return list;
+            if (v == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public void Alterar(Entities.tb_employees employees)

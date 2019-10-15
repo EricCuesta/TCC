@@ -85,22 +85,29 @@ namespace Liriou_s_Burguer.Screens
                 string senha = employees.ds_password;
 
                 Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
-                //bool verificação = busemp.Login(email, senha);
+                string r = busemp.Login(email, senha);
 
-                //if (verificação == true)
-                //{
-                //    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
-                //    tela.Show();
-                //    this.Hide();
-                //}
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                if (r == "true")
+                {
+                    this.Hide();
+                    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
+                    tela.Show();
+                }
+                else if(r == "false")
+                {
+                    this.Hide();
+                    Employee.frmEmployeeMenu tela = new Employee.frmEmployeeMenu();
+                    tela.Show();
+                }
+
+                MessageBox.Show(r);
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro!",
+                                "Login",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
         }
     }

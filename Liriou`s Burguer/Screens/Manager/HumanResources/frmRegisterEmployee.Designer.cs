@@ -314,6 +314,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(318, 23);
             this.txtSenha.TabIndex = 524;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
@@ -660,7 +661,9 @@
             this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgMinimizar.TabIndex = 363;
             this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Tag = "minimizar";
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
             // 
             // txtPaís
             // 
@@ -706,6 +709,8 @@
             this.mtxtCelular.Name = "mtxtCelular";
             this.mtxtCelular.Size = new System.Drawing.Size(314, 23);
             this.mtxtCelular.TabIndex = 549;
+            this.mtxtCelular.Text = "055011";
+            this.mtxtCelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtCelular_MaskInputRejected);
             // 
             // cboEstado
             // 

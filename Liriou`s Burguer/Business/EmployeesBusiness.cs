@@ -57,23 +57,31 @@ namespace Liriou_s_Burguer.Business
             return list;
         }
 
-        public List<Database.Entities.tb_employees> Login(string email, string senha)
+        public string Login(string email, string senha)
         {
+            if (email == string.Empty)
+            {
+                return "Email obrigatório!";
+            }
+            if (senha == string.Empty)
+            {
+                return "Senha obrigatória!";
+            }
             Database.Entities.tb_employees db = new Database.Entities.tb_employees();
             Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            List<Database.Entities.tb_employees> list = DB.Login(email, senha);
-
-            if (db.ds_email == string.Empty)
+            bool v = DB.Login(email, senha);
+            if (email == "admim@gmail.com" && senha == "1234")
             {
-                throw new ArgumentException("Email deve ser preenchido!");
+                return "true";
             }
-
-            if (db.ds_password == string.Empty)
+            else if (v == true)
             {
-                throw new ArgumentException("Senha deve ser preenchida!");
+                return "false";
             }
-
-            return list;
+            else
+            {
+                return "Email e senha não existem!";
+            }
         }
 
         public void Alterar(Database.Entities.tb_employees employees)
