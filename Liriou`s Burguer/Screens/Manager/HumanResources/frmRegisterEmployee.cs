@@ -4,8 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Regex;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -81,15 +81,15 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 employees.nm_lastName = txtSobrenome.Text.Trim();
                 employees.ds_sex = cboGênero.Text.Trim();
                 employees.dt_birth = Convert.ToDateTime(dtpNascimento.Value);
-                employees.ds_cpf = txtCPF.Text.Trim();
-                employees.ds_rg = txtRG.Text.Trim();
+                employees.ds_cpf = mtxtCPF.Text.Trim();
+                employees.ds_rg = mtxtRG.Text.Trim();
                 employees.ds_country = txtPaís.Text.Trim();
                 employees.ds_state = cboEstado.Text.Trim();
                 employees.ds_cep = lblCEP.Text.Trim();
                 employees.ds_complement = txtComplemento.Text.Trim();
                 employees.ds_address = txtEndereço.Text.Trim();
-                employees.mr_cellphone = txtCelular.Text.Trim();
-                employees.mr_tellphone = txtTelefone.Text.Trim();
+                employees.mr_cellphone = mtxtCelular.Text.Trim();
+                employees.mr_tellphone = mtxtTelefone.Text.Trim();
                 employees.ds_email = txtEmail.Text.Trim();
                 employees.ds_password = txtSenha.Text;
 
@@ -105,7 +105,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
                 frmRegisterEmployee1 tela = new frmRegisterEmployee1();
                 tela.Show();
-                this.Hide();
+                Hide();
             }
             catch (ArgumentException ex)
             {

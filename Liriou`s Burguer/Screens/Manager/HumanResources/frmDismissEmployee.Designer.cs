@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nudID = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblAlterarFuncionário = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@
             this.MenuEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSuprimento = new System.Windows.Forms.ToolStripMenuItem();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.maskedtxtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.maskedtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView23 = new System.Windows.Forms.DataGridView();
@@ -71,16 +69,13 @@
             this.lblPaís = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblRG = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNascimento = new System.Windows.Forms.Label();
-            this.cboGênero = new System.Windows.Forms.ComboBox();
             this.lblGênero = new System.Windows.Forms.Label();
             this.nudDependentes = new System.Windows.Forms.NumericUpDown();
             this.lblDependentes = new System.Windows.Forms.Label();
@@ -94,7 +89,11 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
+            this.cboGênero = new System.Windows.Forms.ComboBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.nudId = new System.Windows.Forms.NumericUpDown();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
@@ -116,21 +115,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             this.SuspendLayout();
-            // 
-            // nudID
-            // 
-            this.nudID.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudID.Location = new System.Drawing.Point(55, 66);
-            this.nudID.Name = "nudID";
-            this.nudID.Size = new System.Drawing.Size(91, 23);
-            this.nudID.TabIndex = 433;
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.Location = new System.Drawing.Point(12, 65);
+            this.lblID.Location = new System.Drawing.Point(12, 64);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(37, 26);
             this.lblID.TabIndex = 432;
@@ -169,6 +161,7 @@
             this.btnCadastrar.TabIndex = 383;
             this.btnCadastrar.Text = "Demitir";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // MenuLiriousBurguer
             // 
@@ -289,15 +282,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(348, 41);
             this.richTextBox1.TabIndex = 485;
             this.richTextBox1.Text = "";
-            // 
-            // cboEstado
-            // 
-            this.cboEstado.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(309, 193);
-            this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(207, 23);
-            this.cboEstado.TabIndex = 484;
             // 
             // maskedtxtTelefone
             // 
@@ -528,14 +512,6 @@
             this.dataGridView9.Size = new System.Drawing.Size(2, 30);
             this.dataGridView9.TabIndex = 459;
             // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(446, 160);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(342, 23);
-            this.txtRG.TabIndex = 458;
-            // 
             // lblRG
             // 
             this.lblRG.AutoSize = true;
@@ -545,14 +521,6 @@
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 457;
             this.lblRG.Text = "RG:";
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(56, 160);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(336, 23);
-            this.txtCPF.TabIndex = 456;
             // 
             // lblCPF
             // 
@@ -609,15 +577,6 @@
             this.lblNascimento.Size = new System.Drawing.Size(150, 19);
             this.lblNascimento.TabIndex = 450;
             this.lblNascimento.Text = "Data de Nascimento:";
-            // 
-            // cboGênero
-            // 
-            this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGênero.FormattingEnabled = true;
-            this.cboGênero.Location = new System.Drawing.Point(286, 128);
-            this.cboGênero.Name = "cboGênero";
-            this.cboGênero.Size = new System.Drawing.Size(218, 23);
-            this.cboGênero.TabIndex = 449;
             // 
             // lblGênero
             // 
@@ -688,7 +647,7 @@
             this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(71, 96);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(321, 23);
+            this.txtNome.Size = new System.Drawing.Size(322, 23);
             this.txtNome.TabIndex = 441;
             // 
             // dataGridView3
@@ -747,15 +706,100 @@
             this.imgFechar.TabStop = false;
             this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
             // 
+            // cboGênero
+            // 
+            this.cboGênero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGênero.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGênero.FormattingEnabled = true;
+            this.cboGênero.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cboGênero.Location = new System.Drawing.Point(286, 128);
+            this.cboGênero.MaxLength = 1;
+            this.cboGênero.Name = "cboGênero";
+            this.cboGênero.Size = new System.Drawing.Size(218, 23);
+            this.cboGênero.TabIndex = 487;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboEstado.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
+            this.cboEstado.Location = new System.Drawing.Point(309, 192);
+            this.cboEstado.MaxLength = 32;
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(207, 23);
+            this.cboEstado.TabIndex = 534;
+            // 
+            // nudId
+            // 
+            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudId.Location = new System.Drawing.Point(55, 64);
+            this.nudId.Name = "nudId";
+            this.nudId.Size = new System.Drawing.Size(120, 23);
+            this.nudId.TabIndex = 542;
+            // 
+            // mtxtRG
+            // 
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.Location = new System.Drawing.Point(446, 160);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(342, 23);
+            this.mtxtRG.TabIndex = 547;
+            // 
+            // mtxtCPF
+            // 
+            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCPF.Location = new System.Drawing.Point(58, 160);
+            this.mtxtCPF.Mask = "000000000/00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.Size = new System.Drawing.Size(335, 23);
+            this.mtxtCPF.TabIndex = 546;
+            // 
             // frmDismissEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.mtxtRG);
+            this.Controls.Add(this.mtxtCPF);
+            this.Controls.Add(this.nudId);
+            this.Controls.Add(this.cboEstado);
+            this.Controls.Add(this.cboGênero);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.maskedtxtTelefone);
             this.Controls.Add(this.maskedtxtCelular);
             this.Controls.Add(this.dataGridView23);
@@ -781,16 +825,13 @@
             this.Controls.Add(this.lblPaís);
             this.Controls.Add(this.dataGridView10);
             this.Controls.Add(this.dataGridView9);
-            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblRG);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.dataGridView8);
             this.Controls.Add(this.dataGridView7);
             this.Controls.Add(this.dataGridView6);
             this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.lblNascimento);
-            this.Controls.Add(this.cboGênero);
             this.Controls.Add(this.lblGênero);
             this.Controls.Add(this.nudDependentes);
             this.Controls.Add(this.lblDependentes);
@@ -803,7 +844,6 @@
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.imgMinimizar);
-            this.Controls.Add(this.nudID);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblAlterarFuncionário);
@@ -813,7 +853,6 @@
             this.Name = "frmDismissEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dismiss Employee";
-            ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.MenuLiriousBurguer.ResumeLayout(false);
             this.MenuLiriousBurguer.PerformLayout();
@@ -836,6 +875,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -844,7 +884,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.NumericUpDown nudID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAlterarFuncionário;
@@ -861,7 +900,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuEstoque;
         private System.Windows.Forms.ToolStripMenuItem MenuSuprimento;
         private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.MaskedTextBox maskedtxtTelefone;
         private System.Windows.Forms.MaskedTextBox maskedtxtCelular;
         private System.Windows.Forms.DataGridView dataGridView23;
@@ -887,16 +925,13 @@
         private System.Windows.Forms.Label lblPaís;
         private System.Windows.Forms.DataGridView dataGridView10;
         private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblRG;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label lblNascimento;
-        private System.Windows.Forms.ComboBox cboGênero;
         private System.Windows.Forms.Label lblGênero;
         private System.Windows.Forms.NumericUpDown nudDependentes;
         private System.Windows.Forms.Label lblDependentes;
@@ -909,5 +944,10 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox imgFechar;
+        private System.Windows.Forms.ComboBox cboGênero;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.NumericUpDown nudId;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
+        private System.Windows.Forms.MaskedTextBox mtxtCPF;
     }
 }

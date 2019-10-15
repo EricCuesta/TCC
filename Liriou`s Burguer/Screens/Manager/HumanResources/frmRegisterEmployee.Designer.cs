@@ -42,7 +42,6 @@
             this.btnContinuar = new System.Windows.Forms.Button();
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
             this.txtEndereço = new System.Windows.Forms.RichTextBox();
-            this.cboEstado = new System.Windows.Forms.ComboBox();
             this.dataGridView23 = new System.Windows.Forms.DataGridView();
             this.dataGridView25 = new System.Windows.Forms.DataGridView();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -65,16 +64,13 @@
             this.lblPaís = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblRG = new System.Windows.Forms.Label();
-            this.txtCPF = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNascimento = new System.Windows.Forms.Label();
-            this.cboGênero = new System.Windows.Forms.ComboBox();
             this.lblGênero = new System.Windows.Forms.Label();
             this.nudDependentes = new System.Windows.Forms.NumericUpDown();
             this.lblDependentes = new System.Windows.Forms.Label();
@@ -88,9 +84,13 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtPaís = new System.Windows.Forms.TextBox();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.cboEstado = new System.Windows.Forms.ComboBox();
+            this.cboGênero = new System.Windows.Forms.ComboBox();
             this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
@@ -258,16 +258,6 @@
             this.txtEndereço.Size = new System.Drawing.Size(348, 41);
             this.txtEndereço.TabIndex = 533;
             this.txtEndereço.Text = "";
-            // 
-            // cboEstado
-            // 
-            this.cboEstado.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstado.FormattingEnabled = true;
-            this.cboEstado.Location = new System.Drawing.Point(309, 161);
-            this.cboEstado.MaxLength = 32;
-            this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(207, 23);
-            this.cboEstado.TabIndex = 532;
             // 
             // dataGridView23
             // 
@@ -476,15 +466,6 @@
             this.dataGridView9.Size = new System.Drawing.Size(2, 30);
             this.dataGridView9.TabIndex = 507;
             // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(446, 128);
-            this.txtRG.MaxLength = 16;
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(342, 23);
-            this.txtRG.TabIndex = 506;
-            // 
             // lblRG
             // 
             this.lblRG.AutoSize = true;
@@ -494,15 +475,6 @@
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 505;
             this.lblRG.Text = "RG:";
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(56, 128);
-            this.txtCPF.MaxLength = 14;
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(336, 23);
-            this.txtCPF.TabIndex = 504;
             // 
             // lblCPF
             // 
@@ -559,19 +531,6 @@
             this.lblNascimento.Size = new System.Drawing.Size(150, 19);
             this.lblNascimento.TabIndex = 498;
             this.lblNascimento.Text = "Data de Nascimento:";
-            // 
-            // cboGênero
-            // 
-            this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGênero.FormattingEnabled = true;
-            this.cboGênero.Items.AddRange(new object[] {
-            "F",
-            "M"});
-            this.cboGênero.Location = new System.Drawing.Point(286, 96);
-            this.cboGênero.MaxLength = 1;
-            this.cboGênero.Name = "cboGênero";
-            this.cboGênero.Size = new System.Drawing.Size(218, 23);
-            this.cboGênero.TabIndex = 497;
             // 
             // lblGênero
             // 
@@ -703,24 +662,6 @@
             this.imgMinimizar.TabStop = false;
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(80, 243);
-            this.txtCelular.MaxLength = 18;
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(312, 23);
-            this.txtCelular.TabIndex = 535;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(484, 243);
-            this.txtTelefone.MaxLength = 9;
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(312, 23);
-            this.txtTelefone.TabIndex = 536;
-            // 
             // txtPaís
             // 
             this.txtPaís.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -730,17 +671,111 @@
             this.txtPaís.Size = new System.Drawing.Size(174, 23);
             this.txtPaís.TabIndex = 510;
             // 
+            // mtxtRG
+            // 
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.Location = new System.Drawing.Point(446, 128);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(342, 23);
+            this.mtxtRG.TabIndex = 552;
+            // 
+            // mtxtCPF
+            // 
+            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCPF.Location = new System.Drawing.Point(58, 128);
+            this.mtxtCPF.Mask = "000000000/00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.Size = new System.Drawing.Size(335, 23);
+            this.mtxtCPF.TabIndex = 551;
+            // 
+            // mtxtTelefone
+            // 
+            this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefone.Location = new System.Drawing.Point(487, 243);
+            this.mtxtTelefone.Mask = "(000) 0000-0000";
+            this.mtxtTelefone.Name = "mtxtTelefone";
+            this.mtxtTelefone.Size = new System.Drawing.Size(301, 23);
+            this.mtxtTelefone.TabIndex = 550;
+            // 
+            // mtxtCelular
+            // 
+            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCelular.Location = new System.Drawing.Point(80, 243);
+            this.mtxtCelular.Mask = "(+000) (999) 00000-9999";
+            this.mtxtCelular.Name = "mtxtCelular";
+            this.mtxtCelular.Size = new System.Drawing.Size(314, 23);
+            this.mtxtCelular.TabIndex = 549;
+            // 
+            // cboEstado
+            // 
+            this.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboEstado.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboEstado.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboEstado.FormattingEnabled = true;
+            this.cboEstado.Items.AddRange(new object[] {
+            "Acre",
+            "Alagoas",
+            "Amapá",
+            "Amazonas",
+            "Bahia",
+            "Ceará",
+            "Distrito Federal",
+            "Espírito Santo",
+            "Goiás",
+            "Maranhão",
+            "Mato Grosso",
+            "Mato Grosso do Sul",
+            "Minas Gerais",
+            "Pará",
+            "Paraíba",
+            "Paraná",
+            "Pernambuco",
+            "Piauí",
+            "Rio de Janeiro",
+            "Rio Grande do Norte",
+            "Rio Grande do Sul",
+            "Rondônia",
+            "Roraima",
+            "Santa Catarina",
+            "São Paulo",
+            "Sergipe",
+            "Tocantins"});
+            this.cboEstado.Location = new System.Drawing.Point(309, 160);
+            this.cboEstado.MaxLength = 32;
+            this.cboEstado.Name = "cboEstado";
+            this.cboEstado.Size = new System.Drawing.Size(207, 23);
+            this.cboEstado.TabIndex = 547;
+            // 
+            // cboGênero
+            // 
+            this.cboGênero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGênero.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGênero.FormattingEnabled = true;
+            this.cboGênero.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cboGênero.Location = new System.Drawing.Point(286, 96);
+            this.cboGênero.MaxLength = 1;
+            this.cboGênero.Name = "cboGênero";
+            this.cboGênero.Size = new System.Drawing.Size(218, 23);
+            this.cboGênero.TabIndex = 546;
+            // 
             // frmRegisterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.mtxtRG);
+            this.Controls.Add(this.mtxtCPF);
+            this.Controls.Add(this.mtxtTelefone);
+            this.Controls.Add(this.mtxtCelular);
+            this.Controls.Add(this.cboEstado);
+            this.Controls.Add(this.cboGênero);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.txtEndereço);
-            this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.dataGridView23);
             this.Controls.Add(this.dataGridView25);
             this.Controls.Add(this.lblTelefone);
@@ -764,16 +799,13 @@
             this.Controls.Add(this.lblPaís);
             this.Controls.Add(this.dataGridView10);
             this.Controls.Add(this.dataGridView9);
-            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblRG);
-            this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.dataGridView8);
             this.Controls.Add(this.dataGridView7);
             this.Controls.Add(this.dataGridView6);
             this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.lblNascimento);
-            this.Controls.Add(this.cboGênero);
             this.Controls.Add(this.lblGênero);
             this.Controls.Add(this.nudDependentes);
             this.Controls.Add(this.lblDependentes);
@@ -836,7 +868,6 @@
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.Label lblCadastrarFuncionário;
         private System.Windows.Forms.RichTextBox txtEndereço;
-        private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.DataGridView dataGridView23;
         private System.Windows.Forms.DataGridView dataGridView25;
         private System.Windows.Forms.Label lblTelefone;
@@ -859,16 +890,13 @@
         private System.Windows.Forms.Label lblPaís;
         private System.Windows.Forms.DataGridView dataGridView10;
         private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblRG;
-        private System.Windows.Forms.TextBox txtCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label lblNascimento;
-        private System.Windows.Forms.ComboBox cboGênero;
         private System.Windows.Forms.Label lblGênero;
         private System.Windows.Forms.NumericUpDown nudDependentes;
         private System.Windows.Forms.Label lblDependentes;
@@ -881,8 +909,12 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtPaís;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
+        private System.Windows.Forms.MaskedTextBox mtxtCPF;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefone;
+        private System.Windows.Forms.MaskedTextBox mtxtCelular;
+        private System.Windows.Forms.ComboBox cboEstado;
+        private System.Windows.Forms.ComboBox cboGênero;
     }
 }

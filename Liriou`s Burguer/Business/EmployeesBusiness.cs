@@ -73,16 +73,7 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("Senha deve ser preenchida!");
             }
 
-            bool verificação = DB.Consultar(email, senha);
-
-            if (verificação == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return list;
         }
 
         public void Alterar(Database.Entities.tb_employees employees)

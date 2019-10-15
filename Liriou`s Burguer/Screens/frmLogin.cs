@@ -78,11 +78,21 @@ namespace Liriou_s_Burguer.Screens
             try
             {
                 Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+
                 employees.ds_email = txtEmail.Text.Trim();
+                string email = employees.ds_email;
                 employees.ds_password = txtSenha.Text.Trim();
+                string senha = employees.ds_password;
 
                 Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
-                busemp.Verificar(employees);
+                //bool verificação = busemp.Login(email, senha);
+
+                //if (verificação == true)
+                //{
+                //    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
+                //    tela.Show();
+                //    this.Hide();
+                //}
             }
             catch (ArgumentException ex)
             {

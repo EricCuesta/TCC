@@ -80,6 +80,7 @@
             // 
             this.RichtxtObservação.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.RichtxtObservação.Location = new System.Drawing.Point(3, 3);
+            this.RichtxtObservação.MaxLength = 256;
             this.RichtxtObservação.Name = "RichtxtObservação";
             this.RichtxtObservação.Size = new System.Drawing.Size(446, 319);
             this.RichtxtObservação.TabIndex = 221;

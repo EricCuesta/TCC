@@ -500,6 +500,7 @@
             // 
             // cboDepartamento
             // 
+            this.cboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepartamento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamento.FormattingEnabled = true;
             this.cboDepartamento.Location = new System.Drawing.Point(412, 58);
@@ -518,6 +519,7 @@
             // 
             // cboCargo
             // 
+            this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCargo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCargo.FormattingEnabled = true;
             this.cboCargo.Location = new System.Drawing.Point(611, 58);

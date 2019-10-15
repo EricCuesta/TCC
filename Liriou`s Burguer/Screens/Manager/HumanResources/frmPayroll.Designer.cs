@@ -42,6 +42,25 @@
             this.MenuSuprimento = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnGerarFolha = new System.Windows.Forms.Button();
+            this.lblNomeDoFuncionário = new System.Windows.Forms.Label();
+            this.txtRG = new System.Windows.Forms.TextBox();
+            this.lblRG = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblFolhaDePagamento = new System.Windows.Forms.Label();
+            this.imgMinimizar = new System.Windows.Forms.PictureBox();
+            this.imgFechar = new System.Windows.Forms.PictureBox();
+            this.lblMêsReferente = new System.Windows.Forms.Label();
+            this.dtpDataDaFolha = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView9 = new System.Windows.Forms.DataGridView();
+            this.lblCargo = new System.Windows.Forms.Label();
+            this.cboDepartamento = new System.Windows.Forms.ComboBox();
+            this.dataGridView17 = new System.Windows.Forms.DataGridView();
+            this.cboCargo = new System.Windows.Forms.ComboBox();
+            this.lblDepartamento = new System.Windows.Forms.Label();
+            this.dataGridView10 = new System.Windows.Forms.DataGridView();
+            this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.lblLíquido = new System.Windows.Forms.Label();
             this.lblLíquido1 = new System.Windows.Forms.Label();
             this.lblBruto = new System.Windows.Forms.Label();
@@ -77,6 +96,7 @@
             this.lblValeTransporte = new System.Windows.Forms.Label();
             this.lblNulo = new System.Windows.Forms.Label();
             this.groupItens = new System.Windows.Forms.GroupBox();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -84,45 +104,41 @@
             this.label10 = new System.Windows.Forms.Label();
             this.lblDependência1 = new System.Windows.Forms.Label();
             this.lblIR1 = new System.Windows.Forms.Label();
+            this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.lblINSS1 = new System.Windows.Forms.Label();
             this.lblFGTS1 = new System.Windows.Forms.Label();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.lblValeAlimentação1 = new System.Windows.Forms.Label();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.lblValeTransporte1 = new System.Windows.Forms.Label();
             this.lblHorasExtras1 = new System.Windows.Forms.Label();
             this.lblSalário1 = new System.Windows.Forms.Label();
-            this.lblNomeDoFuncionário = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.txtRG = new System.Windows.Forms.TextBox();
-            this.lblRG = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblFolhaDePagamento = new System.Windows.Forms.Label();
-            this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.imgFechar = new System.Windows.Forms.PictureBox();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.lblMêsReferente = new System.Windows.Forms.Label();
-            this.dtpDataDaFolha = new System.Windows.Forms.DateTimePicker();
             this.MenuLiriousBurguer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.groupProventos.SuspendLayout();
             this.groupDespesas.SuspendLayout();
             this.groupItens.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(513, 66);
+            this.label1.Location = new System.Drawing.Point(114, 91);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(275, 19);
             this.label1.TabIndex = 250;
@@ -244,9 +260,9 @@
             this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalcular.Location = new System.Drawing.Point(451, 99);
+            this.btnCalcular.Location = new System.Drawing.Point(446, 125);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(134, 30);
+            this.btnCalcular.Size = new System.Drawing.Size(118, 30);
             this.btnCalcular.TabIndex = 248;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = false;
@@ -257,70 +273,259 @@
             this.btnGerarFolha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerarFolha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarFolha.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarFolha.Location = new System.Drawing.Point(620, 99);
+            this.btnGerarFolha.Location = new System.Drawing.Point(628, 125);
             this.btnGerarFolha.Name = "btnGerarFolha";
-            this.btnGerarFolha.Size = new System.Drawing.Size(134, 30);
+            this.btnGerarFolha.Size = new System.Drawing.Size(137, 30);
             this.btnGerarFolha.TabIndex = 247;
             this.btnGerarFolha.Text = "Gerar Folha";
             this.btnGerarFolha.UseVisualStyleBackColor = false;
+            // 
+            // lblNomeDoFuncionário
+            // 
+            this.lblNomeDoFuncionário.AutoSize = true;
+            this.lblNomeDoFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeDoFuncionário.Location = new System.Drawing.Point(12, 91);
+            this.lblNomeDoFuncionário.Name = "lblNomeDoFuncionário";
+            this.lblNomeDoFuncionário.Size = new System.Drawing.Size(95, 19);
+            this.lblNomeDoFuncionário.TabIndex = 237;
+            this.lblNomeDoFuncionário.Text = "Funcionário:";
+            // 
+            // txtRG
+            // 
+            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(51, 64);
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(341, 23);
+            this.txtRG.TabIndex = 235;
+            // 
+            // lblRG
+            // 
+            this.lblRG.AutoSize = true;
+            this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRG.Location = new System.Drawing.Point(12, 66);
+            this.lblRG.Name = "lblRG";
+            this.lblRG.Size = new System.Drawing.Size(33, 19);
+            this.lblRG.TabIndex = 234;
+            this.lblRG.Text = "RG:";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(398, 61);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(2, 58);
+            this.dataGridView2.TabIndex = 233;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 59);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(800, 2);
+            this.dataGridView1.TabIndex = 232;
+            // 
+            // lblFolhaDePagamento
+            // 
+            this.lblFolhaDePagamento.AutoSize = true;
+            this.lblFolhaDePagamento.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFolhaDePagamento.ForeColor = System.Drawing.Color.Black;
+            this.lblFolhaDePagamento.Location = new System.Drawing.Point(287, 31);
+            this.lblFolhaDePagamento.Name = "lblFolhaDePagamento";
+            this.lblFolhaDePagamento.Size = new System.Drawing.Size(258, 28);
+            this.lblFolhaDePagamento.TabIndex = 231;
+            this.lblFolhaDePagamento.Text = "Folha de Pagamento";
+            // 
+            // imgMinimizar
+            // 
+            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
+            this.imgMinimizar.Location = new System.Drawing.Point(740, 31);
+            this.imgMinimizar.Name = "imgMinimizar";
+            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgMinimizar.TabIndex = 252;
+            this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            // 
+            // imgFechar
+            // 
+            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
+            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
+            this.imgFechar.Location = new System.Drawing.Point(771, 31);
+            this.imgFechar.Name = "imgFechar";
+            this.imgFechar.Size = new System.Drawing.Size(25, 25);
+            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFechar.TabIndex = 253;
+            this.imgFechar.TabStop = false;
+            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
+            // 
+            // lblMêsReferente
+            // 
+            this.lblMêsReferente.AutoSize = true;
+            this.lblMêsReferente.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMêsReferente.Location = new System.Drawing.Point(12, 124);
+            this.lblMêsReferente.Name = "lblMêsReferente";
+            this.lblMêsReferente.Size = new System.Drawing.Size(114, 19);
+            this.lblMêsReferente.TabIndex = 256;
+            this.lblMêsReferente.Text = "Mês Referente:";
+            // 
+            // dtpDataDaFolha
+            // 
+            this.dtpDataDaFolha.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataDaFolha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataDaFolha.Location = new System.Drawing.Point(132, 124);
+            this.dtpDataDaFolha.Name = "dtpDataDaFolha";
+            this.dtpDataDaFolha.Size = new System.Drawing.Size(260, 23);
+            this.dtpDataDaFolha.TabIndex = 501;
+            // 
+            // dataGridView9
+            // 
+            this.dataGridView9.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView9.Location = new System.Drawing.Point(0, 119);
+            this.dataGridView9.Name = "dataGridView9";
+            this.dataGridView9.Size = new System.Drawing.Size(400, 2);
+            this.dataGridView9.TabIndex = 503;
+            // 
+            // lblCargo
+            // 
+            this.lblCargo.AutoSize = true;
+            this.lblCargo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargo.Location = new System.Drawing.Point(667, 64);
+            this.lblCargo.Name = "lblCargo";
+            this.lblCargo.Size = new System.Drawing.Size(54, 19);
+            this.lblCargo.TabIndex = 530;
+            this.lblCargo.Text = "Cargo:";
+            // 
+            // cboDepartamento
+            // 
+            this.cboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboDepartamento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboDepartamento.FormattingEnabled = true;
+            this.cboDepartamento.Location = new System.Drawing.Point(410, 86);
+            this.cboDepartamento.Name = "cboDepartamento";
+            this.cboDepartamento.Size = new System.Drawing.Size(185, 23);
+            this.cboDepartamento.TabIndex = 529;
+            // 
+            // dataGridView17
+            // 
+            this.dataGridView17.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView17.Location = new System.Drawing.Point(601, 61);
+            this.dataGridView17.Name = "dataGridView17";
+            this.dataGridView17.Size = new System.Drawing.Size(2, 60);
+            this.dataGridView17.TabIndex = 528;
+            // 
+            // cboCargo
+            // 
+            this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCargo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCargo.FormattingEnabled = true;
+            this.cboCargo.Location = new System.Drawing.Point(609, 86);
+            this.cboCargo.Name = "cboCargo";
+            this.cboCargo.Size = new System.Drawing.Size(179, 23);
+            this.cboCargo.TabIndex = 527;
+            // 
+            // lblDepartamento
+            // 
+            this.lblDepartamento.AutoSize = true;
+            this.lblDepartamento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamento.Location = new System.Drawing.Point(451, 64);
+            this.lblDepartamento.Name = "lblDepartamento";
+            this.lblDepartamento.Size = new System.Drawing.Size(113, 19);
+            this.lblDepartamento.TabIndex = 526;
+            this.lblDepartamento.Text = "Departamento:";
+            // 
+            // dataGridView10
+            // 
+            this.dataGridView10.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView10.Location = new System.Drawing.Point(400, 119);
+            this.dataGridView10.Name = "dataGridView10";
+            this.dataGridView10.Size = new System.Drawing.Size(400, 2);
+            this.dataGridView10.TabIndex = 531;
+            // 
+            // dataGridView11
+            // 
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView11.Location = new System.Drawing.Point(398, 121);
+            this.dataGridView11.Name = "dataGridView11";
+            this.dataGridView11.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView11.TabIndex = 532;
+            // 
+            // dataGridView12
+            // 
+            this.dataGridView12.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView12.Location = new System.Drawing.Point(0, 151);
+            this.dataGridView12.Name = "dataGridView12";
+            this.dataGridView12.Size = new System.Drawing.Size(400, 2);
+            this.dataGridView12.TabIndex = 533;
             // 
             // lblLíquido
             // 
             this.lblLíquido.AutoSize = true;
             this.lblLíquido.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLíquido.Location = new System.Drawing.Point(590, 463);
+            this.lblLíquido.Location = new System.Drawing.Point(588, 466);
             this.lblLíquido.Name = "lblLíquido";
             this.lblLíquido.Size = new System.Drawing.Size(138, 19);
-            this.lblLíquido.TabIndex = 246;
+            this.lblLíquido.TabIndex = 542;
             this.lblLíquido.Text = "R$___ ___ , ___ ___";
             // 
             // lblLíquido1
             // 
             this.lblLíquido1.AutoSize = true;
             this.lblLíquido1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLíquido1.Location = new System.Drawing.Point(520, 465);
+            this.lblLíquido1.Location = new System.Drawing.Point(518, 468);
             this.lblLíquido1.Name = "lblLíquido1";
             this.lblLíquido1.Size = new System.Drawing.Size(65, 16);
-            this.lblLíquido1.TabIndex = 245;
+            this.lblLíquido1.TabIndex = 541;
             this.lblLíquido1.Text = "Líquido:";
             // 
             // lblBruto
             // 
             this.lblBruto.AutoSize = true;
             this.lblBruto.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBruto.Location = new System.Drawing.Point(133, 463);
+            this.lblBruto.Location = new System.Drawing.Point(131, 466);
             this.lblBruto.Name = "lblBruto";
             this.lblBruto.Size = new System.Drawing.Size(138, 19);
-            this.lblBruto.TabIndex = 244;
+            this.lblBruto.TabIndex = 540;
             this.lblBruto.Text = "R$___ ___ , ___ ___";
             // 
             // lblSalárioBruto1
             // 
             this.lblSalárioBruto1.AutoSize = true;
             this.lblSalárioBruto1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalárioBruto1.Location = new System.Drawing.Point(75, 465);
+            this.lblSalárioBruto1.Location = new System.Drawing.Point(73, 468);
             this.lblSalárioBruto1.Name = "lblSalárioBruto1";
             this.lblSalárioBruto1.Size = new System.Drawing.Size(52, 16);
-            this.lblSalárioBruto1.TabIndex = 243;
+            this.lblSalárioBruto1.TabIndex = 539;
             this.lblSalárioBruto1.Text = "Bruto:";
             // 
             // dataGridView6
             // 
             this.dataGridView6.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(68, 488);
+            this.dataGridView6.Location = new System.Drawing.Point(66, 491);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(660, 2);
-            this.dataGridView6.TabIndex = 242;
+            this.dataGridView6.TabIndex = 538;
             // 
             // dataGridView4
             // 
             this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(68, 456);
+            this.dataGridView4.Location = new System.Drawing.Point(66, 459);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(660, 2);
-            this.dataGridView4.TabIndex = 241;
+            this.dataGridView4.TabIndex = 537;
             // 
             // groupProventos
             // 
@@ -338,10 +543,10 @@
             this.groupProventos.Controls.Add(this.lblHorasExtras);
             this.groupProventos.Controls.Add(this.lblSalário);
             this.groupProventos.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupProventos.Location = new System.Drawing.Point(512, 148);
+            this.groupProventos.Location = new System.Drawing.Point(510, 161);
             this.groupProventos.Name = "groupProventos";
             this.groupProventos.Size = new System.Drawing.Size(217, 297);
-            this.groupProventos.TabIndex = 240;
+            this.groupProventos.TabIndex = 536;
             this.groupProventos.TabStop = false;
             this.groupProventos.Text = "Proventos";
             // 
@@ -491,10 +696,10 @@
             this.groupDespesas.Controls.Add(this.lblValeTransporte);
             this.groupDespesas.Controls.Add(this.lblNulo);
             this.groupDespesas.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupDespesas.Location = new System.Drawing.Point(292, 148);
+            this.groupDespesas.Location = new System.Drawing.Point(290, 161);
             this.groupDespesas.Name = "groupDespesas";
             this.groupDespesas.Size = new System.Drawing.Size(217, 297);
-            this.groupDespesas.TabIndex = 239;
+            this.groupDespesas.TabIndex = 535;
             this.groupDespesas.TabStop = false;
             this.groupDespesas.Text = "Despesas";
             // 
@@ -630,6 +835,7 @@
             // 
             // groupItens
             // 
+            this.groupItens.Controls.Add(this.dataGridView3);
             this.groupItens.Controls.Add(this.label13);
             this.groupItens.Controls.Add(this.label9);
             this.groupItens.Controls.Add(this.label6);
@@ -637,19 +843,31 @@
             this.groupItens.Controls.Add(this.label10);
             this.groupItens.Controls.Add(this.lblDependência1);
             this.groupItens.Controls.Add(this.lblIR1);
+            this.groupItens.Controls.Add(this.dataGridView8);
             this.groupItens.Controls.Add(this.lblINSS1);
             this.groupItens.Controls.Add(this.lblFGTS1);
+            this.groupItens.Controls.Add(this.dataGridView7);
             this.groupItens.Controls.Add(this.lblValeAlimentação1);
+            this.groupItens.Controls.Add(this.dataGridView5);
             this.groupItens.Controls.Add(this.lblValeTransporte1);
             this.groupItens.Controls.Add(this.lblHorasExtras1);
             this.groupItens.Controls.Add(this.lblSalário1);
             this.groupItens.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupItens.Location = new System.Drawing.Point(69, 148);
+            this.groupItens.Location = new System.Drawing.Point(67, 161);
             this.groupItens.Name = "groupItens";
             this.groupItens.Size = new System.Drawing.Size(217, 297);
-            this.groupItens.TabIndex = 238;
+            this.groupItens.TabIndex = 534;
             this.groupItens.TabStop = false;
             this.groupItens.Text = "Itens";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(360, -5);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(400, 2);
+            this.dataGridView3.TabIndex = 531;
             // 
             // label13
             // 
@@ -721,6 +939,15 @@
             this.lblIR1.TabIndex = 174;
             this.lblIR1.Text = "IR";
             // 
+            // dataGridView8
+            // 
+            this.dataGridView8.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView8.Location = new System.Drawing.Point(359, -3);
+            this.dataGridView8.Name = "dataGridView8";
+            this.dataGridView8.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView8.TabIndex = 502;
+            // 
             // lblINSS1
             // 
             this.lblINSS1.AutoSize = true;
@@ -741,6 +968,15 @@
             this.lblFGTS1.TabIndex = 172;
             this.lblFGTS1.Text = "FGTS";
             // 
+            // dataGridView7
+            // 
+            this.dataGridView7.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Location = new System.Drawing.Point(-40, -11);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.Size = new System.Drawing.Size(400, 2);
+            this.dataGridView7.TabIndex = 255;
+            // 
             // lblValeAlimentação1
             // 
             this.lblValeAlimentação1.AutoSize = true;
@@ -750,6 +986,15 @@
             this.lblValeAlimentação1.Size = new System.Drawing.Size(102, 15);
             this.lblValeAlimentação1.TabIndex = 171;
             this.lblValeAlimentação1.Text = "Vale Alimentação";
+            // 
+            // dataGridView5
+            // 
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(359, -11);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView5.TabIndex = 254;
             // 
             // lblValeTransporte1
             // 
@@ -781,153 +1026,12 @@
             this.lblSalário1.TabIndex = 168;
             this.lblSalário1.Text = "Salário";
             // 
-            // lblNomeDoFuncionário
-            // 
-            this.lblNomeDoFuncionário.AutoSize = true;
-            this.lblNomeDoFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeDoFuncionário.Location = new System.Drawing.Point(408, 66);
-            this.lblNomeDoFuncionário.Name = "lblNomeDoFuncionário";
-            this.lblNomeDoFuncionário.Size = new System.Drawing.Size(95, 19);
-            this.lblNomeDoFuncionário.TabIndex = 237;
-            this.lblNomeDoFuncionário.Text = "Funcionário:";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 91);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(800, 2);
-            this.dataGridView3.TabIndex = 236;
-            // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(51, 64);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(341, 23);
-            this.txtRG.TabIndex = 235;
-            // 
-            // lblRG
-            // 
-            this.lblRG.AutoSize = true;
-            this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRG.Location = new System.Drawing.Point(12, 66);
-            this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(33, 19);
-            this.lblRG.TabIndex = 234;
-            this.lblRG.Text = "RG:";
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(399, 61);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView2.TabIndex = 233;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 2);
-            this.dataGridView1.TabIndex = 232;
-            // 
-            // lblFolhaDePagamento
-            // 
-            this.lblFolhaDePagamento.AutoSize = true;
-            this.lblFolhaDePagamento.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFolhaDePagamento.ForeColor = System.Drawing.Color.Black;
-            this.lblFolhaDePagamento.Location = new System.Drawing.Point(287, 31);
-            this.lblFolhaDePagamento.Name = "lblFolhaDePagamento";
-            this.lblFolhaDePagamento.Size = new System.Drawing.Size(258, 28);
-            this.lblFolhaDePagamento.TabIndex = 231;
-            this.lblFolhaDePagamento.Text = "Folha de Pagamento";
-            // 
-            // imgMinimizar
-            // 
-            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(740, 31);
-            this.imgMinimizar.Name = "imgMinimizar";
-            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 252;
-            this.imgMinimizar.TabStop = false;
-            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
-            // 
-            // imgFechar
-            // 
-            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
-            this.imgFechar.Location = new System.Drawing.Point(771, 31);
-            this.imgFechar.Name = "imgFechar";
-            this.imgFechar.Size = new System.Drawing.Size(25, 25);
-            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 253;
-            this.imgFechar.TabStop = false;
-            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(399, 93);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView5.TabIndex = 254;
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 122);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(400, 2);
-            this.dataGridView7.TabIndex = 255;
-            // 
-            // lblMêsReferente
-            // 
-            this.lblMêsReferente.AutoSize = true;
-            this.lblMêsReferente.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMêsReferente.Location = new System.Drawing.Point(12, 97);
-            this.lblMêsReferente.Name = "lblMêsReferente";
-            this.lblMêsReferente.Size = new System.Drawing.Size(114, 19);
-            this.lblMêsReferente.TabIndex = 256;
-            this.lblMêsReferente.Text = "Mês Referente:";
-            // 
-            // dtpDataDaFolha
-            // 
-            this.dtpDataDaFolha.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataDaFolha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataDaFolha.Location = new System.Drawing.Point(132, 96);
-            this.dtpDataDaFolha.Name = "dtpDataDaFolha";
-            this.dtpDataDaFolha.Size = new System.Drawing.Size(260, 23);
-            this.dtpDataDaFolha.TabIndex = 501;
-            // 
             // frmPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.dtpDataDaFolha);
-            this.Controls.Add(this.lblMêsReferente);
-            this.Controls.Add(this.dataGridView7);
-            this.Controls.Add(this.dataGridView5);
-            this.Controls.Add(this.imgFechar);
-            this.Controls.Add(this.imgMinimizar);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.MenuLiriousBurguer);
-            this.Controls.Add(this.btnCalcular);
-            this.Controls.Add(this.btnGerarFolha);
             this.Controls.Add(this.lblLíquido);
             this.Controls.Add(this.lblLíquido1);
             this.Controls.Add(this.lblBruto);
@@ -937,8 +1041,24 @@
             this.Controls.Add(this.groupProventos);
             this.Controls.Add(this.groupDespesas);
             this.Controls.Add(this.groupItens);
+            this.Controls.Add(this.dataGridView12);
+            this.Controls.Add(this.dataGridView11);
+            this.Controls.Add(this.dataGridView10);
+            this.Controls.Add(this.lblCargo);
+            this.Controls.Add(this.cboDepartamento);
+            this.Controls.Add(this.dataGridView17);
+            this.Controls.Add(this.cboCargo);
+            this.Controls.Add(this.lblDepartamento);
+            this.Controls.Add(this.dataGridView9);
+            this.Controls.Add(this.lblMêsReferente);
+            this.Controls.Add(this.imgFechar);
+            this.Controls.Add(this.btnGerarFolha);
+            this.Controls.Add(this.imgMinimizar);
+            this.Controls.Add(this.dtpDataDaFolha);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.MenuLiriousBurguer);
+            this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.lblNomeDoFuncionário);
-            this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.dataGridView2);
@@ -950,6 +1070,15 @@
             this.Text = "Payroll";
             this.MenuLiriousBurguer.ResumeLayout(false);
             this.MenuLiriousBurguer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.groupProventos.ResumeLayout(false);
@@ -959,12 +1088,9 @@
             this.groupItens.ResumeLayout(false);
             this.groupItens.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -987,6 +1113,24 @@
         private System.Windows.Forms.ToolStripMenuItem MenuSuprimento;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnGerarFolha;
+        private System.Windows.Forms.Label lblNomeDoFuncionário;
+        private System.Windows.Forms.TextBox txtRG;
+        private System.Windows.Forms.Label lblRG;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label lblFolhaDePagamento;
+        private System.Windows.Forms.PictureBox imgFechar;
+        private System.Windows.Forms.Label lblMêsReferente;
+        private System.Windows.Forms.DateTimePicker dtpDataDaFolha;
+        private System.Windows.Forms.DataGridView dataGridView9;
+        private System.Windows.Forms.Label lblCargo;
+        private System.Windows.Forms.ComboBox cboDepartamento;
+        private System.Windows.Forms.DataGridView dataGridView17;
+        private System.Windows.Forms.ComboBox cboCargo;
+        private System.Windows.Forms.Label lblDepartamento;
+        private System.Windows.Forms.DataGridView dataGridView10;
+        private System.Windows.Forms.DataGridView dataGridView11;
+        private System.Windows.Forms.DataGridView dataGridView12;
         private System.Windows.Forms.Label lblLíquido;
         private System.Windows.Forms.Label lblLíquido1;
         private System.Windows.Forms.Label lblBruto;
@@ -994,6 +1138,10 @@
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.GroupBox groupProventos;
+        private System.Windows.Forms.Label lblNulo8;
+        private System.Windows.Forms.Label lblNulo7;
+        private System.Windows.Forms.Label lblNulo6;
+        private System.Windows.Forms.Label lblNulo5;
         private System.Windows.Forms.Label lblNulo9;
         private System.Windows.Forms.Label lblNulo4;
         private System.Windows.Forms.Label lblNulo3;
@@ -1004,6 +1152,10 @@
         private System.Windows.Forms.Label lblHorasExtras;
         private System.Windows.Forms.Label lblSalário;
         private System.Windows.Forms.GroupBox groupDespesas;
+        private System.Windows.Forms.Label lblSalárioDaFamília;
+        private System.Windows.Forms.Label lblPlanoDeSaúde;
+        private System.Windows.Forms.Label lblSeguroDeVida;
+        private System.Windows.Forms.Label lvlValeRefeição;
         private System.Windows.Forms.Label lblPA;
         private System.Windows.Forms.Label lblNulo2;
         private System.Windows.Forms.Label lblIR;
@@ -1014,38 +1166,22 @@
         private System.Windows.Forms.Label lblValeTransporte;
         private System.Windows.Forms.Label lblNulo;
         private System.Windows.Forms.GroupBox groupItens;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblDependência1;
-        private System.Windows.Forms.Label lblIR1;
-        private System.Windows.Forms.Label lblINSS1;
-        private System.Windows.Forms.Label lblFGTS1;
-        private System.Windows.Forms.Label lblValeAlimentação1;
-        private System.Windows.Forms.Label lblValeTransporte1;
-        private System.Windows.Forms.Label lblHorasExtras1;
-        private System.Windows.Forms.Label lblSalário1;
-        private System.Windows.Forms.Label lblNomeDoFuncionário;
         private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.TextBox txtRG;
-        private System.Windows.Forms.Label lblRG;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblFolhaDePagamento;
-        private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.Label lblMêsReferente;
-        private System.Windows.Forms.Label lblNulo8;
-        private System.Windows.Forms.Label lblNulo7;
-        private System.Windows.Forms.Label lblNulo6;
-        private System.Windows.Forms.Label lblNulo5;
-        private System.Windows.Forms.Label lblSalárioDaFamília;
-        private System.Windows.Forms.Label lblPlanoDeSaúde;
-        private System.Windows.Forms.Label lblSeguroDeVida;
-        private System.Windows.Forms.Label lvlValeRefeição;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblValeRefeição1;
-        private System.Windows.Forms.DateTimePicker dtpDataDaFolha;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblDependência1;
+        private System.Windows.Forms.Label lblIR1;
+        private System.Windows.Forms.DataGridView dataGridView8;
+        private System.Windows.Forms.Label lblINSS1;
+        private System.Windows.Forms.Label lblFGTS1;
+        private System.Windows.Forms.DataGridView dataGridView7;
+        private System.Windows.Forms.Label lblValeAlimentação1;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.Label lblValeTransporte1;
+        private System.Windows.Forms.Label lblHorasExtras1;
+        private System.Windows.Forms.Label lblSalário1;
     }
 }
