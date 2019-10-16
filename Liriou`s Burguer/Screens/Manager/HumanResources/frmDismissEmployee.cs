@@ -17,6 +17,11 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             InitializeComponent();
         }
 
+        private void btnDemitir_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void menuInício_Click(object sender, EventArgs e)
         {
             frmManagerMenu managerMenu = new frmManagerMenu();
@@ -69,9 +74,28 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             Application.Exit();
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private void imgFechar_MouseEnter(object sender, EventArgs e)
         {
+            imgFechar.Image = Properties.Resources.Fechar;
+            imgFechar.Image = Properties.Resources.Fechar02;
+        }
 
+        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar02;
+            imgFechar.Image = Properties.Resources.Fechar;
+        }
+
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar;
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+        }
+
+        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+            imgMinimizar.Image = Properties.Resources.Minimizar;
         }
     }
 }

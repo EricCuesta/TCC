@@ -35,7 +35,10 @@
             this.imgVoltar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.panelVerificador = new System.Windows.Forms.Panel();
+            this.panelAlterarSenha = new System.Windows.Forms.Panel();
+            this.txtSenha = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.imgSenha = new System.Windows.Forms.PictureBox();
             this.panelSubMenuTelefone = new System.Windows.Forms.Panel();
             this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
@@ -46,28 +49,23 @@
             this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.panelSubMenuRG = new System.Windows.Forms.Panel();
-            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.lblRG = new System.Windows.Forms.Label();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.panelOpção = new System.Windows.Forms.Panel();
-            this.cboOpção = new System.Windows.Forms.ComboBox();
-            this.panelAlterarSenha = new System.Windows.Forms.Panel();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.imgSenha = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.cboOpção = new System.Windows.Forms.ComboBox();
             this.panelTítulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
-            this.panelVerificador.SuspendLayout();
+            this.panelAlterarSenha.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).BeginInit();
             this.panelSubMenuTelefone.SuspendLayout();
             this.panelSubMenuCelular.SuspendLayout();
             this.panelSubMenuCPF.SuspendLayout();
             this.panelSubMenuRG.SuspendLayout();
             this.panelOpção.SuspendLayout();
-            this.panelAlterarSenha.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAlterar
@@ -133,6 +131,8 @@
             this.imgVoltar.TabIndex = 370;
             this.imgVoltar.TabStop = false;
             this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
+            this.imgVoltar.MouseEnter += new System.EventHandler(this.imgVoltar_MouseEnter);
+            this.imgVoltar.MouseLeave += new System.EventHandler(this.imgVoltar_MouseLeave);
             // 
             // imgFechar
             // 
@@ -147,6 +147,8 @@
             this.imgFechar.TabIndex = 369;
             this.imgFechar.TabStop = false;
             this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
+            this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
+            this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
             // imgMinimizar
             // 
@@ -161,179 +163,8 @@
             this.imgMinimizar.TabIndex = 368;
             this.imgMinimizar.TabStop = false;
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
-            // 
-            // panelVerificador
-            // 
-            this.panelVerificador.Controls.Add(this.panelSubMenuTelefone);
-            this.panelVerificador.Controls.Add(this.panelSubMenuCelular);
-            this.panelVerificador.Controls.Add(this.panelSubMenuCPF);
-            this.panelVerificador.Controls.Add(this.panelSubMenuRG);
-            this.panelVerificador.Controls.Add(this.panelOpção);
-            this.panelVerificador.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelVerificador.Location = new System.Drawing.Point(0, 35);
-            this.panelVerificador.Name = "panelVerificador";
-            this.panelVerificador.Size = new System.Drawing.Size(400, 173);
-            this.panelVerificador.TabIndex = 309;
-            // 
-            // panelSubMenuTelefone
-            // 
-            this.panelSubMenuTelefone.Controls.Add(this.mtxtTelefone);
-            this.panelSubMenuTelefone.Controls.Add(this.lblTelefone);
-            this.panelSubMenuTelefone.Location = new System.Drawing.Point(0, 138);
-            this.panelSubMenuTelefone.Name = "panelSubMenuTelefone";
-            this.panelSubMenuTelefone.Size = new System.Drawing.Size(400, 30);
-            this.panelSubMenuTelefone.TabIndex = 310;
-            this.panelSubMenuTelefone.Visible = false;
-            // 
-            // mtxtTelefone
-            // 
-            this.mtxtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mtxtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefone.ForeColor = System.Drawing.Color.White;
-            this.mtxtTelefone.Location = new System.Drawing.Point(90, 8);
-            this.mtxtTelefone.Mask = "(000) 0000-0000";
-            this.mtxtTelefone.Name = "mtxtTelefone";
-            this.mtxtTelefone.Size = new System.Drawing.Size(298, 16);
-            this.mtxtTelefone.TabIndex = 532;
-            // 
-            // lblTelefone
-            // 
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.ForeColor = System.Drawing.Color.White;
-            this.lblTelefone.Location = new System.Drawing.Point(12, 5);
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(72, 19);
-            this.lblTelefone.TabIndex = 507;
-            this.lblTelefone.Text = "Telefone:";
-            // 
-            // panelSubMenuCelular
-            // 
-            this.panelSubMenuCelular.Controls.Add(this.mtxtCelular);
-            this.panelSubMenuCelular.Controls.Add(this.lblCelular);
-            this.panelSubMenuCelular.Location = new System.Drawing.Point(0, 108);
-            this.panelSubMenuCelular.Name = "panelSubMenuCelular";
-            this.panelSubMenuCelular.Size = new System.Drawing.Size(400, 30);
-            this.panelSubMenuCelular.TabIndex = 313;
-            this.panelSubMenuCelular.Visible = false;
-            // 
-            // mtxtCelular
-            // 
-            this.mtxtCelular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCelular.ForeColor = System.Drawing.Color.White;
-            this.mtxtCelular.Location = new System.Drawing.Point(79, 6);
-            this.mtxtCelular.Mask = "(+000) (000) 00000-0000";
-            this.mtxtCelular.Name = "mtxtCelular";
-            this.mtxtCelular.Size = new System.Drawing.Size(309, 16);
-            this.mtxtCelular.TabIndex = 531;
-            // 
-            // lblCelular
-            // 
-            this.lblCelular.AutoSize = true;
-            this.lblCelular.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular.ForeColor = System.Drawing.Color.White;
-            this.lblCelular.Location = new System.Drawing.Point(12, 5);
-            this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(61, 19);
-            this.lblCelular.TabIndex = 507;
-            this.lblCelular.Text = "Celular:";
-            // 
-            // panelSubMenuCPF
-            // 
-            this.panelSubMenuCPF.Controls.Add(this.mtxtCPF);
-            this.panelSubMenuCPF.Controls.Add(this.lblCPF);
-            this.panelSubMenuCPF.Location = new System.Drawing.Point(0, 78);
-            this.panelSubMenuCPF.Name = "panelSubMenuCPF";
-            this.panelSubMenuCPF.Size = new System.Drawing.Size(400, 30);
-            this.panelSubMenuCPF.TabIndex = 311;
-            this.panelSubMenuCPF.Visible = false;
-            // 
-            // mtxtCPF
-            // 
-            this.mtxtCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.ForeColor = System.Drawing.Color.White;
-            this.mtxtCPF.Location = new System.Drawing.Point(57, 5);
-            this.mtxtCPF.Mask = "000000000/00";
-            this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(331, 19);
-            this.mtxtCPF.TabIndex = 247;
-            // 
-            // lblCPF
-            // 
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.ForeColor = System.Drawing.Color.White;
-            this.lblCPF.Location = new System.Drawing.Point(12, 5);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(39, 19);
-            this.lblCPF.TabIndex = 507;
-            this.lblCPF.Text = "CPF:";
-            // 
-            // panelSubMenuRG
-            // 
-            this.panelSubMenuRG.Controls.Add(this.mtxtRG);
-            this.panelSubMenuRG.Controls.Add(this.lblRG);
-            this.panelSubMenuRG.Location = new System.Drawing.Point(0, 48);
-            this.panelSubMenuRG.Name = "panelSubMenuRG";
-            this.panelSubMenuRG.Size = new System.Drawing.Size(400, 30);
-            this.panelSubMenuRG.TabIndex = 309;
-            this.panelSubMenuRG.Visible = false;
-            // 
-            // mtxtRG
-            // 
-            this.mtxtRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtRG.ForeColor = System.Drawing.Color.White;
-            this.mtxtRG.Location = new System.Drawing.Point(51, 5);
-            this.mtxtRG.Mask = "00.000.000-0";
-            this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(337, 19);
-            this.mtxtRG.TabIndex = 247;
-            // 
-            // lblRG
-            // 
-            this.lblRG.AutoSize = true;
-            this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRG.ForeColor = System.Drawing.Color.White;
-            this.lblRG.Location = new System.Drawing.Point(12, 5);
-            this.lblRG.Name = "lblRG";
-            this.lblRG.Size = new System.Drawing.Size(33, 19);
-            this.lblRG.TabIndex = 507;
-            this.lblRG.Text = "RG:";
-            // 
-            // panelOpção
-            // 
-            this.panelOpção.Controls.Add(this.label1);
-            this.panelOpção.Controls.Add(this.cboOpção);
-            this.panelOpção.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelOpção.Location = new System.Drawing.Point(0, 0);
-            this.panelOpção.Name = "panelOpção";
-            this.panelOpção.Size = new System.Drawing.Size(400, 46);
-            this.panelOpção.TabIndex = 308;
-            // 
-            // cboOpção
-            // 
-            this.cboOpção.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-            this.cboOpção.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cboOpção.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboOpção.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboOpção.FormattingEnabled = true;
-            this.cboOpção.Items.AddRange(new object[] {
-            "RG",
-            "CPF",
-            "Número do Celular",
-            "Número do Telefone"});
-            this.cboOpção.Location = new System.Drawing.Point(0, 21);
-            this.cboOpção.Name = "cboOpção";
-            this.cboOpção.Size = new System.Drawing.Size(400, 21);
-            this.cboOpção.TabIndex = 321;
-            this.cboOpção.SelectedIndexChanged += new System.EventHandler(this.cboOpção_SelectedIndexChanged);
+            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
+            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
             // 
             // panelAlterarSenha
             // 
@@ -341,7 +172,7 @@
             this.panelAlterarSenha.Controls.Add(this.dataGridView1);
             this.panelAlterarSenha.Controls.Add(this.imgSenha);
             this.panelAlterarSenha.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAlterarSenha.Location = new System.Drawing.Point(0, 208);
+            this.panelAlterarSenha.Location = new System.Drawing.Point(0, 201);
             this.panelAlterarSenha.Name = "panelAlterarSenha";
             this.panelAlterarSenha.Size = new System.Drawing.Size(400, 75);
             this.panelAlterarSenha.TabIndex = 320;
@@ -379,6 +210,152 @@
             this.imgSenha.TabIndex = 248;
             this.imgSenha.TabStop = false;
             // 
+            // panelSubMenuTelefone
+            // 
+            this.panelSubMenuTelefone.Controls.Add(this.mtxtTelefone);
+            this.panelSubMenuTelefone.Controls.Add(this.lblTelefone);
+            this.panelSubMenuTelefone.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuTelefone.Location = new System.Drawing.Point(0, 171);
+            this.panelSubMenuTelefone.Name = "panelSubMenuTelefone";
+            this.panelSubMenuTelefone.Size = new System.Drawing.Size(400, 30);
+            this.panelSubMenuTelefone.TabIndex = 323;
+            this.panelSubMenuTelefone.Visible = false;
+            // 
+            // mtxtTelefone
+            // 
+            this.mtxtTelefone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.mtxtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefone.ForeColor = System.Drawing.Color.White;
+            this.mtxtTelefone.Location = new System.Drawing.Point(90, 8);
+            this.mtxtTelefone.Mask = "(000) 0000-0000";
+            this.mtxtTelefone.Name = "mtxtTelefone";
+            this.mtxtTelefone.Size = new System.Drawing.Size(298, 16);
+            this.mtxtTelefone.TabIndex = 532;
+            // 
+            // lblTelefone
+            // 
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.ForeColor = System.Drawing.Color.White;
+            this.lblTelefone.Location = new System.Drawing.Point(12, 5);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(72, 19);
+            this.lblTelefone.TabIndex = 507;
+            this.lblTelefone.Text = "Telefone:";
+            // 
+            // panelSubMenuCelular
+            // 
+            this.panelSubMenuCelular.Controls.Add(this.mtxtCelular);
+            this.panelSubMenuCelular.Controls.Add(this.lblCelular);
+            this.panelSubMenuCelular.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuCelular.Location = new System.Drawing.Point(0, 141);
+            this.panelSubMenuCelular.Name = "panelSubMenuCelular";
+            this.panelSubMenuCelular.Size = new System.Drawing.Size(400, 30);
+            this.panelSubMenuCelular.TabIndex = 325;
+            this.panelSubMenuCelular.Visible = false;
+            // 
+            // mtxtCelular
+            // 
+            this.mtxtCelular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCelular.ForeColor = System.Drawing.Color.White;
+            this.mtxtCelular.Location = new System.Drawing.Point(79, 6);
+            this.mtxtCelular.Mask = "(+000) (000) 00000-0000";
+            this.mtxtCelular.Name = "mtxtCelular";
+            this.mtxtCelular.Size = new System.Drawing.Size(309, 16);
+            this.mtxtCelular.TabIndex = 531;
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.ForeColor = System.Drawing.Color.White;
+            this.lblCelular.Location = new System.Drawing.Point(12, 5);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(61, 19);
+            this.lblCelular.TabIndex = 507;
+            this.lblCelular.Text = "Celular:";
+            // 
+            // panelSubMenuCPF
+            // 
+            this.panelSubMenuCPF.Controls.Add(this.mtxtCPF);
+            this.panelSubMenuCPF.Controls.Add(this.lblCPF);
+            this.panelSubMenuCPF.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuCPF.Location = new System.Drawing.Point(0, 111);
+            this.panelSubMenuCPF.Name = "panelSubMenuCPF";
+            this.panelSubMenuCPF.Size = new System.Drawing.Size(400, 30);
+            this.panelSubMenuCPF.TabIndex = 324;
+            this.panelSubMenuCPF.Visible = false;
+            // 
+            // mtxtCPF
+            // 
+            this.mtxtCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCPF.ForeColor = System.Drawing.Color.White;
+            this.mtxtCPF.Location = new System.Drawing.Point(57, 5);
+            this.mtxtCPF.Mask = "000000000/00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.Size = new System.Drawing.Size(331, 19);
+            this.mtxtCPF.TabIndex = 247;
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.ForeColor = System.Drawing.Color.White;
+            this.lblCPF.Location = new System.Drawing.Point(12, 5);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(39, 19);
+            this.lblCPF.TabIndex = 507;
+            this.lblCPF.Text = "CPF:";
+            // 
+            // panelSubMenuRG
+            // 
+            this.panelSubMenuRG.Controls.Add(this.lblRG);
+            this.panelSubMenuRG.Controls.Add(this.mtxtRG);
+            this.panelSubMenuRG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuRG.Location = new System.Drawing.Point(0, 81);
+            this.panelSubMenuRG.Name = "panelSubMenuRG";
+            this.panelSubMenuRG.Size = new System.Drawing.Size(400, 30);
+            this.panelSubMenuRG.TabIndex = 322;
+            this.panelSubMenuRG.Visible = false;
+            // 
+            // lblRG
+            // 
+            this.lblRG.AutoSize = true;
+            this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRG.ForeColor = System.Drawing.Color.White;
+            this.lblRG.Location = new System.Drawing.Point(12, 5);
+            this.lblRG.Name = "lblRG";
+            this.lblRG.Size = new System.Drawing.Size(33, 19);
+            this.lblRG.TabIndex = 507;
+            this.lblRG.Text = "RG:";
+            // 
+            // mtxtRG
+            // 
+            this.mtxtRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.ForeColor = System.Drawing.Color.White;
+            this.mtxtRG.Location = new System.Drawing.Point(51, 5);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(337, 19);
+            this.mtxtRG.TabIndex = 247;
+            // 
+            // panelOpção
+            // 
+            this.panelOpção.Controls.Add(this.label1);
+            this.panelOpção.Controls.Add(this.cboOpção);
+            this.panelOpção.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelOpção.Location = new System.Drawing.Point(0, 35);
+            this.panelOpção.Name = "panelOpção";
+            this.panelOpção.Size = new System.Drawing.Size(400, 46);
+            this.panelOpção.TabIndex = 321;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -390,6 +367,24 @@
             this.label1.TabIndex = 508;
             this.label1.Text = "Escolha uma opção:";
             // 
+            // cboOpção
+            // 
+            this.cboOpção.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cboOpção.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cboOpção.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboOpção.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboOpção.FormattingEnabled = true;
+            this.cboOpção.Items.AddRange(new object[] {
+            "RG",
+            "CPF",
+            "Número do Celular",
+            "Número do Telefone"});
+            this.cboOpção.Location = new System.Drawing.Point(0, 21);
+            this.cboOpção.Name = "cboOpção";
+            this.cboOpção.Size = new System.Drawing.Size(400, 21);
+            this.cboOpção.TabIndex = 321;
+            this.cboOpção.SelectedIndexChanged += new System.EventHandler(this.cboOpção_SelectedIndexChanged);
+            // 
             // frmRecovery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -397,10 +392,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(400, 500);
             this.Controls.Add(this.panelAlterarSenha);
-            this.Controls.Add(this.panelVerificador);
+            this.Controls.Add(this.panelSubMenuTelefone);
+            this.Controls.Add(this.panelSubMenuCelular);
             this.Controls.Add(this.btnVerificar);
-            this.Controls.Add(this.panelTítulo);
             this.Controls.Add(this.btnAlterar);
+            this.Controls.Add(this.panelSubMenuCPF);
+            this.Controls.Add(this.panelSubMenuRG);
+            this.Controls.Add(this.panelOpção);
+            this.Controls.Add(this.panelTítulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRecovery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -410,7 +409,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
-            this.panelVerificador.ResumeLayout(false);
+            this.panelAlterarSenha.ResumeLayout(false);
+            this.panelAlterarSenha.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).EndInit();
             this.panelSubMenuTelefone.ResumeLayout(false);
             this.panelSubMenuTelefone.PerformLayout();
             this.panelSubMenuCelular.ResumeLayout(false);
@@ -421,10 +423,6 @@
             this.panelSubMenuRG.PerformLayout();
             this.panelOpção.ResumeLayout(false);
             this.panelOpção.PerformLayout();
-            this.panelAlterarSenha.ResumeLayout(false);
-            this.panelAlterarSenha.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgSenha)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,13 +433,13 @@
         private System.Windows.Forms.Button btnVerificar;
         private System.Windows.Forms.Label lblAlterarSenha;
         private System.Windows.Forms.Panel panelTítulo;
-        private System.Windows.Forms.Panel panelVerificador;
         private System.Windows.Forms.Panel panelAlterarSenha;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox imgSenha;
         private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.PictureBox imgMinimizar;
+        private System.Windows.Forms.PictureBox imgVoltar;
         private System.Windows.Forms.Panel panelSubMenuTelefone;
         private System.Windows.Forms.MaskedTextBox mtxtTelefone;
         private System.Windows.Forms.Label lblTelefone;
@@ -452,11 +450,10 @@
         private System.Windows.Forms.MaskedTextBox mtxtCPF;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Panel panelSubMenuRG;
-        private System.Windows.Forms.MaskedTextBox mtxtRG;
         private System.Windows.Forms.Label lblRG;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
         private System.Windows.Forms.Panel panelOpção;
-        private System.Windows.Forms.ComboBox cboOpção;
-        private System.Windows.Forms.PictureBox imgVoltar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cboOpção;
     }
 }

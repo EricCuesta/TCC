@@ -31,7 +31,7 @@
             this.lblID = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblAlterarFuncionário = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnDemitir = new System.Windows.Forms.Button();
             this.MenuLiriousBurguer = new System.Windows.Forms.MenuStrip();
             this.menuInício = new System.Windows.Forms.ToolStripMenuItem();
             this.menuRH = new System.Windows.Forms.ToolStripMenuItem();
@@ -148,20 +148,20 @@
             this.lblAlterarFuncionário.TabIndex = 384;
             this.lblAlterarFuncionário.Text = "Demitir Funcionário";
             // 
-            // btnCadastrar
+            // btnDemitir
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar.Location = new System.Drawing.Point(346, 464);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(107, 30);
-            this.btnCadastrar.TabIndex = 383;
-            this.btnCadastrar.Text = "Demitir";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnDemitir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDemitir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDemitir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemitir.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemitir.ForeColor = System.Drawing.Color.Black;
+            this.btnDemitir.Location = new System.Drawing.Point(346, 464);
+            this.btnDemitir.Name = "btnDemitir";
+            this.btnDemitir.Size = new System.Drawing.Size(107, 30);
+            this.btnDemitir.TabIndex = 383;
+            this.btnDemitir.Text = "Demitir";
+            this.btnDemitir.UseVisualStyleBackColor = false;
+            this.btnDemitir.Click += new System.EventHandler(this.btnDemitir_Click);
             // 
             // MenuLiriousBurguer
             // 
@@ -691,6 +691,8 @@
             this.imgMinimizar.TabIndex = 437;
             this.imgMinimizar.TabStop = false;
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
+            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
             // 
             // imgFechar
             // 
@@ -705,6 +707,8 @@
             this.imgFechar.TabIndex = 486;
             this.imgFechar.TabStop = false;
             this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
+            this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
+            this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
             // cboGênero
             // 
@@ -847,7 +851,7 @@
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblAlterarFuncionário);
-            this.Controls.Add(this.btnCadastrar);
+            this.Controls.Add(this.btnDemitir);
             this.Controls.Add(this.MenuLiriousBurguer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDismissEmployee";
@@ -887,7 +891,7 @@
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAlterarFuncionário;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnDemitir;
         private System.Windows.Forms.MenuStrip MenuLiriousBurguer;
         private System.Windows.Forms.ToolStripMenuItem menuInício;
         private System.Windows.Forms.ToolStripMenuItem menuRH;

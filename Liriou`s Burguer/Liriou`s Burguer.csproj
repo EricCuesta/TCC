@@ -165,7 +165,6 @@
     <Compile Include="Database\StockDatabase.cs" />
     <Compile Include="Database\SupplyDatabase.cs" />
     <Compile Include="Database\TimeCardDatabase.cs" />
-    <Compile Include="Model\bfgvsdg.cs" />
     <Compile Include="Model\UsuarioLogado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -423,6 +422,7 @@
       <DependentUpon>LiriousDatabase.edmx</DependentUpon>
       <LastGenOutput>LiriousDatabase.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Voltar02.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

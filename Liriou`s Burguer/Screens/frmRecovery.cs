@@ -15,18 +15,11 @@ namespace Liriou_s_Burguer.Screens
         public frmRecovery()
         {
             InitializeComponent();
-            panelVerificador.Visible = true;
+            CustomizeDesign();
+            panelOpção.Visible = true;
             btnVerificar.Visible = true;
             btnAlterar.Visible = false;
             panelAlterarSenha.Visible = false;
-        }
-
-        private void Modificar()
-        {
-            panelVerificador.Visible = false;
-            btnVerificar.Visible = false;
-            btnAlterar.Visible = true;
-            panelAlterarSenha.Visible = true;
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)
@@ -37,26 +30,18 @@ namespace Liriou_s_Burguer.Screens
 
                 if (cboOpção.Text == "RG")
                 {
-                    HideSubMenu();
-                    ShowSubMenu(panelSubMenuRG);
                     employees.ds_rg = mtxtRG.Text.Trim();
                 }
                 else if (cboOpção.Text == "CPF")
                 {
-                    HideSubMenu();
-                    ShowSubMenu(panelSubMenuCPF);
                     employees.ds_cpf = mtxtCPF.Text.Trim();
                 }
                 else if (cboOpção.Text == "Número do Celular")
                 {
-                    HideSubMenu();
-                    ShowSubMenu(panelSubMenuCelular);
                     employees.mr_cellphone = mtxtCelular.Text.Trim();
                 }
                 else if (cboOpção.Text == "Número do Telefone")
                 {
-                    HideSubMenu();
-                    ShowSubMenu(panelSubMenuTelefone);
                     employees.mr_tellphone = mtxtTelefone.Text.Trim();
                 }
 
@@ -97,6 +82,14 @@ namespace Liriou_s_Burguer.Screens
             }
         }
 
+        private void Modificar()
+        {
+            panelOpção.Visible = false;
+            btnVerificar.Visible = false;
+            btnAlterar.Visible = true;
+            panelAlterarSenha.Visible = true;
+        }
+
         private void CustomizeDesign()
         {
             panelSubMenuRG.Visible = false;
@@ -130,6 +123,14 @@ namespace Liriou_s_Burguer.Screens
             }
         }
 
+        private void Limpar()
+        {
+            mtxtRG.Clear();
+            mtxtCPF.Clear();
+            mtxtCelular.Clear();
+            mtxtTelefone.Clear();
+        }
+
         private void imgVoltar_Click(object sender, EventArgs e)
         {
             frmLogin login = new frmLogin();
@@ -147,27 +148,68 @@ namespace Liriou_s_Burguer.Screens
             Application.Exit();
         }
 
+
+        private void imgFechar_MouseEnter(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar01;
+            imgFechar.Image = Properties.Resources.Fechar02;
+        }
+
+        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar02;
+            imgFechar.Image = Properties.Resources.Fechar01;
+        }
+
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+        }
+
+        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
+        }
+
+        private void imgVoltar_MouseEnter(object sender, EventArgs e)
+        {
+            imgVoltar.Image = Properties.Resources.Voltar01;
+            imgVoltar.Image = Properties.Resources.Voltar02;
+        }
+
+        private void imgVoltar_MouseLeave(object sender, EventArgs e)
+        {
+            imgVoltar.Image = Properties.Resources.Voltar02;
+            imgVoltar.Image = Properties.Resources.Voltar01;
+        }
+
         private void cboOpção_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboOpção.Text == "RG")
             {
                 HideSubMenu();
                 ShowSubMenu(panelSubMenuRG);
+                Limpar();     
             }
             else if (cboOpção.Text == "CPF")
             {
                 HideSubMenu();
                 ShowSubMenu(panelSubMenuCPF);
+                Limpar();
             }
             else if (cboOpção.Text == "Número do Celular")
             {
                 HideSubMenu();
                 ShowSubMenu(panelSubMenuCelular);
+                Limpar();
             }
             else if (cboOpção.Text == "Número do Telefone")
             {
                 HideSubMenu();
                 ShowSubMenu(panelSubMenuTelefone);
+                Limpar();
             }
         }
     }

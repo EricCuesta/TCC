@@ -90,9 +90,9 @@
             this.BarraTitulo.Controls.Add(this.pictureBox2);
             this.BarraTitulo.Controls.Add(this.imgMenu);
             this.BarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraTitulo.Location = new System.Drawing.Point(40, 0);
+            this.BarraTitulo.Location = new System.Drawing.Point(233, 0);
             this.BarraTitulo.Name = "BarraTitulo";
-            this.BarraTitulo.Size = new System.Drawing.Size(760, 50);
+            this.BarraTitulo.Size = new System.Drawing.Size(567, 50);
             this.BarraTitulo.TabIndex = 12;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
             // 
@@ -102,33 +102,37 @@
             this.imgFechar.BackColor = System.Drawing.Color.Transparent;
             this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
-            this.imgFechar.Location = new System.Drawing.Point(731, 4);
+            this.imgFechar.Location = new System.Drawing.Point(538, 4);
             this.imgFechar.Name = "imgFechar";
             this.imgFechar.Size = new System.Drawing.Size(25, 25);
             this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgFechar.TabIndex = 254;
             this.imgFechar.TabStop = false;
             this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
+            this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
+            this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
             // imgMinimizar
             // 
             this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(700, 4);
+            this.imgMinimizar.Location = new System.Drawing.Point(507, 4);
             this.imgMinimizar.Name = "imgMinimizar";
             this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
             this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgMinimizar.TabIndex = 12;
             this.imgMinimizar.TabStop = false;
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
+            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1256, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(1063, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -140,7 +144,7 @@
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(1282, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(1089, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -172,7 +176,7 @@
             this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.MenuVertical.Location = new System.Drawing.Point(0, 0);
             this.MenuVertical.Name = "MenuVertical";
-            this.MenuVertical.Size = new System.Drawing.Size(40, 500);
+            this.MenuVertical.Size = new System.Drawing.Size(233, 500);
             this.MenuVertical.TabIndex = 11;
             // 
             // panel13
@@ -182,7 +186,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 376);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(40, 32);
+            this.panel13.Size = new System.Drawing.Size(233, 32);
             this.panel13.TabIndex = 23;
             // 
             // panel7
@@ -219,7 +223,7 @@
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 345);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(40, 31);
+            this.panel12.Size = new System.Drawing.Size(233, 31);
             this.panel12.TabIndex = 22;
             // 
             // panel9
@@ -256,7 +260,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 315);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(40, 30);
+            this.panel11.Size = new System.Drawing.Size(233, 30);
             this.panel11.TabIndex = 21;
             // 
             // panel8
@@ -304,7 +308,7 @@
             this.panelSubMenuRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 150);
             this.panelSubMenuRecursosHumanos.Name = "panelSubMenuRecursosHumanos";
-            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(40, 165);
+            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(233, 165);
             this.panelSubMenuRecursosHumanos.TabIndex = 20;
             this.panelSubMenuRecursosHumanos.Visible = false;
             // 
@@ -477,7 +481,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 120);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(40, 30);
+            this.panel10.Size = new System.Drawing.Size(233, 30);
             this.panel10.TabIndex = 19;
             // 
             // btnRecursosHumanos
@@ -515,7 +519,7 @@
             this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
             this.imgLogotipo.Location = new System.Drawing.Point(0, 0);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(40, 120);
+            this.imgLogotipo.Size = new System.Drawing.Size(233, 120);
             this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;

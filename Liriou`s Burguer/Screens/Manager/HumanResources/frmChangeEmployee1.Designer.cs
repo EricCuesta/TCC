@@ -28,12 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmChangeEmployee1));
             this.lblAlterarFuncionário = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.imgVoltar = new System.Windows.Forms.PictureBox();
             this.nudPlanoDeSáude = new System.Windows.Forms.NumericUpDown();
             this.nudSeguroDeVida = new System.Windows.Forms.NumericUpDown();
             this.lblPlanoDeSáude = new System.Windows.Forms.Label();
@@ -81,9 +78,9 @@
             this.dtpContratação = new System.Windows.Forms.DateTimePicker();
             this.lblContratação = new System.Windows.Forms.Label();
             this.dataGridView15 = new System.Windows.Forms.DataGridView();
+            this.imgMinimizar = new System.Windows.Forms.PictureBox();
+            this.imgVoltar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDeSáude)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSeguroDeVida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
@@ -105,6 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAlterarFuncionário
@@ -140,32 +139,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(800, 2);
             this.dataGridView1.TabIndex = 303;
-            // 
-            // imgMinimizar
-            // 
-            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(771, 2);
-            this.imgMinimizar.Name = "imgMinimizar";
-            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 346;
-            this.imgMinimizar.TabStop = false;
-            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
-            // 
-            // imgVoltar
-            // 
-            this.imgVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgVoltar.Image = ((System.Drawing.Image)(resources.GetObject("imgVoltar.Image")));
-            this.imgVoltar.Location = new System.Drawing.Point(4, 2);
-            this.imgVoltar.Name = "imgVoltar";
-            this.imgVoltar.Size = new System.Drawing.Size(25, 25);
-            this.imgVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgVoltar.TabIndex = 304;
-            this.imgVoltar.TabStop = false;
-            this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
             // 
             // nudPlanoDeSáude
             // 
@@ -611,6 +584,36 @@
             this.dataGridView15.Size = new System.Drawing.Size(401, 2);
             this.dataGridView15.TabIndex = 513;
             // 
+            // imgMinimizar
+            // 
+            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
+            this.imgMinimizar.Location = new System.Drawing.Point(771, 2);
+            this.imgMinimizar.Name = "imgMinimizar";
+            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgMinimizar.TabIndex = 346;
+            this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
+            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
+            // 
+            // imgVoltar
+            // 
+            this.imgVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgVoltar.Image = global::Liriou_s_Burguer.Properties.Resources.Voltar;
+            this.imgVoltar.Location = new System.Drawing.Point(4, 2);
+            this.imgVoltar.Name = "imgVoltar";
+            this.imgVoltar.Size = new System.Drawing.Size(25, 25);
+            this.imgVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgVoltar.TabIndex = 304;
+            this.imgVoltar.TabStop = false;
+            this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
+            this.imgVoltar.MouseEnter += new System.EventHandler(this.imgVoltar_MouseEnter);
+            this.imgVoltar.MouseLeave += new System.EventHandler(this.imgVoltar_MouseLeave);
+            // 
             // frmChangeEmployee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -674,8 +677,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Employee";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDeSáude)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSeguroDeVida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
@@ -697,6 +698,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

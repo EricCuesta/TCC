@@ -33,5 +33,29 @@ namespace Liriou_s_Burguer.Screens
             login.ShowDialog();
             Hide();
         }
+
+        private void imgFechar_MouseEnter(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar;
+            imgFechar.Image = Properties.Resources.Fechar02;
+        }
+
+        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar02;
+            imgFechar.Image = Properties.Resources.Fechar;
+        }
+
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar;
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+        }
+
+        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+            imgMinimizar.Image = Properties.Resources.Minimizar;
+        }
     }
 }

@@ -648,6 +648,8 @@
             this.imgFechar.TabIndex = 534;
             this.imgFechar.TabStop = false;
             this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
+            this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
+            this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
             // imgMinimizar
             // 
@@ -664,6 +666,7 @@
             this.imgMinimizar.Tag = "minimizar";
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
             this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
+            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
             // 
             // txtPaís
             // 
@@ -710,7 +713,6 @@
             this.mtxtCelular.Size = new System.Drawing.Size(314, 23);
             this.mtxtCelular.TabIndex = 549;
             this.mtxtCelular.Text = "055011";
-            this.mtxtCelular.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtCelular_MaskInputRejected);
             // 
             // cboEstado
             // 

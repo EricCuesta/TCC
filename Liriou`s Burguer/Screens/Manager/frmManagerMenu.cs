@@ -73,6 +73,7 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
             HumanResources.frmRegisterEmployee registerEmployee = new HumanResources.frmRegisterEmployee();
             registerEmployee.Show();
+            Hide();
         }
 
         private void btnConsultarFuncionário_Click(object sender, EventArgs e)
@@ -80,6 +81,7 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
             HumanResources.frmConsultEmployee consultEmployee = new HumanResources.frmConsultEmployee();
             consultEmployee.Show();
+            Hide();
         }
 
         private void btnAlterarFuncionário_Click(object sender, EventArgs e)
@@ -87,6 +89,7 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
             HumanResources.frmChangeEmployee changeEmployee = new HumanResources.frmChangeEmployee();
             changeEmployee.Show();
+            Hide();
         }
 
         private void btnDemitirFuncionário_Click(object sender, EventArgs e)
@@ -94,6 +97,7 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
             HumanResources.frmDismissEmployee dismissEmployee = new HumanResources.frmDismissEmployee();
             dismissEmployee.Show();
+            Hide();
         }
 
         private void btnFolhaDePagamento_Click(object sender, EventArgs e)
@@ -101,6 +105,7 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
             HumanResources.frmPayroll payroll = new HumanResources.frmPayroll();
             payroll.Show();
+            Hide();
         }
 
         private void btnConsultarCartãoDePonto_Click(object sender, EventArgs e)
@@ -108,6 +113,7 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
             HumanResources.frmConsultTimeCard consultTimeCard = new HumanResources.frmConsultTimeCard();
             consultTimeCard.Show();
+            Hide();
         }
 
         private void imgMinimizar_Click(object sender, EventArgs e)
@@ -118,6 +124,30 @@ namespace Liriou_s_Burguer.Screens.Manager
         private void imgFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void imgFechar_MouseEnter(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar;
+            imgFechar.Image = Properties.Resources.Fechar02;
+        }
+
+        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar02;
+            imgFechar.Image = Properties.Resources.Fechar;
+        }
+
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar;
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+        }
+
+        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+            imgMinimizar.Image = Properties.Resources.Minimizar;
         }
     }
 }

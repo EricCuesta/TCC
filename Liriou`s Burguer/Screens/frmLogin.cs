@@ -17,6 +17,43 @@ namespace Liriou_s_Burguer.Screens
             InitializeComponent();
         }
 
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+
+                employees.ds_email = txtEmail.Text.Trim();
+                string email = employees.ds_email;
+                employees.ds_password = txtSenha.Text.Trim();
+                string senha = employees.ds_password;
+
+                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
+                string r = busemp.Login(email, senha);
+
+                if (r == "true")
+                {
+                    this.Hide();
+                    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
+                    tela.Show();
+                    Hide();
+                }
+                else if (r == "false")
+                {
+                    this.Hide();
+                    Employee.frmEmployeeMenu tela = new Employee.frmEmployeeMenu();
+                    tela.Show();
+                    Hide();
+                }
+
+                MessageBox.Show(r);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!","Login",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
+
         private void imgMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -73,42 +110,28 @@ namespace Liriou_s_Burguer.Screens
             }
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void imgFechar_MouseEnter(object sender, EventArgs e)
         {
-            try
-            {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+            imgFechar.Image = Properties.Resources.Fechar01;
+            imgFechar.Image = Properties.Resources.Fechar02;
+        }
 
-                employees.ds_email = txtEmail.Text.Trim();
-                string email = employees.ds_email;
-                employees.ds_password = txtSenha.Text.Trim();
-                string senha = employees.ds_password;
+        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar02;
+            imgFechar.Image = Properties.Resources.Fechar01;
+        }
 
-                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
-                string r = busemp.Login(email, senha);
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+        }
 
-                if (r == "true")
-                {
-                    this.Hide();
-                    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
-                    tela.Show();
-                }
-                else if(r == "false")
-                {
-                    this.Hide();
-                    Employee.frmEmployeeMenu tela = new Employee.frmEmployeeMenu();
-                    tela.Show();
-                }
-
-                MessageBox.Show(r);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro!",
-                                "Login",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
-            }
+        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
         }
     }
 }

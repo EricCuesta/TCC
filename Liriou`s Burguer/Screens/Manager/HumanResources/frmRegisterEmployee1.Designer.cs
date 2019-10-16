@@ -458,6 +458,8 @@
             this.imgMinimizar.TabIndex = 346;
             this.imgMinimizar.TabStop = false;
             this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
+            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
+            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
             // 
             // imgVoltar
             // 
@@ -470,6 +472,8 @@
             this.imgVoltar.TabIndex = 304;
             this.imgVoltar.TabStop = false;
             this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
+            this.imgVoltar.MouseEnter += new System.EventHandler(this.imgVoltar_MouseEnter);
+            this.imgVoltar.MouseLeave += new System.EventHandler(this.imgVoltar_MouseLeave);
             // 
             // dataGridView7
             // 
@@ -671,7 +675,6 @@
             this.Name = "frmRegisterEmployee1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Employee";
-            this.Load += new System.EventHandler(this.frmRegisterEmployee1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValeTransporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValeAlimentação)).EndInit();
