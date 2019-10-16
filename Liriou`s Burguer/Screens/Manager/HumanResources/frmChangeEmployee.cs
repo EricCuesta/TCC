@@ -35,16 +35,17 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                     string alterado = antigo.Replace("/", "");
                     employees.ds_cpf = alterado;
                 }
+                
                 employees.ds_rg = mtxtRG.Text.Trim();
                 employees.ds_country = txtPaís.Text.Trim();
                 employees.ds_state = cboEstado.Text.Trim();
                 employees.ds_cep = lblCEP.Text.Trim();
-                employees.ds_complement = txtComplemento.Text.Trim();
+                employees.ds_note= txtComplemento.Text.Trim();
                 employees.ds_address = txtEndereço.Text.Trim();
-                employees.mr_cellphone = mtxtCelular.Text.Trim();
-                employees.mr_tellphone = mtxtTelefone.Text.Trim();
+                employees.nr_cellphone = mtxtCelular.Text.Trim();
+                employees.nr_tellphone = mtxtTelefone.Text.Trim();
                 employees.ds_email = txtEmail.Text.Trim();
-                employees.ds_password = txtSenha.Text;
+                employees.pw_password = txtSenha.Text;
 
                 business.Alterar(employees);
 

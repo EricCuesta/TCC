@@ -16,11 +16,11 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_benefits { get; set; }
         public int id_emp { get; set; }
-        public Nullable<decimal> vl_familySalary { get; set; }
         public Nullable<decimal> vl_food { get; set; }
+        public decimal vl_transport { get; set; }
         public Nullable<decimal> vl_meal { get; set; }
-        public Nullable<decimal> vl_transport { get; set; }
-        public Nullable<decimal> vl_lifeInsurance { get; set; }
+        public Nullable<decimal> vl_lifeSafe { get; set; }
         public Nullable<decimal> vl_planHealth { get; set; }
+        public Nullable<decimal> vl_planDental { get; set; }
     }
 }

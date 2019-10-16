@@ -38,11 +38,11 @@ namespace Liriou_s_Burguer.Screens
                 }
                 else if (cboOpção.Text == "Número do Celular")
                 {
-                    employees.mr_cellphone = mtxtCelular.Text.Trim();
+                    employees.nr_cellphone = mtxtCelular.Text.Trim();
                 }
                 else if (cboOpção.Text == "Número do Telefone")
                 {
-                    employees.mr_tellphone = mtxtTelefone.Text.Trim();
+                    employees.nr_tellphone = mtxtTelefone.Text.Trim();
                 }
 
                 Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
@@ -65,7 +65,7 @@ namespace Liriou_s_Burguer.Screens
             try
             {
                 Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-                employees.ds_password = txtSenha.Text.Trim();
+                employees.pw_password = txtSenha.Text.Trim();
 
                 Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
                 busemp.AlterarRecuperação(employees);

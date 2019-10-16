@@ -113,6 +113,9 @@
     <Compile Include="Database\Entities\tb_client.cs">
       <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Database\Entities\tb_cnae.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\Entities\tb_cpp.cs">
       <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
@@ -120,6 +123,9 @@
       <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_department.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_dependents.cs">
       <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_discounts.cs">
@@ -412,6 +418,9 @@
     <None Include="Resources\Voltar01.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Voltar02.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Database\Entities\LiriousDatabase.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LiriousDatabase.edmx</DependentUpon>
@@ -422,7 +431,6 @@
       <DependentUpon>LiriousDatabase.edmx</DependentUpon>
       <LastGenOutput>LiriousDatabase.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\Voltar02.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

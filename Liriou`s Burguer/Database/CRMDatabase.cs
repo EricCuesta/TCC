@@ -28,12 +28,9 @@ namespace Liriou_s_Burguer.Database
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_crm list = DB.tb_crm.First(t => t.id_client == crm.id_client);
-            list.ds_feedback = list.ds_feedback;
             list.ds_mood = list.ds_mood;
             list.ds_note = list.ds_note;
-            list.ds_rating = list.ds_rating;
-            list.ds_zodiacSign = list.ds_zodiacSign;
-            
+           
             DB.SaveChanges();
         }
 

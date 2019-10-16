@@ -19,15 +19,15 @@ namespace Liriou_s_Burguer.Database.Entities
         public string nm_lastName { get; set; }
         public string ds_email { get; set; }
         public System.DateTime dt_birth { get; set; }
-        public string ds_gender { get; set; }
+        public string ds_sex { get; set; }
+        public string ds_rg { get; set; }
         public string ds_cpf { get; set; }
         public string ds_cep { get; set; }
         public string ds_country { get; set; }
         public string ds_state { get; set; }
-        public string ds_city { get; set; }
         public string ds_Address { get; set; }
         public string ds_note { get; set; }
-        public string ds_cellphone { get; set; }
-        public string ds_tellphone { get; set; }
+        public string nr_cellphone { get; set; }
+        public string nr_tellphone { get; set; }
     }
 }

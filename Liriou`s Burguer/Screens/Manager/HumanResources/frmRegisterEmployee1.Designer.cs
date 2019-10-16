@@ -68,7 +68,7 @@
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.lblSalárioBruto = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudSalarioBruto = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -99,7 +99,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalarioBruto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDeSáude)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSeguroDeVida)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
@@ -503,13 +503,13 @@
             this.lblSalárioBruto.TabIndex = 392;
             this.lblSalárioBruto.Text = "Salário Bruto:  R$";
             // 
-            // numericUpDown1
+            // nudSalarioBruto
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(147, 97);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(248, 23);
-            this.numericUpDown1.TabIndex = 393;
+            this.nudSalarioBruto.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSalarioBruto.Location = new System.Drawing.Point(147, 97);
+            this.nudSalarioBruto.Name = "nudSalarioBruto";
+            this.nudSalarioBruto.Size = new System.Drawing.Size(248, 23);
+            this.nudSalarioBruto.TabIndex = 393;
             // 
             // label1
             // 
@@ -629,7 +629,7 @@
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.nudSalarioBruto);
             this.Controls.Add(this.lblSalárioBruto);
             this.Controls.Add(this.dataGridView8);
             this.Controls.Add(this.dataGridView7);
@@ -694,7 +694,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalarioBruto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDeSáude)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSeguroDeVida)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
@@ -746,7 +746,7 @@
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.Label lblSalárioBruto;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudSalarioBruto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;

@@ -13,8 +13,8 @@ namespace Liriou_s_Burguer.Database
             Entities.liriousdbEntities db = new Entities.liriousdbEntities();
             Entities.tb_employees database = db.tb_employees.FirstOrDefault(l => l.ds_cpf == verificar.ds_cpf ||
                                                                                  l.ds_rg == verificar.ds_rg ||
-                                                                                 l.mr_tellphone == verificar.mr_tellphone ||
-                                                                                 l.mr_cellphone == verificar.mr_cellphone);
+                                                                                 l.nr_tellphone == verificar.nr_tellphone ||
+                                                                                 l.nr_cellphone == verificar.nr_cellphone);
             return database;
         }
 
@@ -23,7 +23,7 @@ namespace Liriou_s_Burguer.Database
             Entities.liriousdbEntities db = new Entities.liriousdbEntities();
             Entities.tb_employees novo = db.tb_employees.First(u => u.id_emp == Model.UsuarioLogado.ID);
 
-            novo.ds_password = alterar.ds_password;
+            novo.pw_password = alterar.pw_password;
 
             db.SaveChanges();
         }
@@ -46,7 +46,7 @@ namespace Liriou_s_Burguer.Database
         public bool Login(string email, string senha)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            bool v = DB.tb_employees.Any(t => t.ds_email == email && t.ds_password == senha);
+            bool v = DB.tb_employees.Any(t => t.ds_email == email && t.pw_password == senha);
 
             if (v == true)
             {
@@ -64,11 +64,11 @@ namespace Liriou_s_Burguer.Database
             Entities.tb_employees list = DB.tb_employees.First(t => t.id_emp == employees.id_emp);
 
             list.ds_address = list.ds_address;
-            list.mr_cellphone = list.mr_cellphone;
+            list.nr_cellphone = list.nr_cellphone;
             list.ds_cep = list.ds_cep;
             list.ds_country = list.ds_country;
             list.ds_cpf = list.ds_cpf;
-            list.mr_tellphone = list.mr_tellphone;
+            list.nr_tellphone = list.nr_tellphone;
             list.ds_email = list.ds_email;
             list.ds_sex = list.ds_sex;
             list.ds_rg = list.ds_rg;
@@ -78,9 +78,9 @@ namespace Liriou_s_Burguer.Database
             list.dt_resignation = list.dt_resignation;
             list.nm_firstName = list.nm_firstName;
             list.nm_lastName = list.nm_lastName;
-            list.vl_qtdDependents = list.vl_qtdDependents;
-            list.ds_complement = list.ds_complement;
-            list.ds_password = list.ds_password;
+           
+            list.ds_note= list.ds_note;
+            list.pw_password = list.pw_password;
             
             DB.SaveChanges();
         }

@@ -34,12 +34,12 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 employees.ds_country = txtPaís.Text.Trim();
                 employees.ds_state = cboEstado.Text.Trim();
                 employees.ds_cep = lblCEP.Text.Trim();
-                employees.ds_complement = txtComplemento.Text.Trim();
+                employees.ds_note = txtComplemento.Text.Trim();
                 employees.ds_address = txtEndereço.Text.Trim();
-                employees.mr_cellphone = mtxtCelular.Text.Trim();
-                employees.mr_tellphone = mtxtTelefone.Text.Trim();
+                employees.nr_cellphone = mtxtCelular.Text.Trim();
+                employees.nr_tellphone = mtxtTelefone.Text.Trim();
                 employees.ds_email = txtEmail.Text.Trim();
-                employees.ds_password = txtSenha.Text;
+                employees.pw_password = txtSenha.Text;
 
                 string email = txtEmail.Text;
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -47,7 +47,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 if (match.Success)
                 {
                     frmRegisterEmployee1 tela = new frmRegisterEmployee1();
-                    tela.CarregarFuncionario(employees, discounts, function, timecard);
+                    tela.CarregarFuncionario(employees, discounts, function, timecard, financial, benefits, department);
                     tela.Show();
                     Hide();
                 }
@@ -65,15 +65,26 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        Database.Entities.tb_employees employees;
+        Database.Entities.tb_discounts discounts;
+        Database.Entities.tb_function function;
+        Database.Entities.tb_timecard timecard;
+        Database.Entities.tb_financial financial;
+        Database.Entities.tb_benefits benefits;
+        Database.Entities.tb_department department;
 
         public void CarregarFuncionario(Database.Entities.tb_employees employees, Database.Entities.tb_discounts discounts,
-                               Database.Entities.tb_function function, Database.Entities.tb_timecard timecard)
+                               Database.Entities.tb_function function, Database.Entities.tb_timecard timecard, 
+                               Database.Entities.tb_financial financial, Database.Entities.tb_benefits benefits,
+                                                Database.Entities.tb_department department)
         {
             this.employees = employees;
             this.discounts = discounts;
             this.function = function;
             this.timecard = timecard;
-
+            this.financial = financial;
+            this.benefits = benefits;
+            this.department = department;
 
             txtNome.Text = employees.nm_firstName;
             txtSobrenome.Text = employees.nm_lastName;
@@ -84,12 +95,12 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             txtPaís.Text = employees.ds_country;
             cboEstado.Text = employees.ds_state;
             lblCEP.Text = employees.ds_cep;
-            txtComplemento.Text = employees.ds_complement;
+            txtComplemento.Text = employees.ds_note;
             txtEndereço.Text = employees.ds_address;
-            mtxtCelular.Text = employees.mr_cellphone;
-            mtxtTelefone.Text = employees.mr_tellphone;
+            mtxtCelular.Text = employees.nr_cellphone;
+            mtxtTelefone.Text = employees.nr_tellphone;
             txtEmail.Text = employees.ds_email;
-            txtSenha.Text = employees.ds_password;
+            txtSenha.Text = employees.pw_password;
         }
 
         private void menuInício_Click(object sender, EventArgs e)
@@ -144,11 +155,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             Application.Exit();
         }
 
-        Database.Entities.tb_employees employees;
-        Database.Entities.tb_discounts discounts;
-        Database.Entities.tb_function function;
-        Database.Entities.tb_timecard timecard;
-
+     
         private void imgFechar_MouseEnter(object sender, EventArgs e)
         {
             imgFechar.Image = Properties.Resources.Fechar;

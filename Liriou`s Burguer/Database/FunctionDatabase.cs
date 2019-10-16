@@ -28,8 +28,7 @@ namespace Liriou_s_Burguer.Database
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_function list = DB.tb_function.First(t => t.id_function == function.id_function);
-            list.dt_fromDate = list.dt_fromDate;
-            list.dt_toDate = list.dt_toDate;
+          
             list.nm_function = list.nm_function;
             
             DB.SaveChanges();

@@ -31,7 +31,7 @@ namespace Liriou_s_Burguer.Database
             list.vl_fgts = list.vl_fgts;
             list.vl_incomeTax = list.vl_incomeTax;
             list.vl_inss = list.vl_inss;
-            list.vl_alimony = list.vl_alimony;
+           
             
             DB.SaveChanges();
         }

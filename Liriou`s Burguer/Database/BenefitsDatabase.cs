@@ -28,12 +28,13 @@ namespace Liriou_s_Burguer.Database
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_benefits list = DB.tb_benefits.First(t => t.id_benefits == benefits.id_benefits);
-            list.vl_familySalary = list.vl_familySalary;
+           
             list.vl_food = list.vl_food;
-            list.vl_lifeInsurance = list.vl_lifeInsurance;
+            list.vl_lifeSafe = list.vl_lifeSafe;
             list.vl_meal = list.vl_meal;
             list.vl_planHealth = list.vl_planHealth;
             list.vl_transport = list.vl_transport;
+            list.vl_planDental = list.vl_planDental;
 
             DB.SaveChanges();
         }

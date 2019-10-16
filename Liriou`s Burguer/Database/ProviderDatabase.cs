@@ -30,15 +30,15 @@ namespace Liriou_s_Burguer.Database
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_provider list = DB.tb_provider.First(t => t.id_provider == provider.id_provider);
             list.ds_Address = list.ds_Address;
-            list.ds_cellphone = list.ds_cellphone;
+            list.nr_cellphone = list.nr_cellphone;
             list.ds_cep = list.ds_cep;
-            list.ds_city = list.ds_city;
+            
             list.ds_cnpj = list.ds_cnpj;
             list.ds_country = list.ds_country;
             list.ds_email = list.ds_email;
             list.ds_note = list.ds_note;
             list.ds_state = list.ds_state;
-            list.ds_tellphone = list.ds_tellphone;
+            list.nr_tellphone = list.nr_tellphone;
             list.nm_Name = list.nm_Name;
             list.nm_provider = list.nm_provider;
             

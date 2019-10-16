@@ -16,9 +16,6 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_client { get; set; }
         public string ds_mood { get; set; }
-        public string ds_zodiacSign { get; set; }
         public string ds_note { get; set; }
-        public string ds_rating { get; set; }
-        public string ds_feedback { get; set; }
     }
 }

@@ -25,8 +25,8 @@ namespace Liriou_s_Burguer.Screens
 
                 employees.ds_email = txtEmail.Text.Trim();
                 string email = employees.ds_email;
-                employees.ds_password = txtSenha.Text.Trim();
-                string senha = employees.ds_password;
+                employees.pw_password = txtSenha.Text.Trim();
+                string senha = employees.pw_password;
 
                 Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
                 string r = busemp.Login(email, senha);

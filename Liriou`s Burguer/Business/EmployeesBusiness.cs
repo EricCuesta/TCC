@@ -21,14 +21,14 @@ namespace Liriou_s_Burguer.Business
                 Model.UsuarioLogado.ID = db.id_emp;
                 Model.UsuarioLogado.rg = db.ds_rg;
                 Model.UsuarioLogado.cpf = db.ds_cpf;
-                Model.UsuarioLogado.telefone = db.mr_tellphone;
-                Model.UsuarioLogado.celular = db.mr_cellphone;
+                Model.UsuarioLogado.telefone = db.nr_tellphone;
+                Model.UsuarioLogado.celular = db.nr_cellphone;
             }
             if (verificar.ds_email == string.Empty)
             {
                 throw new ArgumentException("Email não preenchido!");
             }
-            if (verificar.ds_password == string.Empty)
+            if (verificar.pw_password == string.Empty)
             {
                 throw new ArgumentException("Senha não preenchida!");
             }
@@ -38,7 +38,7 @@ namespace Liriou_s_Burguer.Business
         {
             Database.EmployeesDatabase dbemp = new Database.EmployeesDatabase();
 
-            if (alterar.ds_password == string.Empty || alterar.ds_password == "Senha do usuário")
+            if (alterar.pw_password == string.Empty || alterar.pw_password == "Senha do usuário")
                 throw new ArgumentException("O campo senha deve ser preenchido");
 
             dbemp.AlterarRecuperação(alterar);
