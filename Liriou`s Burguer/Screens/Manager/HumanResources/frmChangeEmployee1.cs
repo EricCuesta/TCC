@@ -37,6 +37,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         private void imgVoltar_Click(object sender, EventArgs e)
         {
             frmChangeEmployee changeEmployee = new frmChangeEmployee();
+          
             changeEmployee.Show();
             Hide();
         }

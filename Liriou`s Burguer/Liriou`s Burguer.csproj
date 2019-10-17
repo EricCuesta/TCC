@@ -171,6 +171,7 @@
     <Compile Include="Database\StockDatabase.cs" />
     <Compile Include="Database\SupplyDatabase.cs" />
     <Compile Include="Database\TimeCardDatabase.cs" />
+    <Compile Include="Model\EmployeesModel.cs" />
     <Compile Include="Model\UsuarioLogado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

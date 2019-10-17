@@ -57,7 +57,6 @@
             this.lblComplemento = new System.Windows.Forms.Label();
             this.lblEndereço = new System.Windows.Forms.Label();
             this.dataGridView13 = new System.Windows.Forms.DataGridView();
-            this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCEP = new System.Windows.Forms.Label();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -91,6 +90,7 @@
             this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.cboGênero = new System.Windows.Forms.ComboBox();
+            this.txtCEP = new System.Windows.Forms.TextBox();
             this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
@@ -400,15 +400,6 @@
             this.dataGridView13.Name = "dataGridView13";
             this.dataGridView13.Size = new System.Drawing.Size(800, 2);
             this.dataGridView13.TabIndex = 515;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(575, 160);
-            this.txtCidade.MaxLength = 9;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(213, 23);
-            this.txtCidade.TabIndex = 514;
             // 
             // lblCEP
             // 
@@ -769,6 +760,15 @@
             this.cboGênero.Size = new System.Drawing.Size(218, 23);
             this.cboGênero.TabIndex = 546;
             // 
+            // txtCEP
+            // 
+            this.txtCEP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCEP.Location = new System.Drawing.Point(575, 160);
+            this.txtCEP.MaxLength = 9;
+            this.txtCEP.Name = "txtCEP";
+            this.txtCEP.Size = new System.Drawing.Size(213, 23);
+            this.txtCEP.TabIndex = 514;
+            // 
             // frmRegisterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -798,7 +798,7 @@
             this.Controls.Add(this.lblComplemento);
             this.Controls.Add(this.lblEndereço);
             this.Controls.Add(this.dataGridView13);
-            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.lblCEP);
             this.Controls.Add(this.dataGridView11);
             this.Controls.Add(this.lblEstado);
@@ -890,7 +890,6 @@
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.Label lblEndereço;
         private System.Windows.Forms.DataGridView dataGridView13;
-        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblCEP;
         private System.Windows.Forms.DataGridView dataGridView11;
         private System.Windows.Forms.Label lblEstado;
@@ -923,5 +922,6 @@
         private System.Windows.Forms.MaskedTextBox mtxtCelular;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.ComboBox cboGênero;
+        private System.Windows.Forms.TextBox txtCEP;
     }
 }

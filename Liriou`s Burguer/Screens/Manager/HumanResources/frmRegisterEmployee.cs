@@ -26,14 +26,13 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 Business.EmployeesBusiness business = new Business.EmployeesBusiness();
 
                 employees.nm_firstName = txtNome.Text.Trim();
-                employees.nm_lastName = txtSobrenome.Text.Trim();
+                employees.nm_lastName= txtSobrenome.Text.Trim();
                 employees.ds_sex = cboGênero.Text.Trim();
-                employees.dt_birth = Convert.ToDateTime(dtpNascimento.Value);
                 employees.ds_cpf = mtxtCPF.Text.Trim();
                 employees.ds_rg = mtxtRG.Text.Trim();
                 employees.ds_country = txtPaís.Text.Trim();
                 employees.ds_state = cboEstado.Text.Trim();
-                employees.ds_cep = lblCEP.Text.Trim();
+                employees.ds_cep = txtCEP.Text.Trim();
                 employees.ds_note = txtComplemento.Text.Trim();
                 employees.ds_address = txtEndereço.Text.Trim();
                 employees.nr_cellphone = mtxtCelular.Text.Trim();
@@ -41,13 +40,72 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 employees.ds_email = txtEmail.Text.Trim();
                 employees.pw_password = txtSenha.Text;
 
+                if (txtNome.Text == string.Empty)
+                {
+                    throw new ArgumentException("Nome não pode ser vazio");
+                }
+              
+                if(txtSobrenome.Text == string.Empty)
+                {
+                    throw new ArgumentException("Sobrenome não pode ser vazio");
+                }
+                if (mtxtCPF.Text == string.Empty)
+                {
+                    throw new ArgumentException("CPF deve ser preenchido!");
+                }
+              
+                if (txtCEP.Text == string.Empty)
+                {
+                    throw new ArgumentException("CEP deve ser preenchido!");
+                }
+               
+                if(mtxtRG.Text == string.Empty)
+                {
+                    throw new ArgumentException("RG deve ser preenchido!");
+                }
+                if (txtPaís.Text == string.Empty)
+                {
+                    throw new ArgumentException("País deve ser preenchido!");
+                }
+                if(txtCEP.Text == string.Empty)
+                {
+                    throw new ArgumentException("Cidade deve ser preenchido!");
+                }
+                if(mtxtCelular.Text == string.Empty)
+                {
+                    throw new ArgumentException("Celular deve ser preenchido!");
+                }
+
+                if (txtEmail.Text == string.Empty)
+                {
+                    throw new ArgumentException("Email deve ser preenchido!");
+                }
+
+                if (txtSenha.Text == string.Empty)
+                {
+                    throw new ArgumentException("Senha deve ser preenchido!");
+                }
+                if (mtxtRG.Text.Length < 6)
+                {
+                    throw new ArgumentException("Tipo de RG inválido!");
+                }
+                if (txtCEP.Text.Length < 9)
+                {
+                    throw new ArgumentException("CEP Inválido");
+                }
+                if(mtxtCelular.Text.Length < 16)
+                {
+                    throw new ArgumentException("Celular inválido");
+                }
+
+
                 string email = txtEmail.Text;
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
                 Match match = regex.Match(email);
                 if (match.Success)
                 {
                     frmRegisterEmployee1 tela = new frmRegisterEmployee1();
-                    tela.CarregarFuncionario(employees, discounts, function, timecard, financial, benefits, department);
+                    tela.CarregarFuncionario(employees);
                     tela.Show();
                     Hide();
                 }
@@ -66,35 +124,20 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             }
         }
         Database.Entities.tb_employees employees;
-        Database.Entities.tb_discounts discounts;
-        Database.Entities.tb_function function;
-        Database.Entities.tb_timecard timecard;
-        Database.Entities.tb_financial financial;
-        Database.Entities.tb_benefits benefits;
-        Database.Entities.tb_department department;
 
-        public void CarregarFuncionario(Database.Entities.tb_employees employees, Database.Entities.tb_discounts discounts,
-                               Database.Entities.tb_function function, Database.Entities.tb_timecard timecard, 
-                               Database.Entities.tb_financial financial, Database.Entities.tb_benefits benefits,
-                                                Database.Entities.tb_department department)
+        public void CarregarFuncionario(Database.Entities.tb_employees employees)
         {
             this.employees = employees;
-            this.discounts = discounts;
-            this.function = function;
-            this.timecard = timecard;
-            this.financial = financial;
-            this.benefits = benefits;
-            this.department = department;
 
             txtNome.Text = employees.nm_firstName;
             txtSobrenome.Text = employees.nm_lastName;
             cboGênero.Text = employees.ds_sex;
-            dtpNascimento.Value = employees.dt_birth;
-            mtxtCPF.Text = employees.ds_rg;
-            mtxtRG.Text = employees.ds_cpf;
+            dtpNascimento.MinDate = employees.dt_birth;
+            mtxtCPF.Text = employees.ds_cpf;
+            mtxtRG.Text = employees.ds_rg;
             txtPaís.Text = employees.ds_country;
-            cboEstado.Text = employees.ds_state;
-            lblCEP.Text = employees.ds_cep;
+            cboEstado.Text = employees.ds_country;
+            txtCEP.Text = employees.ds_cep;
             txtComplemento.Text = employees.ds_note;
             txtEndereço.Text = employees.ds_address;
             mtxtCelular.Text = employees.nr_cellphone;
