@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Regex;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -102,6 +103,71 @@ namespace Liriou_s_Burguer.Business
             Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
             Database.Entities.tb_employees list = DB.BuscarPorID(id);
             return list;
+        }
+
+        public string VerificarCadastro (Model.EmployeesModel model)
+        {
+            if (model.firstName == string.Empty)
+            {
+                return "Nome não pode ser vazio";
+            }
+
+            if (model.lastName == string.Empty)
+            {
+                return "Sobrenome não pode ser vazio";
+            }
+            if (model.CPF == string.Empty)
+            {
+                return "CPF deve ser preenchido!";
+            }
+
+            if (model.CEP == string.Empty)
+            {
+                return "CEP deve ser preenchido!";
+            }
+
+            if (model.RG == string.Empty)
+            {
+                return "RG deve ser preenchido!";
+            }
+            if (model.cellphone == string.Empty)
+            {
+                return "Celular deve ser preenchido!";
+            }
+
+            if (model.email == string.Empty)
+            {
+                return "Email deve ser preenchido!";
+            }
+
+            if (model.password == string.Empty)
+            {
+                return "Senha deve ser preenchido!";
+            }
+            if (model.RG.Length < 6)
+            {
+                return "Tipo de RG inválido!";
+            }
+            if (model.CEP.Length < 9)
+            {
+                return "CEP Inválido";
+            }
+            if (model.cellphone.Length < 16)
+            {
+                return "Celular inválido";
+            }
+
+            string email = model.email;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if (match.Success)
+            {
+                return "true";
+            }
+            else
+            {
+                return email + " é um Email inválido!";
+            }
         }
     }
 }

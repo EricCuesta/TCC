@@ -83,14 +83,14 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.txtPaís = new System.Windows.Forms.TextBox();
-            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.txtRG = new System.Windows.Forms.MaskedTextBox();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.cboGênero = new System.Windows.Forms.ComboBox();
             this.txtCEP = new System.Windows.Forms.TextBox();
+            this.txtPaís = new System.Windows.Forms.TextBox();
             this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
@@ -659,51 +659,43 @@
             this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
             this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
             // 
-            // txtPaís
+            // txtRG
             // 
-            this.txtPaís.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaís.Location = new System.Drawing.Point(55, 160);
-            this.txtPaís.MaxLength = 32;
-            this.txtPaís.Name = "txtPaís";
-            this.txtPaís.Size = new System.Drawing.Size(174, 23);
-            this.txtPaís.TabIndex = 510;
+            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRG.Location = new System.Drawing.Point(446, 128);
+            this.txtRG.Mask = "00.000.000-0";
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(342, 23);
+            this.txtRG.TabIndex = 552;
             // 
-            // mtxtRG
+            // txtCPF
             // 
-            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtRG.Location = new System.Drawing.Point(446, 128);
-            this.mtxtRG.Mask = "00.000.000-0";
-            this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(342, 23);
-            this.mtxtRG.TabIndex = 552;
+            this.txtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCPF.Location = new System.Drawing.Point(58, 128);
+            this.txtCPF.Mask = "000000000/00";
+            this.txtCPF.Name = "txtCPF";
+            this.txtCPF.Size = new System.Drawing.Size(335, 23);
+            this.txtCPF.TabIndex = 551;
             // 
-            // mtxtCPF
+            // txtTelefone
             // 
-            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.Location = new System.Drawing.Point(58, 128);
-            this.mtxtCPF.Mask = "000000000/00";
-            this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(335, 23);
-            this.mtxtCPF.TabIndex = 551;
+            this.txtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(487, 243);
+            this.txtTelefone.Mask = "(999) 9999-9999";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(301, 23);
+            this.txtTelefone.TabIndex = 550;
+            this.txtTelefone.Text = "011";
             // 
-            // mtxtTelefone
+            // txtCelular
             // 
-            this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefone.Location = new System.Drawing.Point(487, 243);
-            this.mtxtTelefone.Mask = "(000) 0000-0000";
-            this.mtxtTelefone.Name = "mtxtTelefone";
-            this.mtxtTelefone.Size = new System.Drawing.Size(301, 23);
-            this.mtxtTelefone.TabIndex = 550;
-            // 
-            // mtxtCelular
-            // 
-            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCelular.Location = new System.Drawing.Point(80, 243);
-            this.mtxtCelular.Mask = "(+000) (999) 00000-9999";
-            this.mtxtCelular.Name = "mtxtCelular";
-            this.mtxtCelular.Size = new System.Drawing.Size(314, 23);
-            this.mtxtCelular.TabIndex = 549;
-            this.mtxtCelular.Text = "055011";
+            this.txtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(80, 243);
+            this.txtCelular.Mask = "(999) 99999-9999";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(314, 23);
+            this.txtCelular.TabIndex = 549;
+            this.txtCelular.Text = "011";
             // 
             // cboEstado
             // 
@@ -769,16 +761,25 @@
             this.txtCEP.Size = new System.Drawing.Size(213, 23);
             this.txtCEP.TabIndex = 514;
             // 
+            // txtPaís
+            // 
+            this.txtPaís.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaís.Location = new System.Drawing.Point(55, 160);
+            this.txtPaís.MaxLength = 32;
+            this.txtPaís.Name = "txtPaís";
+            this.txtPaís.Size = new System.Drawing.Size(174, 23);
+            this.txtPaís.TabIndex = 510;
+            // 
             // frmRegisterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.mtxtRG);
-            this.Controls.Add(this.mtxtCPF);
-            this.Controls.Add(this.mtxtTelefone);
-            this.Controls.Add(this.mtxtCelular);
+            this.Controls.Add(this.txtRG);
+            this.Controls.Add(this.txtCPF);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.cboEstado);
             this.Controls.Add(this.cboGênero);
             this.Controls.Add(this.imgFechar);
@@ -832,6 +833,7 @@
             this.Name = "frmRegisterEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Employee";
+            this.Load += new System.EventHandler(this.frmRegisterEmployee_Load);
             this.MenuLiriousBurguer.ResumeLayout(false);
             this.MenuLiriousBurguer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).EndInit();
@@ -910,18 +912,18 @@
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.TextBox txtPaís;
-        private System.Windows.Forms.MaskedTextBox mtxtRG;
-        private System.Windows.Forms.MaskedTextBox mtxtCPF;
-        private System.Windows.Forms.MaskedTextBox mtxtTelefone;
-        private System.Windows.Forms.MaskedTextBox mtxtCelular;
+        private System.Windows.Forms.MaskedTextBox txtRG;
+        private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
         private System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.ComboBox cboGênero;
         private System.Windows.Forms.TextBox txtCEP;
+        private System.Windows.Forms.TextBox txtPaís;
+        public System.Windows.Forms.TextBox txtNome;
     }
 }

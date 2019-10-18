@@ -81,10 +81,9 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void imgVoltar_Click(object sender, EventArgs e)
         {
-            frmRegisterEmployee registerEmployee = new frmRegisterEmployee();
-            registerEmployee.CarregarFuncionario(employees);
-            registerEmployee.Show();
-            Hide();
+            this.Hide();
+            frmRegisterEmployee tela = new frmRegisterEmployee();
+            tela.txtNome = 
         }
 
         private void imgMinimizar_MouseEnter(object sender, EventArgs e)

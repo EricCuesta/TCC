@@ -22,128 +22,48 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-                Business.EmployeesBusiness business = new Business.EmployeesBusiness();
+                Model.EmployeesModel model = new Model.EmployeesModel();
 
-                employees.nm_firstName = txtNome.Text.Trim();
-                employees.nm_lastName= txtSobrenome.Text.Trim();
-                employees.ds_sex = cboGênero.Text.Trim();
-                employees.ds_cpf = mtxtCPF.Text.Trim();
-                employees.ds_rg = mtxtRG.Text.Trim();
-                employees.ds_country = txtPaís.Text.Trim();
-                employees.ds_state = cboEstado.Text.Trim();
-                employees.ds_cep = txtCEP.Text.Trim();
-                employees.ds_note = txtComplemento.Text.Trim();
-                employees.ds_address = txtEndereço.Text.Trim();
-                employees.nr_cellphone = mtxtCelular.Text.Trim();
-                employees.nr_tellphone = mtxtTelefone.Text.Trim();
-                employees.ds_email = txtEmail.Text.Trim();
-                employees.pw_password = txtSenha.Text;
+                model.firstName = txtNome.Text;
+                model.lastName = txtSobrenome.Text;
+                model.Sex = cboGênero.Text;
+                model.birth = dtpNascimento.MinDate;
+                model.CPF = txtCPF.Text;
+                model.RG = txtRG.Text;
+                model.country = txtPaís.Text;
+                model.state = cboEstado.Text;
+                model.CEP = txtCEP.Text;
+                model.note = txtComplemento.Text;
+                model.adress = txtEndereço.Text;
+                model.cellphone = txtCelular.Text;
+                model.tellphone = txtTelefone.Text;
+                model.email = txtEmail.Text;
+                model.password = txtSenha.Text;
 
-                if (txtNome.Text == string.Empty)
-                {
-                    throw new ArgumentException("Nome não pode ser vazio");
-                }
-              
-                if(txtSobrenome.Text == string.Empty)
-                {
-                    throw new ArgumentException("Sobrenome não pode ser vazio");
-                }
-                if (mtxtCPF.Text == string.Empty)
-                {
-                    throw new ArgumentException("CPF deve ser preenchido!");
-                }
-              
-                if (txtCEP.Text == string.Empty)
-                {
-                    throw new ArgumentException("CEP deve ser preenchido!");
-                }
-               
-                if(mtxtRG.Text == string.Empty)
-                {
-                    throw new ArgumentException("RG deve ser preenchido!");
-                }
-                if (txtPaís.Text == string.Empty)
-                {
-                    throw new ArgumentException("País deve ser preenchido!");
-                }
-                if(txtCEP.Text == string.Empty)
-                {
-                    throw new ArgumentException("Cidade deve ser preenchido!");
-                }
-                if(mtxtCelular.Text == string.Empty)
-                {
-                    throw new ArgumentException("Celular deve ser preenchido!");
-                }
-
-                if (txtEmail.Text == string.Empty)
-                {
-                    throw new ArgumentException("Email deve ser preenchido!");
-                }
-
-                if (txtSenha.Text == string.Empty)
-                {
-                    throw new ArgumentException("Senha deve ser preenchido!");
-                }
-                if (mtxtRG.Text.Length < 6)
-                {
-                    throw new ArgumentException("Tipo de RG inválido!");
-                }
-                if (txtCEP.Text.Length < 9)
-                {
-                    throw new ArgumentException("CEP Inválido");
-                }
-                if(mtxtCelular.Text.Length < 16)
-                {
-                    throw new ArgumentException("Celular inválido");
-                }
+                ControlAccessibleObject control = new ControlAccessibleObject(txtNome);
 
 
-                string email = txtEmail.Text;
-                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-                Match match = regex.Match(email);
-                if (match.Success)
+                Business.EmployeesBusiness EB = new Business.EmployeesBusiness();
+                string r = EB.VerificarCadastro(model);
+
+                if (r == "true")
                 {
+                    this.Hide();
                     frmRegisterEmployee1 tela = new frmRegisterEmployee1();
-                    tela.CarregarFuncionario(employees);
                     tela.Show();
-                    Hide();
                 }
                 else
                 {
-                    MessageBox.Show(email + " é um Email inválido!");
+                    MessageBox.Show(r);
                 }
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro!",
+                                "Error",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
             }
-        }
-        Database.Entities.tb_employees employees;
-
-        public void CarregarFuncionario(Database.Entities.tb_employees employees)
-        {
-            this.employees = employees;
-
-            txtNome.Text = employees.nm_firstName;
-            txtSobrenome.Text = employees.nm_lastName;
-            cboGênero.Text = employees.ds_sex;
-            dtpNascimento.MinDate = employees.dt_birth;
-            mtxtCPF.Text = employees.ds_cpf;
-            mtxtRG.Text = employees.ds_rg;
-            txtPaís.Text = employees.ds_country;
-            cboEstado.Text = employees.ds_country;
-            txtCEP.Text = employees.ds_cep;
-            txtComplemento.Text = employees.ds_note;
-            txtEndereço.Text = employees.ds_address;
-            mtxtCelular.Text = employees.nr_cellphone;
-            mtxtTelefone.Text = employees.nr_tellphone;
-            txtEmail.Text = employees.ds_email;
-            txtSenha.Text = employees.pw_password;
         }
 
         private void menuInício_Click(object sender, EventArgs e)
@@ -221,6 +141,27 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             imgMinimizar.Image = Properties.Resources.Minimizar02;
             imgMinimizar.Image = Properties.Resources.Minimizar;
+        }
+
+        private void frmRegisterEmployee_Load(object sender, EventArgs e)
+        {
+            Model.EmployeesModel model = new Model.EmployeesModel();
+
+            txtNome.Text = model.firstName;
+            txtSobrenome.Text = model.lastName;
+            cboGênero.Text = model.Sex;
+            dtpNascimento.MinDate = model.birth;
+            txtCPF.Text = model.CPF;
+            txtRG.Text = model.RG;
+            txtPaís.Text = model.country;
+            cboEstado.Text = model.state;
+            txtCEP.Text = model.CEP;
+            txtComplemento.Text = model.note;
+            txtEndereço.Text = model.adress;
+            txtCelular.Text = model.cellphone;
+            txtTelefone.Text = model.tellphone;
+            txtEmail.Text = model.email;
+            txtSenha.Text = model.password;
         }
     }
 }

@@ -22,12 +22,12 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+                Model.EmployeesModel Model = new Model.EmployeesModel();
                 
-                Model.EmployeesModel.firstName = txtNome.Text.Trim();
-                Model.EmployeesModel.lastName = txtSobrenome.Text.Trim();
-                Model.EmployeesModel.Sex = cboGênero.Text.Trim();
-                Model.EmployeesModel.birth = Convert.ToDateTime(dtpNascimento.Value);
+                Model.firstName = txtNome.Text.Trim();
+                Model.lastName = txtSobrenome.Text.Trim();
+                Model.Sex = cboGênero.Text.Trim();
+                Model.birth = Convert.ToDateTime(dtpNascimento.Value);
                 string antigo = mtxtCPF.Text.Trim();
                 bool novo = antigo.Contains("/");
                 if (novo == true)
@@ -36,16 +36,16 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                     employees.ds_cpf = alterado;
                 }
 
-                Model.EmployeesModel.RG = mtxtRG.Text.Trim();
-                Model.EmployeesModel.country = txtPaís.Text.Trim();
-                Model.EmployeesModel.state = cboEstado.Text.Trim();
-                Model.EmployeesModel.CEP = lblCEP.Text.Trim();
-                Model.EmployeesModel.note = txtComplemento.Text.Trim();
-                Model.EmployeesModel.adress = txtEndereço.Text.Trim();
-                Model.EmployeesModel.cellphone = mtxtCelular.Text.Trim();
-                Model.EmployeesModel.tellphone = mtxtTelefone.Text.Trim();
-                Model.EmployeesModel.email = txtEmail.Text.Trim();
-                Model.EmployeesModel.password = txtSenha.Text;
+                Model.RG = mtxtRG.Text.Trim();
+                Model.country = txtPaís.Text.Trim();
+                Model.state = cboEstado.Text.Trim();
+                Model.CEP = lblCEP.Text.Trim();
+                Model.note = txtComplemento.Text.Trim();
+                Model.adress = txtEndereço.Text.Trim();
+                Model.cellphone = mtxtCelular.Text.Trim();
+                Model.tellphone = mtxtTelefone.Text.Trim();
+                Model.email = txtEmail.Text.Trim();
+                Model.password = txtSenha.Text;
 
                 string email = txtEmail.Text;
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
