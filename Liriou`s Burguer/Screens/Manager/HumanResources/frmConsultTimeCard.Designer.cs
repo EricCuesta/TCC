@@ -43,7 +43,6 @@
             this.MenuSuprimento = new System.Windows.Forms.ToolStripMenuItem();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblAlterarFuncionário = new System.Windows.Forms.Label();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -77,6 +76,7 @@
             this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             this.MenuLiriousBurguer.SuspendLayout();
@@ -257,14 +257,6 @@
             this.lblAlterarFuncionário.Size = new System.Drawing.Size(334, 28);
             this.lblAlterarFuncionário.TabIndex = 368;
             this.lblAlterarFuncionário.Text = "Consultar Cartão de Ponto";
-            // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(531, 64);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(257, 23);
-            this.txtRG.TabIndex = 377;
             // 
             // lblCPF
             // 
@@ -562,11 +554,21 @@
             this.Coluna7.Name = "Coluna7";
             this.Coluna7.ReadOnly = true;
             // 
+            // mtxtRG
+            // 
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.Location = new System.Drawing.Point(531, 64);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(257, 23);
+            this.mtxtRG.TabIndex = 554;
+            // 
             // frmConsultTimeCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.mtxtRG);
             this.Controls.Add(this.dgvConsultarCartãoDePonto);
             this.Controls.Add(this.lblHorarioTérmino);
             this.Controls.Add(this.lblHorárioInícioTérminoDoIntervalo);
@@ -590,7 +592,6 @@
             this.Controls.Add(this.lblDepartamento);
             this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblNome);
@@ -640,7 +641,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuSuprimento;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAlterarFuncionário;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
@@ -674,5 +674,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna7;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
     }
 }

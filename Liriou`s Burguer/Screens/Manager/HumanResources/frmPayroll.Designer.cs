@@ -43,7 +43,6 @@
             this.btnCalcular = new System.Windows.Forms.Button();
             this.btnGerarFolha = new System.Windows.Forms.Button();
             this.lblNomeDoFuncionário = new System.Windows.Forms.Label();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblRG = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -113,6 +112,7 @@
             this.lblValeTransporte1 = new System.Windows.Forms.Label();
             this.lblHorasExtras1 = new System.Windows.Forms.Label();
             this.lblSalário1 = new System.Windows.Forms.Label();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -289,14 +289,6 @@
             this.lblNomeDoFuncionário.Size = new System.Drawing.Size(95, 19);
             this.lblNomeDoFuncionário.TabIndex = 237;
             this.lblNomeDoFuncionário.Text = "Funcionário:";
-            // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(51, 64);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(341, 23);
-            this.txtRG.TabIndex = 235;
             // 
             // lblRG
             // 
@@ -1030,12 +1022,22 @@
             this.lblSalário1.TabIndex = 168;
             this.lblSalário1.Text = "Salário";
             // 
+            // mtxtRG
+            // 
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.Location = new System.Drawing.Point(51, 64);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(342, 23);
+            this.mtxtRG.TabIndex = 553;
+            // 
             // frmPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.mtxtRG);
             this.Controls.Add(this.lblLíquido);
             this.Controls.Add(this.lblLíquido1);
             this.Controls.Add(this.lblBruto);
@@ -1063,7 +1065,6 @@
             this.Controls.Add(this.MenuLiriousBurguer);
             this.Controls.Add(this.btnCalcular);
             this.Controls.Add(this.lblNomeDoFuncionário);
-            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -1118,7 +1119,6 @@
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnGerarFolha;
         private System.Windows.Forms.Label lblNomeDoFuncionário;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblRG;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -1187,5 +1187,6 @@
         private System.Windows.Forms.Label lblValeTransporte1;
         private System.Windows.Forms.Label lblHorasExtras1;
         private System.Windows.Forms.Label lblSalário1;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
     }
 }

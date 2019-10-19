@@ -26,23 +26,20 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
                 model.firstName = txtNome.Text;
                 model.lastName = txtSobrenome.Text;
-                model.Sex = cboGênero.Text;
+                model.Sex = cboSexo.Text;
                 model.birth = dtpNascimento.MinDate;
-                model.CPF = txtCPF.Text;
-                model.RG = txtRG.Text;
-                model.country = txtPaís.Text;
+                model.CPF = mtxtCPF.Text;
+                model.RG = mtxtRG.Text;
                 model.state = cboEstado.Text;
-                model.CEP = txtCEP.Text;
+                model.CEP = mtxtCEP.Text;
                 model.note = txtComplemento.Text;
                 model.adress = txtEndereço.Text;
-                model.cellphone = txtCelular.Text;
-                model.tellphone = txtTelefone.Text;
+                model.cellphone = mtxtCelular.Text;
+                model.tellphone = mtxtTelefone.Text;
                 model.email = txtEmail.Text;
                 model.password = txtSenha.Text;
 
                 ControlAccessibleObject control = new ControlAccessibleObject(txtNome);
-
-
                 Business.EmployeesBusiness EB = new Business.EmployeesBusiness();
                 string r = EB.VerificarCadastro(model);
 
@@ -52,17 +49,10 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                     frmRegisterEmployee1 tela = new frmRegisterEmployee1();
                     tela.Show();
                 }
-                else
-                {
-                    MessageBox.Show(r);
-                }
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro!",
-                                "Error",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -149,17 +139,16 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
             txtNome.Text = model.firstName;
             txtSobrenome.Text = model.lastName;
-            cboGênero.Text = model.Sex;
+            cboSexo.Text = model.Sex;
             dtpNascimento.MinDate = model.birth;
-            txtCPF.Text = model.CPF;
-            txtRG.Text = model.RG;
-            txtPaís.Text = model.country;
+            mtxtCPF.Text = model.CPF;
+            mtxtRG.Text = model.RG;
             cboEstado.Text = model.state;
-            txtCEP.Text = model.CEP;
+            mtxtCEP.Text = model.CEP;
             txtComplemento.Text = model.note;
             txtEndereço.Text = model.adress;
-            txtCelular.Text = model.cellphone;
-            txtTelefone.Text = model.tellphone;
+            mtxtCelular.Text = model.cellphone;
+            mtxtTelefone.Text = model.tellphone;
             txtEmail.Text = model.email;
             txtSenha.Text = model.password;
         }

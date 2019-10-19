@@ -60,9 +60,7 @@
             this.lblCEP = new System.Windows.Forms.Label();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.lblPaís = new System.Windows.Forms.Label();
             this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.lblRG = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
@@ -70,11 +68,8 @@
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNascimento = new System.Windows.Forms.Label();
-            this.lblGênero = new System.Windows.Forms.Label();
-            this.nudDependentes = new System.Windows.Forms.NumericUpDown();
-            this.lblDependentes = new System.Windows.Forms.Label();
+            this.lblSexo = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.txtSobrenome = new System.Windows.Forms.TextBox();
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -83,14 +78,16 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.txtRG = new System.Windows.Forms.MaskedTextBox();
-            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.cboEstado = new System.Windows.Forms.ComboBox();
-            this.cboGênero = new System.Windows.Forms.ComboBox();
-            this.txtCEP = new System.Windows.Forms.TextBox();
-            this.txtPaís = new System.Windows.Forms.TextBox();
+            this.lblDependentes = new System.Windows.Forms.Label();
+            this.nudDependentes = new System.Windows.Forms.NumericUpDown();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.mtxtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
             this.MenuLiriousBurguer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
@@ -100,17 +97,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDependentes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDependentes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuLiriousBurguer
@@ -367,7 +363,7 @@
             // 
             this.txtComplemento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemento.Location = new System.Drawing.Point(562, 202);
-            this.txtComplemento.MaxLength = 256;
+            this.txtComplemento.MaxLength = 128;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(226, 23);
             this.txtComplemento.TabIndex = 518;
@@ -405,7 +401,7 @@
             // 
             this.lblCEP.AutoSize = true;
             this.lblCEP.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCEP.Location = new System.Drawing.Point(530, 162);
+            this.lblCEP.Location = new System.Drawing.Point(407, 162);
             this.lblCEP.Name = "lblCEP";
             this.lblCEP.Size = new System.Drawing.Size(39, 19);
             this.lblCEP.TabIndex = 513;
@@ -415,7 +411,7 @@
             // 
             this.dataGridView11.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(522, 157);
+            this.dataGridView11.Location = new System.Drawing.Point(399, 157);
             this.dataGridView11.Name = "dataGridView11";
             this.dataGridView11.Size = new System.Drawing.Size(2, 30);
             this.dataGridView11.TabIndex = 512;
@@ -424,21 +420,11 @@
             // 
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(243, 162);
+            this.lblEstado.Location = new System.Drawing.Point(11, 162);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(60, 19);
             this.lblEstado.TabIndex = 511;
             this.lblEstado.Text = "Estado:";
-            // 
-            // lblPaís
-            // 
-            this.lblPaís.AutoSize = true;
-            this.lblPaís.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaís.Location = new System.Drawing.Point(9, 162);
-            this.lblPaís.Name = "lblPaís";
-            this.lblPaís.Size = new System.Drawing.Size(41, 19);
-            this.lblPaís.TabIndex = 509;
-            this.lblPaís.Text = "País:";
             // 
             // dataGridView10
             // 
@@ -449,20 +435,11 @@
             this.dataGridView10.Size = new System.Drawing.Size(800, 2);
             this.dataGridView10.TabIndex = 508;
             // 
-            // dataGridView9
-            // 
-            this.dataGridView9.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(235, 157);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView9.TabIndex = 507;
-            // 
             // lblRG
             // 
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRG.Location = new System.Drawing.Point(407, 130);
+            this.lblRG.Location = new System.Drawing.Point(407, 98);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 505;
@@ -472,7 +449,7 @@
             // 
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.Location = new System.Drawing.Point(11, 130);
+            this.lblCPF.Location = new System.Drawing.Point(11, 98);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(39, 19);
             this.lblCPF.TabIndex = 503;
@@ -491,7 +468,7 @@
             // 
             this.dataGridView7.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(399, 125);
+            this.dataGridView7.Location = new System.Drawing.Point(487, 125);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.Size = new System.Drawing.Size(2, 30);
             this.dataGridView7.TabIndex = 501;
@@ -500,7 +477,7 @@
             // 
             this.dataGridView6.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(510, 93);
+            this.dataGridView6.Location = new System.Drawing.Point(399, 93);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 30);
             this.dataGridView6.TabIndex = 500;
@@ -509,48 +486,33 @@
             // 
             this.dtpNascimento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(674, 96);
+            this.dtpNascimento.Location = new System.Drawing.Point(651, 128);
+            this.dtpNascimento.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dtpNascimento.MinDate = new System.DateTime(1800, 1, 1, 0, 0, 0, 0);
             this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(114, 23);
+            this.dtpNascimento.Size = new System.Drawing.Size(137, 23);
             this.dtpNascimento.TabIndex = 499;
+            this.dtpNascimento.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             // 
             // lblNascimento
             // 
             this.lblNascimento.AutoSize = true;
             this.lblNascimento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNascimento.Location = new System.Drawing.Point(518, 98);
+            this.lblNascimento.Location = new System.Drawing.Point(495, 130);
             this.lblNascimento.Name = "lblNascimento";
             this.lblNascimento.Size = new System.Drawing.Size(150, 19);
             this.lblNascimento.TabIndex = 498;
             this.lblNascimento.Text = "Data de Nascimento:";
             // 
-            // lblGênero
+            // lblSexo
             // 
-            this.lblGênero.AutoSize = true;
-            this.lblGênero.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGênero.Location = new System.Drawing.Point(217, 98);
-            this.lblGênero.Name = "lblGênero";
-            this.lblGênero.Size = new System.Drawing.Size(63, 19);
-            this.lblGênero.TabIndex = 496;
-            this.lblGênero.Text = "Gênero:";
-            // 
-            // nudDependentes
-            // 
-            this.nudDependentes.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudDependentes.Location = new System.Drawing.Point(121, 96);
-            this.nudDependentes.Name = "nudDependentes";
-            this.nudDependentes.Size = new System.Drawing.Size(82, 23);
-            this.nudDependentes.TabIndex = 495;
-            // 
-            // lblDependentes
-            // 
-            this.lblDependentes.AutoSize = true;
-            this.lblDependentes.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDependentes.Location = new System.Drawing.Point(11, 98);
-            this.lblDependentes.Name = "lblDependentes";
-            this.lblDependentes.Size = new System.Drawing.Size(104, 19);
-            this.lblDependentes.TabIndex = 494;
-            this.lblDependentes.Text = "Dependentes:";
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.Location = new System.Drawing.Point(258, 130);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(46, 19);
+            this.lblSexo.TabIndex = 496;
+            this.lblSexo.Text = "Sexo:";
             // 
             // dataGridView5
             // 
@@ -560,15 +522,6 @@
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(800, 2);
             this.dataGridView5.TabIndex = 493;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(209, 93);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView4.TabIndex = 492;
             // 
             // txtSobrenome
             // 
@@ -659,43 +612,41 @@
             this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
             this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
             // 
-            // txtRG
+            // mtxtRG
             // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(446, 128);
-            this.txtRG.Mask = "00.000.000-0";
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(342, 23);
-            this.txtRG.TabIndex = 552;
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.Location = new System.Drawing.Point(446, 96);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(342, 23);
+            this.mtxtRG.TabIndex = 552;
             // 
-            // txtCPF
+            // mtxtCPF
             // 
-            this.txtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(58, 128);
-            this.txtCPF.Mask = "000000000/00";
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(335, 23);
-            this.txtCPF.TabIndex = 551;
+            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCPF.Location = new System.Drawing.Point(58, 96);
+            this.mtxtCPF.Mask = "000000000/00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.Size = new System.Drawing.Size(334, 23);
+            this.mtxtCPF.TabIndex = 551;
             // 
-            // txtTelefone
+            // mtxtTelefone
             // 
-            this.txtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(487, 243);
-            this.txtTelefone.Mask = "(999) 9999-9999";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(301, 23);
-            this.txtTelefone.TabIndex = 550;
-            this.txtTelefone.Text = "011";
+            this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtTelefone.Location = new System.Drawing.Point(487, 243);
+            this.mtxtTelefone.Mask = "(999) 9999-9999";
+            this.mtxtTelefone.Name = "mtxtTelefone";
+            this.mtxtTelefone.Size = new System.Drawing.Size(301, 23);
+            this.mtxtTelefone.TabIndex = 550;
             // 
-            // txtCelular
+            // mtxtCelular
             // 
-            this.txtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(80, 243);
-            this.txtCelular.Mask = "(999) 99999-9999";
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(314, 23);
-            this.txtCelular.TabIndex = 549;
-            this.txtCelular.Text = "011";
+            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCelular.Location = new System.Drawing.Point(80, 243);
+            this.mtxtCelular.Mask = "(999) 99999-9999";
+            this.mtxtCelular.Name = "mtxtCelular";
+            this.mtxtCelular.Size = new System.Drawing.Size(314, 23);
+            this.mtxtCelular.TabIndex = 549;
             // 
             // cboEstado
             // 
@@ -731,44 +682,61 @@
             "São Paulo",
             "Sergipe",
             "Tocantins"});
-            this.cboEstado.Location = new System.Drawing.Point(309, 160);
+            this.cboEstado.Location = new System.Drawing.Point(77, 160);
             this.cboEstado.MaxLength = 32;
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(207, 23);
+            this.cboEstado.Size = new System.Drawing.Size(315, 23);
             this.cboEstado.TabIndex = 547;
             // 
-            // cboGênero
+            // lblDependentes
             // 
-            this.cboGênero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGênero.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGênero.FormattingEnabled = true;
-            this.cboGênero.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cboGênero.Location = new System.Drawing.Point(286, 96);
-            this.cboGênero.MaxLength = 1;
-            this.cboGênero.Name = "cboGênero";
-            this.cboGênero.Size = new System.Drawing.Size(218, 23);
-            this.cboGênero.TabIndex = 546;
+            this.lblDependentes.AutoSize = true;
+            this.lblDependentes.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDependentes.Location = new System.Drawing.Point(13, 130);
+            this.lblDependentes.Name = "lblDependentes";
+            this.lblDependentes.Size = new System.Drawing.Size(104, 19);
+            this.lblDependentes.TabIndex = 555;
+            this.lblDependentes.Text = "Dependentes:";
             // 
-            // txtCEP
+            // nudDependentes
             // 
-            this.txtCEP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCEP.Location = new System.Drawing.Point(575, 160);
-            this.txtCEP.MaxLength = 9;
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(213, 23);
-            this.txtCEP.TabIndex = 514;
+            this.nudDependentes.Location = new System.Drawing.Point(123, 130);
+            this.nudDependentes.Name = "nudDependentes";
+            this.nudDependentes.Size = new System.Drawing.Size(120, 20);
+            this.nudDependentes.TabIndex = 556;
             // 
-            // txtPaís
+            // dataGridView1
             // 
-            this.txtPaís.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaís.Location = new System.Drawing.Point(55, 160);
-            this.txtPaís.MaxLength = 32;
-            this.txtPaís.Name = "txtPaís";
-            this.txtPaís.Size = new System.Drawing.Size(174, 23);
-            this.txtPaís.TabIndex = 510;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(249, 125);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView1.TabIndex = 557;
+            // 
+            // mtxtCEP
+            // 
+            this.mtxtCEP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCEP.Location = new System.Drawing.Point(452, 160);
+            this.mtxtCEP.Mask = "00000-000";
+            this.mtxtCEP.Name = "mtxtCEP";
+            this.mtxtCEP.Size = new System.Drawing.Size(336, 23);
+            this.mtxtCEP.TabIndex = 558;
+            // 
+            // cboSexo
+            // 
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSexo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboSexo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
+            this.cboSexo.Location = new System.Drawing.Point(310, 128);
+            this.cboSexo.MaxLength = 32;
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(171, 23);
+            this.cboSexo.TabIndex = 559;
             // 
             // frmRegisterEmployee
             // 
@@ -776,12 +744,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.txtRG);
-            this.Controls.Add(this.txtCPF);
-            this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.cboSexo);
+            this.Controls.Add(this.mtxtCEP);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.nudDependentes);
+            this.Controls.Add(this.lblDependentes);
+            this.Controls.Add(this.mtxtRG);
+            this.Controls.Add(this.mtxtCPF);
+            this.Controls.Add(this.mtxtTelefone);
+            this.Controls.Add(this.mtxtCelular);
             this.Controls.Add(this.cboEstado);
-            this.Controls.Add(this.cboGênero);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.txtEndereço);
             this.Controls.Add(this.dataGridView23);
@@ -799,14 +771,10 @@
             this.Controls.Add(this.lblComplemento);
             this.Controls.Add(this.lblEndereço);
             this.Controls.Add(this.dataGridView13);
-            this.Controls.Add(this.txtCEP);
             this.Controls.Add(this.lblCEP);
             this.Controls.Add(this.dataGridView11);
             this.Controls.Add(this.lblEstado);
-            this.Controls.Add(this.txtPaís);
-            this.Controls.Add(this.lblPaís);
             this.Controls.Add(this.dataGridView10);
-            this.Controls.Add(this.dataGridView9);
             this.Controls.Add(this.lblRG);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.dataGridView8);
@@ -814,11 +782,8 @@
             this.Controls.Add(this.dataGridView6);
             this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.lblNascimento);
-            this.Controls.Add(this.lblGênero);
-            this.Controls.Add(this.nudDependentes);
-            this.Controls.Add(this.lblDependentes);
+            this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.dataGridView5);
-            this.Controls.Add(this.dataGridView4);
             this.Controls.Add(this.txtSobrenome);
             this.Controls.Add(this.lblSobrenome);
             this.Controls.Add(this.txtNome);
@@ -844,17 +809,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudDependentes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDependentes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -876,7 +840,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuSuprimento;
         private System.Windows.Forms.Button btnContinuar;
         private System.Windows.Forms.Label lblCadastrarFuncionário;
-        private System.Windows.Forms.RichTextBox txtEndereço;
         private System.Windows.Forms.DataGridView dataGridView23;
         private System.Windows.Forms.DataGridView dataGridView25;
         private System.Windows.Forms.Label lblTelefone;
@@ -895,9 +858,7 @@
         private System.Windows.Forms.Label lblCEP;
         private System.Windows.Forms.DataGridView dataGridView11;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblPaís;
         private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridView dataGridView9;
         private System.Windows.Forms.Label lblRG;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView8;
@@ -905,25 +866,25 @@
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label lblNascimento;
-        private System.Windows.Forms.Label lblGênero;
-        private System.Windows.Forms.NumericUpDown nudDependentes;
-        private System.Windows.Forms.Label lblDependentes;
+        private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.MaskedTextBox txtRG;
-        private System.Windows.Forms.MaskedTextBox txtCPF;
-        private System.Windows.Forms.MaskedTextBox txtTelefone;
-        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
+        private System.Windows.Forms.MaskedTextBox mtxtCPF;
+        private System.Windows.Forms.MaskedTextBox mtxtTelefone;
+        private System.Windows.Forms.MaskedTextBox mtxtCelular;
         private System.Windows.Forms.ComboBox cboEstado;
-        private System.Windows.Forms.ComboBox cboGênero;
-        private System.Windows.Forms.TextBox txtCEP;
-        private System.Windows.Forms.TextBox txtPaís;
         public System.Windows.Forms.TextBox txtNome;
+        protected System.Windows.Forms.RichTextBox txtEndereço;
+        private System.Windows.Forms.Label lblDependentes;
+        private System.Windows.Forms.NumericUpDown nudDependentes;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.MaskedTextBox mtxtCEP;
+        private System.Windows.Forms.ComboBox cboSexo;
     }
 }

@@ -4,8 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Regex;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -26,18 +26,9 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 
                 Model.firstName = txtNome.Text.Trim();
                 Model.lastName = txtSobrenome.Text.Trim();
-                Model.Sex = cboGênero.Text.Trim();
+                Model.Sex = cboSexo.Text.Trim();
                 Model.birth = Convert.ToDateTime(dtpNascimento.Value);
-                string antigo = mtxtCPF.Text.Trim();
-                bool novo = antigo.Contains("/");
-                if (novo == true)
-                {
-                    string alterado = antigo.Replace("/", "");
-                    employees.ds_cpf = alterado;
-                }
-
                 Model.RG = mtxtRG.Text.Trim();
-                Model.country = txtPaís.Text.Trim();
                 Model.state = cboEstado.Text.Trim();
                 Model.CEP = lblCEP.Text.Trim();
                 Model.note = txtComplemento.Text.Trim();
@@ -83,11 +74,10 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
             txtNome.Text = employees.nm_firstName;
             txtSobrenome.Text = employees.nm_lastName;
-            cboGênero.Text = employees.ds_sex;
+            cboSexo.Text = employees.ds_sex;
             dtpNascimento.MinDate = employees.dt_birth;
             mtxtCPF.Text = employees.ds_rg;
             mtxtRG.Text = employees.ds_cpf;
-            txtPaís.Text = employees.ds_country;
             cboEstado.Text = employees.ds_state;
             lblCEP.Text = employees.ds_cep;
             txtComplemento.Text = employees.ds_note;

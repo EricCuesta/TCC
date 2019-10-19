@@ -262,7 +262,7 @@
             this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtCelular.ForeColor = System.Drawing.Color.White;
             this.mtxtCelular.Location = new System.Drawing.Point(79, 6);
-            this.mtxtCelular.Mask = "(+000) (000) 00000-0000";
+            this.mtxtCelular.Mask = "(000) 00000-0000";
             this.mtxtCelular.Name = "mtxtCelular";
             this.mtxtCelular.Size = new System.Drawing.Size(309, 16);
             this.mtxtCelular.TabIndex = 531;

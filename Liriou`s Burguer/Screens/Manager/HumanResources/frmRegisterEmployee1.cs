@@ -83,7 +83,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             this.Hide();
             frmRegisterEmployee tela = new frmRegisterEmployee();
-            tela.txtNome = 
+            tela.ShowDialog();
         }
 
         private void imgMinimizar_MouseEnter(object sender, EventArgs e)

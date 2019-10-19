@@ -63,7 +63,6 @@
             this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtRG = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -73,6 +72,7 @@
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
@@ -419,14 +419,6 @@
             this.Coluna9.Name = "Coluna9";
             this.Coluna9.Width = 120;
             // 
-            // txtRG
-            // 
-            this.txtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRG.Location = new System.Drawing.Point(531, 64);
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(257, 23);
-            this.txtRG.TabIndex = 250;
-            // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
@@ -525,12 +517,22 @@
             this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
             this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
+            // mtxtRG
+            // 
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.Location = new System.Drawing.Point(531, 64);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(256, 23);
+            this.mtxtRG.TabIndex = 553;
+            // 
             // frmConsultEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.mtxtRG);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.dataGridView6);
@@ -549,7 +551,6 @@
             this.Controls.Add(this.MenuLiriousBurguer);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.dgvConsultarFuncionário);
-            this.Controls.Add(this.txtRG);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.dataGridView7);
             this.Controls.Add(this.dataGridView3);
@@ -617,7 +618,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna9;
-        private System.Windows.Forms.TextBox txtRG;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -626,5 +626,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblCadastrarFuncionário;
         private System.Windows.Forms.PictureBox imgFechar;
+        private System.Windows.Forms.MaskedTextBox mtxtRG;
     }
 }
