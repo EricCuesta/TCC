@@ -488,7 +488,6 @@
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNascimento.Location = new System.Drawing.Point(651, 128);
             this.dtpNascimento.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
-            this.dtpNascimento.MinDate = new System.DateTime(1800, 1, 1, 0, 0, 0, 0);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(137, 23);
             this.dtpNascimento.TabIndex = 499;

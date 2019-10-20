@@ -22,7 +22,6 @@ namespace Liriou_s_Burguer.Screens
             try
             {
                 Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-
                 employees.ds_email = txtEmail.Text.Trim();
                 string email = employees.ds_email;
                 employees.pw_password = txtSenha.Text.Trim();
@@ -33,20 +32,20 @@ namespace Liriou_s_Burguer.Screens
 
                 if (r == "true")
                 {
-                    this.Hide();
                     Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
                     tela.Show();
                     Hide();
                 }
                 else if (r == "false")
                 {
-                    this.Hide();
                     Employee.frmEmployeeMenu tela = new Employee.frmEmployeeMenu();
                     tela.Show();
                     Hide();
                 }
+                else
+                {
 
-                MessageBox.Show(r);
+                }
             }
             catch (Exception)
             {

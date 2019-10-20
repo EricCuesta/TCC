@@ -16,10 +16,10 @@ namespace Liriou_s_Burguer.Screens
         {
             InitializeComponent();
             CustomizeDesign();
-            panelOpção.Visible = true;
-            btnVerificar.Visible = true;
-            btnAlterar.Visible = false;
-            panelAlterarSenha.Visible = false;
+            panelOpção.Visible = false;
+            btnVerificar.Visible = false;
+            btnAlterar.Visible = true;
+            panelAlterarSenha.Visible = true;
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)

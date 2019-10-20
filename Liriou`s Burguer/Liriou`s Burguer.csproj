@@ -354,6 +354,7 @@
     <Folder Include="Screens\Manager\Financial\" />
     <Folder Include="Screens\Manager\Stock\" />
     <Folder Include="Screens\Manager\Supplies\" />
+    <Folder Include="Screens\Provider\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Estoque.png" />
