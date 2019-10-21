@@ -164,5 +164,19 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             imgMinimizar.Image = Properties.Resources.Minimizar02;
             imgMinimizar.Image = Properties.Resources.Minimizar;
         }
+
+        private void mtxtCEP_Enter(object sender, EventArgs e)
+        {
+            string CEP = mtxtRG.Text;
+            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+            txtEndereço.Text = api.Buscar(CEP);
+        }
+
+        private void mtxtCEP_Leave(object sender, EventArgs e)
+        {
+            string CEP = mtxtRG.Text;
+            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+            txtEndereço.Text = api.Buscar(CEP);
+        }
     }
 }

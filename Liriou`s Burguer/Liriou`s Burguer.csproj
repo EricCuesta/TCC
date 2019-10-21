@@ -49,6 +49,9 @@
       <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -84,6 +87,7 @@
     <Compile Include="Business\StockBusiness.cs" />
     <Compile Include="Business\SupplyBusiness.cs" />
     <Compile Include="Business\TimeCardBusiness.cs" />
+    <Compile Include="CorreioApi\CorreioApi.cs" />
     <Compile Include="Database\BenefitsDatabase.cs" />
     <Compile Include="Database\ClientDatabase.cs" />
     <Compile Include="Database\CPPDatabase.cs" />

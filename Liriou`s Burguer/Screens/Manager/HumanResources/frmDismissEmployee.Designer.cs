@@ -436,6 +436,7 @@
             this.txtEndereço.Location = new System.Drawing.Point(92, 225);
             this.txtEndereço.MaxLength = 128;
             this.txtEndereço.Name = "txtEndereço";
+            this.txtEndereço.ReadOnly = true;
             this.txtEndereço.Size = new System.Drawing.Size(348, 41);
             this.txtEndereço.TabIndex = 592;
             this.txtEndereço.Text = "";

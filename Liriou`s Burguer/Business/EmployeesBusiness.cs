@@ -109,12 +109,12 @@ namespace Liriou_s_Burguer.Business
 
         public string VerificarCadastro (Model.EmployeesModel model)
         {
-            if (model.firstName == string.Empty)
+            if (model.FirstName == string.Empty)
             {
                 return "Nome não pode ser vazio";
             }
 
-            if (model.lastName == string.Empty)
+            if (model.LastName == string.Empty)
             {
                 return "Sobrenome não pode ser vazio";
             }
@@ -132,17 +132,17 @@ namespace Liriou_s_Burguer.Business
             {
                 return "RG deve ser preenchido!";
             }
-            if (model.cellphone == string.Empty)
+            if (model.Cellphone == string.Empty)
             {
                 return "Celular deve ser preenchido!";
             }
 
-            if (model.email == string.Empty)
+            if (model.Email == string.Empty)
             {
                 return "Email deve ser preenchido!";
             }
 
-            if (model.password == string.Empty)
+            if (model.Password == string.Empty)
             {
                 return "Senha deve ser preenchido!";
             }
@@ -154,12 +154,12 @@ namespace Liriou_s_Burguer.Business
             {
                 return "CEP Inválido";
             }
-            if (model.cellphone.Length < 16)
+            if (model.Cellphone.Length < 16)
             {
                 return "Celular inválido";
             }
 
-            string email = model.email;
+            string email = model.Email;
             Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
             Match match = regex.Match(email);
             if (match.Success)

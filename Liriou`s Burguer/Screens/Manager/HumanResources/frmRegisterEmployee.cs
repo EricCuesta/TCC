@@ -24,20 +24,20 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 Model.EmployeesModel model = new Model.EmployeesModel();
 
-                model.firstName = txtNome.Text;
-                model.lastName = txtSobrenome.Text;
+                model.FirstName = txtNome.Text;
+                model.LastName = txtSobrenome.Text;
                 model.Sex = cboSexo.Text;
-                model.birth = dtpNascimento.MinDate;
+                model.Birth = dtpNascimento.MinDate;
                 model.CPF = mtxtCPF.Text;
                 model.RG = mtxtRG.Text;
-                model.state = cboEstado.Text;
+                model.State = cboEstado.Text;
                 model.CEP = mtxtCEP.Text;
-                model.note = txtComplemento.Text;
-                model.adress = txtEndereço.Text;
-                model.cellphone = mtxtCelular.Text;
-                model.tellphone = mtxtTelefone.Text;
-                model.email = txtEmail.Text;
-                model.password = txtSenha.Text;
+                model.Note = txtComplemento.Text;
+                model.Address = txtEndereço.Text;
+                model.Cellphone = mtxtCelular.Text;
+                model.Tellphone = mtxtTelefone.Text;
+                model.Email = txtEmail.Text;
+                model.Password = txtSenha.Text;
 
                 ControlAccessibleObject control = new ControlAccessibleObject(txtNome);
                 Business.EmployeesBusiness EB = new Business.EmployeesBusiness();
@@ -137,20 +137,36 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             Model.EmployeesModel model = new Model.EmployeesModel();
 
-            txtNome.Text = model.firstName;
-            txtSobrenome.Text = model.lastName;
+            txtNome.Text = model.FirstName;
+            txtSobrenome.Text = model.LastName;
             cboSexo.Text = model.Sex;
-            dtpNascimento.MinDate = model.birth;
+            dtpNascimento.MinDate = model.Birth;
             mtxtCPF.Text = model.CPF;
             mtxtRG.Text = model.RG;
-            cboEstado.Text = model.state;
+            cboEstado.Text = model.State;
             mtxtCEP.Text = model.CEP;
-            txtComplemento.Text = model.note;
-            txtEndereço.Text = model.adress;
-            mtxtCelular.Text = model.cellphone;
-            mtxtTelefone.Text = model.tellphone;
-            txtEmail.Text = model.email;
-            txtSenha.Text = model.password;
+            txtComplemento.Text = model.Note;
+            txtEndereço.Text = model.Address;
+            mtxtCelular.Text = model.Cellphone;
+            mtxtTelefone.Text = model.Tellphone;
+            txtEmail.Text = model.Email;
+            txtSenha.Text = model.Password;
+        }
+
+        private void mtxtCEP_Enter(object sender, EventArgs e)
+        {
+            string CEP = mtxtRG.Text;
+            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+            txtEndereço.Text = api.Buscar(CEP);
+
+        }
+
+        private void mtxtCEP_Leave(object sender, EventArgs e)
+        {
+            string CEP = mtxtRG.Text;
+            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+            txtEndereço.Text = api.Buscar(CEP);
+
         }
     }
 }

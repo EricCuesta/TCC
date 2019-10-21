@@ -251,6 +251,7 @@
             this.txtEndereço.Location = new System.Drawing.Point(92, 193);
             this.txtEndereço.MaxLength = 128;
             this.txtEndereço.Name = "txtEndereço";
+            this.txtEndereço.ReadOnly = true;
             this.txtEndereço.Size = new System.Drawing.Size(348, 41);
             this.txtEndereço.TabIndex = 533;
             this.txtEndereço.Text = "";
@@ -721,6 +722,8 @@
             this.mtxtCEP.Name = "mtxtCEP";
             this.mtxtCEP.Size = new System.Drawing.Size(336, 23);
             this.mtxtCEP.TabIndex = 558;
+            this.mtxtCEP.Enter += new System.EventHandler(this.mtxtCEP_Enter);
+            this.mtxtCEP.Leave += new System.EventHandler(this.mtxtCEP_Leave);
             // 
             // cboSexo
             // 
@@ -844,13 +847,10 @@
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.DataGridView dataGridView21;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.DataGridView dataGridView20;
         private System.Windows.Forms.DataGridView dataGridView19;
-        private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label lblComplemento;
         private System.Windows.Forms.Label lblEndereço;
         private System.Windows.Forms.DataGridView dataGridView13;
@@ -863,27 +863,30 @@
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label lblNascimento;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.MaskedTextBox mtxtRG;
-        private System.Windows.Forms.MaskedTextBox mtxtCPF;
-        private System.Windows.Forms.MaskedTextBox mtxtTelefone;
-        private System.Windows.Forms.MaskedTextBox mtxtCelular;
-        private System.Windows.Forms.ComboBox cboEstado;
         public System.Windows.Forms.TextBox txtNome;
-        protected System.Windows.Forms.RichTextBox txtEndereço;
         private System.Windows.Forms.Label lblDependentes;
-        private System.Windows.Forms.NumericUpDown nudDependentes;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.MaskedTextBox mtxtCEP;
-        private System.Windows.Forms.ComboBox cboSexo;
+        public System.Windows.Forms.TextBox txtSenha;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtComplemento;
+        public System.Windows.Forms.DateTimePicker dtpNascimento;
+        public System.Windows.Forms.TextBox txtSobrenome;
+        public System.Windows.Forms.MaskedTextBox mtxtRG;
+        public System.Windows.Forms.MaskedTextBox mtxtCPF;
+        public System.Windows.Forms.MaskedTextBox mtxtTelefone;
+        public System.Windows.Forms.MaskedTextBox mtxtCelular;
+        public System.Windows.Forms.ComboBox cboEstado;
+        public System.Windows.Forms.RichTextBox txtEndereço;
+        public System.Windows.Forms.NumericUpDown nudDependentes;
+        public System.Windows.Forms.MaskedTextBox mtxtCEP;
+        public System.Windows.Forms.ComboBox cboSexo;
     }
 }
