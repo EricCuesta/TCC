@@ -42,6 +42,15 @@ namespace Liriou_s_Burguer.Database
 
             return list;
         }
+        public void ConsultarFuncionario(string nome)
+        {
+            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
+            List<Entities.tb_employees> list = DB.tb_employees.Where(
+                t => t.nm_firstName == nome).ToList();
+
+            Screens.Manager.HumanResources.frmConsultEmployee tela = new Screens.Manager.HumanResources.frmConsultEmployee();
+            tela.dgvConsultarFuncionário.DataSource = list;
+        }
 
         public bool Login(string email, string senha)
         {

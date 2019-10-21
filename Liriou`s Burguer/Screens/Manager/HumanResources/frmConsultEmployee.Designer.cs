@@ -336,6 +336,7 @@
             this.btnCadastrar.TabIndex = 252;
             this.btnCadastrar.Text = "Consultar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // dgvConsultarFuncionário
             // 
@@ -351,6 +352,7 @@
             this.Coluna7,
             this.Coluna8,
             this.Coluna9});
+            this.dgvConsultarFuncionário.GridColor = System.Drawing.SystemColors.Control;
             this.dgvConsultarFuncionário.Location = new System.Drawing.Point(16, 197);
             this.dgvConsultarFuncionário.Name = "dgvConsultarFuncionário";
             this.dgvConsultarFuncionário.Size = new System.Drawing.Size(772, 296);
@@ -608,7 +610,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuEstoque;
         private System.Windows.Forms.ToolStripMenuItem MenuSuprimento;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.DataGridView dgvConsultarFuncionário;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
@@ -627,5 +628,6 @@
         private System.Windows.Forms.Label lblCadastrarFuncionário;
         private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.MaskedTextBox mtxtRG;
+        public System.Windows.Forms.DataGridView dgvConsultarFuncionário;
     }
 }

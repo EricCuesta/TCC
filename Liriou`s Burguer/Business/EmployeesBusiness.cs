@@ -32,6 +32,10 @@ namespace Liriou_s_Burguer.Business
                 Model.UsuarioLogado.celular = db.nr_cellphone;
             }
         }
+        public void ConsultarFuncionario(string nome)
+        {
+           
+        }
 
         public void AlterarRecuperação(Database.Entities.tb_employees alterar)
         {

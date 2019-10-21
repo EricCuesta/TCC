@@ -92,5 +92,24 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             imgMinimizar.Image = Properties.Resources.Minimizar02;
             imgMinimizar.Image = Properties.Resources.Minimizar;
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+
+            //string nome = txtNome.Text.Trim();
+            //string rg = mtxtRG.Text.Trim();
+            //string genero = cboGênero.Text.Trim();
+            //string departamento = cboDepartamento.Text.Trim();
+            //string cargo = cboCargo.Text.Trim();
+
+            //Business.EmployeesBusiness BN = new Business.EmployeesBusiness();
+            //List<Database.Entities.tb_employees> list = BN.ConsultarFuncionario(nome);
+
+            //dgvConsultarFuncionário.DataSource = list;
+
+            string nome = txtNome.Text.Trim();
+            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
+            DB.ConsultarFuncionario(nome);
+        }
     }
 }

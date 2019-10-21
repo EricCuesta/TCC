@@ -86,6 +86,7 @@
             this.imgGoogle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgGoogle.TabIndex = 232;
             this.imgGoogle.TabStop = false;
+            this.imgGoogle.Click += new System.EventHandler(this.imgGoogle_Click);
             // 
             // imgLinkedIn
             // 
@@ -97,6 +98,7 @@
             this.imgLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgLinkedIn.TabIndex = 231;
             this.imgLinkedIn.TabStop = false;
+            this.imgLinkedIn.Click += new System.EventHandler(this.imgLinkedIn_Click);
             // 
             // imgFacebook
             // 
@@ -108,6 +110,7 @@
             this.imgFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgFacebook.TabIndex = 230;
             this.imgFacebook.TabStop = false;
+            this.imgFacebook.Click += new System.EventHandler(this.imgFacebook_Click);
             // 
             // imgInstagram
             // 
@@ -119,6 +122,7 @@
             this.imgInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgInstagram.TabIndex = 229;
             this.imgInstagram.TabStop = false;
+            this.imgInstagram.Click += new System.EventHandler(this.imgInstagram_Click);
             // 
             // imgLogotipo
             // 

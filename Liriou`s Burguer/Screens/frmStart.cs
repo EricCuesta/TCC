@@ -57,5 +57,25 @@ namespace Liriou_s_Burguer.Screens
             imgMinimizar.Image = Properties.Resources.Minimizar02;
             imgMinimizar.Image = Properties.Resources.Minimizar;
         }
+
+        private void imgGoogle_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.google.com");
+        }
+
+        private void imgLinkedIn_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://br.linkedin.com/");
+        }
+
+        private void imgFacebook_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.facebook.com");
+        }
+
+        private void imgInstagram_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.instagram.com");
+        }
     }
 }
