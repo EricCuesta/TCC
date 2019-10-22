@@ -324,6 +324,7 @@
             this.mtxtCEP.Location = new System.Drawing.Point(452, 192);
             this.mtxtCEP.Mask = "00000-000";
             this.mtxtCEP.Name = "mtxtCEP";
+            this.mtxtCEP.ReadOnly = true;
             this.mtxtCEP.Size = new System.Drawing.Size(336, 23);
             this.mtxtCEP.TabIndex = 603;
             // 
@@ -340,6 +341,7 @@
             // 
             this.nudDependentes.Location = new System.Drawing.Point(123, 162);
             this.nudDependentes.Name = "nudDependentes";
+            this.nudDependentes.ReadOnly = true;
             this.nudDependentes.Size = new System.Drawing.Size(120, 20);
             this.nudDependentes.TabIndex = 601;
             // 
@@ -359,6 +361,7 @@
             this.mtxtRG.Location = new System.Drawing.Point(446, 128);
             this.mtxtRG.Mask = "00.000.000-0";
             this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.ReadOnly = true;
             this.mtxtRG.Size = new System.Drawing.Size(342, 23);
             this.mtxtRG.TabIndex = 597;
             // 
@@ -368,6 +371,7 @@
             this.mtxtCPF.Location = new System.Drawing.Point(58, 128);
             this.mtxtCPF.Mask = "000000000/00";
             this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.ReadOnly = true;
             this.mtxtCPF.Size = new System.Drawing.Size(334, 23);
             this.mtxtCPF.TabIndex = 596;
             // 
@@ -377,6 +381,7 @@
             this.mtxtTelefone.Location = new System.Drawing.Point(487, 275);
             this.mtxtTelefone.Mask = "(999) 9999-9999";
             this.mtxtTelefone.Name = "mtxtTelefone";
+            this.mtxtTelefone.ReadOnly = true;
             this.mtxtTelefone.Size = new System.Drawing.Size(301, 23);
             this.mtxtTelefone.TabIndex = 595;
             // 
@@ -386,6 +391,7 @@
             this.mtxtCelular.Location = new System.Drawing.Point(80, 275);
             this.mtxtCelular.Mask = "(999) 99999-9999";
             this.mtxtCelular.Name = "mtxtCelular";
+            this.mtxtCelular.ReadOnly = true;
             this.mtxtCelular.Size = new System.Drawing.Size(314, 23);
             this.mtxtCelular.TabIndex = 594;
             // 
@@ -485,6 +491,7 @@
             this.txtSenha.Location = new System.Drawing.Point(470, 307);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
+            this.txtSenha.ReadOnly = true;
             this.txtSenha.Size = new System.Drawing.Size(318, 23);
             this.txtSenha.TabIndex = 587;
             this.txtSenha.UseSystemPasswordChar = true;
@@ -495,6 +502,7 @@
             this.txtEmail.Location = new System.Drawing.Point(73, 307);
             this.txtEmail.MaxLength = 64;
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.Size = new System.Drawing.Size(321, 23);
             this.txtEmail.TabIndex = 586;
             // 
@@ -542,6 +550,7 @@
             this.txtComplemento.Location = new System.Drawing.Point(562, 234);
             this.txtComplemento.MaxLength = 128;
             this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.ReadOnly = true;
             this.txtComplemento.Size = new System.Drawing.Size(226, 23);
             this.txtComplemento.TabIndex = 581;
             // 
@@ -706,6 +715,7 @@
             this.txtSobrenome.Location = new System.Drawing.Point(505, 96);
             this.txtSobrenome.MaxLength = 32;
             this.txtSobrenome.Name = "txtSobrenome";
+            this.txtSobrenome.ReadOnly = true;
             this.txtSobrenome.Size = new System.Drawing.Size(283, 23);
             this.txtSobrenome.TabIndex = 564;
             // 
@@ -725,6 +735,7 @@
             this.txtNome.Location = new System.Drawing.Point(71, 96);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(321, 23);
             this.txtNome.TabIndex = 562;
             // 

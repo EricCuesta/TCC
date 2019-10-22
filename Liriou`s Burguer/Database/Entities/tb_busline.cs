@@ -12,14 +12,12 @@ namespace Liriou_s_Burguer.Database.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_dependents
+    public partial class tb_busline
     {
-        public int id_dependents { get; set; }
         public int id_employees { get; set; }
-        public string nm_dependents { get; set; }
-        public System.DateTime ds_birthDate { get; set; }
-        public bool ds_familySalary { get; set; }
-        public bool ds_pension { get; set; }
-        public bool ds_irrf { get; set; }
+        public string cd_line1 { get; set; }
+        public string cd_line2 { get; set; }
+        public string cd_line3 { get; set; }
+        public string cd_line4 { get; set; }
     }
 }

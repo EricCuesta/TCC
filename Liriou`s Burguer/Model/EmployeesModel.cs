@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace Liriou_s_Burguer.Model
 {
-    class EmployeesModel
+    static class EmployeesModel
     {
-        public int ID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Sex { get; set; }
-        public string CPF { get; set; }
-        public string RG { get; set; }
-        public string Dependents { get; set; }
-        public string State{ get; set; }
-        public string Country { get; set; }
-        public string CEP { get; set; }
-        public string Note { get; set; }
-        public string Address { get; set; }
-        public string Cellphone { get; set; }
-        public string Tellphone { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public DateTime Birth { get; set; }
+        public static int ID { get; set; }
+        public static string FirstName { get; set; }
+        public static string LastName { get; set; }
+        public static string Sex { get; set; }
+        public static string CPF { get; set; }
+        public static string RG { get; set; }
+        public static string Dependents { get; set; }
+        public static string State{ get; set; }
+        public static string Country { get; set; }
+        public static string CEP { get; set; }
+        public static string Note { get; set; }
+        public static string Address { get; set; }
+        public static string Cellphone { get; set; }
+        public static string Tellphone { get; set; }
+        public static string Email { get; set; }
+        public static string Password { get; set; }
+        public static DateTime Birth { get; set; }
     }
 }

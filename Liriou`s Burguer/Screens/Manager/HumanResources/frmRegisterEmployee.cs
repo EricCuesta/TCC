@@ -152,21 +152,14 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             txtEmail.Text = model.Email;
             txtSenha.Text = model.Password;
         }
-
-        private void mtxtCEP_Enter(object sender, EventArgs e)
+        private void mtxtCEP_TextChanged(object sender, EventArgs e)
         {
-            string CEP = mtxtRG.Text;
-            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
-            txtEndereço.Text = api.Buscar(CEP);
-
-        }
-
-        private void mtxtCEP_Leave(object sender, EventArgs e)
-        {
-            string CEP = mtxtRG.Text;
-            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
-            txtEndereço.Text = api.Buscar(CEP);
-
+            if (mtxtCEP.Text.Length == 9)
+            {
+                string CEP = mtxtCEP.Text;
+                CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+                txtEndereço.Text = api.Buscar(CEP);
+            }
         }
     }
 }

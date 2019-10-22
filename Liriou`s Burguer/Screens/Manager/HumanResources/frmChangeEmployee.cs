@@ -24,19 +24,19 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 Model.EmployeesModel Model = new Model.EmployeesModel();
                 
-                Model.firstName = txtNome.Text.Trim();
-                Model.lastName = txtSobrenome.Text.Trim();
+                Model.FirstName = txtNome.Text.Trim();
+                Model.LastName = txtSobrenome.Text.Trim();
                 Model.Sex = cboSexo.Text.Trim();
-                Model.birth = Convert.ToDateTime(dtpNascimento.Value);
+                Model.Birth = Convert.ToDateTime(dtpNascimento.Value);
                 Model.RG = mtxtRG.Text.Trim();
-                Model.state = cboEstado.Text.Trim();
+                Model.State = cboEstado.Text.Trim();
                 Model.CEP = lblCEP.Text.Trim();
-                Model.note = txtComplemento.Text.Trim();
-                Model.adress = txtEndereço.Text.Trim();
-                Model.cellphone = mtxtCelular.Text.Trim();
-                Model.tellphone = mtxtTelefone.Text.Trim();
-                Model.email = txtEmail.Text.Trim();
-                Model.password = txtSenha.Text;
+                Model.Note = txtComplemento.Text.Trim();
+                Model.Address = txtEndereço.Text.Trim();
+                Model.Cellphone = mtxtCelular.Text.Trim();
+                Model.Tellphone = mtxtTelefone.Text.Trim();
+                Model.Email = txtEmail.Text.Trim();
+                Model.Password = txtSenha.Text;
 
                 string email = txtEmail.Text;
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
@@ -164,19 +164,14 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             imgMinimizar.Image = Properties.Resources.Minimizar02;
             imgMinimizar.Image = Properties.Resources.Minimizar;
         }
-
-        private void mtxtCEP_Enter(object sender, EventArgs e)
+        private void mtxtCEP_TextChanged(object sender, EventArgs e)
         {
-            string CEP = mtxtRG.Text;
-            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
-            txtEndereço.Text = api.Buscar(CEP);
-        }
-
-        private void mtxtCEP_Leave(object sender, EventArgs e)
-        {
-            string CEP = mtxtRG.Text;
-            CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
-            txtEndereço.Text = api.Buscar(CEP);
+            if (mtxtCEP.Text.Length == 9)
+            {
+                string CEP = mtxtCEP.Text;
+                CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+                txtEndereço.Text = api.Buscar(CEP);
+            }
         }
     }
 }

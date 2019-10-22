@@ -328,8 +328,7 @@
             this.mtxtCEP.Name = "mtxtCEP";
             this.mtxtCEP.Size = new System.Drawing.Size(336, 23);
             this.mtxtCEP.TabIndex = 603;
-            this.mtxtCEP.Enter += new System.EventHandler(this.mtxtCEP_Enter);
-            this.mtxtCEP.Leave += new System.EventHandler(this.mtxtCEP_Leave);
+            this.mtxtCEP.TextChanged += new System.EventHandler(this.mtxtCEP_TextChanged);
             // 
             // dataGridView2
             // 
