@@ -111,7 +111,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LiriousDatabase.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Database\Entities\tb_bankaccount.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\Entities\tb_benefits.cs">
+      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_busline.cs">
       <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_client.cs">
@@ -127,9 +133,6 @@
       <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_department.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Entities\tb_dependents.cs">
       <DependentUpon>LiriousDatabase.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_discounts.cs">

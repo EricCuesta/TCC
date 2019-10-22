@@ -53,16 +53,6 @@
             this.MenuEstoque = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuSuprimento = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.dgvConsultarFuncionário = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -72,19 +62,20 @@
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
-            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
+            this.dgvConsultar = new System.Windows.Forms.DataGridView();
+            this.txtRG = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).BeginInit();
             this.MenuLiriousBurguer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFuncionário)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultar)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView6
@@ -338,89 +329,6 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // dgvConsultarFuncionário
-            // 
-            this.dgvConsultarFuncionário.BackgroundColor = System.Drawing.Color.DarkGray;
-            this.dgvConsultarFuncionário.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarFuncionário.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2,
-            this.Coluna3,
-            this.Coluna4,
-            this.Coluna5,
-            this.Coluna6,
-            this.Coluna7,
-            this.Coluna8,
-            this.Coluna9});
-            this.dgvConsultarFuncionário.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvConsultarFuncionário.Location = new System.Drawing.Point(16, 197);
-            this.dgvConsultarFuncionário.Name = "dgvConsultarFuncionário";
-            this.dgvConsultarFuncionário.Size = new System.Drawing.Size(772, 296);
-            this.dgvConsultarFuncionário.TabIndex = 251;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.MaxInputLength = 100;
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.Width = 200;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Dependentes";
-            this.Coluna2.MaxInputLength = 100;
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.Width = 80;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Gênero";
-            this.Coluna3.MaxInputLength = 100;
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.Width = 60;
-            // 
-            // Coluna4
-            // 
-            this.Coluna4.HeaderText = "Data de Nascimento";
-            this.Coluna4.MaxInputLength = 100;
-            this.Coluna4.Name = "Coluna4";
-            this.Coluna4.Width = 130;
-            // 
-            // Coluna5
-            // 
-            this.Coluna5.HeaderText = "CPF";
-            this.Coluna5.MaxInputLength = 100;
-            this.Coluna5.Name = "Coluna5";
-            this.Coluna5.Width = 120;
-            // 
-            // Coluna6
-            // 
-            this.Coluna6.HeaderText = "RG";
-            this.Coluna6.MaxInputLength = 100;
-            this.Coluna6.Name = "Coluna6";
-            this.Coluna6.Width = 120;
-            // 
-            // Coluna7
-            // 
-            this.Coluna7.HeaderText = "Endereço";
-            this.Coluna7.MaxInputLength = 100;
-            this.Coluna7.Name = "Coluna7";
-            this.Coluna7.Width = 200;
-            // 
-            // Coluna8
-            // 
-            this.Coluna8.HeaderText = "Celular";
-            this.Coluna8.MaxInputLength = 100;
-            this.Coluna8.Name = "Coluna8";
-            this.Coluna8.Width = 120;
-            // 
-            // Coluna9
-            // 
-            this.Coluna9.HeaderText = "Telefone";
-            this.Coluna9.MaxInputLength = 100;
-            this.Coluna9.Name = "Coluna9";
-            this.Coluna9.Width = 120;
-            // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
@@ -456,6 +364,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(406, 23);
             this.txtNome.TabIndex = 246;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // lblNome
             // 
@@ -519,14 +428,22 @@
             this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
             this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
-            // mtxtRG
+            // dgvConsultar
             // 
-            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtRG.Location = new System.Drawing.Point(531, 64);
-            this.mtxtRG.Mask = "00.000.000-0";
-            this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(256, 23);
-            this.mtxtRG.TabIndex = 553;
+            this.dgvConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultar.Location = new System.Drawing.Point(0, 211);
+            this.dgvConsultar.Name = "dgvConsultar";
+            this.dgvConsultar.Size = new System.Drawing.Size(800, 289);
+            this.dgvConsultar.TabIndex = 554;
+            // 
+            // txtRG
+            // 
+            this.txtRG.Location = new System.Drawing.Point(532, 66);
+            this.txtRG.MaxLength = 12;
+            this.txtRG.Name = "txtRG";
+            this.txtRG.Size = new System.Drawing.Size(255, 20);
+            this.txtRG.TabIndex = 555;
+            this.txtRG.TextChanged += new System.EventHandler(this.txtRG_TextChanged);
             // 
             // frmConsultEmployee
             // 
@@ -534,7 +451,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.mtxtRG);
+            this.Controls.Add(this.txtRG);
+            this.Controls.Add(this.dgvConsultar);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.imgMinimizar);
             this.Controls.Add(this.dataGridView6);
@@ -552,7 +470,6 @@
             this.Controls.Add(this.lblNascimento);
             this.Controls.Add(this.MenuLiriousBurguer);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.dgvConsultarFuncionário);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.dataGridView7);
             this.Controls.Add(this.dataGridView3);
@@ -571,12 +488,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).EndInit();
             this.MenuLiriousBurguer.ResumeLayout(false);
             this.MenuLiriousBurguer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFuncionário)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -610,15 +527,6 @@
         private System.Windows.Forms.ToolStripMenuItem MenuEstoque;
         private System.Windows.Forms.ToolStripMenuItem MenuSuprimento;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna9;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -627,7 +535,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblCadastrarFuncionário;
         private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.MaskedTextBox mtxtRG;
-        public System.Windows.Forms.DataGridView dgvConsultarFuncionário;
+        private System.Windows.Forms.DataGridView dgvConsultar;
+        private System.Windows.Forms.TextBox txtRG;
     }
 }

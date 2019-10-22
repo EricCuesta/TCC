@@ -24,7 +24,7 @@ namespace Liriou_s_Burguer.Database
 
             return list;
         }
-
+        
         public void Alterar(Entities.tb_department department)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
@@ -34,6 +34,7 @@ namespace Liriou_s_Burguer.Database
 
             DB.SaveChanges();
         }
+
 
         public void Remover(int id)
         {

@@ -23,20 +23,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             try
             {
                 Model.EmployeesModel Model = new Model.EmployeesModel();
-                
-                Model.firstName = txtNome.Text.Trim();
-                Model.lastName = txtSobrenome.Text.Trim();
-                Model.Sex = cboSexo.Text.Trim();
-                Model.birth = Convert.ToDateTime(dtpNascimento.Value);
-                Model.RG = mtxtRG.Text.Trim();
-                Model.state = cboEstado.Text.Trim();
-                Model.CEP = lblCEP.Text.Trim();
-                Model.note = txtComplemento.Text.Trim();
-                Model.adress = txtEndereço.Text.Trim();
-                Model.cellphone = mtxtCelular.Text.Trim();
-                Model.tellphone = mtxtTelefone.Text.Trim();
-                Model.email = txtEmail.Text.Trim();
-                Model.password = txtSenha.Text;
+              
 
                 string email = txtEmail.Text;
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
