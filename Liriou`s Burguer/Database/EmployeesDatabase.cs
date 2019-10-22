@@ -56,12 +56,10 @@ namespace Liriou_s_Burguer.Database
 
             return list;
         }
-        public List<Entities.tb_employees> ConsultarGeral(string nome, string rg)
+       public List<Entities.tb_employees> ConsultarData(DateTime data)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_employees> list = DB.tb_employees.Where(t => t.nm_firstName == nome &&
-            t.ds_rg == rg).ToList();
-
+            List<Entities.tb_employees> list = DB.tb_employees.Where(t => t.dt_birth == data).ToList();
             return list;
         }
 

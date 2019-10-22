@@ -194,6 +194,7 @@
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(226, 23);
             this.dtpNascimento.TabIndex = 255;
+            this.dtpNascimento.ValueChanged += new System.EventHandler(this.dtpNascimento_ValueChanged);
             // 
             // lblNascimento
             // 

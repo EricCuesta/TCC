@@ -50,6 +50,12 @@ namespace Liriou_s_Burguer.Business
             List<Database.Entities.tb_employees> list = DB.ConsultarFuncionarioRG(rg);
             return list;
         }
+        public List<Database.Entities.tb_employees> ConsultarFuncionarioData(DateTime data)
+        {
+            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
+            List<Database.Entities.tb_employees> list = DB.ConsultarData(data);
+            return list;
+        }
         public void AlterarRecuperação(Database.Entities.tb_employees alterar)
         {
             Database.EmployeesDatabase dbemp = new Database.EmployeesDatabase();

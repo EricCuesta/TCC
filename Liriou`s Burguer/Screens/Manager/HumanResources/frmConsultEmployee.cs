@@ -123,29 +123,42 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
 
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            Database.DepartmentDatabase tbdepartment = new Database.DepartmentDatabase();
-            List<Database.Entities.tb_employees> listageral = DB.Consultar();
-            dgvConsultar.DataSource = listageral;
-
-            string nome = txtNome.Text.Trim();
-            string rg = txtRG.Text.Trim();
-
-          
-            if (nome != string.Empty)
+            try
             {
-                List<Database.Entities.tb_employees> list = DB.ConsultarFuncionario(nome);
+                Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
+                Database.DepartmentDatabase tbdepartment = new Database.DepartmentDatabase();
+                List<Database.Entities.tb_employees> listageral = DB.Consultar();
+                dgvConsultar.DataSource = listageral;
 
-                dgvConsultar.DataSource = list;
+                string nome = txtNome.Text.Trim();
+                string rg = txtRG.Text.Trim();
+                DateTime nascimento = dtpNascimento.Value;
+
+
+                if (nome != string.Empty)
+                {
+                    List<Database.Entities.tb_employees> list = DB.ConsultarFuncionario(nome);
+
+                    dgvConsultar.DataSource = list;
+                }
+
+                if (rg != string.Empty)
+                {
+                    List<Database.Entities.tb_employees> list = DB.ConsultarFuncionarioRG(rg);
+
+                    dgvConsultar.DataSource = list;
+                }
+                
+               
             }
-
-            if (rg != string.Empty)
+            catch (ArgumentException ex)
             {
-                List<Database.Entities.tb_employees> list = DB.ConsultarFuncionarioRG(rg);
-
-                dgvConsultar.DataSource = list;
+                MessageBox.Show(ex.Message);
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro. Tente mais tarde.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
