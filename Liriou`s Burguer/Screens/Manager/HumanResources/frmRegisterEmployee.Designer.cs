@@ -248,6 +248,7 @@
             // 
             this.txtEndereço.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEndereço.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEndereço.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereço.Location = new System.Drawing.Point(92, 193);
             this.txtEndereço.MaxLength = 128;
             this.txtEndereço.Name = "txtEndereço";

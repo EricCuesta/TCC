@@ -23,7 +23,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             try
             {
                 Model.EmployeesModel model = new Model.EmployeesModel();
-
                 model.FirstName = txtNome.Text;
                 model.LastName = txtSobrenome.Text;
                 model.Sex = cboSexo.Text;

@@ -20,7 +20,7 @@ namespace Liriou_s_Burguer.CorreioApi
             // Transforma a resposta do correio em DTO
             dynamic r = Newtonsoft.Json.JsonConvert.DeserializeObject(resposta);
 
-            return r.logradouro + " - " + r.bairro;
+            return r.logradouro + " - " + r.bairro + " - " + r.localidade;
         }
     }
 }

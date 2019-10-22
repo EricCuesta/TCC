@@ -83,7 +83,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             this.Hide();
             frmRegisterEmployee tela = new frmRegisterEmployee();
-
+            Model.EmployeesModel model = new Model.EmployeesModel();
             DateTime date = tela.dtpNascimento.Value;
             int dia = date.Day;
             int mes = date.Month;
@@ -91,7 +91,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
             string data = ano + "-" + mes + "-" + dia;
 
-            Model.EmployeesModel.FirstName = tela.txtNome.Name;
+            model.FirstName = tela.txtNome.Name;
             tela.ShowDialog();
         }
 
