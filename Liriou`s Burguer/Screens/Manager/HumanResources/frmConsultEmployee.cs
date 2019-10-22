@@ -15,6 +15,8 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         public frmConsultEmployee()
         {
             InitializeComponent();
+            this.CarregarCombo();
+            this.CarregarComboCargo();
         }
 
         private void menuInício_Click(object sender, EventArgs e)
@@ -92,24 +94,103 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             imgMinimizar.Image = Properties.Resources.Minimizar02;
             imgMinimizar.Image = Properties.Resources.Minimizar;
         }
+        private void CarregarCombo()
+        {
+            Business.DepartmentBusiness b = new Business.DepartmentBusiness();
+            List<Database.Entities.tb_department> list = b.Consultar();
+
+            cboDepartamento.DisplayMember = nameof(Database.Entities.tb_department.nm_department);
+            cboDepartamento.DataSource = list;
+        }
+        private void CarregarComboCargo()
+        {
+            Business.FunctionBusiness b = new Business.FunctionBusiness();
+            List<Database.Entities.tb_function> list = b.Consultar();
+
+            cboCargo.DisplayMember = nameof(Database.Entities.tb_function.nm_function);
+            cboCargo.DataSource = list;
+        }
+        private void CarregarGenero()
+        {
+            Business.EmployeesBusiness b = new Business.EmployeesBusiness();
+            List<Database.Entities.tb_employees> list = b.Consultar();
+
+            cboGênero.DisplayMember = nameof(Database.Entities.tb_employees.ds_sex);
+            cboGênero.DataSource = list;
+        }
+
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
 
-            //string nome = txtNome.Text.Trim();
-            //string rg = mtxtRG.Text.Trim();
-            //string genero = cboGênero.Text.Trim();
-            //string departamento = cboDepartamento.Text.Trim();
-            //string cargo = cboCargo.Text.Trim();
+            try
+            {
+                Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
+                Database.DepartmentDatabase tbdepartment = new Database.DepartmentDatabase();
+                List<Database.Entities.tb_employees> listageral = DB.Consultar();
+                dgvConsultar.DataSource = listageral;
 
-            //Business.EmployeesBusiness BN = new Business.EmployeesBusiness();
-            //List<Database.Entities.tb_employees> list = BN.ConsultarFuncionario(nome);
+                string nome = txtNome.Text.Trim();
+                string rg = txtRG.Text.Trim();
+                DateTime nascimento = dtpNascimento.Value;
 
-            //dgvConsultarFuncionário.DataSource = list;
 
-            string nome = txtNome.Text.Trim();
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            DB.ConsultarFuncionario(nome);
+                if (nome != string.Empty)
+                {
+                    List<Database.Entities.tb_employees> list = DB.ConsultarFuncionario(nome);
+
+                    dgvConsultar.DataSource = list;
+                }
+
+                if (rg != string.Empty)
+                {
+                    List<Database.Entities.tb_employees> list = DB.ConsultarFuncionarioRG(rg);
+
+                    dgvConsultar.DataSource = list;
+                }
+                
+               
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro. Tente mais tarde.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            string nome = txtNome.Text;
+
+            if (nome != string.Empty)
+            {
+                txtRG.Enabled = false;
+                txtNome.Enabled = true;
+            }
+            else
+            {
+                txtRG.Enabled = true;
+                txtNome.Enabled = true;
+            }
+        }
+
+        private void txtRG_TextChanged(object sender, EventArgs e)
+        {
+            string rg = txtRG.Text;
+
+            if (rg != string.Empty)
+            {
+                txtNome.Enabled = false;
+                txtRG.Enabled = true;
+            }
+            else
+            {
+                txtRG.Enabled = true;
+                txtNome.Enabled = true;
+            }
         }
     }
 }

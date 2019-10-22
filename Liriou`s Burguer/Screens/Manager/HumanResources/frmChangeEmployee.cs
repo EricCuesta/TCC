@@ -24,19 +24,19 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 Model.EmployeesModel Model = new Model.EmployeesModel();
                 
-                Model.FirstName = txtNome.Text.Trim();
-                Model.LastName = txtSobrenome.Text.Trim();
+                Model.firstName = txtNome.Text.Trim();
+                Model.lastName = txtSobrenome.Text.Trim();
                 Model.Sex = cboSexo.Text.Trim();
-                Model.Birth = Convert.ToDateTime(dtpNascimento.Value);
+                Model.birth = Convert.ToDateTime(dtpNascimento.Value);
                 Model.RG = mtxtRG.Text.Trim();
-                Model.State = cboEstado.Text.Trim();
+                Model.state = cboEstado.Text.Trim();
                 Model.CEP = lblCEP.Text.Trim();
-                Model.Note = txtComplemento.Text.Trim();
-                Model.Address = txtEndereço.Text.Trim();
-                Model.Cellphone = mtxtCelular.Text.Trim();
-                Model.Tellphone = mtxtTelefone.Text.Trim();
-                Model.Email = txtEmail.Text.Trim();
-                Model.Password = txtSenha.Text;
+                Model.note = txtComplemento.Text.Trim();
+                Model.adress = txtEndereço.Text.Trim();
+                Model.cellphone = mtxtCelular.Text.Trim();
+                Model.tellphone = mtxtTelefone.Text.Trim();
+                Model.email = txtEmail.Text.Trim();
+                Model.password = txtSenha.Text;
 
                 string email = txtEmail.Text;
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");

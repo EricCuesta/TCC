@@ -49,9 +49,13 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                     tela.Show();
                 }
             }
-            catch (Exception)
+            catch (ArgumentException ex)
             {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro. Tente mais tarde.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
