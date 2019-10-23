@@ -800,7 +800,6 @@
             this.Name = "frmRegisterEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Employee";
-            this.Load += new System.EventHandler(this.frmRegisterEmployee_Load);
             this.MenuLiriousBurguer.ResumeLayout(false);
             this.MenuLiriousBurguer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).EndInit();
@@ -871,7 +870,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.PictureBox imgFechar;
-        public System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblDependentes;
         private System.Windows.Forms.DataGridView dataGridView1;
         public System.Windows.Forms.TextBox txtSenha;
@@ -888,5 +886,6 @@
         public System.Windows.Forms.NumericUpDown nudDependentes;
         public System.Windows.Forms.MaskedTextBox mtxtCEP;
         public System.Windows.Forms.ComboBox cboSexo;
+        protected System.Windows.Forms.TextBox txtNome;
     }
 }

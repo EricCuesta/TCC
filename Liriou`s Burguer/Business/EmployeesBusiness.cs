@@ -128,7 +128,7 @@ namespace Liriou_s_Burguer.Business
 
         public string VerificarCadastro (Model.EmployeesModel model)
         {
-            if (model.FirstName == string.Empty)
+            if (model.Nome == string.Empty)
             {
                 return "Nome não pode ser vazio";
             }

@@ -39,7 +39,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             this.Hide();
             Model.EmployeesModel employees = new Model.EmployeesModel();
             frmChangeEmployee tela = new frmChangeEmployee();
-            tela.txtNome.Text = employees.FirstName;
+            tela.txtNome.Text = employees.Nome;
             tela.txtSobrenome.Text = employees.LastName;
             tela.mtxtCPF.Text = employees.CPF;
             tela.mtxtRG.Text = employees.RG;

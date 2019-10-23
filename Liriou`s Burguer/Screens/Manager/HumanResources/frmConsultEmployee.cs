@@ -155,7 +155,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 MessageBox.Show(ex.Message);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Ocorreu um erro. Tente mais tarde.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

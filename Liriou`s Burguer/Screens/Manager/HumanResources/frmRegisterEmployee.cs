@@ -23,7 +23,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             try
             {
                 Model.EmployeesModel model = new Model.EmployeesModel();
-                model.FirstName = txtNome.Text;
+                model.Nome = txtNome.Text;
                 model.LastName = txtSobrenome.Text;
                 model.Sex = cboSexo.Text;
                 model.Birth = dtpNascimento.MinDate;
@@ -38,7 +38,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 model.Email = txtEmail.Text;
                 model.Password = txtSenha.Text;
 
-                ControlAccessibleObject control = new ControlAccessibleObject(txtNome);
                 Business.EmployeesBusiness EB = new Business.EmployeesBusiness();
                 string r = EB.VerificarCadastro(model);
 
@@ -48,12 +47,12 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                     frmRegisterEmployee1 tela = new frmRegisterEmployee1();
                     tela.Show();
                 }
+                else
+                {
+                    MessageBox.Show(r);
+                }
             }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
+            catch (Exception)
             {
                 MessageBox.Show("Ocorreu um erro. Tente mais tarde.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -136,25 +135,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             imgMinimizar.Image = Properties.Resources.Minimizar;
         }
 
-        private void frmRegisterEmployee_Load(object sender, EventArgs e)
-        {
-            Model.EmployeesModel model = new Model.EmployeesModel();
-
-            txtNome.Text = model.FirstName;
-            txtSobrenome.Text = model.LastName;
-            cboSexo.Text = model.Sex;
-            dtpNascimento.MinDate = model.Birth;
-            mtxtCPF.Text = model.CPF;
-            mtxtRG.Text = model.RG;
-            cboEstado.Text = model.State;
-            mtxtCEP.Text = model.CEP;
-            txtComplemento.Text = model.Note;
-            txtEndereço.Text = model.Address;
-            mtxtCelular.Text = model.Cellphone;
-            mtxtTelefone.Text = model.Tellphone;
-            txtEmail.Text = model.Email;
-            txtSenha.Text = model.Password;
-        }
         private void mtxtCEP_TextChanged(object sender, EventArgs e)
         {
             if (mtxtCEP.Text.Length == 9)

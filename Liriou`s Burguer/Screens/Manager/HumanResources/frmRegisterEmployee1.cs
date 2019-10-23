@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using Liriou_s_Burguer.Database.Entities;
+using Liriou_s_Burguer.Business;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,20 +23,21 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Database.Entities.tb_employees tbemployees = new Database.Entities.tb_employees();
-                Database.Entities.tb_discounts tbdiscounts = new Database.Entities.tb_discounts();
-                Database.Entities.tb_function tbfunction = new Database.Entities.tb_function();
-                Database.Entities.tb_timecard tbtimecard = new Database.Entities.tb_timecard();
-                Database.Entities.tb_financial financial = new Database.Entities.tb_financial();
-                Database.Entities.tb_benefits tbbenefits = new Database.Entities.tb_benefits();
-                Database.Entities.tb_department tb_Department = new Database.Entities.tb_department();
-                Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
-                Business.DiscountsBusiness busdiscounts = new Business.DiscountsBusiness();
-                Business.FunctionBusiness busfunction = new Business.FunctionBusiness();
-                Business.TimeCardBusiness bustimecard = new Business.TimeCardBusiness();
-                Business.FinancialBusiness busfinancial = new Business.FinancialBusiness();
-                Business.BenefitsBusiness busbenefits = new Business.BenefitsBusiness();
-                Business.DepartmentBusiness busdepartment = new Business.DepartmentBusiness();
+                tb_employees tbemployees = new tb_employees();
+                tb_discounts tbdiscounts = new tb_discounts();
+                tb_function tbfunction = new tb_function();
+                tb_timecard tbtimecard = new tb_timecard();
+                tb_financial financial = new tb_financial();
+                tb_benefits tbbenefits = new tb_benefits();
+                tb_department tb_Department = new tb_department();
+
+                EmployeesBusiness busemployees = new EmployeesBusiness();
+                DiscountsBusiness busdiscounts = new DiscountsBusiness();
+                FunctionBusiness busfunction = new FunctionBusiness();
+                TimeCardBusiness bustimecard = new TimeCardBusiness();
+                FinancialBusiness busfinancial = new FinancialBusiness();
+                BenefitsBusiness busbenefits = new BenefitsBusiness();
+                DepartmentBusiness busdepartment = new DepartmentBusiness();
 
                 tbemployees.dt_hiring = dtpContratação.Value;
                 tbemployees.dt_resignation = dtpDemissão.Value;
@@ -81,18 +84,13 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void imgVoltar_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmRegisterEmployee tela = new frmRegisterEmployee();
             Model.EmployeesModel model = new Model.EmployeesModel();
-            DateTime date = tela.dtpNascimento.Value;
-            int dia = date.Day;
-            int mes = date.Month;
-            int ano = date.Year;
 
-            string data = ano + "-" + mes + "-" + dia;
+            this.Hide();
+            tela.Show();
 
-            model.FirstName = tela.txtNome.Name;
-            tela.ShowDialog();
+            tela.txtNome.Text = model.Nome;
         }
 
         private void imgMinimizar_MouseEnter(object sender, EventArgs e)

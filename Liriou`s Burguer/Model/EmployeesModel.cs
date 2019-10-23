@@ -9,7 +9,7 @@ namespace Liriou_s_Burguer.Model
      class EmployeesModel
     {
         public int ID { get; set; }
-        public string FirstName { get; set; }
+        public string Nome { get; set; }
         public string LastName { get; set; }
         public string Sex { get; set; }
         public string CPF { get; set; }
