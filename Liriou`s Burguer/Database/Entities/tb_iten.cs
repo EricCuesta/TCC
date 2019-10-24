@@ -14,12 +14,10 @@ namespace Liriou_s_Burguer.Database.Entities
     
     public partial class tb_iten
     {
+        public int id_iten { get; set; }
         public int id_sale { get; set; }
         public int id_client { get; set; }
         public int id_product { get; set; }
-        public string nm_product { get; set; }
-        public string ds_typeProduct { get; set; }
-        public decimal vl_productValue { get; set; }
         public int vl_qtdProduct { get; set; }
     }
 }

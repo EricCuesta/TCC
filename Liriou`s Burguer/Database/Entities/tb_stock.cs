@@ -16,9 +16,5 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_stock { get; set; }
         public string ds_place { get; set; }
-        public int id_supply { get; set; }
-        public int vl_qtdSupply { get; set; }
-        public int id_product { get; set; }
-        public int vl_qtdProduct { get; set; }
     }
 }

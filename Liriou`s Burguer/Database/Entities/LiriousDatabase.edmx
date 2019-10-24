@@ -173,24 +173,14 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="id_emp" Type="int" Nullable="false" />
           <Property Name="nm_function" Type="varchar" MaxLength="32" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.liriousdb.tb_iten' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="tb_iten">
           <Key>
-            <PropertyRef Name="id_sale" />
-            <PropertyRef Name="id_client" />
-            <PropertyRef Name="id_product" />
-            <PropertyRef Name="nm_product" />
-            <PropertyRef Name="ds_typeProduct" />
-            <PropertyRef Name="vl_productValue" />
-            <PropertyRef Name="vl_qtdProduct" />
+            <PropertyRef Name="id_iten" />
           </Key>
+          <Property Name="id_iten" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_sale" Type="int" Nullable="false" />
           <Property Name="id_client" Type="int" Nullable="false" />
           <Property Name="id_product" Type="int" Nullable="false" />
-          <Property Name="nm_product" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="ds_typeProduct" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="vl_productValue" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="vl_qtdProduct" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_product">
@@ -237,10 +227,6 @@ warning 6002: The table/view 'def.liriousdb.tb_iten' does not have a primary key
           </Key>
           <Property Name="id_stock" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ds_place" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="id_supply" Type="int" Nullable="false" />
-          <Property Name="vl_qtdSupply" Type="int" Nullable="false" />
-          <Property Name="id_product" Type="int" Nullable="false" />
-          <Property Name="vl_qtdProduct" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_supply">
           <Key>
@@ -281,6 +267,7 @@ warning 6002: The table/view 'def.liriousdb.tb_iten' does not have a primary key
           <EntitySet Name="tb_enterprise" EntityType="Self.tb_enterprise" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_financial" EntityType="Self.tb_financial" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_function" EntityType="Self.tb_function" Schema="liriousdb" store:Type="Tables" />
+          <EntitySet Name="tb_iten" EntityType="Self.tb_iten" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_product" EntityType="Self.tb_product" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_sale" EntityType="Self.tb_sale" Schema="liriousdb" store:Type="Tables" />
@@ -310,17 +297,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
 `tb_crm`.`ds_mood`, 
 `tb_crm`.`ds_note`
 FROM `tb_crm` AS `tb_crm`</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="tb_iten" EntityType="Self.tb_iten" store:Type="Tables" store:Schema="liriousdb">
-            <DefiningQuery>SELECT
-`tb_iten`.`id_sale`, 
-`tb_iten`.`id_client`, 
-`tb_iten`.`id_product`, 
-`tb_iten`.`nm_product`, 
-`tb_iten`.`ds_typeProduct`, 
-`tb_iten`.`vl_productValue`, 
-`tb_iten`.`vl_qtdProduct`
-FROM `tb_iten` AS `tb_iten`</DefiningQuery>
           </EntitySet>
         </EntityContainer>
       </Schema>
@@ -461,6 +437,16 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
           <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="nm_function" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
+        <EntityType Name="tb_iten">
+          <Key>
+            <PropertyRef Name="id_iten" />
+          </Key>
+          <Property Name="id_iten" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_sale" Type="Int32" Nullable="false" />
+          <Property Name="id_client" Type="Int32" Nullable="false" />
+          <Property Name="id_product" Type="Int32" Nullable="false" />
+          <Property Name="vl_qtdProduct" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="tb_product">
           <Key>
             <PropertyRef Name="id_product" />
@@ -505,10 +491,6 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
           </Key>
           <Property Name="id_stock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ds_place" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="id_supply" Type="Int32" Nullable="false" />
-          <Property Name="vl_qtdSupply" Type="Int32" Nullable="false" />
-          <Property Name="id_product" Type="Int32" Nullable="false" />
-          <Property Name="vl_qtdProduct" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_supply">
           <Key>
@@ -567,24 +549,6 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
           <Property Name="ds_mood" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="tb_iten">
-          <Key>
-            <PropertyRef Name="id_sale" />
-            <PropertyRef Name="id_client" />
-            <PropertyRef Name="id_product" />
-            <PropertyRef Name="nm_product" />
-            <PropertyRef Name="ds_typeProduct" />
-            <PropertyRef Name="vl_productValue" />
-            <PropertyRef Name="vl_qtdProduct" />
-          </Key>
-          <Property Name="id_sale" Type="Int32" Nullable="false" />
-          <Property Name="id_client" Type="Int32" Nullable="false" />
-          <Property Name="id_product" Type="Int32" Nullable="false" />
-          <Property Name="nm_product" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_typeProduct" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="vl_productValue" Type="Decimal" Nullable="false" />
-          <Property Name="vl_qtdProduct" Type="Int32" Nullable="false" />
-        </EntityType>
         <EntityContainer Name="liriousdbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" />
           <EntitySet Name="tb_benefits" EntityType="Self.tb_benefits" />
@@ -596,6 +560,7 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
           <EntitySet Name="tb_enterprise" EntityType="Self.tb_enterprise" />
           <EntitySet Name="tb_financial" EntityType="Self.tb_financial" />
           <EntitySet Name="tb_function" EntityType="Self.tb_function" />
+          <EntitySet Name="tb_iten" EntityType="Self.tb_iten" />
           <EntitySet Name="tb_product" EntityType="Self.tb_product" />
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" />
           <EntitySet Name="tb_sale" EntityType="Self.tb_sale" />
@@ -605,7 +570,6 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
           <EntitySet Name="tb_busline" EntityType="Self.tb_busline" />
           <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" />
           <EntitySet Name="tb_crm" EntityType="Self.tb_crm" />
-          <EntitySet Name="tb_iten" EntityType="Self.tb_iten" />
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -756,6 +720,17 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tb_iten">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_iten">
+              <MappingFragment StoreEntitySet="tb_iten">
+                <ScalarProperty Name="id_iten" ColumnName="id_iten" />
+                <ScalarProperty Name="id_sale" ColumnName="id_sale" />
+                <ScalarProperty Name="id_client" ColumnName="id_client" />
+                <ScalarProperty Name="id_product" ColumnName="id_product" />
+                <ScalarProperty Name="vl_qtdProduct" ColumnName="vl_qtdProduct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_product">
             <EntityTypeMapping TypeName="liriousdbModel.tb_product">
               <MappingFragment StoreEntitySet="tb_product">
@@ -802,10 +777,6 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
               <MappingFragment StoreEntitySet="tb_stock">
                 <ScalarProperty Name="id_stock" ColumnName="id_stock" />
                 <ScalarProperty Name="ds_place" ColumnName="ds_place" />
-                <ScalarProperty Name="id_supply" ColumnName="id_supply" />
-                <ScalarProperty Name="vl_qtdSupply" ColumnName="vl_qtdSupply" />
-                <ScalarProperty Name="id_product" ColumnName="id_product" />
-                <ScalarProperty Name="vl_qtdProduct" ColumnName="vl_qtdProduct" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -866,19 +837,6 @@ FROM `tb_iten` AS `tb_iten`</DefiningQuery>
                 <ScalarProperty Name="id_client" ColumnName="id_client" />
                 <ScalarProperty Name="ds_mood" ColumnName="ds_mood" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_iten">
-            <EntityTypeMapping TypeName="liriousdbModel.tb_iten">
-              <MappingFragment StoreEntitySet="tb_iten">
-                <ScalarProperty Name="id_sale" ColumnName="id_sale" />
-                <ScalarProperty Name="id_client" ColumnName="id_client" />
-                <ScalarProperty Name="id_product" ColumnName="id_product" />
-                <ScalarProperty Name="nm_product" ColumnName="nm_product" />
-                <ScalarProperty Name="ds_typeProduct" ColumnName="ds_typeProduct" />
-                <ScalarProperty Name="vl_productValue" ColumnName="vl_productValue" />
-                <ScalarProperty Name="vl_qtdProduct" ColumnName="vl_qtdProduct" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
