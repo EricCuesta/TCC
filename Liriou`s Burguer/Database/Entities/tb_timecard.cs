@@ -26,5 +26,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public System.TimeSpan vl_fixedIntInput { get; set; }
         public System.TimeSpan vl_fixedIntOutput { get; set; }
         public System.TimeSpan vl_hoursHealth { get; set; }
+    
+        public virtual tb_employees tb_employees { get; set; }
     }
 }

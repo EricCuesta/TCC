@@ -20,5 +20,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public int vl_amount { get; set; }
         public decimal vl_value { get; set; }
         public string ds_Note { get; set; }
+    
+        public virtual tb_stock tb_stock { get; set; }
     }
 }

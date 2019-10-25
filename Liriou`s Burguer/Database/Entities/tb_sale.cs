@@ -14,9 +14,19 @@ namespace Liriou_s_Burguer.Database.Entities
     
     public partial class tb_sale
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_sale()
+        {
+            this.tb_iten = new HashSet<tb_iten>();
+        }
+    
         public int id_sale { get; set; }
         public int id_client { get; set; }
         public string ds_address { get; set; }
         public string ds_note { get; set; }
+    
+        public virtual tb_client tb_client { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_iten> tb_iten { get; set; }
     }
 }

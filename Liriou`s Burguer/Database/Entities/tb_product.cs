@@ -14,6 +14,12 @@ namespace Liriou_s_Burguer.Database.Entities
     
     public partial class tb_product
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_product()
+        {
+            this.tb_iten = new HashSet<tb_iten>();
+        }
+    
         public int id_product { get; set; }
         public int id_stock { get; set; }
         public string nm_product { get; set; }
@@ -21,5 +27,9 @@ namespace Liriou_s_Burguer.Database.Entities
         public int vl_amount { get; set; }
         public decimal vl_value { get; set; }
         public string ds_Note { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_iten> tb_iten { get; set; }
+        public virtual tb_stock tb_stock { get; set; }
     }
 }

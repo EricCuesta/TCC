@@ -17,5 +17,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public int id_client { get; set; }
         public string ds_mood { get; set; }
         public string ds_note { get; set; }
+    
+        public virtual tb_client tb_client { get; set; }
     }
 }

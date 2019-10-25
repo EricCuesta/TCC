@@ -18,5 +18,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public string dt_tableYear { get; set; }
         public string ds_activity { get; set; }
         public string cd_cnae { get; set; }
+    
+        public virtual tb_enterprise tb_enterprise { get; set; }
     }
 }

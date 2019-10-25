@@ -21,5 +21,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public Nullable<decimal> vl_foodPension { get; set; }
         public decimal vl_inss { get; set; }
         public decimal vl_fgts { get; set; }
+    
+        public virtual tb_employees tb_employees { get; set; }
     }
 }

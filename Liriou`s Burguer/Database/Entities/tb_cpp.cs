@@ -18,5 +18,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public int id_enterprise { get; set; }
         public decimal vl_cpp { get; set; }
         public decimal vl_fgts { get; set; }
+    
+        public virtual tb_enterprise tb_enterprise { get; set; }
     }
 }

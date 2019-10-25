@@ -27,6 +27,7 @@ namespace Liriou_s_Burguer.Database
 
             db.SaveChanges();
         }
+
         public void Inserir(Entities.tb_employees employees)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
@@ -42,12 +43,13 @@ namespace Liriou_s_Burguer.Database
 
             return list;
         }
-        public List<Entities.tb_employees> ConsultarPorTudo (Entities.tb_employees emp,
-                                                             Entities.tb_department dept,
-                                                             Entities.tb_function func)
+
+        public List<Entities.tb_employees> ConsultarPorTudo(Entities.tb_employees emp,
+                                                            Entities.tb_department dept,
+                                                            Entities.tb_function func)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List < Entities.tb_employees > list = null;
+            List<Entities.tb_employees> list = null;
 
             if (emp.nm_firstName != null && emp.dt_birth != null &&
                 emp.ds_sex != null && dept.nm_department != null &&
@@ -56,18 +58,20 @@ namespace Liriou_s_Burguer.Database
                 list = DB.tb_employees.Where(t => t.nm_firstName == emp.nm_firstName &&
                                              t.dt_birth == emp.dt_birth &&
                                              t.ds_sex == emp.ds_sex).ToList();
-                
+
             }
 
             return list;
         }
+
         public List<Entities.tb_employees> ConsultarFuncionario(string nome)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             List<Entities.tb_employees> list = DB.tb_employees.Where(t => t.nm_firstName.Contains(nome)).ToList();
-                
+
             return list;
         }
+
         public List<Entities.tb_employees> ConsultarFuncionarioRG(string rg)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
@@ -75,13 +79,13 @@ namespace Liriou_s_Burguer.Database
 
             return list;
         }
-       public List<Entities.tb_employees> ConsultarData(DateTime data)
+
+        public List<Entities.tb_employees> ConsultarData(DateTime data)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             List<Entities.tb_employees> list = DB.tb_employees.Where(t => t.dt_birth == data).ToList();
             return list;
         }
-
 
         public bool Login(string email, string senha)
         {
@@ -103,6 +107,8 @@ namespace Liriou_s_Burguer.Database
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_employees list = DB.tb_employees.First(t => t.id_emp == employees.id_emp);
 
+            
+
             list.ds_address = list.ds_address;
             list.nr_cellphone = list.nr_cellphone;
             list.ds_cep = list.ds_cep;
@@ -118,10 +124,10 @@ namespace Liriou_s_Burguer.Database
             list.dt_resignation = list.dt_resignation;
             list.nm_firstName = list.nm_firstName;
             list.nm_lastName = list.nm_lastName;
-           
-            list.ds_note= list.ds_note;
+
+            list.ds_note = list.ds_note;
             list.pw_password = list.pw_password;
-            
+
             DB.SaveChanges();
         }
 
