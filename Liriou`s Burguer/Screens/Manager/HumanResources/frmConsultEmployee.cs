@@ -132,7 +132,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
                 string nome = txtNome.Text.Trim();
                 string rg = txtRG.Text.Trim();
-                DateTime nascimento = dtpNascimento.Value;
+                string ano = txtAno.Text;
 
 
                 if (nome != string.Empty)
@@ -167,13 +167,22 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
             if (nome != string.Empty)
             {
-                txtRG.Enabled = false;
                 txtNome.Enabled = true;
+                mtxtAno.Enabled = true;
+                cboGênero.Enabled = true;
+
+                txtRG.Enabled = false;
+                cboDepartamento.Enabled = false;
+                cboCargo.Enabled = false;
             }
             else
             {
                 txtRG.Enabled = true;
                 txtNome.Enabled = true;
+                cboDepartamento.Enabled = true;
+                cboCargo.Enabled = true;
+                mtxtAno.Enabled = true;
+                cboGênero.Enabled = true;
             }
         }
 
@@ -183,13 +192,47 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
             if (rg != string.Empty)
             {
-                txtNome.Enabled = false;
                 txtRG.Enabled = true;
+
+                txtNome.Enabled = false;
+                cboDepartamento.Enabled = false;
+                cboCargo.Enabled = false;
+                mtxtAno.Enabled = false;
+                cboGênero.Enabled = false;
             }
             else
             {
                 txtRG.Enabled = true;
                 txtNome.Enabled = true;
+                cboDepartamento.Enabled = true;
+                cboCargo.Enabled = true;
+                mtxtAno.Enabled = true;
+                cboGênero.Enabled = true;
+            }
+        }
+
+        private void mtxtAno_TextChanged(object sender, EventArgs e)
+        {
+            string ano = mtxtAno.Text;
+
+            if (ano != string.Empty)
+            {
+                txtNome.Enabled = true;
+                mtxtAno.Enabled = true;
+                cboGênero.Enabled = true;
+
+                txtRG.Enabled = false;
+                cboDepartamento.Enabled = false;
+                cboCargo.Enabled = false;
+            }
+            else
+            {
+                txtRG.Enabled = true;
+                txtNome.Enabled = true;
+                cboDepartamento.Enabled = true;
+                cboCargo.Enabled = true;
+                mtxtAno.Enabled = true;
+                cboGênero.Enabled = true;
             }
         }
     }

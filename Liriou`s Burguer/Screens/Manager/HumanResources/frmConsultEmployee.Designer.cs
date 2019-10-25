@@ -39,7 +39,6 @@
             this.lblDepartamento = new System.Windows.Forms.Label();
             this.cboGênero = new System.Windows.Forms.ComboBox();
             this.lblGênero = new System.Windows.Forms.Label();
-            this.dtpNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNascimento = new System.Windows.Forms.Label();
             this.MenuLiriousBurguer = new System.Windows.Forms.MenuStrip();
             this.menuInício = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +63,7 @@
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.dgvConsultar = new System.Windows.Forms.DataGridView();
             this.txtRG = new System.Windows.Forms.TextBox();
+            this.mtxtAno = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
@@ -186,24 +186,15 @@
             this.lblGênero.TabIndex = 256;
             this.lblGênero.Text = "Gênero:";
             // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(168, 96);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(226, 23);
-            this.dtpNascimento.TabIndex = 255;
-            // 
             // lblNascimento
             // 
             this.lblNascimento.AutoSize = true;
             this.lblNascimento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNascimento.Location = new System.Drawing.Point(12, 97);
             this.lblNascimento.Name = "lblNascimento";
-            this.lblNascimento.Size = new System.Drawing.Size(150, 19);
+            this.lblNascimento.Size = new System.Drawing.Size(144, 19);
             this.lblNascimento.TabIndex = 254;
-            this.lblNascimento.Text = "Data de Nascimento:";
+            this.lblNascimento.Text = "Ano de nascimento:";
             // 
             // MenuLiriousBurguer
             // 
@@ -445,12 +436,22 @@
             this.txtRG.TabIndex = 555;
             this.txtRG.TextChanged += new System.EventHandler(this.txtRG_TextChanged);
             // 
+            // mtxtAno
+            // 
+            this.mtxtAno.Location = new System.Drawing.Point(162, 97);
+            this.mtxtAno.Mask = "0000";
+            this.mtxtAno.Name = "mtxtAno";
+            this.mtxtAno.Size = new System.Drawing.Size(232, 20);
+            this.mtxtAno.TabIndex = 557;
+            this.mtxtAno.TextChanged += new System.EventHandler(this.mtxtAno_TextChanged);
+            // 
             // frmConsultEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.mtxtAno);
             this.Controls.Add(this.txtRG);
             this.Controls.Add(this.dgvConsultar);
             this.Controls.Add(this.imgFechar);
@@ -466,7 +467,6 @@
             this.Controls.Add(this.lblDepartamento);
             this.Controls.Add(this.cboGênero);
             this.Controls.Add(this.lblGênero);
-            this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.lblNascimento);
             this.Controls.Add(this.MenuLiriousBurguer);
             this.Controls.Add(this.btnCadastrar);
@@ -513,7 +513,6 @@
         private System.Windows.Forms.Label lblDepartamento;
         private System.Windows.Forms.ComboBox cboGênero;
         private System.Windows.Forms.Label lblGênero;
-        private System.Windows.Forms.DateTimePicker dtpNascimento;
         private System.Windows.Forms.Label lblNascimento;
         private System.Windows.Forms.MenuStrip MenuLiriousBurguer;
         private System.Windows.Forms.ToolStripMenuItem menuInício;
@@ -537,5 +536,6 @@
         private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.DataGridView dgvConsultar;
         private System.Windows.Forms.TextBox txtRG;
+        private System.Windows.Forms.MaskedTextBox mtxtAno;
     }
 }

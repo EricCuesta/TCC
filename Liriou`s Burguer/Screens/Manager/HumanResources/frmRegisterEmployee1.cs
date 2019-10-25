@@ -90,7 +90,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             this.Hide();
             tela.Show();
 
-            tela.txtNome.Text = model.Nome;
+            
         }
 
         private void imgMinimizar_MouseEnter(object sender, EventArgs e)

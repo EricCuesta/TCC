@@ -56,15 +56,22 @@ namespace Liriou_s_Burguer.Business
             List<Database.Entities.tb_employees> list = DB.ConsultarData(data);
             return list;
         }
-        public void AlterarRecuperação(Database.Entities.tb_employees alterar)
+        public string AlterarRecuperação(string senha, string cpf)
         {
             Database.EmployeesDatabase dbemp = new Database.EmployeesDatabase();
 
-            if (alterar.pw_password == string.Empty || alterar.pw_password == "Senha do usuário")
-                throw new ArgumentException("O campo senha deve ser preenchido");
+            if (senha == string.Empty || senha == "Senha do usuário")
+            {
+                return "O campo senha deve ser preenchido";
+            }
+            else
+            {
+                dbemp.AlterarRecuperação(senha, cpf);
+            }
 
-            dbemp.AlterarRecuperação(alterar);
+            return "Alterado com sucesso!";
         }
+        
         public void Inserir(Database.Entities.tb_employees employees)
         {
             Database.EmployeesDatabase DB = new Database.EmployeesDatabase();

@@ -18,12 +18,12 @@ namespace Liriou_s_Burguer.Database
             return database;
         }
 
-        public void AlterarRecuperação(Entities.tb_employees alterar)
+        public void AlterarRecuperação(string senha, string cpf)
         {
             Entities.liriousdbEntities db = new Entities.liriousdbEntities();
-            Entities.tb_employees novo = db.tb_employees.First(u => u.id_emp == Model.UsuarioLogado.ID);
 
-            novo.pw_password = alterar.pw_password;
+            Entities.tb_employees novo = db.tb_employees.First(u => u.ds_cpf == cpf);
+            novo.pw_password = senha;
 
             db.SaveChanges();
         }
@@ -39,6 +39,25 @@ namespace Liriou_s_Burguer.Database
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             List<Entities.tb_employees> list = DB.tb_employees.ToList();
+
+            return list;
+        }
+        public List<Entities.tb_employees> ConsultarPorTudo (Entities.tb_employees emp,
+                                                             Entities.tb_department dept,
+                                                             Entities.tb_function func)
+        {
+            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
+            List < Entities.tb_employees > list = null;
+
+            if (emp.nm_firstName != null && emp.dt_birth != null &&
+                emp.ds_sex != null && dept.nm_department != null &&
+                func.nm_function != null)
+            {
+                list = DB.tb_employees.Where(t => t.nm_firstName == emp.nm_firstName &&
+                                             t.dt_birth == emp.dt_birth &&
+                                             t.ds_sex == emp.ds_sex).ToList();
+                
+            }
 
             return list;
         }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using Liriou_s_Burguer.Database.Entities;
+using Liriou_s_Burguer.Business;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,10 +18,10 @@ namespace Liriou_s_Burguer.Screens
         {
             InitializeComponent();
             CustomizeDesign();
-            panelOpção.Visible = false;
-            btnVerificar.Visible = false;
-            btnAlterar.Visible = true;
-            panelAlterarSenha.Visible = true;
+            panelOpção.Visible = true;
+            btnVerificar.Visible = true;
+            btnAlterar.Visible = false;
+            panelAlterarSenha.Visible = false;
         }
 
         private void btnVerificar_Click(object sender, EventArgs e)
@@ -62,24 +64,13 @@ namespace Liriou_s_Burguer.Screens
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-                employees.pw_password = txtSenha.Text.Trim();
+            string senha = txtSenha.Text;
+            string cpf = mtxtCPF.Text;
 
-                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
-                busemp.AlterarRecuperação(employees);
+            EmployeesBusiness EB = new EmployeesBusiness();
+            EB.AlterarRecuperação(senha, cpf);
 
-                MessageBox.Show("Senha Alterada com sucesso");
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            MessageBox.Show("ahahahh");
         }
 
         private void Modificar()
