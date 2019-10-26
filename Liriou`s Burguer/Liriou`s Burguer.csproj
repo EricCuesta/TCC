@@ -200,22 +200,22 @@
     <Compile Include="Screens\Employee\frmUnavailability.Designer.cs">
       <DependentUpon>frmUnavailability.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\frmRecovery.cs">
+    <Compile Include="Screens\Manager\Login\frmRecovery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\frmRecovery.Designer.cs">
+    <Compile Include="Screens\Manager\Login\frmRecovery.Designer.cs">
       <DependentUpon>frmRecovery.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\frmLogin.cs">
+    <Compile Include="Screens\Manager\Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\frmLogin.Designer.cs">
+    <Compile Include="Screens\Manager\Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\frmStart.cs">
+    <Compile Include="Screens\Manager\Login\frmStart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\frmStart.Designer.cs">
+    <Compile Include="Screens\Manager\Login\frmStart.Designer.cs">
       <DependentUpon>frmStart.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\HumanResources\frmChangeEmployee.cs">
@@ -272,11 +272,17 @@
     <Compile Include="Screens\Manager\HumanResources\frmRegisterEmployee1.Designer.cs">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\frmSplash.cs">
+    <Compile Include="Screens\Manager\Login\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\frmSplash.Designer.cs">
+    <Compile Include="Screens\Manager\Login\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Provider\frmRegister Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Provider\frmRegister Supplier.Designer.cs">
+      <DependentUpon>frmRegister Supplier.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -297,16 +303,16 @@
     <EmbeddedResource Include="Screens\Employee\frmUnavailability.resx">
       <DependentUpon>frmUnavailability.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\frmLogin.resx">
+    <EmbeddedResource Include="Screens\Manager\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\frmRecovery.resx">
+    <EmbeddedResource Include="Screens\Manager\Login\frmRecovery.resx">
       <DependentUpon>frmRecovery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\frmSplash.resx">
+    <EmbeddedResource Include="Screens\Manager\Login\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\frmStart.resx">
+    <EmbeddedResource Include="Screens\Manager\Login\frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmChangeEmployee.resx">
@@ -336,6 +342,9 @@
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee1.resx">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\Provider\frmRegister Supplier.resx">
+      <DependentUpon>frmRegister Supplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Database\Entities\LiriousDatabase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LiriousDatabase.Designer.cs</LastGenOutput>
@@ -359,8 +368,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Screens\Manager\Financial\" />
-    <Folder Include="Screens\Manager\Stock\" />
-    <Folder Include="Screens\Manager\Supplies\" />
+    <Folder Include="Screens\Manager\Products\" />
+    <Folder Include="Screens\Manager\Stock\Supplies\" />
     <Folder Include="Screens\Provider\" />
   </ItemGroup>
   <ItemGroup>

@@ -56,7 +56,8 @@ namespace Liriou_s_Burguer.Business
             List<Database.Entities.tb_employees> list = DB.ConsultarData(data);
             return list;
         }
-        public string AlterarRecuperação(string senha, string cpf)
+        public string AlterarRecuperação(string senha, string cpf,
+                                       string rg, string cell)
         {
             Database.EmployeesDatabase dbemp = new Database.EmployeesDatabase();
 
@@ -66,7 +67,7 @@ namespace Liriou_s_Burguer.Business
             }
             else
             {
-                dbemp.AlterarRecuperação(senha, cpf);
+                dbemp.AlterarRecuperação(senha, cpf, rg, cell);
             }
 
             return "Alterado com sucesso!";

@@ -28,26 +28,22 @@ namespace Liriou_s_Burguer.Screens
         {
             try
             {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+                tb_employees employees = new Database.Entities.tb_employees();
 
                 if (cboOpção.Text == "RG")
                 {
                     employees.ds_rg = mtxtRG.Text.Trim();
                 }
-                else if (cboOpção.Text == "CPF")
+                if (cboOpção.Text == "CPF")
                 {
                     employees.ds_cpf = mtxtCPF.Text.Trim();
                 }
-                else if (cboOpção.Text == "Número do Celular")
+                if (cboOpção.Text == "Número do Celular")
                 {
                     employees.nr_cellphone = mtxtCelular.Text.Trim();
                 }
-                else if (cboOpção.Text == "Número do Telefone")
-                {
-                    employees.nr_tellphone = mtxtTelefone.Text.Trim();
-                }
 
-                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
+                EmployeesBusiness busemp = new EmployeesBusiness();
                 busemp.Verificar(employees);
 
                 Modificar();
@@ -64,13 +60,15 @@ namespace Liriou_s_Burguer.Screens
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            string senha = txtSenha.Text;
             string cpf = mtxtCPF.Text;
+            string rg = mtxtRG.Text;
+            string cell = mtxtCelular.Text;
+            string senha = txtSenha.Text;
 
             EmployeesBusiness EB = new EmployeesBusiness();
-            EB.AlterarRecuperação(senha, cpf);
+            string r = EB.AlterarRecuperação(senha, cpf, rg, cell);
 
-            MessageBox.Show("ahahahh");
+            MessageBox.Show(r);
         }
 
         private void Modificar()
@@ -86,7 +84,6 @@ namespace Liriou_s_Burguer.Screens
             panelSubMenuRG.Visible = false;
             panelSubMenuCPF.Visible = false;
             panelSubMenuCelular.Visible = false;
-            panelSubMenuTelefone.Visible = false;
         }
 
         private void HideSubMenu()
@@ -97,8 +94,6 @@ namespace Liriou_s_Burguer.Screens
                 panelSubMenuCPF.Visible = false;
             if (panelSubMenuCelular.Visible == true)
                 panelSubMenuCelular.Visible = false;
-            if (panelSubMenuTelefone.Visible == true)
-                panelSubMenuTelefone.Visible = false;
         }
 
         private void ShowSubMenu(Panel SubMenu)
@@ -119,7 +114,6 @@ namespace Liriou_s_Burguer.Screens
             mtxtRG.Clear();
             mtxtCPF.Clear();
             mtxtCelular.Clear();
-            mtxtTelefone.Clear();
         }
 
         private void imgVoltar_Click(object sender, EventArgs e)
@@ -194,12 +188,6 @@ namespace Liriou_s_Burguer.Screens
             {
                 HideSubMenu();
                 ShowSubMenu(panelSubMenuCelular);
-                Limpar();
-            }
-            else if (cboOpção.Text == "Número do Telefone")
-            {
-                HideSubMenu();
-                ShowSubMenu(panelSubMenuTelefone);
                 Limpar();
             }
         }

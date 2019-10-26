@@ -114,8 +114,8 @@
             this.MenuLiriousBurguer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.MenuLiriousBurguer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.MenuLiriousBurguer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuInício,
             this.menuRH,
+            this.menuInício,
             this.MenuFinanceiro,
             this.MenuEstoque,
             this.MenuSuprimento});

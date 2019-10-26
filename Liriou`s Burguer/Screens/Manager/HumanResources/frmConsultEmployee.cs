@@ -132,7 +132,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
                 string nome = txtNome.Text.Trim();
                 string rg = txtRG.Text.Trim();
-                string ano = txtAno.Text;
+                string ano = mtxtAno.Text;
 
 
                 if (nome != string.Empty)

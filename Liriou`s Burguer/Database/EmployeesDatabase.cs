@@ -13,19 +13,33 @@ namespace Liriou_s_Burguer.Database
             Entities.liriousdbEntities db = new Entities.liriousdbEntities();
             Entities.tb_employees database = db.tb_employees.FirstOrDefault(l => l.ds_cpf == verificar.ds_cpf ||
                                                                                  l.ds_rg == verificar.ds_rg ||
-                                                                                 l.nr_tellphone == verificar.nr_tellphone ||
                                                                                  l.nr_cellphone == verificar.nr_cellphone);
             return database;
         }
 
-        public void AlterarRecuperação(string senha, string cpf)
+        public void AlterarRecuperação(string senha, string cpf,
+                                       string rg, string cell)
         {
             Entities.liriousdbEntities db = new Entities.liriousdbEntities();
 
-            Entities.tb_employees novo = db.tb_employees.First(u => u.ds_cpf == cpf);
-            novo.pw_password = senha;
-
-            db.SaveChanges();
+            if (cpf != "         /")
+            {
+                Entities.tb_employees novo = db.tb_employees.First(u => u.ds_cpf == cpf);
+                novo.pw_password = senha;
+                db.SaveChanges();
+            }
+            else if (rg != string.Empty)
+            {
+                Entities.tb_employees novo = db.tb_employees.First(u => u.ds_rg == rg);
+                novo.pw_password = senha;
+                db.SaveChanges();
+            }
+            else if (cell != string.Empty)
+            {
+                Entities.tb_employees novo = db.tb_employees.First(u => u.nr_cellphone == cell);
+                novo.pw_password = senha;
+                db.SaveChanges();
+            }
         }
         public void Inserir(Entities.tb_employees employees)
         {
