@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Liriou_s_Burguer.Screens.Manager.Stock.Provider
+namespace Liriou_s_Burguer.Screens.Manager.Financial.Client
 {
-    public partial class frmRegister_Supplier : Form
+    public partial class frmConsultCustomer : Form
     {
-        public frmRegister_Supplier()
+        public frmConsultCustomer()
         {
             InitializeComponent();
         }
