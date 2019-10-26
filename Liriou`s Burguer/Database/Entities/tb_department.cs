@@ -17,5 +17,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public int id_department { get; set; }
         public int id_emp { get; set; }
         public string nm_department { get; set; }
+    
+        public virtual tb_employees tb_employees { get; set; }
     }
 }

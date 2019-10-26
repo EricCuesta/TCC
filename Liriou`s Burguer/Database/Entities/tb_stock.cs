@@ -14,7 +14,19 @@ namespace Liriou_s_Burguer.Database.Entities
     
     public partial class tb_stock
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_stock()
+        {
+            this.tb_product = new HashSet<tb_product>();
+            this.tb_supply = new HashSet<tb_supply>();
+        }
+    
         public int id_stock { get; set; }
         public string ds_place { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_product> tb_product { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_supply> tb_supply { get; set; }
     }
 }

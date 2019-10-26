@@ -14,6 +14,16 @@ namespace Liriou_s_Burguer.Database.Entities
     
     public partial class tb_employees
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_employees()
+        {
+            this.tb_department = new HashSet<tb_department>();
+            this.tb_discounts = new HashSet<tb_discounts>();
+            this.tb_financial = new HashSet<tb_financial>();
+            this.tb_function = new HashSet<tb_function>();
+            this.tb_timecard = new HashSet<tb_timecard>();
+        }
+    
         public int id_emp { get; set; }
         public string nm_firstName { get; set; }
         public string nm_lastName { get; set; }
@@ -33,5 +43,16 @@ namespace Liriou_s_Burguer.Database.Entities
         public string ds_note { get; set; }
         public string nr_cellphone { get; set; }
         public string nr_tellphone { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_department> tb_department { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_discounts> tb_discounts { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_financial> tb_financial { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_function> tb_function { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_timecard> tb_timecard { get; set; }
     }
 }

@@ -14,6 +14,13 @@ namespace Liriou_s_Burguer.Database.Entities
     
     public partial class tb_enterprise
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_enterprise()
+        {
+            this.tb_cpp = new HashSet<tb_cpp>();
+            this.tb_cnae = new HashSet<tb_cnae>();
+        }
+    
         public int id_enterprise { get; set; }
         public string nm_enterprise { get; set; }
         public string nm_commercialName { get; set; }
@@ -26,5 +33,10 @@ namespace Liriou_s_Burguer.Database.Entities
         public string ds_note { get; set; }
         public string nr_cellphone { get; set; }
         public string nr_tellphone { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_cpp> tb_cpp { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_cnae> tb_cnae { get; set; }
     }
 }
