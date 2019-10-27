@@ -25,7 +25,7 @@ namespace Liriou_s_Burguer.Screens
             {
                 timer1.Stop();
 
-                frmStart start = new frmStart();
+                frmLogin start = new frmLogin();
                 start.Show();
                 Hide();
             }

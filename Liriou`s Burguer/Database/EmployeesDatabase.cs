@@ -121,12 +121,9 @@ namespace Liriou_s_Burguer.Database
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_employees list = DB.tb_employees.First(t => t.id_emp == employees.id_emp);
 
-            
-
             list.ds_address = list.ds_address;
             list.nr_cellphone = list.nr_cellphone;
             list.ds_cep = list.ds_cep;
-            list.ds_country = list.ds_country;
             list.ds_cpf = list.ds_cpf;
             list.nr_tellphone = list.nr_tellphone;
             list.ds_email = list.ds_email;

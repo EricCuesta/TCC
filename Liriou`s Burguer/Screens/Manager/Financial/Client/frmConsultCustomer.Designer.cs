@@ -38,7 +38,7 @@
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.lblRG = new System.Windows.Forms.Label();
-            this.dgvConsultarProduto = new System.Windows.Forms.DataGridView();
+            this.dgvConsultarCliente = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +61,7 @@
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProduto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -93,7 +93,7 @@
             this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.mtxtRG);
             this.panel.Controls.Add(this.lblRG);
-            this.panel.Controls.Add(this.dgvConsultarProduto);
+            this.panel.Controls.Add(this.dgvConsultarCliente);
             this.panel.Controls.Add(this.btnConsultar);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
@@ -199,12 +199,12 @@
             this.lblRG.TabIndex = 652;
             this.lblRG.Text = "RG:";
             // 
-            // dgvConsultarProduto
+            // dgvConsultarCliente
             // 
-            this.dgvConsultarProduto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvConsultarProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvConsultarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvConsultarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarCliente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Coluna1,
             this.Coluna2,
             this.Coluna4,
@@ -218,11 +218,11 @@
             this.Coluna11,
             this.Coluna12,
             this.Coluna13});
-            this.dgvConsultarProduto.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConsultarProduto.Location = new System.Drawing.Point(3, 109);
-            this.dgvConsultarProduto.Name = "dgvConsultarProduto";
-            this.dgvConsultarProduto.Size = new System.Drawing.Size(703, 306);
-            this.dgvConsultarProduto.TabIndex = 651;
+            this.dgvConsultarCliente.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvConsultarCliente.Location = new System.Drawing.Point(3, 109);
+            this.dgvConsultarCliente.Name = "dgvConsultarCliente";
+            this.dgvConsultarCliente.Size = new System.Drawing.Size(703, 306);
+            this.dgvConsultarCliente.TabIndex = 651;
             // 
             // Coluna1
             // 
@@ -398,7 +398,7 @@
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProduto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -411,7 +411,7 @@
 
         private System.Windows.Forms.Label lblConsultarCliente;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.DataGridView dgvConsultarProduto;
+        private System.Windows.Forms.DataGridView dgvConsultarCliente;
         private System.Windows.Forms.Button btnConsultar;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;

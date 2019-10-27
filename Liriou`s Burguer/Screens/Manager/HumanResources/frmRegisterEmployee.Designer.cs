@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel = new System.Windows.Forms.Panel();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
@@ -108,61 +108,61 @@
             this.lblCadastrarFuncionário.Text = "Cadastrar Funcionário";
             this.lblCadastrarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel1
+            // panel
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnContinuar);
-            this.panel1.Controls.Add(this.txtSenha);
-            this.panel1.Controls.Add(this.lblSenha);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.lblEmail);
-            this.panel1.Controls.Add(this.dataGridView15);
-            this.panel1.Controls.Add(this.dataGridView14);
-            this.panel1.Controls.Add(this.mtxtTelefone);
-            this.panel1.Controls.Add(this.lblTelefone);
-            this.panel1.Controls.Add(this.mtxtCelular);
-            this.panel1.Controls.Add(this.dataGridView12);
-            this.panel1.Controls.Add(this.dataGridView11);
-            this.panel1.Controls.Add(this.lblCelular);
-            this.panel1.Controls.Add(this.dataGridView13);
-            this.panel1.Controls.Add(this.dataGridView10);
-            this.panel1.Controls.Add(this.dataGridView9);
-            this.panel1.Controls.Add(this.dataGridView5);
-            this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Controls.Add(this.txtComplemento);
-            this.panel1.Controls.Add(this.lblComplemento);
-            this.panel1.Controls.Add(this.txtEndereço);
-            this.panel1.Controls.Add(this.lblEndereço);
-            this.panel1.Controls.Add(this.mtxtCEP);
-            this.panel1.Controls.Add(this.lblCEP);
-            this.panel1.Controls.Add(this.cboEstado);
-            this.panel1.Controls.Add(this.dataGridView8);
-            this.panel1.Controls.Add(this.lblEstado);
-            this.panel1.Controls.Add(this.dtpNascimento);
-            this.panel1.Controls.Add(this.dataGridView7);
-            this.panel1.Controls.Add(this.lblNascimento);
-            this.panel1.Controls.Add(this.cboSexo);
-            this.panel1.Controls.Add(this.lblSexo);
-            this.panel1.Controls.Add(this.nudDependentes);
-            this.panel1.Controls.Add(this.lblDependentes);
-            this.panel1.Controls.Add(this.dataGridView4);
-            this.panel1.Controls.Add(this.mtxtRG);
-            this.panel1.Controls.Add(this.lblRG);
-            this.panel1.Controls.Add(this.mtxtCPF);
-            this.panel1.Controls.Add(this.lblCPF);
-            this.panel1.Controls.Add(this.dataGridView6);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.txtSobrenome);
-            this.panel1.Controls.Add(this.lblSobrenome);
-            this.panel1.Controls.Add(this.txtNome);
-            this.panel1.Controls.Add(this.lblNome);
-            this.panel1.Location = new System.Drawing.Point(1, 40);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(709, 418);
-            this.panel1.TabIndex = 562;
+            this.panel.Controls.Add(this.btnContinuar);
+            this.panel.Controls.Add(this.txtSenha);
+            this.panel.Controls.Add(this.lblSenha);
+            this.panel.Controls.Add(this.txtEmail);
+            this.panel.Controls.Add(this.lblEmail);
+            this.panel.Controls.Add(this.dataGridView15);
+            this.panel.Controls.Add(this.dataGridView14);
+            this.panel.Controls.Add(this.mtxtTelefone);
+            this.panel.Controls.Add(this.lblTelefone);
+            this.panel.Controls.Add(this.mtxtCelular);
+            this.panel.Controls.Add(this.dataGridView12);
+            this.panel.Controls.Add(this.dataGridView11);
+            this.panel.Controls.Add(this.lblCelular);
+            this.panel.Controls.Add(this.dataGridView13);
+            this.panel.Controls.Add(this.dataGridView10);
+            this.panel.Controls.Add(this.dataGridView9);
+            this.panel.Controls.Add(this.dataGridView5);
+            this.panel.Controls.Add(this.dataGridView3);
+            this.panel.Controls.Add(this.txtComplemento);
+            this.panel.Controls.Add(this.lblComplemento);
+            this.panel.Controls.Add(this.txtEndereço);
+            this.panel.Controls.Add(this.lblEndereço);
+            this.panel.Controls.Add(this.mtxtCEP);
+            this.panel.Controls.Add(this.lblCEP);
+            this.panel.Controls.Add(this.cboEstado);
+            this.panel.Controls.Add(this.dataGridView8);
+            this.panel.Controls.Add(this.lblEstado);
+            this.panel.Controls.Add(this.dtpNascimento);
+            this.panel.Controls.Add(this.dataGridView7);
+            this.panel.Controls.Add(this.lblNascimento);
+            this.panel.Controls.Add(this.cboSexo);
+            this.panel.Controls.Add(this.lblSexo);
+            this.panel.Controls.Add(this.nudDependentes);
+            this.panel.Controls.Add(this.lblDependentes);
+            this.panel.Controls.Add(this.dataGridView4);
+            this.panel.Controls.Add(this.mtxtRG);
+            this.panel.Controls.Add(this.lblRG);
+            this.panel.Controls.Add(this.mtxtCPF);
+            this.panel.Controls.Add(this.lblCPF);
+            this.panel.Controls.Add(this.dataGridView6);
+            this.panel.Controls.Add(this.dataGridView1);
+            this.panel.Controls.Add(this.dataGridView2);
+            this.panel.Controls.Add(this.txtSobrenome);
+            this.panel.Controls.Add(this.lblSobrenome);
+            this.panel.Controls.Add(this.txtNome);
+            this.panel.Controls.Add(this.lblNome);
+            this.panel.Location = new System.Drawing.Point(1, 40);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(709, 418);
+            this.panel.TabIndex = 562;
             // 
             // btnContinuar
             // 
@@ -171,7 +171,7 @@
             this.btnContinuar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuar.Location = new System.Drawing.Point(304, 377);
+            this.btnContinuar.Location = new System.Drawing.Point(301, 377);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(107, 30);
             this.btnContinuar.TabIndex = 644;
@@ -210,10 +210,10 @@
             this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(69, 228);
+            this.txtEmail.Location = new System.Drawing.Point(63, 228);
             this.txtEmail.MaxLength = 64;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(277, 23);
+            this.txtEmail.Size = new System.Drawing.Size(283, 23);
             this.txtEmail.TabIndex = 641;
             // 
             // lblEmail
@@ -222,7 +222,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(9, 230);
+            this.lblEmail.Location = new System.Drawing.Point(3, 230);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(54, 19);
             this.lblEmail.TabIndex = 640;
@@ -617,10 +617,10 @@
             this.mtxtRG.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtRG.Location = new System.Drawing.Point(400, 38);
+            this.mtxtRG.Location = new System.Drawing.Point(42, 38);
             this.mtxtRG.Mask = "00.000.000-0";
             this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(306, 23);
+            this.mtxtRG.Size = new System.Drawing.Size(305, 23);
             this.mtxtRG.TabIndex = 603;
             // 
             // lblRG
@@ -629,7 +629,7 @@
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblRG.Location = new System.Drawing.Point(361, 38);
+            this.lblRG.Location = new System.Drawing.Point(3, 40);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 602;
@@ -641,10 +641,10 @@
             this.mtxtCPF.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.Location = new System.Drawing.Point(60, 38);
+            this.mtxtCPF.Location = new System.Drawing.Point(406, 38);
             this.mtxtCPF.Mask = "000000000/00";
             this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(287, 23);
+            this.mtxtCPF.Size = new System.Drawing.Size(300, 23);
             this.mtxtCPF.TabIndex = 601;
             // 
             // lblCPF
@@ -653,7 +653,7 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCPF.Location = new System.Drawing.Point(3, 39);
+            this.lblCPF.Location = new System.Drawing.Point(361, 40);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(39, 19);
             this.lblCPF.TabIndex = 601;
@@ -748,7 +748,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(710, 459);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.lblCadastrarFuncionário);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegisterEmployee";
@@ -757,8 +757,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Employee";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
@@ -783,7 +783,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblCadastrarFuncionário;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label lblNome;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSobrenome;

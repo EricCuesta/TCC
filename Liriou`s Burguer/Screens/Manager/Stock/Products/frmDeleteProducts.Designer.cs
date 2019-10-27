@@ -30,9 +30,8 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
-            this.rtxDescrição = new System.Windows.Forms.RichTextBox();
+            this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
             this.lblDescrição = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.lblValor = new System.Windows.Forms.Label();
@@ -52,9 +51,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblDeletarProduto = new System.Windows.Forms.Label();
+            this.nudId = new System.Windows.Forms.NumericUpDown();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
@@ -63,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -70,10 +70,10 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.nudId);
+            this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.lblID);
-            this.panel.Controls.Add(this.rtxDescrição);
+            this.panel.Controls.Add(this.rtxtDescrição);
             this.panel.Controls.Add(this.lblDescrição);
             this.panel.Controls.Add(this.nudValor);
             this.panel.Controls.Add(this.lblValor);
@@ -108,14 +108,6 @@
             this.dataGridView4.Size = new System.Drawing.Size(709, 2);
             this.dataGridView4.TabIndex = 660;
             // 
-            // nudId
-            // 
-            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(45, 6);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(120, 23);
-            this.nudId.TabIndex = 659;
-            // 
             // lblID
             // 
             this.lblID.AutoSize = true;
@@ -127,16 +119,16 @@
             this.lblID.TabIndex = 658;
             this.lblID.Text = "ID:";
             // 
-            // rtxDescrição
+            // rtxtDescrição
             // 
-            this.rtxDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxDescrição.Location = new System.Drawing.Point(7, 124);
-            this.rtxDescrição.MaxLength = 256;
-            this.rtxDescrição.Name = "rtxDescrição";
-            this.rtxDescrição.ReadOnly = true;
-            this.rtxDescrição.Size = new System.Drawing.Size(698, 170);
-            this.rtxDescrição.TabIndex = 657;
-            this.rtxDescrição.Text = "";
+            this.rtxtDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtDescrição.Location = new System.Drawing.Point(7, 124);
+            this.rtxtDescrição.MaxLength = 256;
+            this.rtxtDescrição.Name = "rtxtDescrição";
+            this.rtxtDescrição.ReadOnly = true;
+            this.rtxtDescrição.Size = new System.Drawing.Size(698, 170);
+            this.rtxtDescrição.TabIndex = 657;
+            this.rtxtDescrição.Text = "";
             // 
             // lblDescrição
             // 
@@ -156,7 +148,7 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
-            this.nudValor.Location = new System.Drawing.Point(594, 71);
+            this.nudValor.Location = new System.Drawing.Point(594, 72);
             this.nudValor.Name = "nudValor";
             this.nudValor.ReadOnly = true;
             this.nudValor.Size = new System.Drawing.Size(111, 20);
@@ -190,7 +182,7 @@
             this.nudQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQuantidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantidade.Location = new System.Drawing.Point(396, 71);
+            this.nudQuantidade.Location = new System.Drawing.Point(396, 72);
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.ReadOnly = true;
             this.nudQuantidade.Size = new System.Drawing.Size(109, 20);
@@ -267,7 +259,7 @@
             this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Location = new System.Drawing.Point(78, 39);
+            this.cboEstoque.Location = new System.Drawing.Point(78, 38);
             this.cboEstoque.MaxLength = 32;
             this.cboEstoque.Name = "cboEstoque";
             this.cboEstoque.Size = new System.Drawing.Size(269, 23);
@@ -367,6 +359,14 @@
             this.lblDeletarProduto.Text = "Deletar Produto";
             this.lblDeletarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // nudId
+            // 
+            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudId.Location = new System.Drawing.Point(45, 6);
+            this.nudId.Name = "nudId";
+            this.nudId.Size = new System.Drawing.Size(121, 23);
+            this.nudId.TabIndex = 661;
+            // 
             // frmDeleteProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,7 +382,6 @@
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
@@ -391,6 +390,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -400,9 +400,8 @@
 
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.NumericUpDown nudId;
         private System.Windows.Forms.Label lblID;
-        private System.Windows.Forms.RichTextBox rtxDescrição;
+        private System.Windows.Forms.RichTextBox rtxtDescrição;
         private System.Windows.Forms.Label lblDescrição;
         public System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.Label lblValor;
@@ -422,5 +421,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblDeletarProduto;
+        private System.Windows.Forms.NumericUpDown nudId;
     }
 }

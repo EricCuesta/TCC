@@ -165,5 +165,119 @@ namespace Liriou_s_Burguer.Screens.Manager
         {
             this.WindowState = FormWindowState.Minimized;
         }
+
+        private void btnCadastrarCliente_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Client.frmRegisterCustomer());
+            HideSubMenu();
+        }
+
+        private void btnConsultarCliente_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Client.frmConsultCustomer());
+            HideSubMenu();
+        }
+
+        private void btnAlterarCliente_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Client.frmChangeCustomer());
+            HideSubMenu();
+        }
+
+        private void btnDeletarCliente_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Client.frmDeleteClient());
+            HideSubMenu();
+        }
+
+        private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Provider.frmRegisterSupplier());
+            HideSubMenu();
+        }
+
+        private void btnConsultarFornecedor_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Provider.frmConsultSupplier());
+            HideSubMenu();
+        }
+
+        private void btnAlterarFornecedor_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Provider.frmChangeProvider());
+            HideSubMenu();
+        }
+
+        private void btnDeletarFornecedor_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.Provider.frmDeleteSupplier());
+            HideSubMenu();
+        }
+
+        private void btnCadastrarProdutos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Products.frmRegisterProducts());
+            HideSubMenu();
+        }
+
+        private void btnConsultarProdutos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Products.frmBrowseProducts());
+            HideSubMenu();
+        }
+
+        private void btnAlterarProdutos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Products.frmChangeProducts());
+            HideSubMenu();
+        }
+
+        private void btnDeletarProdutos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Products.frmDeleteProducts());
+            HideSubMenu();
+        }
+
+        private void btnCadastrarEstoque_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.frmRegisterStock());
+            HideSubMenu();
+        }
+
+        private void btnAlterarEstoque_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.frmChangeInventory());
+            HideSubMenu();
+        }
+
+        private void btnDeletarEstoque_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.frmDeleteInventory());
+            HideSubMenu();
+        }
+
+        private void btnCadastrarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Supplies.frmRegisterSupplies());
+            HideSubMenu();
+        }
+
+        private void btnConsultarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Supplies.frmConsultSupplies());
+            HideSubMenu();
+        }
+
+        private void btnAlterarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Supplies.frmChangeSupplies());
+            HideSubMenu();
+        }
+
+        private void btnDeletarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Supplies.frmDeleteSupplies());
+            HideSubMenu();
+        }
     }
 }

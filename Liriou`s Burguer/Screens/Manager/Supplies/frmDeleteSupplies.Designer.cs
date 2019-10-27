@@ -114,7 +114,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblID.Location = new System.Drawing.Point(2, 6);
+            this.lblID.Location = new System.Drawing.Point(2, 5);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(37, 26);
             this.lblID.TabIndex = 658;
@@ -149,7 +149,7 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
-            this.nudValor.Location = new System.Drawing.Point(436, 71);
+            this.nudValor.Location = new System.Drawing.Point(436, 72);
             this.nudValor.Name = "nudValor";
             this.nudValor.ReadOnly = true;
             this.nudValor.Size = new System.Drawing.Size(269, 20);
@@ -183,7 +183,7 @@
             this.nudQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQuantidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantidade.Location = new System.Drawing.Point(103, 71);
+            this.nudQuantidade.Location = new System.Drawing.Point(103, 72);
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.ReadOnly = true;
             this.nudQuantidade.Size = new System.Drawing.Size(244, 20);
@@ -234,7 +234,7 @@
             this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Location = new System.Drawing.Point(78, 39);
+            this.cboEstoque.Location = new System.Drawing.Point(78, 38);
             this.cboEstoque.MaxLength = 32;
             this.cboEstoque.Name = "cboEstoque";
             this.cboEstoque.Size = new System.Drawing.Size(269, 23);

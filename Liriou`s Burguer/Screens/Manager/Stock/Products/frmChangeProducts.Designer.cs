@@ -32,7 +32,7 @@
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
-            this.rtxDescrição = new System.Windows.Forms.RichTextBox();
+            this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
             this.lblDescrição = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.lblValor = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.nudId);
             this.panel.Controls.Add(this.lblID);
-            this.panel.Controls.Add(this.rtxDescrição);
+            this.panel.Controls.Add(this.rtxtDescrição);
             this.panel.Controls.Add(this.lblDescrição);
             this.panel.Controls.Add(this.nudValor);
             this.panel.Controls.Add(this.lblValor);
@@ -111,9 +111,9 @@
             // nudId
             // 
             this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(46, 6);
+            this.nudId.Location = new System.Drawing.Point(45, 6);
             this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(120, 23);
+            this.nudId.Size = new System.Drawing.Size(121, 23);
             this.nudId.TabIndex = 659;
             // 
             // lblID
@@ -121,21 +121,21 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblID.Location = new System.Drawing.Point(3, 6);
+            this.lblID.Location = new System.Drawing.Point(2, 5);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(37, 26);
             this.lblID.TabIndex = 658;
             this.lblID.Text = "ID:";
             // 
-            // rtxDescrição
+            // rtxtDescrição
             // 
-            this.rtxDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxDescrição.Location = new System.Drawing.Point(7, 124);
-            this.rtxDescrição.MaxLength = 256;
-            this.rtxDescrição.Name = "rtxDescrição";
-            this.rtxDescrição.Size = new System.Drawing.Size(698, 170);
-            this.rtxDescrição.TabIndex = 657;
-            this.rtxDescrição.Text = "";
+            this.rtxtDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtDescrição.Location = new System.Drawing.Point(7, 124);
+            this.rtxtDescrição.MaxLength = 256;
+            this.rtxtDescrição.Name = "rtxtDescrição";
+            this.rtxtDescrição.Size = new System.Drawing.Size(698, 170);
+            this.rtxtDescrição.TabIndex = 657;
+            this.rtxtDescrição.Text = "";
             // 
             // lblDescrição
             // 
@@ -155,7 +155,7 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
-            this.nudValor.Location = new System.Drawing.Point(594, 71);
+            this.nudValor.Location = new System.Drawing.Point(594, 72);
             this.nudValor.Name = "nudValor";
             this.nudValor.Size = new System.Drawing.Size(111, 20);
             this.nudValor.TabIndex = 655;
@@ -188,7 +188,7 @@
             this.nudQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQuantidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantidade.Location = new System.Drawing.Point(396, 71);
+            this.nudQuantidade.Location = new System.Drawing.Point(396, 72);
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.Size = new System.Drawing.Size(109, 20);
             this.nudQuantidade.TabIndex = 652;
@@ -263,7 +263,7 @@
             this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Location = new System.Drawing.Point(78, 39);
+            this.cboEstoque.Location = new System.Drawing.Point(78, 38);
             this.cboEstoque.MaxLength = 32;
             this.cboEstoque.Name = "cboEstoque";
             this.cboEstoque.Size = new System.Drawing.Size(269, 23);
@@ -395,7 +395,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.RichTextBox rtxDescrição;
+        private System.Windows.Forms.RichTextBox rtxtDescrição;
         private System.Windows.Forms.Label lblDescrição;
         public System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.Label lblValor;

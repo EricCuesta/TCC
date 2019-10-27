@@ -31,7 +31,6 @@ namespace Liriou_s_Burguer.Database
             list.ds_Address = list.ds_Address;
             list.nr_cellphone = list.nr_cellphone;
             list.ds_cep = list.ds_cep;
-            list.ds_country = list.ds_country;
             list.ds_cpf = list.ds_cpf;
             list.ds_email = list.ds_email;
             list.ds_sex = list.ds_sex;

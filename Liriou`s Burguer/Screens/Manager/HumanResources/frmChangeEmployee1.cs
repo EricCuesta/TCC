@@ -31,7 +31,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void imgVoltar_Click(object sender, EventArgs e)
@@ -56,35 +55,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             tela.txtSenha.Text = employees.Password;
             tela.ShowDialog();
             tela.Show();
-        }
-
-        private void imgMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
-        {
-            imgMinimizar.Image = Properties.Resources.Minimizar;
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
-        }
-
-        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
-        {
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
-            imgMinimizar.Image = Properties.Resources.Minimizar;
-        }
-
-        private void imgVoltar_MouseEnter(object sender, EventArgs e)
-        {
-            imgVoltar.Image = Properties.Resources.Voltar;
-            imgVoltar.Image = Properties.Resources.Voltar02;
-        }
-
-        private void imgVoltar_MouseLeave(object sender, EventArgs e)
-        {
-            imgVoltar.Image = Properties.Resources.Voltar02;
-            imgVoltar.Image = Properties.Resources.Voltar;
         }
     }
 }

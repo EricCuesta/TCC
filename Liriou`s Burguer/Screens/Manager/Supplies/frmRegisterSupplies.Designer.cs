@@ -110,7 +110,7 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
-            this.nudValor.Location = new System.Drawing.Point(436, 39);
+            this.nudValor.Location = new System.Drawing.Point(436, 40);
             this.nudValor.Name = "nudValor";
             this.nudValor.Size = new System.Drawing.Size(269, 20);
             this.nudValor.TabIndex = 655;
@@ -143,7 +143,7 @@
             this.nudQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQuantidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantidade.Location = new System.Drawing.Point(103, 39);
+            this.nudQuantidade.Location = new System.Drawing.Point(103, 40);
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.Size = new System.Drawing.Size(244, 20);
             this.nudQuantidade.TabIndex = 652;
@@ -192,7 +192,7 @@
             this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Location = new System.Drawing.Point(78, 7);
+            this.cboEstoque.Location = new System.Drawing.Point(78, 6);
             this.cboEstoque.MaxLength = 32;
             this.cboEstoque.Name = "cboEstoque";
             this.cboEstoque.Size = new System.Drawing.Size(269, 23);

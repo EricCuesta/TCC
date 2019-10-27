@@ -40,6 +40,11 @@
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
+            this.imgGoogle = new System.Windows.Forms.PictureBox();
+            this.imgLinkedIn = new System.Windows.Forms.PictureBox();
+            this.imgFacebook = new System.Windows.Forms.PictureBox();
+            this.imgInstagram = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
@@ -47,6 +52,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGoogle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLinkedIn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFacebook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgInstagram)).BeginInit();
             this.SuspendLayout();
             // 
             // lblRecuperarSenha
@@ -55,7 +64,7 @@
             this.lblRecuperarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRecuperarSenha.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRecuperarSenha.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRecuperarSenha.Location = new System.Drawing.Point(142, 480);
+            this.lblRecuperarSenha.Location = new System.Drawing.Point(141, 476);
             this.lblRecuperarSenha.Name = "lblRecuperarSenha";
             this.lblRecuperarSenha.Size = new System.Drawing.Size(105, 15);
             this.lblRecuperarSenha.TabIndex = 243;
@@ -68,7 +77,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(70, 300);
+            this.txtEmail.Location = new System.Drawing.Point(70, 302);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(313, 19);
             this.txtEmail.TabIndex = 241;
@@ -82,7 +91,7 @@
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Location = new System.Drawing.Point(131, 441);
+            this.btnEntrar.Location = new System.Drawing.Point(128, 426);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(131, 36);
             this.btnEntrar.TabIndex = 240;
@@ -95,7 +104,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(70, 399);
+            this.dataGridView2.Location = new System.Drawing.Point(70, 401);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(313, 2);
             this.dataGridView2.TabIndex = 239;
@@ -105,7 +114,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 325);
+            this.dataGridView1.Location = new System.Drawing.Point(70, 327);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(313, 2);
             this.dataGridView1.TabIndex = 238;
@@ -129,7 +138,7 @@
             // imgSenha
             // 
             this.imgSenha.Image = global::Liriou_s_Burguer.Properties.Resources.Senha;
-            this.imgSenha.Location = new System.Drawing.Point(20, 356);
+            this.imgSenha.Location = new System.Drawing.Point(20, 358);
             this.imgSenha.Name = "imgSenha";
             this.imgSenha.Size = new System.Drawing.Size(45, 45);
             this.imgSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -139,7 +148,7 @@
             // imgEmail
             // 
             this.imgEmail.Image = global::Liriou_s_Burguer.Properties.Resources.Email;
-            this.imgEmail.Location = new System.Drawing.Point(20, 282);
+            this.imgEmail.Location = new System.Drawing.Point(20, 284);
             this.imgEmail.Name = "imgEmail";
             this.imgEmail.Size = new System.Drawing.Size(45, 45);
             this.imgEmail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -149,9 +158,9 @@
             // imgLogotipo
             // 
             this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
-            this.imgLogotipo.Location = new System.Drawing.Point(7, 37);
+            this.imgLogotipo.Location = new System.Drawing.Point(12, 37);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(386, 227);
+            this.imgLogotipo.Size = new System.Drawing.Size(376, 239);
             this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 235;
             this.imgLogotipo.TabStop = false;
@@ -178,7 +187,7 @@
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(70, 374);
+            this.txtSenha.Location = new System.Drawing.Point(70, 376);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(313, 19);
             this.txtSenha.TabIndex = 247;
@@ -187,12 +196,76 @@
             this.txtSenha.Enter += new System.EventHandler(this.txtSenha_Enter);
             this.txtSenha.Leave += new System.EventHandler(this.txtSenha_Leave);
             // 
+            // imgGoogle
+            // 
+            this.imgGoogle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgGoogle.Image = global::Liriou_s_Burguer.Properties.Resources.Google;
+            this.imgGoogle.Location = new System.Drawing.Point(106, 6);
+            this.imgGoogle.Name = "imgGoogle";
+            this.imgGoogle.Size = new System.Drawing.Size(20, 20);
+            this.imgGoogle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgGoogle.TabIndex = 251;
+            this.imgGoogle.TabStop = false;
+            this.imgGoogle.Click += new System.EventHandler(this.imgGoogle_Click);
+            // 
+            // imgLinkedIn
+            // 
+            this.imgLinkedIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgLinkedIn.Image = global::Liriou_s_Burguer.Properties.Resources.Linkedin;
+            this.imgLinkedIn.Location = new System.Drawing.Point(158, 6);
+            this.imgLinkedIn.Name = "imgLinkedIn";
+            this.imgLinkedIn.Size = new System.Drawing.Size(20, 20);
+            this.imgLinkedIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgLinkedIn.TabIndex = 250;
+            this.imgLinkedIn.TabStop = false;
+            this.imgLinkedIn.Click += new System.EventHandler(this.imgLinkedIn_Click);
+            // 
+            // imgFacebook
+            // 
+            this.imgFacebook.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFacebook.Image = global::Liriou_s_Burguer.Properties.Resources.Facebook;
+            this.imgFacebook.Location = new System.Drawing.Point(210, 6);
+            this.imgFacebook.Name = "imgFacebook";
+            this.imgFacebook.Size = new System.Drawing.Size(20, 20);
+            this.imgFacebook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFacebook.TabIndex = 249;
+            this.imgFacebook.TabStop = false;
+            this.imgFacebook.Click += new System.EventHandler(this.imgFacebook_Click);
+            // 
+            // imgInstagram
+            // 
+            this.imgInstagram.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgInstagram.Image = global::Liriou_s_Burguer.Properties.Resources.Instagram;
+            this.imgInstagram.Location = new System.Drawing.Point(262, 6);
+            this.imgInstagram.Name = "imgInstagram";
+            this.imgInstagram.Size = new System.Drawing.Size(20, 20);
+            this.imgInstagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgInstagram.TabIndex = 248;
+            this.imgInstagram.TabStop = false;
+            this.imgInstagram.Click += new System.EventHandler(this.imgInstagram_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(9, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.TabIndex = 252;
+            this.label1.Text = "Redes Sociais:";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(400, 500);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.imgGoogle);
+            this.Controls.Add(this.imgLinkedIn);
+            this.Controls.Add(this.imgFacebook);
+            this.Controls.Add(this.imgInstagram);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.imgFechar);
             this.Controls.Add(this.imgMinimizar);
@@ -215,6 +288,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGoogle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgLinkedIn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFacebook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgInstagram)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,5 +310,10 @@
         private System.Windows.Forms.PictureBox imgLogotipo;
         private System.Windows.Forms.PictureBox imgFechar;
         private System.Windows.Forms.TextBox txtSenha;
+        private System.Windows.Forms.PictureBox imgGoogle;
+        private System.Windows.Forms.PictureBox imgLinkedIn;
+        private System.Windows.Forms.PictureBox imgFacebook;
+        private System.Windows.Forms.PictureBox imgInstagram;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -30,6 +30,9 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nudQtdMáximo = new System.Windows.Forms.NumericUpDown();
             this.lblQtdMáximo = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
@@ -42,9 +45,6 @@
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblCadastrarEstoque = new System.Windows.Forms.Label();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdMáximo)).BeginInit();
@@ -84,10 +84,31 @@
             this.Coluna1,
             this.Coluna2,
             this.Coluna3});
-            this.dgvConsultarEstoque.Location = new System.Drawing.Point(11, 109);
+            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 109);
             this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
-            this.dgvConsultarEstoque.Size = new System.Drawing.Size(686, 298);
-            this.dgvConsultarEstoque.TabIndex = 655;
+            this.dgvConsultarEstoque.Size = new System.Drawing.Size(703, 306);
+            this.dgvConsultarEstoque.TabIndex = 664;
+            // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Nome";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 230;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Tipo";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 230;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.HeaderText = "Quantidade Máxima";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 200;
             // 
             // nudQtdMáximo
             // 
@@ -233,27 +254,6 @@
             this.lblCadastrarEstoque.Text = "Cadastrar Estoque";
             this.lblCadastrarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 220;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Tipo";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 220;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Quantidade Máxima";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 203;
-            // 
             // frmRegisterStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -282,7 +282,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.DataGridView dgvConsultarEstoque;
         public System.Windows.Forms.NumericUpDown nudQtdMáximo;
         private System.Windows.Forms.Label lblQtdMáximo;
         public System.Windows.Forms.ComboBox cboTipo;
@@ -295,6 +294,7 @@
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblCadastrarEstoque;
+        private System.Windows.Forms.DataGridView dgvConsultarEstoque;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;

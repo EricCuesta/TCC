@@ -46,8 +46,6 @@
             this.panel20 = new System.Windows.Forms.Panel();
             this.btnDeletarEstoque = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.btnConsultarEstoque = new System.Windows.Forms.Button();
             this.btnAlterarEstoque = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
             this.btnCadastrarEstoque = new System.Windows.Forms.Button();
@@ -148,7 +146,7 @@
             this.panelSubMenuSuprimentos.Controls.Add(this.panel36);
             this.panelSubMenuSuprimentos.Controls.Add(this.btnCadastrarSuprimentos);
             this.panelSubMenuSuprimentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuSuprimentos.Location = new System.Drawing.Point(0, 1007);
+            this.panelSubMenuSuprimentos.Location = new System.Drawing.Point(0, 976);
             this.panelSubMenuSuprimentos.Name = "panelSubMenuSuprimentos";
             this.panelSubMenuSuprimentos.Size = new System.Drawing.Size(240, 135);
             this.panelSubMenuSuprimentos.TabIndex = 26;
@@ -179,6 +177,7 @@
             this.btnDeletarSuprimentos.Text = "Deletar Suprimentos";
             this.btnDeletarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarSuprimentos.UseVisualStyleBackColor = false;
+            this.btnDeletarSuprimentos.Click += new System.EventHandler(this.btnDeletarSuprimentos_Click);
             // 
             // panel34
             // 
@@ -214,6 +213,7 @@
             this.btnConsultarSuprimentos.Text = "Consultar Suprimentos";
             this.btnConsultarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarSuprimentos.UseVisualStyleBackColor = false;
+            this.btnConsultarSuprimentos.Click += new System.EventHandler(this.btnConsultarSuprimentos_Click);
             // 
             // btnAlterarSuprimentos
             // 
@@ -233,6 +233,7 @@
             this.btnAlterarSuprimentos.Text = "Alterar Suprimentos";
             this.btnAlterarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarSuprimentos.UseVisualStyleBackColor = false;
+            this.btnAlterarSuprimentos.Click += new System.EventHandler(this.btnAlterarSuprimentos_Click);
             // 
             // panel36
             // 
@@ -260,13 +261,14 @@
             this.btnCadastrarSuprimentos.Text = "Cadastrar Suprimentos";
             this.btnCadastrarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarSuprimentos.UseVisualStyleBackColor = false;
+            this.btnCadastrarSuprimentos.Click += new System.EventHandler(this.btnCadastrarSuprimentos_Click);
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.btnSuprimentos);
             this.panel7.Controls.Add(this.panel19);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 975);
+            this.panel7.Location = new System.Drawing.Point(0, 944);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(240, 32);
             this.panel7.TabIndex = 25;
@@ -281,7 +283,7 @@
             this.btnSuprimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSuprimentos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuprimentos.ForeColor = System.Drawing.Color.White;
-            this.btnSuprimentos.Image = global::Liriou_s_Burguer.Properties.Resources.Estoque;
+            this.btnSuprimentos.Image = global::Liriou_s_Burguer.Properties.Resources.Suprimentos;
             this.btnSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSuprimentos.Location = new System.Drawing.Point(4, 2);
             this.btnSuprimentos.Name = "btnSuprimentos";
@@ -305,8 +307,6 @@
             this.panelSubMenuEstoque.Controls.Add(this.panel20);
             this.panelSubMenuEstoque.Controls.Add(this.btnDeletarEstoque);
             this.panelSubMenuEstoque.Controls.Add(this.panel21);
-            this.panelSubMenuEstoque.Controls.Add(this.panel22);
-            this.panelSubMenuEstoque.Controls.Add(this.btnConsultarEstoque);
             this.panelSubMenuEstoque.Controls.Add(this.btnAlterarEstoque);
             this.panelSubMenuEstoque.Controls.Add(this.panel23);
             this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarEstoque);
@@ -321,13 +321,13 @@
             this.panelSubMenuEstoque.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 714);
             this.panelSubMenuEstoque.Name = "panelSubMenuEstoque";
-            this.panelSubMenuEstoque.Size = new System.Drawing.Size(240, 261);
+            this.panelSubMenuEstoque.Size = new System.Drawing.Size(240, 230);
             this.panelSubMenuEstoque.TabIndex = 24;
             // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel20.Location = new System.Drawing.Point(22, 230);
+            this.panel20.Location = new System.Drawing.Point(22, 198);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(5, 26);
             this.panel20.TabIndex = 24;
@@ -343,48 +343,22 @@
             this.btnDeletarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarEstoque.ForeColor = System.Drawing.Color.White;
             this.btnDeletarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarEstoque.Location = new System.Drawing.Point(25, 230);
+            this.btnDeletarEstoque.Location = new System.Drawing.Point(25, 198);
             this.btnDeletarEstoque.Name = "btnDeletarEstoque";
             this.btnDeletarEstoque.Size = new System.Drawing.Size(208, 26);
             this.btnDeletarEstoque.TabIndex = 22;
             this.btnDeletarEstoque.Text = "Deletar Estoque";
             this.btnDeletarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarEstoque.UseVisualStyleBackColor = false;
+            this.btnDeletarEstoque.Click += new System.EventHandler(this.btnDeletarEstoque_Click);
             // 
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel21.Location = new System.Drawing.Point(22, 198);
+            this.panel21.Location = new System.Drawing.Point(22, 166);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(5, 26);
             this.panel21.TabIndex = 23;
-            // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel22.Location = new System.Drawing.Point(22, 166);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(5, 26);
-            this.panel22.TabIndex = 20;
-            // 
-            // btnConsultarEstoque
-            // 
-            this.btnConsultarEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarEstoque.FlatAppearance.BorderSize = 0;
-            this.btnConsultarEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnConsultarEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarEstoque.Location = new System.Drawing.Point(25, 166);
-            this.btnConsultarEstoque.Name = "btnConsultarEstoque";
-            this.btnConsultarEstoque.Size = new System.Drawing.Size(208, 26);
-            this.btnConsultarEstoque.TabIndex = 18;
-            this.btnConsultarEstoque.Text = "Consultar Estoque";
-            this.btnConsultarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarEstoque.UseVisualStyleBackColor = false;
             // 
             // btnAlterarEstoque
             // 
@@ -397,13 +371,14 @@
             this.btnAlterarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarEstoque.ForeColor = System.Drawing.Color.White;
             this.btnAlterarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarEstoque.Location = new System.Drawing.Point(25, 198);
+            this.btnAlterarEstoque.Location = new System.Drawing.Point(25, 166);
             this.btnAlterarEstoque.Name = "btnAlterarEstoque";
             this.btnAlterarEstoque.Size = new System.Drawing.Size(208, 26);
             this.btnAlterarEstoque.TabIndex = 21;
             this.btnAlterarEstoque.Text = "Alterar Estoque";
             this.btnAlterarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarEstoque.UseVisualStyleBackColor = false;
+            this.btnAlterarEstoque.Click += new System.EventHandler(this.btnAlterarEstoque_Click);
             // 
             // panel23
             // 
@@ -431,6 +406,7 @@
             this.btnCadastrarEstoque.Text = "Cadastrar Estoque";
             this.btnCadastrarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarEstoque.UseVisualStyleBackColor = false;
+            this.btnCadastrarEstoque.Click += new System.EventHandler(this.btnCadastrarEstoque_Click);
             // 
             // panel24
             // 
@@ -458,6 +434,7 @@
             this.btnDeletarProdutos.Text = "Deletar Produtos";
             this.btnDeletarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarProdutos.UseVisualStyleBackColor = false;
+            this.btnDeletarProdutos.Click += new System.EventHandler(this.btnDeletarProdutos_Click);
             // 
             // panel25
             // 
@@ -493,6 +470,7 @@
             this.btnConsultarProdutos.Text = "Consultar Produtos";
             this.btnConsultarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarProdutos.UseVisualStyleBackColor = false;
+            this.btnConsultarProdutos.Click += new System.EventHandler(this.btnConsultarProdutos_Click);
             // 
             // btnAlterarProdutos
             // 
@@ -512,6 +490,7 @@
             this.btnAlterarProdutos.Text = "Alterar Produtos";
             this.btnAlterarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarProdutos.UseVisualStyleBackColor = false;
+            this.btnAlterarProdutos.Click += new System.EventHandler(this.btnAlterarProdutos_Click);
             // 
             // panel27
             // 
@@ -539,6 +518,7 @@
             this.btnCadastrarProdutos.Text = "Cadastrar Produtos";
             this.btnCadastrarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarProdutos.UseVisualStyleBackColor = false;
+            this.btnCadastrarProdutos.Click += new System.EventHandler(this.btnCadastrarProdutos_Click);
             // 
             // panelEstoque
             // 
@@ -629,6 +609,7 @@
             this.btnDeletarFornecedor.Text = "Deletar Fornecedor";
             this.btnDeletarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarFornecedor.UseVisualStyleBackColor = false;
+            this.btnDeletarFornecedor.Click += new System.EventHandler(this.btnDeletarFornecedor_Click);
             // 
             // panel10
             // 
@@ -664,6 +645,7 @@
             this.btnConsultarFornecedor.Text = "Consultar Fornecedor";
             this.btnConsultarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
             // 
             // btnAlterarFornecedor
             // 
@@ -683,6 +665,7 @@
             this.btnAlterarFornecedor.Text = "Alterar Fornecedor";
             this.btnAlterarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarFornecedor.UseVisualStyleBackColor = false;
+            this.btnAlterarFornecedor.Click += new System.EventHandler(this.btnAlterarFornecedor_Click);
             // 
             // panel17
             // 
@@ -710,6 +693,7 @@
             this.btnCadastrarFornecedor.Text = "Cadastrar Fornecedor";
             this.btnCadastrarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarFornecedor.UseVisualStyleBackColor = false;
+            this.btnCadastrarFornecedor.Click += new System.EventHandler(this.btnCadastrarFornecedor_Click);
             // 
             // panel11
             // 
@@ -737,6 +721,7 @@
             this.btnDeletarCliente.Text = "Deletar Cliente";
             this.btnDeletarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarCliente.UseVisualStyleBackColor = false;
+            this.btnDeletarCliente.Click += new System.EventHandler(this.btnDeletarCliente_Click);
             // 
             // panel12
             // 
@@ -772,6 +757,7 @@
             this.btnConsultarCliente.Text = "Consultar Cliente";
             this.btnConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarCliente.UseVisualStyleBackColor = false;
+            this.btnConsultarCliente.Click += new System.EventHandler(this.btnConsultarCliente_Click);
             // 
             // btnAlterarCliente
             // 
@@ -791,6 +777,7 @@
             this.btnAlterarCliente.Text = "Alterar Cliente";
             this.btnAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarCliente.UseVisualStyleBackColor = false;
+            this.btnAlterarCliente.Click += new System.EventHandler(this.btnAlterarCliente_Click);
             // 
             // panel15
             // 
@@ -818,6 +805,7 @@
             this.btnCadastrarCliente.Text = "Cadastrar Cliente";
             this.btnCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
             // panelFinanceiro
             // 
@@ -1224,8 +1212,6 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Button btnDeletarEstoque;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Button btnConsultarEstoque;
         private System.Windows.Forms.Button btnAlterarEstoque;
         private System.Windows.Forms.Panel panel23;
         private System.Windows.Forms.Button btnCadastrarEstoque;

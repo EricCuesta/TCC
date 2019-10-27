@@ -75,9 +75,9 @@
             this.Coluna5,
             this.Coluna6});
             this.dgvConsultarSuprimento.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConsultarSuprimento.Location = new System.Drawing.Point(11, 77);
+            this.dgvConsultarSuprimento.Location = new System.Drawing.Point(3, 77);
             this.dgvConsultarSuprimento.Name = "dgvConsultarSuprimento";
-            this.dgvConsultarSuprimento.Size = new System.Drawing.Size(686, 330);
+            this.dgvConsultarSuprimento.Size = new System.Drawing.Size(703, 338);
             this.dgvConsultarSuprimento.TabIndex = 651;
             // 
             // btnConsultar
@@ -184,7 +184,7 @@
             this.Coluna6.HeaderText = "Descrição";
             this.Coluna6.Name = "Coluna6";
             this.Coluna6.ReadOnly = true;
-            this.Coluna6.Width = 165;
+            this.Coluna6.Width = 182;
             // 
             // frmConsultSupplies
             // 

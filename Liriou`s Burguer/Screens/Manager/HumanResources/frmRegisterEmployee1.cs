@@ -41,13 +41,15 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
                 tbemployees.dt_hiring = dtpContratação.Value;
                 tbemployees.dt_resignation = dtpDemissão.Value;
-                financial.vl_grossSalary = nudSalarioBruto.Value;
-                tbdiscounts.vl_foodPension = nudValeAlimentação.Value;
-                tbbenefits.vl_lifeSafe = nudSeguroDeVida.Value;
+                financial.vl_grossSalary = nudSalárioBruto.Value;
+                tbbenefits.vl_food = chkValeAlimentação.Checked;
+                tbbenefits.vl_meal = chkValeRefeição.Checked;
+                tbbenefits.vl_lifeSafe = chkSeguroDeVida.Checked;
                 tb_Department.nm_department = cboDepartamento.Text;
                 tbfunction.nm_function = cboCargo.Text;
-                tbbenefits.vl_transport = nudValeTransporte.Value;
-                tbbenefits.vl_planHealth = nudPlanoDeSáude.Value;
+                tbbenefits.vl_transport = chkValeTransporte.Checked;
+                tbbenefits.vl_planHealth = chkPlanoDeSáude.Checked;
+                tbbenefits.vl_planDental = chkPlanoDental.Checked;
 
 
                 busemployees.Inserir(tbemployees);
@@ -74,7 +76,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         public void CarregarFuncionario(Database.Entities.tb_employees employees)
         {
             this.employees = employees;
-            
+          
         }
 
         private void imgMinimizar_Click(object sender, EventArgs e)
@@ -88,33 +90,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             Model.EmployeesModel model = new Model.EmployeesModel();
 
             this.Hide();
-            tela.Show();
-
-            
-        }
-
-        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
-        {
-            imgMinimizar.Image = Properties.Resources.Minimizar;
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
-        }
-
-        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
-        {
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
-            imgMinimizar.Image = Properties.Resources.Minimizar;
-        }
-
-        private void imgVoltar_MouseEnter(object sender, EventArgs e)
-        {
-            imgVoltar.Image = Properties.Resources.Voltar;
-            imgVoltar.Image = Properties.Resources.Voltar02;
-        }
-
-        private void imgVoltar_MouseLeave(object sender, EventArgs e)
-        {
-            imgVoltar.Image = Properties.Resources.Voltar02;
-            imgVoltar.Image = Properties.Resources.Voltar;
+            tela.Show(); 
         }
     }
 }

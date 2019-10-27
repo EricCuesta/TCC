@@ -30,7 +30,6 @@ namespace Liriou_s_Burguer.Database.Entities
         public string ds_rg { get; set; }
         public string ds_cpf { get; set; }
         public string ds_cep { get; set; }
-        public string ds_country { get; set; }
         public string ds_state { get; set; }
         public string ds_Address { get; set; }
         public string ds_note { get; set; }

@@ -21,12 +21,12 @@
           </Key>
           <Property Name="id_benefits" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="vl_food" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="vl_transport" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="vl_meal" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="vl_lifeSafe" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="vl_planHealth" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="vl_planDental" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_food" Type="bool" />
+          <Property Name="vl_transport" Type="bool" />
+          <Property Name="vl_meal" Type="bool" />
+          <Property Name="vl_lifeSafe" Type="bool" />
+          <Property Name="vl_planHealth" Type="bool" />
+          <Property Name="vl_planDental" Type="bool" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'def.liriousdb.tb_busline' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -53,7 +53,6 @@ warning 6002: The table/view 'def.liriousdb.tb_busline' does not have a primary 
           <Property Name="ds_rg" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="ds_cpf" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
-          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_Address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
@@ -129,7 +128,6 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="ds_cpf" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="ds_dependents" Type="int" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
-          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
@@ -201,9 +199,10 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           </Key>
           <Property Name="id_provider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_provider" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="nm_Name" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="nm_Name" Type="varchar" MaxLength="64" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="ds_cnpj" Type="char" MaxLength="18" Nullable="false" />
+          <Property Name="ds_typePerson" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="ds_numbering" Type="varchar" MaxLength="18" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
@@ -226,7 +225,9 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ds_place" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="nm_stock" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="vl_maxAmount" Type="int" Nullable="false" />
+          <Property Name="ds_type" Type="varchar" MaxLength="32" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_supply">
           <Key>
@@ -547,12 +548,12 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_benefits" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="vl_food" Type="Decimal" />
-          <Property Name="vl_transport" Type="Decimal" Nullable="false" />
-          <Property Name="vl_meal" Type="Decimal" />
-          <Property Name="vl_lifeSafe" Type="Decimal" />
-          <Property Name="vl_planHealth" Type="Decimal" />
-          <Property Name="vl_planDental" Type="Decimal" />
+          <Property Name="vl_food" Type="Boolean" />
+          <Property Name="vl_transport" Type="Boolean" />
+          <Property Name="vl_meal" Type="Boolean" />
+          <Property Name="vl_lifeSafe" Type="Boolean" />
+          <Property Name="vl_planHealth" Type="Boolean" />
+          <Property Name="vl_planDental" Type="Boolean" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -567,7 +568,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="ds_rg" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_cpf" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_Address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
@@ -626,7 +626,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="ds_cpf" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_dependents" Type="Int32" Nullable="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
@@ -712,9 +711,10 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_provider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nm_provider" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nm_Name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_Name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_cnpj" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_numbering" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
@@ -739,7 +739,9 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ds_place" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_stock" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="vl_maxAmount" Type="Int32" Nullable="false" />
+          <Property Name="ds_type" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="tb_product" Relationship="Self.tb_product_ibfk_1" FromRole="tb_stock" ToRole="tb_product" />
           <NavigationProperty Name="tb_supply" Relationship="Self.tb_supply_ibfk_1" FromRole="tb_stock" ToRole="tb_supply" />
         </EntityType>
@@ -1093,7 +1095,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
                 <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
-                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
                 <ScalarProperty Name="ds_Address" ColumnName="ds_Address" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
@@ -1150,7 +1151,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
                 <ScalarProperty Name="ds_dependents" ColumnName="ds_dependents" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
-                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
                 <ScalarProperty Name="ds_address" ColumnName="ds_address" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
@@ -1230,7 +1230,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="nm_provider" ColumnName="nm_provider" />
                 <ScalarProperty Name="nm_Name" ColumnName="nm_Name" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-                <ScalarProperty Name="ds_cnpj" ColumnName="ds_cnpj" />
+                <ScalarProperty Name="ds_typePerson" ColumnName="ds_typePerson" />
+                <ScalarProperty Name="ds_numbering" ColumnName="ds_numbering" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
                 <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
@@ -1255,7 +1256,9 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <EntityTypeMapping TypeName="liriousdbModel.tb_stock">
               <MappingFragment StoreEntitySet="tb_stock">
                 <ScalarProperty Name="id_stock" ColumnName="id_stock" />
-                <ScalarProperty Name="ds_place" ColumnName="ds_place" />
+                <ScalarProperty Name="nm_stock" ColumnName="nm_stock" />
+                <ScalarProperty Name="vl_maxAmount" ColumnName="vl_maxAmount" />
+                <ScalarProperty Name="ds_type" ColumnName="ds_type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

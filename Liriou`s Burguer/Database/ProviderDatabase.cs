@@ -33,7 +33,7 @@ namespace Liriou_s_Burguer.Database
             list.nr_cellphone = list.nr_cellphone;
             list.ds_cep = list.ds_cep;
             
-            list.ds_cnpj = list.ds_cnpj;
+            list.ds_numbering = list.ds_numbering;
             list.ds_country = list.ds_country;
             list.ds_email = list.ds_email;
             list.ds_note = list.ds_note;

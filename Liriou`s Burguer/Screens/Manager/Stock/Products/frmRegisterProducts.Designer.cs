@@ -47,7 +47,7 @@
             this.lblValor = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.panel = new System.Windows.Forms.Panel();
-            this.rtxDescrição = new System.Windows.Forms.RichTextBox();
+            this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
             this.lblDescrição = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -66,7 +66,7 @@
             this.lblCadastrarProduto.AutoSize = true;
             this.lblCadastrarProduto.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarProduto.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCadastrarProduto.Location = new System.Drawing.Point(237, 9);
+            this.lblCadastrarProduto.Location = new System.Drawing.Point(238, 9);
             this.lblCadastrarProduto.Name = "lblCadastrarProduto";
             this.lblCadastrarProduto.Size = new System.Drawing.Size(237, 28);
             this.lblCadastrarProduto.TabIndex = 565;
@@ -162,7 +162,7 @@
             this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Location = new System.Drawing.Point(78, 7);
+            this.cboEstoque.Location = new System.Drawing.Point(78, 6);
             this.cboEstoque.MaxLength = 32;
             this.cboEstoque.Name = "cboEstoque";
             this.cboEstoque.Size = new System.Drawing.Size(269, 23);
@@ -235,7 +235,7 @@
             this.nudQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQuantidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantidade.Location = new System.Drawing.Point(396, 39);
+            this.nudQuantidade.Location = new System.Drawing.Point(396, 40);
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.Size = new System.Drawing.Size(109, 20);
             this.nudQuantidade.TabIndex = 652;
@@ -269,7 +269,7 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
-            this.nudValor.Location = new System.Drawing.Point(594, 39);
+            this.nudValor.Location = new System.Drawing.Point(594, 40);
             this.nudValor.Name = "nudValor";
             this.nudValor.Size = new System.Drawing.Size(111, 20);
             this.nudValor.TabIndex = 655;
@@ -279,7 +279,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.Controls.Add(this.rtxDescrição);
+            this.panel.Controls.Add(this.rtxtDescrição);
             this.panel.Controls.Add(this.lblDescrição);
             this.panel.Controls.Add(this.nudValor);
             this.panel.Controls.Add(this.lblValor);
@@ -303,15 +303,15 @@
             this.panel.Size = new System.Drawing.Size(709, 418);
             this.panel.TabIndex = 566;
             // 
-            // rtxDescrição
+            // rtxtDescrição
             // 
-            this.rtxDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxDescrição.Location = new System.Drawing.Point(7, 92);
-            this.rtxDescrição.MaxLength = 256;
-            this.rtxDescrição.Name = "rtxDescrição";
-            this.rtxDescrição.Size = new System.Drawing.Size(698, 170);
-            this.rtxDescrição.TabIndex = 657;
-            this.rtxDescrição.Text = "";
+            this.rtxtDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtDescrição.Location = new System.Drawing.Point(7, 92);
+            this.rtxtDescrição.MaxLength = 256;
+            this.rtxtDescrição.Name = "rtxtDescrição";
+            this.rtxtDescrição.Size = new System.Drawing.Size(698, 170);
+            this.rtxtDescrição.TabIndex = 657;
+            this.rtxtDescrição.Text = "";
             // 
             // lblDescrição
             // 
@@ -373,6 +373,6 @@
         public System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label lblDescrição;
-        private System.Windows.Forms.RichTextBox rtxDescrição;
+        private System.Windows.Forms.RichTextBox rtxtDescrição;
     }
 }

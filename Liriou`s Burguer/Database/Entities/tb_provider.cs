@@ -18,7 +18,8 @@ namespace Liriou_s_Burguer.Database.Entities
         public string nm_provider { get; set; }
         public string nm_Name { get; set; }
         public string ds_email { get; set; }
-        public string ds_cnpj { get; set; }
+        public string ds_typePerson { get; set; }
+        public string ds_numbering { get; set; }
         public string ds_cep { get; set; }
         public string ds_country { get; set; }
         public string ds_state { get; set; }

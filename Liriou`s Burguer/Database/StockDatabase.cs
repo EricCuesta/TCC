@@ -28,7 +28,7 @@ namespace Liriou_s_Burguer.Database
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_stock list = DB.tb_stock.First(t => t.id_stock == stock.id_stock);
-            list.ds_place = list.ds_place;
+            list.nm_stock = list.nm_stock;
             
             DB.SaveChanges();
         }

@@ -119,7 +119,7 @@
             this.nudQtdMáximo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQtdMáximo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQtdMáximo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQtdMáximo.Location = new System.Drawing.Point(519, 73);
+            this.nudQtdMáximo.Location = new System.Drawing.Point(519, 72);
             this.nudQtdMáximo.Name = "nudQtdMáximo";
             this.nudQtdMáximo.ReadOnly = true;
             this.nudQtdMáximo.Size = new System.Drawing.Size(187, 20);
@@ -131,7 +131,7 @@
             this.lblQtdMáximo.AutoSize = true;
             this.lblQtdMáximo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQtdMáximo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblQtdMáximo.Location = new System.Drawing.Point(361, 73);
+            this.lblQtdMáximo.Location = new System.Drawing.Point(361, 72);
             this.lblQtdMáximo.Name = "lblQtdMáximo";
             this.lblQtdMáximo.Size = new System.Drawing.Size(152, 19);
             this.lblQtdMáximo.TabIndex = 651;
@@ -145,7 +145,7 @@
             this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(52, 71);
+            this.cboTipo.Location = new System.Drawing.Point(52, 70);
             this.cboTipo.MaxLength = 32;
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(295, 23);
@@ -170,7 +170,7 @@
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(63, 39);
+            this.txtNome.Location = new System.Drawing.Point(63, 38);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(643, 23);
@@ -181,7 +181,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNome.Location = new System.Drawing.Point(3, 41);
+            this.lblNome.Location = new System.Drawing.Point(3, 40);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
             this.lblNome.TabIndex = 647;
@@ -194,7 +194,7 @@
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletar.Location = new System.Drawing.Point(590, 106);
+            this.btnDeletar.Location = new System.Drawing.Point(590, 105);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(107, 30);
             this.btnDeletar.TabIndex = 644;
@@ -207,7 +207,7 @@
             this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 98);
+            this.dataGridView5.Location = new System.Drawing.Point(0, 97);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(709, 2);
             this.dataGridView5.TabIndex = 626;
@@ -218,7 +218,7 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 66);
+            this.dataGridView3.Location = new System.Drawing.Point(0, 65);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 625;
@@ -229,7 +229,7 @@
             this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(353, 68);
+            this.dataGridView6.Location = new System.Drawing.Point(353, 67);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 30);
             this.dataGridView6.TabIndex = 599;
@@ -266,31 +266,31 @@
             this.Coluna1,
             this.Coluna2,
             this.Coluna3});
-            this.dgvConsultarEstoque.Location = new System.Drawing.Point(11, 142);
+            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 141);
             this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
-            this.dgvConsultarEstoque.Size = new System.Drawing.Size(686, 265);
-            this.dgvConsultarEstoque.TabIndex = 663;
+            this.dgvConsultarEstoque.Size = new System.Drawing.Size(703, 274);
+            this.dgvConsultarEstoque.TabIndex = 664;
             // 
             // Coluna1
             // 
             this.Coluna1.HeaderText = "Nome";
             this.Coluna1.Name = "Coluna1";
             this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 220;
+            this.Coluna1.Width = 230;
             // 
             // Coluna2
             // 
             this.Coluna2.HeaderText = "Tipo";
             this.Coluna2.Name = "Coluna2";
             this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 220;
+            this.Coluna2.Width = 230;
             // 
             // Coluna3
             // 
             this.Coluna3.HeaderText = "Quantidade Máxima";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 203;
+            this.Coluna3.Width = 200;
             // 
             // frmDeleteInventory
             // 
