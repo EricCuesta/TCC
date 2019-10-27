@@ -90,7 +90,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void menuInício_Click(object sender, EventArgs e)
         {
-            frmManagerMenu managerMenu = new frmManagerMenu();
+            frmLiriousBurguer managerMenu = new frmLiriousBurguer();
             managerMenu.Show();
             Hide();
         }

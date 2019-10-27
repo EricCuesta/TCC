@@ -60,7 +60,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void menuInício_Click(object sender, EventArgs e)
         {
-            frmManagerMenu managerMenu = new frmManagerMenu();
+            frmLiriousBurguer managerMenu = new frmLiriousBurguer();
             managerMenu.Show();
             Hide();
         }
@@ -108,31 +108,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         private void imgFechar_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-     
-        private void imgFechar_MouseEnter(object sender, EventArgs e)
-        {
-            imgFechar.Image = Properties.Resources.Fechar;
-            imgFechar.Image = Properties.Resources.Fechar02;
-        }
-
-        private void imgFechar_MouseLeave(object sender, EventArgs e)
-        {
-            imgFechar.Image = Properties.Resources.Fechar02;
-            imgFechar.Image = Properties.Resources.Fechar;
-        }
-
-        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
-        {
-            imgMinimizar.Image = Properties.Resources.Minimizar;
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
-        }
-
-        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
-        {
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
-            imgMinimizar.Image = Properties.Resources.Minimizar;
         }
 
         private void mtxtCEP_TextChanged(object sender, EventArgs e)

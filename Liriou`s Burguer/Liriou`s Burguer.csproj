@@ -208,6 +208,48 @@
     <Compile Include="Screens\Manager\Financial\Client\frmConsultCustomer.Designer.cs">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Manager\Financial\Client\frmDeleteClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Client\frmDeleteClient.Designer.cs">
+      <DependentUpon>frmDeleteClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Client\frmRegisterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Client\frmRegisterCustomer.Designer.cs">
+      <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmChangeProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmChangeProvider.Designer.cs">
+      <DependentUpon>frmChangeProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmConsultSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmConsultSupplier.Designer.cs">
+      <DependentUpon>frmConsultSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmDeleteSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmDeleteSupplier.Designer.cs">
+      <DependentUpon>frmDeleteSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmRegisterSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\Provider\frmRegisterSupplier.Designer.cs">
+      <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\frmManagerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\frmManagerMenu.Designer.cs">
+      <DependentUpon>frmManagerMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Manager\Login\frmRecovery.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +322,78 @@
     <Compile Include="Screens\Manager\Login\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Manager\Stock\frmChangeInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmChangeInventory.Designer.cs">
+      <DependentUpon>frmChangeInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmCheckInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmCheckInventory.Designer.cs">
+      <DependentUpon>frmCheckInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmDeleteInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmDeleteInventory.Designer.cs">
+      <DependentUpon>frmDeleteInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmRegisterStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmRegisterStock.Designer.cs">
+      <DependentUpon>frmRegisterStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmBrowseProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmBrowseProducts.Designer.cs">
+      <DependentUpon>frmBrowseProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmChangeProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmChangeProducts.Designer.cs">
+      <DependentUpon>frmChangeProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmDeleteProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmDeleteProducts.Designer.cs">
+      <DependentUpon>frmDeleteProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmRegisterProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\Products\frmRegisterProducts.Designer.cs">
+      <DependentUpon>frmRegisterProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmChangeSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmChangeSupplies.Designer.cs">
+      <DependentUpon>frmChangeSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmConsultSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmConsultSupplies.Designer.cs">
+      <DependentUpon>frmConsultSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmDeleteSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmDeleteSupplies.Designer.cs">
+      <DependentUpon>frmDeleteSupplies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmRegisterSupplies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Supplies\frmRegisterSupplies.Designer.cs">
+      <DependentUpon>frmRegisterSupplies.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -304,6 +418,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Financial\Client\frmConsultCustomer.resx">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\frmManagerMenu.resx">
+      <DependentUpon>frmManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -362,11 +479,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screens\Manager\Financial\Provider\" />
-    <Folder Include="Screens\Manager\Stock\Products\" />
-    <Folder Include="Screens\Manager\Supplies\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Estoque.png" />
   </ItemGroup>
