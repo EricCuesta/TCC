@@ -328,12 +328,6 @@
     <Compile Include="Screens\Manager\Stock\frmChangeInventory.Designer.cs">
       <DependentUpon>frmChangeInventory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\frmCheckInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Manager\Stock\frmCheckInventory.Designer.cs">
-      <DependentUpon>frmCheckInventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\Manager\Stock\frmDeleteInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -419,6 +413,15 @@
     <EmbeddedResource Include="Screens\Manager\Financial\Client\frmConsultCustomer.resx">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\Client\frmDeleteClient.resx">
+      <DependentUpon>frmDeleteClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\Client\frmRegisterCustomer.resx">
+      <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\Provider\frmChangeProvider.resx">
+      <DependentUpon>frmChangeProvider.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\frmManagerMenu.resx">
       <DependentUpon>frmManagerMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -457,6 +460,39 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee1.resx">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\frmChangeInventory.resx">
+      <DependentUpon>frmChangeInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\frmDeleteInventory.resx">
+      <DependentUpon>frmDeleteInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\frmRegisterStock.resx">
+      <DependentUpon>frmRegisterStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmBrowseProducts.resx">
+      <DependentUpon>frmBrowseProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmChangeProducts.resx">
+      <DependentUpon>frmChangeProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmDeleteProducts.resx">
+      <DependentUpon>frmDeleteProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmRegisterProducts.resx">
+      <DependentUpon>frmRegisterProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Supplies\frmChangeSupplies.resx">
+      <DependentUpon>frmChangeSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Supplies\frmConsultSupplies.resx">
+      <DependentUpon>frmConsultSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Supplies\frmDeleteSupplies.resx">
+      <DependentUpon>frmDeleteSupplies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Supplies\frmRegisterSupplies.resx">
+      <DependentUpon>frmRegisterSupplies.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\Entities\LiriousDatabase.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

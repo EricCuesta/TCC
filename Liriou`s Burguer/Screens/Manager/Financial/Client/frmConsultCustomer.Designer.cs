@@ -28,259 +28,377 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mtxtAno = new System.Windows.Forms.MaskedTextBox();
-            this.txtRG = new System.Windows.Forms.TextBox();
-            this.dgvConsultar = new System.Windows.Forms.DataGridView();
-            this.imgFechar = new System.Windows.Forms.PictureBox();
-            this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.cboGênero = new System.Windows.Forms.ComboBox();
-            this.lblGênero = new System.Windows.Forms.Label();
+            this.lblConsultarCliente = new System.Windows.Forms.Label();
+            this.panel = new System.Windows.Forms.Panel();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
+            this.lblSexo = new System.Windows.Forms.Label();
+            this.mtxtAnoDeNascimento = new System.Windows.Forms.MaskedTextBox();
             this.lblNascimento = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblCPF = new System.Windows.Forms.Label();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView5 = new System.Windows.Forms.DataGridView();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
+            this.lblRG = new System.Windows.Forms.Label();
+            this.dgvConsultarProduto = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblCadastrarCliente = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
+            this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // mtxtAno
+            // lblConsultarCliente
             // 
-            this.mtxtAno.Location = new System.Drawing.Point(162, 77);
-            this.mtxtAno.Mask = "0000";
-            this.mtxtAno.Name = "mtxtAno";
-            this.mtxtAno.Size = new System.Drawing.Size(155, 20);
-            this.mtxtAno.TabIndex = 582;
+            this.lblConsultarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblConsultarCliente.AutoSize = true;
+            this.lblConsultarCliente.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultarCliente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblConsultarCliente.Location = new System.Drawing.Point(242, 9);
+            this.lblConsultarCliente.Name = "lblConsultarCliente";
+            this.lblConsultarCliente.Size = new System.Drawing.Size(228, 28);
+            this.lblConsultarCliente.TabIndex = 564;
+            this.lblConsultarCliente.Text = "Consultar Cliente";
+            this.lblConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtRG
+            // panel
             // 
-            this.txtRG.Location = new System.Drawing.Point(532, 46);
-            this.txtRG.MaxLength = 12;
-            this.txtRG.Name = "txtRG";
-            this.txtRG.Size = new System.Drawing.Size(255, 20);
-            this.txtRG.TabIndex = 581;
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.Controls.Add(this.cboSexo);
+            this.panel.Controls.Add(this.lblSexo);
+            this.panel.Controls.Add(this.mtxtAnoDeNascimento);
+            this.panel.Controls.Add(this.lblNascimento);
+            this.panel.Controls.Add(this.dataGridView5);
+            this.panel.Controls.Add(this.dataGridView4);
+            this.panel.Controls.Add(this.mtxtRG);
+            this.panel.Controls.Add(this.lblRG);
+            this.panel.Controls.Add(this.dgvConsultarProduto);
+            this.panel.Controls.Add(this.btnConsultar);
+            this.panel.Controls.Add(this.txtNome);
+            this.panel.Controls.Add(this.lblNome);
+            this.panel.Controls.Add(this.dataGridView3);
+            this.panel.Controls.Add(this.dataGridView1);
+            this.panel.Controls.Add(this.dataGridView2);
+            this.panel.Location = new System.Drawing.Point(1, 40);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(709, 418);
+            this.panel.TabIndex = 568;
             // 
-            // dgvConsultar
+            // cboSexo
             // 
-            this.dgvConsultar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultar.Location = new System.Drawing.Point(0, 115);
-            this.dgvConsultar.Name = "dgvConsultar";
-            this.dgvConsultar.Size = new System.Drawing.Size(800, 385);
-            this.dgvConsultar.TabIndex = 580;
+            this.cboSexo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboSexo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSexo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboSexo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
+            this.cboSexo.Location = new System.Drawing.Point(413, 38);
+            this.cboSexo.MaxLength = 32;
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(292, 23);
+            this.cboSexo.TabIndex = 659;
             // 
-            // imgFechar
+            // lblSexo
             // 
-            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
-            this.imgFechar.Location = new System.Drawing.Point(771, 11);
-            this.imgFechar.Name = "imgFechar";
-            this.imgFechar.Size = new System.Drawing.Size(25, 25);
-            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 579;
-            this.imgFechar.TabStop = false;
+            this.lblSexo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSexo.Location = new System.Drawing.Point(361, 40);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(46, 19);
+            this.lblSexo.TabIndex = 658;
+            this.lblSexo.Text = "Sexo:";
             // 
-            // imgMinimizar
+            // mtxtAnoDeNascimento
             // 
-            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(740, 11);
-            this.imgMinimizar.Name = "imgMinimizar";
-            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 578;
-            this.imgMinimizar.TabStop = false;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(0, 103);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(616, 2);
-            this.dataGridView6.TabIndex = 577;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(323, 73);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView4.TabIndex = 574;
-            // 
-            // cboGênero
-            // 
-            this.cboGênero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGênero.FormattingEnabled = true;
-            this.cboGênero.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cboGênero.Location = new System.Drawing.Point(400, 78);
-            this.cboGênero.Name = "cboGênero";
-            this.cboGênero.Size = new System.Drawing.Size(208, 23);
-            this.cboGênero.TabIndex = 568;
-            // 
-            // lblGênero
-            // 
-            this.lblGênero.AutoSize = true;
-            this.lblGênero.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGênero.Location = new System.Drawing.Point(331, 78);
-            this.lblGênero.Name = "lblGênero";
-            this.lblGênero.Size = new System.Drawing.Size(63, 19);
-            this.lblGênero.TabIndex = 567;
-            this.lblGênero.Text = "Gênero:";
+            this.mtxtAnoDeNascimento.Location = new System.Drawing.Point(153, 40);
+            this.mtxtAnoDeNascimento.Mask = "0000";
+            this.mtxtAnoDeNascimento.Name = "mtxtAnoDeNascimento";
+            this.mtxtAnoDeNascimento.Size = new System.Drawing.Size(194, 20);
+            this.mtxtAnoDeNascimento.TabIndex = 657;
             // 
             // lblNascimento
             // 
             this.lblNascimento.AutoSize = true;
             this.lblNascimento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNascimento.Location = new System.Drawing.Point(12, 77);
+            this.lblNascimento.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNascimento.Location = new System.Drawing.Point(3, 40);
             this.lblNascimento.Name = "lblNascimento";
             this.lblNascimento.Size = new System.Drawing.Size(144, 19);
-            this.lblNascimento.TabIndex = 566;
+            this.lblNascimento.TabIndex = 656;
             this.lblNascimento.Text = "Ano de nascimento:";
             // 
-            // btnCadastrar
+            // dataGridView5
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.Location = new System.Drawing.Point(681, 79);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(107, 30);
-            this.btnCadastrar.TabIndex = 565;
-            this.btnCadastrar.Text = "Consultar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView5.Location = new System.Drawing.Point(0, 65);
+            this.dataGridView5.Name = "dataGridView5";
+            this.dataGridView5.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView5.TabIndex = 655;
             // 
-            // lblCPF
+            // dataGridView4
             // 
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.Location = new System.Drawing.Point(492, 46);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(33, 19);
-            this.lblCPF.TabIndex = 564;
-            this.lblCPF.Text = "RG:";
+            this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(353, 35);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView4.TabIndex = 654;
             // 
-            // dataGridView7
+            // mtxtRG
             // 
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(484, 41);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView7.TabIndex = 563;
+            this.mtxtRG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtRG.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtRG.Location = new System.Drawing.Point(400, 6);
+            this.mtxtRG.Mask = "00.000.000-0";
+            this.mtxtRG.Name = "mtxtRG";
+            this.mtxtRG.Size = new System.Drawing.Size(305, 23);
+            this.mtxtRG.TabIndex = 653;
             // 
-            // dataGridView3
+            // lblRG
             // 
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 71);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(800, 2);
-            this.dataGridView3.TabIndex = 562;
+            this.lblRG.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblRG.AutoSize = true;
+            this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblRG.Location = new System.Drawing.Point(361, 8);
+            this.lblRG.Name = "lblRG";
+            this.lblRG.Size = new System.Drawing.Size(33, 19);
+            this.lblRG.TabIndex = 652;
+            this.lblRG.Text = "RG:";
+            // 
+            // dgvConsultarProduto
+            // 
+            this.dgvConsultarProduto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvConsultarProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna4,
+            this.Coluna3,
+            this.Coluna5,
+            this.Coluna6,
+            this.Coluna7,
+            this.Coluna8,
+            this.Coluna9,
+            this.Coluna10,
+            this.Coluna11,
+            this.Coluna12,
+            this.Coluna13});
+            this.dgvConsultarProduto.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvConsultarProduto.Location = new System.Drawing.Point(3, 109);
+            this.dgvConsultarProduto.Name = "dgvConsultarProduto";
+            this.dgvConsultarProduto.Size = new System.Drawing.Size(703, 306);
+            this.dgvConsultarProduto.TabIndex = 651;
+            // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Nome";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 140;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Sobrenome";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 140;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.HeaderText = "RG";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            this.Coluna4.Width = 120;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.HeaderText = "CPF";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 120;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.HeaderText = "Sexo";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            this.Coluna5.Width = 80;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.HeaderText = "Nascimento";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
+            // 
+            // Coluna7
+            // 
+            this.Coluna7.HeaderText = "Estado";
+            this.Coluna7.Name = "Coluna7";
+            this.Coluna7.ReadOnly = true;
+            this.Coluna7.Width = 120;
+            // 
+            // Coluna8
+            // 
+            this.Coluna8.HeaderText = "CEP";
+            this.Coluna8.Name = "Coluna8";
+            this.Coluna8.ReadOnly = true;
+            // 
+            // Coluna9
+            // 
+            this.Coluna9.HeaderText = "Endereço";
+            this.Coluna9.Name = "Coluna9";
+            this.Coluna9.ReadOnly = true;
+            this.Coluna9.Width = 120;
+            // 
+            // Coluna10
+            // 
+            this.Coluna10.HeaderText = "Complemento";
+            this.Coluna10.Name = "Coluna10";
+            this.Coluna10.ReadOnly = true;
+            this.Coluna10.Width = 120;
+            // 
+            // Coluna11
+            // 
+            this.Coluna11.HeaderText = "Celular";
+            this.Coluna11.Name = "Coluna11";
+            this.Coluna11.ReadOnly = true;
+            // 
+            // Coluna12
+            // 
+            this.Coluna12.HeaderText = "Telefone";
+            this.Coluna12.Name = "Coluna12";
+            this.Coluna12.ReadOnly = true;
+            // 
+            // Coluna13
+            // 
+            this.Coluna13.HeaderText = "E-mail";
+            this.Coluna13.Name = "Coluna13";
+            this.Coluna13.ReadOnly = true;
+            this.Coluna13.Width = 120;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.Location = new System.Drawing.Point(590, 73);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(107, 30);
+            this.btnConsultar.TabIndex = 644;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
             // 
             // txtNome
             // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(72, 44);
+            this.txtNome.Location = new System.Drawing.Point(63, 6);
+            this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(406, 23);
-            this.txtNome.TabIndex = 561;
+            this.txtNome.Size = new System.Drawing.Size(284, 23);
+            this.txtNome.TabIndex = 648;
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(12, 46);
+            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNome.Location = new System.Drawing.Point(3, 8);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
-            this.lblNome.TabIndex = 560;
+            this.lblNome.TabIndex = 647;
             this.lblNome.Text = "Nome:";
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView3.TabIndex = 625;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 39);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 2);
-            this.dataGridView1.TabIndex = 559;
-            // 
-            // lblCadastrarCliente
-            // 
-            this.lblCadastrarCliente.AutoSize = true;
-            this.lblCadastrarCliente.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrarCliente.ForeColor = System.Drawing.Color.Black;
-            this.lblCadastrarCliente.Location = new System.Drawing.Point(256, 9);
-            this.lblCadastrarCliente.Name = "lblCadastrarCliente";
-            this.lblCadastrarCliente.Size = new System.Drawing.Size(228, 28);
-            this.lblCadastrarCliente.TabIndex = 558;
-            this.lblCadastrarCliente.Text = "Consultar Cliente";
+            this.dataGridView1.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView1.TabIndex = 598;
             // 
             // dataGridView2
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(614, 73);
+            this.dataGridView2.Location = new System.Drawing.Point(353, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView2.TabIndex = 583;
+            this.dataGridView2.TabIndex = 597;
             // 
             // frmConsultCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.mtxtAno);
-            this.Controls.Add(this.txtRG);
-            this.Controls.Add(this.dgvConsultar);
-            this.Controls.Add(this.imgFechar);
-            this.Controls.Add(this.imgMinimizar);
-            this.Controls.Add(this.dataGridView6);
-            this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.cboGênero);
-            this.Controls.Add(this.lblGênero);
-            this.Controls.Add(this.lblNascimento);
-            this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.lblCPF);
-            this.Controls.Add(this.dataGridView7);
-            this.Controls.Add(this.dataGridView3);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblNome);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.lblCadastrarCliente);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.ClientSize = new System.Drawing.Size(710, 459);
+            this.Controls.Add(this.panel);
+            this.Controls.Add(this.lblConsultarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consult Customer";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProduto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -291,24 +409,35 @@
 
         #endregion
 
-        private System.Windows.Forms.MaskedTextBox mtxtAno;
-        private System.Windows.Forms.TextBox txtRG;
-        private System.Windows.Forms.DataGridView dgvConsultar;
-        private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.ComboBox cboGênero;
-        private System.Windows.Forms.Label lblGênero;
-        private System.Windows.Forms.Label lblNascimento;
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Label lblCPF;
-        private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblConsultarCliente;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.DataGridView dgvConsultarProduto;
+        private System.Windows.Forms.Button btnConsultar;
+        protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label lblCadastrarCliente;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dataGridView5;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        public System.Windows.Forms.MaskedTextBox mtxtRG;
+        private System.Windows.Forms.Label lblRG;
+        private System.Windows.Forms.MaskedTextBox mtxtAnoDeNascimento;
+        private System.Windows.Forms.Label lblNascimento;
+        public System.Windows.Forms.ComboBox cboSexo;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna13;
     }
 }

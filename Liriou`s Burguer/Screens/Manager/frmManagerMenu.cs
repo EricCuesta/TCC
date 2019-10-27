@@ -96,16 +96,6 @@ namespace Liriou_s_Burguer.Screens.Manager
             Contedor.Show();
         }
 
-        private void imgMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void imgFechar_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void btnCadastrarFuncionário_Click(object sender, EventArgs e)
         {
             openContedor(new HumanResources.frmRegisterEmployee());
@@ -140,6 +130,40 @@ namespace Liriou_s_Burguer.Screens.Manager
         {
             openContedor(new HumanResources.frmConsultTimeCard());
             HideSubMenu();
+        }
+
+        private void imgFechar_MouseEnter(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar01;
+            imgFechar.Image = Properties.Resources.Fechar02;
+        }
+
+        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar02;
+            imgFechar.Image = Properties.Resources.Fechar01;
+        }
+
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+        }
+
+        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
+        }
+
+        private void imgFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void imgMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
