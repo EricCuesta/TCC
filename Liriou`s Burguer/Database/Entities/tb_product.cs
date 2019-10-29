@@ -26,7 +26,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public string ds_type { get; set; }
         public int vl_amount { get; set; }
         public decimal vl_value { get; set; }
-        public string ds_Note { get; set; }
+        public string ds_note { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_iten> tb_iten { get; set; }

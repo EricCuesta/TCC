@@ -12,9 +12,9 @@ namespace Liriou_s_Burguer.Screens.Manager.Supplies
 {
     public partial class frmConsultSupplies : Form
     {
-        public frmConsultSupplies()
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
     }
 }

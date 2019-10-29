@@ -118,6 +118,7 @@
             // 
             // MenuVertical
             // 
+            this.MenuVertical.AutoScroll = true;
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.MenuVertical.Controls.Add(this.panelSubMenuSuprimentos);
             this.MenuVertical.Controls.Add(this.panel7);
@@ -148,7 +149,7 @@
             this.panelSubMenuSuprimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuSuprimentos.Location = new System.Drawing.Point(0, 976);
             this.panelSubMenuSuprimentos.Name = "panelSubMenuSuprimentos";
-            this.panelSubMenuSuprimentos.Size = new System.Drawing.Size(240, 135);
+            this.panelSubMenuSuprimentos.Size = new System.Drawing.Size(223, 135);
             this.panelSubMenuSuprimentos.TabIndex = 26;
             // 
             // panel33
@@ -270,7 +271,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 944);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(240, 32);
+            this.panel7.Size = new System.Drawing.Size(223, 32);
             this.panel7.TabIndex = 25;
             // 
             // btnSuprimentos
@@ -321,7 +322,7 @@
             this.panelSubMenuEstoque.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 714);
             this.panelSubMenuEstoque.Name = "panelSubMenuEstoque";
-            this.panelSubMenuEstoque.Size = new System.Drawing.Size(240, 230);
+            this.panelSubMenuEstoque.Size = new System.Drawing.Size(223, 230);
             this.panelSubMenuEstoque.TabIndex = 24;
             // 
             // panel20
@@ -527,7 +528,7 @@
             this.panelEstoque.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelEstoque.Location = new System.Drawing.Point(0, 682);
             this.panelEstoque.Name = "panelEstoque";
-            this.panelEstoque.Size = new System.Drawing.Size(240, 32);
+            this.panelEstoque.Size = new System.Drawing.Size(223, 32);
             this.panelEstoque.TabIndex = 23;
             // 
             // btnEstoque
@@ -580,7 +581,7 @@
             this.panelSubMenuFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuFinanceiro.Location = new System.Drawing.Point(0, 421);
             this.panelSubMenuFinanceiro.Name = "panelSubMenuFinanceiro";
-            this.panelSubMenuFinanceiro.Size = new System.Drawing.Size(240, 261);
+            this.panelSubMenuFinanceiro.Size = new System.Drawing.Size(223, 261);
             this.panelSubMenuFinanceiro.TabIndex = 22;
             // 
             // panel9
@@ -814,7 +815,7 @@
             this.panelFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFinanceiro.Location = new System.Drawing.Point(0, 389);
             this.panelFinanceiro.Name = "panelFinanceiro";
-            this.panelFinanceiro.Size = new System.Drawing.Size(240, 32);
+            this.panelFinanceiro.Size = new System.Drawing.Size(223, 32);
             this.panelFinanceiro.TabIndex = 21;
             // 
             // btnFinanceiro
@@ -863,7 +864,7 @@
             this.panelSubMenuRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 192);
             this.panelSubMenuRecursosHumanos.Name = "panelSubMenuRecursosHumanos";
-            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(240, 197);
+            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(223, 197);
             this.panelSubMenuRecursosHumanos.TabIndex = 20;
             // 
             // panel14
@@ -1041,7 +1042,7 @@
             this.panelRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRecursosHumanos.Location = new System.Drawing.Point(0, 160);
             this.panelRecursosHumanos.Name = "panelRecursosHumanos";
-            this.panelRecursosHumanos.Size = new System.Drawing.Size(240, 32);
+            this.panelRecursosHumanos.Size = new System.Drawing.Size(223, 32);
             this.panelRecursosHumanos.TabIndex = 19;
             // 
             // btnRecursosHumanos
@@ -1079,7 +1080,7 @@
             this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
             this.imgLogotipo.Location = new System.Drawing.Point(0, 0);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(240, 160);
+            this.imgLogotipo.Size = new System.Drawing.Size(223, 160);
             this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;

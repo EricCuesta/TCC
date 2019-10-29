@@ -16,5 +16,10 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock
         {
             InitializeComponent();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

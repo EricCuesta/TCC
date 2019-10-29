@@ -171,6 +171,7 @@
             this.btnContinuar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContinuar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContinuar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.ForeColor = System.Drawing.Color.Black;
             this.btnContinuar.Location = new System.Drawing.Point(301, 377);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(107, 30);

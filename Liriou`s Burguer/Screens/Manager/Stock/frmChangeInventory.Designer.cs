@@ -37,17 +37,17 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
             this.nudQtdMáximo = new System.Windows.Forms.NumericUpDown();
             this.lblQtdMáximo = new System.Windows.Forms.Label();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -123,12 +123,14 @@
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.Location = new System.Drawing.Point(590, 105);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(107, 30);
             this.btnAlterar.TabIndex = 644;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // lblNome
             // 
@@ -166,32 +168,18 @@
             this.lblTipo.TabIndex = 649;
             this.lblTipo.Text = "Tipo:";
             // 
-            // cboTipo
-            // 
-            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(52, 70);
-            this.cboTipo.MaxLength = 32;
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(295, 23);
-            this.cboTipo.TabIndex = 650;
-            // 
             // panel
             // 
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.dgvConsultarEstoque);
             this.panel.Controls.Add(this.dataGridView2);
             this.panel.Controls.Add(this.nudId);
             this.panel.Controls.Add(this.lblID);
             this.panel.Controls.Add(this.nudQtdMáximo);
             this.panel.Controls.Add(this.lblQtdMáximo);
-            this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.lblTipo);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
@@ -217,6 +205,27 @@
             this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
             this.dgvConsultarEstoque.Size = new System.Drawing.Size(703, 274);
             this.dgvConsultarEstoque.TabIndex = 663;
+            // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Nome";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 230;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Tipo";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 230;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.HeaderText = "Quantidade Máxima";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 200;
             // 
             // dataGridView2
             // 
@@ -271,26 +280,22 @@
             this.lblQtdMáximo.TabIndex = 651;
             this.lblQtdMáximo.Text = "Quantidade Máxima:\r\n";
             // 
-            // Coluna1
+            // cboTipo
             // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 230;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Tipo";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 230;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Quantidade Máxima";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 200;
+            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Items.AddRange(new object[] {
+            "Suprimento",
+            "Produto"});
+            this.cboTipo.Location = new System.Drawing.Point(52, 70);
+            this.cboTipo.MaxLength = 32;
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(295, 23);
+            this.cboTipo.TabIndex = 664;
             // 
             // frmChangeInventory
             // 
@@ -330,7 +335,6 @@
         private System.Windows.Forms.Label lblNome;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblTipo;
-        public System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label lblQtdMáximo;
         public System.Windows.Forms.NumericUpDown nudQtdMáximo;
@@ -341,5 +345,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
+        public System.Windows.Forms.ComboBox cboTipo;
     }
 }

@@ -31,7 +31,7 @@ namespace Liriou_s_Burguer.Database
             list.nm_product = list.nm_product;
             list.vl_amount = list.vl_amount;
             list.vl_value = list.vl_value;
-            list.ds_Note = list.ds_Note;
+            list.ds_note = list.ds_note;
             list.ds_type = list.ds_type;
             
             DB.SaveChanges();

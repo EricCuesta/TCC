@@ -30,17 +30,17 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarSuprimento = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblConsultarSuprimento = new System.Windows.Forms.Label();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -52,6 +52,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.panel.Controls.Add(this.dgvConsultarSuprimento);
             this.panel.Controls.Add(this.btnConsultar);
             this.panel.Controls.Add(this.txtNome);
@@ -80,6 +81,39 @@
             this.dgvConsultarSuprimento.Size = new System.Drawing.Size(703, 338);
             this.dgvConsultarSuprimento.TabIndex = 651;
             // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Nome";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 140;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Estoque";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 140;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.HeaderText = "Quantidade";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.HeaderText = "Valor";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.HeaderText = "Descrição";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
+            this.Coluna6.Width = 182;
+            // 
             // btnConsultar
             // 
             this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -87,12 +121,14 @@
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
             this.btnConsultar.Location = new System.Drawing.Point(590, 41);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(107, 30);
             this.btnConsultar.TabIndex = 644;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // txtNome
             // 
@@ -152,39 +188,6 @@
             this.lblConsultarSuprimento.TabIndex = 568;
             this.lblConsultarSuprimento.Text = "Consultar Suprimento";
             this.lblConsultarSuprimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 140;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Estoque";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 140;
-            // 
-            // Coluna4
-            // 
-            this.Coluna4.HeaderText = "Quantidade";
-            this.Coluna4.Name = "Coluna4";
-            this.Coluna4.ReadOnly = true;
-            // 
-            // Coluna5
-            // 
-            this.Coluna5.HeaderText = "Valor";
-            this.Coluna5.Name = "Coluna5";
-            this.Coluna5.ReadOnly = true;
-            // 
-            // Coluna6
-            // 
-            this.Coluna6.HeaderText = "Descrição";
-            this.Coluna6.Name = "Coluna6";
-            this.Coluna6.ReadOnly = true;
-            this.Coluna6.Width = 182;
             // 
             // frmConsultSupplies
             // 

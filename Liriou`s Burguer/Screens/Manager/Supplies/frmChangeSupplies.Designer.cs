@@ -235,6 +235,7 @@
             this.cboEstoque.Name = "cboEstoque";
             this.cboEstoque.Size = new System.Drawing.Size(269, 23);
             this.cboEstoque.TabIndex = 646;
+            this.cboEstoque.SelectedIndexChanged += new System.EventHandler(this.cboEstoque_SelectedIndexChanged);
             // 
             // lblEstoque
             // 
@@ -255,12 +256,14 @@
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.Location = new System.Drawing.Point(304, 377);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(107, 30);
             this.btnAlterar.TabIndex = 644;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dataGridView5
             // 

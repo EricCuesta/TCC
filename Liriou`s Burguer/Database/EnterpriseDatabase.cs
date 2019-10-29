@@ -28,11 +28,11 @@ namespace Liriou_s_Burguer.Database
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_enterprise list = DB.tb_enterprise.First(t => t.id_enterprise == enterprise.id_enterprise);
-            list.ds_Address = list.ds_Address;
+            list.ds_address = list.ds_address;
             list.nr_cellphone = list.nr_cellphone;
             list.ds_cep = list.ds_cep;
             
-            list.ds_cnpj = list.ds_cnpj;
+            list.nr_identification = list.nr_identification;
             list.ds_country = list.ds_country;
             list.ds_email = list.ds_email;
             list.ds_note = list.ds_note;

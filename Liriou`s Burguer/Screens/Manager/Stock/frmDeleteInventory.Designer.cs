@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
@@ -44,11 +48,8 @@
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblDeletarEstoque = new System.Windows.Forms.Label();
-            this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdMáximo)).BeginInit();
@@ -56,7 +57,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -83,6 +83,40 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(709, 418);
             this.panel.TabIndex = 566;
+            // 
+            // dgvConsultarEstoque
+            // 
+            this.dgvConsultarEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna3});
+            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 141);
+            this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
+            this.dgvConsultarEstoque.Size = new System.Drawing.Size(703, 274);
+            this.dgvConsultarEstoque.TabIndex = 664;
+            // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Nome";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 230;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Tipo";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 230;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.HeaderText = "Quantidade Máxima";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 200;
             // 
             // dataGridView2
             // 
@@ -194,6 +228,7 @@
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Location = new System.Drawing.Point(590, 105);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(107, 30);
@@ -258,40 +293,6 @@
             this.lblDeletarEstoque.Text = "Deletar Estoque";
             this.lblDeletarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvConsultarEstoque
-            // 
-            this.dgvConsultarEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2,
-            this.Coluna3});
-            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 141);
-            this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
-            this.dgvConsultarEstoque.Size = new System.Drawing.Size(703, 274);
-            this.dgvConsultarEstoque.TabIndex = 664;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 230;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Tipo";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 230;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Quantidade Máxima";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 200;
-            // 
             // frmDeleteInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,6 +307,7 @@
             this.Text = "Delete Inventory";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdMáximo)).EndInit();
@@ -313,7 +315,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

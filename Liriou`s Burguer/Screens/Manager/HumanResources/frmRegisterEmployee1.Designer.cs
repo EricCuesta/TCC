@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.dtpDemissão = new System.Windows.Forms.DateTimePicker();
+            this.dtpContratação = new System.Windows.Forms.DateTimePicker();
+            this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
+            this.txtAgênciaDoBanco = new System.Windows.Forms.TextBox();
+            this.txtCódigoDoBanco = new System.Windows.Forms.TextBox();
+            this.txtNomeDoBanco = new System.Windows.Forms.TextBox();
+            this.nudSalárioBruto = new System.Windows.Forms.NumericUpDown();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.mtxtTérminoIntervalo = new System.Windows.Forms.MaskedTextBox();
             this.mtxtTérminoServiço = new System.Windows.Forms.MaskedTextBox();
@@ -81,14 +88,8 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
             this.imgVoltar = new System.Windows.Forms.PictureBox();
-            this.nudSalárioBruto = new System.Windows.Forms.NumericUpDown();
-            this.txtNomeDoBanco = new System.Windows.Forms.TextBox();
-            this.txtCódigoDoBanco = new System.Windows.Forms.TextBox();
-            this.txtAgênciaDoBanco = new System.Windows.Forms.TextBox();
-            this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
-            this.dtpContratação = new System.Windows.Forms.DateTimePicker();
-            this.dtpDemissão = new System.Windows.Forms.DateTimePicker();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView22)).BeginInit();
@@ -112,7 +113,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -182,12 +182,106 @@
             this.panel.Size = new System.Drawing.Size(709, 418);
             this.panel.TabIndex = 564;
             // 
+            // dtpDemissão
+            // 
+            this.dtpDemissão.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpDemissão.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.dtpDemissão.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDemissão.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDemissão.Location = new System.Drawing.Point(143, 38);
+            this.dtpDemissão.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dtpDemissão.Name = "dtpDemissão";
+            this.dtpDemissão.Size = new System.Drawing.Size(204, 23);
+            this.dtpDemissão.TabIndex = 699;
+            this.dtpDemissão.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            // 
+            // dtpContratação
+            // 
+            this.dtpContratação.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpContratação.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.dtpContratação.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpContratação.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpContratação.Location = new System.Drawing.Point(162, 6);
+            this.dtpContratação.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dtpContratação.Name = "dtpContratação";
+            this.dtpContratação.Size = new System.Drawing.Size(185, 23);
+            this.dtpContratação.TabIndex = 698;
+            this.dtpContratação.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            // 
+            // cboTipoDePessoa
+            // 
+            this.cboTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipoDePessoa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipoDePessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoDePessoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipoDePessoa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoDePessoa.FormattingEnabled = true;
+            this.cboTipoDePessoa.Items.AddRange(new object[] {
+            "Física",
+            "Jurídica"});
+            this.cboTipoDePessoa.Location = new System.Drawing.Point(480, 199);
+            this.cboTipoDePessoa.MaxLength = 32;
+            this.cboTipoDePessoa.Name = "cboTipoDePessoa";
+            this.cboTipoDePessoa.Size = new System.Drawing.Size(226, 23);
+            this.cboTipoDePessoa.TabIndex = 697;
+            // 
+            // txtAgênciaDoBanco
+            // 
+            this.txtAgênciaDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAgênciaDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtAgênciaDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAgênciaDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAgênciaDoBanco.Location = new System.Drawing.Point(434, 166);
+            this.txtAgênciaDoBanco.MaxLength = 32;
+            this.txtAgênciaDoBanco.Name = "txtAgênciaDoBanco";
+            this.txtAgênciaDoBanco.Size = new System.Drawing.Size(272, 23);
+            this.txtAgênciaDoBanco.TabIndex = 696;
+            // 
+            // txtCódigoDoBanco
+            // 
+            this.txtCódigoDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCódigoDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtCódigoDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCódigoDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCódigoDoBanco.Location = new System.Drawing.Point(424, 134);
+            this.txtCódigoDoBanco.MaxLength = 32;
+            this.txtCódigoDoBanco.Name = "txtCódigoDoBanco";
+            this.txtCódigoDoBanco.Size = new System.Drawing.Size(282, 23);
+            this.txtCódigoDoBanco.TabIndex = 695;
+            // 
+            // txtNomeDoBanco
+            // 
+            this.txtNomeDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNomeDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeDoBanco.Location = new System.Drawing.Point(416, 102);
+            this.txtNomeDoBanco.MaxLength = 32;
+            this.txtNomeDoBanco.Name = "txtNomeDoBanco";
+            this.txtNomeDoBanco.Size = new System.Drawing.Size(290, 23);
+            this.txtNomeDoBanco.TabIndex = 694;
+            // 
+            // nudSalárioBruto
+            // 
+            this.nudSalárioBruto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudSalárioBruto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudSalárioBruto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudSalárioBruto.DecimalPlaces = 2;
+            this.nudSalárioBruto.Location = new System.Drawing.Point(135, 72);
+            this.nudSalárioBruto.Name = "nudSalárioBruto";
+            this.nudSalárioBruto.Size = new System.Drawing.Size(212, 20);
+            this.nudSalárioBruto.TabIndex = 693;
+            // 
             // btnSalvar
             // 
             this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.Black;
             this.btnSalvar.Location = new System.Drawing.Point(301, 377);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(107, 30);
@@ -758,99 +852,6 @@
             this.imgVoltar.TabIndex = 565;
             this.imgVoltar.TabStop = false;
             // 
-            // nudSalárioBruto
-            // 
-            this.nudSalárioBruto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudSalárioBruto.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.nudSalárioBruto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudSalárioBruto.DecimalPlaces = 2;
-            this.nudSalárioBruto.Location = new System.Drawing.Point(135, 72);
-            this.nudSalárioBruto.Name = "nudSalárioBruto";
-            this.nudSalárioBruto.Size = new System.Drawing.Size(212, 20);
-            this.nudSalárioBruto.TabIndex = 693;
-            // 
-            // txtNomeDoBanco
-            // 
-            this.txtNomeDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNomeDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeDoBanco.Location = new System.Drawing.Point(416, 102);
-            this.txtNomeDoBanco.MaxLength = 32;
-            this.txtNomeDoBanco.Name = "txtNomeDoBanco";
-            this.txtNomeDoBanco.Size = new System.Drawing.Size(290, 23);
-            this.txtNomeDoBanco.TabIndex = 694;
-            // 
-            // txtCódigoDoBanco
-            // 
-            this.txtCódigoDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCódigoDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtCódigoDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCódigoDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCódigoDoBanco.Location = new System.Drawing.Point(424, 134);
-            this.txtCódigoDoBanco.MaxLength = 32;
-            this.txtCódigoDoBanco.Name = "txtCódigoDoBanco";
-            this.txtCódigoDoBanco.Size = new System.Drawing.Size(282, 23);
-            this.txtCódigoDoBanco.TabIndex = 695;
-            // 
-            // txtAgênciaDoBanco
-            // 
-            this.txtAgênciaDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAgênciaDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtAgênciaDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAgênciaDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgênciaDoBanco.Location = new System.Drawing.Point(434, 166);
-            this.txtAgênciaDoBanco.MaxLength = 32;
-            this.txtAgênciaDoBanco.Name = "txtAgênciaDoBanco";
-            this.txtAgênciaDoBanco.Size = new System.Drawing.Size(272, 23);
-            this.txtAgênciaDoBanco.TabIndex = 696;
-            // 
-            // cboTipoDePessoa
-            // 
-            this.cboTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTipoDePessoa.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboTipoDePessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipoDePessoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboTipoDePessoa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipoDePessoa.FormattingEnabled = true;
-            this.cboTipoDePessoa.Items.AddRange(new object[] {
-            "Física",
-            "Jurídica"});
-            this.cboTipoDePessoa.Location = new System.Drawing.Point(480, 199);
-            this.cboTipoDePessoa.MaxLength = 32;
-            this.cboTipoDePessoa.Name = "cboTipoDePessoa";
-            this.cboTipoDePessoa.Size = new System.Drawing.Size(226, 23);
-            this.cboTipoDePessoa.TabIndex = 697;
-            // 
-            // dtpContratação
-            // 
-            this.dtpContratação.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpContratação.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.dtpContratação.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpContratação.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpContratação.Location = new System.Drawing.Point(162, 6);
-            this.dtpContratação.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
-            this.dtpContratação.Name = "dtpContratação";
-            this.dtpContratação.Size = new System.Drawing.Size(185, 23);
-            this.dtpContratação.TabIndex = 698;
-            this.dtpContratação.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
-            // 
-            // dtpDemissão
-            // 
-            this.dtpDemissão.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dtpDemissão.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.dtpDemissão.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDemissão.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDemissão.Location = new System.Drawing.Point(143, 38);
-            this.dtpDemissão.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
-            this.dtpDemissão.Name = "dtpDemissão";
-            this.dtpDemissão.Size = new System.Drawing.Size(204, 23);
-            this.dtpDemissão.TabIndex = 699;
-            this.dtpDemissão.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
-            // 
             // frmRegisterEmployee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -866,6 +867,7 @@
             this.Text = "Register Employee";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView21)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView22)).EndInit();
@@ -889,7 +891,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

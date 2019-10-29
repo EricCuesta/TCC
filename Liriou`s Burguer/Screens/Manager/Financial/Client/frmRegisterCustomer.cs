@@ -16,5 +16,49 @@ namespace Liriou_s_Burguer.Screens.Manager.Financial.Client
         {
             InitializeComponent();
         }
+
+        private void mtxtCEP_TextChanged(object sender, EventArgs e)
+        {
+            if (mtxtCEP.Text.Length == 9)
+            {
+                string CEP = mtxtCEP.Text;
+                CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+                txtEndereço.Text = api.Buscar(CEP);
+            }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Database.Entities.tb_client client = new Database.Entities.tb_client();
+                client.nm_firstName = txtNome.Text;
+                client.nm_lastName = txtSobrenome.Text;
+                client.ds_rg = mtxtRG.Text;
+                client.ds_cpf = mtxtCPF.Text;
+                client.ds_sex = cboSexo.Text;
+                client.dt_birth = dtpNascimento.Value;
+                client.ds_state = cboEstado.Text;
+                client.ds_cep = mtxtCEP.Text;
+                client.ds_address = txtEndereço.Text;
+                client.ds_note = txtComplemento.Text;
+                client.nr_cellphone = mtxtCelular.Text;
+                client.nr_tellphone = mtxtTelefone.Text;
+                client.ds_email = txtEmail.Text;
+
+                Business.ClientBusiness busclient = new Business.ClientBusiness();
+                busclient.Inserir(client);
+
+                MessageBox.Show("Cliente cadastrado com sucesso");
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

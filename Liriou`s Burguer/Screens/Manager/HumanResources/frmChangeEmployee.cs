@@ -97,5 +97,15 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 txtEndereço.Text = api.Buscar(CEP);
             }
         }
+
+        private void mtxtCEP_TextChanged_1(object sender, EventArgs e)
+        {
+            if (mtxtCEP.Text.Length == 9)
+            {
+                string CEP = mtxtCEP.Text;
+                CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
+                txtEndereço.Text = api.Buscar(CEP);
+            }
+        }
     }
 }

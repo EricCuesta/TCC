@@ -39,7 +39,6 @@
             this.dataGridView16 = new System.Windows.Forms.DataGridView();
             this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
             this.lblQuantidade = new System.Windows.Forms.Label();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblAlterarProduto = new System.Windows.Forms.Label();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
@@ -70,6 +70,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.nudId);
             this.panel.Controls.Add(this.lblID);
@@ -80,7 +81,6 @@
             this.panel.Controls.Add(this.dataGridView16);
             this.panel.Controls.Add(this.nudQuantidade);
             this.panel.Controls.Add(this.lblQuantidade);
-            this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.lblTipo);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
@@ -205,20 +205,6 @@
             this.lblQuantidade.TabIndex = 651;
             this.lblQuantidade.Text = "Quantidade:";
             // 
-            // cboTipo
-            // 
-            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(52, 70);
-            this.cboTipo.MaxLength = 32;
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(230, 23);
-            this.cboTipo.TabIndex = 650;
-            // 
             // lblTipo
             // 
             this.lblTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -288,12 +274,14 @@
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.Location = new System.Drawing.Point(304, 377);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(107, 30);
             this.btnAlterar.TabIndex = 644;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // dataGridView5
             // 
@@ -363,6 +351,23 @@
             this.lblAlterarProduto.Text = "Alterar Produto";
             this.lblAlterarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cboTipo
+            // 
+            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Items.AddRange(new object[] {
+            "Suprimento",
+            "Produto"});
+            this.cboTipo.Location = new System.Drawing.Point(52, 70);
+            this.cboTipo.MaxLength = 32;
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(230, 23);
+            this.cboTipo.TabIndex = 661;
+            // 
             // frmChangeProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,7 +407,6 @@
         private System.Windows.Forms.DataGridView dataGridView16;
         public System.Windows.Forms.NumericUpDown nudQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
-        public System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Label lblTipo;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
@@ -418,5 +422,6 @@
         private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.NumericUpDown nudId;
         private System.Windows.Forms.Label lblID;
+        public System.Windows.Forms.ComboBox cboTipo;
     }
 }

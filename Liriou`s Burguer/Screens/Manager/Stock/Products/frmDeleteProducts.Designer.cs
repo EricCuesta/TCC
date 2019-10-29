@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.nudId = new System.Windows.Forms.NumericUpDown();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.lblID = new System.Windows.Forms.Label();
             this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
@@ -51,8 +52,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblDeletarProduto = new System.Windows.Forms.Label();
-            this.nudId = new System.Windows.Forms.NumericUpDown();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
@@ -62,7 +63,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -96,6 +96,14 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(709, 418);
             this.panel.TabIndex = 570;
+            // 
+            // nudId
+            // 
+            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudId.Location = new System.Drawing.Point(45, 6);
+            this.nudId.Name = "nudId";
+            this.nudId.Size = new System.Drawing.Size(121, 23);
+            this.nudId.TabIndex = 661;
             // 
             // dataGridView4
             // 
@@ -284,6 +292,7 @@
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Location = new System.Drawing.Point(304, 377);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(107, 30);
@@ -359,14 +368,6 @@
             this.lblDeletarProduto.Text = "Deletar Produto";
             this.lblDeletarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // nudId
-            // 
-            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(45, 6);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(121, 23);
-            this.nudId.TabIndex = 661;
-            // 
             // frmDeleteProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -381,6 +382,7 @@
             this.Text = "Delete Products";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
@@ -390,7 +392,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

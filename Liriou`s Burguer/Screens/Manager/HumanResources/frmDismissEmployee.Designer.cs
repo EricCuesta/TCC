@@ -196,6 +196,7 @@
             this.btnDemitir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDemitir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDemitir.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemitir.ForeColor = System.Drawing.Color.Black;
             this.btnDemitir.Location = new System.Drawing.Point(301, 377);
             this.btnDemitir.Name = "btnDemitir";
             this.btnDemitir.Size = new System.Drawing.Size(107, 30);

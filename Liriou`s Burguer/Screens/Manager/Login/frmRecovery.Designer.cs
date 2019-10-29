@@ -43,6 +43,7 @@
             this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.lblCelular = new System.Windows.Forms.Label();
             this.panelSubMenuCPF = new System.Windows.Forms.Panel();
+            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.panelSubMenuRG = new System.Windows.Forms.Panel();
             this.lblRG = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.panelOpção = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.cboOpção = new System.Windows.Forms.ComboBox();
-            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
             this.panelTítulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
@@ -85,6 +85,7 @@
             this.btnVerificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVerificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerificar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificar.ForeColor = System.Drawing.Color.Black;
             this.btnVerificar.Location = new System.Drawing.Point(127, 452);
             this.btnVerificar.Name = "btnVerificar";
             this.btnVerificar.Size = new System.Drawing.Size(131, 36);
@@ -251,6 +252,18 @@
             this.panelSubMenuCPF.TabIndex = 324;
             this.panelSubMenuCPF.Visible = false;
             // 
+            // mtxtCPF
+            // 
+            this.mtxtCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCPF.ForeColor = System.Drawing.Color.White;
+            this.mtxtCPF.Location = new System.Drawing.Point(57, 5);
+            this.mtxtCPF.Mask = "000000000/00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.Size = new System.Drawing.Size(337, 19);
+            this.mtxtCPF.TabIndex = 508;
+            // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
@@ -334,18 +347,6 @@
             this.cboOpção.Size = new System.Drawing.Size(400, 21);
             this.cboOpção.TabIndex = 321;
             this.cboOpção.SelectedIndexChanged += new System.EventHandler(this.cboOpção_SelectedIndexChanged);
-            // 
-            // mtxtCPF
-            // 
-            this.mtxtCPF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.ForeColor = System.Drawing.Color.White;
-            this.mtxtCPF.Location = new System.Drawing.Point(57, 5);
-            this.mtxtCPF.Mask = "000000000/00";
-            this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(337, 19);
-            this.mtxtCPF.TabIndex = 508;
             // 
             // frmRecovery
             // 

@@ -4,14 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_bankaccount">
           <Key>
             <PropertyRef Name="id_bankAccount" />
           </Key>
           <Property Name="id_bankAccount" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_bank" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="cd_Account" Type="varchar" MaxLength="7" Nullable="false" />
+          <Property Name="cd_account" Type="varchar" MaxLength="7" Nullable="false" />
           <Property Name="cd_agency" Type="int" Nullable="false" />
           <Property Name="ds_typePerson" Type="varchar" MaxLength="8" Nullable="false" />
         </EntityType>
@@ -48,15 +48,15 @@ warning 6002: The table/view 'def.liriousdb.tb_busline' does not have a primary 
           <Property Name="nm_firstName" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="nm_lastName" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="dt_birth" Type="date" Nullable="false" />
           <Property Name="ds_sex" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="ds_rg" Type="char" MaxLength="12" Nullable="false" />
+          <Property Name="dt_birth" Type="date" Nullable="false" />
           <Property Name="ds_cpf" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="ds_Address" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
-          <Property Name="nr_cellphone" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="nr_cellphone" Type="char" MaxLength="16" />
           <Property Name="nr_tellphone" Type="char" MaxLength="15" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -128,6 +128,7 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="ds_cpf" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="ds_dependents" Type="int" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
+          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
@@ -142,11 +143,12 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="nm_enterprise" Type="varchar" MaxLength="64" Nullable="false" />
           <Property Name="nm_commercialName" Type="varchar" MaxLength="64" Nullable="false" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="ds_cnpj" Type="char" MaxLength="18" Nullable="false" />
+          <Property Name="nr_identification" Type="varchar" MaxLength="18" Nullable="false" />
+          <Property Name="ds_typePerson" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="ds_Address" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
           <Property Name="nr_cellphone" Type="char" MaxLength="16" Nullable="false" />
           <Property Name="nr_tellphone" Type="char" MaxLength="15" Nullable="false" />
@@ -191,7 +193,7 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="ds_type" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="vl_amount" Type="int" Nullable="false" />
           <Property Name="vl_value" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="ds_Note" Type="varchar" MaxLength="64" />
+          <Property Name="ds_note" Type="varchar" MaxLength="64" />
         </EntityType>
         <EntityType Name="tb_provider">
           <Key>
@@ -199,14 +201,14 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           </Key>
           <Property Name="id_provider" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_provider" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="nm_Name" Type="varchar" MaxLength="64" />
+          <Property Name="nm_name" Type="varchar" MaxLength="64" Nullable="false" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="nr_identification" Type="varchar" MaxLength="18" Nullable="false" />
           <Property Name="ds_typePerson" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="ds_numbering" Type="varchar" MaxLength="18" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="ds_Address" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
           <Property Name="nr_cellphone" Type="char" MaxLength="16" Nullable="false" />
           <Property Name="nr_tellphone" Type="char" MaxLength="15" Nullable="false" />
@@ -225,9 +227,9 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ds_place" Type="varchar" MaxLength="64" Nullable="false" />
+          <Property Name="nr_maximumAmount" Type="int" Nullable="false" />
           <Property Name="nm_stock" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="vl_maxAmount" Type="int" Nullable="false" />
-          <Property Name="ds_type" Type="varchar" MaxLength="32" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_supply">
           <Key>
@@ -527,8 +529,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <End Role="tb_timecard" EntitySet="tb_timecard" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="liriousdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -538,7 +539,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_bankAccount" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nm_bank" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="cd_Account" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="cd_account" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="cd_agency" Type="Int32" Nullable="false" />
           <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
@@ -554,28 +555,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="vl_lifeSafe" Type="Boolean" />
           <Property Name="vl_planHealth" Type="Boolean" />
           <Property Name="vl_planDental" Type="Boolean" />
-        </EntityType>
-        <EntityType Name="tb_client">
-          <Key>
-            <PropertyRef Name="id_client" />
-          </Key>
-          <Property Name="id_client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nm_firstName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nm_lastName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dt_birth" Type="DateTime" Nullable="false" />
-          <Property Name="ds_sex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_rg" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_cpf" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_Address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
-          <Property Name="nr_cellphone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nr_tellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tb_crm" Relationship="Self.tb_crm_ibfk_1" FromRole="tb_client" ToRole="tb_crm" />
-          <NavigationProperty Name="tb_iten" Relationship="Self.tb_iten_ibfk_2" FromRole="tb_client" ToRole="tb_iten" />
-          <NavigationProperty Name="tb_sale" Relationship="Self.tb_sale_ibfk_1" FromRole="tb_client" ToRole="tb_sale" />
         </EntityType>
         <EntityType Name="tb_cpp">
           <Key>
@@ -626,6 +605,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="ds_cpf" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_dependents" Type="Int32" Nullable="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
@@ -645,11 +625,12 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="nm_enterprise" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nm_commercialName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_cnpj" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_identification" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_Address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
           <Property Name="nr_cellphone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_tellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
@@ -687,9 +668,9 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="id_client" Type="Int32" Nullable="false" />
           <Property Name="id_product" Type="Int32" Nullable="false" />
           <Property Name="vl_qtdProduct" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="tb_client" Relationship="Self.tb_iten_ibfk_2" FromRole="tb_iten" ToRole="tb_client" />
           <NavigationProperty Name="tb_sale" Relationship="Self.tb_iten_ibfk_1" FromRole="tb_iten" ToRole="tb_sale" />
           <NavigationProperty Name="tb_product" Relationship="Self.tb_iten_ibfk_3" FromRole="tb_iten" ToRole="tb_product" />
+          <NavigationProperty Name="tb_client" Relationship="liriousdbModel.tb_iten_ibfk_2" FromRole="tb_iten" ToRole="tb_client" />
         </EntityType>
         <EntityType Name="tb_product">
           <Key>
@@ -701,7 +682,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="ds_type" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="vl_amount" Type="Int32" Nullable="false" />
           <Property Name="vl_value" Type="Decimal" Nullable="false" />
-          <Property Name="ds_Note" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="ds_note" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_iten" Relationship="Self.tb_iten_ibfk_3" FromRole="tb_product" ToRole="tb_iten" />
           <NavigationProperty Name="tb_stock" Relationship="Self.tb_product_ibfk_1" FromRole="tb_product" ToRole="tb_stock" />
         </EntityType>
@@ -711,14 +692,14 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_provider" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nm_provider" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nm_Name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="nm_name" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_identification" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_numbering" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_Address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
           <Property Name="nr_cellphone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_tellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
@@ -731,17 +712,17 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="id_client" Type="Int32" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tb_client" Relationship="Self.tb_sale_ibfk_1" FromRole="tb_sale" ToRole="tb_client" />
           <NavigationProperty Name="tb_iten" Relationship="Self.tb_iten_ibfk_1" FromRole="tb_sale" ToRole="tb_iten" />
+          <NavigationProperty Name="tb_client" Relationship="liriousdbModel.tb_sale_ibfk_1" FromRole="tb_sale" ToRole="tb_client" />
         </EntityType>
         <EntityType Name="tb_stock">
           <Key>
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ds_place" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_maximumAmount" Type="Int32" Nullable="false" />
           <Property Name="nm_stock" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="vl_maxAmount" Type="Int32" Nullable="false" />
-          <Property Name="ds_type" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="tb_product" Relationship="Self.tb_product_ibfk_1" FromRole="tb_stock" ToRole="tb_product" />
           <NavigationProperty Name="tb_supply" Relationship="Self.tb_supply_ibfk_1" FromRole="tb_stock" ToRole="tb_supply" />
         </EntityType>
@@ -804,44 +785,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="id_client" Type="Int32" Nullable="false" />
           <Property Name="ds_mood" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tb_client" Relationship="Self.tb_crm_ibfk_1" FromRole="tb_crm" ToRole="tb_client" />
+          <NavigationProperty Name="tb_client" Relationship="liriousdbModel.tb_crm_ibfk_1" FromRole="tb_crm" ToRole="tb_client" />
         </EntityType>
-        <Association Name="tb_crm_ibfk_1">
-          <End Role="tb_client" Type="Self.tb_client" Multiplicity="1" />
-          <End Role="tb_crm" Type="Self.tb_crm" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="tb_client">
-              <PropertyRef Name="id_client" />
-            </Principal>
-            <Dependent Role="tb_crm">
-              <PropertyRef Name="id_client" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_iten_ibfk_2">
-          <End Role="tb_client" Type="Self.tb_client" Multiplicity="1" />
-          <End Role="tb_iten" Type="Self.tb_iten" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_client">
-              <PropertyRef Name="id_client" />
-            </Principal>
-            <Dependent Role="tb_iten">
-              <PropertyRef Name="id_client" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_sale_ibfk_1">
-          <End Role="tb_client" Type="Self.tb_client" Multiplicity="1" />
-          <End Role="tb_sale" Type="Self.tb_sale" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_client">
-              <PropertyRef Name="id_client" />
-            </Principal>
-            <Dependent Role="tb_sale">
-              <PropertyRef Name="id_client" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="tb_cpp_ibfk_1">
           <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
           <End Role="tb_cpp" Type="Self.tb_cpp" Multiplicity="*" />
@@ -977,7 +922,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
         <EntityContainer Name="liriousdbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" />
           <EntitySet Name="tb_benefits" EntityType="Self.tb_benefits" />
-          <EntitySet Name="tb_client" EntityType="Self.tb_client" />
           <EntitySet Name="tb_cpp" EntityType="Self.tb_cpp" />
           <EntitySet Name="tb_department" EntityType="Self.tb_department" />
           <EntitySet Name="tb_discounts" EntityType="Self.tb_discounts" />
@@ -995,18 +939,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <EntitySet Name="tb_busline" EntityType="Self.tb_busline" />
           <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" />
           <EntitySet Name="tb_crm" EntityType="Self.tb_crm" />
-          <AssociationSet Name="tb_crm_ibfk_1" Association="Self.tb_crm_ibfk_1">
-            <End Role="tb_client" EntitySet="tb_client" />
-            <End Role="tb_crm" EntitySet="tb_crm" />
-          </AssociationSet>
-          <AssociationSet Name="tb_iten_ibfk_2" Association="Self.tb_iten_ibfk_2">
-            <End Role="tb_client" EntitySet="tb_client" />
-            <End Role="tb_iten" EntitySet="tb_iten" />
-          </AssociationSet>
-          <AssociationSet Name="tb_sale_ibfk_1" Association="Self.tb_sale_ibfk_1">
-            <End Role="tb_client" EntitySet="tb_client" />
-            <End Role="tb_sale" EntitySet="tb_sale" />
-          </AssociationSet>
           <AssociationSet Name="tb_cpp_ibfk_1" Association="Self.tb_cpp_ibfk_1">
             <End Role="tb_enterprise" EntitySet="tb_enterprise" />
             <End Role="tb_cpp" EntitySet="tb_cpp" />
@@ -1051,7 +983,78 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <End Role="tb_stock" EntitySet="tb_stock" />
             <End Role="tb_supply" EntitySet="tb_supply" />
           </AssociationSet>
+          <EntitySet Name="tb_client" EntityType="liriousdbModel.tb_client" />
+          <AssociationSet Name="tb_crm_ibfk_1" Association="liriousdbModel.tb_crm_ibfk_1">
+            <End Role="tb_client" EntitySet="tb_client" />
+            <End Role="tb_crm" EntitySet="tb_crm" />
+          </AssociationSet>
+          <AssociationSet Name="tb_iten_ibfk_2" Association="liriousdbModel.tb_iten_ibfk_2">
+            <End Role="tb_client" EntitySet="tb_client" />
+            <End Role="tb_iten" EntitySet="tb_iten" />
+          </AssociationSet>
+          <AssociationSet Name="tb_sale_ibfk_1" Association="liriousdbModel.tb_sale_ibfk_1">
+            <End Role="tb_client" EntitySet="tb_client" />
+            <End Role="tb_sale" EntitySet="tb_sale" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="tb_client">
+          <Key>
+            <PropertyRef Name="id_client" />
+          </Key>
+          <Property Name="id_client" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_firstName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="nm_lastName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ds_email" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="ds_sex" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="ds_rg" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="dt_birth" Type="DateTime" Nullable="false" />
+          <Property Name="ds_cpf" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ds_cep" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="ds_state" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ds_address" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="nr_cellphone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="nr_tellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_crm" Relationship="liriousdbModel.tb_crm_ibfk_1" FromRole="tb_client" ToRole="tb_crm" />
+          <NavigationProperty Name="tb_iten" Relationship="liriousdbModel.tb_iten_ibfk_2" FromRole="tb_client" ToRole="tb_iten" />
+          <NavigationProperty Name="tb_sale" Relationship="liriousdbModel.tb_sale_ibfk_1" FromRole="tb_client" ToRole="tb_sale" />
+        </EntityType>
+        <Association Name="tb_crm_ibfk_1">
+          <End Type="liriousdbModel.tb_client" Role="tb_client" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_crm" Role="tb_crm" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="tb_client">
+              <PropertyRef Name="id_client" />
+            </Principal>
+            <Dependent Role="tb_crm">
+              <PropertyRef Name="id_client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_iten_ibfk_2">
+          <End Type="liriousdbModel.tb_client" Role="tb_client" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_iten" Role="tb_iten" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_client">
+              <PropertyRef Name="id_client" />
+            </Principal>
+            <Dependent Role="tb_iten">
+              <PropertyRef Name="id_client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_sale_ibfk_1">
+          <End Type="liriousdbModel.tb_client" Role="tb_client" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_sale" Role="tb_sale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_client">
+              <PropertyRef Name="id_client" />
+            </Principal>
+            <Dependent Role="tb_sale">
+              <PropertyRef Name="id_client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1063,7 +1066,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
               <MappingFragment StoreEntitySet="tb_bankaccount">
                 <ScalarProperty Name="id_bankAccount" ColumnName="id_bankAccount" />
                 <ScalarProperty Name="nm_bank" ColumnName="nm_bank" />
-                <ScalarProperty Name="cd_Account" ColumnName="cd_Account" />
+                <ScalarProperty Name="cd_account" ColumnName="cd_account" />
                 <ScalarProperty Name="cd_agency" ColumnName="cd_agency" />
                 <ScalarProperty Name="ds_typePerson" ColumnName="ds_typePerson" />
               </MappingFragment>
@@ -1080,26 +1083,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="vl_lifeSafe" ColumnName="vl_lifeSafe" />
                 <ScalarProperty Name="vl_planHealth" ColumnName="vl_planHealth" />
                 <ScalarProperty Name="vl_planDental" ColumnName="vl_planDental" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tb_client">
-            <EntityTypeMapping TypeName="liriousdbModel.tb_client">
-              <MappingFragment StoreEntitySet="tb_client">
-                <ScalarProperty Name="id_client" ColumnName="id_client" />
-                <ScalarProperty Name="nm_firstName" ColumnName="nm_firstName" />
-                <ScalarProperty Name="nm_lastName" ColumnName="nm_lastName" />
-                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-                <ScalarProperty Name="dt_birth" ColumnName="dt_birth" />
-                <ScalarProperty Name="ds_sex" ColumnName="ds_sex" />
-                <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
-                <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
-                <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
-                <ScalarProperty Name="ds_state" ColumnName="ds_state" />
-                <ScalarProperty Name="ds_Address" ColumnName="ds_Address" />
-                <ScalarProperty Name="ds_note" ColumnName="ds_note" />
-                <ScalarProperty Name="nr_cellphone" ColumnName="nr_cellphone" />
-                <ScalarProperty Name="nr_tellphone" ColumnName="nr_tellphone" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1151,6 +1134,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
                 <ScalarProperty Name="ds_dependents" ColumnName="ds_dependents" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
                 <ScalarProperty Name="ds_address" ColumnName="ds_address" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
@@ -1166,11 +1150,12 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="nm_enterprise" ColumnName="nm_enterprise" />
                 <ScalarProperty Name="nm_commercialName" ColumnName="nm_commercialName" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-                <ScalarProperty Name="ds_cnpj" ColumnName="ds_cnpj" />
+                <ScalarProperty Name="nr_identification" ColumnName="nr_identification" />
+                <ScalarProperty Name="ds_typePerson" ColumnName="ds_typePerson" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
                 <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
-                <ScalarProperty Name="ds_Address" ColumnName="ds_Address" />
+                <ScalarProperty Name="ds_address" ColumnName="ds_address" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
                 <ScalarProperty Name="nr_cellphone" ColumnName="nr_cellphone" />
                 <ScalarProperty Name="nr_tellphone" ColumnName="nr_tellphone" />
@@ -1219,7 +1204,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="ds_type" ColumnName="ds_type" />
                 <ScalarProperty Name="vl_amount" ColumnName="vl_amount" />
                 <ScalarProperty Name="vl_value" ColumnName="vl_value" />
-                <ScalarProperty Name="ds_Note" ColumnName="ds_Note" />
+                <ScalarProperty Name="ds_note" ColumnName="ds_note" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1228,14 +1213,14 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
               <MappingFragment StoreEntitySet="tb_provider">
                 <ScalarProperty Name="id_provider" ColumnName="id_provider" />
                 <ScalarProperty Name="nm_provider" ColumnName="nm_provider" />
-                <ScalarProperty Name="nm_Name" ColumnName="nm_Name" />
+                <ScalarProperty Name="nm_name" ColumnName="nm_name" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="nr_identification" ColumnName="nr_identification" />
                 <ScalarProperty Name="ds_typePerson" ColumnName="ds_typePerson" />
-                <ScalarProperty Name="ds_numbering" ColumnName="ds_numbering" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
                 <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
-                <ScalarProperty Name="ds_Address" ColumnName="ds_Address" />
+                <ScalarProperty Name="ds_address" ColumnName="ds_address" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
                 <ScalarProperty Name="nr_cellphone" ColumnName="nr_cellphone" />
                 <ScalarProperty Name="nr_tellphone" ColumnName="nr_tellphone" />
@@ -1256,9 +1241,9 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <EntityTypeMapping TypeName="liriousdbModel.tb_stock">
               <MappingFragment StoreEntitySet="tb_stock">
                 <ScalarProperty Name="id_stock" ColumnName="id_stock" />
+                <ScalarProperty Name="ds_place" ColumnName="ds_place" />
+                <ScalarProperty Name="nr_maximumAmount" ColumnName="nr_maximumAmount" />
                 <ScalarProperty Name="nm_stock" ColumnName="nm_stock" />
-                <ScalarProperty Name="vl_maxAmount" ColumnName="vl_maxAmount" />
-                <ScalarProperty Name="ds_type" ColumnName="ds_type" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1319,6 +1304,26 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="id_client" ColumnName="id_client" />
                 <ScalarProperty Name="ds_mood" ColumnName="ds_mood" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_client">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_client">
+              <MappingFragment StoreEntitySet="tb_client">
+                <ScalarProperty Name="nr_tellphone" ColumnName="nr_tellphone" />
+                <ScalarProperty Name="nr_cellphone" ColumnName="nr_cellphone" />
+                <ScalarProperty Name="ds_note" ColumnName="ds_note" />
+                <ScalarProperty Name="ds_address" ColumnName="ds_address" />
+                <ScalarProperty Name="ds_state" ColumnName="ds_state" />
+                <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+                <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
+                <ScalarProperty Name="dt_birth" ColumnName="dt_birth" />
+                <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
+                <ScalarProperty Name="ds_sex" ColumnName="ds_sex" />
+                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="nm_lastName" ColumnName="nm_lastName" />
+                <ScalarProperty Name="nm_firstName" ColumnName="nm_firstName" />
+                <ScalarProperty Name="id_client" ColumnName="id_client" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

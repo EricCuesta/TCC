@@ -15,6 +15,20 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
         public frmChangeProducts()
         {
             InitializeComponent();
+            this.loadcombo();
+        }
+        public void loadcombo()
+        {
+            Database.StockDatabase db = new Database.StockDatabase();
+            List<Database.Entities.tb_stock> list = db.ListarEstoque();
+
+            cboEstoque.DisplayMember = nameof(Database.Entities.tb_stock.nm_stock);
+            cboEstoque.DataSource = list;
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

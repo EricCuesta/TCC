@@ -28,7 +28,7 @@ namespace Liriou_s_Burguer.Screens
         {
             try
             {
-                tb_employees employees = new Database.Entities.tb_employees();
+                tb_employees employees = new tb_employees();
 
                 if (cboOpção.Text == "RG")
                 {

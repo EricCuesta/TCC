@@ -16,14 +16,14 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_provider { get; set; }
         public string nm_provider { get; set; }
-        public string nm_Name { get; set; }
+        public string nm_name { get; set; }
         public string ds_email { get; set; }
+        public string nr_identification { get; set; }
         public string ds_typePerson { get; set; }
-        public string ds_numbering { get; set; }
         public string ds_cep { get; set; }
         public string ds_country { get; set; }
         public string ds_state { get; set; }
-        public string ds_Address { get; set; }
+        public string ds_address { get; set; }
         public string ds_note { get; set; }
         public string nr_cellphone { get; set; }
         public string nr_tellphone { get; set; }

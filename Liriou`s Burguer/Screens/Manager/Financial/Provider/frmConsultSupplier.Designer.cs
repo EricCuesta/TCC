@@ -30,7 +30,7 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
             this.dgvConsultarFornecedor = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.comboBox1);
+            this.panel.Controls.Add(this.cboTipoDePessoa);
             this.panel.Controls.Add(this.dgvConsultarFornecedor);
             this.panel.Controls.Add(this.btnConsultar);
             this.panel.Controls.Add(this.txtNome);
@@ -89,22 +89,23 @@
             this.label1.TabIndex = 657;
             this.label1.Text = "Tipo de Pessoa:";
             // 
-            // comboBox1
+            // cboTipoDePessoa
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipoDePessoa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipoDePessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoDePessoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipoDePessoa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoDePessoa.FormattingEnabled = true;
+            this.cboTipoDePessoa.Items.AddRange(new object[] {
             "Física",
             "Jurídica"});
-            this.comboBox1.Location = new System.Drawing.Point(481, 7);
-            this.comboBox1.MaxLength = 32;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 23);
-            this.comboBox1.TabIndex = 656;
+            this.cboTipoDePessoa.Location = new System.Drawing.Point(481, 6);
+            this.cboTipoDePessoa.MaxLength = 32;
+            this.cboTipoDePessoa.Name = "cboTipoDePessoa";
+            this.cboTipoDePessoa.Size = new System.Drawing.Size(224, 23);
+            this.cboTipoDePessoa.TabIndex = 656;
+            this.cboTipoDePessoa.SelectedIndexChanged += new System.EventHandler(this.cboTipoDePessoa_SelectedIndexChanged);
             // 
             // dgvConsultarFornecedor
             // 
@@ -217,12 +218,14 @@
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
             this.btnConsultar.Location = new System.Drawing.Point(590, 41);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(107, 30);
             this.btnConsultar.TabIndex = 644;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // txtNome
             // 
@@ -236,6 +239,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(284, 23);
             this.txtNome.TabIndex = 648;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // lblNome
             // 
@@ -329,7 +333,7 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblConsultarFornecedor;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cboTipoDePessoa;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;

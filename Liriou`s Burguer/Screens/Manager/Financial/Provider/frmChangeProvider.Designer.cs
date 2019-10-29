@@ -29,17 +29,20 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.dataGridView7 = new System.Windows.Forms.DataGridView();
+            this.nudId = new System.Windows.Forms.NumericUpDown();
+            this.lblID = new System.Windows.Forms.Label();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.txtPaís = new System.Windows.Forms.TextBox();
             this.lblPaís = new System.Windows.Forms.Label();
             this.panelCPF = new System.Windows.Forms.Panel();
             this.panelCNPJ = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.lblTipoDePessoa = new System.Windows.Forms.Label();
+            this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -71,10 +74,9 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblAlterarFornecedor = new System.Windows.Forms.Label();
-            this.nudId = new System.Windows.Forms.NumericUpDown();
-            this.lblID = new System.Windows.Forms.Label();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.panelCPF.SuspendLayout();
             this.panelCNPJ.SuspendLayout();
@@ -89,8 +91,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -105,8 +105,8 @@
             this.panel.Controls.Add(this.txtPaís);
             this.panel.Controls.Add(this.lblPaís);
             this.panel.Controls.Add(this.panelCPF);
-            this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.comboBox1);
+            this.panel.Controls.Add(this.lblTipoDePessoa);
+            this.panel.Controls.Add(this.cboTipoDePessoa);
             this.panel.Controls.Add(this.btnAlterar);
             this.panel.Controls.Add(this.txtEmail);
             this.panel.Controls.Add(this.lblEmail);
@@ -141,6 +141,36 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(709, 418);
             this.panel.TabIndex = 568;
+            // 
+            // dataGridView7
+            // 
+            this.dataGridView7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView7.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView7.Name = "dataGridView7";
+            this.dataGridView7.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView7.TabIndex = 664;
+            // 
+            // nudId
+            // 
+            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudId.Location = new System.Drawing.Point(45, 6);
+            this.nudId.Name = "nudId";
+            this.nudId.Size = new System.Drawing.Size(120, 23);
+            this.nudId.TabIndex = 663;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblID.Location = new System.Drawing.Point(2, 5);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(37, 26);
+            this.lblID.TabIndex = 662;
+            this.lblID.Text = "ID:";
             // 
             // dataGridView4
             // 
@@ -191,7 +221,7 @@
             // panelCNPJ
             // 
             this.panelCNPJ.Controls.Add(this.label2);
-            this.panelCNPJ.Controls.Add(this.maskedTextBox1);
+            this.panelCNPJ.Controls.Add(this.mtxtCNPJ);
             this.panelCNPJ.Location = new System.Drawing.Point(0, 0);
             this.panelCNPJ.Name = "panelCNPJ";
             this.panelCNPJ.Size = new System.Drawing.Size(353, 30);
@@ -210,17 +240,17 @@
             this.label2.TabIndex = 646;
             this.label2.Text = "CNPJ:";
             // 
-            // maskedTextBox1
+            // mtxtCNPJ
             // 
-            this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.maskedTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(57, 3);
-            this.maskedTextBox1.Mask = "00.000.000/0000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(292, 23);
-            this.maskedTextBox1.TabIndex = 645;
+            this.mtxtCNPJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtCNPJ.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCNPJ.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCNPJ.Location = new System.Drawing.Point(57, 3);
+            this.mtxtCNPJ.Mask = "00.000.000/0000-00";
+            this.mtxtCNPJ.Name = "mtxtCNPJ";
+            this.mtxtCNPJ.Size = new System.Drawing.Size(292, 23);
+            this.mtxtCNPJ.TabIndex = 645;
             // 
             // lblCPF
             // 
@@ -246,34 +276,35 @@
             this.mtxtCPF.Size = new System.Drawing.Size(262, 23);
             this.mtxtCPF.TabIndex = 645;
             // 
-            // label1
+            // lblTipoDePessoa
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(3, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 19);
-            this.label1.TabIndex = 648;
-            this.label1.Text = "Tipo de Pessoa:";
+            this.lblTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTipoDePessoa.AutoSize = true;
+            this.lblTipoDePessoa.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoDePessoa.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTipoDePessoa.Location = new System.Drawing.Point(3, 72);
+            this.lblTipoDePessoa.Name = "lblTipoDePessoa";
+            this.lblTipoDePessoa.Size = new System.Drawing.Size(114, 19);
+            this.lblTipoDePessoa.TabIndex = 648;
+            this.lblTipoDePessoa.Text = "Tipo de Pessoa:";
             // 
-            // comboBox1
+            // cboTipoDePessoa
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipoDePessoa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipoDePessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoDePessoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipoDePessoa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoDePessoa.FormattingEnabled = true;
+            this.cboTipoDePessoa.Items.AddRange(new object[] {
             "Física",
             "Jurídica"});
-            this.comboBox1.Location = new System.Drawing.Point(123, 70);
-            this.comboBox1.MaxLength = 32;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 23);
-            this.comboBox1.TabIndex = 647;
+            this.cboTipoDePessoa.Location = new System.Drawing.Point(123, 70);
+            this.cboTipoDePessoa.MaxLength = 32;
+            this.cboTipoDePessoa.Name = "cboTipoDePessoa";
+            this.cboTipoDePessoa.Size = new System.Drawing.Size(224, 23);
+            this.cboTipoDePessoa.TabIndex = 647;
+            this.cboTipoDePessoa.SelectedIndexChanged += new System.EventHandler(this.cboTipoDePessoa_SelectedIndexChanged);
             // 
             // btnAlterar
             // 
@@ -282,12 +313,14 @@
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
             this.btnAlterar.Location = new System.Drawing.Point(304, 377);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(107, 30);
             this.btnAlterar.TabIndex = 644;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // txtEmail
             // 
@@ -498,6 +531,7 @@
             this.mtxtCEP.Name = "mtxtCEP";
             this.mtxtCEP.Size = new System.Drawing.Size(136, 23);
             this.mtxtCEP.TabIndex = 618;
+            this.mtxtCEP.TextChanged += new System.EventHandler(this.mtxtCEP_TextChanged);
             // 
             // lblCEP
             // 
@@ -670,36 +704,6 @@
             this.lblAlterarFornecedor.Text = "Alterar Fornecedor";
             this.lblAlterarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // nudId
-            // 
-            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(45, 6);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(120, 23);
-            this.nudId.TabIndex = 663;
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblID.Location = new System.Drawing.Point(2, 5);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(37, 26);
-            this.lblID.TabIndex = 662;
-            this.lblID.Text = "ID:";
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 33);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(709, 2);
-            this.dataGridView7.TabIndex = 664;
-            // 
             // frmChangeProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -714,6 +718,8 @@
             this.Text = "Change Provider";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.panelCPF.ResumeLayout(false);
             this.panelCPF.PerformLayout();
@@ -730,8 +736,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -746,11 +750,11 @@
         private System.Windows.Forms.Panel panelCPF;
         private System.Windows.Forms.Panel panelCNPJ;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        public System.Windows.Forms.MaskedTextBox mtxtCNPJ;
         private System.Windows.Forms.Label lblCPF;
         public System.Windows.Forms.MaskedTextBox mtxtCPF;
-        private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblTipoDePessoa;
+        public System.Windows.Forms.ComboBox cboTipoDePessoa;
         private System.Windows.Forms.Button btnAlterar;
         public System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;

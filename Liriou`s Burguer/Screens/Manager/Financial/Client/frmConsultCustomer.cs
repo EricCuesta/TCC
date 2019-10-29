@@ -16,5 +16,46 @@ namespace Liriou_s_Burguer.Screens.Manager.Financial.Client
         {
             InitializeComponent();
         }
+
+        private void Consulta()
+        {
+            Database.Entities.tb_client client = new Database.Entities.tb_client();
+            client.nm_firstName = txtNome.Text;
+            client.ds_rg = mtxtRG.Text;
+            client.ds_sex = cboSexo.Text;
+
+            Business.ClientBusiness busclient = new Business.ClientBusiness();
+            List<Database.Entities.tb_client> clientlista = busclient.Consultar(client);
+
+            dgvConsultarCliente.DataSource = clientlista;
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            Business.ClientBusiness busclient = new Business.ClientBusiness();
+            List<Database.Entities.tb_client> clientlista = busclient.ConsultarTodos();
+
+            dgvConsultarCliente.DataSource = clientlista;
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
+        }
+
+        private void mtxtRG_TextChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
+        }
+
+        private void mtxtAnoDeNascimento_TextChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
+        }
+
+        private void cboSexo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
+        }
     }
 }

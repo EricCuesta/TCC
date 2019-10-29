@@ -16,5 +16,15 @@ namespace Liriou_s_Burguer.Screens.Manager.Supplies
         {
             InitializeComponent();
         }
+
+        private void cboEstoque_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

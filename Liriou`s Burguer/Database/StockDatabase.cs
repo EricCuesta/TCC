@@ -41,5 +41,13 @@ namespace Liriou_s_Burguer.Database
             DB.tb_stock.Remove(remover);
             DB.SaveChanges();
         }
+
+        public List<Entities.tb_stock> ListarEstoque()
+        {
+            Entities.liriousdbEntities db = new Entities.liriousdbEntities();
+            List<Entities.tb_stock> list = db.tb_stock.ToList();
+
+            return list;
+        }
     }
 }

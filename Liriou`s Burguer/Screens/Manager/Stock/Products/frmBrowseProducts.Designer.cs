@@ -30,6 +30,7 @@
         {
             this.lblConsultarProduto = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.dgvConsultarProduto = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,7 +38,6 @@
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblTipo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -70,8 +70,8 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.Controls.Add(this.dgvConsultarProduto);
             this.panel.Controls.Add(this.cboTipo);
+            this.panel.Controls.Add(this.dgvConsultarProduto);
             this.panel.Controls.Add(this.btnConsultar);
             this.panel.Controls.Add(this.lblTipo);
             this.panel.Controls.Add(this.txtNome);
@@ -83,6 +83,23 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(709, 418);
             this.panel.TabIndex = 567;
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Items.AddRange(new object[] {
+            "Suprimento",
+            "Produto"});
+            this.cboTipo.Location = new System.Drawing.Point(410, 6);
+            this.cboTipo.MaxLength = 32;
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(295, 23);
+            this.cboTipo.TabIndex = 652;
             // 
             // dgvConsultarProduto
             // 
@@ -144,20 +161,6 @@
             this.Coluna6.ReadOnly = true;
             this.Coluna6.Width = 160;
             // 
-            // cboTipo
-            // 
-            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(410, 6);
-            this.cboTipo.MaxLength = 32;
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(295, 23);
-            this.cboTipo.TabIndex = 650;
-            // 
             // btnConsultar
             // 
             this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -165,12 +168,14 @@
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
             this.btnConsultar.Location = new System.Drawing.Point(590, 41);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(107, 30);
             this.btnConsultar.TabIndex = 644;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // lblTipo
             // 
@@ -268,7 +273,6 @@
 
         private System.Windows.Forms.Label lblConsultarProduto;
         private System.Windows.Forms.Panel panel;
-        public System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Label lblTipo;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
@@ -283,5 +287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
+        public System.Windows.Forms.ComboBox cboTipo;
     }
 }

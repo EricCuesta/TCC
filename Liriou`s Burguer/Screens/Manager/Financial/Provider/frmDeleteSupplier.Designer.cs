@@ -38,11 +38,11 @@
             this.panelCPF = new System.Windows.Forms.Panel();
             this.panelCNPJ = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
@@ -106,7 +106,7 @@
             this.panel.Controls.Add(this.lblPaís);
             this.panel.Controls.Add(this.panelCPF);
             this.panel.Controls.Add(this.label1);
-            this.panel.Controls.Add(this.comboBox1);
+            this.panel.Controls.Add(this.cboTipoDePessoa);
             this.panel.Controls.Add(this.btnDeletar);
             this.panel.Controls.Add(this.txtEmail);
             this.panel.Controls.Add(this.lblEmail);
@@ -160,6 +160,7 @@
             this.nudId.Name = "nudId";
             this.nudId.Size = new System.Drawing.Size(120, 23);
             this.nudId.TabIndex = 663;
+            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
             // 
             // lblID
             // 
@@ -222,7 +223,7 @@
             // panelCNPJ
             // 
             this.panelCNPJ.Controls.Add(this.label2);
-            this.panelCNPJ.Controls.Add(this.maskedTextBox1);
+            this.panelCNPJ.Controls.Add(this.mtxtCNPJ);
             this.panelCNPJ.Location = new System.Drawing.Point(0, 0);
             this.panelCNPJ.Name = "panelCNPJ";
             this.panelCNPJ.Size = new System.Drawing.Size(353, 30);
@@ -241,18 +242,18 @@
             this.label2.TabIndex = 646;
             this.label2.Text = "CNPJ:";
             // 
-            // maskedTextBox1
+            // mtxtCNPJ
             // 
-            this.maskedTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.maskedTextBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.maskedTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.maskedTextBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(57, 3);
-            this.maskedTextBox1.Mask = "00.000.000/0000-00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.ReadOnly = true;
-            this.maskedTextBox1.Size = new System.Drawing.Size(292, 23);
-            this.maskedTextBox1.TabIndex = 645;
+            this.mtxtCNPJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtCNPJ.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCNPJ.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCNPJ.Location = new System.Drawing.Point(57, 3);
+            this.mtxtCNPJ.Mask = "00.000.000/0000-00";
+            this.mtxtCNPJ.Name = "mtxtCNPJ";
+            this.mtxtCNPJ.ReadOnly = true;
+            this.mtxtCNPJ.Size = new System.Drawing.Size(292, 23);
+            this.mtxtCNPJ.TabIndex = 645;
             // 
             // lblCPF
             // 
@@ -290,22 +291,22 @@
             this.label1.TabIndex = 648;
             this.label1.Text = "Tipo de Pessoa:";
             // 
-            // comboBox1
+            // cboTipoDePessoa
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cboTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipoDePessoa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipoDePessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoDePessoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipoDePessoa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoDePessoa.FormattingEnabled = true;
+            this.cboTipoDePessoa.Items.AddRange(new object[] {
             "Física",
             "Jurídica"});
-            this.comboBox1.Location = new System.Drawing.Point(123, 70);
-            this.comboBox1.MaxLength = 32;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(224, 23);
-            this.comboBox1.TabIndex = 647;
+            this.cboTipoDePessoa.Location = new System.Drawing.Point(123, 70);
+            this.cboTipoDePessoa.MaxLength = 32;
+            this.cboTipoDePessoa.Name = "cboTipoDePessoa";
+            this.cboTipoDePessoa.Size = new System.Drawing.Size(224, 23);
+            this.cboTipoDePessoa.TabIndex = 647;
             // 
             // btnDeletar
             // 
@@ -314,12 +315,14 @@
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.ForeColor = System.Drawing.Color.Black;
             this.btnDeletar.Location = new System.Drawing.Point(304, 377);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(107, 30);
             this.btnDeletar.TabIndex = 644;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // txtEmail
             // 
@@ -758,11 +761,11 @@
         private System.Windows.Forms.Panel panelCPF;
         private System.Windows.Forms.Panel panelCNPJ;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        public System.Windows.Forms.MaskedTextBox mtxtCNPJ;
         private System.Windows.Forms.Label lblCPF;
         public System.Windows.Forms.MaskedTextBox mtxtCPF;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.ComboBox cboTipoDePessoa;
         private System.Windows.Forms.Button btnDeletar;
         public System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
