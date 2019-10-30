@@ -80,6 +80,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.panel.Controls.Add(this.btnCadastrar);
             this.panel.Controls.Add(this.cboGênero);
             this.panel.Controls.Add(this.lblGênero);
@@ -100,9 +101,9 @@
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView1);
             this.panel.Controls.Add(this.dataGridView2);
-            this.panel.Location = new System.Drawing.Point(1, 40);
+            this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(709, 418);
+            this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 566;
             // 
             // btnCadastrar
@@ -168,7 +169,7 @@
             this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 97);
+            this.dataGridView5.Location = new System.Drawing.Point(1, 97);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(709, 2);
             this.dataGridView5.TabIndex = 698;
@@ -368,7 +369,7 @@
             this.txtNome.Location = new System.Drawing.Point(63, 6);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(284, 23);
+            this.txtNome.Size = new System.Drawing.Size(285, 23);
             this.txtNome.TabIndex = 650;
             // 
             // lblNome
@@ -408,7 +409,7 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView3.Location = new System.Drawing.Point(1, 33);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 625;
@@ -419,7 +420,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(709, 2);
             this.dataGridView1.TabIndex = 598;
@@ -430,7 +431,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(353, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(354, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;

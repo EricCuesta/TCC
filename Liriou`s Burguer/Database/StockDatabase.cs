@@ -8,46 +8,45 @@ namespace Liriou_s_Burguer.Database
 {
     class StockDatabase
     {
+        Entities.liriousdbEntities db = new Entities.liriousdbEntities();
+
         public void Inserir(Entities.tb_stock stock)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            DB.tb_stock.Add(stock);
+            db.tb_stock.Add(stock);
 
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
-        public List<Entities.tb_stock> Consultar()
+        public Entities.tb_stock ConsultaPorID(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_stock> list = DB.tb_stock.ToList();
+            Entities.tb_stock stock = db.tb_stock.FirstOrDefault(t => t.id_stock == id);
+
+            return stock;
+        }
+
+        public List<Entities.tb_stock> ConsultarTodos()
+        {
+            List<Entities.tb_stock> list = db.tb_stock.ToList();
 
             return list;
         }
 
         public void Alterar(Entities.tb_stock stock)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_stock list = DB.tb_stock.First(t => t.id_stock == stock.id_stock);
-            list.nm_stock = list.nm_stock;
+            Entities.tb_stock list = db.tb_stock.FirstOrDefault(t => t.id_stock == stock.id_stock);
+            list.ds_place = stock.ds_place;
+            list.ds_typeStock = stock.ds_typeStock;
+            list.nr_maxAmount = stock.nr_maxAmount;
             
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
-        public void Remover(int id)
+        public void Deletar(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_stock remover = DB.tb_stock.First(t => t.id_stock == id);
+            Entities.tb_stock stock = db.tb_stock.First(t => t.id_stock == id);
 
-            DB.tb_stock.Remove(remover);
-            DB.SaveChanges();
-        }
-
-        public List<Entities.tb_stock> ListarEstoque()
-        {
-            Entities.liriousdbEntities db = new Entities.liriousdbEntities();
-            List<Entities.tb_stock> list = db.tb_stock.ToList();
-
-            return list;
+            db.tb_stock.Remove(stock);
+            db.SaveChanges();
         }
     }
 }

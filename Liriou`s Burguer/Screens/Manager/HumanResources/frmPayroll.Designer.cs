@@ -83,15 +83,8 @@
             this.lbl0Salário = new System.Windows.Forms.Label();
             this.btnGerarFolha = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.mtxtAno = new System.Windows.Forms.MaskedTextBox();
             this.lblMêsReferente = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.lblCargo = new System.Windows.Forms.Label();
-            this.cboDepartamento = new System.Windows.Forms.ComboBox();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
-            this.lblDepartamento = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.lblNomeDoFuncionário = new System.Windows.Forms.Label();
@@ -108,9 +101,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -132,6 +122,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.panel.Controls.Add(this.dataGridView8);
             this.panel.Controls.Add(this.lblLíquido);
             this.panel.Controls.Add(this.lblLíquido1);
@@ -142,24 +133,17 @@
             this.panel.Controls.Add(this.groupItens);
             this.panel.Controls.Add(this.btnGerarFolha);
             this.panel.Controls.Add(this.btnCalcular);
-            this.panel.Controls.Add(this.dataGridView7);
-            this.panel.Controls.Add(this.dataGridView5);
             this.panel.Controls.Add(this.mtxtAno);
             this.panel.Controls.Add(this.lblMêsReferente);
-            this.panel.Controls.Add(this.dataGridView4);
-            this.panel.Controls.Add(this.lblCargo);
-            this.panel.Controls.Add(this.cboDepartamento);
-            this.panel.Controls.Add(this.cboCargo);
-            this.panel.Controls.Add(this.lblDepartamento);
             this.panel.Controls.Add(this.label1);
             this.panel.Controls.Add(this.mtxtRG);
             this.panel.Controls.Add(this.lblNomeDoFuncionário);
             this.panel.Controls.Add(this.lblRG);
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView1);
-            this.panel.Location = new System.Drawing.Point(1, 40);
+            this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(709, 418);
+            this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 563;
             // 
             // dataGridView8
@@ -308,7 +292,7 @@
             this.lblNulo5.AutoSize = true;
             this.lblNulo5.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo5.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo5.Location = new System.Drawing.Point(110, 91);
+            this.lblNulo5.Location = new System.Drawing.Point(110, 110);
             this.lblNulo5.Name = "lblNulo5";
             this.lblNulo5.Size = new System.Drawing.Size(19, 15);
             this.lblNulo5.TabIndex = 193;
@@ -744,6 +728,7 @@
             this.btnGerarFolha.TabIndex = 674;
             this.btnGerarFolha.Text = "Gerar Folha";
             this.btnGerarFolha.UseVisualStyleBackColor = false;
+            this.btnGerarFolha.Click += new System.EventHandler(this.btnGerarFolha_Click);
             // 
             // btnCalcular
             // 
@@ -758,35 +743,14 @@
             this.btnCalcular.TabIndex = 673;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = false;
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 95);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.Size = new System.Drawing.Size(355, 2);
-            this.dataGridView7.TabIndex = 672;
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(353, 65);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView5.TabIndex = 671;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // mtxtAno
             // 
-            this.mtxtAno.Location = new System.Drawing.Point(123, 70);
+            this.mtxtAno.Location = new System.Drawing.Point(481, 6);
             this.mtxtAno.Mask = "00/0000";
             this.mtxtAno.Name = "mtxtAno";
-            this.mtxtAno.Size = new System.Drawing.Size(224, 20);
+            this.mtxtAno.Size = new System.Drawing.Size(225, 20);
             this.mtxtAno.TabIndex = 670;
             // 
             // lblMêsReferente
@@ -794,64 +758,11 @@
             this.lblMêsReferente.AutoSize = true;
             this.lblMêsReferente.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMêsReferente.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblMêsReferente.Location = new System.Drawing.Point(3, 70);
+            this.lblMêsReferente.Location = new System.Drawing.Point(361, 7);
             this.lblMêsReferente.Name = "lblMêsReferente";
             this.lblMêsReferente.Size = new System.Drawing.Size(114, 19);
             this.lblMêsReferente.TabIndex = 669;
             this.lblMêsReferente.Text = "Mês Referente:";
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(532, 3);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(2, 60);
-            this.dataGridView4.TabIndex = 599;
-            // 
-            // lblCargo
-            // 
-            this.lblCargo.AutoSize = true;
-            this.lblCargo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCargo.Location = new System.Drawing.Point(586, 8);
-            this.lblCargo.Name = "lblCargo";
-            this.lblCargo.Size = new System.Drawing.Size(54, 19);
-            this.lblCargo.TabIndex = 668;
-            this.lblCargo.Text = "Cargo:";
-            // 
-            // cboDepartamento
-            // 
-            this.cboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDepartamento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboDepartamento.FormattingEnabled = true;
-            this.cboDepartamento.Location = new System.Drawing.Point(367, 30);
-            this.cboDepartamento.Name = "cboDepartamento";
-            this.cboDepartamento.Size = new System.Drawing.Size(154, 23);
-            this.cboDepartamento.TabIndex = 667;
-            // 
-            // cboCargo
-            // 
-            this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboCargo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(544, 30);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(154, 23);
-            this.cboCargo.TabIndex = 665;
-            // 
-            // lblDepartamento
-            // 
-            this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDepartamento.Location = new System.Drawing.Point(386, 8);
-            this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(113, 19);
-            this.lblDepartamento.TabIndex = 664;
-            this.lblDepartamento.Text = "Departamento:";
             // 
             // label1
             // 
@@ -899,7 +810,7 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 63);
+            this.dataGridView3.Location = new System.Drawing.Point(1, 63);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 599;
@@ -910,7 +821,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(709, 2);
             this.dataGridView1.TabIndex = 598;
@@ -952,9 +863,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -974,15 +882,8 @@
         private System.Windows.Forms.Label lblNomeDoFuncionário;
         private System.Windows.Forms.MaskedTextBox mtxtRG;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblCargo;
-        private System.Windows.Forms.ComboBox cboDepartamento;
-        private System.Windows.Forms.ComboBox cboCargo;
-        private System.Windows.Forms.Label lblDepartamento;
-        private System.Windows.Forms.DataGridView dataGridView4;
         private System.Windows.Forms.Label lblMêsReferente;
         private System.Windows.Forms.MaskedTextBox mtxtAno;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView7;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnGerarFolha;
         private System.Windows.Forms.DataGridView dataGridView8;

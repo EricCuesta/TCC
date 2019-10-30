@@ -17,9 +17,34 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             InitializeComponent();
         }
 
+        private void Consulta()
+        {
+            Database.Entities.tb_product product = new Database.Entities.tb_product();
+            product.nm_product = txtNome.Text;
+            product.ds_typeProduct = cboTipo.Text;
+
+            Business.ProductBusiness busproduct = new Business.ProductBusiness();
+            List<Database.Entities.tb_product> productlista = busproduct.Consultar(product);
+
+            dgvConsultarProduto.DataSource = productlista;
+        }
+
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            Business.ProductBusiness busproduct = new Business.ProductBusiness();
+            List<Database.Entities.tb_product> productlista = busproduct.ConsultarTodos();
 
+            dgvConsultarProduto.DataSource = productlista;
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
+        }
+
+        private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
         }
     }
 }

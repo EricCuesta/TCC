@@ -92,5 +92,10 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             this.Hide();
             tela.Show(); 
         }
+
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

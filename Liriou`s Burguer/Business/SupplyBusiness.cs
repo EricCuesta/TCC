@@ -8,29 +8,63 @@ namespace Liriou_s_Burguer.Business
 {
     class SupplyBusiness
     {
+        Database.SupplyDatabase db = new Database.SupplyDatabase();
+
         public void Inserir(Database.Entities.tb_supply supply)
         {
-            Database.SupplyDatabase DB = new Database.SupplyDatabase();
-            DB.Inserir(supply);
+            if (supply.ds_typeStock == null)
+                throw new ArgumentException("O campo estoque deve ser definido");
+            if (supply.nm_supply == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (supply.vl_amount == 0)
+                throw new ArgumentException("O campo quantidade deve ser preenchido");
+            if (supply.vl_value == Convert.ToInt32("0,00"))
+                throw new ArgumentException("O campo valor deve ser preenchido");
+
+            db.Inserir(supply);
         }
 
-        public List<Database.Entities.tb_supply> Consultar()
+        public Database.Entities.tb_supply ConsultarPorID(int id)
         {
-            Database.SupplyDatabase DB = new Database.SupplyDatabase();
-            List<Database.Entities.tb_supply> list = DB.Consultar();
+            Database.SupplyDatabase dbsupply = new Database.SupplyDatabase();
+            Database.Entities.tb_supply supply = dbsupply.ConsultaPorID(id);
+
+            return supply;
+        }
+
+        public List<Database.Entities.tb_supply> Consultar(Database.Entities.tb_supply supply)
+        {
+            Database.SupplyDatabase dbsupply = new Database.SupplyDatabase();
+            List<Database.Entities.tb_supply> list = new List<Database.Entities.tb_supply>();
+
+            if (supply.nm_supply == string.Empty)
+                list = dbsupply.ConsultarPorNome(supply);
+
+            return list;
+        }
+
+        public List<Database.Entities.tb_supply> ConsultarTodos()
+        {
+            List<Database.Entities.tb_supply> list = db.ConsultarTodos();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_supply supply)
         {
-            Database.SupplyDatabase DB = new Database.SupplyDatabase();
-            DB.Alterar(supply);
+            if (supply.ds_typeStock == null)
+                throw new ArgumentException("O campo estoque deve ser definido");
+            if (supply.nm_supply == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (supply.vl_amount == 0)
+                throw new ArgumentException("O campo quantidade deve ser preenchido");
+            if (supply.vl_value == Convert.ToInt32("0,00"))
+                throw new ArgumentException("O campo valor deve ser preenchido");
+            db.Alterar(supply);
         }
 
-        public void Remover(int id)
+        public void Deletar(int id)
         {
-            Database.SupplyDatabase DB = new Database.SupplyDatabase();
-            DB.Remover(id);
+            db.Deletar(id);
         }
     }
 }

@@ -8,29 +8,51 @@ namespace Liriou_s_Burguer.Business
 {
     class StockBusiness
     {
+        Database.StockDatabase db = new Database.StockDatabase();
+
         public void Inserir(Database.Entities.tb_stock stock)
         {
-            Database.StockDatabase DB = new Database.StockDatabase();
-            DB.Inserir(stock);
+            if (stock.ds_place == string.Empty)
+                throw new ArgumentException("O campo lugar deve ser definido");
+            if (stock.ds_typeStock == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (stock.nr_maxAmount == null)
+                throw new ArgumentException("O campo quantidade máxima deve ser definido");
+
+            db.Inserir(stock);
         }
 
-        public List<Database.Entities.tb_stock> Consultar()
+        public Database.Entities.tb_stock ConsultarPorID(int id)
         {
-            Database.StockDatabase DB = new Database.StockDatabase();
-            List<Database.Entities.tb_stock> list = DB.Consultar();
+            Database.StockDatabase dbstock = new Database.StockDatabase();
+            Database.Entities.tb_stock stock = dbstock.ConsultaPorID(id);
+
+            return stock;
+        }
+
+        public List<Database.Entities.tb_stock> ConsultarTodos()
+        {
+
+            List<Database.Entities.tb_stock> list = db.ConsultarTodos();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_stock stock)
         {
-            Database.StockDatabase DB = new Database.StockDatabase();
-            DB.Alterar(stock);
+            if (stock.ds_place == string.Empty)
+                throw new ArgumentException("O campo lugar deve ser definido");
+            if (stock.ds_typeStock == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (stock.nr_maxAmount == null)
+                throw new ArgumentException("O campo quantidade máxima deve ser definido");
+
+            db.Alterar(stock);
         }
 
-        public void Remover(int id)
+        public void Deletar(int id)
         {
-            Database.StockDatabase DB = new Database.StockDatabase();
-            DB.Remover(id);
+
+            db.Deletar(id);
         }
     }
 }

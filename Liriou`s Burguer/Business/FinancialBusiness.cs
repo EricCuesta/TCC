@@ -14,11 +14,12 @@ namespace Liriou_s_Burguer.Business
             DB.Inserir(financial);
         }
 
-        public List<Database.Entities.tb_financial> Consultar()
+        public Database.Entities.tb_financial ConsultarFinancial(string rg)
         {
             Database.FinancialDatabase DB = new Database.FinancialDatabase();
-            List<Database.Entities.tb_financial> list = DB.Consultar();
-            return list;
+            Database.Entities.tb_financial tb = DB.ConsultarFinancial(rg);
+
+            return tb;
         }
 
         public void Alterar(Database.Entities.tb_financial financial)
@@ -32,5 +33,7 @@ namespace Liriou_s_Burguer.Business
             Database.FinancialDatabase DB = new Database.FinancialDatabase();
             DB.Remover(id);
         }
+
+
     }
 }

@@ -84,6 +84,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.panel.Controls.Add(this.dgvConsultarCartãoDePonto);
             this.panel.Controls.Add(this.dataGridView7);
             this.panel.Controls.Add(this.dataGridView9);
@@ -112,9 +113,9 @@
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView1);
             this.panel.Controls.Add(this.dataGridView2);
-            this.panel.Location = new System.Drawing.Point(1, 40);
+            this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(709, 418);
+            this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 564;
             // 
             // dgvConsultarCartãoDePonto
@@ -182,7 +183,7 @@
             this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(0, 158);
+            this.dataGridView7.Location = new System.Drawing.Point(1, 158);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.Size = new System.Drawing.Size(709, 2);
             this.dataGridView7.TabIndex = 690;
@@ -193,7 +194,7 @@
             this.dataGridView9.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(469, 97);
+            this.dataGridView9.Location = new System.Drawing.Point(470, 97);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.Size = new System.Drawing.Size(2, 60);
             this.dataGridView9.TabIndex = 689;
@@ -204,7 +205,7 @@
             this.dataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(237, 97);
+            this.dataGridView8.Location = new System.Drawing.Point(238, 97);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.Size = new System.Drawing.Size(2, 60);
             this.dataGridView8.TabIndex = 688;
@@ -215,7 +216,7 @@
             this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(70, 97);
+            this.dataGridView11.Location = new System.Drawing.Point(71, 97);
             this.dataGridView11.Name = "dataGridView11";
             this.dataGridView11.Size = new System.Drawing.Size(2, 60);
             this.dataGridView11.TabIndex = 687;
@@ -369,7 +370,7 @@
             this.txtNome.Location = new System.Drawing.Point(63, 6);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(284, 23);
+            this.txtNome.Size = new System.Drawing.Size(285, 23);
             this.txtNome.TabIndex = 650;
             // 
             // lblNome
@@ -409,7 +410,7 @@
             this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(469, 35);
+            this.dataGridView6.Location = new System.Drawing.Point(470, 35);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 60);
             this.dataGridView6.TabIndex = 646;
@@ -420,7 +421,7 @@
             this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(237, 35);
+            this.dataGridView4.Location = new System.Drawing.Point(238, 35);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(2, 60);
             this.dataGridView4.TabIndex = 645;
@@ -431,7 +432,7 @@
             this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 95);
+            this.dataGridView5.Location = new System.Drawing.Point(1, 95);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(709, 2);
             this.dataGridView5.TabIndex = 626;
@@ -442,7 +443,7 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView3.Location = new System.Drawing.Point(1, 33);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 625;
@@ -453,7 +454,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(709, 2);
             this.dataGridView1.TabIndex = 598;
@@ -464,7 +465,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(353, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(354, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;

@@ -8,42 +8,62 @@ namespace Liriou_s_Burguer.Database
 {
     class ProductDatabase
     {
+        Entities.liriousdbEntities db = new Entities.liriousdbEntities();
+
         public void Inserir(Entities.tb_product product)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            DB.tb_product.Add(product);
+            db.tb_product.Add(product);
 
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
-        public List<Entities.tb_product> Consultar()
+        public Entities.tb_product ConsultaPorID(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_product> list = DB.tb_product.ToList();
+            Entities.tb_product product = db.tb_product.FirstOrDefault(t => t.id_product == id);
+
+            return product;
+        }
+
+        public List<Entities.tb_product> ConsultarPorNome(Entities.tb_product product)
+        {
+            List<Entities.tb_product> list = db.tb_product.Where(l => l.nm_product == product.nm_product).ToList();
+
+            return list;
+        }
+
+        public List<Entities.tb_product> ConsultarPorTipo(Entities.tb_product product)
+        {
+            List<Entities.tb_product> list = db.tb_product.Where(l => l.ds_typeProduct == product.ds_typeProduct).ToList();
+
+            return list;
+        }
+
+        public List<Entities.tb_product> ConsultarTodos()
+        {
+            List<Entities.tb_product> list = db.tb_product.ToList();
 
             return list;
         }
 
         public void Alterar(Entities.tb_product product)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_product list = DB.tb_product.First(t => t.id_product == product.id_product);
-            list.nm_product = list.nm_product;
-            list.vl_amount = list.vl_amount;
-            list.vl_value = list.vl_value;
-            list.ds_note = list.ds_note;
-            list.ds_type = list.ds_type;
-            
-            DB.SaveChanges();
+            Entities.tb_product list = db.tb_product.FirstOrDefault(t => t.id_product == product.id_product);
+            list.ds_typeStock = product.ds_typeStock;
+            list.nm_product = product.nm_product;
+            list.ds_typeProduct = product.ds_typeProduct;
+            list.vl_amount = product.vl_amount;
+            list.vl_value = product.vl_value;
+            list.ds_note = product.ds_note;
+
+            db.SaveChanges();
         }
 
-        public void Remover(int id)
+        public void Deletar(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_product remover = DB.tb_product.First(t => t.id_product == id);
+            Entities.tb_product product = db.tb_product.First(t => t.id_product == id);
 
-            DB.tb_product.Remove(remover);
-            DB.SaveChanges();
+            db.tb_product.Remove(product);
+            db.SaveChanges();
         }
     }
 }

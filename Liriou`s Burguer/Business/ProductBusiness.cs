@@ -8,29 +8,69 @@ namespace Liriou_s_Burguer.Business
 {
     class ProductBusiness
     {
+        Database.ProductDatabase db = new Database.ProductDatabase();
+
         public void Inserir(Database.Entities.tb_product product)
         {
-            Database.ProductDatabase DB = new Database.ProductDatabase();
-            DB.Inserir(product);
+            if (product.ds_typeStock == null)
+                throw new ArgumentException("O campo estoque deve ser definido");
+            if (product.nm_product == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (product.ds_typeProduct == null)
+                throw new ArgumentException("O campo tipo deve ser definido");
+            if (product.vl_amount == 0)
+                throw new ArgumentException("O campo quantidade deve ser preenchido");
+            if (product.vl_value == Convert.ToInt32("0,00"))
+                throw new ArgumentException("O campo valor deve ser preenchido");
+
+            db.Inserir(product);
         }
 
-        public List<Database.Entities.tb_product> Consultar()
+        public Database.Entities.tb_product ConsultarPorID(int id)
         {
-            Database.ProductDatabase DB = new Database.ProductDatabase();
-            List<Database.Entities.tb_product> list = DB.Consultar();
+            Database.ProductDatabase dbproduct = new Database.ProductDatabase();
+            Database.Entities.tb_product product = dbproduct.ConsultaPorID(id);
+
+            return product;
+        }
+
+        public List<Database.Entities.tb_product> Consultar(Database.Entities.tb_product product)
+        {
+            Database.ProductDatabase dbproduct = new Database.ProductDatabase();
+            List<Database.Entities.tb_product> list = new List<Database.Entities.tb_product>();
+
+            if (product.nm_product == string.Empty)
+                list = dbproduct.ConsultarPorNome(product);
+            else if (product.ds_typeProduct == string.Empty)
+                list = dbproduct.ConsultarPorTipo(product);
+
+            return list;
+        }
+
+        public List<Database.Entities.tb_product> ConsultarTodos()
+        {
+            List<Database.Entities.tb_product> list = db.ConsultarTodos();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_product product)
         {
-            Database.ProductDatabase DB = new Database.ProductDatabase();
-            DB.Alterar(product);
+            if (product.ds_typeStock == null)
+                throw new ArgumentException("O campo estoque deve ser definido");
+            if (product.nm_product == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (product.ds_typeProduct == null)
+                throw new ArgumentException("O campo tipo deve ser definido");
+            if (product.vl_amount == 0)
+                throw new ArgumentException("O campo quantidade deve ser preenchido");
+            if (product.vl_value == Convert.ToInt32("0,00"))
+                throw new ArgumentException("O campo valor deve ser preenchido");
+            db.Alterar(product);
         }
 
-        public void Remover(int id)
+        public void Deletar(int id)
         {
-            Database.ProductDatabase DB = new Database.ProductDatabase();
-            DB.Remover(id);
+            db.Deletar(id);
         }
     }
 }

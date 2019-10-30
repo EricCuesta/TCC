@@ -20,8 +20,8 @@ namespace Liriou_s_Burguer.Database.Entities
         public int id_product { get; set; }
         public int vl_qtdProduct { get; set; }
     
+        public virtual tb_client tb_client { get; set; }
         public virtual tb_sale tb_sale { get; set; }
         public virtual tb_product tb_product { get; set; }
-        public virtual tb_client tb_client { get; set; }
     }
 }

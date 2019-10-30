@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblAlterarProduto = new System.Windows.Forms.Label();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
@@ -70,6 +70,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.nudId);
@@ -92,10 +93,27 @@
             this.panel.Controls.Add(this.dataGridView6);
             this.panel.Controls.Add(this.dataGridView1);
             this.panel.Controls.Add(this.dataGridView2);
-            this.panel.Location = new System.Drawing.Point(1, 40);
+            this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(709, 418);
+            this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 568;
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.Items.AddRange(new object[] {
+            "Suprimento",
+            "Produto"});
+            this.cboTipo.Location = new System.Drawing.Point(53, 70);
+            this.cboTipo.MaxLength = 32;
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(230, 23);
+            this.cboTipo.TabIndex = 661;
             // 
             // dataGridView4
             // 
@@ -103,7 +121,7 @@
             this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(0, 33);
+            this.dataGridView4.Location = new System.Drawing.Point(1, 33);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(709, 2);
             this.dataGridView4.TabIndex = 660;
@@ -115,6 +133,7 @@
             this.nudId.Name = "nudId";
             this.nudId.Size = new System.Drawing.Size(121, 23);
             this.nudId.TabIndex = 659;
+            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
             // 
             // lblID
             // 
@@ -143,7 +162,7 @@
             this.lblDescrição.AutoSize = true;
             this.lblDescrição.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescrição.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDescrição.Location = new System.Drawing.Point(3, 102);
+            this.lblDescrição.Location = new System.Drawing.Point(4, 102);
             this.lblDescrição.Name = "lblDescrição";
             this.lblDescrição.Size = new System.Drawing.Size(79, 19);
             this.lblDescrição.TabIndex = 656;
@@ -155,7 +174,7 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
-            this.nudValor.Location = new System.Drawing.Point(594, 72);
+            this.nudValor.Location = new System.Drawing.Point(595, 72);
             this.nudValor.Name = "nudValor";
             this.nudValor.Size = new System.Drawing.Size(111, 20);
             this.nudValor.TabIndex = 655;
@@ -166,7 +185,7 @@
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblValor.Location = new System.Drawing.Point(519, 72);
+            this.lblValor.Location = new System.Drawing.Point(520, 72);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(69, 19);
             this.lblValor.TabIndex = 654;
@@ -178,7 +197,7 @@
             this.dataGridView16.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView16.Location = new System.Drawing.Point(511, 67);
+            this.dataGridView16.Location = new System.Drawing.Point(512, 67);
             this.dataGridView16.Name = "dataGridView16";
             this.dataGridView16.Size = new System.Drawing.Size(2, 30);
             this.dataGridView16.TabIndex = 653;
@@ -188,7 +207,7 @@
             this.nudQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQuantidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantidade.Location = new System.Drawing.Point(396, 72);
+            this.nudQuantidade.Location = new System.Drawing.Point(397, 72);
             this.nudQuantidade.Name = "nudQuantidade";
             this.nudQuantidade.Size = new System.Drawing.Size(109, 20);
             this.nudQuantidade.TabIndex = 652;
@@ -199,7 +218,7 @@
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantidade.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblQuantidade.Location = new System.Drawing.Point(296, 72);
+            this.lblQuantidade.Location = new System.Drawing.Point(297, 72);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(94, 19);
             this.lblQuantidade.TabIndex = 651;
@@ -211,7 +230,7 @@
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTipo.Location = new System.Drawing.Point(3, 72);
+            this.lblTipo.Location = new System.Drawing.Point(4, 72);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(43, 19);
             this.lblTipo.TabIndex = 649;
@@ -227,7 +246,7 @@
             this.txtNome.Location = new System.Drawing.Point(421, 38);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(284, 23);
+            this.txtNome.Size = new System.Drawing.Size(285, 23);
             this.txtNome.TabIndex = 648;
             // 
             // lblNome
@@ -249,7 +268,7 @@
             this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Location = new System.Drawing.Point(78, 38);
+            this.cboEstoque.Location = new System.Drawing.Point(79, 38);
             this.cboEstoque.MaxLength = 32;
             this.cboEstoque.Name = "cboEstoque";
             this.cboEstoque.Size = new System.Drawing.Size(269, 23);
@@ -261,7 +280,7 @@
             this.lblEstoque.AutoSize = true;
             this.lblEstoque.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstoque.Location = new System.Drawing.Point(3, 40);
+            this.lblEstoque.Location = new System.Drawing.Point(4, 40);
             this.lblEstoque.Name = "lblEstoque";
             this.lblEstoque.Size = new System.Drawing.Size(69, 19);
             this.lblEstoque.TabIndex = 645;
@@ -275,7 +294,7 @@
             this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterar.Location = new System.Drawing.Point(304, 377);
+            this.btnAlterar.Location = new System.Drawing.Point(305, 377);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(107, 30);
             this.btnAlterar.TabIndex = 644;
@@ -289,7 +308,7 @@
             this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(0, 97);
+            this.dataGridView5.Location = new System.Drawing.Point(1, 97);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(709, 2);
             this.dataGridView5.TabIndex = 626;
@@ -300,7 +319,7 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(0, 65);
+            this.dataGridView3.Location = new System.Drawing.Point(1, 65);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 625;
@@ -311,7 +330,7 @@
             this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(288, 67);
+            this.dataGridView6.Location = new System.Drawing.Point(289, 67);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 30);
             this.dataGridView6.TabIndex = 599;
@@ -322,7 +341,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(709, 2);
             this.dataGridView1.TabIndex = 598;
@@ -333,7 +352,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(353, 35);
+            this.dataGridView2.Location = new System.Drawing.Point(354, 35);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;
@@ -350,23 +369,6 @@
             this.lblAlterarProduto.TabIndex = 567;
             this.lblAlterarProduto.Text = "Alterar Produto";
             this.lblAlterarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cboTipo
-            // 
-            this.cboTipo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTipo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipo.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboTipo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Items.AddRange(new object[] {
-            "Suprimento",
-            "Produto"});
-            this.cboTipo.Location = new System.Drawing.Point(52, 70);
-            this.cboTipo.MaxLength = 32;
-            this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(230, 23);
-            this.cboTipo.TabIndex = 661;
             // 
             // frmChangeProducts
             // 

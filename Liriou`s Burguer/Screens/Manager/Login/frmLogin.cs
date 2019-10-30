@@ -32,7 +32,7 @@ namespace Liriou_s_Burguer.Screens
 
                 if (r == "true")
                 {
-                    Manager.frmLiriousBurguer tela = new Manager.frmLiriousBurguer();
+                    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
                     tela.Show();
                     Hide();
                 }

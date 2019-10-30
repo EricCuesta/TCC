@@ -68,8 +68,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\BankAccountBusiness.cs" />
     <Compile Include="Business\BenefitsBusiness.cs" />
     <Compile Include="Business\ClientBusiness.cs" />
+    <Compile Include="Business\CNAEBusiness.cs" />
     <Compile Include="Business\CPPBusiness.cs" />
     <Compile Include="Business\CRMBusiness.cs" />
     <Compile Include="Business\DepartmentBusiness.cs" />
@@ -80,97 +82,98 @@
     <Compile Include="Business\FunctionBusiness.cs" />
     <Compile Include="Business\ProductBusiness.cs" />
     <Compile Include="Business\ProviderBusiness.cs" />
+    <Compile Include="Business\SaleBusiness.cs" />
     <Compile Include="Business\StockBusiness.cs" />
     <Compile Include="Business\SupplyBusiness.cs" />
     <Compile Include="Business\TimeCardBusiness.cs" />
     <Compile Include="CorreioApi\CorreioApi.cs" />
+    <Compile Include="Database\BankAccountDatabase.cs" />
     <Compile Include="Database\BenefitsDatabase.cs" />
     <Compile Include="Database\ClientDatabase.cs" />
+    <Compile Include="Database\CNAEDatabase.cs" />
     <Compile Include="Database\CPPDatabase.cs" />
     <Compile Include="Database\CRMDatabase.cs" />
     <Compile Include="Database\DepartmentDatabase.cs" />
     <Compile Include="Database\DiscountsDatabase.cs" />
     <Compile Include="Database\EmployeesDatabase.cs" />
     <Compile Include="Database\EnterpriseDatabase.cs" />
-    <Compile Include="Database\Entities\LiriousDatabase.Context.cs">
+    <Compile Include="Database\Entities\LiriousDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LiriousDatabase.Context.tt</DependentUpon>
+      <DependentUpon>LiriousDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Entities\LiriousDatabase.cs">
+    <Compile Include="Database\Entities\LiriousDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Entities\LiriousDatabase.Designer.cs">
+    <Compile Include="Database\Entities\LiriousDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_bankaccount.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_benefits.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Entities\tb_busline.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_client.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_cnae.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_cpp.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_crm.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_department.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_discounts.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_employees.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_enterprise.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_financial.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_function.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_iten.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_product.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_provider.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_sale.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_stock.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_supply.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_timecard.cs">
-      <DependentUpon>LiriousDatabase.tt</DependentUpon>
+      <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\FinancialDatabase.cs" />
     <Compile Include="Database\FunctionDatabase.cs" />
     <Compile Include="Database\ProductDatabase.cs" />
     <Compile Include="Database\ProviderDatabase.cs" />
+    <Compile Include="Database\SaleDatabase.cs" />
     <Compile Include="Database\StockDatabase.cs" />
     <Compile Include="Database\SupplyDatabase.cs" />
     <Compile Include="Database\TimeCardDatabase.cs" />
@@ -196,52 +199,52 @@
     <Compile Include="Screens\Employee\frmUnavailability.Designer.cs">
       <DependentUpon>frmUnavailability.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmChangeCustomer.cs">
+    <Compile Include="Screens\Manager\Client\frmChangeCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmChangeCustomer.Designer.cs">
+    <Compile Include="Screens\Manager\Client\frmChangeCustomer.Designer.cs">
       <DependentUpon>frmChangeCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmConsultCustomer.cs">
+    <Compile Include="Screens\Manager\Client\frmConsultCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmConsultCustomer.Designer.cs">
+    <Compile Include="Screens\Manager\Client\frmConsultCustomer.Designer.cs">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmDeleteClient.cs">
+    <Compile Include="Screens\Manager\Client\frmDeleteClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmDeleteClient.Designer.cs">
+    <Compile Include="Screens\Manager\Client\frmDeleteClient.Designer.cs">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmRegisterCustomer.cs">
+    <Compile Include="Screens\Manager\Client\frmRegisterCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Client\frmRegisterCustomer.Designer.cs">
+    <Compile Include="Screens\Manager\Client\frmRegisterCustomer.Designer.cs">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmChangeProvider.cs">
+    <Compile Include="Screens\Manager\Provider\frmChangeProvider.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmChangeProvider.Designer.cs">
+    <Compile Include="Screens\Manager\Provider\frmChangeProvider.Designer.cs">
       <DependentUpon>frmChangeProvider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmConsultSupplier.cs">
+    <Compile Include="Screens\Manager\Provider\frmConsultSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmConsultSupplier.Designer.cs">
+    <Compile Include="Screens\Manager\Provider\frmConsultSupplier.Designer.cs">
       <DependentUpon>frmConsultSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmDeleteSupplier.cs">
+    <Compile Include="Screens\Manager\Provider\frmDeleteSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmDeleteSupplier.Designer.cs">
+    <Compile Include="Screens\Manager\Provider\frmDeleteSupplier.Designer.cs">
       <DependentUpon>frmDeleteSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmRegisterSupplier.cs">
+    <Compile Include="Screens\Manager\Provider\frmRegisterSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\Provider\frmRegisterSupplier.Designer.cs">
+    <Compile Include="Screens\Manager\Provider\frmRegisterSupplier.Designer.cs">
       <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\frmManagerMenu.cs">
@@ -358,28 +361,28 @@
     <Compile Include="Screens\Manager\Stock\Products\frmRegisterProducts.Designer.cs">
       <DependentUpon>frmRegisterProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmChangeSupplies.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmChangeSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmChangeSupplies.Designer.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmChangeSupplies.Designer.cs">
       <DependentUpon>frmChangeSupplies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmConsultSupplies.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmConsultSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmConsultSupplies.Designer.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmConsultSupplies.Designer.cs">
       <DependentUpon>frmConsultSupplies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmDeleteSupplies.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmDeleteSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmDeleteSupplies.Designer.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmDeleteSupplies.Designer.cs">
       <DependentUpon>frmDeleteSupplies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmRegisterSupplies.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmRegisterSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Supplies\frmRegisterSupplies.Designer.cs">
+    <Compile Include="Screens\Manager\Stock\Supplies\frmRegisterSupplies.Designer.cs">
       <DependentUpon>frmRegisterSupplies.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -401,28 +404,28 @@
     <EmbeddedResource Include="Screens\Employee\frmUnavailability.resx">
       <DependentUpon>frmUnavailability.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Client\frmChangeCustomer.resx">
+    <EmbeddedResource Include="Screens\Manager\Client\frmChangeCustomer.resx">
       <DependentUpon>frmChangeCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Client\frmConsultCustomer.resx">
+    <EmbeddedResource Include="Screens\Manager\Client\frmConsultCustomer.resx">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Client\frmDeleteClient.resx">
+    <EmbeddedResource Include="Screens\Manager\Client\frmDeleteClient.resx">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Client\frmRegisterCustomer.resx">
+    <EmbeddedResource Include="Screens\Manager\Client\frmRegisterCustomer.resx">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Provider\frmChangeProvider.resx">
+    <EmbeddedResource Include="Screens\Manager\Provider\frmChangeProvider.resx">
       <DependentUpon>frmChangeProvider.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Provider\frmConsultSupplier.resx">
+    <EmbeddedResource Include="Screens\Manager\Provider\frmConsultSupplier.resx">
       <DependentUpon>frmConsultSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Provider\frmDeleteSupplier.resx">
+    <EmbeddedResource Include="Screens\Manager\Provider\frmDeleteSupplier.resx">
       <DependentUpon>frmDeleteSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\Provider\frmRegisterSupplier.resx">
+    <EmbeddedResource Include="Screens\Manager\Provider\frmRegisterSupplier.resx">
       <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\frmManagerMenu.resx">
@@ -482,24 +485,24 @@
     <EmbeddedResource Include="Screens\Manager\Stock\Products\frmRegisterProducts.resx">
       <DependentUpon>frmRegisterProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Supplies\frmChangeSupplies.resx">
+    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmChangeSupplies.resx">
       <DependentUpon>frmChangeSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Supplies\frmConsultSupplies.resx">
+    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmConsultSupplies.resx">
       <DependentUpon>frmConsultSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Supplies\frmDeleteSupplies.resx">
+    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmDeleteSupplies.resx">
       <DependentUpon>frmDeleteSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Supplies\frmRegisterSupplies.resx">
+    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmRegisterSupplies.resx">
       <DependentUpon>frmRegisterSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Database\Entities\LiriousDatabase.edmx">
+    <EntityDeploy Include="Database\Entities\LiriousDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LiriousDatabase.Designer.cs</LastGenOutput>
+      <LastGenOutput>LiriousDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Database\Entities\LiriousDatabase.edmx.diagram">
-      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
+    <None Include="Database\Entities\LiriousDB.edmx.diagram">
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -582,15 +585,18 @@
     <None Include="Resources\Voltar02.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database\Entities\LiriousDatabase.Context.tt">
+    <Folder Include="Screens\Manager\Financial\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Entities\LiriousDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
-      <LastGenOutput>LiriousDatabase.Context.cs</LastGenOutput>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+      <LastGenOutput>LiriousDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Database\Entities\LiriousDatabase.tt">
+    <Content Include="Database\Entities\LiriousDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LiriousDatabase.edmx</DependentUpon>
-      <LastGenOutput>LiriousDatabase.cs</LastGenOutput>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+      <LastGenOutput>LiriousDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,12 +16,14 @@ namespace Liriou_s_Burguer.Database
             DB.SaveChanges();
         }
 
-        public List<Entities.tb_financial> Consultar()
+        public Entities.tb_financial ConsultarFinancial(string rg)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_financial> list = DB.tb_financial.ToList();
+            Entities.tb_employees tb_employees = new Entities.tb_employees();
 
-            return list;
+            Entities.tb_financial tb = DB.tb_financial.FirstOrDefault(t => tb_employees.ds_rg == rg);
+
+            return tb;
         }
 
         public void Alterar(Entities.tb_financial financial)

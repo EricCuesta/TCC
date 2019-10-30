@@ -22,13 +22,35 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             Database.StockDatabase db = new Database.StockDatabase();
             List<Database.Entities.tb_stock> list = db.ListarEstoque();
 
-            cboEstoque.DisplayMember = nameof(Database.Entities.tb_stock.nm_stock);
+            cboEstoque.DisplayMember = nameof(Database.Entities.tb_stock.ds_typeStock);
             cboEstoque.DataSource = list;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Database.Entities.tb_product product = new Database.Entities.tb_product();
+                product.nm_product = txtNome.Text;
+                product.ds_typeStock = cboEstoque.Text;
+                product.ds_typeProduct = cboTipo.Text;
+                product.vl_amount = Convert.ToInt32(nudQuantidade.Value);
+                product.vl_value = nudValor.Value;
+                product.ds_note = rtxtDescrição.Text;
 
+                Business.ProductBusiness busproduct = new Business.ProductBusiness();
+                busproduct.Inserir(product);
+
+                MessageBox.Show("Produto cadastrado com sucesso");
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

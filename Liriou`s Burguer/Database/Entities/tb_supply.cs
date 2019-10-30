@@ -16,10 +16,12 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_supply { get; set; }
         public int id_stock { get; set; }
+        public string ds_typeStock { get; set; }
         public string nm_supply { get; set; }
+        public string ds_typeSupply { get; set; }
         public int vl_amount { get; set; }
         public decimal vl_value { get; set; }
-        public string ds_Note { get; set; }
+        public string ds_note { get; set; }
     
         public virtual tb_stock tb_stock { get; set; }
     }

@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Liriou_s_Burguer.Screens.Manager
 {
-    public partial class frmLiriousBurguer : Form
+    public partial class frmManagerMenu : Form
     {
-        public frmLiriousBurguer()
+        public frmManagerMenu()
         {
             InitializeComponent();
             CustomizeDesign();
@@ -168,49 +168,49 @@ namespace Liriou_s_Burguer.Screens.Manager
 
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Client.frmRegisterCustomer());
+            openContedor(new Client.frmRegisterCustomer());
             HideSubMenu();
         }
 
         private void btnConsultarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Client.frmConsultCustomer());
+            openContedor(new Client.frmConsultCustomer());
             HideSubMenu();
         }
 
         private void btnAlterarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Client.frmChangeCustomer());
+            openContedor(new Client.frmChangeCustomer());
             HideSubMenu();
         }
 
         private void btnDeletarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Client.frmDeleteClient());
+            openContedor(new Client.frmDeleteClient());
             HideSubMenu();
         }
 
         private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Provider.frmRegisterSupplier());
+            openContedor(new Provider.frmRegisterSupplier());
             HideSubMenu();
         }
 
         private void btnConsultarFornecedor_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Provider.frmConsultSupplier());
+            openContedor(new Provider.frmConsultSupplier());
             HideSubMenu();
         }
 
         private void btnAlterarFornecedor_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Provider.frmChangeProvider());
+            openContedor(new Provider.frmChangeProvider());
             HideSubMenu();
         }
 
         private void btnDeletarFornecedor_Click(object sender, EventArgs e)
         {
-            openContedor(new Financial.Provider.frmDeleteSupplier());
+            openContedor(new Provider.frmDeleteSupplier());
             HideSubMenu();
         }
 
