@@ -38,13 +38,10 @@
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.cboEstoque = new System.Windows.Forms.ComboBox();
-            this.lblEstoque = new System.Windows.Forms.Label();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblCadastrarSuprimento = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
@@ -53,7 +50,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -71,13 +67,10 @@
             this.panel.Controls.Add(this.lblQuantidade);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
-            this.panel.Controls.Add(this.cboEstoque);
-            this.panel.Controls.Add(this.lblEstoque);
             this.panel.Controls.Add(this.btnCadastrar);
             this.panel.Controls.Add(this.dataGridView5);
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView1);
-            this.panel.Controls.Add(this.dataGridView2);
             this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
@@ -168,10 +161,10 @@
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(421, 6);
+            this.txtNome.Location = new System.Drawing.Point(64, 6);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(285, 23);
+            this.txtNome.Size = new System.Drawing.Size(642, 23);
             this.txtNome.TabIndex = 648;
             // 
             // lblNome
@@ -179,37 +172,11 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNome.Location = new System.Drawing.Point(361, 8);
+            this.lblNome.Location = new System.Drawing.Point(4, 8);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
             this.lblNome.TabIndex = 647;
             this.lblNome.Text = "Nome:";
-            // 
-            // cboEstoque
-            // 
-            this.cboEstoque.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboEstoque.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboEstoque.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Location = new System.Drawing.Point(79, 6);
-            this.cboEstoque.MaxLength = 32;
-            this.cboEstoque.Name = "cboEstoque";
-            this.cboEstoque.Size = new System.Drawing.Size(269, 23);
-            this.cboEstoque.TabIndex = 646;
-            // 
-            // lblEstoque
-            // 
-            this.lblEstoque.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblEstoque.AutoSize = true;
-            this.lblEstoque.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstoque.Location = new System.Drawing.Point(4, 8);
-            this.lblEstoque.Name = "lblEstoque";
-            this.lblEstoque.Size = new System.Drawing.Size(69, 19);
-            this.lblEstoque.TabIndex = 645;
-            this.lblEstoque.Text = "Estoque:";
             // 
             // btnCadastrar
             // 
@@ -260,17 +227,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(709, 2);
             this.dataGridView1.TabIndex = 598;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(354, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView2.TabIndex = 597;
-            // 
             // lblCadastrarSuprimento
             // 
             this.lblCadastrarSuprimento.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -304,7 +260,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -322,13 +277,10 @@
         private System.Windows.Forms.Label lblQuantidade;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
-        public System.Windows.Forms.ComboBox cboEstoque;
-        private System.Windows.Forms.Label lblEstoque;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblCadastrarSuprimento;
     }
 }

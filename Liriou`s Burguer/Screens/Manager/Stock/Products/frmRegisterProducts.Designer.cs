@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.lblCadastrarProduto = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblEstoque = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblTipo = new System.Windows.Forms.Label();
@@ -46,10 +44,8 @@
             this.lblValor = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.panel = new System.Windows.Forms.Panel();
-            this.cboEstoque = new System.Windows.Forms.ComboBox();
             this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
             this.lblDescrição = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -73,17 +69,6 @@
             this.lblCadastrarProduto.Text = "Cadastrar Produto";
             this.lblCadastrarProduto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(354, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView2.TabIndex = 597;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -101,7 +86,7 @@
             this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(289, 35);
+            this.dataGridView6.Location = new System.Drawing.Point(354, 3);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 30);
             this.dataGridView6.TabIndex = 599;
@@ -144,24 +129,12 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // lblEstoque
-            // 
-            this.lblEstoque.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblEstoque.AutoSize = true;
-            this.lblEstoque.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstoque.Location = new System.Drawing.Point(4, 8);
-            this.lblEstoque.Name = "lblEstoque";
-            this.lblEstoque.Size = new System.Drawing.Size(69, 19);
-            this.lblEstoque.TabIndex = 645;
-            this.lblEstoque.Text = "Estoque:";
-            // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNome.Location = new System.Drawing.Point(361, 8);
+            this.lblNome.Location = new System.Drawing.Point(4, 8);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
             this.lblNome.TabIndex = 647;
@@ -174,10 +147,10 @@
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(421, 6);
+            this.txtNome.Location = new System.Drawing.Point(64, 6);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(285, 23);
+            this.txtNome.Size = new System.Drawing.Size(284, 23);
             this.txtNome.TabIndex = 648;
             // 
             // lblTipo
@@ -186,7 +159,7 @@
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTipo.Location = new System.Drawing.Point(4, 40);
+            this.lblTipo.Location = new System.Drawing.Point(362, 7);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(43, 19);
             this.lblTipo.TabIndex = 649;
@@ -203,10 +176,10 @@
             this.cboTipo.Items.AddRange(new object[] {
             "Comida",
             "Bebida"});
-            this.cboTipo.Location = new System.Drawing.Point(53, 38);
+            this.cboTipo.Location = new System.Drawing.Point(418, 6);
             this.cboTipo.MaxLength = 32;
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(230, 23);
+            this.cboTipo.Size = new System.Drawing.Size(280, 23);
             this.cboTipo.TabIndex = 650;
             // 
             // lblQuantidade
@@ -215,7 +188,7 @@
             this.lblQuantidade.AutoSize = true;
             this.lblQuantidade.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantidade.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblQuantidade.Location = new System.Drawing.Point(297, 40);
+            this.lblQuantidade.Location = new System.Drawing.Point(4, 40);
             this.lblQuantidade.Name = "lblQuantidade";
             this.lblQuantidade.Size = new System.Drawing.Size(94, 19);
             this.lblQuantidade.TabIndex = 651;
@@ -226,9 +199,9 @@
             this.nudQuantidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudQuantidade.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudQuantidade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQuantidade.Location = new System.Drawing.Point(397, 40);
+            this.nudQuantidade.Location = new System.Drawing.Point(104, 39);
             this.nudQuantidade.Name = "nudQuantidade";
-            this.nudQuantidade.Size = new System.Drawing.Size(109, 20);
+            this.nudQuantidade.Size = new System.Drawing.Size(244, 20);
             this.nudQuantidade.TabIndex = 652;
             // 
             // dataGridView16
@@ -237,7 +210,7 @@
             this.dataGridView16.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView16.Location = new System.Drawing.Point(512, 35);
+            this.dataGridView16.Location = new System.Drawing.Point(354, 35);
             this.dataGridView16.Name = "dataGridView16";
             this.dataGridView16.Size = new System.Drawing.Size(2, 30);
             this.dataGridView16.TabIndex = 653;
@@ -248,7 +221,7 @@
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblValor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblValor.Location = new System.Drawing.Point(520, 40);
+            this.lblValor.Location = new System.Drawing.Point(362, 39);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(69, 19);
             this.lblValor.TabIndex = 654;
@@ -260,9 +233,9 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
-            this.nudValor.Location = new System.Drawing.Point(595, 40);
+            this.nudValor.Location = new System.Drawing.Point(437, 40);
             this.nudValor.Name = "nudValor";
-            this.nudValor.Size = new System.Drawing.Size(111, 20);
+            this.nudValor.Size = new System.Drawing.Size(261, 20);
             this.nudValor.TabIndex = 655;
             // 
             // panel
@@ -271,7 +244,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
-            this.panel.Controls.Add(this.cboEstoque);
             this.panel.Controls.Add(this.rtxtDescrição);
             this.panel.Controls.Add(this.lblDescrição);
             this.panel.Controls.Add(this.nudValor);
@@ -283,34 +255,15 @@
             this.panel.Controls.Add(this.lblTipo);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
-            this.panel.Controls.Add(this.lblEstoque);
             this.panel.Controls.Add(this.btnCadastrar);
             this.panel.Controls.Add(this.dataGridView5);
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView6);
             this.panel.Controls.Add(this.dataGridView1);
-            this.panel.Controls.Add(this.dataGridView2);
             this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 566;
-            // 
-            // cboEstoque
-            // 
-            this.cboEstoque.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboEstoque.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboEstoque.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboEstoque.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboEstoque.FormattingEnabled = true;
-            this.cboEstoque.Items.AddRange(new object[] {
-            "Produtos",
-            "Suprimentos"});
-            this.cboEstoque.Location = new System.Drawing.Point(79, 6);
-            this.cboEstoque.MaxLength = 32;
-            this.cboEstoque.Name = "cboEstoque";
-            this.cboEstoque.Size = new System.Drawing.Size(269, 23);
-            this.cboEstoque.TabIndex = 658;
             // 
             // rtxtDescrição
             // 
@@ -346,7 +299,6 @@
             this.Name = "frmRegisterProducts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Products";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
@@ -363,13 +315,11 @@
 
         #endregion
         private System.Windows.Forms.Label lblCadastrarProduto;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.Label lblEstoque;
         private System.Windows.Forms.Label lblNome;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblTipo;
@@ -382,6 +332,5 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label lblDescrição;
         private System.Windows.Forms.RichTextBox rtxtDescrição;
-        public System.Windows.Forms.ComboBox cboEstoque;
     }
 }

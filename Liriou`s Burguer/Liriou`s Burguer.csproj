@@ -199,28 +199,28 @@
     <Compile Include="Screens\Employee\frmUnavailability.Designer.cs">
       <DependentUpon>frmUnavailability.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmChangeCustomer.cs">
+    <Compile Include="Screens\Manager\CRM\frmChangeCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmChangeCustomer.Designer.cs">
+    <Compile Include="Screens\Manager\CRM\frmChangeCustomer.Designer.cs">
       <DependentUpon>frmChangeCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmConsultCustomer.cs">
+    <Compile Include="Screens\Manager\CRM\frmConsultCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmConsultCustomer.Designer.cs">
+    <Compile Include="Screens\Manager\CRM\frmConsultCustomer.Designer.cs">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmDeleteClient.cs">
+    <Compile Include="Screens\Manager\CRM\frmDeleteClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmDeleteClient.Designer.cs">
+    <Compile Include="Screens\Manager\CRM\frmDeleteClient.Designer.cs">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmRegisterCustomer.cs">
+    <Compile Include="Screens\Manager\CRM\frmRegisterCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Client\frmRegisterCustomer.Designer.cs">
+    <Compile Include="Screens\Manager\CRM\frmRegisterCustomer.Designer.cs">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\Provider\frmChangeProvider.cs">
@@ -325,6 +325,12 @@
     <Compile Include="Screens\Manager\Stock\frmChangeInventory.Designer.cs">
       <DependentUpon>frmChangeInventory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Manager\Stock\frmConsultStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Stock\frmConsultStock.Designer.cs">
+      <DependentUpon>frmConsultStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Manager\Stock\frmDeleteInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -404,16 +410,16 @@
     <EmbeddedResource Include="Screens\Employee\frmUnavailability.resx">
       <DependentUpon>frmUnavailability.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Client\frmChangeCustomer.resx">
+    <EmbeddedResource Include="Screens\Manager\CRM\frmChangeCustomer.resx">
       <DependentUpon>frmChangeCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Client\frmConsultCustomer.resx">
+    <EmbeddedResource Include="Screens\Manager\CRM\frmConsultCustomer.resx">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Client\frmDeleteClient.resx">
+    <EmbeddedResource Include="Screens\Manager\CRM\frmDeleteClient.resx">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Client\frmRegisterCustomer.resx">
+    <EmbeddedResource Include="Screens\Manager\CRM\frmRegisterCustomer.resx">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Provider\frmChangeProvider.resx">
@@ -466,6 +472,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Stock\frmChangeInventory.resx">
       <DependentUpon>frmChangeInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Stock\frmConsultStock.resx">
+      <DependentUpon>frmConsultStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Stock\frmDeleteInventory.resx">
       <DependentUpon>frmDeleteInventory.cs</DependentUpon>

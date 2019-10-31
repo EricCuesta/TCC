@@ -1,6 +1,6 @@
-﻿namespace Liriou_s_Burguer.Screens.Manager.Client
+﻿namespace Liriou_s_Burguer.Screens.Manager.CRM
 {
-    partial class frmRegisterCustomer
+    partial class frmDeleteClient
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
-            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.lblCPF = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.dataGridView16 = new System.Windows.Forms.DataGridView();
+            this.nudId = new System.Windows.Forms.NumericUpDown();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.lblID = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.dataGridView15 = new System.Windows.Forms.DataGridView();
@@ -62,6 +63,8 @@
             this.lblSexo = new System.Windows.Forms.Label();
             this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.lblRG = new System.Windows.Forms.Label();
+            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.lblCPF = new System.Windows.Forms.Label();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -69,8 +72,10 @@
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.lblCadastrarCliente = new System.Windows.Forms.Label();
+            this.lblDeletarCliente = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
@@ -88,13 +93,14 @@
             // 
             // panel
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
-            this.panel.Controls.Add(this.mtxtCPF);
-            this.panel.Controls.Add(this.lblCPF);
-            this.panel.Controls.Add(this.btnCadastrar);
+            this.panel.Controls.Add(this.dataGridView16);
+            this.panel.Controls.Add(this.nudId);
+            this.panel.Controls.Add(this.btnDeletar);
+            this.panel.Controls.Add(this.lblID);
             this.panel.Controls.Add(this.txtEmail);
             this.panel.Controls.Add(this.lblEmail);
             this.panel.Controls.Add(this.dataGridView15);
@@ -125,6 +131,8 @@
             this.panel.Controls.Add(this.lblSexo);
             this.panel.Controls.Add(this.mtxtRG);
             this.panel.Controls.Add(this.lblRG);
+            this.panel.Controls.Add(this.mtxtCPF);
+            this.panel.Controls.Add(this.lblCPF);
             this.panel.Controls.Add(this.dataGridView6);
             this.panel.Controls.Add(this.dataGridView1);
             this.panel.Controls.Add(this.dataGridView2);
@@ -137,45 +145,52 @@
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 564;
             // 
-            // mtxtCPF
+            // dataGridView16
             // 
-            this.mtxtCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtxtCPF.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.Location = new System.Drawing.Point(407, 37);
-            this.mtxtCPF.Mask = "000000000/00";
-            this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(299, 23);
-            this.mtxtCPF.TabIndex = 645;
+            this.dataGridView16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView16.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView16.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView16.Location = new System.Drawing.Point(1, 33);
+            this.dataGridView16.Name = "dataGridView16";
+            this.dataGridView16.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView16.TabIndex = 662;
             // 
-            // lblCPF
+            // nudId
             // 
-            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCPF.Location = new System.Drawing.Point(362, 40);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(39, 19);
-            this.lblCPF.TabIndex = 646;
-            this.lblCPF.Text = "CPF:";
+            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudId.Location = new System.Drawing.Point(45, 6);
+            this.nudId.Name = "nudId";
+            this.nudId.Size = new System.Drawing.Size(120, 23);
+            this.nudId.TabIndex = 661;
+            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
             // 
-            // btnCadastrar
+            // btnDeletar
             // 
-            this.btnCadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar.Location = new System.Drawing.Point(305, 377);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(107, 30);
-            this.btnCadastrar.TabIndex = 644;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnDeletar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.ForeColor = System.Drawing.Color.Black;
+            this.btnDeletar.Location = new System.Drawing.Point(305, 377);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(107, 30);
+            this.btnDeletar.TabIndex = 644;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblID.Location = new System.Drawing.Point(2, 5);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(37, 26);
+            this.lblID.TabIndex = 660;
+            this.lblID.Text = "ID:";
             // 
             // txtEmail
             // 
@@ -183,10 +198,11 @@
             this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(64, 228);
+            this.txtEmail.Location = new System.Drawing.Point(64, 260);
             this.txtEmail.MaxLength = 64;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(642, 23);
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(643, 23);
             this.txtEmail.TabIndex = 641;
             // 
             // lblEmail
@@ -195,7 +211,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(4, 230);
+            this.lblEmail.Location = new System.Drawing.Point(4, 262);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(54, 19);
             this.lblEmail.TabIndex = 640;
@@ -207,7 +223,7 @@
             this.dataGridView15.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView15.Location = new System.Drawing.Point(1, 255);
+            this.dataGridView15.Location = new System.Drawing.Point(1, 287);
             this.dataGridView15.Name = "dataGridView15";
             this.dataGridView15.Size = new System.Drawing.Size(709, 2);
             this.dataGridView15.TabIndex = 639;
@@ -218,10 +234,11 @@
             this.mtxtTelefone.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefone.Location = new System.Drawing.Point(440, 196);
+            this.mtxtTelefone.Location = new System.Drawing.Point(440, 228);
             this.mtxtTelefone.Mask = "(999) 9999-9999";
             this.mtxtTelefone.Name = "mtxtTelefone";
-            this.mtxtTelefone.Size = new System.Drawing.Size(266, 23);
+            this.mtxtTelefone.ReadOnly = true;
+            this.mtxtTelefone.Size = new System.Drawing.Size(267, 23);
             this.mtxtTelefone.TabIndex = 637;
             // 
             // lblTelefone
@@ -230,7 +247,7 @@
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTelefone.Location = new System.Drawing.Point(362, 198);
+            this.lblTelefone.Location = new System.Drawing.Point(362, 230);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(72, 19);
             this.lblTelefone.TabIndex = 636;
@@ -242,9 +259,10 @@
             this.mtxtCelular.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCelular.Location = new System.Drawing.Point(71, 196);
+            this.mtxtCelular.Location = new System.Drawing.Point(71, 228);
             this.mtxtCelular.Mask = "(999) 99999-9999";
             this.mtxtCelular.Name = "mtxtCelular";
+            this.mtxtCelular.ReadOnly = true;
             this.mtxtCelular.Size = new System.Drawing.Size(277, 23);
             this.mtxtCelular.TabIndex = 635;
             // 
@@ -254,7 +272,7 @@
             this.dataGridView12.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Location = new System.Drawing.Point(1, 223);
+            this.dataGridView12.Location = new System.Drawing.Point(1, 255);
             this.dataGridView12.Name = "dataGridView12";
             this.dataGridView12.Size = new System.Drawing.Size(709, 2);
             this.dataGridView12.TabIndex = 634;
@@ -265,7 +283,7 @@
             this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(354, 193);
+            this.dataGridView11.Location = new System.Drawing.Point(354, 225);
             this.dataGridView11.Name = "dataGridView11";
             this.dataGridView11.Size = new System.Drawing.Size(2, 30);
             this.dataGridView11.TabIndex = 633;
@@ -276,7 +294,7 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCelular.Location = new System.Drawing.Point(4, 198);
+            this.lblCelular.Location = new System.Drawing.Point(4, 230);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(61, 19);
             this.lblCelular.TabIndex = 632;
@@ -288,7 +306,7 @@
             this.dataGridView13.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView13.Location = new System.Drawing.Point(1, 191);
+            this.dataGridView13.Location = new System.Drawing.Point(1, 223);
             this.dataGridView13.Name = "dataGridView13";
             this.dataGridView13.Size = new System.Drawing.Size(709, 2);
             this.dataGridView13.TabIndex = 631;
@@ -299,7 +317,7 @@
             this.dataGridView10.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Location = new System.Drawing.Point(1, 129);
+            this.dataGridView10.Location = new System.Drawing.Point(1, 161);
             this.dataGridView10.Name = "dataGridView10";
             this.dataGridView10.Size = new System.Drawing.Size(709, 2);
             this.dataGridView10.TabIndex = 628;
@@ -310,7 +328,7 @@
             this.dataGridView9.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(1, 97);
+            this.dataGridView9.Location = new System.Drawing.Point(1, 129);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.Size = new System.Drawing.Size(709, 2);
             this.dataGridView9.TabIndex = 627;
@@ -321,7 +339,7 @@
             this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(1, 65);
+            this.dataGridView5.Location = new System.Drawing.Point(1, 97);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(709, 2);
             this.dataGridView5.TabIndex = 626;
@@ -332,7 +350,7 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(1, 33);
+            this.dataGridView3.Location = new System.Drawing.Point(1, 65);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 625;
@@ -342,10 +360,11 @@
             this.txtComplemento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtComplemento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(478, 151);
+            this.txtComplemento.Location = new System.Drawing.Point(478, 183);
             this.txtComplemento.MaxLength = 128;
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(228, 23);
+            this.txtComplemento.ReadOnly = true;
+            this.txtComplemento.Size = new System.Drawing.Size(229, 23);
             this.txtComplemento.TabIndex = 624;
             // 
             // lblComplemento
@@ -354,7 +373,7 @@
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblComplemento.Location = new System.Drawing.Point(362, 153);
+            this.lblComplemento.Location = new System.Drawing.Point(362, 184);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(110, 19);
             this.lblComplemento.TabIndex = 623;
@@ -366,11 +385,11 @@
             this.txtEndereço.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEndereço.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEndereço.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereço.Location = new System.Drawing.Point(87, 141);
+            this.txtEndereço.Location = new System.Drawing.Point(87, 173);
             this.txtEndereço.MaxLength = 128;
             this.txtEndereço.Name = "txtEndereço";
             this.txtEndereço.ReadOnly = true;
-            this.txtEndereço.Size = new System.Drawing.Size(261, 41);
+            this.txtEndereço.Size = new System.Drawing.Size(260, 41);
             this.txtEndereço.TabIndex = 622;
             this.txtEndereço.Text = "";
             // 
@@ -380,7 +399,7 @@
             this.lblEndereço.AutoSize = true;
             this.lblEndereço.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereço.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEndereço.Location = new System.Drawing.Point(4, 152);
+            this.lblEndereço.Location = new System.Drawing.Point(4, 184);
             this.lblEndereço.Name = "lblEndereço";
             this.lblEndereço.Size = new System.Drawing.Size(77, 19);
             this.lblEndereço.TabIndex = 619;
@@ -392,12 +411,12 @@
             this.mtxtCEP.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCEP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCEP.Location = new System.Drawing.Point(407, 102);
+            this.mtxtCEP.Location = new System.Drawing.Point(407, 134);
             this.mtxtCEP.Mask = "00000-000";
             this.mtxtCEP.Name = "mtxtCEP";
-            this.mtxtCEP.Size = new System.Drawing.Size(299, 23);
+            this.mtxtCEP.ReadOnly = true;
+            this.mtxtCEP.Size = new System.Drawing.Size(300, 23);
             this.mtxtCEP.TabIndex = 618;
-            this.mtxtCEP.TextChanged += new System.EventHandler(this.mtxtCEP_TextChanged);
             // 
             // lblCEP
             // 
@@ -405,7 +424,7 @@
             this.lblCEP.AutoSize = true;
             this.lblCEP.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCEP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCEP.Location = new System.Drawing.Point(362, 104);
+            this.lblCEP.Location = new System.Drawing.Point(362, 136);
             this.lblCEP.Name = "lblCEP";
             this.lblCEP.Size = new System.Drawing.Size(39, 19);
             this.lblCEP.TabIndex = 617;
@@ -446,7 +465,7 @@
             "São Paulo",
             "Sergipe",
             "Tocantins"});
-            this.cboEstado.Location = new System.Drawing.Point(70, 102);
+            this.cboEstado.Location = new System.Drawing.Point(70, 134);
             this.cboEstado.MaxLength = 32;
             this.cboEstado.Name = "cboEstado";
             this.cboEstado.Size = new System.Drawing.Size(278, 23);
@@ -458,7 +477,7 @@
             this.dataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(354, 99);
+            this.dataGridView8.Location = new System.Drawing.Point(354, 131);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.Size = new System.Drawing.Size(2, 30);
             this.dataGridView8.TabIndex = 614;
@@ -469,7 +488,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Location = new System.Drawing.Point(4, 104);
+            this.lblEstado.Location = new System.Drawing.Point(4, 136);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(60, 19);
             this.lblEstado.TabIndex = 613;
@@ -481,12 +500,12 @@
             this.dtpNascimento.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
             this.dtpNascimento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(518, 70);
-            this.dtpNascimento.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dtpNascimento.Location = new System.Drawing.Point(518, 102);
+            this.dtpNascimento.MaxDate = new System.DateTime(9998, 1, 1, 0, 0, 0, 0);
             this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(188, 23);
+            this.dtpNascimento.Size = new System.Drawing.Size(189, 23);
             this.dtpNascimento.TabIndex = 612;
-            this.dtpNascimento.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dtpNascimento.Value = new System.DateTime(2019, 10, 28, 0, 0, 0, 0);
             // 
             // dataGridView7
             // 
@@ -494,7 +513,7 @@
             this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(354, 67);
+            this.dataGridView7.Location = new System.Drawing.Point(354, 99);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.Size = new System.Drawing.Size(2, 30);
             this.dataGridView7.TabIndex = 611;
@@ -505,7 +524,7 @@
             this.lblNascimento.AutoSize = true;
             this.lblNascimento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNascimento.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNascimento.Location = new System.Drawing.Point(362, 72);
+            this.lblNascimento.Location = new System.Drawing.Point(362, 104);
             this.lblNascimento.Name = "lblNascimento";
             this.lblNascimento.Size = new System.Drawing.Size(150, 19);
             this.lblNascimento.TabIndex = 610;
@@ -522,7 +541,7 @@
             this.cboSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cboSexo.Location = new System.Drawing.Point(56, 70);
+            this.cboSexo.Location = new System.Drawing.Point(56, 102);
             this.cboSexo.MaxLength = 32;
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(292, 23);
@@ -534,7 +553,7 @@
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSexo.Location = new System.Drawing.Point(4, 72);
+            this.lblSexo.Location = new System.Drawing.Point(4, 104);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(46, 19);
             this.lblSexo.TabIndex = 608;
@@ -546,10 +565,11 @@
             this.mtxtRG.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtRG.Location = new System.Drawing.Point(43, 38);
+            this.mtxtRG.Location = new System.Drawing.Point(43, 70);
             this.mtxtRG.Mask = "00.000.000-0";
             this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(306, 23);
+            this.mtxtRG.ReadOnly = true;
+            this.mtxtRG.Size = new System.Drawing.Size(305, 23);
             this.mtxtRG.TabIndex = 603;
             // 
             // lblRG
@@ -558,11 +578,36 @@
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblRG.Location = new System.Drawing.Point(4, 40);
+            this.lblRG.Location = new System.Drawing.Point(4, 72);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 602;
             this.lblRG.Text = "RG:";
+            // 
+            // mtxtCPF
+            // 
+            this.mtxtCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtCPF.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCPF.Location = new System.Drawing.Point(407, 70);
+            this.mtxtCPF.Mask = "000000000/00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.ReadOnly = true;
+            this.mtxtCPF.Size = new System.Drawing.Size(300, 23);
+            this.mtxtCPF.TabIndex = 601;
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCPF.Location = new System.Drawing.Point(362, 72);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(39, 19);
+            this.lblCPF.TabIndex = 601;
+            this.lblCPF.Text = "CPF:";
             // 
             // dataGridView6
             // 
@@ -570,7 +615,7 @@
             this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(354, 35);
+            this.dataGridView6.Location = new System.Drawing.Point(354, 67);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 30);
             this.dataGridView6.TabIndex = 599;
@@ -592,7 +637,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(354, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(354, 35);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;
@@ -603,20 +648,21 @@
             this.txtSobrenome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSobrenome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSobrenome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(460, 6);
+            this.txtSobrenome.Location = new System.Drawing.Point(460, 38);
             this.txtSobrenome.MaxLength = 32;
             this.txtSobrenome.Name = "txtSobrenome";
-            this.txtSobrenome.Size = new System.Drawing.Size(246, 23);
+            this.txtSobrenome.ReadOnly = true;
+            this.txtSobrenome.Size = new System.Drawing.Size(247, 23);
             this.txtSobrenome.TabIndex = 568;
             // 
             // lblSobrenome
             // 
-            this.lblSobrenome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lblSobrenome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobrenome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSobrenome.Location = new System.Drawing.Point(361, 8);
+            this.lblSobrenome.Location = new System.Drawing.Point(361, 40);
             this.lblSobrenome.Name = "lblSobrenome";
             this.lblSobrenome.Size = new System.Drawing.Size(92, 19);
             this.lblSobrenome.TabIndex = 567;
@@ -624,14 +670,15 @@
             // 
             // txtNome
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(63, 6);
+            this.txtNome.Location = new System.Drawing.Point(63, 38);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
+            this.txtNome.ReadOnly = true;
             this.txtNome.Size = new System.Drawing.Size(285, 23);
             this.txtNome.TabIndex = 566;
             // 
@@ -640,39 +687,41 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNome.Location = new System.Drawing.Point(3, 8);
+            this.lblNome.Location = new System.Drawing.Point(3, 40);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
             this.lblNome.TabIndex = 563;
             this.lblNome.Text = "Nome:";
             // 
-            // lblCadastrarCliente
+            // lblDeletarCliente
             // 
-            this.lblCadastrarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblCadastrarCliente.AutoSize = true;
-            this.lblCadastrarCliente.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrarCliente.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCadastrarCliente.Location = new System.Drawing.Point(242, 9);
-            this.lblCadastrarCliente.Name = "lblCadastrarCliente";
-            this.lblCadastrarCliente.Size = new System.Drawing.Size(229, 28);
-            this.lblCadastrarCliente.TabIndex = 563;
-            this.lblCadastrarCliente.Text = "Cadastrar Cliente";
-            this.lblCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDeletarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblDeletarCliente.AutoSize = true;
+            this.lblDeletarCliente.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeletarCliente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDeletarCliente.Location = new System.Drawing.Point(255, 9);
+            this.lblDeletarCliente.Name = "lblDeletarCliente";
+            this.lblDeletarCliente.Size = new System.Drawing.Size(199, 28);
+            this.lblDeletarCliente.TabIndex = 563;
+            this.lblDeletarCliente.Text = "Deletar Cliente";
+            this.lblDeletarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // frmRegisterCustomer
+            // frmDeleteClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.panel);
-            this.Controls.Add(this.lblCadastrarCliente);
+            this.Controls.Add(this.lblDeletarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmRegisterCustomer";
+            this.Name = "frmDeleteClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Register Customer";
+            this.Text = "Delete Client";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
@@ -694,7 +743,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnDeletar;
         public System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.DataGridView dataGridView15;
@@ -725,6 +774,8 @@
         private System.Windows.Forms.Label lblSexo;
         public System.Windows.Forms.MaskedTextBox mtxtRG;
         private System.Windows.Forms.Label lblRG;
+        public System.Windows.Forms.MaskedTextBox mtxtCPF;
+        private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
@@ -732,8 +783,9 @@
         private System.Windows.Forms.Label lblSobrenome;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
-        private System.Windows.Forms.Label lblCadastrarCliente;
-        public System.Windows.Forms.MaskedTextBox mtxtCPF;
-        private System.Windows.Forms.Label lblCPF;
+        private System.Windows.Forms.Label lblDeletarCliente;
+        private System.Windows.Forms.DataGridView dataGridView16;
+        private System.Windows.Forms.NumericUpDown nudId;
+        private System.Windows.Forms.Label lblID;
     }
 }

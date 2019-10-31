@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Liriou_s_Burguer.Screens.Manager.Stock
 {
-    public partial class frmDeleteInventory : Form
+    public partial class frmConsultStock : Form
     {
-        public frmDeleteInventory()
+        public frmConsultStock()
         {
             InitializeComponent();
-        }
-
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

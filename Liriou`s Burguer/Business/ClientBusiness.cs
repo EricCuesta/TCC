@@ -48,6 +48,17 @@ namespace Liriou_s_Burguer.Business
             return client;
         }
 
+        public List<Database.Entities.tb_client> ConsultarPorNome(Database.Entities.tb_client client)
+        {
+            Database.ClientDatabase dbclient = new Database.ClientDatabase();
+            List<Database.Entities.tb_client> list = new List<Database.Entities.tb_client>();
+
+            if (client.nm_firstName != string.Empty)
+                list = dbclient.ConsultarPorNome(client);
+
+            return list;
+        }
+
         public List<Database.Entities.tb_client> Consultar(Database.Entities.tb_client client)
         {
             Database.ClientDatabase dbclient = new Database.ClientDatabase();

@@ -15,15 +15,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
         public frmRegisterSupplies()
         {
             InitializeComponent();
-            this.loadcombo();
-        }
-        public void loadcombo()
-        {
-            Database.StockDatabase db = new Database.StockDatabase();
-            List<Database.Entities.tb_stock> list = db.ListarEstoque();
-
-            cboEstoque.DisplayMember = nameof(Database.Entities.tb_stock.ds_typeStock);
-            cboEstoque.DataSource = list;
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
@@ -32,7 +23,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             {
                 Database.Entities.tb_supply supply = new Database.Entities.tb_supply();
                 supply.nm_supply = txtNome.Text;
-                supply.ds_typeStock = cboEstoque.Text;
                 supply.vl_amount = Convert.ToInt32(nudQuantidade.Value);
                 supply.vl_value = nudValor.Value;
                 supply.ds_note = rtxtDescrição.Text;

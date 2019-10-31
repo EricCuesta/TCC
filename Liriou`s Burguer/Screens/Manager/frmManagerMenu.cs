@@ -16,6 +16,7 @@ namespace Liriou_s_Burguer.Screens.Manager
         public frmManagerMenu()
         {
             InitializeComponent();
+            panelContedor.Visible = false;
             CustomizeDesign();
         }
 
@@ -31,8 +32,9 @@ namespace Liriou_s_Burguer.Screens.Manager
         {
             panelSubMenuRecursosHumanos.Visible = false;
             panelSubMenuFinanceiro.Visible = false;
+            panelSubMenuFornecedor.Visible = false;
             panelSubMenuEstoque.Visible = false;
-            panelSubMenuSuprimentos.Visible = false;
+            panelSubMenuCRM.Visible = false;
         }
 
         private void HideSubMenu()
@@ -41,10 +43,12 @@ namespace Liriou_s_Burguer.Screens.Manager
                 panelSubMenuRecursosHumanos.Visible = false;
             if (panelSubMenuFinanceiro.Visible == true)
                 panelSubMenuFinanceiro.Visible = false;
+            if (panelSubMenuFornecedor.Visible == true)
+                panelSubMenuFornecedor.Visible = false;
             if (panelSubMenuEstoque.Visible == true)
                 panelSubMenuEstoque.Visible = false;
-            if (panelSubMenuSuprimentos.Visible == true)
-                panelSubMenuSuprimentos.Visible = false;
+            if (panelSubMenuCRM.Visible == true)
+                panelSubMenuCRM.Visible = false;
         }
 
         private void ShowSubMenu(Panel SubMenu)
@@ -71,14 +75,19 @@ namespace Liriou_s_Burguer.Screens.Manager
             ShowSubMenu(panelSubMenuFinanceiro);
         }
 
+        private void btnFornecedor_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelSubMenuFornecedor);
+        }
+
         private void btnEstoque_Click(object sender, EventArgs e)
         {
             ShowSubMenu(panelSubMenuEstoque);
         }
 
-        private void btnSuprimentos_Click(object sender, EventArgs e)
+        private void btnCRM_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(panelSubMenuSuprimentos);
+            ShowSubMenu(panelSubMenuCRM);
         }
 
         private Form activeForm = null;
@@ -93,7 +102,42 @@ namespace Liriou_s_Burguer.Screens.Manager
             panelContedor.Controls.Add(Contedor);
             panelContedor.Tag = Contedor;
             Contedor.BringToFront();
+            panelContedor.Visible = true;
             Contedor.Show();
+        }
+
+        private void imgFechar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void imgMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void imgFechar_MouseEnter(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar01;
+            imgFechar.Image = Properties.Resources.Fechar02;
+        }
+
+        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        {
+            imgFechar.Image = Properties.Resources.Fechar02;
+            imgFechar.Image = Properties.Resources.Fechar01;
+        }
+
+        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+        }
+
+        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        {
+            imgMinimizar.Image = Properties.Resources.Minimizar02;
+            imgMinimizar.Image = Properties.Resources.Minimizar01;
         }
 
         private void btnCadastrarFuncionário_Click(object sender, EventArgs e)
@@ -132,62 +176,29 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
         }
 
-        private void imgFechar_MouseEnter(object sender, EventArgs e)
+        private void btnFluxoDeCaixa_Click(object sender, EventArgs e)
         {
-            imgFechar.Image = Properties.Resources.Fechar01;
-            imgFechar.Image = Properties.Resources.Fechar02;
+
         }
 
-        private void imgFechar_MouseLeave(object sender, EventArgs e)
+        private void btnCadastrarConta_Click(object sender, EventArgs e)
         {
-            imgFechar.Image = Properties.Resources.Fechar02;
-            imgFechar.Image = Properties.Resources.Fechar01;
+
         }
 
-        private void imgMinimizar_MouseEnter(object sender, EventArgs e)
+        private void btnConsultarConta_Click(object sender, EventArgs e)
         {
-            imgMinimizar.Image = Properties.Resources.Minimizar01;
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
+
         }
 
-        private void imgMinimizar_MouseLeave(object sender, EventArgs e)
+        private void btnAlterarConta_Click(object sender, EventArgs e)
         {
-            imgMinimizar.Image = Properties.Resources.Minimizar02;
-            imgMinimizar.Image = Properties.Resources.Minimizar01;
+
         }
 
-        private void imgFechar_Click(object sender, EventArgs e)
+        private void btnDeletarConta_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
 
-        private void imgMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void btnCadastrarCliente_Click(object sender, EventArgs e)
-        {
-            openContedor(new Client.frmRegisterCustomer());
-            HideSubMenu();
-        }
-
-        private void btnConsultarCliente_Click(object sender, EventArgs e)
-        {
-            openContedor(new Client.frmConsultCustomer());
-            HideSubMenu();
-        }
-
-        private void btnAlterarCliente_Click(object sender, EventArgs e)
-        {
-            openContedor(new Client.frmChangeCustomer());
-            HideSubMenu();
-        }
-
-        private void btnDeletarCliente_Click(object sender, EventArgs e)
-        {
-            openContedor(new Client.frmDeleteClient());
-            HideSubMenu();
         }
 
         private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
@@ -238,6 +249,30 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
         }
 
+        private void btnCadastrarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Supplies.frmRegisterSupplies());
+            HideSubMenu();
+        }
+
+        private void btnConsultarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Supplies.frmConsultSupplies());
+            HideSubMenu();
+        }
+
+        private void btnAlterarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Supplies.frmChangeSupplies());
+            HideSubMenu();
+        }
+
+        private void btnDeletarSuprimentos_Click(object sender, EventArgs e)
+        {
+            openContedor(new Stock.Supplies.frmDeleteSupplies());
+            HideSubMenu();
+        }
+
         private void btnCadastrarEstoque_Click(object sender, EventArgs e)
         {
             openContedor(new Stock.frmRegisterStock());
@@ -256,28 +291,33 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
         }
 
-        private void btnCadastrarSuprimentos_Click(object sender, EventArgs e)
+        private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Supplies.frmRegisterSupplies());
+            openContedor(new CRM.frmRegisterCustomer());
             HideSubMenu();
         }
 
-        private void btnConsultarSuprimentos_Click(object sender, EventArgs e)
+        private void btnConsultarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Supplies.frmConsultSupplies());
+            openContedor(new CRM.frmConsultCustomer());
             HideSubMenu();
         }
 
-        private void btnAlterarSuprimentos_Click(object sender, EventArgs e)
+        private void btnAlterarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Supplies.frmChangeSupplies());
+            openContedor(new CRM.frmChangeCustomer());
             HideSubMenu();
         }
 
-        private void btnDeletarSuprimentos_Click(object sender, EventArgs e)
+        private void btnDeletarCliente_Click(object sender, EventArgs e)
         {
-            openContedor(new Supplies.frmDeleteSupplies());
+            openContedor(new CRM.frmDeleteClient());
             HideSubMenu();
+        }
+
+        private void imgLogotipo_Click(object sender, EventArgs e)
+        {
+            panelContedor.Visible = false;
         }
     }
 }

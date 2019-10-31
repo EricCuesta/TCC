@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
-            this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
@@ -40,16 +36,20 @@
             this.lblQtdMáximo = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.txtLocal = new System.Windows.Forms.TextBox();
+            this.lblLocal = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblDeletarEstoque = new System.Windows.Forms.Label();
+            this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdMáximo)).BeginInit();
@@ -57,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -73,8 +74,8 @@
             this.panel.Controls.Add(this.lblQtdMáximo);
             this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.lblTipo);
-            this.panel.Controls.Add(this.txtNome);
-            this.panel.Controls.Add(this.lblNome);
+            this.panel.Controls.Add(this.txtLocal);
+            this.panel.Controls.Add(this.lblLocal);
             this.panel.Controls.Add(this.btnDeletar);
             this.panel.Controls.Add(this.dataGridView5);
             this.panel.Controls.Add(this.dataGridView3);
@@ -84,40 +85,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 566;
-            // 
-            // dgvConsultarEstoque
-            // 
-            this.dgvConsultarEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2,
-            this.Coluna3});
-            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 141);
-            this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
-            this.dgvConsultarEstoque.Size = new System.Drawing.Size(703, 274);
-            this.dgvConsultarEstoque.TabIndex = 664;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 230;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Tipo";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 230;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Quantidade Máxima";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 200;
             // 
             // dataGridView2
             // 
@@ -198,29 +165,29 @@
             this.lblTipo.TabIndex = 649;
             this.lblTipo.Text = "Tipo:";
             // 
-            // txtNome
+            // txtLocal
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(63, 38);
-            this.txtNome.MaxLength = 32;
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(644, 23);
-            this.txtNome.TabIndex = 648;
+            this.txtLocal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLocal.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocal.Location = new System.Drawing.Point(63, 38);
+            this.txtLocal.MaxLength = 32;
+            this.txtLocal.Name = "txtLocal";
+            this.txtLocal.Size = new System.Drawing.Size(644, 23);
+            this.txtLocal.TabIndex = 648;
             // 
-            // lblNome
+            // lblLocal
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNome.Location = new System.Drawing.Point(3, 40);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(54, 19);
-            this.lblNome.TabIndex = 647;
-            this.lblNome.Text = "Nome:";
+            this.lblLocal.AutoSize = true;
+            this.lblLocal.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocal.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLocal.Location = new System.Drawing.Point(3, 40);
+            this.lblLocal.Name = "lblLocal";
+            this.lblLocal.Size = new System.Drawing.Size(54, 19);
+            this.lblLocal.TabIndex = 647;
+            this.lblLocal.Text = "Nome:";
             // 
             // btnDeletar
             // 
@@ -236,6 +203,7 @@
             this.btnDeletar.TabIndex = 644;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // dataGridView5
             // 
@@ -294,6 +262,51 @@
             this.lblDeletarEstoque.Text = "Deletar Estoque";
             this.lblDeletarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dgvConsultarEstoque
+            // 
+            this.dgvConsultarEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna3,
+            this.Coluna4});
+            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 141);
+            this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
+            this.dgvConsultarEstoque.Size = new System.Drawing.Size(704, 274);
+            this.dgvConsultarEstoque.TabIndex = 664;
+            // 
+            // Coluna1
+            // 
+            this.Coluna1.DataPropertyName = "id_stock";
+            this.Coluna1.HeaderText = "ID";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.DataPropertyName = "ds_place";
+            this.Coluna2.HeaderText = "Local";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 260;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.DataPropertyName = "ds_typeStock";
+            this.Coluna3.HeaderText = "Tipo";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 150;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.DataPropertyName = "nr_maxAmount";
+            this.Coluna4.HeaderText = "Quantidade Máxima";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            this.Coluna4.Width = 150;
+            // 
             // frmDeleteInventory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -308,7 +321,6 @@
             this.Text = "Delete Inventory";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQtdMáximo)).EndInit();
@@ -316,6 +328,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,8 +344,8 @@
         private System.Windows.Forms.Label lblQtdMáximo;
         public System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Label lblTipo;
-        protected System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblNome;
+        protected System.Windows.Forms.TextBox txtLocal;
+        private System.Windows.Forms.Label lblLocal;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView3;
@@ -343,5 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
     }
 }

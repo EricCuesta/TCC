@@ -32,12 +32,6 @@
             this.panel = new System.Windows.Forms.Panel();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.dgvConsultarProduto = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblTipo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -45,6 +39,11 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -113,55 +112,12 @@
             this.Coluna2,
             this.Coluna3,
             this.Coluna4,
-            this.Coluna5,
-            this.Coluna6});
+            this.Coluna5});
             this.dgvConsultarProduto.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvConsultarProduto.Location = new System.Drawing.Point(3, 77);
             this.dgvConsultarProduto.Name = "dgvConsultarProduto";
-            this.dgvConsultarProduto.Size = new System.Drawing.Size(703, 338);
+            this.dgvConsultarProduto.Size = new System.Drawing.Size(704, 338);
             this.dgvConsultarProduto.TabIndex = 651;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 120;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Estoque";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 120;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Tipo";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 120;
-            // 
-            // Coluna4
-            // 
-            this.Coluna4.HeaderText = "Quantidade";
-            this.Coluna4.Name = "Coluna4";
-            this.Coluna4.ReadOnly = true;
-            this.Coluna4.Width = 80;
-            // 
-            // Coluna5
-            // 
-            this.Coluna5.HeaderText = "Valor";
-            this.Coluna5.Name = "Coluna5";
-            this.Coluna5.ReadOnly = true;
-            this.Coluna5.Width = 80;
-            // 
-            // Coluna6
-            // 
-            this.Coluna6.HeaderText = "Descrição";
-            this.Coluna6.Name = "Coluna6";
-            this.Coluna6.ReadOnly = true;
-            this.Coluna6.Width = 160;
             // 
             // btnConsultar
             // 
@@ -249,6 +205,41 @@
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;
             // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Nome";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 120;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Tipo";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 120;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.HeaderText = "Quantidade";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 80;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.HeaderText = "Valor";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            this.Coluna4.Width = 80;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.HeaderText = "Descrição";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            this.Coluna5.Width = 262;
+            // 
             // frmBrowseProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,12 +275,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dgvConsultarProduto;
+        public System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
-        public System.Windows.Forms.ComboBox cboTipo;
     }
 }

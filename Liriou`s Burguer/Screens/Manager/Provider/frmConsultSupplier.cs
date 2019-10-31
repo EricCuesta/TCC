@@ -15,6 +15,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
         public frmConsultSupplier()
         {
             InitializeComponent();
+            dgvConsultarFornecedor.AutoGenerateColumns = false;
         }
 
         private void Consulta()

@@ -48,7 +48,6 @@ namespace Liriou_s_Burguer.Database
         public void Alterar(Entities.tb_product product)
         {
             Entities.tb_product list = db.tb_product.FirstOrDefault(t => t.id_product == product.id_product);
-            list.ds_typeStock = product.ds_typeStock;
             list.nm_product = product.nm_product;
             list.ds_typeProduct = product.ds_typeProduct;
             list.vl_amount = product.vl_amount;

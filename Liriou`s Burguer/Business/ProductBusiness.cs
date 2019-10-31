@@ -12,8 +12,6 @@ namespace Liriou_s_Burguer.Business
 
         public void Inserir(Database.Entities.tb_product product)
         {
-            if (product.ds_typeStock == null)
-                throw new ArgumentException("O campo estoque deve ser definido");
             if (product.nm_product == string.Empty)
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (product.ds_typeProduct == null)
@@ -55,8 +53,6 @@ namespace Liriou_s_Burguer.Business
 
         public void Alterar(Database.Entities.tb_product product)
         {
-            if (product.ds_typeStock == null)
-                throw new ArgumentException("O campo estoque deve ser definido");
             if (product.nm_product == string.Empty)
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (product.ds_typeProduct == null)

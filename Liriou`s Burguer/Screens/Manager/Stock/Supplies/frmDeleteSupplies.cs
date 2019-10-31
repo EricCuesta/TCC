@@ -36,7 +36,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
 
             if (product == null)
             {
-                cboEstoque.Text = null;
                 txtNome.Text = string.Empty;
                 nudQuantidade.Value = 0;
                 nudValor.Value = Convert.ToInt32("0,00");
@@ -44,7 +43,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             }
             else
             {
-                cboEstoque.Text = product.ds_typeStock;
                 txtNome.Text = product.nm_product;
                 nudQuantidade.Value = product.vl_amount;
                 nudValor.Value = product.vl_value;

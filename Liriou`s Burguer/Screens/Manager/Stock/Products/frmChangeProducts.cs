@@ -15,16 +15,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
         public frmChangeProducts()
         {
             InitializeComponent();
-            this.loadcombo();
-        }
-
-        public void loadcombo()
-        {
-            Database.StockDatabase db = new Database.StockDatabase();
-            List<Database.Entities.tb_stock> list = db.ListarEstoque();
-
-            cboEstoque.DisplayMember = nameof(Database.Entities.tb_stock.ds_typeStock);
-            cboEstoque.DataSource = list;
         }
 
         private void nudId_ValueChanged(object sender, EventArgs e)
@@ -36,7 +26,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
 
             if (product == null)
             {
-                cboEstoque.Text = null;
                 txtNome.Text = string.Empty;
                 cboTipo.Text = null;
                 nudQuantidade.Value = 0;
@@ -45,7 +34,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             }
             else
             {
-                cboEstoque.Text = product.ds_typeStock;
                 txtNome.Text = product.nm_product;
                 cboTipo.Text = product.ds_typeProduct;
                 nudQuantidade.Value = product.vl_amount;
@@ -60,7 +48,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             {
                 Database.Entities.tb_product product = new Database.Entities.tb_product();
                 product.nm_product = txtNome.Text;
-                product.ds_typeStock = cboEstoque.Text;
                 product.ds_typeProduct = cboTipo.Text;
                 product.vl_amount = Convert.ToInt32(nudQuantidade.Value);
                 product.vl_value = nudValor.Value;

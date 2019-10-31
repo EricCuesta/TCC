@@ -1,4 +1,4 @@
-﻿namespace Liriou_s_Burguer.Screens.Manager.Client
+﻿namespace Liriou_s_Burguer.Screens.Manager.CRM
 {
     partial class frmConsultCustomer
     {
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblConsultarCliente = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarCliente = new System.Windows.Forms.DataGridView();
@@ -98,8 +98,8 @@
             // 
             // panel
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.panel.Controls.Add(this.dgvConsultarCliente);
@@ -125,9 +125,9 @@
             // dgvConsultarCliente
             // 
             this.dgvConsultarCliente.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dgvConsultarCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            this.dgvConsultarCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvConsultarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
             this.dgvConsultarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvConsultarCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -155,16 +155,16 @@
             // Coluna1
             // 
             this.Coluna1.DataPropertyName = "id_client";
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Coluna1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            this.Coluna1.DefaultCellStyle = dataGridViewCellStyle17;
             this.Coluna1.HeaderText = "ID";
             this.Coluna1.Name = "Coluna1";
             // 
             // Coluna2
             // 
             this.Coluna2.DataPropertyName = "nm_firstName";
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            this.Coluna2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            this.Coluna2.DefaultCellStyle = dataGridViewCellStyle18;
             this.Coluna2.HeaderText = "Nome";
             this.Coluna2.Name = "Coluna2";
             this.Coluna2.Width = 140;
@@ -172,8 +172,8 @@
             // Coluna3
             // 
             this.Coluna3.DataPropertyName = "nm_lastName";
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            this.Coluna3.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            this.Coluna3.DefaultCellStyle = dataGridViewCellStyle19;
             this.Coluna3.HeaderText = "Sobrenome";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.Width = 140;
@@ -181,8 +181,8 @@
             // Coluna4
             // 
             this.Coluna4.DataPropertyName = "ds_rg";
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            this.Coluna4.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            this.Coluna4.DefaultCellStyle = dataGridViewCellStyle20;
             this.Coluna4.HeaderText = "RG";
             this.Coluna4.Name = "Coluna4";
             this.Coluna4.Width = 120;
@@ -190,8 +190,8 @@
             // Coluna5
             // 
             this.Coluna5.DataPropertyName = "ds_cpf";
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            this.Coluna5.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            this.Coluna5.DefaultCellStyle = dataGridViewCellStyle21;
             this.Coluna5.HeaderText = "CPF";
             this.Coluna5.Name = "Coluna5";
             this.Coluna5.Width = 120;
@@ -199,8 +199,8 @@
             // Coluna6
             // 
             this.Coluna6.DataPropertyName = "ds_sex";
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            this.Coluna6.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.Black;
+            this.Coluna6.DefaultCellStyle = dataGridViewCellStyle22;
             this.Coluna6.HeaderText = "Sexo";
             this.Coluna6.Name = "Coluna6";
             this.Coluna6.Width = 80;
@@ -208,16 +208,16 @@
             // Coluna7
             // 
             this.Coluna7.DataPropertyName = "dt_birth";
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            this.Coluna7.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.Black;
+            this.Coluna7.DefaultCellStyle = dataGridViewCellStyle23;
             this.Coluna7.HeaderText = "Nascimento";
             this.Coluna7.Name = "Coluna7";
             // 
             // Coluna8
             // 
             this.Coluna8.DataPropertyName = "ds_state";
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            this.Coluna8.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.Black;
+            this.Coluna8.DefaultCellStyle = dataGridViewCellStyle24;
             this.Coluna8.HeaderText = "Estado";
             this.Coluna8.Name = "Coluna8";
             this.Coluna8.Width = 120;
@@ -225,16 +225,16 @@
             // Coluna9
             // 
             this.Coluna9.DataPropertyName = "ds_cep";
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            this.Coluna9.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle25.ForeColor = System.Drawing.Color.Black;
+            this.Coluna9.DefaultCellStyle = dataGridViewCellStyle25;
             this.Coluna9.HeaderText = "CEP";
             this.Coluna9.Name = "Coluna9";
             // 
             // Coluna10
             // 
             this.Coluna10.DataPropertyName = "ds_address";
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            this.Coluna10.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
+            this.Coluna10.DefaultCellStyle = dataGridViewCellStyle26;
             this.Coluna10.HeaderText = "Endereço";
             this.Coluna10.Name = "Coluna10";
             this.Coluna10.Width = 120;
@@ -242,8 +242,8 @@
             // Coluna11
             // 
             this.Coluna11.DataPropertyName = "ds_note";
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            this.Coluna11.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.Black;
+            this.Coluna11.DefaultCellStyle = dataGridViewCellStyle27;
             this.Coluna11.HeaderText = "Complemento";
             this.Coluna11.Name = "Coluna11";
             this.Coluna11.Width = 120;
@@ -251,24 +251,24 @@
             // Coluna12
             // 
             this.Coluna12.DataPropertyName = "nr_cellphone";
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
-            this.Coluna12.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.Black;
+            this.Coluna12.DefaultCellStyle = dataGridViewCellStyle28;
             this.Coluna12.HeaderText = "Celular";
             this.Coluna12.Name = "Coluna12";
             // 
             // Coluna13
             // 
             this.Coluna13.DataPropertyName = "nr_tellphone";
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            this.Coluna13.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.Black;
+            this.Coluna13.DefaultCellStyle = dataGridViewCellStyle29;
             this.Coluna13.HeaderText = "Telefone";
             this.Coluna13.Name = "Coluna13";
             // 
             // Coluna14
             // 
             this.Coluna14.DataPropertyName = "ds_email";
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
-            this.Coluna14.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.Black;
+            this.Coluna14.DefaultCellStyle = dataGridViewCellStyle30;
             this.Coluna14.HeaderText = "E-mail";
             this.Coluna14.Name = "Coluna14";
             this.Coluna14.Width = 120;
@@ -388,7 +388,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;

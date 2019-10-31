@@ -1,4 +1,4 @@
-﻿namespace Liriou_s_Burguer.Screens.Manager.Client
+﻿namespace Liriou_s_Burguer.Screens.Manager.CRM
 {
     partial class frmChangeCustomer
     {

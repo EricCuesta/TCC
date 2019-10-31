@@ -30,7 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagerMenu));
             this.MenuVertical = new System.Windows.Forms.Panel();
-            this.panelSubMenuSuprimentos = new System.Windows.Forms.Panel();
+            this.panelSubMenuCRM = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.btnDeletarCliente = new System.Windows.Forms.Button();
+            this.btnAlterarCliente = new System.Windows.Forms.Button();
+            this.btnConsultarCliente = new System.Windows.Forms.Button();
+            this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.panelCRM = new System.Windows.Forms.Panel();
+            this.btnCRM = new System.Windows.Forms.Button();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.panelSubMenuEstoque = new System.Windows.Forms.Panel();
             this.panel33 = new System.Windows.Forms.Panel();
             this.btnDeletarSuprimentos = new System.Windows.Forms.Button();
             this.panel34 = new System.Windows.Forms.Panel();
@@ -39,10 +51,6 @@
             this.btnAlterarSuprimentos = new System.Windows.Forms.Button();
             this.panel36 = new System.Windows.Forms.Panel();
             this.btnCadastrarSuprimentos = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btnSuprimentos = new System.Windows.Forms.Button();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panelSubMenuEstoque = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.btnDeletarEstoque = new System.Windows.Forms.Button();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -60,23 +68,29 @@
             this.panelEstoque = new System.Windows.Forms.Panel();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.panel18 = new System.Windows.Forms.Panel();
-            this.panelSubMenuFinanceiro = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panelSubMenuFornecedor = new System.Windows.Forms.Panel();
+            this.panel41 = new System.Windows.Forms.Panel();
             this.btnDeletarFornecedor = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel42 = new System.Windows.Forms.Panel();
+            this.panel43 = new System.Windows.Forms.Panel();
             this.btnConsultarFornecedor = new System.Windows.Forms.Button();
             this.btnAlterarFornecedor = new System.Windows.Forms.Button();
-            this.panel17 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
             this.btnCadastrarFornecedor = new System.Windows.Forms.Button();
+            this.panelFornecedor = new System.Windows.Forms.Panel();
+            this.btnFornecedor = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panelSubMenuFinanceiro = new System.Windows.Forms.Panel();
+            this.btnConsultarConta = new System.Windows.Forms.Button();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.btnDeletarCliente = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btnConsultarCliente = new System.Windows.Forms.Button();
-            this.btnAlterarCliente = new System.Windows.Forms.Button();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.btnCadastrarCliente = new System.Windows.Forms.Button();
+            this.btnCadastrarConta = new System.Windows.Forms.Button();
+            this.btnFluxoDeCaixa = new System.Windows.Forms.Button();
+            this.btnAlterarConta = new System.Windows.Forms.Button();
+            this.btnDeletarConta = new System.Windows.Forms.Button();
             this.panelFinanceiro = new System.Windows.Forms.Panel();
             this.btnFinanceiro = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -97,33 +111,36 @@
             this.btnRecursosHumanos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
-            this.panelContedor = new System.Windows.Forms.Panel();
-            this.panel28 = new System.Windows.Forms.Panel();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panelContedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
-            this.panelSubMenuSuprimentos.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.panelSubMenuCRM.SuspendLayout();
+            this.panelCRM.SuspendLayout();
             this.panelSubMenuEstoque.SuspendLayout();
             this.panelEstoque.SuspendLayout();
+            this.panelSubMenuFornecedor.SuspendLayout();
+            this.panelFornecedor.SuspendLayout();
             this.panelSubMenuFinanceiro.SuspendLayout();
             this.panelFinanceiro.SuspendLayout();
             this.panelSubMenuRecursosHumanos.SuspendLayout();
             this.panelRecursosHumanos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
-            this.panel28.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
+            this.panel28.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
             // 
-            this.MenuVertical.AutoScroll = true;
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.MenuVertical.Controls.Add(this.panelSubMenuSuprimentos);
-            this.MenuVertical.Controls.Add(this.panel7);
+            this.MenuVertical.Controls.Add(this.panelSubMenuCRM);
+            this.MenuVertical.Controls.Add(this.panelCRM);
             this.MenuVertical.Controls.Add(this.panelSubMenuEstoque);
             this.MenuVertical.Controls.Add(this.panelEstoque);
+            this.MenuVertical.Controls.Add(this.panelSubMenuFornecedor);
+            this.MenuVertical.Controls.Add(this.panelFornecedor);
             this.MenuVertical.Controls.Add(this.panelSubMenuFinanceiro);
             this.MenuVertical.Controls.Add(this.panelFinanceiro);
             this.MenuVertical.Controls.Add(this.panelSubMenuRecursosHumanos);
@@ -135,30 +152,211 @@
             this.MenuVertical.Size = new System.Drawing.Size(240, 500);
             this.MenuVertical.TabIndex = 14;
             // 
-            // panelSubMenuSuprimentos
+            // panelSubMenuCRM
             // 
-            this.panelSubMenuSuprimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelSubMenuSuprimentos.Controls.Add(this.panel33);
-            this.panelSubMenuSuprimentos.Controls.Add(this.btnDeletarSuprimentos);
-            this.panelSubMenuSuprimentos.Controls.Add(this.panel34);
-            this.panelSubMenuSuprimentos.Controls.Add(this.panel35);
-            this.panelSubMenuSuprimentos.Controls.Add(this.btnConsultarSuprimentos);
-            this.panelSubMenuSuprimentos.Controls.Add(this.btnAlterarSuprimentos);
-            this.panelSubMenuSuprimentos.Controls.Add(this.panel36);
-            this.panelSubMenuSuprimentos.Controls.Add(this.btnCadastrarSuprimentos);
-            this.panelSubMenuSuprimentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuSuprimentos.Location = new System.Drawing.Point(0, 976);
-            this.panelSubMenuSuprimentos.Name = "panelSubMenuSuprimentos";
-            this.panelSubMenuSuprimentos.Size = new System.Drawing.Size(223, 135);
-            this.panelSubMenuSuprimentos.TabIndex = 26;
+            this.panelSubMenuCRM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelSubMenuCRM.Controls.Add(this.panel40);
+            this.panelSubMenuCRM.Controls.Add(this.panel39);
+            this.panelSubMenuCRM.Controls.Add(this.panel38);
+            this.panelSubMenuCRM.Controls.Add(this.panel37);
+            this.panelSubMenuCRM.Controls.Add(this.btnDeletarCliente);
+            this.panelSubMenuCRM.Controls.Add(this.btnAlterarCliente);
+            this.panelSubMenuCRM.Controls.Add(this.btnConsultarCliente);
+            this.panelSubMenuCRM.Controls.Add(this.btnCadastrarCliente);
+            this.panelSubMenuCRM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1171);
+            this.panelSubMenuCRM.Name = "panelSubMenuCRM";
+            this.panelSubMenuCRM.Size = new System.Drawing.Size(240, 132);
+            this.panelSubMenuCRM.TabIndex = 26;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel40.Location = new System.Drawing.Point(22, 4);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(5, 26);
+            this.panel40.TabIndex = 13;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel39.Location = new System.Drawing.Point(22, 36);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(5, 26);
+            this.panel39.TabIndex = 14;
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel38.Location = new System.Drawing.Point(22, 68);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(5, 26);
+            this.panel38.TabIndex = 15;
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel37.Location = new System.Drawing.Point(22, 100);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(5, 26);
+            this.panel37.TabIndex = 16;
+            // 
+            // btnDeletarCliente
+            // 
+            this.btnDeletarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDeletarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletarCliente.FlatAppearance.BorderSize = 0;
+            this.btnDeletarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeletarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnDeletarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnDeletarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletarCliente.Location = new System.Drawing.Point(25, 100);
+            this.btnDeletarCliente.Name = "btnDeletarCliente";
+            this.btnDeletarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnDeletarCliente.TabIndex = 15;
+            this.btnDeletarCliente.Text = "Deletar Cliente";
+            this.btnDeletarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletarCliente.UseVisualStyleBackColor = false;
+            this.btnDeletarCliente.Click += new System.EventHandler(this.btnDeletarCliente_Click);
+            // 
+            // btnAlterarCliente
+            // 
+            this.btnAlterarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAlterarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterarCliente.FlatAppearance.BorderSize = 0;
+            this.btnAlterarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarCliente.Location = new System.Drawing.Point(25, 68);
+            this.btnAlterarCliente.Name = "btnAlterarCliente";
+            this.btnAlterarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarCliente.TabIndex = 14;
+            this.btnAlterarCliente.Text = "Alterar Cliente";
+            this.btnAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarCliente.UseVisualStyleBackColor = false;
+            this.btnAlterarCliente.Click += new System.EventHandler(this.btnAlterarCliente_Click);
+            // 
+            // btnConsultarCliente
+            // 
+            this.btnConsultarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConsultarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarCliente.FlatAppearance.BorderSize = 0;
+            this.btnConsultarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnConsultarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarCliente.Location = new System.Drawing.Point(25, 36);
+            this.btnConsultarCliente.Name = "btnConsultarCliente";
+            this.btnConsultarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarCliente.TabIndex = 13;
+            this.btnConsultarCliente.Text = "Consultar Cliente";
+            this.btnConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarCliente.UseVisualStyleBackColor = false;
+            this.btnConsultarCliente.Click += new System.EventHandler(this.btnConsultarCliente_Click);
+            // 
+            // btnCadastrarCliente
+            // 
+            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCadastrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarCliente.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCadastrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnCadastrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(25, 4);
+            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarCliente.TabIndex = 11;
+            this.btnCadastrarCliente.Text = "Cadastrar Cliente";
+            this.btnCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
+            // 
+            // panelCRM
+            // 
+            this.panelCRM.Controls.Add(this.btnCRM);
+            this.panelCRM.Controls.Add(this.panel19);
+            this.panelCRM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCRM.Location = new System.Drawing.Point(0, 1139);
+            this.panelCRM.Name = "panelCRM";
+            this.panelCRM.Size = new System.Drawing.Size(240, 32);
+            this.panelCRM.TabIndex = 25;
+            // 
+            // btnCRM
+            // 
+            this.btnCRM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCRM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCRM.FlatAppearance.BorderSize = 0;
+            this.btnCRM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCRM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnCRM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCRM.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCRM.ForeColor = System.Drawing.Color.White;
+            this.btnCRM.Image = global::Liriou_s_Burguer.Properties.Resources.Suprimentos;
+            this.btnCRM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCRM.Location = new System.Drawing.Point(4, 2);
+            this.btnCRM.Name = "btnCRM";
+            this.btnCRM.Size = new System.Drawing.Size(229, 28);
+            this.btnCRM.TabIndex = 0;
+            this.btnCRM.Text = "CRM";
+            this.btnCRM.UseVisualStyleBackColor = false;
+            this.btnCRM.Click += new System.EventHandler(this.btnCRM_Click);
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel19.Location = new System.Drawing.Point(0, 3);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(5, 26);
+            this.panel19.TabIndex = 12;
+            // 
+            // panelSubMenuEstoque
+            // 
+            this.panelSubMenuEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelSubMenuEstoque.Controls.Add(this.panel33);
+            this.panelSubMenuEstoque.Controls.Add(this.btnDeletarSuprimentos);
+            this.panelSubMenuEstoque.Controls.Add(this.panel34);
+            this.panelSubMenuEstoque.Controls.Add(this.panel35);
+            this.panelSubMenuEstoque.Controls.Add(this.btnConsultarSuprimentos);
+            this.panelSubMenuEstoque.Controls.Add(this.btnAlterarSuprimentos);
+            this.panelSubMenuEstoque.Controls.Add(this.panel36);
+            this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarSuprimentos);
+            this.panelSubMenuEstoque.Controls.Add(this.panel20);
+            this.panelSubMenuEstoque.Controls.Add(this.btnDeletarEstoque);
+            this.panelSubMenuEstoque.Controls.Add(this.panel21);
+            this.panelSubMenuEstoque.Controls.Add(this.btnAlterarEstoque);
+            this.panelSubMenuEstoque.Controls.Add(this.panel23);
+            this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarEstoque);
+            this.panelSubMenuEstoque.Controls.Add(this.panel24);
+            this.panelSubMenuEstoque.Controls.Add(this.btnDeletarProdutos);
+            this.panelSubMenuEstoque.Controls.Add(this.panel25);
+            this.panelSubMenuEstoque.Controls.Add(this.panel26);
+            this.panelSubMenuEstoque.Controls.Add(this.btnConsultarProdutos);
+            this.panelSubMenuEstoque.Controls.Add(this.btnAlterarProdutos);
+            this.panelSubMenuEstoque.Controls.Add(this.panel27);
+            this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarProdutos);
+            this.panelSubMenuEstoque.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 782);
+            this.panelSubMenuEstoque.Name = "panelSubMenuEstoque";
+            this.panelSubMenuEstoque.Size = new System.Drawing.Size(240, 357);
+            this.panelSubMenuEstoque.TabIndex = 24;
             // 
             // panel33
             // 
             this.panel33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel33.Location = new System.Drawing.Point(22, 102);
+            this.panel33.Location = new System.Drawing.Point(22, 230);
             this.panel33.Name = "panel33";
             this.panel33.Size = new System.Drawing.Size(5, 26);
-            this.panel33.TabIndex = 16;
+            this.panel33.TabIndex = 32;
             // 
             // btnDeletarSuprimentos
             // 
@@ -171,10 +369,10 @@
             this.btnDeletarSuprimentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarSuprimentos.ForeColor = System.Drawing.Color.White;
             this.btnDeletarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarSuprimentos.Location = new System.Drawing.Point(25, 102);
+            this.btnDeletarSuprimentos.Location = new System.Drawing.Point(25, 230);
             this.btnDeletarSuprimentos.Name = "btnDeletarSuprimentos";
             this.btnDeletarSuprimentos.Size = new System.Drawing.Size(208, 26);
-            this.btnDeletarSuprimentos.TabIndex = 15;
+            this.btnDeletarSuprimentos.TabIndex = 30;
             this.btnDeletarSuprimentos.Text = "Deletar Suprimentos";
             this.btnDeletarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarSuprimentos.UseVisualStyleBackColor = false;
@@ -183,18 +381,18 @@
             // panel34
             // 
             this.panel34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel34.Location = new System.Drawing.Point(22, 70);
+            this.panel34.Location = new System.Drawing.Point(22, 198);
             this.panel34.Name = "panel34";
             this.panel34.Size = new System.Drawing.Size(5, 26);
-            this.panel34.TabIndex = 15;
+            this.panel34.TabIndex = 31;
             // 
             // panel35
             // 
             this.panel35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel35.Location = new System.Drawing.Point(22, 38);
+            this.panel35.Location = new System.Drawing.Point(22, 166);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(5, 26);
-            this.panel35.TabIndex = 14;
+            this.panel35.TabIndex = 28;
             // 
             // btnConsultarSuprimentos
             // 
@@ -207,10 +405,10 @@
             this.btnConsultarSuprimentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarSuprimentos.ForeColor = System.Drawing.Color.White;
             this.btnConsultarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarSuprimentos.Location = new System.Drawing.Point(25, 38);
+            this.btnConsultarSuprimentos.Location = new System.Drawing.Point(25, 166);
             this.btnConsultarSuprimentos.Name = "btnConsultarSuprimentos";
             this.btnConsultarSuprimentos.Size = new System.Drawing.Size(208, 26);
-            this.btnConsultarSuprimentos.TabIndex = 13;
+            this.btnConsultarSuprimentos.TabIndex = 26;
             this.btnConsultarSuprimentos.Text = "Consultar Suprimentos";
             this.btnConsultarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarSuprimentos.UseVisualStyleBackColor = false;
@@ -227,10 +425,10 @@
             this.btnAlterarSuprimentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarSuprimentos.ForeColor = System.Drawing.Color.White;
             this.btnAlterarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarSuprimentos.Location = new System.Drawing.Point(25, 70);
+            this.btnAlterarSuprimentos.Location = new System.Drawing.Point(25, 198);
             this.btnAlterarSuprimentos.Name = "btnAlterarSuprimentos";
             this.btnAlterarSuprimentos.Size = new System.Drawing.Size(208, 26);
-            this.btnAlterarSuprimentos.TabIndex = 14;
+            this.btnAlterarSuprimentos.TabIndex = 29;
             this.btnAlterarSuprimentos.Text = "Alterar Suprimentos";
             this.btnAlterarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarSuprimentos.UseVisualStyleBackColor = false;
@@ -239,10 +437,10 @@
             // panel36
             // 
             this.panel36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel36.Location = new System.Drawing.Point(22, 6);
+            this.panel36.Location = new System.Drawing.Point(22, 134);
             this.panel36.Name = "panel36";
             this.panel36.Size = new System.Drawing.Size(5, 26);
-            this.panel36.TabIndex = 13;
+            this.panel36.TabIndex = 27;
             // 
             // btnCadastrarSuprimentos
             // 
@@ -255,80 +453,19 @@
             this.btnCadastrarSuprimentos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarSuprimentos.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarSuprimentos.Location = new System.Drawing.Point(25, 6);
+            this.btnCadastrarSuprimentos.Location = new System.Drawing.Point(25, 134);
             this.btnCadastrarSuprimentos.Name = "btnCadastrarSuprimentos";
             this.btnCadastrarSuprimentos.Size = new System.Drawing.Size(208, 26);
-            this.btnCadastrarSuprimentos.TabIndex = 11;
+            this.btnCadastrarSuprimentos.TabIndex = 25;
             this.btnCadastrarSuprimentos.Text = "Cadastrar Suprimentos";
             this.btnCadastrarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarSuprimentos.UseVisualStyleBackColor = false;
             this.btnCadastrarSuprimentos.Click += new System.EventHandler(this.btnCadastrarSuprimentos_Click);
             // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.btnSuprimentos);
-            this.panel7.Controls.Add(this.panel19);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 944);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(223, 32);
-            this.panel7.TabIndex = 25;
-            // 
-            // btnSuprimentos
-            // 
-            this.btnSuprimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnSuprimentos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSuprimentos.FlatAppearance.BorderSize = 0;
-            this.btnSuprimentos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSuprimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnSuprimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSuprimentos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuprimentos.ForeColor = System.Drawing.Color.White;
-            this.btnSuprimentos.Image = global::Liriou_s_Burguer.Properties.Resources.Suprimentos;
-            this.btnSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSuprimentos.Location = new System.Drawing.Point(4, 2);
-            this.btnSuprimentos.Name = "btnSuprimentos";
-            this.btnSuprimentos.Size = new System.Drawing.Size(229, 28);
-            this.btnSuprimentos.TabIndex = 0;
-            this.btnSuprimentos.Text = "Suprimentos";
-            this.btnSuprimentos.UseVisualStyleBackColor = false;
-            this.btnSuprimentos.Click += new System.EventHandler(this.btnSuprimentos_Click);
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel19.Location = new System.Drawing.Point(0, 3);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(5, 26);
-            this.panel19.TabIndex = 12;
-            // 
-            // panelSubMenuEstoque
-            // 
-            this.panelSubMenuEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelSubMenuEstoque.Controls.Add(this.panel20);
-            this.panelSubMenuEstoque.Controls.Add(this.btnDeletarEstoque);
-            this.panelSubMenuEstoque.Controls.Add(this.panel21);
-            this.panelSubMenuEstoque.Controls.Add(this.btnAlterarEstoque);
-            this.panelSubMenuEstoque.Controls.Add(this.panel23);
-            this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarEstoque);
-            this.panelSubMenuEstoque.Controls.Add(this.panel24);
-            this.panelSubMenuEstoque.Controls.Add(this.btnDeletarProdutos);
-            this.panelSubMenuEstoque.Controls.Add(this.panel25);
-            this.panelSubMenuEstoque.Controls.Add(this.panel26);
-            this.panelSubMenuEstoque.Controls.Add(this.btnConsultarProdutos);
-            this.panelSubMenuEstoque.Controls.Add(this.btnAlterarProdutos);
-            this.panelSubMenuEstoque.Controls.Add(this.panel27);
-            this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarProdutos);
-            this.panelSubMenuEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 714);
-            this.panelSubMenuEstoque.Name = "panelSubMenuEstoque";
-            this.panelSubMenuEstoque.Size = new System.Drawing.Size(223, 230);
-            this.panelSubMenuEstoque.TabIndex = 24;
-            // 
             // panel20
             // 
             this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel20.Location = new System.Drawing.Point(22, 198);
+            this.panel20.Location = new System.Drawing.Point(22, 326);
             this.panel20.Name = "panel20";
             this.panel20.Size = new System.Drawing.Size(5, 26);
             this.panel20.TabIndex = 24;
@@ -344,7 +481,7 @@
             this.btnDeletarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarEstoque.ForeColor = System.Drawing.Color.White;
             this.btnDeletarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarEstoque.Location = new System.Drawing.Point(25, 198);
+            this.btnDeletarEstoque.Location = new System.Drawing.Point(25, 326);
             this.btnDeletarEstoque.Name = "btnDeletarEstoque";
             this.btnDeletarEstoque.Size = new System.Drawing.Size(208, 26);
             this.btnDeletarEstoque.TabIndex = 22;
@@ -356,7 +493,7 @@
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel21.Location = new System.Drawing.Point(22, 166);
+            this.panel21.Location = new System.Drawing.Point(22, 294);
             this.panel21.Name = "panel21";
             this.panel21.Size = new System.Drawing.Size(5, 26);
             this.panel21.TabIndex = 23;
@@ -372,7 +509,7 @@
             this.btnAlterarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarEstoque.ForeColor = System.Drawing.Color.White;
             this.btnAlterarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarEstoque.Location = new System.Drawing.Point(25, 166);
+            this.btnAlterarEstoque.Location = new System.Drawing.Point(25, 294);
             this.btnAlterarEstoque.Name = "btnAlterarEstoque";
             this.btnAlterarEstoque.Size = new System.Drawing.Size(208, 26);
             this.btnAlterarEstoque.TabIndex = 21;
@@ -384,7 +521,7 @@
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel23.Location = new System.Drawing.Point(22, 134);
+            this.panel23.Location = new System.Drawing.Point(22, 262);
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(5, 26);
             this.panel23.TabIndex = 19;
@@ -400,7 +537,7 @@
             this.btnCadastrarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarEstoque.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarEstoque.Location = new System.Drawing.Point(25, 134);
+            this.btnCadastrarEstoque.Location = new System.Drawing.Point(25, 262);
             this.btnCadastrarEstoque.Name = "btnCadastrarEstoque";
             this.btnCadastrarEstoque.Size = new System.Drawing.Size(208, 26);
             this.btnCadastrarEstoque.TabIndex = 17;
@@ -526,9 +663,9 @@
             this.panelEstoque.Controls.Add(this.btnEstoque);
             this.panelEstoque.Controls.Add(this.panel18);
             this.panelEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEstoque.Location = new System.Drawing.Point(0, 682);
+            this.panelEstoque.Location = new System.Drawing.Point(0, 750);
             this.panelEstoque.Name = "panelEstoque";
-            this.panelEstoque.Size = new System.Drawing.Size(223, 32);
+            this.panelEstoque.Size = new System.Drawing.Size(240, 32);
             this.panelEstoque.TabIndex = 23;
             // 
             // btnEstoque
@@ -559,38 +696,30 @@
             this.panel18.Size = new System.Drawing.Size(5, 26);
             this.panel18.TabIndex = 12;
             // 
-            // panelSubMenuFinanceiro
+            // panelSubMenuFornecedor
             // 
-            this.panelSubMenuFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel9);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnDeletarFornecedor);
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel10);
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel16);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnConsultarFornecedor);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnAlterarFornecedor);
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel17);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnCadastrarFornecedor);
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel11);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnDeletarCliente);
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel12);
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel13);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnConsultarCliente);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnAlterarCliente);
-            this.panelSubMenuFinanceiro.Controls.Add(this.panel15);
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnCadastrarCliente);
-            this.panelSubMenuFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuFinanceiro.Location = new System.Drawing.Point(0, 421);
-            this.panelSubMenuFinanceiro.Name = "panelSubMenuFinanceiro";
-            this.panelSubMenuFinanceiro.Size = new System.Drawing.Size(223, 261);
-            this.panelSubMenuFinanceiro.TabIndex = 22;
+            this.panelSubMenuFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelSubMenuFornecedor.Controls.Add(this.panel41);
+            this.panelSubMenuFornecedor.Controls.Add(this.btnDeletarFornecedor);
+            this.panelSubMenuFornecedor.Controls.Add(this.panel42);
+            this.panelSubMenuFornecedor.Controls.Add(this.panel43);
+            this.panelSubMenuFornecedor.Controls.Add(this.btnConsultarFornecedor);
+            this.panelSubMenuFornecedor.Controls.Add(this.btnAlterarFornecedor);
+            this.panelSubMenuFornecedor.Controls.Add(this.panel44);
+            this.panelSubMenuFornecedor.Controls.Add(this.btnCadastrarFornecedor);
+            this.panelSubMenuFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuFornecedor.Location = new System.Drawing.Point(0, 616);
+            this.panelSubMenuFornecedor.Name = "panelSubMenuFornecedor";
+            this.panelSubMenuFornecedor.Size = new System.Drawing.Size(240, 134);
+            this.panelSubMenuFornecedor.TabIndex = 28;
             // 
-            // panel9
+            // panel41
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel9.Location = new System.Drawing.Point(22, 230);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(5, 26);
-            this.panel9.TabIndex = 24;
+            this.panel41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel41.Location = new System.Drawing.Point(22, 102);
+            this.panel41.Name = "panel41";
+            this.panel41.Size = new System.Drawing.Size(5, 26);
+            this.panel41.TabIndex = 24;
             // 
             // btnDeletarFornecedor
             // 
@@ -603,7 +732,7 @@
             this.btnDeletarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletarFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnDeletarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarFornecedor.Location = new System.Drawing.Point(25, 230);
+            this.btnDeletarFornecedor.Location = new System.Drawing.Point(25, 102);
             this.btnDeletarFornecedor.Name = "btnDeletarFornecedor";
             this.btnDeletarFornecedor.Size = new System.Drawing.Size(208, 26);
             this.btnDeletarFornecedor.TabIndex = 22;
@@ -612,21 +741,21 @@
             this.btnDeletarFornecedor.UseVisualStyleBackColor = false;
             this.btnDeletarFornecedor.Click += new System.EventHandler(this.btnDeletarFornecedor_Click);
             // 
-            // panel10
+            // panel42
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel10.Location = new System.Drawing.Point(22, 198);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(5, 26);
-            this.panel10.TabIndex = 23;
+            this.panel42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel42.Location = new System.Drawing.Point(22, 70);
+            this.panel42.Name = "panel42";
+            this.panel42.Size = new System.Drawing.Size(5, 26);
+            this.panel42.TabIndex = 23;
             // 
-            // panel16
+            // panel43
             // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel16.Location = new System.Drawing.Point(22, 166);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(5, 26);
-            this.panel16.TabIndex = 20;
+            this.panel43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel43.Location = new System.Drawing.Point(22, 38);
+            this.panel43.Name = "panel43";
+            this.panel43.Size = new System.Drawing.Size(5, 26);
+            this.panel43.TabIndex = 20;
             // 
             // btnConsultarFornecedor
             // 
@@ -639,7 +768,7 @@
             this.btnConsultarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnConsultarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarFornecedor.Location = new System.Drawing.Point(25, 166);
+            this.btnConsultarFornecedor.Location = new System.Drawing.Point(25, 38);
             this.btnConsultarFornecedor.Name = "btnConsultarFornecedor";
             this.btnConsultarFornecedor.Size = new System.Drawing.Size(208, 26);
             this.btnConsultarFornecedor.TabIndex = 18;
@@ -659,7 +788,7 @@
             this.btnAlterarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterarFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnAlterarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarFornecedor.Location = new System.Drawing.Point(25, 198);
+            this.btnAlterarFornecedor.Location = new System.Drawing.Point(25, 70);
             this.btnAlterarFornecedor.Name = "btnAlterarFornecedor";
             this.btnAlterarFornecedor.Size = new System.Drawing.Size(208, 26);
             this.btnAlterarFornecedor.TabIndex = 21;
@@ -668,13 +797,13 @@
             this.btnAlterarFornecedor.UseVisualStyleBackColor = false;
             this.btnAlterarFornecedor.Click += new System.EventHandler(this.btnAlterarFornecedor_Click);
             // 
-            // panel17
+            // panel44
             // 
-            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel17.Location = new System.Drawing.Point(22, 134);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(5, 26);
-            this.panel17.TabIndex = 19;
+            this.panel44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel44.Location = new System.Drawing.Point(22, 6);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(5, 26);
+            this.panel44.TabIndex = 19;
             // 
             // btnCadastrarFornecedor
             // 
@@ -687,7 +816,7 @@
             this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnCadastrarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarFornecedor.Location = new System.Drawing.Point(25, 134);
+            this.btnCadastrarFornecedor.Location = new System.Drawing.Point(25, 6);
             this.btnCadastrarFornecedor.Name = "btnCadastrarFornecedor";
             this.btnCadastrarFornecedor.Size = new System.Drawing.Size(208, 26);
             this.btnCadastrarFornecedor.TabIndex = 17;
@@ -696,38 +825,111 @@
             this.btnCadastrarFornecedor.UseVisualStyleBackColor = false;
             this.btnCadastrarFornecedor.Click += new System.EventHandler(this.btnCadastrarFornecedor_Click);
             // 
+            // panelFornecedor
+            // 
+            this.panelFornecedor.Controls.Add(this.btnFornecedor);
+            this.panelFornecedor.Controls.Add(this.panel10);
+            this.panelFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelFornecedor.Location = new System.Drawing.Point(0, 584);
+            this.panelFornecedor.Name = "panelFornecedor";
+            this.panelFornecedor.Size = new System.Drawing.Size(240, 32);
+            this.panelFornecedor.TabIndex = 27;
+            // 
+            // btnFornecedor
+            // 
+            this.btnFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnFornecedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFornecedor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFornecedor.ForeColor = System.Drawing.Color.White;
+            this.btnFornecedor.Image = global::Liriou_s_Burguer.Properties.Resources.Estoque;
+            this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFornecedor.Location = new System.Drawing.Point(4, 2);
+            this.btnFornecedor.Name = "btnFornecedor";
+            this.btnFornecedor.Size = new System.Drawing.Size(229, 28);
+            this.btnFornecedor.TabIndex = 0;
+            this.btnFornecedor.Text = "Fornecedor";
+            this.btnFornecedor.UseVisualStyleBackColor = false;
+            this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel10.Location = new System.Drawing.Point(0, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(5, 26);
+            this.panel10.TabIndex = 12;
+            // 
+            // panelSubMenuFinanceiro
+            // 
+            this.panelSubMenuFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelSubMenuFinanceiro.Controls.Add(this.btnConsultarConta);
+            this.panelSubMenuFinanceiro.Controls.Add(this.panel16);
+            this.panelSubMenuFinanceiro.Controls.Add(this.panel17);
+            this.panelSubMenuFinanceiro.Controls.Add(this.panel11);
+            this.panelSubMenuFinanceiro.Controls.Add(this.panel12);
+            this.panelSubMenuFinanceiro.Controls.Add(this.panel13);
+            this.panelSubMenuFinanceiro.Controls.Add(this.btnCadastrarConta);
+            this.panelSubMenuFinanceiro.Controls.Add(this.btnFluxoDeCaixa);
+            this.panelSubMenuFinanceiro.Controls.Add(this.btnAlterarConta);
+            this.panelSubMenuFinanceiro.Controls.Add(this.btnDeletarConta);
+            this.panelSubMenuFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuFinanceiro.Location = new System.Drawing.Point(0, 421);
+            this.panelSubMenuFinanceiro.Name = "panelSubMenuFinanceiro";
+            this.panelSubMenuFinanceiro.Size = new System.Drawing.Size(240, 163);
+            this.panelSubMenuFinanceiro.TabIndex = 22;
+            // 
+            // btnConsultarConta
+            // 
+            this.btnConsultarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConsultarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarConta.FlatAppearance.BorderSize = 0;
+            this.btnConsultarConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnConsultarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarConta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarConta.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarConta.Location = new System.Drawing.Point(25, 68);
+            this.btnConsultarConta.Name = "btnConsultarConta";
+            this.btnConsultarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarConta.TabIndex = 28;
+            this.btnConsultarConta.Text = "Consultar Conta";
+            this.btnConsultarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarConta.UseVisualStyleBackColor = false;
+            this.btnConsultarConta.Click += new System.EventHandler(this.btnConsultarConta_Click);
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel16.Location = new System.Drawing.Point(22, 134);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(5, 26);
+            this.panel16.TabIndex = 20;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel17.Location = new System.Drawing.Point(22, 100);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(5, 26);
+            this.panel17.TabIndex = 19;
+            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel11.Location = new System.Drawing.Point(22, 102);
+            this.panel11.Location = new System.Drawing.Point(22, 68);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(5, 26);
             this.panel11.TabIndex = 16;
             // 
-            // btnDeletarCliente
-            // 
-            this.btnDeletarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDeletarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletarCliente.FlatAppearance.BorderSize = 0;
-            this.btnDeletarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDeletarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnDeletarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnDeletarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarCliente.Location = new System.Drawing.Point(25, 102);
-            this.btnDeletarCliente.Name = "btnDeletarCliente";
-            this.btnDeletarCliente.Size = new System.Drawing.Size(208, 26);
-            this.btnDeletarCliente.TabIndex = 15;
-            this.btnDeletarCliente.Text = "Deletar Cliente";
-            this.btnDeletarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarCliente.UseVisualStyleBackColor = false;
-            this.btnDeletarCliente.Click += new System.EventHandler(this.btnDeletarCliente_Click);
-            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel12.Location = new System.Drawing.Point(22, 70);
+            this.panel12.Location = new System.Drawing.Point(22, 36);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(5, 26);
             this.panel12.TabIndex = 15;
@@ -735,78 +937,90 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel13.Location = new System.Drawing.Point(22, 38);
+            this.panel13.Location = new System.Drawing.Point(22, 4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(5, 26);
             this.panel13.TabIndex = 14;
             // 
-            // btnConsultarCliente
+            // btnCadastrarConta
             // 
-            this.btnConsultarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarCliente.FlatAppearance.BorderSize = 0;
-            this.btnConsultarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnConsultarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnConsultarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarCliente.Location = new System.Drawing.Point(25, 38);
-            this.btnConsultarCliente.Name = "btnConsultarCliente";
-            this.btnConsultarCliente.Size = new System.Drawing.Size(208, 26);
-            this.btnConsultarCliente.TabIndex = 13;
-            this.btnConsultarCliente.Text = "Consultar Cliente";
-            this.btnConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarCliente.UseVisualStyleBackColor = false;
-            this.btnConsultarCliente.Click += new System.EventHandler(this.btnConsultarCliente_Click);
+            this.btnCadastrarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCadastrarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarConta.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCadastrarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnCadastrarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarConta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarConta.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarConta.Location = new System.Drawing.Point(22, 36);
+            this.btnCadastrarConta.Name = "btnCadastrarConta";
+            this.btnCadastrarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarConta.TabIndex = 26;
+            this.btnCadastrarConta.Text = "Cadastrar Conta";
+            this.btnCadastrarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarConta.UseVisualStyleBackColor = false;
+            this.btnCadastrarConta.Click += new System.EventHandler(this.btnCadastrarConta_Click);
             // 
-            // btnAlterarCliente
+            // btnFluxoDeCaixa
             // 
-            this.btnAlterarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnAlterarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarCliente.FlatAppearance.BorderSize = 0;
-            this.btnAlterarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAlterarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarCliente.Location = new System.Drawing.Point(25, 70);
-            this.btnAlterarCliente.Name = "btnAlterarCliente";
-            this.btnAlterarCliente.Size = new System.Drawing.Size(208, 26);
-            this.btnAlterarCliente.TabIndex = 14;
-            this.btnAlterarCliente.Text = "Alterar Cliente";
-            this.btnAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarCliente.UseVisualStyleBackColor = false;
-            this.btnAlterarCliente.Click += new System.EventHandler(this.btnAlterarCliente_Click);
+            this.btnFluxoDeCaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnFluxoDeCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFluxoDeCaixa.FlatAppearance.BorderSize = 0;
+            this.btnFluxoDeCaixa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnFluxoDeCaixa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnFluxoDeCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFluxoDeCaixa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFluxoDeCaixa.ForeColor = System.Drawing.Color.White;
+            this.btnFluxoDeCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFluxoDeCaixa.Location = new System.Drawing.Point(25, 4);
+            this.btnFluxoDeCaixa.Name = "btnFluxoDeCaixa";
+            this.btnFluxoDeCaixa.Size = new System.Drawing.Size(208, 26);
+            this.btnFluxoDeCaixa.TabIndex = 25;
+            this.btnFluxoDeCaixa.Text = "Fluxo de Caixa";
+            this.btnFluxoDeCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFluxoDeCaixa.UseVisualStyleBackColor = false;
+            this.btnFluxoDeCaixa.Click += new System.EventHandler(this.btnFluxoDeCaixa_Click);
             // 
-            // panel15
+            // btnAlterarConta
             // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel15.Location = new System.Drawing.Point(22, 6);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(5, 26);
-            this.panel15.TabIndex = 13;
+            this.btnAlterarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAlterarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterarConta.FlatAppearance.BorderSize = 0;
+            this.btnAlterarConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnAlterarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarConta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarConta.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarConta.Location = new System.Drawing.Point(25, 100);
+            this.btnAlterarConta.Name = "btnAlterarConta";
+            this.btnAlterarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarConta.TabIndex = 27;
+            this.btnAlterarConta.Text = "Alterar Conta";
+            this.btnAlterarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarConta.UseVisualStyleBackColor = false;
+            this.btnAlterarConta.Click += new System.EventHandler(this.btnAlterarConta_Click);
             // 
-            // btnCadastrarCliente
+            // btnDeletarConta
             // 
-            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCadastrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarCliente.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnCadastrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(25, 6);
-            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(208, 26);
-            this.btnCadastrarCliente.TabIndex = 11;
-            this.btnCadastrarCliente.Text = "Cadastrar Cliente";
-            this.btnCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
-            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
+            this.btnDeletarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDeletarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletarConta.FlatAppearance.BorderSize = 0;
+            this.btnDeletarConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeletarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnDeletarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletarConta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletarConta.ForeColor = System.Drawing.Color.White;
+            this.btnDeletarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletarConta.Location = new System.Drawing.Point(25, 134);
+            this.btnDeletarConta.Name = "btnDeletarConta";
+            this.btnDeletarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnDeletarConta.TabIndex = 29;
+            this.btnDeletarConta.Text = "Deletar Conta";
+            this.btnDeletarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletarConta.UseVisualStyleBackColor = false;
+            this.btnDeletarConta.Click += new System.EventHandler(this.btnDeletarConta_Click);
             // 
             // panelFinanceiro
             // 
@@ -815,7 +1029,7 @@
             this.panelFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelFinanceiro.Location = new System.Drawing.Point(0, 389);
             this.panelFinanceiro.Name = "panelFinanceiro";
-            this.panelFinanceiro.Size = new System.Drawing.Size(223, 32);
+            this.panelFinanceiro.Size = new System.Drawing.Size(240, 32);
             this.panelFinanceiro.TabIndex = 21;
             // 
             // btnFinanceiro
@@ -864,7 +1078,7 @@
             this.panelSubMenuRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 192);
             this.panelSubMenuRecursosHumanos.Name = "panelSubMenuRecursosHumanos";
-            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(223, 197);
+            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(240, 197);
             this.panelSubMenuRecursosHumanos.TabIndex = 20;
             // 
             // panel14
@@ -1042,7 +1256,7 @@
             this.panelRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRecursosHumanos.Location = new System.Drawing.Point(0, 160);
             this.panelRecursosHumanos.Name = "panelRecursosHumanos";
-            this.panelRecursosHumanos.Size = new System.Drawing.Size(223, 32);
+            this.panelRecursosHumanos.Size = new System.Drawing.Size(240, 32);
             this.panelRecursosHumanos.TabIndex = 19;
             // 
             // btnRecursosHumanos
@@ -1080,30 +1294,11 @@
             this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
             this.imgLogotipo.Location = new System.Drawing.Point(0, 0);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(223, 160);
+            this.imgLogotipo.Size = new System.Drawing.Size(240, 160);
             this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;
-            // 
-            // panelContedor
-            // 
-            this.panelContedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
-            this.panelContedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContedor.Location = new System.Drawing.Point(240, 41);
-            this.panelContedor.Name = "panelContedor";
-            this.panelContedor.Size = new System.Drawing.Size(710, 459);
-            this.panelContedor.TabIndex = 15;
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel28.Controls.Add(this.imgMinimizar);
-            this.panel28.Controls.Add(this.imgFechar);
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel28.Location = new System.Drawing.Point(240, 0);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(710, 41);
-            this.panel28.TabIndex = 16;
+            this.imgLogotipo.Click += new System.EventHandler(this.imgLogotipo_Click);
             // 
             // imgMinimizar
             // 
@@ -1137,7 +1332,28 @@
             this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
             this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
-            // frmLiriousBurguer
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panel28.Controls.Add(this.imgMinimizar);
+            this.panel28.Controls.Add(this.imgFechar);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel28.Location = new System.Drawing.Point(240, 0);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(710, 41);
+            this.panel28.TabIndex = 16;
+            // 
+            // panelContedor
+            // 
+            this.panelContedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panelContedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelContedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContedor.Location = new System.Drawing.Point(240, 41);
+            this.panelContedor.Name = "panelContedor";
+            this.panelContedor.Size = new System.Drawing.Size(710, 459);
+            this.panelContedor.TabIndex = 15;
+            // 
+            // frmManagerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1149,22 +1365,24 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(950, 500);
-            this.Name = "frmLiriousBurguer";
+            this.Name = "frmManagerMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liriou`s Burguer";
             this.MenuVertical.ResumeLayout(false);
-            this.panelSubMenuSuprimentos.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
+            this.panelSubMenuCRM.ResumeLayout(false);
+            this.panelCRM.ResumeLayout(false);
             this.panelSubMenuEstoque.ResumeLayout(false);
             this.panelEstoque.ResumeLayout(false);
+            this.panelSubMenuFornecedor.ResumeLayout(false);
+            this.panelFornecedor.ResumeLayout(false);
             this.panelSubMenuFinanceiro.ResumeLayout(false);
             this.panelFinanceiro.ResumeLayout(false);
             this.panelSubMenuRecursosHumanos.ResumeLayout(false);
             this.panelRecursosHumanos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
-            this.panel28.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
+            this.panel28.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1185,27 +1403,15 @@
         private System.Windows.Forms.Button btnFolhaDePagamento;
         private System.Windows.Forms.Button btnCadastrarFuncionário;
         private System.Windows.Forms.PictureBox imgLogotipo;
-        private System.Windows.Forms.Panel panelContedor;
         private System.Windows.Forms.Panel panelRecursosHumanos;
         private System.Windows.Forms.Button btnRecursosHumanos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelSubMenuFinanceiro;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Button btnDeletarFornecedor;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Button btnConsultarFornecedor;
-        private System.Windows.Forms.Button btnAlterarFornecedor;
         private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Button btnCadastrarFornecedor;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Button btnDeletarCliente;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Button btnConsultarCliente;
-        private System.Windows.Forms.Button btnAlterarCliente;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button btnCadastrarCliente;
         private System.Windows.Forms.Panel panelFinanceiro;
         private System.Windows.Forms.Button btnFinanceiro;
         private System.Windows.Forms.Panel panel8;
@@ -1227,7 +1433,37 @@
         private System.Windows.Forms.Panel panelEstoque;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Panel panelSubMenuSuprimentos;
+        private System.Windows.Forms.Panel panelSubMenuCRM;
+        private System.Windows.Forms.Panel panelCRM;
+        private System.Windows.Forms.Button btnCRM;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.PictureBox imgMinimizar;
+        private System.Windows.Forms.PictureBox imgFechar;
+        private System.Windows.Forms.Button btnDeletarConta;
+        private System.Windows.Forms.Button btnConsultarConta;
+        private System.Windows.Forms.Button btnCadastrarConta;
+        private System.Windows.Forms.Button btnFluxoDeCaixa;
+        private System.Windows.Forms.Button btnAlterarConta;
+        private System.Windows.Forms.Panel panel37;
+        private System.Windows.Forms.Button btnDeletarCliente;
+        private System.Windows.Forms.Panel panel38;
+        private System.Windows.Forms.Panel panel39;
+        private System.Windows.Forms.Button btnConsultarCliente;
+        private System.Windows.Forms.Button btnAlterarCliente;
+        private System.Windows.Forms.Panel panel40;
+        private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Panel panelSubMenuFornecedor;
+        private System.Windows.Forms.Panel panel41;
+        private System.Windows.Forms.Button btnDeletarFornecedor;
+        private System.Windows.Forms.Panel panel42;
+        private System.Windows.Forms.Panel panel43;
+        private System.Windows.Forms.Button btnConsultarFornecedor;
+        private System.Windows.Forms.Button btnAlterarFornecedor;
+        private System.Windows.Forms.Panel panel44;
+        private System.Windows.Forms.Button btnCadastrarFornecedor;
+        private System.Windows.Forms.Panel panelFornecedor;
+        private System.Windows.Forms.Button btnFornecedor;
+        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel33;
         private System.Windows.Forms.Button btnDeletarSuprimentos;
         private System.Windows.Forms.Panel panel34;
@@ -1236,11 +1472,7 @@
         private System.Windows.Forms.Button btnAlterarSuprimentos;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Button btnCadastrarSuprimentos;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btnSuprimentos;
-        private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.PictureBox imgFechar;
+        private System.Windows.Forms.Panel panelContedor;
     }
 }

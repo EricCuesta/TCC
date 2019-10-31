@@ -1,6 +1,6 @@
 ﻿namespace Liriou_s_Burguer.Screens.Manager.Stock
 {
-    partial class frmRegisterStock
+    partial class frmConsultStock
     {
         /// <summary>
         /// Required designer variable.
@@ -29,29 +29,22 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
-            this.nudQtdMáximo = new System.Windows.Forms.NumericUpDown();
-            this.lblQtdMáximo = new System.Windows.Forms.Label();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
-            this.txtLocal = new System.Windows.Forms.TextBox();
-            this.lblLocal = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblCadastrarEstoque = new System.Windows.Forms.Label();
+            this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQtdMáximo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,44 +55,16 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.panel.Controls.Add(this.dgvConsultarEstoque);
-            this.panel.Controls.Add(this.nudQtdMáximo);
-            this.panel.Controls.Add(this.lblQtdMáximo);
+            this.panel.Controls.Add(this.dataGridView11);
             this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.lblTipo);
-            this.panel.Controls.Add(this.txtLocal);
-            this.panel.Controls.Add(this.lblLocal);
-            this.panel.Controls.Add(this.btnCadastrar);
-            this.panel.Controls.Add(this.dataGridView5);
-            this.panel.Controls.Add(this.dataGridView3);
+            this.panel.Controls.Add(this.btnConsultar);
             this.panel.Controls.Add(this.dataGridView6);
             this.panel.Controls.Add(this.dataGridView1);
             this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
-            this.panel.TabIndex = 566;
-            // 
-            // nudQtdMáximo
-            // 
-            this.nudQtdMáximo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudQtdMáximo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.nudQtdMáximo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudQtdMáximo.Location = new System.Drawing.Point(520, 40);
-            this.nudQtdMáximo.Name = "nudQtdMáximo";
-            this.nudQtdMáximo.ReadOnly = true;
-            this.nudQtdMáximo.Size = new System.Drawing.Size(187, 20);
-            this.nudQtdMáximo.TabIndex = 654;
-            // 
-            // lblQtdMáximo
-            // 
-            this.lblQtdMáximo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblQtdMáximo.AutoSize = true;
-            this.lblQtdMáximo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQtdMáximo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblQtdMáximo.Location = new System.Drawing.Point(362, 40);
-            this.lblQtdMáximo.Name = "lblQtdMáximo";
-            this.lblQtdMáximo.Size = new System.Drawing.Size(152, 19);
-            this.lblQtdMáximo.TabIndex = 651;
-            this.lblQtdMáximo.Text = "Quantidade Máxima:\r\n";
+            this.panel.TabIndex = 568;
             // 
             // cboTipo
             // 
@@ -112,7 +77,7 @@
             this.cboTipo.Items.AddRange(new object[] {
             "Suprimento",
             "Produto"});
-            this.cboTipo.Location = new System.Drawing.Point(53, 38);
+            this.cboTipo.Location = new System.Drawing.Point(52, 7);
             this.cboTipo.MaxLength = 32;
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(295, 23);
@@ -124,84 +89,26 @@
             this.lblTipo.AutoSize = true;
             this.lblTipo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTipo.Location = new System.Drawing.Point(4, 39);
+            this.lblTipo.Location = new System.Drawing.Point(3, 8);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(43, 19);
             this.lblTipo.TabIndex = 649;
             this.lblTipo.Text = "Tipo:";
             // 
-            // txtLocal
+            // btnConsultar
             // 
-            this.txtLocal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLocal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtLocal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtLocal.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocal.Location = new System.Drawing.Point(58, 6);
-            this.txtLocal.MaxLength = 32;
-            this.txtLocal.Name = "txtLocal";
-            this.txtLocal.Size = new System.Drawing.Size(649, 23);
-            this.txtLocal.TabIndex = 648;
-            // 
-            // lblLocal
-            // 
-            this.lblLocal.AutoSize = true;
-            this.lblLocal.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocal.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblLocal.Location = new System.Drawing.Point(3, 8);
-            this.lblLocal.Name = "lblLocal";
-            this.lblLocal.Size = new System.Drawing.Size(49, 19);
-            this.lblLocal.TabIndex = 647;
-            this.lblLocal.Text = "Local:";
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar.Location = new System.Drawing.Point(591, 73);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(107, 30);
-            this.btnCadastrar.TabIndex = 644;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(1, 65);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.Size = new System.Drawing.Size(709, 2);
-            this.dataGridView5.TabIndex = 626;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(1, 33);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(709, 2);
-            this.dataGridView3.TabIndex = 625;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(354, 35);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView6.TabIndex = 599;
+            this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
+            this.btnConsultar.Location = new System.Drawing.Point(486, 6);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(107, 30);
+            this.btnConsultar.TabIndex = 644;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -220,12 +127,34 @@
             this.lblCadastrarEstoque.AutoSize = true;
             this.lblCadastrarEstoque.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCadastrarEstoque.Location = new System.Drawing.Point(237, 9);
+            this.lblCadastrarEstoque.Location = new System.Drawing.Point(237, 7);
             this.lblCadastrarEstoque.Name = "lblCadastrarEstoque";
             this.lblCadastrarEstoque.Size = new System.Drawing.Size(237, 28);
-            this.lblCadastrarEstoque.TabIndex = 565;
+            this.lblCadastrarEstoque.TabIndex = 567;
             this.lblCadastrarEstoque.Text = "Cadastrar Estoque";
             this.lblCadastrarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dataGridView11
+            // 
+            this.dataGridView11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView11.Location = new System.Drawing.Point(1, 33);
+            this.dataGridView11.Name = "dataGridView11";
+            this.dataGridView11.Size = new System.Drawing.Size(355, 2);
+            this.dataGridView11.TabIndex = 665;
+            // 
+            // dataGridView6
+            // 
+            this.dataGridView6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(354, 3);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView6.TabIndex = 599;
             // 
             // dgvConsultarEstoque
             // 
@@ -236,10 +165,10 @@
             this.Coluna2,
             this.Coluna3,
             this.Coluna4});
-            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 109);
+            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 42);
             this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
-            this.dgvConsultarEstoque.Size = new System.Drawing.Size(704, 306);
-            this.dgvConsultarEstoque.TabIndex = 665;
+            this.dgvConsultarEstoque.Size = new System.Drawing.Size(704, 373);
+            this.dgvConsultarEstoque.TabIndex = 666;
             // 
             // Coluna1
             // 
@@ -272,7 +201,7 @@
             this.Coluna4.ReadOnly = true;
             this.Coluna4.Width = 150;
             // 
-            // frmRegisterStock
+            // frmConsultStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -281,16 +210,14 @@
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblCadastrarEstoque);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmRegisterStock";
+            this.Name = "frmConsultStock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Register Stock";
+            this.Text = "Consult Stock";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudQtdMáximo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -300,18 +227,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel;
-        public System.Windows.Forms.NumericUpDown nudQtdMáximo;
-        private System.Windows.Forms.Label lblQtdMáximo;
         public System.Windows.Forms.ComboBox cboTipo;
         private System.Windows.Forms.Label lblTipo;
-        protected System.Windows.Forms.TextBox txtLocal;
-        private System.Windows.Forms.Label lblLocal;
-        private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridView dataGridView6;
+        private System.Windows.Forms.Button btnConsultar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblCadastrarEstoque;
+        private System.Windows.Forms.DataGridView dataGridView11;
+        private System.Windows.Forms.DataGridView dataGridView6;
         private System.Windows.Forms.DataGridView dgvConsultarEstoque;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;

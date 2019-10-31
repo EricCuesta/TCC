@@ -8,13 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Liriou_s_Burguer.Screens.Manager.Client
+namespace Liriou_s_Burguer.Screens.Manager.CRM
 {
     public partial class frmConsultCustomer : Form
     {
         public frmConsultCustomer()
         {
             InitializeComponent();
+            dgvConsultarCliente.AutoGenerateColumns = false;
         }
 
         private void Consulta()
