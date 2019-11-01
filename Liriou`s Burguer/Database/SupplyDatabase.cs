@@ -13,6 +13,7 @@ namespace Liriou_s_Burguer.Database
         public void Inserir(Entities.tb_supply supply)
         {
             db.tb_supply.Add(supply);
+            supply.id_stock = 1;
 
             db.SaveChanges();
         }
@@ -27,6 +28,7 @@ namespace Liriou_s_Burguer.Database
         public List<Entities.tb_supply> ConsultarPorNome(Entities.tb_supply supply)
         {
             List<Entities.tb_supply> list = db.tb_supply.Where(l => l.nm_supply == supply.nm_supply).ToList();
+            Entities.tb_stock stock = new Entities.tb_stock();
 
             return list;
         }
@@ -40,15 +42,17 @@ namespace Liriou_s_Burguer.Database
 
         public void Alterar(Entities.tb_supply supply)
         {
+            Entities.liriousdbEntities db = new Entities.liriousdbEntities();
             Entities.tb_supply list = db.tb_supply.FirstOrDefault(t => t.id_supply == supply.id_supply);
-            list.ds_typeStock = supply.ds_typeStock;
             list.nm_supply = supply.nm_supply;
             list.vl_amount = supply.vl_amount;
-            list.vl_value = supply.vl_value;
+            list.vl_value = Convert.ToDecimal(supply.vl_value);
             list.ds_note = supply.ds_note;
+
+            db.SaveChanges();
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
             Entities.tb_supply supply = db.tb_supply.First(t => t.id_supply == id);
 

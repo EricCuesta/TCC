@@ -29,12 +29,6 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.nudId = new System.Windows.Forms.NumericUpDown();
-            this.lblID = new System.Windows.Forms.Label();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblAlterarSuprimento = new System.Windows.Forms.Label();
             this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
             this.lblDescrição = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
@@ -46,15 +40,21 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.nudID = new System.Windows.Forms.NumericUpDown();
+            this.lblID = new System.Windows.Forms.Label();
+            this.btnAlterar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblAlterarSuprimento = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -75,7 +75,7 @@
             this.panel.Controls.Add(this.dataGridView5);
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView4);
-            this.panel.Controls.Add(this.nudId);
+            this.panel.Controls.Add(this.nudID);
             this.panel.Controls.Add(this.lblID);
             this.panel.Controls.Add(this.btnAlterar);
             this.panel.Controls.Add(this.dataGridView1);
@@ -83,77 +83,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 570;
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(1, 33);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(709, 2);
-            this.dataGridView4.TabIndex = 660;
-            // 
-            // nudId
-            // 
-            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(46, 6);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(120, 23);
-            this.nudId.TabIndex = 659;
-            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblID.Location = new System.Drawing.Point(3, 5);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(37, 26);
-            this.lblID.TabIndex = 658;
-            this.lblID.Text = "ID:";
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
-            this.btnAlterar.Location = new System.Drawing.Point(305, 377);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(107, 30);
-            this.btnAlterar.TabIndex = 644;
-            this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = false;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(709, 2);
-            this.dataGridView1.TabIndex = 598;
-            // 
-            // lblAlterarSuprimento
-            // 
-            this.lblAlterarSuprimento.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.lblAlterarSuprimento.AutoSize = true;
-            this.lblAlterarSuprimento.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlterarSuprimento.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAlterarSuprimento.Location = new System.Drawing.Point(253, 9);
-            this.lblAlterarSuprimento.Name = "lblAlterarSuprimento";
-            this.lblAlterarSuprimento.Size = new System.Drawing.Size(250, 28);
-            this.lblAlterarSuprimento.TabIndex = 569;
-            this.lblAlterarSuprimento.Text = "Alterar Suprimento";
-            this.lblAlterarSuprimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rtxtDescrição
             // 
@@ -279,6 +208,77 @@
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 662;
             // 
+            // dataGridView4
+            // 
+            this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(1, 33);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView4.TabIndex = 660;
+            // 
+            // nudID
+            // 
+            this.nudID.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudID.Location = new System.Drawing.Point(46, 6);
+            this.nudID.Name = "nudID";
+            this.nudID.Size = new System.Drawing.Size(120, 23);
+            this.nudID.TabIndex = 659;
+            this.nudID.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblID.Location = new System.Drawing.Point(3, 5);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(37, 26);
+            this.lblID.TabIndex = 658;
+            this.lblID.Text = "ID:";
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.ForeColor = System.Drawing.Color.Black;
+            this.btnAlterar.Location = new System.Drawing.Point(305, 377);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(107, 30);
+            this.btnAlterar.TabIndex = 644;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = false;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView1.TabIndex = 598;
+            // 
+            // lblAlterarSuprimento
+            // 
+            this.lblAlterarSuprimento.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblAlterarSuprimento.AutoSize = true;
+            this.lblAlterarSuprimento.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlterarSuprimento.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblAlterarSuprimento.Location = new System.Drawing.Point(253, 9);
+            this.lblAlterarSuprimento.Name = "lblAlterarSuprimento";
+            this.lblAlterarSuprimento.Size = new System.Drawing.Size(250, 28);
+            this.lblAlterarSuprimento.TabIndex = 569;
+            this.lblAlterarSuprimento.Text = "Alterar Suprimento";
+            this.lblAlterarSuprimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmChangeSupplies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -293,14 +293,14 @@
             this.Text = "Change Supplies";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -310,21 +310,21 @@
 
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.NumericUpDown nudId;
+        private System.Windows.Forms.NumericUpDown nudID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblAlterarSuprimento;
-        private System.Windows.Forms.RichTextBox rtxtDescrição;
         private System.Windows.Forms.Label lblDescrição;
         public System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.DataGridView dataGridView16;
         public System.Windows.Forms.NumericUpDown nudQuantidade;
         private System.Windows.Forms.Label lblQuantidade;
-        protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView3;
+        public System.Windows.Forms.RichTextBox rtxtDescrição;
+        public System.Windows.Forms.TextBox txtNome;
     }
 }

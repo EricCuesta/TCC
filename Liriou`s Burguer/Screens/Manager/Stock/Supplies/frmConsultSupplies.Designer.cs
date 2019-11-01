@@ -28,23 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new System.Windows.Forms.Panel();
+            this.dgvConsultarSuprimento = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblConsultarSuprimento = new System.Windows.Forms.Label();
-            this.dgvConsultarSuprimento = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -63,6 +65,32 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 569;
+            // 
+            // dgvConsultarSuprimento
+            // 
+            this.dgvConsultarSuprimento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarSuprimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultarSuprimento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvConsultarSuprimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarSuprimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna3,
+            this.Coluna4,
+            this.Coluna5,
+            this.Coluna6});
+            this.dgvConsultarSuprimento.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvConsultarSuprimento.Location = new System.Drawing.Point(3, 77);
+            this.dgvConsultarSuprimento.Name = "dgvConsultarSuprimento";
+            this.dgvConsultarSuprimento.Size = new System.Drawing.Size(704, 338);
+            this.dgvConsultarSuprimento.TabIndex = 652;
             // 
             // btnConsultar
             // 
@@ -140,57 +168,53 @@
             this.lblConsultarSuprimento.Text = "Consultar Suprimento";
             this.lblConsultarSuprimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dgvConsultarSuprimento
+            // Coluna1
             // 
-            this.dgvConsultarSuprimento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarSuprimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvConsultarSuprimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarSuprimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.Coluna3,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dgvConsultarSuprimento.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConsultarSuprimento.Location = new System.Drawing.Point(3, 77);
-            this.dgvConsultarSuprimento.Name = "dgvConsultarSuprimento";
-            this.dgvConsultarSuprimento.Size = new System.Drawing.Size(704, 338);
-            this.dgvConsultarSuprimento.TabIndex = 652;
+            this.Coluna1.DataPropertyName = "id_supply";
+            this.Coluna1.HeaderText = "ID";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 50;
             // 
-            // dataGridViewTextBoxColumn1
+            // Coluna2
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nome";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 120;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tipo";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 120;
+            this.Coluna2.DataPropertyName = "id_stock";
+            this.Coluna2.HeaderText = "Estoque";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 120;
             // 
             // Coluna3
             // 
-            this.Coluna3.HeaderText = "Quantidade";
+            this.Coluna3.DataPropertyName = "nm_supply";
+            this.Coluna3.HeaderText = "Nome";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 80;
+            this.Coluna3.Width = 120;
             // 
-            // dataGridViewTextBoxColumn3
+            // Coluna4
             // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Valor";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 80;
+            this.Coluna4.DataPropertyName = "vl_amount";
+            this.Coluna4.HeaderText = "Quantidade";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            this.Coluna4.Width = 80;
             // 
-            // dataGridViewTextBoxColumn4
+            // Coluna5
             // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Descrição";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 262;
+            this.Coluna5.DataPropertyName = "vl_value";
+            this.Coluna5.HeaderText = "Valor";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            this.Coluna5.Width = 80;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.DataPropertyName = "ds_note";
+            this.Coluna6.HeaderText = "Descrição";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
+            this.Coluna6.Width = 213;
             // 
             // frmConsultSupplies
             // 
@@ -206,9 +230,9 @@
             this.Text = "Consult Supplies";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,10 +248,11 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblConsultarSuprimento;
         private System.Windows.Forms.DataGridView dgvConsultarSuprimento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
     }
 }

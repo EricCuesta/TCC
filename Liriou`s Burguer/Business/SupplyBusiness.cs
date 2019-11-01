@@ -16,7 +16,7 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (supply.vl_amount == 0)
                 throw new ArgumentException("O campo quantidade deve ser preenchido");
-            if (supply.vl_value == Convert.ToInt32("0,00"))
+            if (supply.vl_value == Convert.ToDecimal("0,00"))
                 throw new ArgumentException("O campo valor deve ser preenchido");
 
             db.Inserir(supply);
@@ -35,8 +35,7 @@ namespace Liriou_s_Burguer.Business
             Database.SupplyDatabase dbsupply = new Database.SupplyDatabase();
             List<Database.Entities.tb_supply> list = new List<Database.Entities.tb_supply>();
 
-            if (supply.nm_supply == string.Empty)
-                list = dbsupply.ConsultarPorNome(supply);
+            list = dbsupply.ConsultarPorNome(supply);
 
             return list;
         }
@@ -53,14 +52,14 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (supply.vl_amount == 0)
                 throw new ArgumentException("O campo quantidade deve ser preenchido");
-            if (supply.vl_value == Convert.ToInt32("0,00"))
+            if (supply.vl_value == Convert.ToDecimal("0,00"))
                 throw new ArgumentException("O campo valor deve ser preenchido");
             db.Alterar(supply);
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
-            db.Deletar(id);
+            db.Remover(id);
         }
     }
 }

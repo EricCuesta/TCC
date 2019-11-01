@@ -22,9 +22,7 @@ namespace Liriou_s_Burguer.Database.Entities
         }
     
         public int id_stock { get; set; }
-        public string ds_place { get; set; }
         public string ds_typeStock { get; set; }
-        public Nullable<int> nr_maxAmount { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_product> tb_product { get; set; }

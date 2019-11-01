@@ -19,34 +19,34 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.SupplyBusiness bussupplies = new Business.SupplyBusiness();
-            bussupplies.Deletar(id);
+            bussupplies.Remover(id);
 
             MessageBox.Show("Suprimento deletado com sucesso");
         }
 
         private void nudId_ValueChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
-            Business.ProductBusiness busproduct = new Business.ProductBusiness();
-            Database.Entities.tb_product product = busproduct.ConsultarPorID(id);
+            Business.SupplyBusiness bussupply = new Business.SupplyBusiness();
+            Database.Entities.tb_supply supply = bussupply.ConsultarPorID(id);
 
-            if (product == null)
+            if (supply == null)
             {
                 txtNome.Text = string.Empty;
                 nudQuantidade.Value = 0;
-                nudValor.Value = Convert.ToInt32("0,00");
+                nudValor.Value = Convert.ToDecimal("0,00");
                 rtxtDescrição.Text = string.Empty;
             }
             else
             {
-                txtNome.Text = product.nm_product;
-                nudQuantidade.Value = product.vl_amount;
-                nudValor.Value = product.vl_value;
-                rtxtDescrição.Text = product.ds_note;
+                txtNome.Text = supply.nm_supply;
+                nudQuantidade.Value = supply.vl_amount;
+                nudValor.Value = supply.vl_value;
+                rtxtDescrição.Text = supply.ds_note;
             }
         }
     }

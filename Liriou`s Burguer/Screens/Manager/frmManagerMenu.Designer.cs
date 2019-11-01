@@ -51,12 +51,8 @@
             this.btnAlterarSuprimentos = new System.Windows.Forms.Button();
             this.panel36 = new System.Windows.Forms.Panel();
             this.btnCadastrarSuprimentos = new System.Windows.Forms.Button();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.btnDeletarEstoque = new System.Windows.Forms.Button();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.btnAlterarEstoque = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
-            this.btnCadastrarEstoque = new System.Windows.Forms.Button();
+            this.btnConsultarEstoque = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
             this.btnDeletarProdutos = new System.Windows.Forms.Button();
             this.panel25 = new System.Windows.Forms.Panel();
@@ -111,9 +107,9 @@
             this.btnRecursosHumanos = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
+            this.panelTítulo = new System.Windows.Forms.Panel();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
-            this.panel28 = new System.Windows.Forms.Panel();
             this.panelContedor = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
             this.panelSubMenuCRM.SuspendLayout();
@@ -127,13 +123,14 @@
             this.panelSubMenuRecursosHumanos.SuspendLayout();
             this.panelRecursosHumanos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
+            this.panelTítulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
-            this.panel28.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
             // 
+            this.MenuVertical.AutoScroll = true;
             this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.MenuVertical.Controls.Add(this.panelSubMenuCRM);
             this.MenuVertical.Controls.Add(this.panelCRM);
@@ -164,9 +161,9 @@
             this.panelSubMenuCRM.Controls.Add(this.btnConsultarCliente);
             this.panelSubMenuCRM.Controls.Add(this.btnCadastrarCliente);
             this.panelSubMenuCRM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1171);
+            this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1098);
             this.panelSubMenuCRM.Name = "panelSubMenuCRM";
-            this.panelSubMenuCRM.Size = new System.Drawing.Size(240, 132);
+            this.panelSubMenuCRM.Size = new System.Drawing.Size(223, 132);
             this.panelSubMenuCRM.TabIndex = 26;
             // 
             // panel40
@@ -286,9 +283,9 @@
             this.panelCRM.Controls.Add(this.btnCRM);
             this.panelCRM.Controls.Add(this.panel19);
             this.panelCRM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCRM.Location = new System.Drawing.Point(0, 1139);
+            this.panelCRM.Location = new System.Drawing.Point(0, 1066);
             this.panelCRM.Name = "panelCRM";
-            this.panelCRM.Size = new System.Drawing.Size(240, 32);
+            this.panelCRM.Size = new System.Drawing.Size(223, 32);
             this.panelCRM.TabIndex = 25;
             // 
             // btnCRM
@@ -301,7 +298,7 @@
             this.btnCRM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCRM.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCRM.ForeColor = System.Drawing.Color.White;
-            this.btnCRM.Image = global::Liriou_s_Burguer.Properties.Resources.Suprimentos;
+            this.btnCRM.Image = global::Liriou_s_Burguer.Properties.Resources.CRM;
             this.btnCRM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCRM.Location = new System.Drawing.Point(4, 2);
             this.btnCRM.Name = "btnCRM";
@@ -330,12 +327,8 @@
             this.panelSubMenuEstoque.Controls.Add(this.btnAlterarSuprimentos);
             this.panelSubMenuEstoque.Controls.Add(this.panel36);
             this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarSuprimentos);
-            this.panelSubMenuEstoque.Controls.Add(this.panel20);
-            this.panelSubMenuEstoque.Controls.Add(this.btnDeletarEstoque);
-            this.panelSubMenuEstoque.Controls.Add(this.panel21);
-            this.panelSubMenuEstoque.Controls.Add(this.btnAlterarEstoque);
             this.panelSubMenuEstoque.Controls.Add(this.panel23);
-            this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarEstoque);
+            this.panelSubMenuEstoque.Controls.Add(this.btnConsultarEstoque);
             this.panelSubMenuEstoque.Controls.Add(this.panel24);
             this.panelSubMenuEstoque.Controls.Add(this.btnDeletarProdutos);
             this.panelSubMenuEstoque.Controls.Add(this.panel25);
@@ -345,9 +338,9 @@
             this.panelSubMenuEstoque.Controls.Add(this.panel27);
             this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarProdutos);
             this.panelSubMenuEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 782);
+            this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 772);
             this.panelSubMenuEstoque.Name = "panelSubMenuEstoque";
-            this.panelSubMenuEstoque.Size = new System.Drawing.Size(240, 357);
+            this.panelSubMenuEstoque.Size = new System.Drawing.Size(223, 294);
             this.panelSubMenuEstoque.TabIndex = 24;
             // 
             // panel33
@@ -462,62 +455,6 @@
             this.btnCadastrarSuprimentos.UseVisualStyleBackColor = false;
             this.btnCadastrarSuprimentos.Click += new System.EventHandler(this.btnCadastrarSuprimentos_Click);
             // 
-            // panel20
-            // 
-            this.panel20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel20.Location = new System.Drawing.Point(22, 326);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(5, 26);
-            this.panel20.TabIndex = 24;
-            // 
-            // btnDeletarEstoque
-            // 
-            this.btnDeletarEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDeletarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletarEstoque.FlatAppearance.BorderSize = 0;
-            this.btnDeletarEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDeletarEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnDeletarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletarEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnDeletarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarEstoque.Location = new System.Drawing.Point(25, 326);
-            this.btnDeletarEstoque.Name = "btnDeletarEstoque";
-            this.btnDeletarEstoque.Size = new System.Drawing.Size(208, 26);
-            this.btnDeletarEstoque.TabIndex = 22;
-            this.btnDeletarEstoque.Text = "Deletar Estoque";
-            this.btnDeletarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarEstoque.UseVisualStyleBackColor = false;
-            this.btnDeletarEstoque.Click += new System.EventHandler(this.btnDeletarEstoque_Click);
-            // 
-            // panel21
-            // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel21.Location = new System.Drawing.Point(22, 294);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(5, 26);
-            this.panel21.TabIndex = 23;
-            // 
-            // btnAlterarEstoque
-            // 
-            this.btnAlterarEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnAlterarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarEstoque.FlatAppearance.BorderSize = 0;
-            this.btnAlterarEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAlterarEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnAlterarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarEstoque.Location = new System.Drawing.Point(25, 294);
-            this.btnAlterarEstoque.Name = "btnAlterarEstoque";
-            this.btnAlterarEstoque.Size = new System.Drawing.Size(208, 26);
-            this.btnAlterarEstoque.TabIndex = 21;
-            this.btnAlterarEstoque.Text = "Alterar Estoque";
-            this.btnAlterarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarEstoque.UseVisualStyleBackColor = false;
-            this.btnAlterarEstoque.Click += new System.EventHandler(this.btnAlterarEstoque_Click);
-            // 
             // panel23
             // 
             this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
@@ -526,25 +463,24 @@
             this.panel23.Size = new System.Drawing.Size(5, 26);
             this.panel23.TabIndex = 19;
             // 
-            // btnCadastrarEstoque
+            // btnConsultarEstoque
             // 
-            this.btnCadastrarEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCadastrarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarEstoque.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrarEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnCadastrarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarEstoque.Location = new System.Drawing.Point(25, 262);
-            this.btnCadastrarEstoque.Name = "btnCadastrarEstoque";
-            this.btnCadastrarEstoque.Size = new System.Drawing.Size(208, 26);
-            this.btnCadastrarEstoque.TabIndex = 17;
-            this.btnCadastrarEstoque.Text = "Cadastrar Estoque";
-            this.btnCadastrarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarEstoque.UseVisualStyleBackColor = false;
-            this.btnCadastrarEstoque.Click += new System.EventHandler(this.btnCadastrarEstoque_Click);
+            this.btnConsultarEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConsultarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarEstoque.FlatAppearance.BorderSize = 0;
+            this.btnConsultarEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultarEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarEstoque.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarEstoque.Location = new System.Drawing.Point(25, 262);
+            this.btnConsultarEstoque.Name = "btnConsultarEstoque";
+            this.btnConsultarEstoque.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarEstoque.TabIndex = 17;
+            this.btnConsultarEstoque.Text = "Consultar Estoque";
+            this.btnConsultarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarEstoque.UseVisualStyleBackColor = false;
             // 
             // panel24
             // 
@@ -663,9 +599,9 @@
             this.panelEstoque.Controls.Add(this.btnEstoque);
             this.panelEstoque.Controls.Add(this.panel18);
             this.panelEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEstoque.Location = new System.Drawing.Point(0, 750);
+            this.panelEstoque.Location = new System.Drawing.Point(0, 740);
             this.panelEstoque.Name = "panelEstoque";
-            this.panelEstoque.Size = new System.Drawing.Size(240, 32);
+            this.panelEstoque.Size = new System.Drawing.Size(223, 32);
             this.panelEstoque.TabIndex = 23;
             // 
             // btnEstoque
@@ -708,9 +644,9 @@
             this.panelSubMenuFornecedor.Controls.Add(this.panel44);
             this.panelSubMenuFornecedor.Controls.Add(this.btnCadastrarFornecedor);
             this.panelSubMenuFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuFornecedor.Location = new System.Drawing.Point(0, 616);
+            this.panelSubMenuFornecedor.Location = new System.Drawing.Point(0, 606);
             this.panelSubMenuFornecedor.Name = "panelSubMenuFornecedor";
-            this.panelSubMenuFornecedor.Size = new System.Drawing.Size(240, 134);
+            this.panelSubMenuFornecedor.Size = new System.Drawing.Size(223, 134);
             this.panelSubMenuFornecedor.TabIndex = 28;
             // 
             // panel41
@@ -830,9 +766,9 @@
             this.panelFornecedor.Controls.Add(this.btnFornecedor);
             this.panelFornecedor.Controls.Add(this.panel10);
             this.panelFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFornecedor.Location = new System.Drawing.Point(0, 584);
+            this.panelFornecedor.Location = new System.Drawing.Point(0, 574);
             this.panelFornecedor.Name = "panelFornecedor";
-            this.panelFornecedor.Size = new System.Drawing.Size(240, 32);
+            this.panelFornecedor.Size = new System.Drawing.Size(223, 32);
             this.panelFornecedor.TabIndex = 27;
             // 
             // btnFornecedor
@@ -877,9 +813,9 @@
             this.panelSubMenuFinanceiro.Controls.Add(this.btnAlterarConta);
             this.panelSubMenuFinanceiro.Controls.Add(this.btnDeletarConta);
             this.panelSubMenuFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuFinanceiro.Location = new System.Drawing.Point(0, 421);
+            this.panelSubMenuFinanceiro.Location = new System.Drawing.Point(0, 411);
             this.panelSubMenuFinanceiro.Name = "panelSubMenuFinanceiro";
-            this.panelSubMenuFinanceiro.Size = new System.Drawing.Size(240, 163);
+            this.panelSubMenuFinanceiro.Size = new System.Drawing.Size(223, 163);
             this.panelSubMenuFinanceiro.TabIndex = 22;
             // 
             // btnConsultarConta
@@ -1027,9 +963,9 @@
             this.panelFinanceiro.Controls.Add(this.btnFinanceiro);
             this.panelFinanceiro.Controls.Add(this.panel8);
             this.panelFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFinanceiro.Location = new System.Drawing.Point(0, 389);
+            this.panelFinanceiro.Location = new System.Drawing.Point(0, 379);
             this.panelFinanceiro.Name = "panelFinanceiro";
-            this.panelFinanceiro.Size = new System.Drawing.Size(240, 32);
+            this.panelFinanceiro.Size = new System.Drawing.Size(223, 32);
             this.panelFinanceiro.TabIndex = 21;
             // 
             // btnFinanceiro
@@ -1076,9 +1012,9 @@
             this.panelSubMenuRecursosHumanos.Controls.Add(this.btnFolhaDePagamento);
             this.panelSubMenuRecursosHumanos.Controls.Add(this.btnCadastrarFuncionário);
             this.panelSubMenuRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 192);
+            this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 182);
             this.panelSubMenuRecursosHumanos.Name = "panelSubMenuRecursosHumanos";
-            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(240, 197);
+            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(223, 197);
             this.panelSubMenuRecursosHumanos.TabIndex = 20;
             // 
             // panel14
@@ -1254,9 +1190,9 @@
             this.panelRecursosHumanos.Controls.Add(this.btnRecursosHumanos);
             this.panelRecursosHumanos.Controls.Add(this.panel1);
             this.panelRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRecursosHumanos.Location = new System.Drawing.Point(0, 160);
+            this.panelRecursosHumanos.Location = new System.Drawing.Point(0, 150);
             this.panelRecursosHumanos.Name = "panelRecursosHumanos";
-            this.panelRecursosHumanos.Size = new System.Drawing.Size(240, 32);
+            this.panelRecursosHumanos.Size = new System.Drawing.Size(223, 32);
             this.panelRecursosHumanos.TabIndex = 19;
             // 
             // btnRecursosHumanos
@@ -1294,11 +1230,22 @@
             this.imgLogotipo.Image = ((System.Drawing.Image)(resources.GetObject("imgLogotipo.Image")));
             this.imgLogotipo.Location = new System.Drawing.Point(0, 0);
             this.imgLogotipo.Name = "imgLogotipo";
-            this.imgLogotipo.Size = new System.Drawing.Size(240, 160);
+            this.imgLogotipo.Size = new System.Drawing.Size(223, 150);
             this.imgLogotipo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;
             this.imgLogotipo.Click += new System.EventHandler(this.imgLogotipo_Click);
+            // 
+            // panelTítulo
+            // 
+            this.panelTítulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelTítulo.Controls.Add(this.imgMinimizar);
+            this.panelTítulo.Controls.Add(this.imgFechar);
+            this.panelTítulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTítulo.Location = new System.Drawing.Point(240, 0);
+            this.panelTítulo.Name = "panelTítulo";
+            this.panelTítulo.Size = new System.Drawing.Size(710, 41);
+            this.panelTítulo.TabIndex = 16;
             // 
             // imgMinimizar
             // 
@@ -1332,17 +1279,6 @@
             this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
             this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panel28.Controls.Add(this.imgMinimizar);
-            this.panel28.Controls.Add(this.imgFechar);
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel28.Location = new System.Drawing.Point(240, 0);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(710, 41);
-            this.panel28.TabIndex = 16;
-            // 
             // panelContedor
             // 
             this.panelContedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
@@ -1360,7 +1296,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(950, 500);
             this.Controls.Add(this.panelContedor);
-            this.Controls.Add(this.panel28);
+            this.Controls.Add(this.panelTítulo);
             this.Controls.Add(this.MenuVertical);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1380,9 +1316,9 @@
             this.panelSubMenuRecursosHumanos.ResumeLayout(false);
             this.panelRecursosHumanos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
+            this.panelTítulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
-            this.panel28.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1416,12 +1352,8 @@
         private System.Windows.Forms.Button btnFinanceiro;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelSubMenuEstoque;
-        private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.Button btnDeletarEstoque;
-        private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Button btnAlterarEstoque;
         private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Button btnCadastrarEstoque;
+        private System.Windows.Forms.Button btnConsultarEstoque;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Button btnDeletarProdutos;
         private System.Windows.Forms.Panel panel25;
@@ -1472,7 +1404,7 @@
         private System.Windows.Forms.Button btnAlterarSuprimentos;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Button btnCadastrarSuprimentos;
-        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Panel panelTítulo;
         private System.Windows.Forms.Panel panelContedor;
     }
 }

@@ -41,7 +41,7 @@
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.nudId = new System.Windows.Forms.NumericUpDown();
+            this.nudID = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
             this.btnDeletar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -53,7 +53,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +75,7 @@
             this.panel.Controls.Add(this.dataGridView5);
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView4);
-            this.panel.Controls.Add(this.nudId);
+            this.panel.Controls.Add(this.nudID);
             this.panel.Controls.Add(this.lblID);
             this.panel.Controls.Add(this.btnDeletar);
             this.panel.Controls.Add(this.dataGridView1);
@@ -223,21 +223,21 @@
             this.dataGridView4.Size = new System.Drawing.Size(709, 2);
             this.dataGridView4.TabIndex = 660;
             // 
-            // nudId
+            // nudID
             // 
-            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(45, 6);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(120, 23);
-            this.nudId.TabIndex = 659;
-            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
+            this.nudID.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudID.Location = new System.Drawing.Point(46, 6);
+            this.nudID.Name = "nudID";
+            this.nudID.Size = new System.Drawing.Size(120, 23);
+            this.nudID.TabIndex = 659;
+            this.nudID.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblID.Location = new System.Drawing.Point(2, 5);
+            this.lblID.Location = new System.Drawing.Point(3, 5);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(37, 26);
             this.lblID.TabIndex = 658;
@@ -303,7 +303,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -314,7 +314,7 @@
 
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.NumericUpDown nudId;
+        private System.Windows.Forms.NumericUpDown nudID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.DataGridView dataGridView1;

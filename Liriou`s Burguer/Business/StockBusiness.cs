@@ -10,18 +10,6 @@ namespace Liriou_s_Burguer.Business
     {
         Database.StockDatabase db = new Database.StockDatabase();
 
-        public void Inserir(Database.Entities.tb_stock stock)
-        {
-            if (stock.ds_place == string.Empty)
-                throw new ArgumentException("O campo lugar deve ser definido");
-            if (stock.ds_typeStock == string.Empty)
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            if (stock.nr_maxAmount == null)
-                throw new ArgumentException("O campo quantidade máxima deve ser definido");
-
-            db.Inserir(stock);
-        }
-
         public Database.Entities.tb_stock ConsultarPorID(int id)
         {
             Database.StockDatabase dbstock = new Database.StockDatabase();
@@ -35,24 +23,6 @@ namespace Liriou_s_Burguer.Business
 
             List<Database.Entities.tb_stock> list = db.ConsultarTodos();
             return list;
-        }
-
-        public void Alterar(Database.Entities.tb_stock stock)
-        {
-            if (stock.ds_place == string.Empty)
-                throw new ArgumentException("O campo lugar deve ser definido");
-            if (stock.ds_typeStock == string.Empty)
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            if (stock.nr_maxAmount == null)
-                throw new ArgumentException("O campo quantidade máxima deve ser definido");
-
-            db.Alterar(stock);
-        }
-
-        public void Deletar(int id)
-        {
-
-            db.Deletar(id);
         }
     }
 }

@@ -112,6 +112,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LiriousDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Database\Entities\tb_account.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Database\Entities\tb_bankaccount.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
@@ -319,29 +322,11 @@
     <Compile Include="Screens\Manager\Login\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\frmChangeInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Manager\Stock\frmChangeInventory.Designer.cs">
-      <DependentUpon>frmChangeInventory.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\Manager\Stock\frmConsultStock.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\Manager\Stock\frmConsultStock.Designer.cs">
       <DependentUpon>frmConsultStock.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Manager\Stock\frmDeleteInventory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Manager\Stock\frmDeleteInventory.Designer.cs">
-      <DependentUpon>frmDeleteInventory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Manager\Stock\frmRegisterStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Manager\Stock\frmRegisterStock.Designer.cs">
-      <DependentUpon>frmRegisterStock.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\Stock\Products\frmBrowseProducts.cs">
       <SubType>Form</SubType>
@@ -470,17 +455,8 @@
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee1.resx">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\frmChangeInventory.resx">
-      <DependentUpon>frmChangeInventory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Stock\frmConsultStock.resx">
       <DependentUpon>frmConsultStock.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\frmDeleteInventory.resx">
-      <DependentUpon>frmDeleteInventory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\frmRegisterStock.resx">
-      <DependentUpon>frmRegisterStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Stock\Products\frmBrowseProducts.resx">
       <DependentUpon>frmBrowseProducts.cs</DependentUpon>
@@ -607,6 +583,7 @@
       <DependentUpon>LiriousDB.edmx</DependentUpon>
       <LastGenOutput>LiriousDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\CRM.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

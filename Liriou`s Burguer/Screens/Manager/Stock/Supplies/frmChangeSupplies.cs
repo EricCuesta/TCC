@@ -19,7 +19,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
 
         private void nudId_ValueChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.SupplyBusiness bussupply = new Business.SupplyBusiness();
             Database.Entities.tb_supply supply = bussupply.ConsultarPorID(id);
@@ -28,7 +28,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             {
                 txtNome.Text = string.Empty;
                 nudQuantidade.Value = 0;
-                nudValor.Value = Convert.ToInt32("0,00");
+                nudValor.Value = Convert.ToDecimal("0,00");
                 rtxtDescrição.Text = string.Empty;
             }
             else
@@ -45,15 +45,16 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             try
             {
                 Database.Entities.tb_supply supply = new Database.Entities.tb_supply();
+                supply.id_supply = Convert.ToInt32(nudID.Value);
                 supply.nm_supply = txtNome.Text;
                 supply.vl_amount = Convert.ToInt32(nudQuantidade.Value);
-                supply.vl_value = nudValor.Value;
+                supply.vl_value = Convert.ToDecimal(nudValor.Value);
                 supply.ds_note = rtxtDescrição.Text;
 
                 Business.SupplyBusiness bussupply = new Business.SupplyBusiness();
-                bussupply.Inserir(supply);
+                bussupply.Alterar(supply);
 
-                MessageBox.Show("Suprimento cadastrado com sucesso");
+                MessageBox.Show("Suprimento alterado com sucesso");
             }
             catch (ArgumentException ex)
             {

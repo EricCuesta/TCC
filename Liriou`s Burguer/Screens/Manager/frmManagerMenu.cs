@@ -273,24 +273,6 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
         }
 
-        private void btnCadastrarEstoque_Click(object sender, EventArgs e)
-        {
-            openContedor(new Stock.frmRegisterStock());
-            HideSubMenu();
-        }
-
-        private void btnAlterarEstoque_Click(object sender, EventArgs e)
-        {
-            openContedor(new Stock.frmChangeInventory());
-            HideSubMenu();
-        }
-
-        private void btnDeletarEstoque_Click(object sender, EventArgs e)
-        {
-            openContedor(new Stock.frmDeleteInventory());
-            HideSubMenu();
-        }
-
         private void btnCadastrarCliente_Click(object sender, EventArgs e)
         {
             openContedor(new CRM.frmRegisterCustomer());

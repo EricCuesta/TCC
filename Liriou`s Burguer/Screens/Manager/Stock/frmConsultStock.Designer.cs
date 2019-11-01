@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
+            this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.cboTipo = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.btnConsultar = new System.Windows.Forms.Button();
+            this.dataGridView6 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblCadastrarEstoque = new System.Windows.Forms.Label();
-            this.dataGridView11 = new System.Windows.Forms.DataGridView();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -65,6 +67,33 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 568;
+            // 
+            // dgvConsultarEstoque
+            // 
+            this.dgvConsultarEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna3,
+            this.Coluna4,
+            this.Coluna5,
+            this.Coluna6});
+            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 42);
+            this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
+            this.dgvConsultarEstoque.Size = new System.Drawing.Size(704, 373);
+            this.dgvConsultarEstoque.TabIndex = 666;
+            // 
+            // dataGridView11
+            // 
+            this.dataGridView11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView11.Location = new System.Drawing.Point(1, 33);
+            this.dataGridView11.Name = "dataGridView11";
+            this.dataGridView11.Size = new System.Drawing.Size(355, 2);
+            this.dataGridView11.TabIndex = 665;
             // 
             // cboTipo
             // 
@@ -110,6 +139,17 @@
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
             // 
+            // dataGridView6
+            // 
+            this.dataGridView6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView6.Location = new System.Drawing.Point(354, 3);
+            this.dataGridView6.Name = "dataGridView6";
+            this.dataGridView6.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView6.TabIndex = 599;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -134,42 +174,6 @@
             this.lblCadastrarEstoque.Text = "Cadastrar Estoque";
             this.lblCadastrarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView11
-            // 
-            this.dataGridView11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(1, 33);
-            this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.Size = new System.Drawing.Size(355, 2);
-            this.dataGridView11.TabIndex = 665;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(354, 3);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView6.TabIndex = 599;
-            // 
-            // dgvConsultarEstoque
-            // 
-            this.dgvConsultarEstoque.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarEstoque.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2,
-            this.Coluna3,
-            this.Coluna4});
-            this.dgvConsultarEstoque.Location = new System.Drawing.Point(3, 42);
-            this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
-            this.dgvConsultarEstoque.Size = new System.Drawing.Size(704, 373);
-            this.dgvConsultarEstoque.TabIndex = 666;
-            // 
             // Coluna1
             // 
             this.Coluna1.DataPropertyName = "id_stock";
@@ -179,27 +183,35 @@
             // 
             // Coluna2
             // 
-            this.Coluna2.DataPropertyName = "ds_place";
-            this.Coluna2.HeaderText = "Local";
+            this.Coluna2.DataPropertyName = "ds_typeStock";
+            this.Coluna2.HeaderText = "Tipo";
             this.Coluna2.Name = "Coluna2";
             this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 260;
+            this.Coluna2.Width = 150;
             // 
             // Coluna3
             // 
-            this.Coluna3.DataPropertyName = "ds_typeStock";
-            this.Coluna3.HeaderText = "Tipo";
+            this.Coluna3.HeaderText = "Nome";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 150;
             // 
             // Coluna4
             // 
-            this.Coluna4.DataPropertyName = "nr_maxAmount";
-            this.Coluna4.HeaderText = "Quantidade Máxima";
+            this.Coluna4.HeaderText = "Quantidade";
             this.Coluna4.Name = "Coluna4";
             this.Coluna4.ReadOnly = true;
-            this.Coluna4.Width = 150;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.HeaderText = "Valor";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.HeaderText = "Descrição";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
             // 
             // frmConsultStock
             // 
@@ -215,10 +227,10 @@
             this.Text = "Consult Stock";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +251,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
     }
 }
