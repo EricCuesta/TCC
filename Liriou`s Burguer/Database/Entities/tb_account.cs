@@ -16,6 +16,8 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_account { get; set; }
         public string nm_account { get; set; }
+        public string nr_agency { get; set; }
+        public string nr_identification { get; set; }
         public string ds_note { get; set; }
         public Nullable<decimal> vl_account { get; set; }
         public Nullable<bool> bl_account { get; set; }

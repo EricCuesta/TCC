@@ -11,6 +11,8 @@
           </Key>
           <Property Name="id_account" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nm_account" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="nr_agency" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="nr_identification" Type="varchar" MaxLength="19" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
           <Property Name="vl_account" Type="decimal" Precision="10" Scale="2" />
           <Property Name="bl_account" Type="bool" />
@@ -528,6 +530,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_account" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nm_account" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_agency" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nr_identification" Type="String" MaxLength="19" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
           <Property Name="vl_account" Type="Decimal" />
           <Property Name="bl_account" Type="Boolean" />
@@ -1053,6 +1057,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
               <MappingFragment StoreEntitySet="tb_account">
                 <ScalarProperty Name="id_account" ColumnName="id_account" />
                 <ScalarProperty Name="nm_account" ColumnName="nm_account" />
+                <ScalarProperty Name="nr_agency" ColumnName="nr_agency" />
+                <ScalarProperty Name="nr_identification" ColumnName="nr_identification" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
                 <ScalarProperty Name="vl_account" ColumnName="vl_account" />
                 <ScalarProperty Name="bl_account" ColumnName="bl_account" />

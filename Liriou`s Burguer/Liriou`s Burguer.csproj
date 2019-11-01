@@ -573,6 +573,9 @@
     <Folder Include="Screens\Manager\Financial\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\CRM.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Database\Entities\LiriousDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LiriousDB.edmx</DependentUpon>
@@ -583,7 +586,6 @@
       <DependentUpon>LiriousDB.edmx</DependentUpon>
       <LastGenOutput>LiriousDB.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\CRM.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
