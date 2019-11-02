@@ -28,10 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblConsultarProduto = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
-            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.dgvConsultarProduto = new System.Windows.Forms.DataGridView();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.lblTipo = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
@@ -44,6 +51,7 @@
             this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -70,8 +78,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
-            this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.dgvConsultarProduto);
+            this.panel.Controls.Add(this.cboTipo);
             this.panel.Controls.Add(this.btnConsultar);
             this.panel.Controls.Add(this.lblTipo);
             this.panel.Controls.Add(this.txtNome);
@@ -83,6 +91,32 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 567;
+            // 
+            // dgvConsultarProduto
+            // 
+            this.dgvConsultarProduto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultarProduto.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvConsultarProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna3,
+            this.Coluna4,
+            this.Coluna5,
+            this.Coluna6});
+            this.dgvConsultarProduto.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvConsultarProduto.Location = new System.Drawing.Point(3, 77);
+            this.dgvConsultarProduto.Name = "dgvConsultarProduto";
+            this.dgvConsultarProduto.Size = new System.Drawing.Size(704, 338);
+            this.dgvConsultarProduto.TabIndex = 653;
             // 
             // cboTipo
             // 
@@ -101,23 +135,6 @@
             this.cboTipo.Size = new System.Drawing.Size(296, 23);
             this.cboTipo.TabIndex = 652;
             this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
-            // 
-            // dgvConsultarProduto
-            // 
-            this.dgvConsultarProduto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarProduto.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvConsultarProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2,
-            this.Coluna3,
-            this.Coluna4,
-            this.Coluna5});
-            this.dgvConsultarProduto.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConsultarProduto.Location = new System.Drawing.Point(3, 77);
-            this.dgvConsultarProduto.Name = "dgvConsultarProduto";
-            this.dgvConsultarProduto.Size = new System.Drawing.Size(704, 338);
-            this.dgvConsultarProduto.TabIndex = 651;
             // 
             // btnConsultar
             // 
@@ -207,38 +224,81 @@
             // 
             // Coluna1
             // 
-            this.Coluna1.HeaderText = "Nome";
+            this.Coluna1.DataPropertyName = "id_product";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Coluna1.HeaderText = "ID";
             this.Coluna1.Name = "Coluna1";
             this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 120;
+            this.Coluna1.Width = 50;
             // 
             // Coluna2
             // 
-            this.Coluna2.HeaderText = "Tipo";
+            this.Coluna2.DataPropertyName = "id_stock";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Coluna2.HeaderText = "Estoque";
             this.Coluna2.Name = "Coluna2";
             this.Coluna2.ReadOnly = true;
             this.Coluna2.Width = 120;
             // 
             // Coluna3
             // 
-            this.Coluna3.HeaderText = "Quantidade";
+            this.Coluna3.DataPropertyName = "nm_product";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna3.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Coluna3.HeaderText = "Nome";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 80;
+            this.Coluna3.Width = 120;
             // 
             // Coluna4
             // 
-            this.Coluna4.HeaderText = "Valor";
+            this.Coluna4.DataPropertyName = "vl_amount";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Coluna4.HeaderText = "Quantidade";
             this.Coluna4.Name = "Coluna4";
             this.Coluna4.ReadOnly = true;
             this.Coluna4.Width = 80;
             // 
             // Coluna5
             // 
-            this.Coluna5.HeaderText = "Descrição";
+            this.Coluna5.DataPropertyName = "vl_value";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Coluna5.HeaderText = "Valor";
             this.Coluna5.Name = "Coluna5";
             this.Coluna5.ReadOnly = true;
-            this.Coluna5.Width = 262;
+            this.Coluna5.Width = 80;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.DataPropertyName = "ds_note";
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna6.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Coluna6.HeaderText = "Descrição";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
+            this.Coluna6.Width = 213;
             // 
             // frmBrowseProducts
             // 
@@ -274,12 +334,13 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dgvConsultarProduto;
         public System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.DataGridView dgvConsultarProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
     }
 }

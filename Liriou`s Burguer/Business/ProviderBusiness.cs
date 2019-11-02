@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Regex;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,8 +21,6 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo tipo de pessoa deve ser definido");
             if (provider.nr_identification == string.Empty)
                 throw new ArgumentException("O campo de indentificação deve ser definido");
-            if (provider.ds_country == string.Empty)
-                throw new ArgumentException("O campo país deve ser preenchido");
             if (provider.ds_state == string.Empty)
                 throw new ArgumentException("O campo estado deve ser definido");
             if (provider.ds_cep == string.Empty)
@@ -32,6 +31,10 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
             if (provider.ds_email == string.Empty)
                 throw new ArgumentException("E-mail devem ser preenchidos");
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(provider.ds_email);
+            if (match.Success == false)
+                throw new ArgumentException(provider.ds_email + " é um e-mail inválido!");
 
             db.Inserir(provider);
         }
@@ -49,9 +52,9 @@ namespace Liriou_s_Burguer.Business
             Database.ProviderDatabase dbprovider = new Database.ProviderDatabase();
             List<Database.Entities.tb_provider> list = new List<Database.Entities.tb_provider>();
 
-            if (provider.nm_provider == string.Empty)
+            if (provider.nm_provider != string.Empty && provider.ds_typePerson == string.Empty)
                 list = dbprovider.ConsultarPorNome(provider);
-            else if (provider.ds_typePerson == string.Empty)
+            else if (provider.nm_provider == string.Empty && provider.ds_typePerson != string.Empty)
                 list = dbprovider.ConsultarPorTipoDePessoa(provider);
 
 
@@ -74,8 +77,6 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo tipo de pessoa deve ser definido");
             if (provider.nr_identification == string.Empty)
                 throw new ArgumentException("O campo de indentificação deve ser definido");
-            if (provider.ds_country == string.Empty)
-                throw new ArgumentException("O campo país deve ser preenchido");
             if (provider.ds_state == string.Empty)
                 throw new ArgumentException("O campo estado deve ser definido");
             if (provider.ds_cep == string.Empty)
@@ -86,6 +87,10 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
             if (provider.ds_email == string.Empty)
                 throw new ArgumentException("E-mail devem ser preenchidos");
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(provider.ds_email);
+            if (match.Success == false)
+                throw new ArgumentException(provider.ds_email + " é um e-mail inválido!");
 
             db.Alterar(provider);
         }

@@ -76,6 +76,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             try
             {
                 Database.Entities.tb_client client = new Database.Entities.tb_client();
+                client.id_client = Convert.ToInt32(nudId.Value);
                 client.nm_firstName = txtNome.Text.Trim();
                 client.nm_lastName = txtSobrenome.Text.Trim();
                 client.ds_rg = mtxtRG.Text.Trim();

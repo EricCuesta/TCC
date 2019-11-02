@@ -24,7 +24,6 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             client.nm_firstName = txtNome.Text;
             client.ds_rg = mtxtRG.Text;
             client.ds_sex = cboSexo.Text;
-
             Business.ClientBusiness busclient = new Business.ClientBusiness();
             List<Database.Entities.tb_client> clientlista = busclient.Consultar(client);
 
@@ -45,11 +44,6 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
         }
 
         private void mtxtRG_TextChanged(object sender, EventArgs e)
-        {
-            this.Consulta();
-        }
-
-        private void mtxtAnoDeNascimento_TextChanged(object sender, EventArgs e)
         {
             this.Consulta();
         }

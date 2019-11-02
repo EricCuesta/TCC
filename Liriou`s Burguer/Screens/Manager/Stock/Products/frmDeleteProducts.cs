@@ -17,16 +17,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             InitializeComponent();
         }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(nudId.Value);
-
-            Business.ProductBusiness busproduct = new Business.ProductBusiness();
-            busproduct.Deletar(id);
-
-            MessageBox.Show("Produto deletado com sucesso");
-        }
-
         private void nudId_ValueChanged(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(nudId.Value);
@@ -39,7 +29,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
                 txtNome.Text = string.Empty;
                 cboTipo.Text = null;
                 nudQuantidade.Value = 0;
-                nudValor.Value = Convert.ToInt32("0,00");
+                nudValor.Value = Convert.ToDecimal("0,00");
                 rtxtDescrição.Text = string.Empty;
             }
             else
@@ -51,5 +41,15 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
                 rtxtDescrição.Text = product.ds_note;
             }
         }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(nudId.Value);
+
+            Business.ProductBusiness busproduct = new Business.ProductBusiness();
+            busproduct.Deletar(id);
+
+            MessageBox.Show("Produto deletado com sucesso");
+        }       
     }
 }

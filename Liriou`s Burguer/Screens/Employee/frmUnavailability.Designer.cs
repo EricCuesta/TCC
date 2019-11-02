@@ -28,87 +28,101 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.RichtxtObservação = new System.Windows.Forms.RichTextBox();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.dgvIndisponibilidade = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dtpIndisponibilidade = new System.Windows.Forms.DateTimePicker();
-            this.lblDataIndisponibilidade = new System.Windows.Forms.Label();
-            this.lblObservação = new System.Windows.Forms.Label();
+            this.panel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblIndisponibilidade = new System.Windows.Forms.Label();
-            this.MenuLiriousBurguer = new System.Windows.Forms.MenuStrip();
-            this.cartãoDePontoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inícioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cartãoDePontoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.imgFechar = new System.Windows.Forms.PictureBox();
-            this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIndisponibilidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.dtpIndisponibilidade = new System.Windows.Forms.DateTimePicker();
+            this.lblDataDeIndisponibilidade = new System.Windows.Forms.Label();
+            this.dgvConsultarIndisponibilidade = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridView11 = new System.Windows.Forms.DataGridView();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.rtxtObservação = new System.Windows.Forms.RichTextBox();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.MenuLiriousBurguer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarIndisponibilidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView2
+            // panel
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(0, 91);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(470, 2);
-            this.dataGridView2.TabIndex = 242;
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.Controls.Add(this.btnSalvar);
+            this.panel.Controls.Add(this.rtxtObservação);
+            this.panel.Controls.Add(this.dataGridView4);
+            this.panel.Controls.Add(this.dataGridView11);
+            this.panel.Controls.Add(this.dgvConsultarIndisponibilidade);
+            this.panel.Controls.Add(this.lblDataDeIndisponibilidade);
+            this.panel.Controls.Add(this.dtpIndisponibilidade);
+            this.panel.Controls.Add(this.dataGridView1);
+            this.panel.Location = new System.Drawing.Point(0, 41);
+            this.panel.Name = "panel";
+            this.panel.Size = new System.Drawing.Size(710, 418);
+            this.panel.TabIndex = 566;
             // 
-            // panel1
+            // dataGridView1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Controls.Add(this.RichtxtObservação);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.panel1.Location = new System.Drawing.Point(9, 118);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(452, 325);
-            this.panel1.TabIndex = 241;
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView1.TabIndex = 598;
             // 
-            // RichtxtObservação
+            // lblIndisponibilidade
             // 
-            this.RichtxtObservação.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RichtxtObservação.Location = new System.Drawing.Point(3, 3);
-            this.RichtxtObservação.MaxLength = 256;
-            this.RichtxtObservação.Name = "RichtxtObservação";
-            this.RichtxtObservação.Size = new System.Drawing.Size(446, 319);
-            this.RichtxtObservação.TabIndex = 221;
-            this.RichtxtObservação.Text = "";
+            this.lblIndisponibilidade.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lblIndisponibilidade.AutoSize = true;
+            this.lblIndisponibilidade.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIndisponibilidade.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIndisponibilidade.Location = new System.Drawing.Point(241, 9);
+            this.lblIndisponibilidade.Name = "lblIndisponibilidade";
+            this.lblIndisponibilidade.Size = new System.Drawing.Size(226, 28);
+            this.lblIndisponibilidade.TabIndex = 565;
+            this.lblIndisponibilidade.Text = "Indisponibilidade";
+            this.lblIndisponibilidade.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSalvar
+            // dtpIndisponibilidade
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(182, 458);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(107, 30);
-            this.btnSalvar.TabIndex = 240;
-            this.btnSalvar.Text = "Salvar";
-            this.btnSalvar.UseVisualStyleBackColor = false;
+            this.dtpIndisponibilidade.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dtpIndisponibilidade.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpIndisponibilidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpIndisponibilidade.Location = new System.Drawing.Point(146, 6);
+            this.dtpIndisponibilidade.Name = "dtpIndisponibilidade";
+            this.dtpIndisponibilidade.Size = new System.Drawing.Size(237, 23);
+            this.dtpIndisponibilidade.TabIndex = 567;
             // 
-            // dgvIndisponibilidade
+            // lblDataDeIndisponibilidade
             // 
-            this.dgvIndisponibilidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIndisponibilidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lblDataDeIndisponibilidade.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDataDeIndisponibilidade.AutoSize = true;
+            this.lblDataDeIndisponibilidade.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataDeIndisponibilidade.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDataDeIndisponibilidade.Location = new System.Drawing.Point(12, 8);
+            this.lblDataDeIndisponibilidade.Name = "lblDataDeIndisponibilidade";
+            this.lblDataDeIndisponibilidade.Size = new System.Drawing.Size(128, 19);
+            this.lblDataDeIndisponibilidade.TabIndex = 626;
+            this.lblDataDeIndisponibilidade.Text = "Indisponibilidade";
+            // 
+            // dgvConsultarIndisponibilidade
+            // 
+            this.dgvConsultarIndisponibilidade.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarIndisponibilidade.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarIndisponibilidade.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Coluna1,
             this.Coluna2});
-            this.dgvIndisponibilidade.Location = new System.Drawing.Point(483, 65);
-            this.dgvIndisponibilidade.Name = "dgvIndisponibilidade";
-            this.dgvIndisponibilidade.Size = new System.Drawing.Size(305, 426);
-            this.dgvIndisponibilidade.TabIndex = 239;
+            this.dgvConsultarIndisponibilidade.Location = new System.Drawing.Point(396, 6);
+            this.dgvConsultarIndisponibilidade.Name = "dgvConsultarIndisponibilidade";
+            this.dgvConsultarIndisponibilidade.Size = new System.Drawing.Size(308, 409);
+            this.dgvConsultarIndisponibilidade.TabIndex = 627;
             // 
             // Coluna1
             // 
@@ -124,193 +138,86 @@
             this.Coluna2.Name = "Coluna2";
             this.Coluna2.Width = 155;
             // 
+            // dataGridView11
+            // 
+            this.dataGridView11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView11.Location = new System.Drawing.Point(1, 33);
+            this.dataGridView11.Name = "dataGridView11";
+            this.dataGridView11.Size = new System.Drawing.Size(388, 2);
+            this.dataGridView11.TabIndex = 651;
+            // 
             // dataGridView4
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(468, 61);
+            this.dataGridView4.Location = new System.Drawing.Point(389, 1);
             this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(2, 439);
-            this.dataGridView4.TabIndex = 238;
+            this.dataGridView4.Size = new System.Drawing.Size(2, 418);
+            this.dataGridView4.TabIndex = 652;
             // 
-            // dtpIndisponibilidade
+            // rtxtObservação
             // 
-            this.dtpIndisponibilidade.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dtpIndisponibilidade.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpIndisponibilidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpIndisponibilidade.Location = new System.Drawing.Point(205, 64);
-            this.dtpIndisponibilidade.Name = "dtpIndisponibilidade";
-            this.dtpIndisponibilidade.Size = new System.Drawing.Size(254, 23);
-            this.dtpIndisponibilidade.TabIndex = 237;
+            this.rtxtObservação.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtObservação.Location = new System.Drawing.Point(5, 38);
+            this.rtxtObservação.MaxLength = 256;
+            this.rtxtObservação.Name = "rtxtObservação";
+            this.rtxtObservação.Size = new System.Drawing.Size(380, 333);
+            this.rtxtObservação.TabIndex = 653;
+            this.rtxtObservação.Text = "";
             // 
-            // lblDataIndisponibilidade
+            // btnSalvar
             // 
-            this.lblDataIndisponibilidade.AutoSize = true;
-            this.lblDataIndisponibilidade.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataIndisponibilidade.Location = new System.Drawing.Point(12, 66);
-            this.lblDataIndisponibilidade.Name = "lblDataIndisponibilidade";
-            this.lblDataIndisponibilidade.Size = new System.Drawing.Size(187, 19);
-            this.lblDataIndisponibilidade.TabIndex = 236;
-            this.lblDataIndisponibilidade.Text = "Data de Indisponibilidade:";
-            // 
-            // lblObservação
-            // 
-            this.lblObservação.AutoSize = true;
-            this.lblObservação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblObservação.Location = new System.Drawing.Point(12, 96);
-            this.lblObservação.Name = "lblObservação";
-            this.lblObservação.Size = new System.Drawing.Size(94, 19);
-            this.lblObservação.TabIndex = 234;
-            this.lblObservação.Text = "Observação:";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 59);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(800, 2);
-            this.dataGridView1.TabIndex = 233;
-            // 
-            // lblIndisponibilidade
-            // 
-            this.lblIndisponibilidade.AutoSize = true;
-            this.lblIndisponibilidade.BackColor = System.Drawing.Color.Transparent;
-            this.lblIndisponibilidade.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIndisponibilidade.ForeColor = System.Drawing.Color.Black;
-            this.lblIndisponibilidade.Location = new System.Drawing.Point(300, 29);
-            this.lblIndisponibilidade.Name = "lblIndisponibilidade";
-            this.lblIndisponibilidade.Size = new System.Drawing.Size(226, 28);
-            this.lblIndisponibilidade.TabIndex = 232;
-            this.lblIndisponibilidade.Text = "Indisponibilidade";
-            // 
-            // MenuLiriousBurguer
-            // 
-            this.MenuLiriousBurguer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.MenuLiriousBurguer.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cartãoDePontoToolStripMenuItem});
-            this.MenuLiriousBurguer.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-            this.MenuLiriousBurguer.Location = new System.Drawing.Point(0, 0);
-            this.MenuLiriousBurguer.Name = "MenuLiriousBurguer";
-            this.MenuLiriousBurguer.Size = new System.Drawing.Size(800, 29);
-            this.MenuLiriousBurguer.TabIndex = 231;
-            this.MenuLiriousBurguer.Text = "Liriou`s Burger";
-            // 
-            // cartãoDePontoToolStripMenuItem
-            // 
-            this.cartãoDePontoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.inícioToolStripMenuItem,
-            this.cartãoDePontoToolStripMenuItem1});
-            this.cartãoDePontoToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cartãoDePontoToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cartãoDePontoToolStripMenuItem.Name = "cartãoDePontoToolStripMenuItem";
-            this.cartãoDePontoToolStripMenuItem.Size = new System.Drawing.Size(67, 25);
-            this.cartãoDePontoToolStripMenuItem.Text = "Menu";
-            // 
-            // inícioToolStripMenuItem
-            // 
-            this.inícioToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.inícioToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.inícioToolStripMenuItem.Name = "inícioToolStripMenuItem";
-            this.inícioToolStripMenuItem.Size = new System.Drawing.Size(212, 26);
-            this.inícioToolStripMenuItem.Text = "Início";
-            this.inícioToolStripMenuItem.Click += new System.EventHandler(this.inícioToolStripMenuItem_Click);
-            // 
-            // cartãoDePontoToolStripMenuItem1
-            // 
-            this.cartãoDePontoToolStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.cartãoDePontoToolStripMenuItem1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.cartãoDePontoToolStripMenuItem1.Name = "cartãoDePontoToolStripMenuItem1";
-            this.cartãoDePontoToolStripMenuItem1.Size = new System.Drawing.Size(212, 26);
-            this.cartãoDePontoToolStripMenuItem1.Text = "Cartão de Ponto";
-            this.cartãoDePontoToolStripMenuItem1.Click += new System.EventHandler(this.cartãoDePontoToolStripMenuItem1_Click);
-            // 
-            // imgFechar
-            // 
-            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar;
-            this.imgFechar.Location = new System.Drawing.Point(771, 31);
-            this.imgFechar.Name = "imgFechar";
-            this.imgFechar.Size = new System.Drawing.Size(25, 25);
-            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 256;
-            this.imgFechar.TabStop = false;
-            this.imgFechar.Click += new System.EventHandler(this.imgFechar_Click);
-            this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
-            this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
-            // 
-            // imgMinimizar
-            // 
-            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar;
-            this.imgMinimizar.Location = new System.Drawing.Point(740, 31);
-            this.imgMinimizar.Name = "imgMinimizar";
-            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 255;
-            this.imgMinimizar.TabStop = false;
-            this.imgMinimizar.Click += new System.EventHandler(this.imgMinimizar_Click);
-            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
-            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
+            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(142, 377);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(107, 30);
+            this.btnSalvar.TabIndex = 654;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = false;
             // 
             // frmUnavailability
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.imgFechar);
-            this.Controls.Add(this.imgMinimizar);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.dgvIndisponibilidade);
-            this.Controls.Add(this.dataGridView4);
-            this.Controls.Add(this.dtpIndisponibilidade);
-            this.Controls.Add(this.lblDataIndisponibilidade);
-            this.Controls.Add(this.lblObservação);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.ClientSize = new System.Drawing.Size(710, 459);
+            this.Controls.Add(this.panel);
             this.Controls.Add(this.lblIndisponibilidade);
-            this.Controls.Add(this.MenuLiriousBurguer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUnavailability";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unavailability";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvIndisponibilidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            this.panel.ResumeLayout(false);
+            this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.MenuLiriousBurguer.ResumeLayout(false);
-            this.MenuLiriousBurguer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarIndisponibilidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RichTextBox RichtxtObservação;
-        private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView dgvIndisponibilidade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DateTimePicker dtpIndisponibilidade;
-        private System.Windows.Forms.Label lblDataIndisponibilidade;
-        private System.Windows.Forms.Label lblObservação;
+
+        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblIndisponibilidade;
-        private System.Windows.Forms.MenuStrip MenuLiriousBurguer;
-        private System.Windows.Forms.ToolStripMenuItem cartãoDePontoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cartãoDePontoToolStripMenuItem1;
-        private System.Windows.Forms.PictureBox imgFechar;
-        private System.Windows.Forms.PictureBox imgMinimizar;
-        private System.Windows.Forms.ToolStripMenuItem inícioToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker dtpIndisponibilidade;
+        private System.Windows.Forms.Label lblDataDeIndisponibilidade;
+        private System.Windows.Forms.DataGridView dgvConsultarIndisponibilidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
+        private System.Windows.Forms.DataGridView dataGridView11;
+        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.RichTextBox rtxtObservação;
+        private System.Windows.Forms.Button btnSalvar;
     }
 }

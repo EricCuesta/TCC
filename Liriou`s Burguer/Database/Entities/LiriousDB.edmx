@@ -124,7 +124,6 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="ds_sex" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="dt_birth" Type="date" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
-          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
@@ -134,6 +133,12 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="pw_password" Type="varchar" MaxLength="24" Nullable="false" />
           <Property Name="dt_hiring" Type="date" Nullable="false" />
           <Property Name="dt_resignation" Type="date" Nullable="false" />
+          <Property Name="bt_admin" Type="bool" />
+          <Property Name="bt_funcionaro" Type="bool" />
+          <Property Name="bt_rh" Type="bool" />
+          <Property Name="bt_financeiro" Type="bool" />
+          <Property Name="bt_estoque" Type="bool" />
+          <Property Name="bt_crm" Type="bool" />
         </EntityType>
         <EntityType Name="tb_enterprise">
           <Key>
@@ -144,7 +149,6 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="nm_commercialName" Type="varchar" MaxLength="64" Nullable="false" />
           <Property Name="ds_typePerson" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="nr_identification" Type="varchar" MaxLength="18" Nullable="false" />
-          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
@@ -207,6 +211,7 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="vl_amount" Type="int" Nullable="false" />
           <Property Name="vl_value" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="64" />
+          <Property Name="ds_placeStock" Type="varchar" MaxLength="64" />
         </EntityType>
         <EntityType Name="tb_provider">
           <Key>
@@ -218,7 +223,6 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="ds_typePerson" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="nr_identification" Type="varchar" MaxLength="18" Nullable="false" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
@@ -240,8 +244,7 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ds_typeStock" Type="varchar" MaxLength="10" Nullable="false" />
-          <Property Name="ds_place" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ds_typeStock" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="tb_supply">
           <Key>
@@ -253,6 +256,7 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="vl_amount" Type="int" Nullable="false" />
           <Property Name="vl_value" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="64" />
+          <Property Name="ds_placeStock" Type="varchar" MaxLength="64" />
         </EntityType>
         <EntityType Name="tb_timecard">
           <Key>
@@ -388,18 +392,6 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tb_points_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_points">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="tb_product_ibfk_1">
           <End Role="tb_stock" Type="Self.tb_stock" Multiplicity="1" />
           <End Role="tb_product" Type="Self.tb_product" Multiplicity="*" />
@@ -421,18 +413,6 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             </Principal>
             <Dependent Role="tb_sale">
               <PropertyRef Name="id_client" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_supply_ibfk_1">
-          <End Role="tb_stock" Type="Self.tb_stock" Multiplicity="1" />
-          <End Role="tb_supply" Type="Self.tb_supply" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_stock">
-              <PropertyRef Name="id_stock" />
-            </Principal>
-            <Dependent Role="tb_supply">
-              <PropertyRef Name="id_stock" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -465,7 +445,6 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <EntitySet Name="tb_product" EntityType="Self.tb_product" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_sale" EntityType="Self.tb_sale" Schema="liriousdb" store:Type="Tables" />
-          <EntitySet Name="tb_stock" EntityType="Self.tb_stock" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_supply" EntityType="Self.tb_supply" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_timecard" EntityType="Self.tb_timecard" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" store:Type="Tables" store:Schema="liriousdb">
@@ -523,10 +502,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <End Role="tb_product" EntitySet="tb_product" />
             <End Role="tb_iten" EntitySet="tb_iten" />
           </AssociationSet>
-          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_points" EntitySet="tb_points" />
-          </AssociationSet>
           <AssociationSet Name="tb_product_ibfk_1" Association="Self.tb_product_ibfk_1">
             <End Role="tb_stock" EntitySet="tb_stock" />
             <End Role="tb_product" EntitySet="tb_product" />
@@ -534,10 +509,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <AssociationSet Name="tb_sale_ibfk_1" Association="Self.tb_sale_ibfk_1">
             <End Role="tb_client" EntitySet="tb_client" />
             <End Role="tb_sale" EntitySet="tb_sale" />
-          </AssociationSet>
-          <AssociationSet Name="tb_supply_ibfk_1" Association="Self.tb_supply_ibfk_1">
-            <End Role="tb_stock" EntitySet="tb_stock" />
-            <End Role="tb_supply" EntitySet="tb_supply" />
           </AssociationSet>
           <AssociationSet Name="tb_timecard_ibfk_1" Association="Self.tb_timecard_ibfk_1">
             <End Role="tb_employees" EntitySet="tb_employees" />
@@ -651,7 +622,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="ds_sex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="dt_birth" Type="DateTime" Nullable="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
@@ -661,6 +631,12 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="pw_password" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="dt_hiring" Type="DateTime" Nullable="false" />
           <Property Name="dt_resignation" Type="DateTime" Nullable="false" />
+          <Property Name="bt_admin" Type="Boolean" />
+          <Property Name="bt_funcionaro" Type="Boolean" />
+          <Property Name="bt_rh" Type="Boolean" />
+          <Property Name="bt_financeiro" Type="Boolean" />
+          <Property Name="bt_estoque" Type="Boolean" />
+          <Property Name="bt_crm" Type="Boolean" />
           <NavigationProperty Name="tb_department" Relationship="Self.tb_department_ibfk_1" FromRole="tb_employees" ToRole="tb_department" />
           <NavigationProperty Name="tb_discounts" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_employees" ToRole="tb_discounts" />
           <NavigationProperty Name="tb_financial" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_employees" ToRole="tb_financial" />
@@ -677,7 +653,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="nm_commercialName" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_identification" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
@@ -748,8 +723,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="vl_amount" Type="Int32" Nullable="false" />
           <Property Name="vl_value" Type="Decimal" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="ds_placeStock" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_iten" Relationship="Self.tb_iten_ibfk_3" FromRole="tb_product" ToRole="tb_iten" />
-          <NavigationProperty Name="tb_stock" Relationship="Self.tb_product_ibfk_1" FromRole="tb_product" ToRole="tb_stock" />
         </EntityType>
         <EntityType Name="tb_provider">
           <Key>
@@ -761,7 +736,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_identification" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
@@ -785,8 +759,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ds_typeStock" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_place" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_typeStock" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_product" Relationship="Self.tb_product_ibfk_1" FromRole="tb_stock" ToRole="tb_product" />
           <NavigationProperty Name="tb_supply" Relationship="Self.tb_supply_ibfk_1" FromRole="tb_stock" ToRole="tb_supply" />
         </EntityType>
@@ -800,7 +773,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="vl_amount" Type="Int32" Nullable="false" />
           <Property Name="vl_value" Type="Decimal" Nullable="false" />
           <Property Name="ds_note" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tb_stock" Relationship="Self.tb_supply_ibfk_1" FromRole="tb_supply" ToRole="tb_stock" />
+          <Property Name="ds_placeStock" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_timecard">
           <Key>
@@ -991,30 +964,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tb_product_ibfk_1">
-          <End Role="tb_stock" Type="Self.tb_stock" Multiplicity="1" />
-          <End Role="tb_product" Type="Self.tb_product" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_stock">
-              <PropertyRef Name="id_stock" />
-            </Principal>
-            <Dependent Role="tb_product">
-              <PropertyRef Name="id_stock" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_supply_ibfk_1">
-          <End Role="tb_stock" Type="Self.tb_stock" Multiplicity="1" />
-          <End Role="tb_supply" Type="Self.tb_supply" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_stock">
-              <PropertyRef Name="id_stock" />
-            </Principal>
-            <Dependent Role="tb_supply">
-              <PropertyRef Name="id_stock" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="liriousdbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_account" EntityType="Self.tb_account" />
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" />
@@ -1032,7 +981,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <EntitySet Name="tb_product" EntityType="Self.tb_product" />
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" />
           <EntitySet Name="tb_sale" EntityType="Self.tb_sale" />
-          <EntitySet Name="tb_stock" EntityType="Self.tb_stock" />
           <EntitySet Name="tb_supply" EntityType="Self.tb_supply" />
           <EntitySet Name="tb_timecard" EntityType="Self.tb_timecard" />
           <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" />
@@ -1088,14 +1036,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <AssociationSet Name="tb_iten_ibfk_3" Association="Self.tb_iten_ibfk_3">
             <End Role="tb_product" EntitySet="tb_product" />
             <End Role="tb_iten" EntitySet="tb_iten" />
-          </AssociationSet>
-          <AssociationSet Name="tb_product_ibfk_1" Association="Self.tb_product_ibfk_1">
-            <End Role="tb_stock" EntitySet="tb_stock" />
-            <End Role="tb_product" EntitySet="tb_product" />
-          </AssociationSet>
-          <AssociationSet Name="tb_supply_ibfk_1" Association="Self.tb_supply_ibfk_1">
-            <End Role="tb_stock" EntitySet="tb_stock" />
-            <End Role="tb_supply" EntitySet="tb_supply" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -1206,7 +1146,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="ds_sex" ColumnName="ds_sex" />
                 <ScalarProperty Name="dt_birth" ColumnName="dt_birth" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
-                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
                 <ScalarProperty Name="ds_address" ColumnName="ds_address" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
@@ -1216,6 +1155,12 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="pw_password" ColumnName="pw_password" />
                 <ScalarProperty Name="dt_hiring" ColumnName="dt_hiring" />
                 <ScalarProperty Name="dt_resignation" ColumnName="dt_resignation" />
+                <ScalarProperty Name="bt_admin" ColumnName="bt_admin" />
+                <ScalarProperty Name="bt_funcionaro" ColumnName="bt_funcionaro" />
+                <ScalarProperty Name="bt_rh" ColumnName="bt_rh" />
+                <ScalarProperty Name="bt_financeiro" ColumnName="bt_financeiro" />
+                <ScalarProperty Name="bt_estoque" ColumnName="bt_estoque" />
+                <ScalarProperty Name="bt_crm" ColumnName="bt_crm" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1227,7 +1172,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="nm_commercialName" ColumnName="nm_commercialName" />
                 <ScalarProperty Name="ds_typePerson" ColumnName="ds_typePerson" />
                 <ScalarProperty Name="nr_identification" ColumnName="nr_identification" />
-                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
                 <ScalarProperty Name="ds_address" ColumnName="ds_address" />
@@ -1295,6 +1239,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="vl_amount" ColumnName="vl_amount" />
                 <ScalarProperty Name="vl_value" ColumnName="vl_value" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
+                <ScalarProperty Name="ds_placeStock" ColumnName="ds_placeStock" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1307,7 +1252,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="ds_typePerson" ColumnName="ds_typePerson" />
                 <ScalarProperty Name="nr_identification" ColumnName="nr_identification" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
                 <ScalarProperty Name="ds_address" ColumnName="ds_address" />
@@ -1332,7 +1276,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
               <MappingFragment StoreEntitySet="tb_stock">
                 <ScalarProperty Name="id_stock" ColumnName="id_stock" />
                 <ScalarProperty Name="ds_typeStock" ColumnName="ds_typeStock" />
-                <ScalarProperty Name="ds_place" ColumnName="ds_place" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1345,6 +1288,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="vl_amount" ColumnName="vl_amount" />
                 <ScalarProperty Name="vl_value" ColumnName="vl_value" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
+                <ScalarProperty Name="ds_placeStock" ColumnName="ds_placeStock" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -83,7 +83,6 @@
     <Compile Include="Business\ProductBusiness.cs" />
     <Compile Include="Business\ProviderBusiness.cs" />
     <Compile Include="Business\SaleBusiness.cs" />
-    <Compile Include="Business\StockBusiness.cs" />
     <Compile Include="Business\SupplyBusiness.cs" />
     <Compile Include="Business\TimeCardBusiness.cs" />
     <Compile Include="CorreioApi\CorreioApi.cs" />
@@ -166,9 +165,6 @@
     <Compile Include="Database\Entities\tb_sale.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Entities\tb_stock.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Database\Entities\tb_supply.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
@@ -180,7 +176,6 @@
     <Compile Include="Database\ProductDatabase.cs" />
     <Compile Include="Database\ProviderDatabase.cs" />
     <Compile Include="Database\SaleDatabase.cs" />
-    <Compile Include="Database\StockDatabase.cs" />
     <Compile Include="Database\SupplyDatabase.cs" />
     <Compile Include="Database\TimeCardDatabase.cs" />
     <Compile Include="Model\EmployeesModel.cs" />
@@ -326,12 +321,6 @@
     <Compile Include="Screens\Manager\Login\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\frmConsultStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Manager\Stock\frmConsultStock.Designer.cs">
-      <DependentUpon>frmConsultStock.cs</DependentUpon>
-    </Compile>
     <Compile Include="Screens\Manager\Stock\Products\frmBrowseProducts.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -458,9 +447,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee1.resx">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\frmConsultStock.resx">
-      <DependentUpon>frmConsultStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Stock\Products\frmBrowseProducts.resx">
       <DependentUpon>frmBrowseProducts.cs</DependentUpon>

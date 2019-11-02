@@ -28,7 +28,6 @@ namespace Liriou_s_Burguer.Database
         public List<Entities.tb_supply> ConsultarPorNome(Entities.tb_supply supply)
         {
             List<Entities.tb_supply> list = db.tb_supply.Where(l => l.nm_supply == supply.nm_supply).ToList();
-            Entities.tb_stock stock = new Entities.tb_stock();
 
             return list;
         }

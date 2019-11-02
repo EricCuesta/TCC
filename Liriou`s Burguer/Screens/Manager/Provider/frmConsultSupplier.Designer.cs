@@ -32,18 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
             this.dgvConsultarFornecedor = new System.Windows.Forms.DataGridView();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
@@ -51,6 +39,18 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblConsultarFornecedor = new System.Windows.Forms.Label();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFornecedor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -60,8 +60,8 @@
             // 
             // panel
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.Controls.Add(this.label1);
             this.panel.Controls.Add(this.cboTipoDePessoa);
@@ -117,99 +117,19 @@
             this.Coluna2,
             this.Coluna3,
             this.Coluna4,
+            this.Coluna5,
             this.Coluna6,
             this.Coluna7,
             this.Coluna8,
             this.Coluna9,
             this.Coluna10,
             this.Coluna11,
-            this.Coluna12,
-            this.Coluna13});
+            this.Coluna12});
             this.dgvConsultarFornecedor.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvConsultarFornecedor.Location = new System.Drawing.Point(3, 77);
             this.dgvConsultarFornecedor.Name = "dgvConsultarFornecedor";
             this.dgvConsultarFornecedor.Size = new System.Drawing.Size(703, 338);
             this.dgvConsultarFornecedor.TabIndex = 651;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Nome";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 140;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Nome Fantásia";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 140;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Tipo de Pessoa";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 120;
-            // 
-            // Coluna4
-            // 
-            this.Coluna4.HeaderText = "Numeração";
-            this.Coluna4.Name = "Coluna4";
-            this.Coluna4.ReadOnly = true;
-            this.Coluna4.Width = 120;
-            // 
-            // Coluna6
-            // 
-            this.Coluna6.HeaderText = "País";
-            this.Coluna6.Name = "Coluna6";
-            this.Coluna6.ReadOnly = true;
-            // 
-            // Coluna7
-            // 
-            this.Coluna7.HeaderText = "Estado";
-            this.Coluna7.Name = "Coluna7";
-            this.Coluna7.ReadOnly = true;
-            this.Coluna7.Width = 120;
-            // 
-            // Coluna8
-            // 
-            this.Coluna8.HeaderText = "CEP";
-            this.Coluna8.Name = "Coluna8";
-            this.Coluna8.ReadOnly = true;
-            // 
-            // Coluna9
-            // 
-            this.Coluna9.HeaderText = "Endereço";
-            this.Coluna9.Name = "Coluna9";
-            this.Coluna9.ReadOnly = true;
-            this.Coluna9.Width = 120;
-            // 
-            // Coluna10
-            // 
-            this.Coluna10.HeaderText = "Complemento";
-            this.Coluna10.Name = "Coluna10";
-            this.Coluna10.ReadOnly = true;
-            this.Coluna10.Width = 120;
-            // 
-            // Coluna11
-            // 
-            this.Coluna11.HeaderText = "Celular";
-            this.Coluna11.Name = "Coluna11";
-            this.Coluna11.ReadOnly = true;
-            // 
-            // Coluna12
-            // 
-            this.Coluna12.HeaderText = "Telefone";
-            this.Coluna12.Name = "Coluna12";
-            this.Coluna12.ReadOnly = true;
-            // 
-            // Coluna13
-            // 
-            this.Coluna13.HeaderText = "E-mail";
-            this.Coluna13.Name = "Coluna13";
-            this.Coluna13.ReadOnly = true;
-            this.Coluna13.Width = 120;
             // 
             // btnConsultar
             // 
@@ -229,7 +149,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -298,6 +218,98 @@
             this.lblConsultarFornecedor.Text = "Consultar Fornecedor";
             this.lblConsultarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Coluna1
+            // 
+            this.Coluna1.DataPropertyName = "id_provider";
+            this.Coluna1.HeaderText = "ID";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.DataPropertyName = "nm_provider";
+            this.Coluna2.HeaderText = "Nome";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Width = 140;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.DataPropertyName = "nm_name";
+            this.Coluna3.HeaderText = "Nome Fantásia";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 140;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.DataPropertyName = "ds_typePerson";
+            this.Coluna4.HeaderText = "Tipo de Pessoa";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            this.Coluna4.Width = 120;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.DataPropertyName = "nr_identification";
+            this.Coluna5.HeaderText = "Numeração";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            this.Coluna5.Width = 120;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.DataPropertyName = "ds_state";
+            this.Coluna6.HeaderText = "Estado";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
+            this.Coluna6.Width = 120;
+            // 
+            // Coluna7
+            // 
+            this.Coluna7.DataPropertyName = "ds_cep";
+            this.Coluna7.HeaderText = "CEP";
+            this.Coluna7.Name = "Coluna7";
+            this.Coluna7.ReadOnly = true;
+            // 
+            // Coluna8
+            // 
+            this.Coluna8.DataPropertyName = "ds_address";
+            this.Coluna8.HeaderText = "Endereço";
+            this.Coluna8.Name = "Coluna8";
+            this.Coluna8.ReadOnly = true;
+            this.Coluna8.Width = 120;
+            // 
+            // Coluna9
+            // 
+            this.Coluna9.DataPropertyName = "ds_note";
+            this.Coluna9.HeaderText = "Complemento";
+            this.Coluna9.Name = "Coluna9";
+            this.Coluna9.ReadOnly = true;
+            this.Coluna9.Width = 120;
+            // 
+            // Coluna10
+            // 
+            this.Coluna10.DataPropertyName = "nr_cellphone";
+            this.Coluna10.HeaderText = "Celular";
+            this.Coluna10.Name = "Coluna10";
+            this.Coluna10.ReadOnly = true;
+            // 
+            // Coluna11
+            // 
+            this.Coluna11.DataPropertyName = "nr_tellphone";
+            this.Coluna11.HeaderText = "Telefone";
+            this.Coluna11.Name = "Coluna11";
+            this.Coluna11.ReadOnly = true;
+            // 
+            // Coluna12
+            // 
+            this.Coluna12.DataPropertyName = "ds_email";
+            this.Coluna12.HeaderText = "E-mail";
+            this.Coluna12.Name = "Coluna12";
+            this.Coluna12.ReadOnly = true;
+            this.Coluna12.Width = 120;
+            // 
             // frmConsultSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +350,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna8;
@@ -345,6 +358,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna11;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna13;
     }
 }
