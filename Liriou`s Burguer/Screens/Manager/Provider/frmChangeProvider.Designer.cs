@@ -29,18 +29,13 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtCNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.lblCPF = new System.Windows.Forms.Label();
+            this.lblCNPJ = new System.Windows.Forms.Label();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.txtPaís = new System.Windows.Forms.TextBox();
-            this.lblPaís = new System.Windows.Forms.Label();
-            this.panelCPF = new System.Windows.Forms.Panel();
-            this.panelCNPJ = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.mtxtCNPJ = new System.Windows.Forms.MaskedTextBox();
-            this.lblCPF = new System.Windows.Forms.Label();
-            this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
             this.lblTipoDePessoa = new System.Windows.Forms.Label();
             this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
             this.btnAlterar = new System.Windows.Forms.Button();
@@ -77,9 +72,6 @@
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            this.panelCPF.SuspendLayout();
-            this.panelCNPJ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
@@ -95,16 +87,16 @@
             // 
             // panel
             // 
-            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.Controls.Add(this.mtxtCPF);
+            this.panel.Controls.Add(this.mtxtCNPJ);
+            this.panel.Controls.Add(this.lblCPF);
+            this.panel.Controls.Add(this.lblCNPJ);
             this.panel.Controls.Add(this.dataGridView7);
             this.panel.Controls.Add(this.nudId);
             this.panel.Controls.Add(this.lblID);
-            this.panel.Controls.Add(this.dataGridView4);
-            this.panel.Controls.Add(this.txtPaís);
-            this.panel.Controls.Add(this.lblPaís);
-            this.panel.Controls.Add(this.panelCPF);
             this.panel.Controls.Add(this.lblTipoDePessoa);
             this.panel.Controls.Add(this.cboTipoDePessoa);
             this.panel.Controls.Add(this.btnAlterar);
@@ -142,6 +134,58 @@
             this.panel.Size = new System.Drawing.Size(709, 418);
             this.panel.TabIndex = 568;
             // 
+            // mtxtCPF
+            // 
+            this.mtxtCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtCPF.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCPF.Location = new System.Drawing.Point(446, 70);
+            this.mtxtCPF.Mask = "000000000/00";
+            this.mtxtCPF.Name = "mtxtCPF";
+            this.mtxtCPF.Size = new System.Drawing.Size(260, 23);
+            this.mtxtCPF.TabIndex = 645;
+            this.mtxtCPF.Visible = false;
+            // 
+            // mtxtCNPJ
+            // 
+            this.mtxtCNPJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtCNPJ.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCNPJ.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCNPJ.Location = new System.Drawing.Point(415, 70);
+            this.mtxtCNPJ.Mask = "00.000.000/0000-00";
+            this.mtxtCNPJ.Name = "mtxtCNPJ";
+            this.mtxtCNPJ.Size = new System.Drawing.Size(290, 23);
+            this.mtxtCNPJ.TabIndex = 645;
+            this.mtxtCNPJ.Visible = false;
+            // 
+            // lblCPF
+            // 
+            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCPF.AutoSize = true;
+            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCPF.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCPF.Location = new System.Drawing.Point(361, 72);
+            this.lblCPF.Name = "lblCPF";
+            this.lblCPF.Size = new System.Drawing.Size(78, 19);
+            this.lblCPF.TabIndex = 646;
+            this.lblCPF.Text = "CNPJ/CPF:";
+            this.lblCPF.Visible = false;
+            // 
+            // lblCNPJ
+            // 
+            this.lblCNPJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCNPJ.AutoSize = true;
+            this.lblCNPJ.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCNPJ.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCNPJ.Location = new System.Drawing.Point(361, 72);
+            this.lblCNPJ.Name = "lblCNPJ";
+            this.lblCNPJ.Size = new System.Drawing.Size(48, 19);
+            this.lblCNPJ.TabIndex = 646;
+            this.lblCNPJ.Text = "CNPJ:";
+            this.lblCNPJ.Visible = false;
+            // 
             // dataGridView7
             // 
             this.dataGridView7.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -160,6 +204,7 @@
             this.nudId.Name = "nudId";
             this.nudId.Size = new System.Drawing.Size(120, 23);
             this.nudId.TabIndex = 663;
+            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
             // 
             // lblID
             // 
@@ -171,110 +216,6 @@
             this.lblID.Size = new System.Drawing.Size(37, 26);
             this.lblID.TabIndex = 662;
             this.lblID.Text = "ID:";
-            // 
-            // dataGridView4
-            // 
-            this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(230, 100);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView4.TabIndex = 652;
-            // 
-            // txtPaís
-            // 
-            this.txtPaís.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPaís.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtPaís.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPaís.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaís.Location = new System.Drawing.Point(50, 102);
-            this.txtPaís.MaxLength = 32;
-            this.txtPaís.Name = "txtPaís";
-            this.txtPaís.Size = new System.Drawing.Size(174, 23);
-            this.txtPaís.TabIndex = 651;
-            // 
-            // lblPaís
-            // 
-            this.lblPaís.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblPaís.AutoSize = true;
-            this.lblPaís.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPaís.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblPaís.Location = new System.Drawing.Point(3, 104);
-            this.lblPaís.Name = "lblPaís";
-            this.lblPaís.Size = new System.Drawing.Size(41, 19);
-            this.lblPaís.TabIndex = 650;
-            this.lblPaís.Text = "País:";
-            // 
-            // panelCPF
-            // 
-            this.panelCPF.Controls.Add(this.panelCNPJ);
-            this.panelCPF.Controls.Add(this.lblCPF);
-            this.panelCPF.Controls.Add(this.mtxtCPF);
-            this.panelCPF.Location = new System.Drawing.Point(356, 67);
-            this.panelCPF.Name = "panelCPF";
-            this.panelCPF.Size = new System.Drawing.Size(353, 30);
-            this.panelCPF.TabIndex = 649;
-            this.panelCPF.Visible = false;
-            // 
-            // panelCNPJ
-            // 
-            this.panelCNPJ.Controls.Add(this.label2);
-            this.panelCNPJ.Controls.Add(this.mtxtCNPJ);
-            this.panelCNPJ.Location = new System.Drawing.Point(0, 0);
-            this.panelCNPJ.Name = "panelCNPJ";
-            this.panelCNPJ.Size = new System.Drawing.Size(353, 30);
-            this.panelCNPJ.TabIndex = 650;
-            this.panelCNPJ.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 19);
-            this.label2.TabIndex = 646;
-            this.label2.Text = "CNPJ:";
-            // 
-            // mtxtCNPJ
-            // 
-            this.mtxtCNPJ.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtxtCNPJ.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mtxtCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxtCNPJ.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCNPJ.Location = new System.Drawing.Point(57, 3);
-            this.mtxtCNPJ.Mask = "00.000.000/0000-00";
-            this.mtxtCNPJ.Name = "mtxtCNPJ";
-            this.mtxtCNPJ.Size = new System.Drawing.Size(292, 23);
-            this.mtxtCNPJ.TabIndex = 645;
-            // 
-            // lblCPF
-            // 
-            this.lblCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCPF.AutoSize = true;
-            this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCPF.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCPF.Location = new System.Drawing.Point(3, 5);
-            this.lblCPF.Name = "lblCPF";
-            this.lblCPF.Size = new System.Drawing.Size(78, 19);
-            this.lblCPF.TabIndex = 646;
-            this.lblCPF.Text = "CNPJ/CPF:";
-            // 
-            // mtxtCPF
-            // 
-            this.mtxtCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtxtCPF.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.Location = new System.Drawing.Point(87, 3);
-            this.mtxtCPF.Mask = "000000000/00";
-            this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(262, 23);
-            this.mtxtCPF.TabIndex = 645;
             // 
             // lblTipoDePessoa
             // 
@@ -526,10 +467,10 @@
             this.mtxtCEP.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCEP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCEP.Location = new System.Drawing.Point(569, 102);
+            this.mtxtCEP.Location = new System.Drawing.Point(406, 102);
             this.mtxtCEP.Mask = "00000-000";
             this.mtxtCEP.Name = "mtxtCEP";
-            this.mtxtCEP.Size = new System.Drawing.Size(136, 23);
+            this.mtxtCEP.Size = new System.Drawing.Size(299, 23);
             this.mtxtCEP.TabIndex = 618;
             this.mtxtCEP.TextChanged += new System.EventHandler(this.mtxtCEP_TextChanged);
             // 
@@ -539,7 +480,7 @@
             this.lblCEP.AutoSize = true;
             this.lblCEP.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCEP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCEP.Location = new System.Drawing.Point(524, 104);
+            this.lblCEP.Location = new System.Drawing.Point(361, 104);
             this.lblCEP.Name = "lblCEP";
             this.lblCEP.Size = new System.Drawing.Size(39, 19);
             this.lblCEP.TabIndex = 617;
@@ -580,10 +521,10 @@
             "São Paulo",
             "Sergipe",
             "Tocantins"});
-            this.cboEstado.Location = new System.Drawing.Point(304, 102);
+            this.cboEstado.Location = new System.Drawing.Point(69, 102);
             this.cboEstado.MaxLength = 32;
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(206, 23);
+            this.cboEstado.Size = new System.Drawing.Size(278, 23);
             this.cboEstado.TabIndex = 616;
             // 
             // dataGridView8
@@ -592,7 +533,7 @@
             this.dataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(516, 99);
+            this.dataGridView8.Location = new System.Drawing.Point(353, 99);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.Size = new System.Drawing.Size(2, 30);
             this.dataGridView8.TabIndex = 614;
@@ -603,7 +544,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Location = new System.Drawing.Point(238, 104);
+            this.lblEstado.Location = new System.Drawing.Point(3, 104);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(60, 19);
             this.lblEstado.TabIndex = 613;
@@ -656,12 +597,12 @@
             // 
             // lblNomeFantásia
             // 
-            this.lblNomeFantásia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.lblNomeFantásia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomeFantásia.AutoSize = true;
             this.lblNomeFantásia.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeFantásia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNomeFantásia.Location = new System.Drawing.Point(361, 42);
+            this.lblNomeFantásia.Location = new System.Drawing.Point(362, 42);
             this.lblNomeFantásia.Name = "lblNomeFantásia";
             this.lblNomeFantásia.Size = new System.Drawing.Size(91, 15);
             this.lblNomeFantásia.TabIndex = 567;
@@ -669,7 +610,7 @@
             // 
             // txtNome
             // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -720,11 +661,6 @@
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            this.panelCPF.ResumeLayout(false);
-            this.panelCPF.PerformLayout();
-            this.panelCNPJ.ResumeLayout(false);
-            this.panelCNPJ.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
@@ -744,12 +680,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        public System.Windows.Forms.TextBox txtPaís;
-        private System.Windows.Forms.Label lblPaís;
-        private System.Windows.Forms.Panel panelCPF;
-        private System.Windows.Forms.Panel panelCNPJ;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCNPJ;
         public System.Windows.Forms.MaskedTextBox mtxtCNPJ;
         private System.Windows.Forms.Label lblCPF;
         public System.Windows.Forms.MaskedTextBox mtxtCPF;

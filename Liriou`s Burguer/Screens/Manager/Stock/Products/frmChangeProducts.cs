@@ -29,7 +29,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
                 txtNome.Text = string.Empty;
                 cboTipo.Text = null;
                 nudQuantidade.Value = 0;
-                nudValor.Value = Convert.ToInt32("0,00");
+                nudValor.Value = Convert.ToDecimal("0,00");
                 rtxtDescrição.Text = string.Empty;
             }
             else
@@ -47,16 +47,17 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             try
             {
                 Database.Entities.tb_product product = new Database.Entities.tb_product();
-                product.nm_product = txtNome.Text;
-                product.ds_typeProduct = cboTipo.Text;
+                product.id_product = Convert.ToInt32(nudId.Value);
+                product.nm_product = txtNome.Text.Trim();
+                product.ds_typeProduct = cboTipo.Text.Trim();
                 product.vl_amount = Convert.ToInt32(nudQuantidade.Value);
                 product.vl_value = nudValor.Value;
-                product.ds_note = rtxtDescrição.Text;
+                product.ds_note = rtxtDescrição.Text.Trim();
 
                 Business.ProductBusiness busproduct = new Business.ProductBusiness();
-                busproduct.Inserir(product);
+                busproduct.Alterar(product);
 
-                MessageBox.Show("Produto cadastrado com sucesso");
+                MessageBox.Show("Produto alterado com sucesso");
             }
             catch (ArgumentException ex)
             {

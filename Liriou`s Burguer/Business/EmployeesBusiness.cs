@@ -6,197 +6,136 @@ namespace Liriou_s_Burguer.Business
 {
     class EmployeesBusiness
     {
-        public void Verificar(Database.Entities.tb_employees verificar)
+        Database.EmployeesDatabase db = new Database.EmployeesDatabase();
+
+        public bool VerificarLogin(Database.Entities.tb_employees login)
         {
-            
-            Database.EmployeesDatabase dbemp = new Database.EmployeesDatabase();
-            Database.Entities.tb_employees db = dbemp.Verificar(verificar);
+            if (login.ds_email == string.Empty || login.ds_email == "Email do usuário")
+                throw new ArgumentException("O campo email deve ser preenchido");
 
-            if (verificar.ds_email == string.Empty)
-            {
-                throw new ArgumentException("Email não preenchido!");
-            }
-            if (verificar.pw_password == string.Empty)
-            {
-                throw new ArgumentException("Senha não preenchida!");
-            }
+            if (login.pw_password == string.Empty || login.pw_password == "Senha do usuário")
+                throw new ArgumentException("O campo senha deve ser preenchido");
 
-            if (db == null)
-                throw new ArgumentException("Credencial inválida");
+            bool verificacao = db.Login(login);
+
+            if (verificacao == true)
+                return true;
             else
-            {
-                Model.UsuarioLogado.ID = db.id_emp;
-                Model.UsuarioLogado.rg = db.ds_rg;
-                Model.UsuarioLogado.cpf = db.ds_cpf;
-                Model.UsuarioLogado.telefone = db.nr_tellphone;
-                Model.UsuarioLogado.celular = db.nr_cellphone;
-            }
+                return false;
         }
-        public List<Database.Entities.tb_employees>Consultar()
-        {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            List<Database.Entities.tb_employees> list = DB.Consultar();
-            return list;
-        }
-        public List<Database.Entities.tb_employees>ConsultarFuncionario(string nome)
-        {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            List<Database.Entities.tb_employees> list = DB.ConsultarFuncionario(nome);
-            return list;
-        }
-        public List<Database.Entities.tb_employees> ConsultarFuncionarioRG(string rg)
-        {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            List<Database.Entities.tb_employees> list = DB.ConsultarFuncionarioRG(rg);
-            return list;
-        }
-        public List<Database.Entities.tb_employees> ConsultarFuncionarioData(DateTime data)
-        {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            List<Database.Entities.tb_employees> list = DB.ConsultarData(data);
-            return list;
-        }
-        public string AlterarRecuperação(string senha, string cpf,
-                                       string rg, string cell)
-        {
-            Database.EmployeesDatabase dbemp = new Database.EmployeesDatabase();
 
-            if (senha == string.Empty || senha == "Senha do usuário")
-            {
-                return "O campo senha deve ser preenchido";
-            }
-            else
-            {
-                dbemp.AlterarRecuperação(senha, cpf, rg, cell);
-            }
-
-            return "Alterado com sucesso!";
+        public void VerificarCadastro(Model.EmployeesModel model)
+        {
+            if (model.firstName == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (model.lastName == string.Empty)
+                throw new ArgumentException("O campo sobrenome deve ser preenchido");
+            if (model.RG == string.Empty)
+                throw new ArgumentException("O campo RG deve ser preenchido");
+            if (model.CPF == string.Empty)
+                throw new ArgumentException("O campo CPF deve ser preenchido");       
+            if (model.sex == string.Empty)
+                throw new ArgumentException("O campo sexo deve ser preenchido");
+            if (model.state == string.Empty)
+                throw new ArgumentException("O campo Estado deve ser preenchido");
+            if (model.CEP == string.Empty)
+                throw new ArgumentException("O campo CEP deve ser preenchido");
+            if (model.address == string.Empty)
+                throw new ArgumentException("O campo endereço deve ser preenchido");
+            if (model.note == string.Empty)
+                throw new ArgumentException("O campo complemento deve ser preenchido");
+            if (model.cellphone == string.Empty && model.tellphone == string.Empty)
+                throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
+            if (model.email == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            if (model.password == string.Empty)
+                throw new ArgumentException("O campo nome deve ser preenchido");
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(model.email);
+            if (match.Success == false)
+                throw new ArgumentException(model.email + " é um e-mail inválido!");
         }
-        
+
         public void Inserir(Database.Entities.tb_employees employees)
         {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            DB.Inserir(employees);
+            db.Inserir(employees);
         }
 
-        public List<Database.Entities.tb_employees> Consultar(string email, string senha)
-        {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            List<Database.Entities.tb_employees> list = DB.Consultar();
 
-            return list;
-        }
 
-        public string Login(string email, string senha)
-        {
-            if (email == string.Empty)
-            {
-                return "Email obrigatório!";
-            }
-            if (senha == string.Empty)
-            {
-                return "Senha obrigatória!";
-            }
-            Database.Entities.tb_employees db = new Database.Entities.tb_employees();
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            bool v = DB.Login(email, senha);
-            if (email == "admim@gmail.com" && senha == "1234")
-            {
-                return "true";
-            }
-            else if (v == true)
-            {
-                return "false";
-            }
-            else
-            {
-                return "Email e senha não existem!";
-            }
-        }
 
-        public void Alterar(Database.Entities.tb_employees employees)
-        {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            DB.Alterar(employees);
-        }
 
-        public void Remover(int id)
-        {
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            DB.Remover(id);
-        }
 
-        public Database.Entities.tb_employees BuscarPorID(int id)
-        {
 
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            Database.Entities.tb_employees list = DB.BuscarPorID(id);
-            return list;
-        }
 
-        public string VerificarCadastro (Model.EmployeesModel model)
-        {
-            if (model.Nome == string.Empty)
-            {
-                return "Nome não pode ser vazio";
-            }
+    //    public List<Database.Entities.tb_employees> Consultar()
+    //    {
+    //        List<Database.Entities.tb_employees> list = db.Consultar();
+    //        return list;
+    //    }
 
-            if (model.LastName == string.Empty)
-            {
-                return "Sobrenome não pode ser vazio";
-            }
-            if (model.CPF == string.Empty)
-            {
-                return "CPF deve ser preenchido!";
-            }
+    //    public List<Database.Entities.tb_employees> ConsultarFuncionario(string nome)
+    //    {
+    //        List<Database.Entities.tb_employees> list = db.ConsultarFuncionario(nome);
+    //        return list;
+    //    }
 
-            if (model.CEP == string.Empty)
-            {
-                return "CEP deve ser preenchido!";
-            }
+    //    public List<Database.Entities.tb_employees> ConsultarFuncionarioRG(string rg)
+    //    {
+    //        List<Database.Entities.tb_employees> list = db.ConsultarFuncionarioRG(rg);
+    //        return list;
+    //    }
 
-            if (model.RG == string.Empty)
-            {
-                return "RG deve ser preenchido!";
-            }
-            if (model.Cellphone == string.Empty)
-            {
-                return "Celular deve ser preenchido!";
-            }
+    //    public List<Database.Entities.tb_employees> ConsultarFuncionarioData(DateTime data)
+    //    {
+    //        List<Database.Entities.tb_employees> list = db.ConsultarData(data);
+    //        return list;
+    //    }
 
-            if (model.Email == string.Empty)
-            {
-                return "Email deve ser preenchido!";
-            }
+    //    public string AlterarRecuperação(string senha, string cpf,
+    //                                   string rg, string cell)
+    //    {
+    //        if (senha == string.Empty || senha == "Senha do usuário")
+    //        {
+    //            return "O campo senha deve ser preenchido";
+    //        }
+    //        else
+    //        {
+    //            db.AlterarRecuperação(senha, cpf, rg, cell);
+    //        }
 
-            if (model.Password == string.Empty)
-            {
-                return "Senha deve ser preenchido!";
-            }
-            if (model.RG.Length < 6)
-            {
-                return "Tipo de RG inválido!";
-            }
-            if (model.CEP.Length < 9)
-            {
-                return "CEP Inválido";
-            }
-            if (model.Cellphone.Length < 16)
-            {
-                return "Celular inválido";
-            }
+    //        return "Alterado com sucesso!";
+    //    }
 
-            string email = model.Email;
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(email);
-            if (match.Success)
-            {
-                return "true";
-            }
-            else
-            {
-                return email + " é um Email inválido!";
-            }
-        }
+    //    public void Inserir(Database.Entities.tb_employees employees)
+    //    {
+    //        db.Inserir(employees);
+    //    }
+
+    //    public List<Database.Entities.tb_employees> Consultar(string email, string senha)
+    //    {
+    //        List<Database.Entities.tb_employees> list = db.Consultar();
+
+    //        return list;
+    //    }
+
+    //    public void Alterar(Database.Entities.tb_employees employees)
+    //    {
+    //        db.Alterar(employees);
+    //    }
+
+    //    public void Remover(int id)
+    //    {
+    //        Database.EmployeesDatabase db = new Database.EmployeesDatabase();
+    //        db.Remover(id);
+    //    }
+
+    //    public Database.Entities.tb_employees BuscarPorID(int id)
+    //    {
+
+    //        Database.EmployeesDatabase db = new Database.EmployeesDatabase();
+    //        Database.Entities.tb_employees list = db.BuscarPorID(id);
+    //        return list;
+    //    }
     }
 }

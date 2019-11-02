@@ -18,7 +18,7 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo tipo deve ser definido");
             if (product.vl_amount == 0)
                 throw new ArgumentException("O campo quantidade deve ser preenchido");
-            if (product.vl_value == Convert.ToInt32("0,00"))
+            if (product.vl_value == Convert.ToDecimal("0,00"))
                 throw new ArgumentException("O campo valor deve ser preenchido");
 
             db.Inserir(product);
@@ -37,9 +37,9 @@ namespace Liriou_s_Burguer.Business
             Database.ProductDatabase dbproduct = new Database.ProductDatabase();
             List<Database.Entities.tb_product> list = new List<Database.Entities.tb_product>();
 
-            if (product.nm_product == string.Empty)
+            if (product.nm_product != string.Empty && product.ds_typeProduct == string.Empty)
                 list = dbproduct.ConsultarPorNome(product);
-            else if (product.ds_typeProduct == string.Empty)
+            else if (product.ds_typeProduct != string.Empty && product.nm_product == string.Empty)
                 list = dbproduct.ConsultarPorTipo(product);
 
             return list;
@@ -59,7 +59,7 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo tipo deve ser definido");
             if (product.vl_amount == 0)
                 throw new ArgumentException("O campo quantidade deve ser preenchido");
-            if (product.vl_value == Convert.ToInt32("0,00"))
+            if (product.vl_value == Convert.ToDecimal("0,00"))
                 throw new ArgumentException("O campo valor deve ser preenchido");
             db.Alterar(product);
         }

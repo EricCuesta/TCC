@@ -17,16 +17,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             InitializeComponent();
         }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(nudID.Value);
-
-            Business.SupplyBusiness bussupplies = new Business.SupplyBusiness();
-            bussupplies.Remover(id);
-
-            MessageBox.Show("Suprimento deletado com sucesso");
-        }
-
         private void nudId_ValueChanged(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(nudID.Value);
@@ -48,6 +38,16 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
                 nudValor.Value = supply.vl_value;
                 rtxtDescrição.Text = supply.ds_note;
             }
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(nudID.Value);
+
+            Business.SupplyBusiness bussupplies = new Business.SupplyBusiness();
+            bussupplies.Remover(id);
+
+            MessageBox.Show("Suprimento deletado com sucesso");
         }
     }
 }

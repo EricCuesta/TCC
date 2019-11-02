@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Liriou_s_Burguer.Screens
+namespace Liriou_s_Burguer.Screens.Login
 {
     public partial class frmRecovery : Form
     {

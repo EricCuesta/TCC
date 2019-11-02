@@ -9,21 +9,20 @@ namespace Liriou_s_Burguer.Model
      class EmployeesModel
     {
         public int ID { get; set; }
-        public string Nome { get; set; }
-        public string LastName { get; set; }
-        public string Sex { get; set; }
-        public string CPF { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
         public string RG { get; set; }
-        public string Dependents { get; set; }
-        public string State{ get; set; }
-        public string Country { get; set; }
+        public string CPF { get; set; }
+        public int dependents { get; set; }
+        public string sex { get; set; }
+        public DateTime birth { get; set; }
+        public string state{ get; set; }
         public string CEP { get; set; }
-        public string Note { get; set; }
-        public string Address { get; set; }
-        public string Cellphone { get; set; }
-        public string Tellphone { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public DateTime Birth { get; set; }
+        public string address { get; set; }
+        public string note { get; set; }   
+        public string cellphone { get; set; }
+        public string tellphone { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
     }
 }

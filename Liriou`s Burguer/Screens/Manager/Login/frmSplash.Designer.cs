@@ -1,4 +1,4 @@
-﻿namespace Liriou_s_Burguer.Screens
+﻿namespace Liriou_s_Burguer.Screens.Login
 {
     partial class frmSplash
     {

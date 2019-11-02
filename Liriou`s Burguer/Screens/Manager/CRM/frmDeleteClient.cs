@@ -17,16 +17,6 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             InitializeComponent();
         }
 
-        private void btnDeletar_Click(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(nudId.Value);
-
-            Business.ClientBusiness busclient = new Business.ClientBusiness();
-            busclient.Deletar(id);
-
-            MessageBox.Show("Cliente deletado com sucesso");
-        }
-
         private void nudId_ValueChanged(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(nudId.Value);
@@ -69,6 +59,16 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 mtxtTelefone.Text = client.nr_tellphone;
                 txtEmail.Text = client.ds_email;
             }
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(nudId.Value);
+
+            Business.ClientBusiness busclient = new Business.ClientBusiness();
+            busclient.Deletar(id);
+
+            MessageBox.Show("Cliente deletado com sucesso");
         }
     }
 }

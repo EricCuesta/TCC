@@ -211,7 +211,7 @@
             this.btnDeletarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarCliente.Location = new System.Drawing.Point(25, 100);
             this.btnDeletarCliente.Name = "btnDeletarCliente";
-            this.btnDeletarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnDeletarCliente.Size = new System.Drawing.Size(215, 26);
             this.btnDeletarCliente.TabIndex = 15;
             this.btnDeletarCliente.Text = "Deletar Cliente";
             this.btnDeletarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,7 +231,7 @@
             this.btnAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarCliente.Location = new System.Drawing.Point(25, 68);
             this.btnAlterarCliente.Name = "btnAlterarCliente";
-            this.btnAlterarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarCliente.Size = new System.Drawing.Size(215, 26);
             this.btnAlterarCliente.TabIndex = 14;
             this.btnAlterarCliente.Text = "Alterar Cliente";
             this.btnAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,7 +251,7 @@
             this.btnConsultarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarCliente.Location = new System.Drawing.Point(25, 36);
             this.btnConsultarCliente.Name = "btnConsultarCliente";
-            this.btnConsultarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarCliente.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarCliente.TabIndex = 13;
             this.btnConsultarCliente.Text = "Consultar Cliente";
             this.btnConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -271,7 +271,7 @@
             this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarCliente.Location = new System.Drawing.Point(25, 4);
             this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(215, 26);
             this.btnCadastrarCliente.TabIndex = 11;
             this.btnCadastrarCliente.Text = "Cadastrar Cliente";
             this.btnCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,7 +302,7 @@
             this.btnCRM.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCRM.Location = new System.Drawing.Point(4, 2);
             this.btnCRM.Name = "btnCRM";
-            this.btnCRM.Size = new System.Drawing.Size(229, 28);
+            this.btnCRM.Size = new System.Drawing.Size(236, 28);
             this.btnCRM.TabIndex = 0;
             this.btnCRM.Text = "CRM";
             this.btnCRM.UseVisualStyleBackColor = false;
@@ -364,7 +364,7 @@
             this.btnDeletarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarSuprimentos.Location = new System.Drawing.Point(25, 230);
             this.btnDeletarSuprimentos.Name = "btnDeletarSuprimentos";
-            this.btnDeletarSuprimentos.Size = new System.Drawing.Size(208, 26);
+            this.btnDeletarSuprimentos.Size = new System.Drawing.Size(215, 26);
             this.btnDeletarSuprimentos.TabIndex = 30;
             this.btnDeletarSuprimentos.Text = "Deletar Suprimentos";
             this.btnDeletarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -400,7 +400,7 @@
             this.btnConsultarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarSuprimentos.Location = new System.Drawing.Point(25, 166);
             this.btnConsultarSuprimentos.Name = "btnConsultarSuprimentos";
-            this.btnConsultarSuprimentos.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarSuprimentos.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarSuprimentos.TabIndex = 26;
             this.btnConsultarSuprimentos.Text = "Consultar Suprimentos";
             this.btnConsultarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -420,7 +420,7 @@
             this.btnAlterarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarSuprimentos.Location = new System.Drawing.Point(25, 198);
             this.btnAlterarSuprimentos.Name = "btnAlterarSuprimentos";
-            this.btnAlterarSuprimentos.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarSuprimentos.Size = new System.Drawing.Size(215, 26);
             this.btnAlterarSuprimentos.TabIndex = 29;
             this.btnAlterarSuprimentos.Text = "Alterar Suprimentos";
             this.btnAlterarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -448,7 +448,7 @@
             this.btnCadastrarSuprimentos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarSuprimentos.Location = new System.Drawing.Point(25, 134);
             this.btnCadastrarSuprimentos.Name = "btnCadastrarSuprimentos";
-            this.btnCadastrarSuprimentos.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarSuprimentos.Size = new System.Drawing.Size(215, 26);
             this.btnCadastrarSuprimentos.TabIndex = 25;
             this.btnCadastrarSuprimentos.Text = "Cadastrar Suprimentos";
             this.btnCadastrarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -476,7 +476,7 @@
             this.btnConsultarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarEstoque.Location = new System.Drawing.Point(25, 262);
             this.btnConsultarEstoque.Name = "btnConsultarEstoque";
-            this.btnConsultarEstoque.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarEstoque.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarEstoque.TabIndex = 17;
             this.btnConsultarEstoque.Text = "Consultar Estoque";
             this.btnConsultarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -503,7 +503,7 @@
             this.btnDeletarProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarProdutos.Location = new System.Drawing.Point(25, 102);
             this.btnDeletarProdutos.Name = "btnDeletarProdutos";
-            this.btnDeletarProdutos.Size = new System.Drawing.Size(208, 26);
+            this.btnDeletarProdutos.Size = new System.Drawing.Size(215, 26);
             this.btnDeletarProdutos.TabIndex = 15;
             this.btnDeletarProdutos.Text = "Deletar Produtos";
             this.btnDeletarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -539,7 +539,7 @@
             this.btnConsultarProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarProdutos.Location = new System.Drawing.Point(25, 38);
             this.btnConsultarProdutos.Name = "btnConsultarProdutos";
-            this.btnConsultarProdutos.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarProdutos.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarProdutos.TabIndex = 13;
             this.btnConsultarProdutos.Text = "Consultar Produtos";
             this.btnConsultarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -559,7 +559,7 @@
             this.btnAlterarProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarProdutos.Location = new System.Drawing.Point(25, 70);
             this.btnAlterarProdutos.Name = "btnAlterarProdutos";
-            this.btnAlterarProdutos.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarProdutos.Size = new System.Drawing.Size(215, 26);
             this.btnAlterarProdutos.TabIndex = 14;
             this.btnAlterarProdutos.Text = "Alterar Produtos";
             this.btnAlterarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -587,7 +587,7 @@
             this.btnCadastrarProdutos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarProdutos.Location = new System.Drawing.Point(25, 6);
             this.btnCadastrarProdutos.Name = "btnCadastrarProdutos";
-            this.btnCadastrarProdutos.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarProdutos.Size = new System.Drawing.Size(215, 26);
             this.btnCadastrarProdutos.TabIndex = 11;
             this.btnCadastrarProdutos.Text = "Cadastrar Produtos";
             this.btnCadastrarProdutos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -618,7 +618,7 @@
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEstoque.Location = new System.Drawing.Point(4, 2);
             this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(229, 28);
+            this.btnEstoque.Size = new System.Drawing.Size(236, 28);
             this.btnEstoque.TabIndex = 0;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = false;
@@ -670,7 +670,7 @@
             this.btnDeletarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarFornecedor.Location = new System.Drawing.Point(25, 102);
             this.btnDeletarFornecedor.Name = "btnDeletarFornecedor";
-            this.btnDeletarFornecedor.Size = new System.Drawing.Size(208, 26);
+            this.btnDeletarFornecedor.Size = new System.Drawing.Size(215, 26);
             this.btnDeletarFornecedor.TabIndex = 22;
             this.btnDeletarFornecedor.Text = "Deletar Fornecedor";
             this.btnDeletarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -706,7 +706,7 @@
             this.btnConsultarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarFornecedor.Location = new System.Drawing.Point(25, 38);
             this.btnConsultarFornecedor.Name = "btnConsultarFornecedor";
-            this.btnConsultarFornecedor.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarFornecedor.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarFornecedor.TabIndex = 18;
             this.btnConsultarFornecedor.Text = "Consultar Fornecedor";
             this.btnConsultarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -726,7 +726,7 @@
             this.btnAlterarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarFornecedor.Location = new System.Drawing.Point(25, 70);
             this.btnAlterarFornecedor.Name = "btnAlterarFornecedor";
-            this.btnAlterarFornecedor.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarFornecedor.Size = new System.Drawing.Size(215, 26);
             this.btnAlterarFornecedor.TabIndex = 21;
             this.btnAlterarFornecedor.Text = "Alterar Fornecedor";
             this.btnAlterarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -754,7 +754,7 @@
             this.btnCadastrarFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarFornecedor.Location = new System.Drawing.Point(25, 6);
             this.btnCadastrarFornecedor.Name = "btnCadastrarFornecedor";
-            this.btnCadastrarFornecedor.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarFornecedor.Size = new System.Drawing.Size(215, 26);
             this.btnCadastrarFornecedor.TabIndex = 17;
             this.btnCadastrarFornecedor.Text = "Cadastrar Fornecedor";
             this.btnCadastrarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -785,7 +785,7 @@
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFornecedor.Location = new System.Drawing.Point(4, 2);
             this.btnFornecedor.Name = "btnFornecedor";
-            this.btnFornecedor.Size = new System.Drawing.Size(229, 28);
+            this.btnFornecedor.Size = new System.Drawing.Size(236, 28);
             this.btnFornecedor.TabIndex = 0;
             this.btnFornecedor.Text = "Fornecedor";
             this.btnFornecedor.UseVisualStyleBackColor = false;
@@ -831,7 +831,7 @@
             this.btnConsultarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarConta.Location = new System.Drawing.Point(25, 68);
             this.btnConsultarConta.Name = "btnConsultarConta";
-            this.btnConsultarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarConta.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarConta.TabIndex = 28;
             this.btnConsultarConta.Text = "Consultar Conta";
             this.btnConsultarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -891,7 +891,7 @@
             this.btnCadastrarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarConta.Location = new System.Drawing.Point(22, 36);
             this.btnCadastrarConta.Name = "btnCadastrarConta";
-            this.btnCadastrarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarConta.Size = new System.Drawing.Size(218, 26);
             this.btnCadastrarConta.TabIndex = 26;
             this.btnCadastrarConta.Text = "Cadastrar Conta";
             this.btnCadastrarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -911,7 +911,7 @@
             this.btnFluxoDeCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFluxoDeCaixa.Location = new System.Drawing.Point(25, 4);
             this.btnFluxoDeCaixa.Name = "btnFluxoDeCaixa";
-            this.btnFluxoDeCaixa.Size = new System.Drawing.Size(208, 26);
+            this.btnFluxoDeCaixa.Size = new System.Drawing.Size(215, 26);
             this.btnFluxoDeCaixa.TabIndex = 25;
             this.btnFluxoDeCaixa.Text = "Fluxo de Caixa";
             this.btnFluxoDeCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -931,7 +931,7 @@
             this.btnAlterarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarConta.Location = new System.Drawing.Point(25, 100);
             this.btnAlterarConta.Name = "btnAlterarConta";
-            this.btnAlterarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarConta.Size = new System.Drawing.Size(215, 26);
             this.btnAlterarConta.TabIndex = 27;
             this.btnAlterarConta.Text = "Alterar Conta";
             this.btnAlterarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -951,7 +951,7 @@
             this.btnDeletarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletarConta.Location = new System.Drawing.Point(25, 134);
             this.btnDeletarConta.Name = "btnDeletarConta";
-            this.btnDeletarConta.Size = new System.Drawing.Size(208, 26);
+            this.btnDeletarConta.Size = new System.Drawing.Size(215, 26);
             this.btnDeletarConta.TabIndex = 29;
             this.btnDeletarConta.Text = "Deletar Conta";
             this.btnDeletarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -982,7 +982,7 @@
             this.btnFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFinanceiro.Location = new System.Drawing.Point(4, 2);
             this.btnFinanceiro.Name = "btnFinanceiro";
-            this.btnFinanceiro.Size = new System.Drawing.Size(229, 28);
+            this.btnFinanceiro.Size = new System.Drawing.Size(236, 28);
             this.btnFinanceiro.TabIndex = 0;
             this.btnFinanceiro.Text = "Financeiro";
             this.btnFinanceiro.UseVisualStyleBackColor = false;
@@ -1038,7 +1038,7 @@
             this.btnConsultarCartãoDePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarCartãoDePonto.Location = new System.Drawing.Point(25, 166);
             this.btnConsultarCartãoDePonto.Name = "btnConsultarCartãoDePonto";
-            this.btnConsultarCartãoDePonto.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarCartãoDePonto.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarCartãoDePonto.TabIndex = 21;
             this.btnConsultarCartãoDePonto.Text = "Consultar Cartão de Ponto";
             this.btnConsultarCartãoDePonto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1074,7 +1074,7 @@
             this.btnDemitirFuncionário.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDemitirFuncionário.Location = new System.Drawing.Point(25, 102);
             this.btnDemitirFuncionário.Name = "btnDemitirFuncionário";
-            this.btnDemitirFuncionário.Size = new System.Drawing.Size(208, 26);
+            this.btnDemitirFuncionário.Size = new System.Drawing.Size(215, 26);
             this.btnDemitirFuncionário.TabIndex = 15;
             this.btnDemitirFuncionário.Text = "Demitir Funcionário";
             this.btnDemitirFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1110,7 +1110,7 @@
             this.btnConsultarFuncionário.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultarFuncionário.Location = new System.Drawing.Point(25, 38);
             this.btnConsultarFuncionário.Name = "btnConsultarFuncionário";
-            this.btnConsultarFuncionário.Size = new System.Drawing.Size(208, 26);
+            this.btnConsultarFuncionário.Size = new System.Drawing.Size(215, 26);
             this.btnConsultarFuncionário.TabIndex = 13;
             this.btnConsultarFuncionário.Text = "Consultar Funcionário";
             this.btnConsultarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1130,7 +1130,7 @@
             this.btnAlterarFuncionário.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterarFuncionário.Location = new System.Drawing.Point(25, 70);
             this.btnAlterarFuncionário.Name = "btnAlterarFuncionário";
-            this.btnAlterarFuncionário.Size = new System.Drawing.Size(208, 26);
+            this.btnAlterarFuncionário.Size = new System.Drawing.Size(215, 26);
             this.btnAlterarFuncionário.TabIndex = 14;
             this.btnAlterarFuncionário.Text = "Alterar Funcionário";
             this.btnAlterarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1158,7 +1158,7 @@
             this.btnFolhaDePagamento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFolhaDePagamento.Location = new System.Drawing.Point(25, 134);
             this.btnFolhaDePagamento.Name = "btnFolhaDePagamento";
-            this.btnFolhaDePagamento.Size = new System.Drawing.Size(208, 26);
+            this.btnFolhaDePagamento.Size = new System.Drawing.Size(215, 26);
             this.btnFolhaDePagamento.TabIndex = 16;
             this.btnFolhaDePagamento.Text = "Folha de Pagamento";
             this.btnFolhaDePagamento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1178,7 +1178,7 @@
             this.btnCadastrarFuncionário.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarFuncionário.Location = new System.Drawing.Point(25, 6);
             this.btnCadastrarFuncionário.Name = "btnCadastrarFuncionário";
-            this.btnCadastrarFuncionário.Size = new System.Drawing.Size(208, 26);
+            this.btnCadastrarFuncionário.Size = new System.Drawing.Size(215, 26);
             this.btnCadastrarFuncionário.TabIndex = 11;
             this.btnCadastrarFuncionário.Text = "Cadastrar Funcionário";
             this.btnCadastrarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1209,7 +1209,7 @@
             this.btnRecursosHumanos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRecursosHumanos.Location = new System.Drawing.Point(4, 2);
             this.btnRecursosHumanos.Name = "btnRecursosHumanos";
-            this.btnRecursosHumanos.Size = new System.Drawing.Size(229, 28);
+            this.btnRecursosHumanos.Size = new System.Drawing.Size(236, 28);
             this.btnRecursosHumanos.TabIndex = 0;
             this.btnRecursosHumanos.Text = "Recursos Humanos";
             this.btnRecursosHumanos.UseVisualStyleBackColor = false;
@@ -1246,6 +1246,7 @@
             this.panelTítulo.Name = "panelTítulo";
             this.panelTítulo.Size = new System.Drawing.Size(710, 41);
             this.panelTítulo.TabIndex = 16;
+            this.panelTítulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTítulo_MouseDown);
             // 
             // imgMinimizar
             // 
@@ -1293,7 +1294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
             this.ClientSize = new System.Drawing.Size(950, 500);
             this.Controls.Add(this.panelContedor);
             this.Controls.Add(this.panelTítulo);

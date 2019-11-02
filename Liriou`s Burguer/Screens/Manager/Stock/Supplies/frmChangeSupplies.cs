@@ -46,10 +46,10 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             {
                 Database.Entities.tb_supply supply = new Database.Entities.tb_supply();
                 supply.id_supply = Convert.ToInt32(nudID.Value);
-                supply.nm_supply = txtNome.Text;
+                supply.nm_supply = txtNome.Text.Trim();
                 supply.vl_amount = Convert.ToInt32(nudQuantidade.Value);
                 supply.vl_value = Convert.ToDecimal(nudValor.Value);
-                supply.ds_note = rtxtDescrição.Text;
+                supply.ds_note = rtxtDescrição.Text.Trim();
 
                 Business.SupplyBusiness bussupply = new Business.SupplyBusiness();
                 bussupply.Alterar(supply);

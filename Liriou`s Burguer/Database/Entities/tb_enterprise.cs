@@ -26,7 +26,6 @@ namespace Liriou_s_Burguer.Database.Entities
         public string nm_commercialName { get; set; }
         public string ds_typePerson { get; set; }
         public string nr_identification { get; set; }
-        public string ds_country { get; set; }
         public string ds_state { get; set; }
         public string ds_cep { get; set; }
         public string ds_address { get; set; }

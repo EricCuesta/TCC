@@ -29,14 +29,20 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new System.Windows.Forms.Panel();
-            this.dgvConsultarSuprimento = new System.Windows.Forms.DataGridView();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblConsultarSuprimento = new System.Windows.Forms.Label();
+            this.dgvConsultarSuprimento = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,9 +50,9 @@
             this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).BeginInit();
             this.SuspendLayout();
             // 
             // panel
@@ -65,32 +71,6 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 569;
-            // 
-            // dgvConsultarSuprimento
-            // 
-            this.dgvConsultarSuprimento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarSuprimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultarSuprimento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvConsultarSuprimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarSuprimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Coluna1,
-            this.Coluna2,
-            this.Coluna3,
-            this.Coluna4,
-            this.Coluna5,
-            this.Coluna6});
-            this.dgvConsultarSuprimento.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConsultarSuprimento.Location = new System.Drawing.Point(3, 77);
-            this.dgvConsultarSuprimento.Name = "dgvConsultarSuprimento";
-            this.dgvConsultarSuprimento.Size = new System.Drawing.Size(704, 338);
-            this.dgvConsultarSuprimento.TabIndex = 652;
             // 
             // btnConsultar
             // 
@@ -168,9 +148,40 @@
             this.lblConsultarSuprimento.Text = "Consultar Suprimento";
             this.lblConsultarSuprimento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dgvConsultarSuprimento
+            // 
+            this.dgvConsultarSuprimento.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarSuprimento.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultarSuprimento.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvConsultarSuprimento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarSuprimento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna1,
+            this.Coluna2,
+            this.Coluna3,
+            this.Coluna4,
+            this.Coluna5,
+            this.Coluna6});
+            this.dgvConsultarSuprimento.GridColor = System.Drawing.Color.WhiteSmoke;
+            this.dgvConsultarSuprimento.Location = new System.Drawing.Point(3, 77);
+            this.dgvConsultarSuprimento.Name = "dgvConsultarSuprimento";
+            this.dgvConsultarSuprimento.Size = new System.Drawing.Size(704, 338);
+            this.dgvConsultarSuprimento.TabIndex = 654;
+            // 
             // Coluna1
             // 
             this.Coluna1.DataPropertyName = "id_supply";
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna1.DefaultCellStyle = dataGridViewCellStyle2;
             this.Coluna1.HeaderText = "ID";
             this.Coluna1.Name = "Coluna1";
             this.Coluna1.ReadOnly = true;
@@ -179,6 +190,11 @@
             // Coluna2
             // 
             this.Coluna2.DataPropertyName = "id_stock";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna2.DefaultCellStyle = dataGridViewCellStyle3;
             this.Coluna2.HeaderText = "Estoque";
             this.Coluna2.Name = "Coluna2";
             this.Coluna2.ReadOnly = true;
@@ -187,6 +203,11 @@
             // Coluna3
             // 
             this.Coluna3.DataPropertyName = "nm_supply";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna3.DefaultCellStyle = dataGridViewCellStyle4;
             this.Coluna3.HeaderText = "Nome";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.ReadOnly = true;
@@ -195,6 +216,11 @@
             // Coluna4
             // 
             this.Coluna4.DataPropertyName = "vl_amount";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna4.DefaultCellStyle = dataGridViewCellStyle5;
             this.Coluna4.HeaderText = "Quantidade";
             this.Coluna4.Name = "Coluna4";
             this.Coluna4.ReadOnly = true;
@@ -203,6 +229,11 @@
             // Coluna5
             // 
             this.Coluna5.DataPropertyName = "vl_value";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna5.DefaultCellStyle = dataGridViewCellStyle6;
             this.Coluna5.HeaderText = "Valor";
             this.Coluna5.Name = "Coluna5";
             this.Coluna5.ReadOnly = true;
@@ -211,6 +242,11 @@
             // Coluna6
             // 
             this.Coluna6.DataPropertyName = "ds_note";
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna6.DefaultCellStyle = dataGridViewCellStyle7;
             this.Coluna6.HeaderText = "Descrição";
             this.Coluna6.Name = "Coluna6";
             this.Coluna6.ReadOnly = true;
@@ -230,9 +266,9 @@
             this.Text = "Consult Supplies";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarSuprimento)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
