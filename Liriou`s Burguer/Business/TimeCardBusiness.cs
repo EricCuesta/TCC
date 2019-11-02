@@ -22,10 +22,10 @@ namespace Liriou_s_Burguer.Business
             return list;
         }
 
-        public void Alterar(Database.Entities.tb_timecard timecard)
+        public void Alterar(Database.Entities.tb_timecard timecard, Database.Entities.tb_points points)
         {
             Database.TimeCardDatabase DB = new Database.TimeCardDatabase();
-            DB.Alterar(timecard);
+            DB.Alterar(timecard, points);
         }
 
         public void Remover(int id)

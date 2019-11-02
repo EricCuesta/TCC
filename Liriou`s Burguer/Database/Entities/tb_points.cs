@@ -12,14 +12,16 @@ namespace Liriou_s_Burguer.Database.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_timecard
+    public partial class tb_points
     {
-        public int id_timecard { get; set; }
+        public int id_point { get; set; }
         public int id_emp { get; set; }
-        public System.TimeSpan vl_input { get; set; }
-        public System.TimeSpan vl_output { get; set; }
-        public System.TimeSpan vl_fixedIntInput { get; set; }
-        public System.TimeSpan vl_fixedIntOutput { get; set; }
+        public System.DateTime dt_date { get; set; }
+        public System.TimeSpan vl_cameIn { get; set; }
+        public System.TimeSpan vl_exited { get; set; }
+        public System.TimeSpan vl_intervalInput { get; set; }
+        public System.TimeSpan vl_intervalOutput { get; set; }
+        public System.TimeSpan vl_hoursToPay { get; set; }
     
         public virtual tb_employees tb_employees { get; set; }
     }

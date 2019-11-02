@@ -21,6 +21,7 @@ namespace Liriou_s_Burguer.Database.Entities
             this.tb_discounts = new HashSet<tb_discounts>();
             this.tb_financial = new HashSet<tb_financial>();
             this.tb_function = new HashSet<tb_function>();
+            this.tb_points = new HashSet<tb_points>();
             this.tb_timecard = new HashSet<tb_timecard>();
         }
     
@@ -52,6 +53,8 @@ namespace Liriou_s_Burguer.Database.Entities
         public virtual ICollection<tb_financial> tb_financial { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_function> tb_function { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_points> tb_points { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_timecard> tb_timecard { get; set; }
     }

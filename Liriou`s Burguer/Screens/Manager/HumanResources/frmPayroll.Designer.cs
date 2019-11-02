@@ -36,7 +36,7 @@
             this.lblBruto = new System.Windows.Forms.Label();
             this.lblSalárioBruto1 = new System.Windows.Forms.Label();
             this.groupProventos = new System.Windows.Forms.GroupBox();
-            this.lblHorasExtras = new System.Windows.Forms.Label();
+            this.lblHorasÁPagar = new System.Windows.Forms.Label();
             this.lblSalário = new System.Windows.Forms.Label();
             this.lblDependentes = new System.Windows.Forms.Label();
             this.lblNulo8 = new System.Windows.Forms.Label();
@@ -79,19 +79,20 @@
             this.lbl0ValeAlimentação = new System.Windows.Forms.Label();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.lbl0ValeTransporte = new System.Windows.Forms.Label();
-            this.lbl0HorasExtras = new System.Windows.Forms.Label();
+            this.lbl0HorasÁPagar = new System.Windows.Forms.Label();
             this.lbl0Salário = new System.Windows.Forms.Label();
             this.btnGerarFolha = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.mtxtAno = new System.Windows.Forms.MaskedTextBox();
             this.lblMêsReferente = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtNomeDoFuncionário = new System.Windows.Forms.Label();
             this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
             this.lblNomeDoFuncionário = new System.Windows.Forms.Label();
             this.lblRG = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.groupProventos.SuspendLayout();
@@ -135,7 +136,7 @@
             this.panel.Controls.Add(this.btnCalcular);
             this.panel.Controls.Add(this.mtxtAno);
             this.panel.Controls.Add(this.lblMêsReferente);
-            this.panel.Controls.Add(this.label1);
+            this.panel.Controls.Add(this.txtNomeDoFuncionário);
             this.panel.Controls.Add(this.mtxtRG);
             this.panel.Controls.Add(this.lblNomeDoFuncionário);
             this.panel.Controls.Add(this.lblRG);
@@ -202,7 +203,8 @@
             // 
             // groupProventos
             // 
-            this.groupProventos.Controls.Add(this.lblHorasExtras);
+            this.groupProventos.Controls.Add(this.label1);
+            this.groupProventos.Controls.Add(this.lblHorasÁPagar);
             this.groupProventos.Controls.Add(this.lblSalário);
             this.groupProventos.Controls.Add(this.lblDependentes);
             this.groupProventos.Controls.Add(this.lblNulo8);
@@ -224,15 +226,15 @@
             this.groupProventos.TabStop = false;
             this.groupProventos.Text = "Proventos";
             // 
-            // lblHorasExtras
+            // lblHorasÁPagar
             // 
-            this.lblHorasExtras.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasExtras.Location = new System.Drawing.Point(53, 40);
-            this.lblHorasExtras.Name = "lblHorasExtras";
-            this.lblHorasExtras.Size = new System.Drawing.Size(120, 15);
-            this.lblHorasExtras.TabIndex = 197;
-            this.lblHorasExtras.Text = "__ __Hrs";
-            this.lblHorasExtras.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblHorasÁPagar.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorasÁPagar.Location = new System.Drawing.Point(53, 40);
+            this.lblHorasÁPagar.Name = "lblHorasÁPagar";
+            this.lblHorasÁPagar.Size = new System.Drawing.Size(120, 15);
+            this.lblHorasÁPagar.TabIndex = 197;
+            this.lblHorasÁPagar.Text = "__ __Hrs";
+            this.lblHorasÁPagar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSalário
             // 
@@ -259,33 +261,33 @@
             this.lblNulo8.AutoSize = true;
             this.lblNulo8.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo8.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo8.Location = new System.Drawing.Point(110, 147);
+            this.lblNulo8.Location = new System.Drawing.Point(108, 147);
             this.lblNulo8.Name = "lblNulo8";
-            this.lblNulo8.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo8.Size = new System.Drawing.Size(21, 15);
             this.lblNulo8.TabIndex = 196;
-            this.lblNulo8.Text = "----";
+            this.lblNulo8.Text = "__";
             // 
             // lblNulo7
             // 
             this.lblNulo7.AutoSize = true;
             this.lblNulo7.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo7.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo7.Location = new System.Drawing.Point(110, 129);
+            this.lblNulo7.Location = new System.Drawing.Point(108, 129);
             this.lblNulo7.Name = "lblNulo7";
-            this.lblNulo7.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo7.Size = new System.Drawing.Size(21, 15);
             this.lblNulo7.TabIndex = 195;
-            this.lblNulo7.Text = "----";
+            this.lblNulo7.Text = "__";
             // 
             // lblNulo6
             // 
             this.lblNulo6.AutoSize = true;
             this.lblNulo6.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo6.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo6.Location = new System.Drawing.Point(110, 110);
+            this.lblNulo6.Location = new System.Drawing.Point(108, 110);
             this.lblNulo6.Name = "lblNulo6";
-            this.lblNulo6.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo6.Size = new System.Drawing.Size(21, 15);
             this.lblNulo6.TabIndex = 194;
-            this.lblNulo6.Text = "----";
+            this.lblNulo6.Text = "__";
             // 
             // lblNulo5
             // 
@@ -303,66 +305,66 @@
             this.lblNulo9.AutoSize = true;
             this.lblNulo9.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo9.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo9.Location = new System.Drawing.Point(110, 177);
+            this.lblNulo9.Location = new System.Drawing.Point(108, 177);
             this.lblNulo9.Name = "lblNulo9";
-            this.lblNulo9.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo9.Size = new System.Drawing.Size(21, 15);
             this.lblNulo9.TabIndex = 192;
-            this.lblNulo9.Text = "----";
+            this.lblNulo9.Text = "__";
             // 
             // lblNulo4
             // 
             this.lblNulo4.AutoSize = true;
             this.lblNulo4.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo4.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo4.Location = new System.Drawing.Point(110, 73);
+            this.lblNulo4.Location = new System.Drawing.Point(108, 73);
             this.lblNulo4.Name = "lblNulo4";
-            this.lblNulo4.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo4.Size = new System.Drawing.Size(21, 15);
             this.lblNulo4.TabIndex = 191;
-            this.lblNulo4.Text = "----";
+            this.lblNulo4.Text = "__";
             // 
             // lblNulo3
             // 
             this.lblNulo3.AutoSize = true;
             this.lblNulo3.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo3.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo3.Location = new System.Drawing.Point(110, 55);
+            this.lblNulo3.Location = new System.Drawing.Point(108, 55);
             this.lblNulo3.Name = "lblNulo3";
-            this.lblNulo3.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo3.Size = new System.Drawing.Size(21, 15);
             this.lblNulo3.TabIndex = 190;
-            this.lblNulo3.Text = "----";
+            this.lblNulo3.Text = "__";
             // 
             // lblNulo10
             // 
             this.lblNulo10.AutoSize = true;
             this.lblNulo10.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo10.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo10.Location = new System.Drawing.Point(110, 196);
+            this.lblNulo10.Location = new System.Drawing.Point(108, 196);
             this.lblNulo10.Name = "lblNulo10";
-            this.lblNulo10.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo10.Size = new System.Drawing.Size(21, 15);
             this.lblNulo10.TabIndex = 189;
-            this.lblNulo10.Text = "----";
+            this.lblNulo10.Text = "__";
             // 
             // lblNulo11
             // 
             this.lblNulo11.AutoSize = true;
             this.lblNulo11.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo11.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo11.Location = new System.Drawing.Point(110, 213);
+            this.lblNulo11.Location = new System.Drawing.Point(108, 213);
             this.lblNulo11.Name = "lblNulo11";
-            this.lblNulo11.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo11.Size = new System.Drawing.Size(21, 15);
             this.lblNulo11.TabIndex = 188;
-            this.lblNulo11.Text = "----";
+            this.lblNulo11.Text = "__";
             // 
             // lblNulo12
             // 
             this.lblNulo12.AutoSize = true;
             this.lblNulo12.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo12.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo12.Location = new System.Drawing.Point(110, 231);
+            this.lblNulo12.Location = new System.Drawing.Point(108, 231);
             this.lblNulo12.Name = "lblNulo12";
-            this.lblNulo12.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo12.Size = new System.Drawing.Size(21, 15);
             this.lblNulo12.TabIndex = 185;
-            this.lblNulo12.Text = "----";
+            this.lblNulo12.Text = "__";
             // 
             // groupDespesas
             // 
@@ -383,7 +385,7 @@
             this.groupDespesas.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.groupDespesas.Location = new System.Drawing.Point(247, 103);
             this.groupDespesas.Name = "groupDespesas";
-            this.groupDespesas.Size = new System.Drawing.Size(217, 284);
+            this.groupDespesas.Size = new System.Drawing.Size(214, 284);
             this.groupDespesas.TabIndex = 676;
             this.groupDespesas.TabStop = false;
             this.groupDespesas.Text = "Despesas";
@@ -485,20 +487,20 @@
             this.lblNulo2.ForeColor = System.Drawing.Color.Black;
             this.lblNulo2.Location = new System.Drawing.Point(103, 261);
             this.lblNulo2.Name = "lblNulo2";
-            this.lblNulo2.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo2.Size = new System.Drawing.Size(21, 15);
             this.lblNulo2.TabIndex = 184;
-            this.lblNulo2.Text = "----";
+            this.lblNulo2.Text = "__";
             // 
             // lblNulo1
             // 
             this.lblNulo1.AutoSize = true;
             this.lblNulo1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo1.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo1.Location = new System.Drawing.Point(106, 37);
+            this.lblNulo1.Location = new System.Drawing.Point(103, 40);
             this.lblNulo1.Name = "lblNulo1";
-            this.lblNulo1.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo1.Size = new System.Drawing.Size(21, 15);
             this.lblNulo1.TabIndex = 180;
-            this.lblNulo1.Text = "----";
+            this.lblNulo1.Text = "__";
             // 
             // lblValeTransporte
             // 
@@ -515,11 +517,11 @@
             this.lblNulo.AutoSize = true;
             this.lblNulo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNulo.ForeColor = System.Drawing.Color.Black;
-            this.lblNulo.Location = new System.Drawing.Point(106, 19);
+            this.lblNulo.Location = new System.Drawing.Point(103, 19);
             this.lblNulo.Name = "lblNulo";
-            this.lblNulo.Size = new System.Drawing.Size(19, 15);
+            this.lblNulo.Size = new System.Drawing.Size(21, 15);
             this.lblNulo.TabIndex = 176;
-            this.lblNulo.Text = "----";
+            this.lblNulo.Text = "__";
             // 
             // groupItens
             // 
@@ -538,7 +540,7 @@
             this.groupItens.Controls.Add(this.lbl0ValeAlimentação);
             this.groupItens.Controls.Add(this.dataGridView12);
             this.groupItens.Controls.Add(this.lbl0ValeTransporte);
-            this.groupItens.Controls.Add(this.lbl0HorasExtras);
+            this.groupItens.Controls.Add(this.lbl0HorasÁPagar);
             this.groupItens.Controls.Add(this.lbl0Salário);
             this.groupItens.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupItens.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -695,15 +697,15 @@
             this.lbl0ValeTransporte.TabIndex = 170;
             this.lbl0ValeTransporte.Text = "Vale Transporte";
             // 
-            // lbl0HorasExtras
+            // lbl0HorasÁPagar
             // 
-            this.lbl0HorasExtras.AutoSize = true;
-            this.lbl0HorasExtras.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl0HorasExtras.Location = new System.Drawing.Point(8, 37);
-            this.lbl0HorasExtras.Name = "lbl0HorasExtras";
-            this.lbl0HorasExtras.Size = new System.Drawing.Size(76, 15);
-            this.lbl0HorasExtras.TabIndex = 169;
-            this.lbl0HorasExtras.Text = "Horas Extras";
+            this.lbl0HorasÁPagar.AutoSize = true;
+            this.lbl0HorasÁPagar.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl0HorasÁPagar.Location = new System.Drawing.Point(8, 37);
+            this.lbl0HorasÁPagar.Name = "lbl0HorasÁPagar";
+            this.lbl0HorasÁPagar.Size = new System.Drawing.Size(81, 15);
+            this.lbl0HorasÁPagar.TabIndex = 169;
+            this.lbl0HorasÁPagar.Text = "Horas á Pagar";
             // 
             // lbl0Salário
             // 
@@ -764,14 +766,14 @@
             this.lblMêsReferente.TabIndex = 669;
             this.lblMêsReferente.Text = "Mês Referente:";
             // 
-            // label1
+            // txtNomeDoFuncionário
             // 
-            this.label1.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(104, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 19);
-            this.label1.TabIndex = 603;
-            this.label1.Text = " __ __ __ __ __ __ __ __ __ __ __ __ __\r\n";
+            this.txtNomeDoFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeDoFuncionário.Location = new System.Drawing.Point(104, 39);
+            this.txtNomeDoFuncionário.Name = "txtNomeDoFuncionário";
+            this.txtNomeDoFuncionário.Size = new System.Drawing.Size(243, 19);
+            this.txtNomeDoFuncionário.TabIndex = 603;
+            this.txtNomeDoFuncionário.Text = " __ __ __ __ __ __ __ __ __ __ __ __ __\r\n";
             // 
             // mtxtRG
             // 
@@ -837,6 +839,17 @@
             this.dataGridView2.Size = new System.Drawing.Size(2, 60);
             this.dataGridView2.TabIndex = 598;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(108, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 15);
+            this.label1.TabIndex = 198;
+            this.label1.Text = "__";
+            // 
             // frmPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -881,9 +894,8 @@
         private System.Windows.Forms.Label lblRG;
         private System.Windows.Forms.Label lblNomeDoFuncionário;
         private System.Windows.Forms.MaskedTextBox mtxtRG;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label txtNomeDoFuncionário;
         private System.Windows.Forms.Label lblMêsReferente;
-        private System.Windows.Forms.MaskedTextBox mtxtAno;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Button btnGerarFolha;
         private System.Windows.Forms.DataGridView dataGridView8;
@@ -892,7 +904,7 @@
         private System.Windows.Forms.Label lblBruto;
         private System.Windows.Forms.Label lblSalárioBruto1;
         private System.Windows.Forms.GroupBox groupProventos;
-        private System.Windows.Forms.Label lblHorasExtras;
+        private System.Windows.Forms.Label lblHorasÁPagar;
         private System.Windows.Forms.Label lblSalário;
         private System.Windows.Forms.Label lblDependentes;
         private System.Windows.Forms.Label lblNulo8;
@@ -935,7 +947,9 @@
         private System.Windows.Forms.Label lbl0ValeAlimentação;
         private System.Windows.Forms.DataGridView dataGridView12;
         private System.Windows.Forms.Label lbl0ValeTransporte;
-        private System.Windows.Forms.Label lbl0HorasExtras;
+        private System.Windows.Forms.Label lbl0HorasÁPagar;
         private System.Windows.Forms.Label lbl0Salário;
+        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.MaskedTextBox mtxtAno;
     }
 }

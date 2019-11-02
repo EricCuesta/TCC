@@ -37,6 +37,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public virtual DbSet<tb_financial> tb_financial { get; set; }
         public virtual DbSet<tb_function> tb_function { get; set; }
         public virtual DbSet<tb_iten> tb_iten { get; set; }
+        public virtual DbSet<tb_points> tb_points { get; set; }
         public virtual DbSet<tb_product> tb_product { get; set; }
         public virtual DbSet<tb_provider> tb_provider { get; set; }
         public virtual DbSet<tb_sale> tb_sale { get; set; }

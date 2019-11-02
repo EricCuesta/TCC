@@ -24,19 +24,20 @@ namespace Liriou_s_Burguer.Database
             return list;
         }
 
-        public void Alterar(Entities.tb_timecard timecard)
+        public void Alterar(Entities.tb_timecard timecard, Entities.tb_points points)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_timecard list = DB.tb_timecard.First(t => t.id_timecard == timecard.id_timecard);
-            list.dt_date = list.dt_date;
-            list.vl_cameIn = list.vl_cameIn;
-            list.vl_exited = list.vl_exited;
+            Entities.tb_points list1 = DB.tb_points.First(t => t.id_point == points.id_point);
+            list1.dt_date = list1.dt_date;
+            list1.vl_cameIn = list1.vl_cameIn;
+            list1.vl_exited = list1.vl_exited;
             list.vl_fixedIntInput = list.vl_fixedIntInput;
             list.vl_fixedIntOutput = list.vl_fixedIntOutput;
-            list.vl_hoursHealth = list.vl_hoursHealth;
+            list1.vl_hoursToPay = list1.vl_hoursToPay;
             list.vl_input = list.vl_input;
-            list.vl_intervalInput = list.vl_intervalInput;
-            list.vl_intervalOutput = list.vl_output;
+            list1.vl_intervalInput = list1.vl_intervalInput;
+            list1.vl_intervalOutput = list1.vl_intervalOutput;
             list.vl_output = list.vl_output;
             DB.SaveChanges();
         }

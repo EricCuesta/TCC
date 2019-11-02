@@ -42,14 +42,14 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 tbemployees.dt_hiring = dtpContratação.Value;
                 tbemployees.dt_resignation = dtpDemissão.Value;
                 financial.vl_grossSalary = nudSalárioBruto.Value;
-                tbbenefits.bl_food = chkValeAlimentação.Checked;
-                tbbenefits.bl_meal = chkValeRefeição.Checked;
-                tbbenefits.bl_lifeSafe = chkSeguroDeVida.Checked;
+                tbbenefits.bl_food = chkValeAlimentação.Checked.ToString();
+                tbbenefits.bl_meal = chkValeRefeição.Checked.ToString();
+                tbbenefits.bl_lifeSafe = chkSeguroDeVida.Checked.ToString();
                 tb_Department.nm_department = cboDepartamento.Text;
                 tbfunction.nm_function = cboCargo.Text;
-                tbbenefits.bl_transport = chkValeTransporte.Checked;
-                tbbenefits.bl_planHealth = chkPlanoDeSáude.Checked;
-                tbbenefits.bl_planDental = chkPlanoDental.Checked;
+                tbbenefits.bl_transport = chkValeTransporte.Checked.ToString();
+                tbbenefits.bl_planHealth = chkPlanoDeSáude.Checked.ToString();
+                tbbenefits.bl_planDental = chkPlanoDental.Checked.ToString();
 
 
                 busemployees.Inserir(tbemployees);

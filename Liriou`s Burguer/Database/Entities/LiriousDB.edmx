@@ -33,12 +33,12 @@
           </Key>
           <Property Name="id_benefits" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="bl_food" Type="bool" />
-          <Property Name="bl_transport" Type="bool" />
-          <Property Name="bl_meal" Type="bool" />
-          <Property Name="bl_lifeSafe" Type="bool" />
-          <Property Name="bl_planHealth" Type="bool" />
-          <Property Name="bl_planDental" Type="bool" />
+          <Property Name="bl_food" Type="varchar" MaxLength="5" />
+          <Property Name="bl_transport" Type="varchar" MaxLength="5" />
+          <Property Name="bl_meal" Type="varchar" MaxLength="5" />
+          <Property Name="bl_lifeSafe" Type="varchar" MaxLength="5" />
+          <Property Name="bl_planHealth" Type="varchar" MaxLength="5" />
+          <Property Name="bl_planDental" Type="varchar" MaxLength="5" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -183,6 +183,19 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="id_product" Type="int" Nullable="false" />
           <Property Name="vl_qtdProduct" Type="int" Nullable="false" />
         </EntityType>
+        <EntityType Name="tb_points">
+          <Key>
+            <PropertyRef Name="id_point" />
+          </Key>
+          <Property Name="id_point" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_emp" Type="int" Nullable="false" />
+          <Property Name="dt_date" Type="date" Nullable="false" />
+          <Property Name="vl_cameIn" Type="time" Precision="0" Nullable="false" />
+          <Property Name="vl_exited" Type="time" Precision="0" Nullable="false" />
+          <Property Name="vl_intervalInput" Type="time" Precision="0" Nullable="false" />
+          <Property Name="vl_intervalOutput" Type="time" Precision="0" Nullable="false" />
+          <Property Name="vl_hoursToPay" Type="time" Precision="0" Nullable="false" />
+        </EntityType>
         <EntityType Name="tb_product">
           <Key>
             <PropertyRef Name="id_product" />
@@ -227,7 +240,8 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ds_typeStock" Type="varchar" MaxLength="10" />
+          <Property Name="ds_typeStock" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="ds_place" Type="varchar" MaxLength="128" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_supply">
           <Key>
@@ -248,14 +262,8 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="id_emp" Type="int" Nullable="false" />
           <Property Name="vl_input" Type="time" Precision="0" Nullable="false" />
           <Property Name="vl_output" Type="time" Precision="0" Nullable="false" />
-          <Property Name="dt_date" Type="date" Nullable="false" />
-          <Property Name="vl_cameIn" Type="time" Precision="0" Nullable="false" />
-          <Property Name="vl_exited" Type="time" Precision="0" Nullable="false" />
-          <Property Name="vl_intervalInput" Type="time" Precision="0" Nullable="false" />
-          <Property Name="vl_intervalOutput" Type="time" Precision="0" Nullable="false" />
           <Property Name="vl_fixedIntInput" Type="time" Precision="0" Nullable="false" />
           <Property Name="vl_fixedIntOutput" Type="time" Precision="0" Nullable="false" />
-          <Property Name="vl_hoursHealth" Type="time" Precision="0" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
@@ -380,6 +388,18 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="tb_points_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_points">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="tb_product_ibfk_1">
           <End Role="tb_stock" Type="Self.tb_stock" Multiplicity="1" />
           <End Role="tb_product" Type="Self.tb_product" Multiplicity="*" />
@@ -441,6 +461,7 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <EntitySet Name="tb_financial" EntityType="Self.tb_financial" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_function" EntityType="Self.tb_function" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_iten" EntityType="Self.tb_iten" Schema="liriousdb" store:Type="Tables" />
+          <EntitySet Name="tb_points" EntityType="Self.tb_points" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_product" EntityType="Self.tb_product" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_sale" EntityType="Self.tb_sale" Schema="liriousdb" store:Type="Tables" />
@@ -502,6 +523,10 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <End Role="tb_product" EntitySet="tb_product" />
             <End Role="tb_iten" EntitySet="tb_iten" />
           </AssociationSet>
+          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_points" EntitySet="tb_points" />
+          </AssociationSet>
           <AssociationSet Name="tb_product_ibfk_1" Association="Self.tb_product_ibfk_1">
             <End Role="tb_stock" EntitySet="tb_stock" />
             <End Role="tb_product" EntitySet="tb_product" />
@@ -552,12 +577,12 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_benefits" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="bl_food" Type="Boolean" />
-          <Property Name="bl_transport" Type="Boolean" />
-          <Property Name="bl_meal" Type="Boolean" />
-          <Property Name="bl_lifeSafe" Type="Boolean" />
-          <Property Name="bl_planHealth" Type="Boolean" />
-          <Property Name="bl_planDental" Type="Boolean" />
+          <Property Name="bl_food" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bl_transport" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bl_meal" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bl_lifeSafe" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bl_planHealth" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bl_planDental" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -640,6 +665,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <NavigationProperty Name="tb_discounts" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_employees" ToRole="tb_discounts" />
           <NavigationProperty Name="tb_financial" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_employees" ToRole="tb_financial" />
           <NavigationProperty Name="tb_function" Relationship="Self.tb_function_ibfk_1" FromRole="tb_employees" ToRole="tb_function" />
+          <NavigationProperty Name="tb_points" Relationship="Self.tb_points_ibfk_1" FromRole="tb_employees" ToRole="tb_points" />
           <NavigationProperty Name="tb_timecard" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_employees" ToRole="tb_timecard" />
         </EntityType>
         <EntityType Name="tb_enterprise">
@@ -697,6 +723,20 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <NavigationProperty Name="tb_sale" Relationship="Self.tb_iten_ibfk_1" FromRole="tb_iten" ToRole="tb_sale" />
           <NavigationProperty Name="tb_product" Relationship="Self.tb_iten_ibfk_3" FromRole="tb_iten" ToRole="tb_product" />
         </EntityType>
+        <EntityType Name="tb_points">
+          <Key>
+            <PropertyRef Name="id_point" />
+          </Key>
+          <Property Name="id_point" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_emp" Type="Int32" Nullable="false" />
+          <Property Name="dt_date" Type="DateTime" Nullable="false" />
+          <Property Name="vl_cameIn" Type="Time" Nullable="false" />
+          <Property Name="vl_exited" Type="Time" Nullable="false" />
+          <Property Name="vl_intervalInput" Type="Time" Nullable="false" />
+          <Property Name="vl_intervalOutput" Type="Time" Nullable="false" />
+          <Property Name="vl_hoursToPay" Type="Time" Nullable="false" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_points_ibfk_1" FromRole="tb_points" ToRole="tb_employees" />
+        </EntityType>
         <EntityType Name="tb_product">
           <Key>
             <PropertyRef Name="id_product" />
@@ -745,7 +785,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <PropertyRef Name="id_stock" />
           </Key>
           <Property Name="id_stock" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ds_typeStock" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ds_typeStock" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_place" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="tb_product" Relationship="Self.tb_product_ibfk_1" FromRole="tb_stock" ToRole="tb_product" />
           <NavigationProperty Name="tb_supply" Relationship="Self.tb_supply_ibfk_1" FromRole="tb_stock" ToRole="tb_supply" />
         </EntityType>
@@ -769,14 +810,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="vl_input" Type="Time" Nullable="false" />
           <Property Name="vl_output" Type="Time" Nullable="false" />
-          <Property Name="dt_date" Type="DateTime" Nullable="false" />
-          <Property Name="vl_cameIn" Type="Time" Nullable="false" />
-          <Property Name="vl_exited" Type="Time" Nullable="false" />
-          <Property Name="vl_intervalInput" Type="Time" Nullable="false" />
-          <Property Name="vl_intervalOutput" Type="Time" Nullable="false" />
           <Property Name="vl_fixedIntInput" Type="Time" Nullable="false" />
           <Property Name="vl_fixedIntOutput" Type="Time" Nullable="false" />
-          <Property Name="vl_hoursHealth" Type="Time" Nullable="false" />
           <NavigationProperty Name="tb_employees" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_timecard" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_cnae">
@@ -896,6 +931,18 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="tb_points_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_points">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="tb_timecard_ibfk_1">
           <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
           <End Role="tb_timecard" Type="Self.tb_timecard" Multiplicity="*" />
@@ -981,6 +1028,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <EntitySet Name="tb_financial" EntityType="Self.tb_financial" />
           <EntitySet Name="tb_function" EntityType="Self.tb_function" />
           <EntitySet Name="tb_iten" EntityType="Self.tb_iten" />
+          <EntitySet Name="tb_points" EntityType="Self.tb_points" />
           <EntitySet Name="tb_product" EntityType="Self.tb_product" />
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" />
           <EntitySet Name="tb_sale" EntityType="Self.tb_sale" />
@@ -1020,6 +1068,10 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <AssociationSet Name="tb_function_ibfk_1" Association="Self.tb_function_ibfk_1">
             <End Role="tb_employees" EntitySet="tb_employees" />
             <End Role="tb_function" EntitySet="tb_function" />
+          </AssociationSet>
+          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_points" EntitySet="tb_points" />
           </AssociationSet>
           <AssociationSet Name="tb_timecard_ibfk_1" Association="Self.tb_timecard_ibfk_1">
             <End Role="tb_employees" EntitySet="tb_employees" />
@@ -1219,6 +1271,20 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="tb_points">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_points">
+              <MappingFragment StoreEntitySet="tb_points">
+                <ScalarProperty Name="id_point" ColumnName="id_point" />
+                <ScalarProperty Name="id_emp" ColumnName="id_emp" />
+                <ScalarProperty Name="dt_date" ColumnName="dt_date" />
+                <ScalarProperty Name="vl_cameIn" ColumnName="vl_cameIn" />
+                <ScalarProperty Name="vl_exited" ColumnName="vl_exited" />
+                <ScalarProperty Name="vl_intervalInput" ColumnName="vl_intervalInput" />
+                <ScalarProperty Name="vl_intervalOutput" ColumnName="vl_intervalOutput" />
+                <ScalarProperty Name="vl_hoursToPay" ColumnName="vl_hoursToPay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tb_product">
             <EntityTypeMapping TypeName="liriousdbModel.tb_product">
               <MappingFragment StoreEntitySet="tb_product">
@@ -1266,6 +1332,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
               <MappingFragment StoreEntitySet="tb_stock">
                 <ScalarProperty Name="id_stock" ColumnName="id_stock" />
                 <ScalarProperty Name="ds_typeStock" ColumnName="ds_typeStock" />
+                <ScalarProperty Name="ds_place" ColumnName="ds_place" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1288,14 +1355,8 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
                 <ScalarProperty Name="vl_input" ColumnName="vl_input" />
                 <ScalarProperty Name="vl_output" ColumnName="vl_output" />
-                <ScalarProperty Name="dt_date" ColumnName="dt_date" />
-                <ScalarProperty Name="vl_cameIn" ColumnName="vl_cameIn" />
-                <ScalarProperty Name="vl_exited" ColumnName="vl_exited" />
-                <ScalarProperty Name="vl_intervalInput" ColumnName="vl_intervalInput" />
-                <ScalarProperty Name="vl_intervalOutput" ColumnName="vl_intervalOutput" />
                 <ScalarProperty Name="vl_fixedIntInput" ColumnName="vl_fixedIntInput" />
                 <ScalarProperty Name="vl_fixedIntOutput" ColumnName="vl_fixedIntOutput" />
-                <ScalarProperty Name="vl_hoursHealth" ColumnName="vl_hoursHealth" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
