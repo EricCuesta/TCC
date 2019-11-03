@@ -8,33 +8,44 @@ namespace Liriou_s_Burguer.Database
 {
     class DepartmentDatabase
     {
+        Entities.liriousdbEntities db = new Entities.liriousdbEntities();
 
         public void Inserir(Entities.tb_department department)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            DB.tb_department.Add(department);
+            db.tb_department.Add(department);
 
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
-        public List<Entities.tb_department> Consultar()
+        public Entities.tb_department ConsultaPorID(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_department> list = DB.tb_department.ToList();
+            Entities.tb_department department = db.tb_department.FirstOrDefault(t => t.id_department == id);
+
+            return department;
+        }
+
+        public List<Entities.tb_department> ConsultarPorNome(Entities.tb_department department)
+        {
+            List<Entities.tb_department> list = db.tb_department.Where(l => l.nm_department == department.nm_department).ToList();
 
             return list;
         }
-        
+
+        public List<Entities.tb_department> ConsultarTodos()
+        {
+            List<Entities.tb_department> list = db.tb_department.ToList();
+
+            return list;
+        }
+
         public void Alterar(Entities.tb_department department)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
             Entities.tb_department list = DB.tb_department.First(t => t.id_department == department.id_department);
             list.nm_department = list.nm_department;
             
-
             DB.SaveChanges();
         }
-
 
         public void Remover(int id)
         {

@@ -50,6 +50,7 @@ namespace Liriou_s_Burguer.Database
             Entities.tb_product list = db.tb_product.FirstOrDefault(t => t.id_product == product.id_product);
             list.nm_product = product.nm_product;
             list.ds_typeProduct = product.ds_typeProduct;
+            list.ds_placeStock = product.ds_placeStock;
             list.vl_amount = product.vl_amount;
             list.vl_value = product.vl_value;
             list.ds_note = product.ds_note;
@@ -57,7 +58,7 @@ namespace Liriou_s_Burguer.Database
             db.SaveChanges();
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
             Entities.tb_product product = db.tb_product.First(t => t.id_product == id);
 

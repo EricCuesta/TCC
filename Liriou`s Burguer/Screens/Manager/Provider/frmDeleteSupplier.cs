@@ -89,7 +89,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 }
                 cboEstado.Text = provider.ds_state;
                 txtEndereço.Text = provider.ds_address;
-                mtxtCEP.Text = provider.ds_cep;
+                mtxtCEP.Text = provider.nr_cep;
                 txtComplemento.Text = provider.ds_note;
                 mtxtCelular.Text = provider.nr_cellphone;
                 mtxtTelefone.Text = provider.nr_tellphone;
@@ -102,7 +102,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
             int id = Convert.ToInt32(nudId.Value);
 
             Business.ClientBusiness busclient = new Business.ClientBusiness();
-            busclient.Deletar(id);
+            busclient.Remover(id);
 
             MessageBox.Show("Fornecedor deletado com sucesso");
         }

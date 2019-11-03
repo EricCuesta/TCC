@@ -99,7 +99,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 }
                 cboEstado.Text = provider.ds_state;
                 txtEndereço.Text = provider.ds_address;
-                mtxtCEP.Text = provider.ds_cep;
+                mtxtCEP.Text = provider.nr_cep;
                 txtComplemento.Text = provider.ds_note;
                 mtxtCelular.Text = provider.nr_cellphone;
                 mtxtTelefone.Text = provider.nr_tellphone;
@@ -127,7 +127,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                     provider.nr_identification = mtxtCNPJ.Text.Trim();
                 }
                 provider.ds_state = cboEstado.Text;
-                provider.ds_cep = mtxtCEP.Text.Trim();
+                provider.nr_cep = mtxtCEP.Text.Trim();
                 provider.ds_address = txtEndereço.Text.Trim();
                 provider.ds_note = txtComplemento.Text.Trim();
                 provider.nr_cellphone = mtxtCelular.Text.Trim();

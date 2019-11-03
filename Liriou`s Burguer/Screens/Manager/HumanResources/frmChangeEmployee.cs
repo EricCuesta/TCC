@@ -18,54 +18,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             InitializeComponent();
         }
 
-        private void btnContinuar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Model.EmployeesModel Model = new Model.EmployeesModel();
-                
-                Model.Nome = txtNome.Text.Trim();
-                Model.LastName = txtSobrenome.Text.Trim();
-                Model.Sex = cboSexo.Text.Trim();
-                Model.Birth = Convert.ToDateTime(dtpNascimento.Value);
-                Model.RG = mtxtRG.Text.Trim();
-                Model.State = cboEstado.Text.Trim();
-                Model.CEP = lblCEP.Text.Trim();
-                Model.Note = txtComplemento.Text.Trim();
-                Model.Address = txtEndereço.Text.Trim();
-                Model.Cellphone = mtxtCelular.Text.Trim();
-                Model.Tellphone = mtxtTelefone.Text.Trim();
-                Model.Email = txtEmail.Text.Trim();
-                Model.Password = txtSenha.Text;
-
-                string email = txtEmail.Text;
-                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-                Match match = regex.Match(email);
-                if (match.Success)
-                {
-                    frmChangeEmployee1 tela2 = new frmChangeEmployee1();
-                  
-                    tela2.Show();
-                    Hide();
-                }
-                else
-                {
-                    MessageBox.Show(email + " é um Email inválido!");
-                }
-
-                frmChangeEmployee1 tela = new frmChangeEmployee1();
-                tela.Show();
-                Hide();
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
         Database.Entities.tb_employees employees;
 
         public void CarregarFuncionario2(Database.Entities.tb_employees employees)
@@ -76,10 +28,10 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             txtSobrenome.Text = employees.nm_lastName;
             cboSexo.Text = employees.ds_sex;
             dtpNascimento.MinDate = employees.dt_birth;
-            mtxtCPF.Text = employees.ds_rg;
-            mtxtRG.Text = employees.ds_cpf;
+            mtxtCPF.Text = employees.nr_rg;
+            mtxtRG.Text = employees.nr_cpf;
             cboEstado.Text = employees.ds_state;
-            lblCEP.Text = employees.ds_cep;
+            lblCEP.Text = employees.nr_cep;
             txtComplemento.Text = employees.ds_note;
             txtEndereço.Text = employees.ds_address;
             mtxtCelular.Text = employees.nr_cellphone;
@@ -105,6 +57,55 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 string CEP = mtxtCEP.Text;
                 CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
                 txtEndereço.Text = api.Buscar(CEP);
+            }
+        }
+
+        private void btnContinuar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Model.EmployeesModel Model = new Model.EmployeesModel();
+
+                Model.firstName = txtNome.Text.Trim();
+                Model.lastName = txtSobrenome.Text.Trim();
+                Model.sex = cboSexo.Text.Trim();
+                Model.birth = Convert.ToDateTime(dtpNascimento.Value);
+                Model.RG = mtxtRG.Text.Trim();
+                Model.state = cboEstado.Text.Trim();
+                Model.CEP = lblCEP.Text.Trim();
+                Model.note = txtComplemento.Text.Trim();
+                Model.address = txtEndereço.Text.Trim();
+                Model.cellphone = mtxtCelular.Text.Trim();
+                Model.tellphone = mtxtTelefone.Text.Trim();
+                Model.email = txtEmail.Text.Trim();
+                Model.password = txtSenha.Text;
+
+                string email = txtEmail.Text;
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(email);
+                if (match.Success)
+                {
+                    frmChangeEmployee1 tela2 = new frmChangeEmployee1();
+
+                    tela2.Show();
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show(email + " é um Email inválido!");
+                }
+
+                frmChangeEmployee1 tela = new frmChangeEmployee1();
+                tela.Show();
+                Hide();
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

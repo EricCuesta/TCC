@@ -15,11 +15,10 @@ namespace Liriou_s_Burguer.Database.Entities
     public partial class tb_supply
     {
         public int id_supply { get; set; }
-        public int id_stock { get; set; }
+        public string ds_placeStock { get; set; }
         public string nm_supply { get; set; }
         public int vl_amount { get; set; }
         public decimal vl_value { get; set; }
         public string ds_note { get; set; }
-        public string ds_placeStock { get; set; }
     }
 }

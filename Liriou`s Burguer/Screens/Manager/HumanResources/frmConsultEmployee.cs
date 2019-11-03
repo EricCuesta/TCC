@@ -15,87 +15,45 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         public frmConsultEmployee()
         {
             InitializeComponent();
-            this.CarregarCombo();
-            this.CarregarComboCargo();
-        }
-        private void CarregarCombo()
-        {
-            Business.DepartmentBusiness b = new Business.DepartmentBusiness();
-            List<Database.Entities.tb_department> list = b.Consultar();
-
-            cboDepartamento.DisplayMember = nameof(Database.Entities.tb_department.nm_department);
-            cboDepartamento.DataSource = list;
+            dgvConsultarEmpregado.AutoGenerateColumns = false;
         }
 
-        private void CarregarComboCargo()
+        private void Consulta()
         {
-            Business.FunctionBusiness b = new Business.FunctionBusiness();
-            List<Database.Entities.tb_function> list = b.Consultar();
+            Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+            Database.Entities.tb_department department = new Database.Entities.tb_department();
+            Database.Entities.tb_function function = new Database.Entities.tb_function();
+            employees.nm_firstName = txtNome.Text;
+            employees.nr_rg = mtxtRG.Text;
+            employees.ds_sex = cboSexo.Text;
+            department.nm_department = cboDepartamento.Text;
+            function.nm_function = cboCargo.Text;
+            
+            Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
+            List<Database.Entities.tb_employees> employeeslista = busemployees.Consultar(employees);
 
-            cboCargo.DisplayMember = nameof(Database.Entities.tb_function.nm_function);
-            cboCargo.DataSource = list;
-        }
+            Business.DepartmentBusiness busdepartments = new Business.DepartmentBusiness();
+            List<Database.Entities.tb_department> departmentslist = busdepartments.Consultar(department);
 
-        private void CarregarGenero()
-        {
-            Business.EmployeesBusiness b = new Business.EmployeesBusiness();
-            List<Database.Entities.tb_employees> list = b.Consultar();
+            Business.FunctionBusiness busfunction = new Business.FunctionBusiness();
+            List<Database.Entities.tb_function> functionlist = busfunction.Consultar(function);
 
-            cboGênero.DisplayMember = nameof(Database.Entities.tb_employees.ds_sex);
-            cboGênero.DataSource = list;
-        }
-
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-                Database.DepartmentDatabase tbdepartment = new Database.DepartmentDatabase();
-                List<Database.Entities.tb_employees> listageral = DB.Consultar();
-                dgvConsultarEmpregado.DataSource = listageral;
-
-                string nome = txtNome.Text.Trim();
-                string rg = mtxtRG.Text.Trim();
-                string ano = mtxtAno.Text;
-
-
-                if (nome != string.Empty)
-                {
-                    List<Database.Entities.tb_employees> list = DB.ConsultarFuncionario(nome);
-
-                    dgvConsultarEmpregado.DataSource = list;
-                }
-
-                if (rg != string.Empty)
-                {
-                    List<Database.Entities.tb_employees> list = DB.ConsultarFuncionarioRG(rg);
-
-                    dgvConsultarEmpregado.DataSource = list;
-                } 
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro. Tente mais tarde.", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            dgvConsultarEmpregado.DataSource = employeeslista;
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
-            string nome = txtNome.Text;
-
-            if (nome != string.Empty)
+            if (txtNome.Text != string.Empty)
             {
                 txtNome.Enabled = true;
                 mtxtAno.Enabled = true;
-                cboGênero.Enabled = true;
+                cboSexo.Enabled = true;
 
                 mtxtRG.Enabled = false;
                 cboDepartamento.Enabled = false;
                 cboCargo.Enabled = false;
+
+                this.Consulta();
             }
             else
             {
@@ -104,15 +62,13 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 cboDepartamento.Enabled = true;
                 cboCargo.Enabled = true;
                 mtxtAno.Enabled = true;
-                cboGênero.Enabled = true;
+                cboSexo.Enabled = true;
             }
         }
 
-        private void txtRG_TextChanged(object sender, EventArgs e)
+        private void cboSexo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string rg = mtxtRG.Text;
-
-            if (rg != string.Empty)
+            if (cboSexo.Text != null)
             {
                 mtxtRG.Enabled = true;
 
@@ -120,7 +76,9 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 cboDepartamento.Enabled = false;
                 cboCargo.Enabled = false;
                 mtxtAno.Enabled = false;
-                cboGênero.Enabled = false;
+                cboSexo.Enabled = false;
+
+                this.Consulta();
             }
             else
             {
@@ -129,23 +87,23 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 cboDepartamento.Enabled = true;
                 cboCargo.Enabled = true;
                 mtxtAno.Enabled = true;
-                cboGênero.Enabled = true;
+                cboSexo.Enabled = true;
             }
         }
 
-        private void mtxtAno_TextChanged(object sender, EventArgs e)
+        private void mtxtAno_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            string ano = mtxtAno.Text;
-
-            if (ano != string.Empty)
+            if (mtxtAno.Text != string.Empty)
             {
                 txtNome.Enabled = true;
                 mtxtAno.Enabled = true;
-                cboGênero.Enabled = true;
+                cboSexo.Enabled = true;
 
                 mtxtRG.Enabled = false;
                 cboDepartamento.Enabled = false;
                 cboCargo.Enabled = false;
+
+                this.Consulta();
             }
             else
             {
@@ -154,8 +112,26 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 cboDepartamento.Enabled = true;
                 cboCargo.Enabled = true;
                 mtxtAno.Enabled = true;
-                cboGênero.Enabled = true;
+                cboSexo.Enabled = true;
             }
+        }
+
+        private void btnConsulatar_Click(object sender, EventArgs e)
+        {
+            Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
+            List<Database.Entities.tb_employees> employeeslista = busemployees.ConsultarTodos();
+
+            dgvConsultarEmpregado.DataSource = employeeslista;
+        }
+
+        private void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
+        }
+
+        private void cboCargo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.Consulta();
         }
     }
 }

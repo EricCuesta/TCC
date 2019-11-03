@@ -652,7 +652,7 @@
             this.lblCadastrarCliente.AutoSize = true;
             this.lblCadastrarCliente.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCadastrarCliente.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCadastrarCliente.Location = new System.Drawing.Point(242, 9);
+            this.lblCadastrarCliente.Location = new System.Drawing.Point(243, 9);
             this.lblCadastrarCliente.Name = "lblCadastrarCliente";
             this.lblCadastrarCliente.Size = new System.Drawing.Size(229, 28);
             this.lblCadastrarCliente.TabIndex = 563;

@@ -19,7 +19,7 @@ namespace Liriou_s_Burguer.Database
         public int Consultar(string rg)
         {
             Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_employees tb = DB.tb_employees.FirstOrDefault(t => t.ds_rg == rg);
+            Entities.tb_employees tb = DB.tb_employees.FirstOrDefault(t => t.nr_rg == rg);
 
             return tb.id_emp;
         }

@@ -30,7 +30,7 @@ namespace Liriou_s_Burguer.Database
 
         public List<Entities.tb_client> ConsultarPorRG(Entities.tb_client client)
         {
-            List<Entities.tb_client> list = db.tb_client.Where(l => l.ds_rg == client.ds_rg).ToList();
+            List<Entities.tb_client> list = db.tb_client.Where(l => l.nr_rg == client.nr_rg).ToList();
 
             return list;
         }
@@ -44,7 +44,7 @@ namespace Liriou_s_Burguer.Database
 
         public List<Entities.tb_client> ConsultarPorNomeRG(Entities.tb_client client)
         {
-            List<Entities.tb_client> list = db.tb_client.Where(l => l.nm_firstName == client.nm_firstName && l.ds_rg == client.ds_rg).ToList();
+            List<Entities.tb_client> list = db.tb_client.Where(l => l.nm_firstName == client.nm_firstName && l.nr_rg == client.nr_rg).ToList();
 
             return list;
         }
@@ -58,7 +58,7 @@ namespace Liriou_s_Burguer.Database
 
         public List<Entities.tb_client> ConsultarPorRGSexo(Entities.tb_client client)
         {
-            List<Entities.tb_client> list = db.tb_client.Where(l => l.ds_rg == client.ds_rg && l.ds_sex == client.ds_sex).ToList();
+            List<Entities.tb_client> list = db.tb_client.Where(l => l.nr_rg == client.nr_rg && l.ds_sex == client.ds_sex).ToList();
 
             return list;
         }
@@ -75,12 +75,12 @@ namespace Liriou_s_Burguer.Database
             Entities.tb_client list = db.tb_client.FirstOrDefault(l => l.id_client == client.id_client);
             list.nm_firstName = client.nm_firstName;
             list.nm_lastName = client.nm_lastName;
-            list.ds_rg = client.ds_rg;
-            list.ds_cpf = client.ds_cpf;
+            list.nr_rg = client.nr_rg;
+            list.nr_cpf = client.nr_cpf;
             list.ds_sex = client.ds_sex;
             list.dt_birth = client.dt_birth;
             list.ds_state = client.ds_state;
-            list.ds_cep = client.ds_cep;
+            list.nr_cep = client.nr_cep;
             list.ds_address = client.ds_address;
             list.ds_note = client.ds_note;
             list.nr_cellphone = client.nr_cellphone;
@@ -90,7 +90,7 @@ namespace Liriou_s_Burguer.Database
             db.SaveChanges();
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
             Entities.tb_client client = db.tb_client.First(t => t.id_client == id);
 

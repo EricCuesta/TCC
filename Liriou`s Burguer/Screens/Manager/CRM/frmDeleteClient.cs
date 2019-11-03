@@ -44,15 +44,15 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             {
                 txtNome.Text = client.nm_firstName;
                 txtSobrenome.Text = client.nm_lastName;
-                mtxtRG.Text = client.ds_rg;
-                mtxtCPF.Text = client.ds_cpf;
+                mtxtRG.Text = client.nr_rg;
+                mtxtCPF.Text = client.nr_cpf;
                 if (client.ds_sex == "M")
                     cboSexo.Text = "Masculino";
                 else
                     cboEstado.Text = "Feminino";
                 dtpNascimento.Value = client.dt_birth;
                 cboEstado.Text = client.ds_state;
-                mtxtCEP.Text = client.ds_cep;
+                mtxtCEP.Text = client.nr_cep;
                 txtEndereço.Text = client.ds_address;
                 txtComplemento.Text = client.ds_note;
                 mtxtCelular.Text = client.nr_cellphone;
@@ -66,7 +66,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             int id = Convert.ToInt32(nudId.Value);
 
             Business.ClientBusiness busclient = new Business.ClientBusiness();
-            busclient.Deletar(id);
+            busclient.Remover(id);
 
             MessageBox.Show("Cliente deletado com sucesso");
         }

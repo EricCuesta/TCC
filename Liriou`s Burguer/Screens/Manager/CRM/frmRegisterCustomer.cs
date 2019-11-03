@@ -34,12 +34,12 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 Database.Entities.tb_client client = new Database.Entities.tb_client();
                 client.nm_firstName = txtNome.Text;
                 client.nm_lastName = txtSobrenome.Text;
-                client.ds_rg = mtxtRG.Text;
-                client.ds_cpf = mtxtCPF.Text;
+                client.nr_rg = mtxtRG.Text;
+                client.nr_cpf = mtxtCPF.Text;
                 client.ds_sex = cboSexo.Text;
                 client.dt_birth = dtpNascimento.Value;
                 client.ds_state = cboEstado.Text;
-                client.ds_cep = mtxtCEP.Text;
+                client.nr_cep = mtxtCEP.Text;
                 client.ds_address = txtEndereço.Text;
                 client.ds_note = txtComplemento.Text;
                 client.nr_cellphone = mtxtCelular.Text;

@@ -44,6 +44,9 @@
             this.lblValor = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.panel = new System.Windows.Forms.Panel();
+            this.txtLocalDoEstoque = new System.Windows.Forms.TextBox();
+            this.lblLocalDoStock = new System.Windows.Forms.Label();
+            this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
             this.lblDescrição = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,6 +57,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCadastrarProduto
@@ -179,7 +183,7 @@
             this.cboTipo.Location = new System.Drawing.Point(418, 6);
             this.cboTipo.MaxLength = 32;
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(280, 23);
+            this.cboTipo.Size = new System.Drawing.Size(289, 23);
             this.cboTipo.TabIndex = 650;
             // 
             // lblQuantidade
@@ -233,9 +237,14 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
+            this.nudValor.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            131072});
             this.nudValor.Location = new System.Drawing.Point(437, 40);
             this.nudValor.Name = "nudValor";
-            this.nudValor.Size = new System.Drawing.Size(261, 20);
+            this.nudValor.Size = new System.Drawing.Size(270, 20);
             this.nudValor.TabIndex = 655;
             // 
             // panel
@@ -244,6 +253,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.Controls.Add(this.txtLocalDoEstoque);
+            this.panel.Controls.Add(this.lblLocalDoStock);
+            this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.rtxtDescrição);
             this.panel.Controls.Add(this.lblDescrição);
             this.panel.Controls.Add(this.nudValor);
@@ -265,10 +277,46 @@
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 566;
             // 
+            // txtLocalDoEstoque
+            // 
+            this.txtLocalDoEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLocalDoEstoque.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLocalDoEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLocalDoEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalDoEstoque.Location = new System.Drawing.Point(121, 70);
+            this.txtLocalDoEstoque.MaxLength = 32;
+            this.txtLocalDoEstoque.Name = "txtLocalDoEstoque";
+            this.txtLocalDoEstoque.Size = new System.Drawing.Size(586, 23);
+            this.txtLocalDoEstoque.TabIndex = 660;
+            // 
+            // lblLocalDoStock
+            // 
+            this.lblLocalDoStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLocalDoStock.AutoSize = true;
+            this.lblLocalDoStock.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDoStock.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLocalDoStock.Location = new System.Drawing.Point(4, 72);
+            this.lblLocalDoStock.Name = "lblLocalDoStock";
+            this.lblLocalDoStock.Size = new System.Drawing.Size(111, 19);
+            this.lblLocalDoStock.TabIndex = 659;
+            this.lblLocalDoStock.Text = "Local do Stock:";
+            // 
+            // dataGridView4
+            // 
+            this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView4.Location = new System.Drawing.Point(1, 97);
+            this.dataGridView4.Name = "dataGridView4";
+            this.dataGridView4.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView4.TabIndex = 658;
+            // 
             // rtxtDescrição
             // 
             this.rtxtDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtDescrição.Location = new System.Drawing.Point(7, 92);
+            this.rtxtDescrição.Location = new System.Drawing.Point(7, 124);
             this.rtxtDescrição.MaxLength = 256;
             this.rtxtDescrição.Name = "rtxtDescrição";
             this.rtxtDescrição.Size = new System.Drawing.Size(698, 170);
@@ -281,7 +329,7 @@
             this.lblDescrição.AutoSize = true;
             this.lblDescrição.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescrição.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDescrição.Location = new System.Drawing.Point(4, 70);
+            this.lblDescrição.Location = new System.Drawing.Point(4, 102);
             this.lblDescrição.Name = "lblDescrição";
             this.lblDescrição.Size = new System.Drawing.Size(79, 19);
             this.lblDescrição.TabIndex = 656;
@@ -308,6 +356,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -332,5 +381,8 @@
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label lblDescrição;
         private System.Windows.Forms.RichTextBox rtxtDescrição;
+        protected System.Windows.Forms.TextBox txtLocalDoEstoque;
+        private System.Windows.Forms.Label lblLocalDoStock;
+        private System.Windows.Forms.DataGridView dataGridView4;
     }
 }

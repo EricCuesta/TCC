@@ -21,9 +21,17 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
         private void Consulta()
         {
             Database.Entities.tb_client client = new Database.Entities.tb_client();
-            client.nm_firstName = txtNome.Text;
-            client.ds_rg = mtxtRG.Text;
-            client.ds_sex = cboSexo.Text;
+            client.nm_firstName = txtNome.Text.Trim();
+            client.nr_rg = mtxtRG.Text;
+            if (cboSexo.Text == "Masculino")
+            {
+                client.ds_sex = "M";
+            }
+            if (cboSexo.Text == "Feminino")
+            {
+                client.ds_sex = "F";
+            }
+
             Business.ClientBusiness busclient = new Business.ClientBusiness();
             List<Database.Entities.tb_client> clientlista = busclient.Consultar(client);
 

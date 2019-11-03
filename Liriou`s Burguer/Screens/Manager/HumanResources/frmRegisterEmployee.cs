@@ -32,29 +32,28 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Model.EmployeesModel model = new Model.EmployeesModel();
-                model.firstName = txtNome.Text.Trim();
-                model.lastName = txtSobrenome.Text.Trim();
-                model.RG = mtxtRG.Text.Trim();
-                model.CPF = mtxtCPF.Text.Trim();
-                model.dependents = Convert.ToInt32(nudDependentes.Value);
-                model.sex = cboSexo.Text;
-                model.birth = dtpNascimento.MinDate;
-                model.state = cboEstado.Text;
-                model.CEP = mtxtCEP.Text.Trim();
-                model.note = txtComplemento.Text.Trim();
-                model.address = txtEndereço.Text.Trim();
-                model.cellphone = mtxtCelular.Text.Trim();
-                model.tellphone = mtxtTelefone.Text.Trim();
-                model.email = txtEmail.Text.Trim();
-                model.password = txtSenha.Text.Trim();
+                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+                employees.nm_firstName = txtNome.Text.Trim();
+                employees.nm_lastName = txtSobrenome.Text.Trim();
+                employees.nr_rg = mtxtRG.Text.Trim();
+                employees.nr_cpf = mtxtCPF.Text.Trim();
+                employees.nr_dependents = Convert.ToInt32(nudDependentes.Value);
+                employees.ds_sex = cboSexo.Text;
+                employees.dt_birth = dtpNascimento.Value;
+                employees.ds_state = cboEstado.Text;
+                employees.nr_cep = mtxtCEP.Text.Trim();
+                employees.ds_note = txtComplemento.Text.Trim();
+                employees.ds_address = txtEndereço.Text.Trim();
+                employees.nr_cellphone = mtxtCelular.Text.Trim();
+                employees.nr_tellphone = mtxtTelefone.Text.Trim();
+                employees.ds_email = txtEmail.Text.Trim();
+                employees.pw_password = txtSenha.Text.Trim();               
 
                 Business.EmployeesBusiness db = new Business.EmployeesBusiness();
-                db.VerificarCadastro(model);
+                db.Inserir(employees);
 
-                Hide();
-                frmRegisterEmployee1 tela = new frmRegisterEmployee1();
-                tela.Show();
+                frmRegisterEmployee1 registerEmployee1 = new frmRegisterEmployee1();
+                registerEmployee1.ShowDialog();
             }
             catch (ArgumentException ex)
             {

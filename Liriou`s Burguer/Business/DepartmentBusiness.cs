@@ -8,29 +8,47 @@ namespace Liriou_s_Burguer.Business
 {
     class DepartmentBusiness
     {
+        Database.DepartmentDatabase db = new Database.DepartmentDatabase();
+
         public void Inserir(Database.Entities.tb_department department)
         {
-            Database.DepartmentDatabase DB = new Database.DepartmentDatabase();
-            DB.Inserir(department);
+            db.Inserir(department);
         }
 
-        public List<Database.Entities.tb_department> Consultar()
+        public Database.Entities.tb_department ConsultarPorID(int id)
         {
-            Database.DepartmentDatabase DB = new Database.DepartmentDatabase();
-            List<Database.Entities.tb_department> list = DB.Consultar();
+            Database.DepartmentDatabase dbdepartment = new Database.DepartmentDatabase();
+            Database.Entities.tb_department department = dbdepartment.ConsultaPorID(id);
+
+            return department;
+        }
+
+        public List<Database.Entities.tb_department> Consultar(Database.Entities.tb_department department)
+        {
+            Database.DepartmentDatabase dbdepartment = new Database.DepartmentDatabase();
+            List<Database.Entities.tb_department> list = new List<Database.Entities.tb_department>();
+
+            list = dbdepartment.ConsultarPorNome(department);
+
+            return list;
+        }
+
+        public List<Database.Entities.tb_department> ConsultarTodos()
+        {
+            List<Database.Entities.tb_department> list = db.ConsultarTodos();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_department accounts)
         {
-            Database.DepartmentDatabase DB = new Database.DepartmentDatabase();
-            DB.Alterar(accounts);
+            Database.DepartmentDatabase db = new Database.DepartmentDatabase();
+            db.Alterar(accounts);
         }
 
         public void Remover(int id)
         {
-            Database.DepartmentDatabase DB = new Database.DepartmentDatabase();
-            DB.Remover(id);
+            Database.DepartmentDatabase db = new Database.DepartmentDatabase();
+            db.Remover(id);
         }
     }
 }

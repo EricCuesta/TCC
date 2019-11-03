@@ -30,24 +30,26 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEmployeeMenu));
             this.BarraTitulo = new System.Windows.Forms.Panel();
+            this.imgMinimizar = new System.Windows.Forms.PictureBox();
+            this.imgFechar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnIndisponibilidade = new System.Windows.Forms.Button();
             this.imgGoogle = new System.Windows.Forms.PictureBox();
             this.imgLinkedIn = new System.Windows.Forms.PictureBox();
             this.imgFacebook = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.btnCartãoDePonto = new System.Windows.Forms.Button();
             this.imgInstagram = new System.Windows.Forms.PictureBox();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panelContedor = new System.Windows.Forms.Panel();
-            this.imgMinimizar = new System.Windows.Forms.PictureBox();
-            this.imgFechar = new System.Windows.Forms.PictureBox();
             this.BarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.MenuVertical.SuspendLayout();
@@ -58,8 +60,6 @@
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgInstagram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // BarraTitulo
@@ -75,6 +75,36 @@
             this.BarraTitulo.Size = new System.Drawing.Size(710, 41);
             this.BarraTitulo.TabIndex = 14;
             this.BarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraTitulo_MouseDown);
+            // 
+            // imgMinimizar
+            // 
+            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar01;
+            this.imgMinimizar.Location = new System.Drawing.Point(649, 8);
+            this.imgMinimizar.Name = "imgMinimizar";
+            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
+            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgMinimizar.TabIndex = 489;
+            this.imgMinimizar.TabStop = false;
+            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
+            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
+            // 
+            // imgFechar
+            // 
+            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
+            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar01;
+            this.imgFechar.Location = new System.Drawing.Point(680, 8);
+            this.imgFechar.Name = "imgFechar";
+            this.imgFechar.Size = new System.Drawing.Size(25, 25);
+            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFechar.TabIndex = 490;
+            this.imgFechar.TabStop = false;
+            this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
+            this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
             // pictureBox1
             // 
@@ -126,6 +156,14 @@
             this.panel2.Size = new System.Drawing.Size(240, 32);
             this.panel2.TabIndex = 238;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 28);
+            this.panel1.TabIndex = 239;
+            // 
             // btnIndisponibilidade
             // 
             this.btnIndisponibilidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -143,7 +181,7 @@
             this.btnIndisponibilidade.TabIndex = 0;
             this.btnIndisponibilidade.Text = "Indisponibilidade";
             this.btnIndisponibilidade.UseVisualStyleBackColor = false;
-            this.btnIndisponibilidade.Click += new System.EventHandler(this.btnIndisponibilidade_Click_1);
+            this.btnIndisponibilidade.Click += new System.EventHandler(this.btnIndisponibilidade_Click);
             // 
             // imgGoogle
             // 
@@ -188,6 +226,14 @@
             this.panel10.Size = new System.Drawing.Size(240, 32);
             this.panel10.TabIndex = 19;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel8.Location = new System.Drawing.Point(0, 2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(5, 28);
+            this.panel8.TabIndex = 13;
+            // 
             // btnCartãoDePonto
             // 
             this.btnCartãoDePonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -230,22 +276,6 @@
             this.imgLogotipo.TabIndex = 18;
             this.imgLogotipo.TabStop = false;
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel8.Location = new System.Drawing.Point(0, 2);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 28);
-            this.panel8.TabIndex = 13;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 28);
-            this.panel1.TabIndex = 239;
-            // 
             // panelContedor
             // 
             this.panelContedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
@@ -255,36 +285,6 @@
             this.panelContedor.Name = "panelContedor";
             this.panelContedor.Size = new System.Drawing.Size(710, 459);
             this.panelContedor.TabIndex = 16;
-            // 
-            // imgMinimizar
-            // 
-            this.imgMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.imgMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgMinimizar.Image = global::Liriou_s_Burguer.Properties.Resources.Minimizar01;
-            this.imgMinimizar.Location = new System.Drawing.Point(649, 8);
-            this.imgMinimizar.Name = "imgMinimizar";
-            this.imgMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.imgMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgMinimizar.TabIndex = 489;
-            this.imgMinimizar.TabStop = false;
-            this.imgMinimizar.MouseEnter += new System.EventHandler(this.imgMinimizar_MouseEnter);
-            this.imgMinimizar.MouseLeave += new System.EventHandler(this.imgMinimizar_MouseLeave);
-            // 
-            // imgFechar
-            // 
-            this.imgFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgFechar.BackColor = System.Drawing.Color.Transparent;
-            this.imgFechar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgFechar.Image = global::Liriou_s_Burguer.Properties.Resources.Fechar01;
-            this.imgFechar.Location = new System.Drawing.Point(680, 8);
-            this.imgFechar.Name = "imgFechar";
-            this.imgFechar.Size = new System.Drawing.Size(25, 25);
-            this.imgFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgFechar.TabIndex = 490;
-            this.imgFechar.TabStop = false;
-            this.imgFechar.MouseEnter += new System.EventHandler(this.imgFechar_MouseEnter);
-            this.imgFechar.MouseLeave += new System.EventHandler(this.imgFechar_MouseLeave);
             // 
             // frmEmployeeMenu
             // 
@@ -300,6 +300,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Menu";
             this.BarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.MenuVertical.ResumeLayout(false);
@@ -310,8 +312,6 @@
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgInstagram)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -16,6 +16,7 @@ namespace Liriou_s_Burguer.Screens.Employee
         public frmEmployeeMenu()
         {
             InitializeComponent();
+            panelContedor.Visible = false;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -40,18 +41,30 @@ namespace Liriou_s_Burguer.Screens.Employee
             Application.Exit();
         }
 
-        private void btnCartãoDePonto_Click(object sender, EventArgs e)
+        private Form activeForm = null;
+        private void openContedor(Form Contedor)
         {
-            frmEmployeeTimeCard employeeTimeCard = new frmEmployeeTimeCard();
-            employeeTimeCard.Show();
-            Hide();
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = Contedor;
+            Contedor.TopLevel = false;
+            Contedor.FormBorderStyle = FormBorderStyle.None;
+            Contedor.Dock = DockStyle.Fill;
+            panelContedor.Controls.Add(Contedor);
+            panelContedor.Tag = Contedor;
+            Contedor.BringToFront();
+            panelContedor.Visible = true;
+            Contedor.Show();
         }
 
-        private void btnIndisponibilidade_Click_1(object sender, EventArgs e)
+        private void btnCartãoDePonto_Click(object sender, EventArgs e)
         {
-            frmUnavailability unavailability = new frmUnavailability();
-            unavailability.Show();
-            Hide();
+            openContedor(new frmEmployeeTimeCard());
+        }
+
+        private void btnIndisponibilidade_Click(object sender, EventArgs e)
+        {
+            openContedor(new frmUnavailability());
         }
 
         private void imgFechar_MouseEnter(object sender, EventArgs e)

@@ -637,7 +637,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(354, 35);
+            this.dataGridView2.Location = new System.Drawing.Point(354, 0);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;
@@ -699,7 +699,7 @@
             this.lblDeletarCliente.AutoSize = true;
             this.lblDeletarCliente.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeletarCliente.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDeletarCliente.Location = new System.Drawing.Point(255, 9);
+            this.lblDeletarCliente.Location = new System.Drawing.Point(256, 9);
             this.lblDeletarCliente.Name = "lblDeletarCliente";
             this.lblDeletarCliente.Size = new System.Drawing.Size(199, 28);
             this.lblDeletarCliente.TabIndex = 563;

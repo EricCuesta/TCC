@@ -8,47 +8,45 @@ namespace Liriou_s_Burguer.Database
 {
     class TimeCardDatabase
     {
+        Entities.liriousdbEntities db = new Entities.liriousdbEntities();
+
         public void Inserir(Entities.tb_timecard timecard)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            DB.tb_timecard.Add(timecard);
+            db.tb_timecard.Add(timecard);
 
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
         public List<Entities.tb_timecard> Consultar()
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_timecard> list = DB.tb_timecard.ToList();
+            List<Entities.tb_timecard> list = db.tb_timecard.ToList();
 
             return list;
         }
 
         public void Alterar(Entities.tb_timecard timecard, Entities.tb_points points)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_timecard list = DB.tb_timecard.First(t => t.id_timecard == timecard.id_timecard);
-            Entities.tb_points list1 = DB.tb_points.First(t => t.id_point == points.id_point);
-            list1.dt_date = list1.dt_date;
-            list1.vl_cameIn = list1.vl_cameIn;
-            list1.vl_exited = list1.vl_exited;
-            list.vl_fixedIntInput = list.vl_fixedIntInput;
-            list.vl_fixedIntOutput = list.vl_fixedIntOutput;
-            list1.vl_hoursToPay = list1.vl_hoursToPay;
-            list.vl_input = list.vl_input;
-            list1.vl_intervalInput = list1.vl_intervalInput;
-            list1.vl_intervalOutput = list1.vl_intervalOutput;
-            list.vl_output = list.vl_output;
-            DB.SaveChanges();
+            Entities.tb_timecard list = db.tb_timecard.First(t => t.id_timecard == timecard.id_timecard);
+            Entities.tb_points list1 = db.tb_points.First(t => t.id_point == points.id_point);
+            list.hr_fixedInput = list.hr_fixedInput;
+            list.hr_fixedOutput = list.hr_fixedOutput;
+            list.hr_fixedInput = list.hr_fixedInput;
+            list.hr_fixedIntOutput = list.hr_fixedIntOutput;
+            list1.hr_input = list1.hr_input;
+            list1.hr_output = list1.hr_output;
+            list1.hr_intInput = list1.hr_intInput;
+            list1.hr_intOutput = list1.hr_intOutput;
+            list1.hr_toPay = list1.hr_toPay;
+
+            db.SaveChanges();
         }
 
         public void Remover(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_timecard remover = DB.tb_timecard.First(t => t.id_timecard == id);
+            Entities.tb_timecard remover = db.tb_timecard.First(t => t.id_timecard == id);
 
-            DB.tb_timecard.Remove(remover);
-            DB.SaveChanges();
+            db.tb_timecard.Remove(remover);
+            db.SaveChanges();
         }
     }
 }

@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblConsultarProduto = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarProduto = new System.Windows.Forms.DataGridView();
@@ -52,6 +53,7 @@
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarProduto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -111,7 +113,8 @@
             this.Coluna3,
             this.Coluna4,
             this.Coluna5,
-            this.Coluna6});
+            this.Coluna6,
+            this.Coluna7});
             this.dgvConsultarProduto.GridColor = System.Drawing.Color.WhiteSmoke;
             this.dgvConsultarProduto.Location = new System.Drawing.Point(3, 77);
             this.dgvConsultarProduto.Name = "dgvConsultarProduto";
@@ -237,26 +240,26 @@
             // 
             // Coluna2
             // 
-            this.Coluna2.DataPropertyName = "id_stock";
+            this.Coluna2.DataPropertyName = "nm_product";
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.Coluna2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Coluna2.HeaderText = "Estoque";
+            this.Coluna2.HeaderText = "Nome";
             this.Coluna2.Name = "Coluna2";
             this.Coluna2.ReadOnly = true;
             this.Coluna2.Width = 120;
             // 
             // Coluna3
             // 
-            this.Coluna3.DataPropertyName = "nm_product";
+            this.Coluna3.DataPropertyName = "ds_typeProduct";
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             this.Coluna3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Coluna3.HeaderText = "Nome";
+            this.Coluna3.HeaderText = "Tipo do Produto";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.ReadOnly = true;
             this.Coluna3.Width = 120;
@@ -272,7 +275,6 @@
             this.Coluna4.HeaderText = "Quantidade";
             this.Coluna4.Name = "Coluna4";
             this.Coluna4.ReadOnly = true;
-            this.Coluna4.Width = 80;
             // 
             // Coluna5
             // 
@@ -285,7 +287,6 @@
             this.Coluna5.HeaderText = "Valor";
             this.Coluna5.Name = "Coluna5";
             this.Coluna5.ReadOnly = true;
-            this.Coluna5.Width = 80;
             // 
             // Coluna6
             // 
@@ -298,7 +299,20 @@
             this.Coluna6.HeaderText = "Descrição";
             this.Coluna6.Name = "Coluna6";
             this.Coluna6.ReadOnly = true;
-            this.Coluna6.Width = 213;
+            this.Coluna6.Width = 200;
+            // 
+            // Coluna7
+            // 
+            this.Coluna7.DataPropertyName = "ds_placeStock";
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna7.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Coluna7.HeaderText = "Estoque";
+            this.Coluna7.Name = "Coluna7";
+            this.Coluna7.ReadOnly = true;
+            this.Coluna7.Width = 200;
             // 
             // frmBrowseProducts
             // 
@@ -342,5 +356,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna7;
     }
 }

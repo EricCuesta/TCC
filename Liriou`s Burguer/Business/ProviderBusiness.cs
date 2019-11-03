@@ -23,7 +23,7 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo de indentificação deve ser definido");
             if (provider.ds_state == string.Empty)
                 throw new ArgumentException("O campo estado deve ser definido");
-            if (provider.ds_cep == string.Empty)
+            if (provider.nr_cep == string.Empty)
                 throw new ArgumentException("O campo cep deve ser preenchido");
             if (provider.ds_address == string.Empty)
                 throw new ArgumentException("O campo endereço deve ser preenchido");
@@ -79,7 +79,7 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo de indentificação deve ser definido");
             if (provider.ds_state == string.Empty)
                 throw new ArgumentException("O campo estado deve ser definido");
-            if (provider.ds_cep == string.Empty)
+            if (provider.nr_cep == string.Empty)
                 throw new ArgumentException("O campo cep deve ser preenchido");
             if (provider.ds_address == string.Empty)
                 throw new ArgumentException("O campo endereço deve ser preenchido");

@@ -68,7 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\BankAccountBusiness.cs" />
+    <Compile Include="Business\AccountBusiness.cs" />
     <Compile Include="Business\BenefitsBusiness.cs" />
     <Compile Include="Business\ClientBusiness.cs" />
     <Compile Include="Business\CNAEBusiness.cs" />
@@ -80,13 +80,14 @@
     <Compile Include="Business\EnterpriseBusiness.cs" />
     <Compile Include="Business\FinancialBusiness.cs" />
     <Compile Include="Business\FunctionBusiness.cs" />
+    <Compile Include="Business\PointsBusiness.cs" />
     <Compile Include="Business\ProductBusiness.cs" />
     <Compile Include="Business\ProviderBusiness.cs" />
     <Compile Include="Business\SaleBusiness.cs" />
     <Compile Include="Business\SupplyBusiness.cs" />
     <Compile Include="Business\TimeCardBusiness.cs" />
     <Compile Include="CorreioApi\CorreioApi.cs" />
-    <Compile Include="Database\BankAccountDatabase.cs" />
+    <Compile Include="Database\AccountDatabase.cs" />
     <Compile Include="Database\BenefitsDatabase.cs" />
     <Compile Include="Database\ClientDatabase.cs" />
     <Compile Include="Database\CNAEDatabase.cs" />
@@ -173,6 +174,7 @@
     </Compile>
     <Compile Include="Database\FinancialDatabase.cs" />
     <Compile Include="Database\FunctionDatabase.cs" />
+    <Compile Include="Database\PointsDatabase.cs" />
     <Compile Include="Database\ProductDatabase.cs" />
     <Compile Include="Database\ProviderDatabase.cs" />
     <Compile Include="Database\SaleDatabase.cs" />
@@ -224,6 +226,36 @@
     </Compile>
     <Compile Include="Screens\Manager\CRM\frmRegisterCustomer.Designer.cs">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmCashflow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmCashflow.Designer.cs">
+      <DependentUpon>frmCashflow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmChangeAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmChangeAccount.Designer.cs">
+      <DependentUpon>frmChangeAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmDeleteAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmDeleteAccount.Designer.cs">
+      <DependentUpon>frmDeleteAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmQueryAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmQueryAccount.Designer.cs">
+      <DependentUpon>frmQueryAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmRegisterAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\Financial\frmRegisterAccount.Designer.cs">
+      <DependentUpon>frmRegisterAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\Provider\frmChangeProvider.cs">
       <SubType>Form</SubType>
@@ -400,6 +432,21 @@
     <EmbeddedResource Include="Screens\Manager\CRM\frmRegisterCustomer.resx">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\frmCashflow.resx">
+      <DependentUpon>frmCashflow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\frmChangeAccount.resx">
+      <DependentUpon>frmChangeAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\frmDeleteAccount.resx">
+      <DependentUpon>frmDeleteAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\frmQueryAccount.resx">
+      <DependentUpon>frmQueryAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\Financial\frmRegisterAccount.resx">
+      <DependentUpon>frmRegisterAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Provider\frmChangeProvider.resx">
       <DependentUpon>frmChangeProvider.cs</DependentUpon>
     </EmbeddedResource>
@@ -560,11 +607,9 @@
     <None Include="Resources\Voltar02.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Screens\Manager\Financial\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\CRM.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\Entities\LiriousDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -576,6 +621,8 @@
       <DependentUpon>LiriousDB.edmx</DependentUpon>
       <LastGenOutput>LiriousDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Visto01.png" />
+    <None Include="Resources\Visto.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

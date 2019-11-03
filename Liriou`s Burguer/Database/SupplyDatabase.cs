@@ -13,7 +13,6 @@ namespace Liriou_s_Burguer.Database
         public void Inserir(Entities.tb_supply supply)
         {
             db.tb_supply.Add(supply);
-            supply.id_stock = 1;
 
             db.SaveChanges();
         }

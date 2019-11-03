@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Regex;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Liriou_s_Burguer.Business
@@ -17,9 +17,9 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (client.nm_lastName == string.Empty)
                 throw new ArgumentException("O campo sobrenome deve ser preenchido");
-            if (client.ds_rg == string.Empty)
+            if (client.nr_rg == string.Empty)
                 throw new ArgumentException("O campo RG deve ser preenchido");
-            if (client.ds_cpf == string.Empty)
+            if (client.nr_cpf == string.Empty)
                 throw new ArgumentException("O campo CPF deve ser preenchido");
             if (client.ds_sex == string.Empty)
                 throw new ArgumentException("O campo sexo deve ser preenchido");
@@ -29,7 +29,7 @@ namespace Liriou_s_Burguer.Business
                 client.ds_sex = "F";
             if (client.ds_state == string.Empty)
                 throw new ArgumentException("O campo Estado deve ser preenchido");
-            if (client.ds_cep == string.Empty)
+            if (client.nr_cep == string.Empty)
                 throw new ArgumentException("O campo CEP deve ser preenchido");
             if (client.nr_cellphone == string.Empty && client.nr_tellphone == string.Empty)
                 throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
@@ -57,17 +57,17 @@ namespace Liriou_s_Burguer.Business
             List<Database.Entities.tb_client> list = new List<Database.Entities.tb_client>();
 
 
-            if (client.nm_firstName != string.Empty && client.ds_rg == string.Empty && client.ds_sex == null)
+            if (client.nr_rg == string.Empty && client.ds_sex == null)
                 list = dbclient.ConsultarPorNome(client);
-            else if (client.nm_firstName == string.Empty && client.ds_rg != string.Empty && client.ds_sex == null)
+            else if (client.nm_firstName == string.Empty && client.ds_sex == null)
                 list = dbclient.ConsultarPorRG(client);
-            else if (client.nm_firstName == string.Empty && client.ds_rg == string.Empty && client.ds_sex != null)
+            else if (client.nm_firstName == string.Empty && client.nr_rg == string.Empty)
                 list = dbclient.ConsultarPorSexo(client);
-            else if (client.nm_firstName != string.Empty && client.ds_rg != string.Empty && client.ds_sex == null)
+            else if (client.ds_sex == null)
                 list = dbclient.ConsultarPorNomeRG(client);
-            else if (client.nm_firstName != string.Empty && client.ds_rg == string.Empty && client.ds_sex != null)
+            else if (client.nm_firstName != string.Empty && client.ds_sex != null)
                 list = dbclient.ConsultarPorNomeSexo(client);
-            else if (client.nm_firstName == string.Empty && client.ds_rg != string.Empty && client.ds_sex != null)
+            else if (client.nr_rg != string.Empty && client.ds_sex != null)
                 list = dbclient.ConsultarPorRGSexo(client);
 
             return list;
@@ -85,9 +85,9 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (client.nm_lastName == string.Empty)
                 throw new ArgumentException("O campo sobrenome deve ser preenchido");
-            if (client.ds_rg == string.Empty)
+            if (client.nr_rg == string.Empty)
                 throw new ArgumentException("O campo rg deve ser preenchido");
-            if (client.ds_cpf == string.Empty)
+            if (client.nr_cpf == string.Empty)
                 throw new ArgumentException("O campo cpf deve ser preenchido");
             if (client.ds_sex == string.Empty)
                 throw new ArgumentException("O campo sexo deve ser preenchido");
@@ -97,7 +97,7 @@ namespace Liriou_s_Burguer.Business
                 client.ds_sex = "F";
             if (client.ds_state == string.Empty)
                 throw new ArgumentException("O campo estado deve ser preenchido");
-            if (client.ds_cep == string.Empty)
+            if (client.nr_cep == string.Empty)
                 throw new ArgumentException("O campo cep deve ser preenchido");
             if (client.nr_cellphone == string.Empty && client.nr_tellphone == string.Empty)
                 throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
@@ -111,9 +111,9 @@ namespace Liriou_s_Burguer.Business
             db.Alterar(client);
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
-            db.Deletar(id);
+            db.Remover(id);
         }
     }
 }

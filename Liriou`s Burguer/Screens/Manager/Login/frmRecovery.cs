@@ -32,11 +32,11 @@ namespace Liriou_s_Burguer.Screens.Login
 
                 if (cboOpção.Text == "RG")
                 {
-                    employees.ds_rg = mtxtRG.Text.Trim();
+                    employees.nr_rg = mtxtRG.Text.Trim();
                 }
                 if (cboOpção.Text == "CPF")
                 {
-                    employees.ds_cpf = mtxtCPF.Text.Trim();
+                    employees.nr_cpf = mtxtCPF.Text.Trim();
                 }
                 if (cboOpção.Text == "Número do Celular")
                 {

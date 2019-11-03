@@ -9,10 +9,11 @@ namespace Liriou_s_Burguer.Business
 {
     class FinancialBusiness
     {
-        public void Inserir(Database.Entities.tb_financial financial)
+        Database.FinancialDatabase db = new Database.FinancialDatabase();
+
+        public void Inserir(tb_financial financial)
         {
-            Database.FinancialDatabase DB = new Database.FinancialDatabase();
-            DB.Inserir(financial);
+            db.Inserir(financial);
         }
 
         public string Verificar(Model.PayrollModel model)
@@ -34,8 +35,7 @@ namespace Liriou_s_Burguer.Business
         int id;
         public void Consultar(string rg)
         {
-            Database.FinancialDatabase DB = new Database.FinancialDatabase();
-            id = DB.Consultar(rg);
+            id = db.Consultar(rg);
         }
 
         liriousdbEntities DB = new liriousdbEntities();
@@ -68,7 +68,7 @@ namespace Liriou_s_Burguer.Business
         public string Dependents()
         {
             tb_employees tb = DB.tb_employees.First(t => t.id_emp == id);
-            return tb.ds_dependents.ToString();
+            return tb.nr_dependents.ToString();
         }
 
         public string Bruto()
@@ -80,7 +80,7 @@ namespace Liriou_s_Burguer.Business
         public string HorasÁPagar()
         {
             tb_points tb = DB.tb_points.First(t => t.id_emp == id);
-            return tb.vl_hoursToPay + " Hrs";
+            return tb.hr_toPay + " Hrs";
         }
 
         decimal SL = 0;
@@ -88,7 +88,7 @@ namespace Liriou_s_Burguer.Business
         {
             tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
             tb_financial F = DB.tb_financial.First(t => t.id_emp == id);
-            if (tb.bl_transport.ToUpper() == "TRUE")
+            if (tb.bt_transport.ToUpper() == "TRUE")
             {
                 int qtdDiasUteis = this.QtdDeDiasUteis(ano, mes);
 
@@ -109,7 +109,7 @@ namespace Liriou_s_Burguer.Business
         public string ValeAlimentação(int ano, int mes)
         {
             tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
-            if (tb.bl_food.ToUpper() == "TRUE")
+            if (tb.bt_food.ToUpper() == "TRUE")
             {
                 int qtdDiasUteis = this.QtdDeDiasUteis(ano, mes);
 
@@ -129,16 +129,12 @@ namespace Liriou_s_Burguer.Business
 
         public void Alterar(tb_financial financial)
         {
-            Database.FinancialDatabase DB = new Database.FinancialDatabase();
-            DB.Alterar(financial);
+            db.Alterar(financial);
         }
 
         public void Remover(int id)
         {
-            Database.FinancialDatabase DB = new Database.FinancialDatabase();
-            DB.Remover(id);
+            db.Remover(id);
         }
-
-
     }
 }

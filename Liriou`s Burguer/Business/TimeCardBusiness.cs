@@ -8,30 +8,27 @@ namespace Liriou_s_Burguer.Business
 {
     class TimeCardBusiness
     {
+        Database.TimeCardDatabase db = new Database.TimeCardDatabase();
 
         public void Inserir(Database.Entities.tb_timecard timecard)
         {
-            Database.TimeCardDatabase DB = new Database.TimeCardDatabase();
-            DB.Inserir(timecard);
+            db.Inserir(timecard);
         }
 
         public List<Database.Entities.tb_timecard> Consultar()
         {
-            Database.TimeCardDatabase DB = new Database.TimeCardDatabase();
-            List<Database.Entities.tb_timecard> list = DB.Consultar();
+            List<Database.Entities.tb_timecard> list = db.Consultar();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_timecard timecard, Database.Entities.tb_points points)
         {
-            Database.TimeCardDatabase DB = new Database.TimeCardDatabase();
-            DB.Alterar(timecard, points);
+            db.Alterar(timecard, points);
         }
 
         public void Remover(int id)
         {
-            Database.TimeCardDatabase DB = new Database.TimeCardDatabase();
-            DB.Remover(id);
+            db.Remover(id);
         }
     }
 }

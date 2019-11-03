@@ -8,29 +8,45 @@ namespace Liriou_s_Burguer.Business
 {
     class FunctionBusiness
     {
+        Database.FunctionDatabase db = new Database.FunctionDatabase();
+
         public void Inserir(Database.Entities.tb_function function)
         {
-            Database.FunctionDatabase DB = new Database.FunctionDatabase();
-            DB.Inserir(function);
+            db.Inserir(function);
         }
 
-        public List<Database.Entities.tb_function> Consultar()
+        public Database.Entities.tb_function ConsultarPorID(int id)
         {
-            Database.FunctionDatabase DB = new Database.FunctionDatabase();
-            List<Database.Entities.tb_function> list = DB.Consultar();
+            Database.FunctionDatabase dbfunction = new Database.FunctionDatabase();
+            Database.Entities.tb_function function = dbfunction.ConsultaPorID(id);
+
+            return function;
+        }
+
+        public List<Database.Entities.tb_function> Consultar(Database.Entities.tb_function function)
+        {
+            Database.FunctionDatabase dbfunction = new Database.FunctionDatabase();
+            List<Database.Entities.tb_function> list = new List<Database.Entities.tb_function>();
+
+            list = dbfunction.ConsultarPorNome(function);
+
+            return list;
+        }
+
+        public List<Database.Entities.tb_function> ConsultarTodos()
+        {
+            List<Database.Entities.tb_function> list = db.ConsultarTodos();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_function function)
         {
-            Database.FunctionDatabase DB = new Database.FunctionDatabase();
-            DB.Alterar(function);
+            db.Alterar(function);
         }
 
         public void Remover(int id)
         {
-            Database.FunctionDatabase DB = new Database.FunctionDatabase();
-            DB.Remover(id);
+            db.Remover(id);
         }
     }
 }

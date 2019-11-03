@@ -96,7 +96,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                     provider.nr_identification = mtxtCNPJ.Text.Trim();
                 }
                 provider.ds_state = cboEstado.Text;
-                provider.ds_cep = mtxtCEP.Text.Trim();
+                provider.nr_cep = mtxtCEP.Text.Trim();
                 provider.ds_address = txtEndereço.Text.Trim();
                 provider.ds_note = txtComplemento.Text.Trim();
                 provider.nr_cellphone = mtxtCelular.Text.Trim();

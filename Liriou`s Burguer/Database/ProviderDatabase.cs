@@ -53,7 +53,7 @@ namespace Liriou_s_Burguer.Database
             list.ds_typePerson = provider.ds_typePerson;
             list.nr_identification = provider.nr_identification;
             list.ds_state = provider.ds_state;
-            list.ds_cep = provider.ds_cep;
+            list.nr_cep = provider.nr_cep;
             list.ds_address = provider.ds_address;
             list.ds_note = provider.ds_note;
             list.nr_cellphone = provider.nr_cellphone;

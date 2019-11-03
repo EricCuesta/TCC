@@ -16,6 +16,8 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (product.ds_typeProduct == null)
                 throw new ArgumentException("O campo tipo deve ser definido");
+            if (product.ds_placeStock == string.Empty)
+                throw new ArgumentException("O campo descrição do estoque deve ser definido");
             if (product.vl_amount == 0)
                 throw new ArgumentException("O campo quantidade deve ser preenchido");
             if (product.vl_value == Convert.ToDecimal("0,00"))
@@ -26,21 +28,19 @@ namespace Liriou_s_Burguer.Business
 
         public Database.Entities.tb_product ConsultarPorID(int id)
         {
-            Database.ProductDatabase dbproduct = new Database.ProductDatabase();
-            Database.Entities.tb_product product = dbproduct.ConsultaPorID(id);
+            Database.Entities.tb_product product = db.ConsultaPorID(id);
 
             return product;
         }
 
         public List<Database.Entities.tb_product> Consultar(Database.Entities.tb_product product)
         {
-            Database.ProductDatabase dbproduct = new Database.ProductDatabase();
             List<Database.Entities.tb_product> list = new List<Database.Entities.tb_product>();
 
-            if (product.nm_product != string.Empty && product.ds_typeProduct == string.Empty)
-                list = dbproduct.ConsultarPorNome(product);
-            else if (product.ds_typeProduct != string.Empty && product.nm_product == string.Empty)
-                list = dbproduct.ConsultarPorTipo(product);
+            if (product.ds_typeProduct == string.Empty)
+                list = db.ConsultarPorNome(product);
+            else if (product.nm_product == string.Empty)
+                list = db.ConsultarPorTipo(product);
 
             return list;
         }
@@ -57,16 +57,19 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo nome deve ser preenchido");
             if (product.ds_typeProduct == null)
                 throw new ArgumentException("O campo tipo deve ser definido");
+            if (product.ds_placeStock == string.Empty)
+                throw new ArgumentException("O campo descrição do estoque deve ser definido");
             if (product.vl_amount == 0)
                 throw new ArgumentException("O campo quantidade deve ser preenchido");
             if (product.vl_value == Convert.ToDecimal("0,00"))
                 throw new ArgumentException("O campo valor deve ser preenchido");
+
             db.Alterar(product);
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
-            db.Deletar(id);
+            db.Remover(id);
         }
     }
 }

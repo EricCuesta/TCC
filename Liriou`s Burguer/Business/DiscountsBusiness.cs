@@ -8,29 +8,27 @@ namespace Liriou_s_Burguer.Business
 {
     class DiscountsBusiness
     {
+        Database.DiscountsDatabase db = new Database.DiscountsDatabase();
+
         public void Inserir(Database.Entities.tb_discounts discounts)
         {
-            Database.DiscountsDatabase DB = new Database.DiscountsDatabase();
-            DB.Inserir(discounts);
+            db.Inserir(discounts);
         }
 
         public List<Database.Entities.tb_discounts> Consultar()
         {
-            Database.DiscountsDatabase DB = new Database.DiscountsDatabase();
-            List<Database.Entities.tb_discounts> list = DB.Consultar();
+            List<Database.Entities.tb_discounts> list = db.Consultar();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_discounts discounts)
         {
-            Database.DiscountsDatabase DB = new Database.DiscountsDatabase();
-            DB.Alterar(discounts);
+            db.Alterar(discounts);
         }
 
         public void Remover(int id)
         {
-            Database.DiscountsDatabase DB = new Database.DiscountsDatabase();
-            DB.Remover(id);
+            db.Remover(id);
         }
     }
 }

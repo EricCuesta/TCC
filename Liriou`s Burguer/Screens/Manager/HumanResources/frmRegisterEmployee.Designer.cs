@@ -30,6 +30,12 @@
         {
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
+            this.chkCRM = new System.Windows.Forms.CheckBox();
+            this.chkEstoque = new System.Windows.Forms.CheckBox();
+            this.chkFinanceiro = new System.Windows.Forms.CheckBox();
+            this.chkRH = new System.Windows.Forms.CheckBox();
+            this.chkFuncionário = new System.Windows.Forms.CheckBox();
+            this.chkAdministrador = new System.Windows.Forms.CheckBox();
             this.btnContinuar = new System.Windows.Forms.Button();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
@@ -76,12 +82,6 @@
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.chkAdministrador = new System.Windows.Forms.CheckBox();
-            this.chkFuncionário = new System.Windows.Forms.CheckBox();
-            this.chkRH = new System.Windows.Forms.CheckBox();
-            this.chkFinanceiro = new System.Windows.Forms.CheckBox();
-            this.chkEstoque = new System.Windows.Forms.CheckBox();
-            this.chkCRM = new System.Windows.Forms.CheckBox();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
@@ -176,6 +176,78 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(708, 414);
             this.panel.TabIndex = 562;
+            // 
+            // chkCRM
+            // 
+            this.chkCRM.AutoSize = true;
+            this.chkCRM.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkCRM.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkCRM.Location = new System.Drawing.Point(209, 362);
+            this.chkCRM.Name = "chkCRM";
+            this.chkCRM.Size = new System.Drawing.Size(61, 23);
+            this.chkCRM.TabIndex = 679;
+            this.chkCRM.Text = "CRM";
+            this.chkCRM.UseVisualStyleBackColor = true;
+            // 
+            // chkEstoque
+            // 
+            this.chkEstoque.AutoSize = true;
+            this.chkEstoque.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkEstoque.Location = new System.Drawing.Point(209, 333);
+            this.chkEstoque.Name = "chkEstoque";
+            this.chkEstoque.Size = new System.Drawing.Size(84, 23);
+            this.chkEstoque.TabIndex = 678;
+            this.chkEstoque.Text = "Estoque";
+            this.chkEstoque.UseVisualStyleBackColor = true;
+            // 
+            // chkFinanceiro
+            // 
+            this.chkFinanceiro.AutoSize = true;
+            this.chkFinanceiro.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkFinanceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkFinanceiro.Location = new System.Drawing.Point(209, 304);
+            this.chkFinanceiro.Name = "chkFinanceiro";
+            this.chkFinanceiro.Size = new System.Drawing.Size(100, 23);
+            this.chkFinanceiro.TabIndex = 677;
+            this.chkFinanceiro.Text = "Financeiro";
+            this.chkFinanceiro.UseVisualStyleBackColor = true;
+            // 
+            // chkRH
+            // 
+            this.chkRH.AutoSize = true;
+            this.chkRH.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkRH.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkRH.Location = new System.Drawing.Point(209, 275);
+            this.chkRH.Name = "chkRH";
+            this.chkRH.Size = new System.Drawing.Size(48, 23);
+            this.chkRH.TabIndex = 676;
+            this.chkRH.Text = "RH";
+            this.chkRH.UseVisualStyleBackColor = true;
+            // 
+            // chkFuncionário
+            // 
+            this.chkFuncionário.AutoSize = true;
+            this.chkFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkFuncionário.Location = new System.Drawing.Point(12, 304);
+            this.chkFuncionário.Name = "chkFuncionário";
+            this.chkFuncionário.Size = new System.Drawing.Size(110, 23);
+            this.chkFuncionário.TabIndex = 675;
+            this.chkFuncionário.Text = "Funcionário";
+            this.chkFuncionário.UseVisualStyleBackColor = true;
+            // 
+            // chkAdministrador
+            // 
+            this.chkAdministrador.AutoSize = true;
+            this.chkAdministrador.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkAdministrador.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkAdministrador.Location = new System.Drawing.Point(12, 275);
+            this.chkAdministrador.Name = "chkAdministrador";
+            this.chkAdministrador.Size = new System.Drawing.Size(128, 23);
+            this.chkAdministrador.TabIndex = 674;
+            this.chkAdministrador.Text = "Administrador";
+            this.chkAdministrador.UseVisualStyleBackColor = true;
             // 
             // btnContinuar
             // 
@@ -755,78 +827,6 @@
             this.lblNome.TabIndex = 563;
             this.lblNome.Text = "Nome:";
             // 
-            // chkAdministrador
-            // 
-            this.chkAdministrador.AutoSize = true;
-            this.chkAdministrador.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkAdministrador.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkAdministrador.Location = new System.Drawing.Point(12, 275);
-            this.chkAdministrador.Name = "chkAdministrador";
-            this.chkAdministrador.Size = new System.Drawing.Size(128, 23);
-            this.chkAdministrador.TabIndex = 674;
-            this.chkAdministrador.Text = "Administrador";
-            this.chkAdministrador.UseVisualStyleBackColor = true;
-            // 
-            // chkFuncionário
-            // 
-            this.chkFuncionário.AutoSize = true;
-            this.chkFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkFuncionário.Location = new System.Drawing.Point(12, 304);
-            this.chkFuncionário.Name = "chkFuncionário";
-            this.chkFuncionário.Size = new System.Drawing.Size(110, 23);
-            this.chkFuncionário.TabIndex = 675;
-            this.chkFuncionário.Text = "Funcionário";
-            this.chkFuncionário.UseVisualStyleBackColor = true;
-            // 
-            // chkRH
-            // 
-            this.chkRH.AutoSize = true;
-            this.chkRH.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkRH.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkRH.Location = new System.Drawing.Point(209, 275);
-            this.chkRH.Name = "chkRH";
-            this.chkRH.Size = new System.Drawing.Size(48, 23);
-            this.chkRH.TabIndex = 676;
-            this.chkRH.Text = "RH";
-            this.chkRH.UseVisualStyleBackColor = true;
-            // 
-            // chkFinanceiro
-            // 
-            this.chkFinanceiro.AutoSize = true;
-            this.chkFinanceiro.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkFinanceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkFinanceiro.Location = new System.Drawing.Point(209, 304);
-            this.chkFinanceiro.Name = "chkFinanceiro";
-            this.chkFinanceiro.Size = new System.Drawing.Size(100, 23);
-            this.chkFinanceiro.TabIndex = 677;
-            this.chkFinanceiro.Text = "Financeiro";
-            this.chkFinanceiro.UseVisualStyleBackColor = true;
-            // 
-            // chkEstoque
-            // 
-            this.chkEstoque.AutoSize = true;
-            this.chkEstoque.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkEstoque.Location = new System.Drawing.Point(209, 333);
-            this.chkEstoque.Name = "chkEstoque";
-            this.chkEstoque.Size = new System.Drawing.Size(84, 23);
-            this.chkEstoque.TabIndex = 678;
-            this.chkEstoque.Text = "Estoque";
-            this.chkEstoque.UseVisualStyleBackColor = true;
-            // 
-            // chkCRM
-            // 
-            this.chkCRM.AutoSize = true;
-            this.chkCRM.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkCRM.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkCRM.Location = new System.Drawing.Point(209, 362);
-            this.chkCRM.Name = "chkCRM";
-            this.chkCRM.Size = new System.Drawing.Size(61, 23);
-            this.chkCRM.TabIndex = 679;
-            this.chkCRM.Text = "CRM";
-            this.chkCRM.UseVisualStyleBackColor = true;
-            // 
             // frmRegisterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -842,7 +842,6 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Employee";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
@@ -871,7 +870,6 @@
         private System.Windows.Forms.Label lblCadastrarFuncionário;
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Label lblNome;
-        protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSobrenome;
         public System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -922,5 +920,6 @@
         private System.Windows.Forms.CheckBox chkRH;
         private System.Windows.Forms.CheckBox chkFuncionário;
         private System.Windows.Forms.CheckBox chkAdministrador;
+        public System.Windows.Forms.TextBox txtNome;
     }
 }

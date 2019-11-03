@@ -20,8 +20,9 @@ namespace Liriou_s_Burguer.Database.Entities
         public string ds_typePerson { get; set; }
         public string nr_identification { get; set; }
         public string ds_email { get; set; }
+        public string ds_country { get; set; }
         public string ds_state { get; set; }
-        public string ds_cep { get; set; }
+        public string nr_cep { get; set; }
         public string ds_address { get; set; }
         public string ds_note { get; set; }
         public string nr_cellphone { get; set; }

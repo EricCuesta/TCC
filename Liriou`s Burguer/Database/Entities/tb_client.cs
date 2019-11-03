@@ -24,12 +24,12 @@ namespace Liriou_s_Burguer.Database.Entities
         public int id_client { get; set; }
         public string nm_firstName { get; set; }
         public string nm_lastName { get; set; }
-        public string ds_rg { get; set; }
-        public string ds_cpf { get; set; }
+        public string nr_rg { get; set; }
+        public string nr_cpf { get; set; }
         public string ds_sex { get; set; }
         public System.DateTime dt_birth { get; set; }
         public string ds_state { get; set; }
-        public string ds_cep { get; set; }
+        public string nr_cep { get; set; }
         public string ds_address { get; set; }
         public string ds_note { get; set; }
         public string nr_cellphone { get; set; }

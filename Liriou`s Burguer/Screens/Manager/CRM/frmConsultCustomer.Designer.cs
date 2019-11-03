@@ -189,7 +189,7 @@
             // 
             // Coluna5
             // 
-            this.Coluna5.DataPropertyName = "ds_cpf";
+            this.Coluna5.DataPropertyName = "nr_cpf";
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
             this.Coluna5.DefaultCellStyle = dataGridViewCellStyle6;
             this.Coluna5.HeaderText = "CPF";

@@ -853,6 +853,7 @@
             this.imgVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgVoltar.TabIndex = 565;
             this.imgVoltar.TabStop = false;
+            this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
             // 
             // frmRegisterEmployee1
             // 
@@ -865,6 +866,7 @@
             this.Controls.Add(this.lblCadastrarFuncionário);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRegisterEmployee1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register Employee";
             this.panel.ResumeLayout(false);

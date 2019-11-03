@@ -182,27 +182,32 @@ namespace Liriou_s_Burguer.Screens.Manager
 
         private void btnFluxoDeCaixa_Click(object sender, EventArgs e)
         {
-
+            openContedor(new Financial.frmCashflow());
+            HideSubMenu();
         }
 
         private void btnCadastrarConta_Click(object sender, EventArgs e)
         {
-
+            openContedor(new Financial.frmRegisterAccount());
+            HideSubMenu();
         }
 
         private void btnConsultarConta_Click(object sender, EventArgs e)
         {
-
+            openContedor(new Financial.frmQueryAccount());
+            HideSubMenu();
         }
 
         private void btnAlterarConta_Click(object sender, EventArgs e)
         {
-
+            openContedor(new Financial.frmChangeAccount());
+            HideSubMenu();
         }
 
         private void btnDeletarConta_Click(object sender, EventArgs e)
         {
-
+            openContedor(new Financial.frmDeleteAccount());
+            HideSubMenu();
         }
 
         private void btnCadastrarFornecedor_Click(object sender, EventArgs e)

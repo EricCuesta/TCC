@@ -24,6 +24,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
                 Database.Entities.tb_product product = new Database.Entities.tb_product();
                 product.nm_product = txtNome.Text.Trim();
                 product.ds_typeProduct = cboTipo.Text.Trim();
+                product.ds_placeStock = txtLocalDoEstoque.Text.Trim();
                 product.vl_amount = Convert.ToInt32(nudQuantidade.Value);
                 product.vl_value = nudValor.Value;
                 product.ds_note = rtxtDescrição.Text.Trim();

@@ -23,6 +23,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             {
                 Database.Entities.tb_supply supply = new Database.Entities.tb_supply();
                 supply.nm_supply = txtNome.Text.Trim();
+                supply.ds_placeStock = txtLocalDoEstoque.Text.Trim();
                 supply.vl_amount = Convert.ToInt32(nudQuantidade.Value);
                 supply.vl_value = nudValor.Value;
                 supply.ds_note = rtxtDescrição.Text.Trim();

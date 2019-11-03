@@ -16,10 +16,10 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_timecard { get; set; }
         public int id_emp { get; set; }
-        public System.TimeSpan vl_input { get; set; }
-        public System.TimeSpan vl_output { get; set; }
-        public System.TimeSpan vl_fixedIntInput { get; set; }
-        public System.TimeSpan vl_fixedIntOutput { get; set; }
+        public System.DateTime hr_fixedInput { get; set; }
+        public System.DateTime hr_fixedOutput { get; set; }
+        public System.DateTime hr_fixedIntInput { get; set; }
+        public System.DateTime hr_fixedIntOutput { get; set; }
     
         public virtual tb_employees tb_employees { get; set; }
     }

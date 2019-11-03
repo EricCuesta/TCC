@@ -16,12 +16,11 @@ namespace Liriou_s_Burguer.Database.Entities
     {
         public int id_point { get; set; }
         public int id_emp { get; set; }
-        public System.DateTime dt_date { get; set; }
-        public System.TimeSpan vl_cameIn { get; set; }
-        public System.TimeSpan vl_exited { get; set; }
-        public System.TimeSpan vl_intervalInput { get; set; }
-        public System.TimeSpan vl_intervalOutput { get; set; }
-        public System.TimeSpan vl_hoursToPay { get; set; }
+        public System.DateTime hr_input { get; set; }
+        public System.DateTime hr_output { get; set; }
+        public System.DateTime hr_intInput { get; set; }
+        public System.DateTime hr_intOutput { get; set; }
+        public Nullable<System.TimeSpan> hr_toPay { get; set; }
     
         public virtual tb_employees tb_employees { get; set; }
     }

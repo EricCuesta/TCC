@@ -28,12 +28,13 @@ namespace Liriou_s_Burguer.Database.Entities
         public int id_emp { get; set; }
         public string nm_firstName { get; set; }
         public string nm_lastName { get; set; }
-        public string ds_rg { get; set; }
-        public string ds_cpf { get; set; }
-        public int ds_dependents { get; set; }
+        public string nr_rg { get; set; }
+        public string nr_cpf { get; set; }
+        public int nr_dependents { get; set; }
         public string ds_sex { get; set; }
         public System.DateTime dt_birth { get; set; }
-        public string ds_cep { get; set; }
+        public string nr_cep { get; set; }
+        public string ds_country { get; set; }
         public string ds_state { get; set; }
         public string ds_address { get; set; }
         public string ds_note { get; set; }
@@ -49,6 +50,8 @@ namespace Liriou_s_Burguer.Database.Entities
         public Nullable<bool> bt_financeiro { get; set; }
         public Nullable<bool> bt_estoque { get; set; }
         public Nullable<bool> bt_crm { get; set; }
+        public Nullable<System.DateTime> dt_unavailability { get; set; }
+        public string ds_unavailability { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_department> tb_department { get; set; }

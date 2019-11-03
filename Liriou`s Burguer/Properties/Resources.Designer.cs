@@ -253,6 +253,26 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Visto {
+            get {
+                object obj = ResourceManager.GetObject("Visto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Visto01 {
+            get {
+                object obj = ResourceManager.GetObject("Visto01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Voltar {
             get {
                 object obj = ResourceManager.GetObject("Voltar", resourceCulture);

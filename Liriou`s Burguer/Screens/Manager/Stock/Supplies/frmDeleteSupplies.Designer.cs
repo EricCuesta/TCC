@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
+            this.txtLocalDoEstoque = new System.Windows.Forms.TextBox();
+            this.lblLocalDoStock = new System.Windows.Forms.Label();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.rtxtDescrição = new System.Windows.Forms.RichTextBox();
             this.lblDescrição = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
@@ -47,6 +50,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.lblDeletarSuprimento = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
@@ -63,6 +67,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.Controls.Add(this.txtLocalDoEstoque);
+            this.panel.Controls.Add(this.lblLocalDoStock);
+            this.panel.Controls.Add(this.dataGridView2);
             this.panel.Controls.Add(this.rtxtDescrição);
             this.panel.Controls.Add(this.lblDescrição);
             this.panel.Controls.Add(this.nudValor);
@@ -84,15 +91,52 @@
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 572;
             // 
+            // txtLocalDoEstoque
+            // 
+            this.txtLocalDoEstoque.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLocalDoEstoque.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtLocalDoEstoque.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLocalDoEstoque.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalDoEstoque.Location = new System.Drawing.Point(121, 102);
+            this.txtLocalDoEstoque.MaxLength = 32;
+            this.txtLocalDoEstoque.Name = "txtLocalDoEstoque";
+            this.txtLocalDoEstoque.ReadOnly = true;
+            this.txtLocalDoEstoque.Size = new System.Drawing.Size(586, 23);
+            this.txtLocalDoEstoque.TabIndex = 683;
+            // 
+            // lblLocalDoStock
+            // 
+            this.lblLocalDoStock.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLocalDoStock.AutoSize = true;
+            this.lblLocalDoStock.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalDoStock.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLocalDoStock.Location = new System.Drawing.Point(4, 104);
+            this.lblLocalDoStock.Name = "lblLocalDoStock";
+            this.lblLocalDoStock.Size = new System.Drawing.Size(111, 19);
+            this.lblLocalDoStock.TabIndex = 682;
+            this.lblLocalDoStock.Text = "Local do Stock:";
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1, 129);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView2.TabIndex = 681;
+            // 
             // rtxtDescrição
             // 
             this.rtxtDescrição.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtxtDescrição.Location = new System.Drawing.Point(7, 124);
+            this.rtxtDescrição.Location = new System.Drawing.Point(7, 156);
             this.rtxtDescrição.MaxLength = 256;
             this.rtxtDescrição.Name = "rtxtDescrição";
             this.rtxtDescrição.ReadOnly = true;
             this.rtxtDescrição.Size = new System.Drawing.Size(698, 170);
-            this.rtxtDescrição.TabIndex = 672;
+            this.rtxtDescrição.TabIndex = 680;
             this.rtxtDescrição.Text = "";
             // 
             // lblDescrição
@@ -101,10 +145,10 @@
             this.lblDescrição.AutoSize = true;
             this.lblDescrição.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescrição.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDescrição.Location = new System.Drawing.Point(4, 102);
+            this.lblDescrição.Location = new System.Drawing.Point(4, 134);
             this.lblDescrição.Name = "lblDescrição";
             this.lblDescrição.Size = new System.Drawing.Size(79, 19);
-            this.lblDescrição.TabIndex = 671;
+            this.lblDescrição.TabIndex = 679;
             this.lblDescrição.Text = "Descrição:";
             // 
             // nudValor
@@ -113,6 +157,11 @@
             this.nudValor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudValor.DecimalPlaces = 2;
+            this.nudValor.Increment = new decimal(new int[] {
+            10,
+            0,
+            0,
+            131072});
             this.nudValor.Location = new System.Drawing.Point(437, 72);
             this.nudValor.Name = "nudValor";
             this.nudValor.ReadOnly = true;
@@ -297,6 +346,7 @@
             this.Text = "Delete Supplies";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
@@ -319,8 +369,6 @@
         private System.Windows.Forms.Button btnDeletar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label lblDeletarSuprimento;
-        private System.Windows.Forms.RichTextBox rtxtDescrição;
-        private System.Windows.Forms.Label lblDescrição;
         public System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.Label lblValor;
         private System.Windows.Forms.DataGridView dataGridView16;
@@ -330,5 +378,10 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView3;
+        protected System.Windows.Forms.TextBox txtLocalDoEstoque;
+        private System.Windows.Forms.Label lblLocalDoStock;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.RichTextBox rtxtDescrição;
+        private System.Windows.Forms.Label lblDescrição;
     }
 }

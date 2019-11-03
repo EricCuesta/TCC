@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panel = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.cboGênero = new System.Windows.Forms.ComboBox();
-            this.lblGênero = new System.Windows.Forms.Label();
+            this.btnConsulatar = new System.Windows.Forms.Button();
+            this.cboSexo = new System.Windows.Forms.ComboBox();
+            this.lblSexo = new System.Windows.Forms.Label();
             this.mtxtAno = new System.Windows.Forms.MaskedTextBox();
             this.lblNascimento = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
@@ -81,9 +81,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
-            this.panel.Controls.Add(this.btnCadastrar);
-            this.panel.Controls.Add(this.cboGênero);
-            this.panel.Controls.Add(this.lblGênero);
+            this.panel.Controls.Add(this.btnConsulatar);
+            this.panel.Controls.Add(this.cboSexo);
+            this.panel.Controls.Add(this.lblSexo);
             this.panel.Controls.Add(this.mtxtAno);
             this.panel.Controls.Add(this.lblNascimento);
             this.panel.Controls.Add(this.dataGridView5);
@@ -106,43 +106,45 @@
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 566;
             // 
-            // btnCadastrar
+            // btnConsulatar
             // 
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btnCadastrar.Location = new System.Drawing.Point(590, 105);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(107, 30);
-            this.btnCadastrar.TabIndex = 703;
-            this.btnCadastrar.Text = "Consultar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnConsulatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsulatar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsulatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsulatar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsulatar.ForeColor = System.Drawing.Color.Black;
+            this.btnConsulatar.Location = new System.Drawing.Point(590, 105);
+            this.btnConsulatar.Name = "btnConsulatar";
+            this.btnConsulatar.Size = new System.Drawing.Size(107, 30);
+            this.btnConsulatar.TabIndex = 703;
+            this.btnConsulatar.Text = "Consultar";
+            this.btnConsulatar.UseVisualStyleBackColor = false;
+            this.btnConsulatar.Click += new System.EventHandler(this.btnConsulatar_Click);
             // 
-            // cboGênero
+            // cboSexo
             // 
-            this.cboGênero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboGênero.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGênero.FormattingEnabled = true;
-            this.cboGênero.Items.AddRange(new object[] {
+            this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboSexo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboSexo.FormattingEnabled = true;
+            this.cboSexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cboGênero.Location = new System.Drawing.Point(72, 69);
-            this.cboGênero.Name = "cboGênero";
-            this.cboGênero.Size = new System.Drawing.Size(275, 23);
-            this.cboGênero.TabIndex = 702;
+            this.cboSexo.Location = new System.Drawing.Point(72, 69);
+            this.cboSexo.Name = "cboSexo";
+            this.cboSexo.Size = new System.Drawing.Size(275, 23);
+            this.cboSexo.TabIndex = 702;
+            this.cboSexo.SelectedIndexChanged += new System.EventHandler(this.cboSexo_SelectedIndexChanged);
             // 
-            // lblGênero
+            // lblSexo
             // 
-            this.lblGênero.AutoSize = true;
-            this.lblGênero.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGênero.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblGênero.Location = new System.Drawing.Point(3, 69);
-            this.lblGênero.Name = "lblGênero";
-            this.lblGênero.Size = new System.Drawing.Size(63, 19);
-            this.lblGênero.TabIndex = 701;
-            this.lblGênero.Text = "Gênero:";
+            this.lblSexo.AutoSize = true;
+            this.lblSexo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSexo.Location = new System.Drawing.Point(3, 69);
+            this.lblSexo.Name = "lblSexo";
+            this.lblSexo.Size = new System.Drawing.Size(63, 19);
+            this.lblSexo.TabIndex = 701;
+            this.lblSexo.Text = "Gênero:";
             // 
             // mtxtAno
             // 
@@ -151,6 +153,7 @@
             this.mtxtAno.Name = "mtxtAno";
             this.mtxtAno.Size = new System.Drawing.Size(194, 20);
             this.mtxtAno.TabIndex = 700;
+            this.mtxtAno.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtAno_MaskInputRejected);
             // 
             // lblNascimento
             // 
@@ -204,6 +207,7 @@
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(154, 23);
             this.cboDepartamento.TabIndex = 695;
+            this.cboDepartamento.SelectedIndexChanged += new System.EventHandler(this.cboDepartamento_SelectedIndexChanged);
             // 
             // dataGridView18
             // 
@@ -224,6 +228,7 @@
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(154, 23);
             this.cboCargo.TabIndex = 693;
+            this.cboCargo.SelectedIndexChanged += new System.EventHandler(this.cboCargo_SelectedIndexChanged);
             // 
             // lblDepartamento
             // 
@@ -371,6 +376,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(285, 23);
             this.txtNome.TabIndex = 650;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // lblNome
             // 
@@ -496,9 +502,9 @@
         private System.Windows.Forms.Label lblDepartamento;
         private System.Windows.Forms.Label lblNascimento;
         private System.Windows.Forms.MaskedTextBox mtxtAno;
-        private System.Windows.Forms.ComboBox cboGênero;
-        private System.Windows.Forms.Label lblGênero;
-        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.ComboBox cboSexo;
+        private System.Windows.Forms.Label lblSexo;
+        private System.Windows.Forms.Button btnConsulatar;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;

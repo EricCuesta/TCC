@@ -1406,6 +1406,6 @@
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Button btnCadastrarSuprimentos;
         private System.Windows.Forms.Panel panelTítulo;
-        private System.Windows.Forms.Panel panelContedor;
+        public System.Windows.Forms.Panel panelContedor;
     }
 }

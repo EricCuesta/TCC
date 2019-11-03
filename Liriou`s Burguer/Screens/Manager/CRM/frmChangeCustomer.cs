@@ -54,15 +54,15 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             {
                 txtNome.Text = client.nm_firstName;
                 txtSobrenome.Text = client.nm_lastName;
-                mtxtRG.Text = client.ds_rg;
-                mtxtCPF.Text = client.ds_cpf;
+                mtxtRG.Text = client.nr_rg;
+                mtxtCPF.Text = client.nr_cpf;
                 if (client.ds_sex == "M")
                     cboSexo.Text = "Masculino";
                 else
                     cboEstado.Text = "Feminino";
                 dtpNascimento.Value = client.dt_birth;
                 cboEstado.Text = client.ds_state;
-                mtxtCEP.Text = client.ds_cep;
+                mtxtCEP.Text = client.nr_cep;
                 txtEndereço.Text = client.ds_address;
                 txtComplemento.Text = client.ds_note;
                 mtxtCelular.Text = client.nr_cellphone;
@@ -79,12 +79,12 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 client.id_client = Convert.ToInt32(nudId.Value);
                 client.nm_firstName = txtNome.Text.Trim();
                 client.nm_lastName = txtSobrenome.Text.Trim();
-                client.ds_rg = mtxtRG.Text.Trim();
-                client.ds_cpf = mtxtCPF.Text.Trim();
+                client.nr_rg = mtxtRG.Text.Trim();
+                client.nr_cpf = mtxtCPF.Text.Trim();
                 client.ds_sex = cboSexo.Text;
                 client.dt_birth = dtpNascimento.Value;
                 client.ds_state = cboEstado.Text;
-                client.ds_cep = mtxtCEP.Text.Trim();
+                client.nr_cep = mtxtCEP.Text.Trim();
                 client.ds_address = txtEndereço.Text.Trim();
                 client.ds_note = txtComplemento.Text.Trim();
                 client.nr_cellphone = mtxtCelular.Text.Trim();
