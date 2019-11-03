@@ -26,7 +26,7 @@ namespace Liriou_s_Burguer.Screens.Login
                 employees.pw_password = txtSenha.Text.Trim();
 
                 Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
-                bool verificacao = busemp.VerificarLogin(employees);
+                bool verificacao = busemp.Login(employees);
 
                 if (verificacao == true)
                 {
@@ -36,9 +36,7 @@ namespace Liriou_s_Burguer.Screens.Login
                 }
                 else if (verificacao == false)
                 {
-                    Employee.frmEmployeeMenu tela = new Employee.frmEmployeeMenu();
-                    tela.Show();
-                    Hide();
+
                 }
             }
             catch (Exception)

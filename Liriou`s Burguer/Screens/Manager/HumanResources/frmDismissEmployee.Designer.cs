@@ -79,6 +79,12 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblDemitirFuncionário = new System.Windows.Forms.Label();
+            this.chkCRM = new System.Windows.Forms.CheckBox();
+            this.chkEstoque = new System.Windows.Forms.CheckBox();
+            this.chkFinanceiro = new System.Windows.Forms.CheckBox();
+            this.chkRH = new System.Windows.Forms.CheckBox();
+            this.chkFuncionário = new System.Windows.Forms.CheckBox();
+            this.chkAdministrador = new System.Windows.Forms.CheckBox();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
@@ -106,6 +112,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.Controls.Add(this.chkCRM);
+            this.panel.Controls.Add(this.chkEstoque);
+            this.panel.Controls.Add(this.chkFinanceiro);
+            this.panel.Controls.Add(this.chkRH);
+            this.panel.Controls.Add(this.chkFuncionário);
+            this.panel.Controls.Add(this.chkAdministrador);
             this.panel.Controls.Add(this.dataGridView16);
             this.panel.Controls.Add(this.nudId);
             this.panel.Controls.Add(this.lblID);
@@ -178,6 +190,7 @@
             this.nudId.Name = "nudId";
             this.nudId.Size = new System.Drawing.Size(120, 23);
             this.nudId.TabIndex = 646;
+            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
             // 
             // lblID
             // 
@@ -198,12 +211,13 @@
             this.btnDemitir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDemitir.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDemitir.ForeColor = System.Drawing.Color.Black;
-            this.btnDemitir.Location = new System.Drawing.Point(302, 377);
+            this.btnDemitir.Location = new System.Drawing.Point(489, 328);
             this.btnDemitir.Name = "btnDemitir";
             this.btnDemitir.Size = new System.Drawing.Size(107, 30);
             this.btnDemitir.TabIndex = 644;
             this.btnDemitir.Text = "Demitir";
             this.btnDemitir.UseVisualStyleBackColor = false;
+            this.btnDemitir.Click += new System.EventHandler(this.btnDemitir_Click);
             // 
             // txtSenha
             // 
@@ -790,6 +804,78 @@
             this.lblDemitirFuncionário.Text = "Demitir Funcionário";
             this.lblDemitirFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // chkCRM
+            // 
+            this.chkCRM.AutoSize = true;
+            this.chkCRM.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkCRM.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkCRM.Location = new System.Drawing.Point(211, 386);
+            this.chkCRM.Name = "chkCRM";
+            this.chkCRM.Size = new System.Drawing.Size(61, 23);
+            this.chkCRM.TabIndex = 685;
+            this.chkCRM.Text = "CRM";
+            this.chkCRM.UseVisualStyleBackColor = true;
+            // 
+            // chkEstoque
+            // 
+            this.chkEstoque.AutoSize = true;
+            this.chkEstoque.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkEstoque.Location = new System.Drawing.Point(211, 357);
+            this.chkEstoque.Name = "chkEstoque";
+            this.chkEstoque.Size = new System.Drawing.Size(84, 23);
+            this.chkEstoque.TabIndex = 684;
+            this.chkEstoque.Text = "Estoque";
+            this.chkEstoque.UseVisualStyleBackColor = true;
+            // 
+            // chkFinanceiro
+            // 
+            this.chkFinanceiro.AutoSize = true;
+            this.chkFinanceiro.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkFinanceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkFinanceiro.Location = new System.Drawing.Point(211, 328);
+            this.chkFinanceiro.Name = "chkFinanceiro";
+            this.chkFinanceiro.Size = new System.Drawing.Size(100, 23);
+            this.chkFinanceiro.TabIndex = 683;
+            this.chkFinanceiro.Text = "Financeiro";
+            this.chkFinanceiro.UseVisualStyleBackColor = true;
+            // 
+            // chkRH
+            // 
+            this.chkRH.AutoSize = true;
+            this.chkRH.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkRH.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkRH.Location = new System.Drawing.Point(211, 299);
+            this.chkRH.Name = "chkRH";
+            this.chkRH.Size = new System.Drawing.Size(48, 23);
+            this.chkRH.TabIndex = 682;
+            this.chkRH.Text = "RH";
+            this.chkRH.UseVisualStyleBackColor = true;
+            // 
+            // chkFuncionário
+            // 
+            this.chkFuncionário.AutoSize = true;
+            this.chkFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkFuncionário.Location = new System.Drawing.Point(14, 328);
+            this.chkFuncionário.Name = "chkFuncionário";
+            this.chkFuncionário.Size = new System.Drawing.Size(110, 23);
+            this.chkFuncionário.TabIndex = 681;
+            this.chkFuncionário.Text = "Funcionário";
+            this.chkFuncionário.UseVisualStyleBackColor = true;
+            // 
+            // chkAdministrador
+            // 
+            this.chkAdministrador.AutoSize = true;
+            this.chkAdministrador.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.chkAdministrador.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkAdministrador.Location = new System.Drawing.Point(14, 299);
+            this.chkAdministrador.Name = "chkAdministrador";
+            this.chkAdministrador.Size = new System.Drawing.Size(128, 23);
+            this.chkAdministrador.TabIndex = 680;
+            this.chkAdministrador.Text = "Administrador";
+            this.chkAdministrador.UseVisualStyleBackColor = true;
+            // 
             // frmDismissEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -880,5 +966,11 @@
         private System.Windows.Forms.DataGridView dataGridView16;
         private System.Windows.Forms.NumericUpDown nudId;
         private System.Windows.Forms.Label lblID;
+        public System.Windows.Forms.CheckBox chkCRM;
+        public System.Windows.Forms.CheckBox chkEstoque;
+        public System.Windows.Forms.CheckBox chkFinanceiro;
+        public System.Windows.Forms.CheckBox chkRH;
+        public System.Windows.Forms.CheckBox chkFuncionário;
+        public System.Windows.Forms.CheckBox chkAdministrador;
     }
 }

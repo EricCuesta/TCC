@@ -24,18 +24,16 @@ namespace Liriou_s_Burguer.Business
 
         public Database.Entities.tb_supply ConsultarPorID(int id)
         {
-            Database.SupplyDatabase dbsupply = new Database.SupplyDatabase();
-            Database.Entities.tb_supply supply = dbsupply.ConsultaPorID(id);
+            Database.Entities.tb_supply supply = db.ConsultaPorID(id);
 
             return supply;
         }
 
         public List<Database.Entities.tb_supply> Consultar(Database.Entities.tb_supply supply)
         {
-            Database.SupplyDatabase dbsupply = new Database.SupplyDatabase();
             List<Database.Entities.tb_supply> list = new List<Database.Entities.tb_supply>();
 
-            list = dbsupply.ConsultarPorNome(supply);
+            list = db.ConsultarPorNome(supply);
 
             return list;
         }

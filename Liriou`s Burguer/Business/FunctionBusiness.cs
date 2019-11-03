@@ -17,18 +17,16 @@ namespace Liriou_s_Burguer.Business
 
         public Database.Entities.tb_function ConsultarPorID(int id)
         {
-            Database.FunctionDatabase dbfunction = new Database.FunctionDatabase();
-            Database.Entities.tb_function function = dbfunction.ConsultaPorID(id);
+            Database.Entities.tb_function function = db.ConsultaPorID(id);
 
             return function;
         }
 
         public List<Database.Entities.tb_function> Consultar(Database.Entities.tb_function function)
         {
-            Database.FunctionDatabase dbfunction = new Database.FunctionDatabase();
             List<Database.Entities.tb_function> list = new List<Database.Entities.tb_function>();
 
-            list = dbfunction.ConsultarPorNome(function);
+            list = db.ConsultarPorNome(function);
 
             return list;
         }

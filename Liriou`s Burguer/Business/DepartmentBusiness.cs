@@ -17,18 +17,16 @@ namespace Liriou_s_Burguer.Business
 
         public Database.Entities.tb_department ConsultarPorID(int id)
         {
-            Database.DepartmentDatabase dbdepartment = new Database.DepartmentDatabase();
-            Database.Entities.tb_department department = dbdepartment.ConsultaPorID(id);
+            Database.Entities.tb_department department = db.ConsultaPorID(id);
 
             return department;
         }
 
         public List<Database.Entities.tb_department> Consultar(Database.Entities.tb_department department)
         {
-            Database.DepartmentDatabase dbdepartment = new Database.DepartmentDatabase();
             List<Database.Entities.tb_department> list = new List<Database.Entities.tb_department>();
 
-            list = dbdepartment.ConsultarPorNome(department);
+            list = db.ConsultarPorNome(department);
 
             return list;
         }
@@ -41,13 +39,11 @@ namespace Liriou_s_Burguer.Business
 
         public void Alterar(Database.Entities.tb_department accounts)
         {
-            Database.DepartmentDatabase db = new Database.DepartmentDatabase();
             db.Alterar(accounts);
         }
 
         public void Remover(int id)
         {
-            Database.DepartmentDatabase db = new Database.DepartmentDatabase();
             db.Remover(id);
         }
     }

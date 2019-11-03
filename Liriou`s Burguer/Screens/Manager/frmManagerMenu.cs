@@ -20,6 +20,38 @@ namespace Liriou_s_Burguer.Screens.Manager
             CustomizeDesign();
         }
 
+        public void LoadScreen(Database.Entities.tb_employees employees)
+        {
+            toolStripStatusUsuário.Text = employees.nm_firstName + " entrou  às " + DateTime.Now;
+            if (employees.bt_admin == false)
+            {
+                if(employees.bt_rh == false)
+                {
+                    btnRecursosHumanos.Visible = false;
+                }
+
+                if (employees.bt_provider == false)
+                {
+                    btnFornecedor.Visible = false;
+                }
+
+                if (employees.bt_financial == false)
+                {
+                    btnFinanceiro.Visible = false;
+                }
+
+                if(employees.bt_stock == false)
+                {
+                    btnEstoque.Visible = false;
+                }
+
+                if(employees.bt_crm == false)
+                {
+                    btnCRM.Visible = false;
+                }
+            }
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -183,6 +215,12 @@ namespace Liriou_s_Burguer.Screens.Manager
         private void btnFluxoDeCaixa_Click(object sender, EventArgs e)
         {
             openContedor(new Financial.frmCashflow());
+            HideSubMenu();
+        }
+
+        private void btnCartãoDePonto_Click(object sender, EventArgs e)
+        {
+            openContedor(new Employee.frmEmployeeTimeCard());
             HideSubMenu();
         }
 

@@ -8,26 +8,25 @@ namespace Liriou_s_Burguer.Database
 {
     class EnterpriseDatabase
     {
+        Entities.liriousdbEntities db = new Entities.liriousdbEntities();
+
         public void Inserir(Entities.tb_enterprise enterprise)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            DB.tb_enterprise.Add(enterprise);
+            db.tb_enterprise.Add(enterprise);
 
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
         public List<Entities.tb_enterprise> Consultar()
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_enterprise> list = DB.tb_enterprise.ToList();
+            List<Entities.tb_enterprise> list = db.tb_enterprise.ToList();
 
             return list;
         }
 
         public void Alterar(Entities.tb_enterprise enterprise)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_enterprise list = DB.tb_enterprise.First(t => t.id_enterprise == enterprise.id_enterprise);
+            Entities.tb_enterprise list = db.tb_enterprise.First(t => t.id_enterprise == enterprise.id_enterprise);
             list.ds_address = list.ds_address;
             list.nr_cellphone = list.nr_cellphone;
             list.nr_cep = list.nr_cep;            
@@ -38,16 +37,15 @@ namespace Liriou_s_Burguer.Database
             list.nr_tellphone = list.nr_tellphone;
             list.nm_commercialName = list.nm_commercialName;
             list.nm_enterprise = list.nm_enterprise;
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
         public void Remover(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_enterprise remover = DB.tb_enterprise.First(t => t.id_enterprise == id);
+            Entities.tb_enterprise remover = db.tb_enterprise.First(t => t.id_enterprise == id);
 
-            DB.tb_enterprise.Remove(remover);
-            DB.SaveChanges();
+            db.tb_enterprise.Remove(remover);
+            db.SaveChanges();
         }
     }
 }

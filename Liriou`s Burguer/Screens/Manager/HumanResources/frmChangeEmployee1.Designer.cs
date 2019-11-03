@@ -81,6 +81,9 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
+            this.dtpContratação = new System.Windows.Forms.DateTimePicker();
+            this.dtpDemissão = new System.Windows.Forms.DateTimePicker();
+            this.nudSalárioBruto = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.imgVoltar)).BeginInit();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView19)).BeginInit();
@@ -105,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).BeginInit();
             this.SuspendLayout();
             // 
             // imgVoltar
@@ -117,6 +121,7 @@
             this.imgVoltar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgVoltar.TabIndex = 568;
             this.imgVoltar.TabStop = false;
+            this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
             // 
             // panel
             // 
@@ -124,6 +129,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.Controls.Add(this.nudSalárioBruto);
+            this.panel.Controls.Add(this.dtpDemissão);
+            this.panel.Controls.Add(this.dtpContratação);
             this.panel.Controls.Add(this.btnSalvar);
             this.panel.Controls.Add(this.mtxtTérminoIntervalo);
             this.panel.Controls.Add(this.mtxtTérminoServiço);
@@ -192,6 +200,7 @@
             this.btnSalvar.TabIndex = 692;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // mtxtTérminoIntervalo
             // 
@@ -745,6 +754,43 @@
             this.lblCadastrarFuncionário.Text = "Cadastrar Funcionário";
             this.lblCadastrarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // dtpContratação
+            // 
+            this.dtpContratação.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpContratação.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.dtpContratação.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpContratação.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpContratação.Location = new System.Drawing.Point(162, 6);
+            this.dtpContratação.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dtpContratação.Name = "dtpContratação";
+            this.dtpContratação.Size = new System.Drawing.Size(186, 23);
+            this.dtpContratação.TabIndex = 699;
+            this.dtpContratação.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            // 
+            // dtpDemissão
+            // 
+            this.dtpDemissão.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpDemissão.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.dtpDemissão.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDemissão.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDemissão.Location = new System.Drawing.Point(143, 37);
+            this.dtpDemissão.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            this.dtpDemissão.Name = "dtpDemissão";
+            this.dtpDemissão.Size = new System.Drawing.Size(205, 23);
+            this.dtpDemissão.TabIndex = 700;
+            this.dtpDemissão.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
+            // 
+            // nudSalárioBruto
+            // 
+            this.nudSalárioBruto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudSalárioBruto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudSalárioBruto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudSalárioBruto.DecimalPlaces = 2;
+            this.nudSalárioBruto.Location = new System.Drawing.Point(135, 71);
+            this.nudSalárioBruto.Name = "nudSalárioBruto";
+            this.nudSalárioBruto.Size = new System.Drawing.Size(213, 20);
+            this.nudSalárioBruto.TabIndex = 701;
+            // 
             // frmChangeEmployee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -783,6 +829,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -843,5 +890,8 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label lblCadastrarFuncionário;
+        public System.Windows.Forms.DateTimePicker dtpContratação;
+        public System.Windows.Forms.DateTimePicker dtpDemissão;
+        public System.Windows.Forms.NumericUpDown nudSalárioBruto;
     }
 }

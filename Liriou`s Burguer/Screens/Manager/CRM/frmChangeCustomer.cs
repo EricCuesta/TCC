@@ -60,7 +60,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                     cboSexo.Text = "Masculino";
                 else
                     cboEstado.Text = "Feminino";
-                dtpNascimento.Value = client.dt_birth;
+                dtpNascimento.Value = Convert.ToDateTime(client.dt_birth);
                 cboEstado.Text = client.ds_state;
                 mtxtCEP.Text = client.nr_cep;
                 txtEndereço.Text = client.ds_address;
@@ -82,7 +82,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 client.nr_rg = mtxtRG.Text.Trim();
                 client.nr_cpf = mtxtCPF.Text.Trim();
                 client.ds_sex = cboSexo.Text;
-                client.dt_birth = dtpNascimento.Value;
+                client.dt_birth = dtpNascimento.Value.ToLongDateString();
                 client.ds_state = cboEstado.Text;
                 client.nr_cep = mtxtCEP.Text.Trim();
                 client.ds_address = txtEndereço.Text.Trim();

@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Liriou_s_Burguer.Model
 {
-    class PayrollModel
+    static class PayrollModel
     {
-        public string data { get; set; }
+        public static string data { get; set; }
 
-        public string RG { get; set; }
+        public static string RG { get; set; }
     }
 }

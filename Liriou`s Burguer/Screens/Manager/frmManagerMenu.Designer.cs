@@ -51,8 +51,6 @@
             this.btnAlterarSuprimentos = new System.Windows.Forms.Button();
             this.panel36 = new System.Windows.Forms.Panel();
             this.btnCadastrarSuprimentos = new System.Windows.Forms.Button();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.btnConsultarEstoque = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
             this.btnDeletarProdutos = new System.Windows.Forms.Button();
             this.panel25 = new System.Windows.Forms.Panel();
@@ -77,7 +75,6 @@
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panelSubMenuFinanceiro = new System.Windows.Forms.Panel();
-            this.btnConsultarConta = new System.Windows.Forms.Button();
             this.panel16 = new System.Windows.Forms.Panel();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -87,9 +84,13 @@
             this.btnFluxoDeCaixa = new System.Windows.Forms.Button();
             this.btnAlterarConta = new System.Windows.Forms.Button();
             this.btnDeletarConta = new System.Windows.Forms.Button();
+            this.btnConsultarConta = new System.Windows.Forms.Button();
             this.panelFinanceiro = new System.Windows.Forms.Panel();
             this.btnFinanceiro = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panelObrigatório = new System.Windows.Forms.Panel();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.btnCartãoDePonto = new System.Windows.Forms.Button();
             this.panelSubMenuRecursosHumanos = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.btnConsultarCartãoDePonto = new System.Windows.Forms.Button();
@@ -108,6 +109,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.imgLogotipo = new System.Windows.Forms.PictureBox();
             this.panelTítulo = new System.Windows.Forms.Panel();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.toolStripStatusUsuário = new System.Windows.Forms.ToolStripLabel();
             this.imgMinimizar = new System.Windows.Forms.PictureBox();
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.panelContedor = new System.Windows.Forms.Panel();
@@ -120,10 +123,12 @@
             this.panelFornecedor.SuspendLayout();
             this.panelSubMenuFinanceiro.SuspendLayout();
             this.panelFinanceiro.SuspendLayout();
+            this.panelObrigatório.SuspendLayout();
             this.panelSubMenuRecursosHumanos.SuspendLayout();
             this.panelRecursosHumanos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).BeginInit();
             this.panelTítulo.SuspendLayout();
+            this.toolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
             this.SuspendLayout();
@@ -140,6 +145,7 @@
             this.MenuVertical.Controls.Add(this.panelFornecedor);
             this.MenuVertical.Controls.Add(this.panelSubMenuFinanceiro);
             this.MenuVertical.Controls.Add(this.panelFinanceiro);
+            this.MenuVertical.Controls.Add(this.panelObrigatório);
             this.MenuVertical.Controls.Add(this.panelSubMenuRecursosHumanos);
             this.MenuVertical.Controls.Add(this.panelRecursosHumanos);
             this.MenuVertical.Controls.Add(this.imgLogotipo);
@@ -161,9 +167,9 @@
             this.panelSubMenuCRM.Controls.Add(this.btnConsultarCliente);
             this.panelSubMenuCRM.Controls.Add(this.btnCadastrarCliente);
             this.panelSubMenuCRM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1098);
+            this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1093);
             this.panelSubMenuCRM.Name = "panelSubMenuCRM";
-            this.panelSubMenuCRM.Size = new System.Drawing.Size(223, 132);
+            this.panelSubMenuCRM.Size = new System.Drawing.Size(223, 129);
             this.panelSubMenuCRM.TabIndex = 26;
             // 
             // panel40
@@ -283,7 +289,7 @@
             this.panelCRM.Controls.Add(this.btnCRM);
             this.panelCRM.Controls.Add(this.panel19);
             this.panelCRM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCRM.Location = new System.Drawing.Point(0, 1066);
+            this.panelCRM.Location = new System.Drawing.Point(0, 1061);
             this.panelCRM.Name = "panelCRM";
             this.panelCRM.Size = new System.Drawing.Size(223, 32);
             this.panelCRM.TabIndex = 25;
@@ -311,9 +317,9 @@
             // panel19
             // 
             this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel19.Location = new System.Drawing.Point(0, 3);
+            this.panel19.Location = new System.Drawing.Point(0, 2);
             this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(5, 26);
+            this.panel19.Size = new System.Drawing.Size(5, 28);
             this.panel19.TabIndex = 12;
             // 
             // panelSubMenuEstoque
@@ -327,8 +333,6 @@
             this.panelSubMenuEstoque.Controls.Add(this.btnAlterarSuprimentos);
             this.panelSubMenuEstoque.Controls.Add(this.panel36);
             this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarSuprimentos);
-            this.panelSubMenuEstoque.Controls.Add(this.panel23);
-            this.panelSubMenuEstoque.Controls.Add(this.btnConsultarEstoque);
             this.panelSubMenuEstoque.Controls.Add(this.panel24);
             this.panelSubMenuEstoque.Controls.Add(this.btnDeletarProdutos);
             this.panelSubMenuEstoque.Controls.Add(this.panel25);
@@ -338,9 +342,9 @@
             this.panelSubMenuEstoque.Controls.Add(this.panel27);
             this.panelSubMenuEstoque.Controls.Add(this.btnCadastrarProdutos);
             this.panelSubMenuEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 772);
+            this.panelSubMenuEstoque.Location = new System.Drawing.Point(0, 802);
             this.panelSubMenuEstoque.Name = "panelSubMenuEstoque";
-            this.panelSubMenuEstoque.Size = new System.Drawing.Size(223, 294);
+            this.panelSubMenuEstoque.Size = new System.Drawing.Size(223, 259);
             this.panelSubMenuEstoque.TabIndex = 24;
             // 
             // panel33
@@ -454,33 +458,6 @@
             this.btnCadastrarSuprimentos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarSuprimentos.UseVisualStyleBackColor = false;
             this.btnCadastrarSuprimentos.Click += new System.EventHandler(this.btnCadastrarSuprimentos_Click);
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel23.Location = new System.Drawing.Point(22, 262);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(5, 26);
-            this.panel23.TabIndex = 19;
-            // 
-            // btnConsultarEstoque
-            // 
-            this.btnConsultarEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarEstoque.FlatAppearance.BorderSize = 0;
-            this.btnConsultarEstoque.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnConsultarEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarEstoque.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarEstoque.Location = new System.Drawing.Point(25, 262);
-            this.btnConsultarEstoque.Name = "btnConsultarEstoque";
-            this.btnConsultarEstoque.Size = new System.Drawing.Size(215, 26);
-            this.btnConsultarEstoque.TabIndex = 17;
-            this.btnConsultarEstoque.Text = "Consultar Estoque";
-            this.btnConsultarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarEstoque.UseVisualStyleBackColor = false;
             // 
             // panel24
             // 
@@ -599,7 +576,7 @@
             this.panelEstoque.Controls.Add(this.btnEstoque);
             this.panelEstoque.Controls.Add(this.panel18);
             this.panelEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelEstoque.Location = new System.Drawing.Point(0, 740);
+            this.panelEstoque.Location = new System.Drawing.Point(0, 770);
             this.panelEstoque.Name = "panelEstoque";
             this.panelEstoque.Size = new System.Drawing.Size(223, 32);
             this.panelEstoque.TabIndex = 23;
@@ -627,9 +604,9 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel18.Location = new System.Drawing.Point(0, 3);
+            this.panel18.Location = new System.Drawing.Point(0, 2);
             this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(5, 26);
+            this.panel18.Size = new System.Drawing.Size(5, 28);
             this.panel18.TabIndex = 12;
             // 
             // panelSubMenuFornecedor
@@ -644,9 +621,9 @@
             this.panelSubMenuFornecedor.Controls.Add(this.panel44);
             this.panelSubMenuFornecedor.Controls.Add(this.btnCadastrarFornecedor);
             this.panelSubMenuFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuFornecedor.Location = new System.Drawing.Point(0, 606);
+            this.panelSubMenuFornecedor.Location = new System.Drawing.Point(0, 639);
             this.panelSubMenuFornecedor.Name = "panelSubMenuFornecedor";
-            this.panelSubMenuFornecedor.Size = new System.Drawing.Size(223, 134);
+            this.panelSubMenuFornecedor.Size = new System.Drawing.Size(223, 131);
             this.panelSubMenuFornecedor.TabIndex = 28;
             // 
             // panel41
@@ -766,7 +743,7 @@
             this.panelFornecedor.Controls.Add(this.btnFornecedor);
             this.panelFornecedor.Controls.Add(this.panel10);
             this.panelFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFornecedor.Location = new System.Drawing.Point(0, 574);
+            this.panelFornecedor.Location = new System.Drawing.Point(0, 607);
             this.panelFornecedor.Name = "panelFornecedor";
             this.panelFornecedor.Size = new System.Drawing.Size(223, 32);
             this.panelFornecedor.TabIndex = 27;
@@ -794,15 +771,14 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel10.Location = new System.Drawing.Point(0, 3);
+            this.panel10.Location = new System.Drawing.Point(0, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(5, 26);
+            this.panel10.Size = new System.Drawing.Size(5, 28);
             this.panel10.TabIndex = 12;
             // 
             // panelSubMenuFinanceiro
             // 
             this.panelSubMenuFinanceiro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelSubMenuFinanceiro.Controls.Add(this.btnConsultarConta);
             this.panelSubMenuFinanceiro.Controls.Add(this.panel16);
             this.panelSubMenuFinanceiro.Controls.Add(this.panel17);
             this.panelSubMenuFinanceiro.Controls.Add(this.panel11);
@@ -812,31 +788,12 @@
             this.panelSubMenuFinanceiro.Controls.Add(this.btnFluxoDeCaixa);
             this.panelSubMenuFinanceiro.Controls.Add(this.btnAlterarConta);
             this.panelSubMenuFinanceiro.Controls.Add(this.btnDeletarConta);
+            this.panelSubMenuFinanceiro.Controls.Add(this.btnConsultarConta);
             this.panelSubMenuFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuFinanceiro.Location = new System.Drawing.Point(0, 411);
+            this.panelSubMenuFinanceiro.Location = new System.Drawing.Point(0, 444);
             this.panelSubMenuFinanceiro.Name = "panelSubMenuFinanceiro";
             this.panelSubMenuFinanceiro.Size = new System.Drawing.Size(223, 163);
             this.panelSubMenuFinanceiro.TabIndex = 22;
-            // 
-            // btnConsultarConta
-            // 
-            this.btnConsultarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarConta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarConta.FlatAppearance.BorderSize = 0;
-            this.btnConsultarConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnConsultarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnConsultarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarConta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarConta.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarConta.Location = new System.Drawing.Point(25, 68);
-            this.btnConsultarConta.Name = "btnConsultarConta";
-            this.btnConsultarConta.Size = new System.Drawing.Size(215, 26);
-            this.btnConsultarConta.TabIndex = 28;
-            this.btnConsultarConta.Text = "Consultar Conta";
-            this.btnConsultarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarConta.UseVisualStyleBackColor = false;
-            this.btnConsultarConta.Click += new System.EventHandler(this.btnConsultarConta_Click);
             // 
             // panel16
             // 
@@ -958,12 +915,32 @@
             this.btnDeletarConta.UseVisualStyleBackColor = false;
             this.btnDeletarConta.Click += new System.EventHandler(this.btnDeletarConta_Click);
             // 
+            // btnConsultarConta
+            // 
+            this.btnConsultarConta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConsultarConta.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarConta.FlatAppearance.BorderSize = 0;
+            this.btnConsultarConta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultarConta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnConsultarConta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarConta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarConta.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarConta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarConta.Location = new System.Drawing.Point(25, 68);
+            this.btnConsultarConta.Name = "btnConsultarConta";
+            this.btnConsultarConta.Size = new System.Drawing.Size(215, 26);
+            this.btnConsultarConta.TabIndex = 28;
+            this.btnConsultarConta.Text = "Consultar Conta";
+            this.btnConsultarConta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarConta.UseVisualStyleBackColor = false;
+            this.btnConsultarConta.Click += new System.EventHandler(this.btnConsultarConta_Click);
+            // 
             // panelFinanceiro
             // 
             this.panelFinanceiro.Controls.Add(this.btnFinanceiro);
             this.panelFinanceiro.Controls.Add(this.panel8);
             this.panelFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelFinanceiro.Location = new System.Drawing.Point(0, 379);
+            this.panelFinanceiro.Location = new System.Drawing.Point(0, 412);
             this.panelFinanceiro.Name = "panelFinanceiro";
             this.panelFinanceiro.Size = new System.Drawing.Size(223, 32);
             this.panelFinanceiro.TabIndex = 21;
@@ -991,10 +968,48 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel8.Location = new System.Drawing.Point(0, 3);
+            this.panel8.Location = new System.Drawing.Point(0, 2);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(5, 26);
+            this.panel8.Size = new System.Drawing.Size(5, 28);
             this.panel8.TabIndex = 12;
+            // 
+            // panelObrigatório
+            // 
+            this.panelObrigatório.Controls.Add(this.panel22);
+            this.panelObrigatório.Controls.Add(this.btnCartãoDePonto);
+            this.panelObrigatório.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelObrigatório.Location = new System.Drawing.Point(0, 377);
+            this.panelObrigatório.Name = "panelObrigatório";
+            this.panelObrigatório.Size = new System.Drawing.Size(223, 35);
+            this.panelObrigatório.TabIndex = 29;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel22.Location = new System.Drawing.Point(22, 5);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(5, 26);
+            this.panel22.TabIndex = 23;
+            // 
+            // btnCartãoDePonto
+            // 
+            this.btnCartãoDePonto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCartãoDePonto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCartãoDePonto.FlatAppearance.BorderSize = 0;
+            this.btnCartãoDePonto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCartãoDePonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnCartãoDePonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCartãoDePonto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCartãoDePonto.ForeColor = System.Drawing.Color.White;
+            this.btnCartãoDePonto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCartãoDePonto.Location = new System.Drawing.Point(25, 5);
+            this.btnCartãoDePonto.Name = "btnCartãoDePonto";
+            this.btnCartãoDePonto.Size = new System.Drawing.Size(215, 26);
+            this.btnCartãoDePonto.TabIndex = 22;
+            this.btnCartãoDePonto.Text = "Cartão de Ponto";
+            this.btnCartãoDePonto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCartãoDePonto.UseVisualStyleBackColor = false;
+            this.btnCartãoDePonto.Click += new System.EventHandler(this.btnCartãoDePonto_Click);
             // 
             // panelSubMenuRecursosHumanos
             // 
@@ -1014,7 +1029,7 @@
             this.panelSubMenuRecursosHumanos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuRecursosHumanos.Location = new System.Drawing.Point(0, 182);
             this.panelSubMenuRecursosHumanos.Name = "panelSubMenuRecursosHumanos";
-            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(223, 197);
+            this.panelSubMenuRecursosHumanos.Size = new System.Drawing.Size(223, 195);
             this.panelSubMenuRecursosHumanos.TabIndex = 20;
             // 
             // panel14
@@ -1218,9 +1233,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(5, 26);
+            this.panel1.Size = new System.Drawing.Size(5, 28);
             this.panel1.TabIndex = 12;
             // 
             // imgLogotipo
@@ -1239,6 +1254,7 @@
             // panelTítulo
             // 
             this.panelTítulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelTítulo.Controls.Add(this.toolStrip);
             this.panelTítulo.Controls.Add(this.imgMinimizar);
             this.panelTítulo.Controls.Add(this.imgFechar);
             this.panelTítulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -1247,6 +1263,32 @@
             this.panelTítulo.Size = new System.Drawing.Size(710, 41);
             this.panelTítulo.TabIndex = 16;
             this.panelTítulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTítulo_MouseDown);
+            // 
+            // toolStrip
+            // 
+            this.toolStrip.AutoSize = false;
+            this.toolStrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.toolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusUsuário});
+            this.toolStrip.Location = new System.Drawing.Point(3, 16);
+            this.toolStrip.Name = "toolStrip";
+            this.toolStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.toolStrip.Size = new System.Drawing.Size(643, 25);
+            this.toolStrip.TabIndex = 0;
+            this.toolStrip.Text = "toolStrip";
+            // 
+            // toolStripStatusUsuário
+            // 
+            this.toolStripStatusUsuário.ActiveLinkColor = System.Drawing.Color.Red;
+            this.toolStripStatusUsuário.Font = new System.Drawing.Font("Candara", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusUsuário.ForeColor = System.Drawing.Color.White;
+            this.toolStripStatusUsuário.LinkColor = System.Drawing.Color.Blue;
+            this.toolStripStatusUsuário.Name = "toolStripStatusUsuário";
+            this.toolStripStatusUsuário.Size = new System.Drawing.Size(55, 22);
+            this.toolStripStatusUsuário.Text = "Usuário";
+            this.toolStripStatusUsuário.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // imgMinimizar
             // 
@@ -1314,10 +1356,13 @@
             this.panelFornecedor.ResumeLayout(false);
             this.panelSubMenuFinanceiro.ResumeLayout(false);
             this.panelFinanceiro.ResumeLayout(false);
+            this.panelObrigatório.ResumeLayout(false);
             this.panelSubMenuRecursosHumanos.ResumeLayout(false);
             this.panelRecursosHumanos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgLogotipo)).EndInit();
             this.panelTítulo.ResumeLayout(false);
+            this.toolStrip.ResumeLayout(false);
+            this.toolStrip.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
             this.ResumeLayout(false);
@@ -1353,8 +1398,6 @@
         private System.Windows.Forms.Button btnFinanceiro;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panelSubMenuEstoque;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Button btnConsultarEstoque;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Button btnDeletarProdutos;
         private System.Windows.Forms.Panel panel25;
@@ -1407,5 +1450,10 @@
         private System.Windows.Forms.Button btnCadastrarSuprimentos;
         private System.Windows.Forms.Panel panelTítulo;
         public System.Windows.Forms.Panel panelContedor;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Button btnCartãoDePonto;
+        private System.Windows.Forms.Panel panelObrigatório;
+        private System.Windows.Forms.ToolStrip toolStrip;
+        private System.Windows.Forms.ToolStripLabel toolStripStatusUsuário;
     }
 }

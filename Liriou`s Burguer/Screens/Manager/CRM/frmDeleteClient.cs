@@ -50,7 +50,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                     cboSexo.Text = "Masculino";
                 else
                     cboEstado.Text = "Feminino";
-                dtpNascimento.Value = client.dt_birth;
+                dtpNascimento.Value = Convert.ToDateTime(client.dt_birth);
                 cboEstado.Text = client.ds_state;
                 mtxtCEP.Text = client.nr_cep;
                 txtEndereço.Text = client.ds_address;

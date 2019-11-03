@@ -32,9 +32,8 @@ namespace Liriou_s_Burguer.Database.Entities
         public string nr_cpf { get; set; }
         public int nr_dependents { get; set; }
         public string ds_sex { get; set; }
-        public System.DateTime dt_birth { get; set; }
+        public string dt_birth { get; set; }
         public string nr_cep { get; set; }
-        public string ds_country { get; set; }
         public string ds_state { get; set; }
         public string ds_address { get; set; }
         public string ds_note { get; set; }
@@ -42,15 +41,16 @@ namespace Liriou_s_Burguer.Database.Entities
         public string nr_tellphone { get; set; }
         public string ds_email { get; set; }
         public string pw_password { get; set; }
-        public System.DateTime dt_hiring { get; set; }
-        public System.DateTime dt_resignation { get; set; }
+        public string dt_hiring { get; set; }
+        public string dt_resignation { get; set; }
         public Nullable<bool> bt_admin { get; set; }
         public Nullable<bool> bt_funcionaro { get; set; }
         public Nullable<bool> bt_rh { get; set; }
-        public Nullable<bool> bt_financeiro { get; set; }
-        public Nullable<bool> bt_estoque { get; set; }
+        public Nullable<bool> bt_financial { get; set; }
+        public Nullable<bool> bt_provider { get; set; }
+        public Nullable<bool> bt_stock { get; set; }
         public Nullable<bool> bt_crm { get; set; }
-        public Nullable<System.DateTime> dt_unavailability { get; set; }
+        public string dt_unavailability { get; set; }
         public string ds_unavailability { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

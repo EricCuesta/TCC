@@ -40,7 +40,6 @@ namespace Liriou_s_Burguer.Database
 
         public void Alterar(Entities.tb_supply supply)
         {
-            Entities.liriousdbEntities db = new Entities.liriousdbEntities();
             Entities.tb_supply list = db.tb_supply.FirstOrDefault(t => t.id_supply == supply.id_supply);
             list.nm_supply = supply.nm_supply;
             list.vl_amount = supply.vl_amount;

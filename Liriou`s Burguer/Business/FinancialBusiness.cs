@@ -16,13 +16,13 @@ namespace Liriou_s_Burguer.Business
             db.Inserir(financial);
         }
 
-        public string Verificar(Model.PayrollModel model)
+        public string Verificar(string mesAno, string rg0)
         {
-            if (model.RG == ",   ,   -")
+            if (Model.PayrollModel.RG == ",   ,   -")
             {
                 return "Insira um RG!";
             }
-            else if (model.data == "/")
+            else if (Model.PayrollModel.data == "/")
             {
                 return "insira um mes/ano";
             }
@@ -88,7 +88,7 @@ namespace Liriou_s_Burguer.Business
         {
             tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
             tb_financial F = DB.tb_financial.First(t => t.id_emp == id);
-            if (tb.bt_transport.ToUpper() == "TRUE")
+            if (tb.bt_transport == true)
             {
                 int qtdDiasUteis = this.QtdDeDiasUteis(ano, mes);
 
@@ -109,7 +109,7 @@ namespace Liriou_s_Burguer.Business
         public string ValeAlimentação(int ano, int mes)
         {
             tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
-            if (tb.bt_food.ToUpper() == "TRUE")
+            if (tb.bt_food == true)
             {
                 int qtdDiasUteis = this.QtdDeDiasUteis(ano, mes);
 

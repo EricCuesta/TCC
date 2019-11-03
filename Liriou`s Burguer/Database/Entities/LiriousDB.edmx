@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_account">
           <Key>
             <PropertyRef Name="id_account" />
@@ -32,12 +32,12 @@
           </Key>
           <Property Name="id_benefits" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="bt_food" Type="varchar" MaxLength="5" />
-          <Property Name="bt_transport" Type="varchar" MaxLength="5" />
-          <Property Name="bt_meal" Type="varchar" MaxLength="5" />
-          <Property Name="bt_lifeSafe" Type="varchar" MaxLength="5" />
-          <Property Name="bt_planHealth" Type="varchar" MaxLength="5" />
-          <Property Name="bt_planDental" Type="varchar" MaxLength="5" />
+          <Property Name="bt_food" Type="bool" />
+          <Property Name="bt_transport" Type="bool" />
+          <Property Name="bt_meal" Type="bool" />
+          <Property Name="bt_lifeSafe" Type="bool" />
+          <Property Name="bt_planHealth" Type="bool" />
+          <Property Name="bt_planDental" Type="bool" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -49,7 +49,7 @@
           <Property Name="nr_rg" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="nr_cpf" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="ds_sex" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="dt_birth" Type="date" Nullable="false" />
+          <Property Name="dt_birth" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="nr_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
@@ -121,9 +121,8 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="nr_cpf" Type="char" MaxLength="12" Nullable="false" />
           <Property Name="nr_dependents" Type="int" Nullable="false" />
           <Property Name="ds_sex" Type="char" MaxLength="1" Nullable="false" />
-          <Property Name="dt_birth" Type="date" Nullable="false" />
+          <Property Name="dt_birth" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="nr_cep" Type="char" MaxLength="9" Nullable="false" />
-          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
           <Property Name="ds_note" Type="varchar" MaxLength="128" />
@@ -131,15 +130,16 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="nr_tellphone" Type="char" MaxLength="15" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
           <Property Name="pw_password" Type="varchar" MaxLength="24" Nullable="false" />
-          <Property Name="dt_hiring" Type="date" Nullable="false" />
-          <Property Name="dt_resignation" Type="date" Nullable="false" />
+          <Property Name="dt_hiring" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="dt_resignation" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="bt_admin" Type="bool" />
           <Property Name="bt_funcionaro" Type="bool" />
           <Property Name="bt_rh" Type="bool" />
-          <Property Name="bt_financeiro" Type="bool" />
-          <Property Name="bt_estoque" Type="bool" />
+          <Property Name="bt_financial" Type="bool" />
+          <Property Name="bt_provider" Type="bool" />
+          <Property Name="bt_stock" Type="bool" />
           <Property Name="bt_crm" Type="bool" />
-          <Property Name="dt_unavailability" Type="datetime" Precision="0" />
+          <Property Name="dt_unavailability" Type="varchar" MaxLength="10" />
           <Property Name="ds_unavailability" Type="varchar" MaxLength="128" />
         </EntityType>
         <EntityType Name="tb_enterprise">
@@ -169,8 +169,8 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="vl_grossSalary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="vl_netSalary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="ds_typeSalary" Type="varchar" MaxLength="32" Nullable="false" />
-          <Property Name="dt_fromDate" Type="date" Nullable="false" />
-          <Property Name="dt_toDate" Type="date" Nullable="false" />
+          <Property Name="dt_fromDate" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="dt_toDate" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_function">
           <Key>
@@ -196,11 +196,12 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           </Key>
           <Property Name="id_point" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="hr_input" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="hr_output" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="hr_intInput" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="hr_intOutput" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="hr_toPay" Type="time" Precision="0" />
+          <Property Name="hr_input" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_output" Type="varchar" MaxLength="8" />
+          <Property Name="hr_intInput" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_intOutput" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_toPay" Type="varchar" MaxLength="5" />
+          <Property Name="dt_points" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="tb_product">
           <Key>
@@ -224,7 +225,6 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           <Property Name="ds_typePerson" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="nr_identification" Type="varchar" MaxLength="18" Nullable="false" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
-          <Property Name="ds_country" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="ds_state" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="nr_cep" Type="char" MaxLength="9" Nullable="false" />
           <Property Name="ds_address" Type="varchar" MaxLength="128" Nullable="false" />
@@ -258,10 +258,10 @@ warning 6002: The table/view 'def.liriousdb.tb_crm' does not have a primary key 
           </Key>
           <Property Name="id_timecard" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="hr_fixedInput" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="hr_fixedOutput" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="hr_fixedIntInput" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="hr_fixedIntOutput" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="hr_fixedInput" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_fixedOutput" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_fixedIntInput" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_fixedIntOutput" Type="varchar" MaxLength="8" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
@@ -509,8 +509,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <End Role="tb_timecard" EntitySet="tb_timecard" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="liriousdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -541,12 +540,12 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_benefits" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="bt_food" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="bt_transport" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="bt_meal" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="bt_lifeSafe" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="bt_planHealth" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="bt_planDental" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="bt_food" Type="Boolean" />
+          <Property Name="bt_transport" Type="Boolean" />
+          <Property Name="bt_meal" Type="Boolean" />
+          <Property Name="bt_lifeSafe" Type="Boolean" />
+          <Property Name="bt_planHealth" Type="Boolean" />
+          <Property Name="bt_planDental" Type="Boolean" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -558,7 +557,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="nr_rg" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_cpf" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_sex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dt_birth" Type="DateTime" Nullable="false" />
+          <Property Name="dt_birth" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
@@ -587,7 +586,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="id_department" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="nm_department" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_department_ibfk_1" FromRole="tb_department" ToRole="tb_employees" />
+          <NavigationProperty Name="tb_employees" Relationship="liriousdbModel.tb_department_ibfk_1" FromRole="tb_department" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_discounts">
           <Key>
@@ -600,45 +599,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="vl_foodPension" Type="Decimal" />
           <Property Name="vl_inss" Type="Decimal" Nullable="false" />
           <Property Name="vl_fgts" Type="Decimal" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_discounts" ToRole="tb_employees" />
-        </EntityType>
-        <EntityType Name="tb_employees">
-          <Key>
-            <PropertyRef Name="id_emp" />
-          </Key>
-          <Property Name="id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nm_firstName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nm_lastName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nr_rg" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nr_cpf" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="nr_dependents" Type="Int32" Nullable="false" />
-          <Property Name="ds_sex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dt_birth" Type="DateTime" Nullable="false" />
-          <Property Name="nr_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
-          <Property Name="nr_cellphone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
-          <Property Name="nr_tellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="pw_password" Type="String" MaxLength="24" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dt_hiring" Type="DateTime" Nullable="false" />
-          <Property Name="dt_resignation" Type="DateTime" Nullable="false" />
-          <Property Name="bt_admin" Type="Boolean" />
-          <Property Name="bt_funcionaro" Type="Boolean" />
-          <Property Name="bt_rh" Type="Boolean" />
-          <Property Name="bt_financeiro" Type="Boolean" />
-          <Property Name="bt_estoque" Type="Boolean" />
-          <Property Name="bt_crm" Type="Boolean" />
-          <Property Name="dt_unavailability" Type="DateTime" />
-          <Property Name="ds_unavailability" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tb_department" Relationship="Self.tb_department_ibfk_1" FromRole="tb_employees" ToRole="tb_department" />
-          <NavigationProperty Name="tb_discounts" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_employees" ToRole="tb_discounts" />
-          <NavigationProperty Name="tb_financial" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_employees" ToRole="tb_financial" />
-          <NavigationProperty Name="tb_function" Relationship="Self.tb_function_ibfk_1" FromRole="tb_employees" ToRole="tb_function" />
-          <NavigationProperty Name="tb_points" Relationship="Self.tb_points_ibfk_1" FromRole="tb_employees" ToRole="tb_points" />
-          <NavigationProperty Name="tb_timecard" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_employees" ToRole="tb_timecard" />
+          <NavigationProperty Name="tb_employees" Relationship="liriousdbModel.tb_discounts_ibfk_1" FromRole="tb_discounts" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_enterprise">
           <Key>
@@ -669,9 +630,9 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="vl_grossSalary" Type="Decimal" Nullable="false" />
           <Property Name="vl_netSalary" Type="Decimal" Nullable="false" />
           <Property Name="ds_typeSalary" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="dt_fromDate" Type="DateTime" Nullable="false" />
-          <Property Name="dt_toDate" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_financial" ToRole="tb_employees" />
+          <Property Name="dt_fromDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dt_toDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_employees" Relationship="liriousdbModel.tb_financial_ibfk_1" FromRole="tb_financial" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_function">
           <Key>
@@ -680,7 +641,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="id_function" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="nm_function" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_function_ibfk_1" FromRole="tb_function" ToRole="tb_employees" />
+          <NavigationProperty Name="tb_employees" Relationship="liriousdbModel.tb_function_ibfk_1" FromRole="tb_function" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_iten">
           <Key>
@@ -701,12 +662,13 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_point" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="hr_input" Type="DateTime" Nullable="false" />
-          <Property Name="hr_output" Type="DateTime" Nullable="false" />
-          <Property Name="hr_intInput" Type="DateTime" Nullable="false" />
-          <Property Name="hr_intOutput" Type="DateTime" Nullable="false" />
-          <Property Name="hr_toPay" Type="Time" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_points_ibfk_1" FromRole="tb_points" ToRole="tb_employees" />
+          <Property Name="hr_input" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_output" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="hr_intInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_intOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_toPay" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="dt_points" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_employees" Relationship="liriousdbModel.tb_points_ibfk_1" FromRole="tb_points" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_product">
           <Key>
@@ -731,7 +693,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_identification" Type="String" MaxLength="18" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_state" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_cep" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_address" Type="String" MaxLength="128" FixedLength="false" Unicode="false" Nullable="false" />
@@ -767,11 +728,11 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           </Key>
           <Property Name="id_timecard" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="hr_fixedInput" Type="DateTime" Nullable="false" />
-          <Property Name="hr_fixedOutput" Type="DateTime" Nullable="false" />
-          <Property Name="hr_fixedIntInput" Type="DateTime" Nullable="false" />
-          <Property Name="hr_fixedIntOutput" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_timecard" ToRole="tb_employees" />
+          <Property Name="hr_fixedInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_fixedOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_fixedIntInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_fixedIntOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_employees" Relationship="liriousdbModel.tb_timecard_ibfk_1" FromRole="tb_timecard" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_cnae">
           <Key>
@@ -842,78 +803,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tb_department_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_department" Type="Self.tb_department" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_department">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_discounts_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_discounts" Type="Self.tb_discounts" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_discounts">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_financial_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_financial" Type="Self.tb_financial" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_financial">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_function_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_function" Type="Self.tb_function" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_function">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_points_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_points">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_timecard_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_timecard" Type="Self.tb_timecard" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_timecard">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="tb_cnae_ibfk_1">
           <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
           <End Role="tb_cnae" Type="Self.tb_cnae" Multiplicity="*" />
@@ -958,7 +847,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
           <EntitySet Name="tb_cpp" EntityType="Self.tb_cpp" />
           <EntitySet Name="tb_department" EntityType="Self.tb_department" />
           <EntitySet Name="tb_discounts" EntityType="Self.tb_discounts" />
-          <EntitySet Name="tb_employees" EntityType="Self.tb_employees" />
           <EntitySet Name="tb_enterprise" EntityType="Self.tb_enterprise" />
           <EntitySet Name="tb_financial" EntityType="Self.tb_financial" />
           <EntitySet Name="tb_function" EntityType="Self.tb_function" />
@@ -987,30 +875,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <End Role="tb_enterprise" EntitySet="tb_enterprise" />
             <End Role="tb_cpp" EntitySet="tb_cpp" />
           </AssociationSet>
-          <AssociationSet Name="tb_department_ibfk_1" Association="Self.tb_department_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_department" EntitySet="tb_department" />
-          </AssociationSet>
-          <AssociationSet Name="tb_discounts_ibfk_1" Association="Self.tb_discounts_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_discounts" EntitySet="tb_discounts" />
-          </AssociationSet>
-          <AssociationSet Name="tb_financial_ibfk_1" Association="Self.tb_financial_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_financial" EntitySet="tb_financial" />
-          </AssociationSet>
-          <AssociationSet Name="tb_function_ibfk_1" Association="Self.tb_function_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_function" EntitySet="tb_function" />
-          </AssociationSet>
-          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_points" EntitySet="tb_points" />
-          </AssociationSet>
-          <AssociationSet Name="tb_timecard_ibfk_1" Association="Self.tb_timecard_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_timecard" EntitySet="tb_timecard" />
-          </AssociationSet>
           <AssociationSet Name="tb_cnae_ibfk_1" Association="Self.tb_cnae_ibfk_1">
             <End Role="tb_enterprise" EntitySet="tb_enterprise" />
             <End Role="tb_cnae" EntitySet="tb_cnae" />
@@ -1023,7 +887,142 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             <End Role="tb_product" EntitySet="tb_product" />
             <End Role="tb_iten" EntitySet="tb_iten" />
           </AssociationSet>
+          <EntitySet Name="tb_employees" EntityType="liriousdbModel.tb_employees" />
+          <AssociationSet Name="tb_department_ibfk_1" Association="liriousdbModel.tb_department_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_department" EntitySet="tb_department" />
+          </AssociationSet>
+          <AssociationSet Name="tb_discounts_ibfk_1" Association="liriousdbModel.tb_discounts_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_discounts" EntitySet="tb_discounts" />
+          </AssociationSet>
+          <AssociationSet Name="tb_financial_ibfk_1" Association="liriousdbModel.tb_financial_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_financial" EntitySet="tb_financial" />
+          </AssociationSet>
+          <AssociationSet Name="tb_function_ibfk_1" Association="liriousdbModel.tb_function_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_function" EntitySet="tb_function" />
+          </AssociationSet>
+          <AssociationSet Name="tb_points_ibfk_1" Association="liriousdbModel.tb_points_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_points" EntitySet="tb_points" />
+          </AssociationSet>
+          <AssociationSet Name="tb_timecard_ibfk_1" Association="liriousdbModel.tb_timecard_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_timecard" EntitySet="tb_timecard" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="tb_employees">
+          <Key>
+            <PropertyRef Name="id_emp" />
+          </Key>
+          <Property Name="id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_firstName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="nm_lastName" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="nr_rg" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="nr_cpf" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="nr_dependents" Type="Int32" Nullable="false" />
+          <Property Name="ds_sex" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="dt_birth" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="nr_cep" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="ds_state" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="ds_address" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ds_note" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="nr_cellphone" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="nr_tellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ds_email" Type="String" Nullable="false" MaxLength="64" FixedLength="false" Unicode="false" />
+          <Property Name="pw_password" Type="String" Nullable="false" MaxLength="24" FixedLength="false" Unicode="false" />
+          <Property Name="dt_hiring" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="dt_resignation" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="bt_admin" Type="Boolean" />
+          <Property Name="bt_funcionaro" Type="Boolean" />
+          <Property Name="bt_rh" Type="Boolean" />
+          <Property Name="bt_financial" Type="Boolean" />
+          <Property Name="bt_provider" Type="Boolean" />
+          <Property Name="bt_stock" Type="Boolean" />
+          <Property Name="bt_crm" Type="Boolean" />
+          <Property Name="dt_unavailability" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ds_unavailability" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_department" Relationship="liriousdbModel.tb_department_ibfk_1" FromRole="tb_employees" ToRole="tb_department" />
+          <NavigationProperty Name="tb_discounts" Relationship="liriousdbModel.tb_discounts_ibfk_1" FromRole="tb_employees" ToRole="tb_discounts" />
+          <NavigationProperty Name="tb_financial" Relationship="liriousdbModel.tb_financial_ibfk_1" FromRole="tb_employees" ToRole="tb_financial" />
+          <NavigationProperty Name="tb_function" Relationship="liriousdbModel.tb_function_ibfk_1" FromRole="tb_employees" ToRole="tb_function" />
+          <NavigationProperty Name="tb_points" Relationship="liriousdbModel.tb_points_ibfk_1" FromRole="tb_employees" ToRole="tb_points" />
+          <NavigationProperty Name="tb_timecard" Relationship="liriousdbModel.tb_timecard_ibfk_1" FromRole="tb_employees" ToRole="tb_timecard" />
+        </EntityType>
+        <Association Name="tb_department_ibfk_1">
+          <End Type="liriousdbModel.tb_employees" Role="tb_employees" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_department" Role="tb_department" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_department">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_discounts_ibfk_1">
+          <End Type="liriousdbModel.tb_employees" Role="tb_employees" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_discounts" Role="tb_discounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_discounts">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_financial_ibfk_1">
+          <End Type="liriousdbModel.tb_employees" Role="tb_employees" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_financial" Role="tb_financial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_financial">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_function_ibfk_1">
+          <End Type="liriousdbModel.tb_employees" Role="tb_employees" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_function" Role="tb_function" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_function">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_points_ibfk_1">
+          <End Type="liriousdbModel.tb_employees" Role="tb_employees" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_points" Role="tb_points" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_points">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_timecard_ibfk_1">
+          <End Type="liriousdbModel.tb_employees" Role="tb_employees" Multiplicity="1" />
+          <End Type="liriousdbModel.tb_timecard" Role="tb_timecard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_timecard">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1119,39 +1118,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tb_employees">
-            <EntityTypeMapping TypeName="liriousdbModel.tb_employees">
-              <MappingFragment StoreEntitySet="tb_employees">
-                <ScalarProperty Name="id_emp" ColumnName="id_emp" />
-                <ScalarProperty Name="nm_firstName" ColumnName="nm_firstName" />
-                <ScalarProperty Name="nm_lastName" ColumnName="nm_lastName" />
-                <ScalarProperty Name="nr_rg" ColumnName="nr_rg" />
-                <ScalarProperty Name="nr_cpf" ColumnName="nr_cpf" />
-                <ScalarProperty Name="nr_dependents" ColumnName="nr_dependents" />
-                <ScalarProperty Name="ds_sex" ColumnName="ds_sex" />
-                <ScalarProperty Name="dt_birth" ColumnName="dt_birth" />
-                <ScalarProperty Name="nr_cep" ColumnName="nr_cep" />
-                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
-                <ScalarProperty Name="ds_state" ColumnName="ds_state" />
-                <ScalarProperty Name="ds_address" ColumnName="ds_address" />
-                <ScalarProperty Name="ds_note" ColumnName="ds_note" />
-                <ScalarProperty Name="nr_cellphone" ColumnName="nr_cellphone" />
-                <ScalarProperty Name="nr_tellphone" ColumnName="nr_tellphone" />
-                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-                <ScalarProperty Name="pw_password" ColumnName="pw_password" />
-                <ScalarProperty Name="dt_hiring" ColumnName="dt_hiring" />
-                <ScalarProperty Name="dt_resignation" ColumnName="dt_resignation" />
-                <ScalarProperty Name="bt_admin" ColumnName="bt_admin" />
-                <ScalarProperty Name="bt_funcionaro" ColumnName="bt_funcionaro" />
-                <ScalarProperty Name="bt_rh" ColumnName="bt_rh" />
-                <ScalarProperty Name="bt_financeiro" ColumnName="bt_financeiro" />
-                <ScalarProperty Name="bt_estoque" ColumnName="bt_estoque" />
-                <ScalarProperty Name="bt_crm" ColumnName="bt_crm" />
-                <ScalarProperty Name="dt_unavailability" ColumnName="dt_unavailability" />
-                <ScalarProperty Name="ds_unavailability" ColumnName="ds_unavailability" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tb_enterprise">
             <EntityTypeMapping TypeName="liriousdbModel.tb_enterprise">
               <MappingFragment StoreEntitySet="tb_enterprise">
@@ -1214,6 +1180,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="hr_intInput" ColumnName="hr_intInput" />
                 <ScalarProperty Name="hr_intOutput" ColumnName="hr_intOutput" />
                 <ScalarProperty Name="hr_toPay" ColumnName="hr_toPay" />
+                <ScalarProperty Name="dt_points" ColumnName="dt_points" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1239,7 +1206,6 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="ds_typePerson" ColumnName="ds_typePerson" />
                 <ScalarProperty Name="nr_identification" ColumnName="nr_identification" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
-                <ScalarProperty Name="ds_country" ColumnName="ds_country" />
                 <ScalarProperty Name="ds_state" ColumnName="ds_state" />
                 <ScalarProperty Name="nr_cep" ColumnName="nr_cep" />
                 <ScalarProperty Name="ds_address" ColumnName="ds_address" />
@@ -1299,6 +1265,39 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
                 <ScalarProperty Name="id_client" ColumnName="id_client" />
                 <ScalarProperty Name="ds_mood" ColumnName="ds_mood" />
                 <ScalarProperty Name="ds_note" ColumnName="ds_note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_employees">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_employees">
+              <MappingFragment StoreEntitySet="tb_employees">
+                <ScalarProperty Name="ds_unavailability" ColumnName="ds_unavailability" />
+                <ScalarProperty Name="dt_unavailability" ColumnName="dt_unavailability" />
+                <ScalarProperty Name="bt_crm" ColumnName="bt_crm" />
+                <ScalarProperty Name="bt_stock" ColumnName="bt_stock" />
+                <ScalarProperty Name="bt_provider" ColumnName="bt_provider" />
+                <ScalarProperty Name="bt_financial" ColumnName="bt_financial" />
+                <ScalarProperty Name="bt_rh" ColumnName="bt_rh" />
+                <ScalarProperty Name="bt_funcionaro" ColumnName="bt_funcionaro" />
+                <ScalarProperty Name="bt_admin" ColumnName="bt_admin" />
+                <ScalarProperty Name="dt_resignation" ColumnName="dt_resignation" />
+                <ScalarProperty Name="dt_hiring" ColumnName="dt_hiring" />
+                <ScalarProperty Name="pw_password" ColumnName="pw_password" />
+                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="nr_tellphone" ColumnName="nr_tellphone" />
+                <ScalarProperty Name="nr_cellphone" ColumnName="nr_cellphone" />
+                <ScalarProperty Name="ds_note" ColumnName="ds_note" />
+                <ScalarProperty Name="ds_address" ColumnName="ds_address" />
+                <ScalarProperty Name="ds_state" ColumnName="ds_state" />
+                <ScalarProperty Name="nr_cep" ColumnName="nr_cep" />
+                <ScalarProperty Name="dt_birth" ColumnName="dt_birth" />
+                <ScalarProperty Name="ds_sex" ColumnName="ds_sex" />
+                <ScalarProperty Name="nr_dependents" ColumnName="nr_dependents" />
+                <ScalarProperty Name="nr_cpf" ColumnName="nr_cpf" />
+                <ScalarProperty Name="nr_rg" ColumnName="nr_rg" />
+                <ScalarProperty Name="nm_lastName" ColumnName="nm_lastName" />
+                <ScalarProperty Name="nm_firstName" ColumnName="nm_firstName" />
+                <ScalarProperty Name="id_emp" ColumnName="id_emp" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

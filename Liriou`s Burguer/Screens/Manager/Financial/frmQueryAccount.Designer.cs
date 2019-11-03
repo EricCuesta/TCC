@@ -30,8 +30,15 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarConta = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mtxtIdentificação = new System.Windows.Forms.MaskedTextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -42,12 +49,6 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblConsultarConta = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarConta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -77,16 +78,22 @@
             // 
             // dgvConsultarConta
             // 
-            this.dgvConsultarConta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.dgvConsultarConta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultarConta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvConsultarConta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvConsultarConta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarConta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvConsultarConta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvConsultarConta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConsultarConta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Coluna1,
@@ -103,6 +110,63 @@
             this.dgvConsultarConta.Size = new System.Drawing.Size(704, 338);
             this.dgvConsultarConta.TabIndex = 654;
             this.dgvConsultarConta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarConta_CellDoubleClick);
+            // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "Paga";
+            this.Coluna1.Image = global::Liriou_s_Burguer.Properties.Resources.Visto;
+            this.Coluna1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Coluna1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Coluna1.Width = 40;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.DataPropertyName = "id_account";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Coluna2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Coluna2.HeaderText = "ID";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            this.Coluna2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Coluna2.Width = 50;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.DataPropertyName = "nm_account";
+            this.Coluna3.HeaderText = "Nome";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Width = 120;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.DataPropertyName = "nr_identification";
+            this.Coluna4.HeaderText = "Identificação";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            this.Coluna4.Width = 120;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.DataPropertyName = "vl_value";
+            this.Coluna5.HeaderText = "Valor";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            this.Coluna5.Width = 120;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.DataPropertyName = "ds_note";
+            this.Coluna6.HeaderText = "Descrição";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
+            this.Coluna6.Width = 252;
             // 
             // mtxtIdentificação
             // 
@@ -223,63 +287,6 @@
             this.dataGridViewImageColumn1.Image = global::Liriou_s_Burguer.Properties.Resources.Visto;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.ReadOnly = true;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "Paga";
-            this.Coluna1.Image = global::Liriou_s_Burguer.Properties.Resources.Visto;
-            this.Coluna1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Coluna1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Coluna1.Width = 40;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.DataPropertyName = "id_account";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Coluna2.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Coluna2.HeaderText = "ID";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Coluna2.Width = 50;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.DataPropertyName = "nm_account";
-            this.Coluna3.HeaderText = "Nome";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Width = 120;
-            // 
-            // Coluna4
-            // 
-            this.Coluna4.DataPropertyName = "nr_identification";
-            this.Coluna4.HeaderText = "Identificação";
-            this.Coluna4.Name = "Coluna4";
-            this.Coluna4.ReadOnly = true;
-            this.Coluna4.Width = 120;
-            // 
-            // Coluna5
-            // 
-            this.Coluna5.DataPropertyName = "vl_value";
-            this.Coluna5.HeaderText = "Valor";
-            this.Coluna5.Name = "Coluna5";
-            this.Coluna5.ReadOnly = true;
-            this.Coluna5.Width = 120;
-            // 
-            // Coluna6
-            // 
-            this.Coluna6.DataPropertyName = "ds_note";
-            this.Coluna6.HeaderText = "Descrição";
-            this.Coluna6.Name = "Coluna6";
-            this.Coluna6.ReadOnly = true;
-            this.Coluna6.Width = 252;
             // 
             // frmQueryAccount
             // 

@@ -8,26 +8,25 @@ namespace Liriou_s_Burguer.Database
 {
     class BenefitsDatabase
     {
+        Entities.liriousdbEntities db = new Entities.liriousdbEntities();
+
         public void Inserir(Entities.tb_benefits benefits)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            DB.tb_benefits.Add(benefits);
+            db.tb_benefits.Add(benefits);
 
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
         public List<Entities.tb_benefits> Consultar()
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            List<Entities.tb_benefits> list = DB.tb_benefits.ToList();
+            List<Entities.tb_benefits> list = db.tb_benefits.ToList();
 
             return list;
         }
 
         public void Alterar(Entities.tb_benefits benefits)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_benefits list = DB.tb_benefits.First(t => t.id_benefits == benefits.id_benefits);
+            Entities.tb_benefits list = db.tb_benefits.First(t => t.id_benefits == benefits.id_benefits);
            
             list.bt_food = list.bt_food;
             list.bt_lifeSafe = list.bt_lifeSafe;
@@ -36,16 +35,15 @@ namespace Liriou_s_Burguer.Database
             list.bt_transport = list.bt_transport;
             list.bt_planDental = list.bt_planDental;
 
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
         public void Remover(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_benefits remover = DB.tb_benefits.First(t => t.id_benefits == id);
+            Entities.tb_benefits remover = db.tb_benefits.First(t => t.id_benefits == id);
 
-            DB.tb_benefits.Remove(remover);
-            DB.SaveChanges();
+            db.tb_benefits.Remove(remover);
+            db.SaveChanges();
         }
     }
 }

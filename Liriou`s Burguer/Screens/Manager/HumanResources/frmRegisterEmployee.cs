@@ -39,7 +39,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 employees.nr_cpf = mtxtCPF.Text.Trim();
                 employees.nr_dependents = Convert.ToInt32(nudDependentes.Value);
                 employees.ds_sex = cboSexo.Text;
-                employees.dt_birth = dtpNascimento.Value;
+                employees.dt_birth = dtpNascimento.Value.ToLongDateString();
                 employees.ds_state = cboEstado.Text;
                 employees.nr_cep = mtxtCEP.Text.Trim();
                 employees.ds_note = txtComplemento.Text.Trim();
@@ -47,7 +47,13 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 employees.nr_cellphone = mtxtCelular.Text.Trim();
                 employees.nr_tellphone = mtxtTelefone.Text.Trim();
                 employees.ds_email = txtEmail.Text.Trim();
-                employees.pw_password = txtSenha.Text.Trim();               
+                employees.pw_password = txtSenha.Text.Trim();
+                employees.bt_admin = chkAdministrador.Checked;
+                employees.bt_funcionaro = chkFuncionário.Checked;
+                employees.bt_rh = chkRH.Checked;
+                employees.bt_financial = chkFinanceiro.Checked;
+                employees.bt_stock = chkEstoque.Checked;
+                employees.bt_crm = chkCRM.Checked;
 
                 Business.EmployeesBusiness db = new Business.EmployeesBusiness();
                 db.Inserir(employees);

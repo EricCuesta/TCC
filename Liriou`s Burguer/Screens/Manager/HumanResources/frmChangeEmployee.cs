@@ -27,7 +27,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             txtNome.Text = employees.nm_firstName;
             txtSobrenome.Text = employees.nm_lastName;
             cboSexo.Text = employees.ds_sex;
-            dtpNascimento.MinDate = employees.dt_birth;
+            dtpNascimento.MinDate = Convert.ToDateTime(employees.dt_birth);
             mtxtCPF.Text = employees.nr_rg;
             mtxtRG.Text = employees.nr_cpf;
             cboEstado.Text = employees.ds_state;
@@ -64,21 +64,19 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Model.EmployeesModel Model = new Model.EmployeesModel();
-
-                Model.firstName = txtNome.Text.Trim();
-                Model.lastName = txtSobrenome.Text.Trim();
-                Model.sex = cboSexo.Text.Trim();
-                Model.birth = Convert.ToDateTime(dtpNascimento.Value);
-                Model.RG = mtxtRG.Text.Trim();
-                Model.state = cboEstado.Text.Trim();
-                Model.CEP = lblCEP.Text.Trim();
-                Model.note = txtComplemento.Text.Trim();
-                Model.address = txtEndereço.Text.Trim();
-                Model.cellphone = mtxtCelular.Text.Trim();
-                Model.tellphone = mtxtTelefone.Text.Trim();
-                Model.email = txtEmail.Text.Trim();
-                Model.password = txtSenha.Text;
+                Model.EmployeesModel.firstName = txtNome.Text.Trim();
+                Model.EmployeesModel.lastName = txtSobrenome.Text.Trim();
+                Model.EmployeesModel.sex = cboSexo.Text.Trim();
+                Model.EmployeesModel.birth = dtpNascimento.Value.ToShortDateString();
+                Model.EmployeesModel.RG = mtxtRG.Text.Trim();
+                Model.EmployeesModel.state = cboEstado.Text.Trim();
+                Model.EmployeesModel.CEP = lblCEP.Text.Trim();
+                Model.EmployeesModel.note = txtComplemento.Text.Trim();
+                Model.EmployeesModel.address = txtEndereço.Text.Trim();
+                Model.EmployeesModel.cellphone = mtxtCelular.Text.Trim();
+                Model.EmployeesModel.tellphone = mtxtTelefone.Text.Trim();
+                Model.EmployeesModel.email = txtEmail.Text.Trim();
+                Model.EmployeesModel.password = txtSenha.Text;
 
                 string email = txtEmail.Text;
                 Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");

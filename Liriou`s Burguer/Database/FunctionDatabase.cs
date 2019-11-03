@@ -40,21 +40,19 @@ namespace Liriou_s_Burguer.Database
 
         public void Alterar(Entities.tb_function function)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_function list = DB.tb_function.First(t => t.id_function == function.id_function);
+            Entities.tb_function list = db.tb_function.First(t => t.id_function == function.id_function);
           
             list.nm_function = list.nm_function;
             
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
         public void Remover(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_function remover = DB.tb_function.First(t => t.id_function == id);
+            Entities.tb_function remover = db.tb_function.First(t => t.id_function == id);
 
-            DB.tb_function.Remove(remover);
-            DB.SaveChanges();
+            db.tb_function.Remove(remover);
+            db.SaveChanges();
         }
     }
 }

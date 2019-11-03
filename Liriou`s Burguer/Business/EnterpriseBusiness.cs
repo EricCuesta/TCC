@@ -8,29 +8,27 @@ namespace Liriou_s_Burguer.Business
 {
     class EnterpriseBusiness
     {
+        Database.EnterpriseDatabase db = new Database.EnterpriseDatabase();
+
         public void Inserir(Database.Entities.tb_enterprise enterprise)
         {
-            Database.EnterpriseDatabase DB = new Database.EnterpriseDatabase();
-            DB.Inserir(enterprise);
+            db.Inserir(enterprise);
         }
 
         public List<Database.Entities.tb_enterprise> Consultar()
         {
-            Database.EnterpriseDatabase DB = new Database.EnterpriseDatabase();
-            List<Database.Entities.tb_enterprise> list = DB.Consultar();
+            List<Database.Entities.tb_enterprise> list = db.Consultar();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_enterprise enterprise)
         {
-            Database.EnterpriseDatabase DB = new Database.EnterpriseDatabase();
-            DB.Alterar(enterprise);
+            db.Alterar(enterprise);
         }
 
         public void Remover(int id)
         {
-            Database.EnterpriseDatabase DB = new Database.EnterpriseDatabase();
-            DB.Remover(id);
+            db.Remover(id);
         }
     }
 }

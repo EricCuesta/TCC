@@ -16,5 +16,49 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             InitializeComponent();
         }
+
+        private void nudId_ValueChanged(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(nudId.Value);
+
+            Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
+            Database.Entities.tb_employees employees = busemployees.ConsultarPorID(id);
+
+            if (employees == null)
+            {
+                txtNome.Text = string.Empty;
+                txtSobrenome.Text = string.Empty;
+                mtxtRG.Text = string.Empty;
+                mtxtCPF.Text = string.Empty;
+                nudDependentes.Value = 0;
+                cboSexo.Text = null;
+                dtpNascimento.Value = DateTime.Now;
+                cboEstado.Text = null;
+                mtxtCEP.Text = string.Empty;
+                txtComplemento.Text = string.Empty;
+                txtEndereço.Text = string.Empty;
+                mtxtCelular.Text = string.Empty;
+                mtxtTelefone.Text = string.Empty;
+                txtEmail.Text = string.Empty;
+                txtSenha.Text = string.Empty;
+                chkAdministrador.Checked = Convert.ToBoolean(string.Empty);
+                chkFuncionário.Checked = Convert.ToBoolean(string.Empty);
+                chkRH.Checked = Convert.ToBoolean(string.Empty);
+                chkFinanceiro.Checked = Convert.ToBoolean(string.Empty);
+                chkEstoque.Checked = Convert.ToBoolean(string.Empty);
+                chkCRM.Checked = Convert.ToBoolean(string.Empty);
+            }
+
+        }
+
+        private void btnDemitir_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(nudId.Value);
+
+            Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
+            busemployees.Remover(id);
+
+            MessageBox.Show("Cliente deletado com sucesso");
+        }       
     }
 }

@@ -45,30 +45,28 @@ namespace Liriou_s_Burguer.Business
 
         public Database.Entities.tb_client ConsultarPorID(int id)
         {
-            Database.ClientDatabase dbclient = new Database.ClientDatabase();
-            Database.Entities.tb_client client = dbclient.ConsultaPorID(id);
+            Database.Entities.tb_client client = db.ConsultaPorID(id);
 
             return client;
         }
 
         public List<Database.Entities.tb_client> Consultar(Database.Entities.tb_client client)
         {
-            Database.ClientDatabase dbclient = new Database.ClientDatabase();
             List<Database.Entities.tb_client> list = new List<Database.Entities.tb_client>();
 
 
             if (client.nr_rg == string.Empty && client.ds_sex == null)
-                list = dbclient.ConsultarPorNome(client);
+                list = db.ConsultarPorNome(client);
             else if (client.nm_firstName == string.Empty && client.ds_sex == null)
-                list = dbclient.ConsultarPorRG(client);
+                list = db.ConsultarPorRG(client);
             else if (client.nm_firstName == string.Empty && client.nr_rg == string.Empty)
-                list = dbclient.ConsultarPorSexo(client);
+                list = db.ConsultarPorSexo(client);
             else if (client.ds_sex == null)
-                list = dbclient.ConsultarPorNomeRG(client);
+                list = db.ConsultarPorNomeRG(client);
             else if (client.nm_firstName != string.Empty && client.ds_sex != null)
-                list = dbclient.ConsultarPorNomeSexo(client);
+                list = db.ConsultarPorNomeSexo(client);
             else if (client.nr_rg != string.Empty && client.ds_sex != null)
-                list = dbclient.ConsultarPorRGSexo(client);
+                list = db.ConsultarPorRGSexo(client);
 
             return list;
         }

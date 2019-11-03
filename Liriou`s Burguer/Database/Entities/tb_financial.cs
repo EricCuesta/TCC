@@ -19,8 +19,8 @@ namespace Liriou_s_Burguer.Database.Entities
         public decimal vl_grossSalary { get; set; }
         public decimal vl_netSalary { get; set; }
         public string ds_typeSalary { get; set; }
-        public System.DateTime dt_fromDate { get; set; }
-        public System.DateTime dt_toDate { get; set; }
+        public string dt_fromDate { get; set; }
+        public string dt_toDate { get; set; }
     
         public virtual tb_employees tb_employees { get; set; }
     }

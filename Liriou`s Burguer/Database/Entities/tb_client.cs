@@ -27,7 +27,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public string nr_rg { get; set; }
         public string nr_cpf { get; set; }
         public string ds_sex { get; set; }
-        public System.DateTime dt_birth { get; set; }
+        public string dt_birth { get; set; }
         public string ds_state { get; set; }
         public string nr_cep { get; set; }
         public string ds_address { get; set; }

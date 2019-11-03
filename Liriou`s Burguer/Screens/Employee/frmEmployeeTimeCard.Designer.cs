@@ -81,6 +81,7 @@
             this.btnBaterPonto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBaterPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBaterPonto.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaterPonto.ForeColor = System.Drawing.Color.Black;
             this.btnBaterPonto.Location = new System.Drawing.Point(290, 376);
             this.btnBaterPonto.Name = "btnBaterPonto";
             this.btnBaterPonto.Size = new System.Drawing.Size(131, 30);

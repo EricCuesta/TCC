@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using Liriou_s_Burguer.Database.Entities;
-using Liriou_s_Burguer.Business;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,12 +22,12 @@ namespace Liriou_s_Burguer.Screens.Login
             panelAlterarSenha.Visible = false;
         }
 
+        Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
+
         private void btnVerificar_Click(object sender, EventArgs e)
         {
             try
             {
-                tb_employees employees = new tb_employees();
-
                 if (cboOpção.Text == "RG")
                 {
                     employees.nr_rg = mtxtRG.Text.Trim();
@@ -43,8 +41,8 @@ namespace Liriou_s_Burguer.Screens.Login
                     employees.nr_cellphone = mtxtCelular.Text.Trim();
                 }
 
-                EmployeesBusiness busemp = new EmployeesBusiness();
-                busemp.Verificar(employees);
+                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
+                busemp.VerificarRecuperação(employees);
 
                 Modificar();
             }
@@ -60,15 +58,26 @@ namespace Liriou_s_Burguer.Screens.Login
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            string cpf = mtxtCPF.Text;
-            string rg = mtxtRG.Text;
-            string cell = mtxtCelular.Text;
-            string senha = txtSenha.Text;
+            try
+            {
+                employees.nr_cpf = mtxtCPF.Text;
+                employees.nr_rg = mtxtRG.Text;
+                employees.nr_cellphone = mtxtCelular.Text;
+                employees.pw_password = txtSenha.Text;
 
-            EmployeesBusiness EB = new EmployeesBusiness();
-            string r = EB.AlterarRecuperação(senha, cpf, rg, cell);
+                Business.EmployeesBusiness db = new Business.EmployeesBusiness();
+                db.AlterarRecuperação(employees);
 
-            MessageBox.Show(r);
+                MessageBox.Show("Senha alterada com sucesso");
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Modificar()

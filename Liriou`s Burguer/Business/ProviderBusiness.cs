@@ -41,21 +41,19 @@ namespace Liriou_s_Burguer.Business
 
         public Database.Entities.tb_provider ConsultarPorID(int id)
         {
-            Database.ProviderDatabase dbprovider = new Database.ProviderDatabase();
-            Database.Entities.tb_provider provider = dbprovider.ConsultaPorID(id);
+            Database.Entities.tb_provider provider = db.ConsultaPorID(id);
 
             return provider;
         }
 
         public List<Database.Entities.tb_provider> Consultar(Database.Entities.tb_provider provider)
         {
-            Database.ProviderDatabase dbprovider = new Database.ProviderDatabase();
             List<Database.Entities.tb_provider> list = new List<Database.Entities.tb_provider>();
 
             if (provider.nm_provider != string.Empty && provider.ds_typePerson == string.Empty)
-                list = dbprovider.ConsultarPorNome(provider);
+                list = db.ConsultarPorNome(provider);
             else if (provider.nm_provider == string.Empty && provider.ds_typePerson != string.Empty)
-                list = dbprovider.ConsultarPorTipoDePessoa(provider);
+                list = db.ConsultarPorTipoDePessoa(provider);
 
 
             return list;

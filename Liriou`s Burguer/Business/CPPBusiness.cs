@@ -8,29 +8,27 @@ namespace Liriou_s_Burguer.Business
 {
     class CPPBusiness
     {
+        Database.CPPDatabase db = new Database.CPPDatabase();
+
         public void Inserir(Database.Entities.tb_cpp cpp)
         {
-            Database.CPPDatabase DB = new Database.CPPDatabase();
-            DB.Inserir(cpp);
+            db.Inserir(cpp);
         }
 
         public List<Database.Entities.tb_cpp> Consultar()
         {
-            Database.CPPDatabase DB = new Database.CPPDatabase();
-            List<Database.Entities.tb_cpp> list = DB.Consultar();
+            List<Database.Entities.tb_cpp> list = db.Consultar();
             return list;
         }
 
         public void Alterar(Database.Entities.tb_cpp cpp)
         {
-            Database.CPPDatabase DB = new Database.CPPDatabase();
-            DB.Alterar(cpp);
+            db.Alterar(cpp);
         }
 
         public void Remover(int id)
         {
-            Database.CPPDatabase DB = new Database.CPPDatabase();
-            DB.Remover(id);
+            db.Remover(id);
         }
     }
 }

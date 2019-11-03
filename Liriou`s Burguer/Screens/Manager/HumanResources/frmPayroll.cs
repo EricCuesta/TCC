@@ -23,12 +23,11 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             string rg0 = mtxtRG.Text.Trim();
             string mesAno = mtxtAno.Text.Trim();
 
-            Model.PayrollModel model = new Model.PayrollModel();
-            model.data = mesAno;
-            model.RG = rg0;
+            Model.PayrollModel.data = mesAno;
+            Model.PayrollModel.RG = rg0;
 
             Business.FinancialBusiness FB = new Business.FinancialBusiness();
-            string r = FB.Verificar(model);
+            string r = FB.Verificar(mesAno, rg0);
 
             if (r != "")
             {

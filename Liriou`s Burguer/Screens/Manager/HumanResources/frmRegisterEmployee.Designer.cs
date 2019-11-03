@@ -914,12 +914,12 @@
         private System.Windows.Forms.Label lblSenha;
         public System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnContinuar;
-        private System.Windows.Forms.CheckBox chkCRM;
-        private System.Windows.Forms.CheckBox chkEstoque;
-        private System.Windows.Forms.CheckBox chkFinanceiro;
-        private System.Windows.Forms.CheckBox chkRH;
-        private System.Windows.Forms.CheckBox chkFuncionário;
-        private System.Windows.Forms.CheckBox chkAdministrador;
         public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.CheckBox chkCRM;
+        public System.Windows.Forms.CheckBox chkEstoque;
+        public System.Windows.Forms.CheckBox chkFinanceiro;
+        public System.Windows.Forms.CheckBox chkRH;
+        public System.Windows.Forms.CheckBox chkFuncionário;
+        public System.Windows.Forms.CheckBox chkAdministrador;
     }
 }

@@ -40,20 +40,18 @@ namespace Liriou_s_Burguer.Database
 
         public void Alterar(Entities.tb_department department)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_department list = DB.tb_department.First(t => t.id_department == department.id_department);
-            list.nm_department = list.nm_department;
+            Entities.tb_department list = db.tb_department.First(t => t.id_department == department.id_department);
+            list.nm_department = department.nm_department;
             
-            DB.SaveChanges();
+            db.SaveChanges();
         }
 
         public void Remover(int id)
         {
-            Entities.liriousdbEntities DB = new Entities.liriousdbEntities();
-            Entities.tb_department remover = DB.tb_department.First(t => t.id_department == id);
+            Entities.tb_department remover = db.tb_department.First(t => t.id_department == id);
 
-            DB.tb_department.Remove(remover);
-            DB.SaveChanges();
+            db.tb_department.Remove(remover);
+            db.SaveChanges();
         }
     }
 }
