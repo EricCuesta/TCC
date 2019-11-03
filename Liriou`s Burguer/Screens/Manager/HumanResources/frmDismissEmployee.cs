@@ -41,14 +41,13 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 mtxtTelefone.Text = string.Empty;
                 txtEmail.Text = string.Empty;
                 txtSenha.Text = string.Empty;
-                chkAdministrador.Checked = Convert.ToBoolean(string.Empty);
-                chkFuncionário.Checked = Convert.ToBoolean(string.Empty);
+                rdbGerente.Checked = Convert.ToBoolean(string.Empty);
+                rdbFuncionário.Checked = Convert.ToBoolean(string.Empty);
                 chkRH.Checked = Convert.ToBoolean(string.Empty);
                 chkFinanceiro.Checked = Convert.ToBoolean(string.Empty);
                 chkEstoque.Checked = Convert.ToBoolean(string.Empty);
                 chkCRM.Checked = Convert.ToBoolean(string.Empty);
             }
-
         }
 
         private void btnDemitir_Click(object sender, EventArgs e)
@@ -59,6 +58,6 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             busemployees.Remover(id);
 
             MessageBox.Show("Cliente deletado com sucesso");
-        }       
+        }
     }
 }

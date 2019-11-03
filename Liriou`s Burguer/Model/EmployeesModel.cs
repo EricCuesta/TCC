@@ -24,7 +24,7 @@ namespace Liriou_s_Burguer.Model
         public static string tellphone { get; set; }
         public static string email { get; set; }
         public static string password { get; set; }
-        public static bool admin { get; set; }
+        public static bool manager { get; set; }
         public static bool employeer { get; set; }
         public static bool RH { get; set; }
         public static bool financial { get; set; }

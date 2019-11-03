@@ -65,13 +65,6 @@ namespace Liriou_s_Burguer.Database
             return employees;
         }
 
-        public Entities.tb_employees ConsultaPorData(string data)
-        {
-            Entities.tb_employees employees = db.tb_employees.FirstOrDefault(t => t.dt_unavailability == data);
-
-            return employees;
-        }
-
         public List<Entities.tb_employees> ConsultarPorNome(Entities.tb_employees employees)
         {
             List<Entities.tb_employees> list = db.tb_employees.Where(l => l.nm_firstName == employees.nm_firstName).ToList();
@@ -131,11 +124,11 @@ namespace Liriou_s_Burguer.Database
         public void Alterar(Entities.tb_employees employees)
         {
             Entities.tb_employees list = db.tb_employees.First(t => t.id_emp == employees.id_emp);
-
             list.nm_firstName = employees.nm_firstName;
             list.nm_lastName = employees.nm_lastName;
             list.nr_rg = employees.nr_rg;
             list.nr_cpf = employees.nr_cpf;
+            list.nr_dependents = employees.nr_dependents;
             list.ds_sex = employees.ds_sex;
             list.dt_birth = employees.dt_birth;
             list.ds_state = employees.ds_state;
@@ -146,8 +139,8 @@ namespace Liriou_s_Burguer.Database
             list.nr_tellphone = employees.nr_tellphone;
             list.ds_email = employees.ds_email;
             list.pw_password = employees.pw_password;
-            list.bt_admin = employees.bt_admin;
-            list.bt_funcionaro = employees.bt_funcionaro;
+            list.bt_manager = employees.bt_manager;
+            list.bt_employee = employees.bt_employee;
             list.bt_rh = employees.bt_rh;
             list.bt_financial = employees.bt_financial;
             list.bt_stock = employees.bt_stock;

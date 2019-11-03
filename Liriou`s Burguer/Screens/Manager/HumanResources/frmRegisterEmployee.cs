@@ -48,8 +48,8 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 employees.nr_tellphone = mtxtTelefone.Text.Trim();
                 employees.ds_email = txtEmail.Text.Trim();
                 employees.pw_password = txtSenha.Text.Trim();
-                employees.bt_admin = chkAdministrador.Checked;
-                employees.bt_funcionaro = chkFuncionário.Checked;
+                employees.bt_manager = rdbGerente.Checked;
+                employees.bt_employee = rdbFuncionário.Checked;
                 employees.bt_rh = chkRH.Checked;
                 employees.bt_financial = chkFinanceiro.Checked;
                 employees.bt_stock = chkEstoque.Checked;
@@ -60,6 +60,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
                 frmRegisterEmployee1 registerEmployee1 = new frmRegisterEmployee1();
                 registerEmployee1.ShowDialog();
+                Hide();
             }
             catch (ArgumentException ex)
             {

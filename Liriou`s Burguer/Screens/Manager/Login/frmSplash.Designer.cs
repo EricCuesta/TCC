@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.BarraDeCarregamento = new System.Windows.Forms.Panel();
             this.Carregando = new System.Windows.Forms.Panel();
-            this.imgSplash = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.imgSplash = new System.Windows.Forms.PictureBox();
             this.BarraDeCarregamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgSplash)).BeginInit();
             this.SuspendLayout();
@@ -55,22 +55,23 @@
             this.Carregando.Size = new System.Drawing.Size(40, 25);
             this.Carregando.TabIndex = 2;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 30;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // imgSplash
             // 
+            this.imgSplash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.imgSplash.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.imgSplash.Image = global::Liriou_s_Burguer.Properties.Resources.Hamburger;
+            this.imgSplash.Image = global::Liriou_s_Burguer.Properties.Resources.Hamburger_1_;
             this.imgSplash.Location = new System.Drawing.Point(0, 0);
             this.imgSplash.Name = "imgSplash";
             this.imgSplash.Size = new System.Drawing.Size(800, 475);
             this.imgSplash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imgSplash.TabIndex = 2;
             this.imgSplash.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 30;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmSplash
             // 

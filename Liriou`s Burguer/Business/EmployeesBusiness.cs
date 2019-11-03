@@ -56,6 +56,10 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo CPF deve ser preenchido");       
             if (employees.ds_sex == string.Empty)
                 throw new ArgumentException("O campo sexo deve ser preenchido");
+            if (employees.ds_sex == "Masculino")
+                employees.ds_sex = "M";
+            else
+                employees.ds_sex = "F";
             if (employees.ds_state == string.Empty)
                 throw new ArgumentException("O campo Estado deve ser preenchido");
             if (employees.nr_cep == string.Empty)
@@ -90,8 +94,8 @@ namespace Liriou_s_Burguer.Business
             Model.EmployeesModel.tellphone = employees.nr_tellphone;
             Model.EmployeesModel.email = employees.ds_email;
             Model.EmployeesModel.password = employees.pw_password;
-            Model.EmployeesModel.admin = Convert.ToBoolean(employees.bt_admin);
-            Model.EmployeesModel.employeer = Convert.ToBoolean(employees.bt_funcionaro);
+            Model.EmployeesModel.manager = Convert.ToBoolean(employees.bt_manager);
+            Model.EmployeesModel.employeer = Convert.ToBoolean(employees.bt_employee);
             Model.EmployeesModel.RH = Convert.ToBoolean(employees.bt_rh);
             Model.EmployeesModel.financial = Convert.ToBoolean(employees.bt_financial);
             Model.EmployeesModel.stock = Convert.ToBoolean(employees.bt_financial);
@@ -115,8 +119,8 @@ namespace Liriou_s_Burguer.Business
             employees.nr_tellphone = Model.EmployeesModel.tellphone;
             employees.ds_email = Model.EmployeesModel.email;
             employees.pw_password = Model.EmployeesModel.password;
-            employees.bt_admin = Model.EmployeesModel.admin;
-            employees.bt_funcionaro = Model.EmployeesModel.employeer;
+            employees.bt_manager = Model.EmployeesModel.manager;
+            employees.bt_employee = Model.EmployeesModel.employeer;
             employees.bt_rh = Model.EmployeesModel.RH;
             employees.bt_financial = Model.EmployeesModel.financial;
             employees.bt_stock = Model.EmployeesModel.stock;
@@ -127,13 +131,6 @@ namespace Liriou_s_Burguer.Business
         public Database.Entities.tb_employees ConsultarPorID(int id)
         {
             Database.Entities.tb_employees employees = db.ConsultaPorID(id);
-
-            return employees;
-        }
-
-        public Database.Entities.tb_employees ConsultarPorData(string data)
-        {
-            Database.Entities.tb_employees employees = db.ConsultaPorData(data);
 
             return employees;
         }
@@ -176,6 +173,10 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo CPF deve ser preenchido");
             if (employees.ds_sex == string.Empty)
                 throw new ArgumentException("O campo sexo deve ser preenchido");
+            if (employees.ds_sex == "Masculino")
+                employees.ds_sex = "M";
+            else
+                employees.ds_sex = "F";
             if (employees.ds_state == string.Empty)
                 throw new ArgumentException("O campo Estado deve ser preenchido");
             if (employees.nr_cep == string.Empty)
@@ -210,8 +211,8 @@ namespace Liriou_s_Burguer.Business
             Model.EmployeesModel.tellphone = employees.nr_tellphone;
             Model.EmployeesModel.email = employees.ds_email;
             Model.EmployeesModel.password = employees.pw_password;
-            Model.EmployeesModel.admin = Convert.ToBoolean(employees.bt_admin);
-            Model.EmployeesModel.employeer = Convert.ToBoolean(employees.bt_funcionaro);
+            Model.EmployeesModel.manager = Convert.ToBoolean(employees.bt_manager);
+            Model.EmployeesModel.employeer = Convert.ToBoolean(employees.bt_employee);
             Model.EmployeesModel.RH = Convert.ToBoolean(employees.bt_rh);
             Model.EmployeesModel.financial = Convert.ToBoolean(employees.bt_financial);
             Model.EmployeesModel.stock = Convert.ToBoolean(employees.bt_stock);

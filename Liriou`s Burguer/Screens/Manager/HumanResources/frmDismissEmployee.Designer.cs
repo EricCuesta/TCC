@@ -28,11 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel = new System.Windows.Forms.Panel();
-            this.dataGridView16 = new System.Windows.Forms.DataGridView();
             this.nudId = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
             this.btnDemitir = new System.Windows.Forms.Button();
+            this.mtxtCEP = new System.Windows.Forms.MaskedTextBox();
+            this.lblCEP = new System.Windows.Forms.Label();
+            this.panel = new System.Windows.Forms.Panel();
+            this.dataGridView17 = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.chkCRM = new System.Windows.Forms.CheckBox();
+            this.chkEstoque = new System.Windows.Forms.CheckBox();
+            this.chkFinanceiro = new System.Windows.Forms.CheckBox();
+            this.chkFornecedor = new System.Windows.Forms.CheckBox();
+            this.chkRH = new System.Windows.Forms.CheckBox();
+            this.rdbFuncionário = new System.Windows.Forms.RadioButton();
+            this.rdbGerente = new System.Windows.Forms.RadioButton();
+            this.dataGridView16 = new System.Windows.Forms.DataGridView();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -54,8 +65,6 @@
             this.lblComplemento = new System.Windows.Forms.Label();
             this.txtEndereço = new System.Windows.Forms.RichTextBox();
             this.lblEndereço = new System.Windows.Forms.Label();
-            this.mtxtCEP = new System.Windows.Forms.MaskedTextBox();
-            this.lblCEP = new System.Windows.Forms.Label();
             this.cboEstado = new System.Windows.Forms.ComboBox();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -79,15 +88,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblDemitirFuncionário = new System.Windows.Forms.Label();
-            this.chkCRM = new System.Windows.Forms.CheckBox();
-            this.chkEstoque = new System.Windows.Forms.CheckBox();
-            this.chkFinanceiro = new System.Windows.Forms.CheckBox();
-            this.chkRH = new System.Windows.Forms.CheckBox();
-            this.chkFuncionário = new System.Windows.Forms.CheckBox();
-            this.chkAdministrador = new System.Windows.Forms.CheckBox();
-            this.panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
+            this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
@@ -106,22 +111,83 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
+            // nudId
+            // 
+            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudId.Location = new System.Drawing.Point(45, 6);
+            this.nudId.Name = "nudId";
+            this.nudId.Size = new System.Drawing.Size(123, 23);
+            this.nudId.TabIndex = 646;
+            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblID.Location = new System.Drawing.Point(2, 5);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(37, 26);
+            this.lblID.TabIndex = 645;
+            this.lblID.Text = "ID:";
+            // 
+            // btnDemitir
+            // 
+            this.btnDemitir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDemitir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDemitir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDemitir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDemitir.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemitir.ForeColor = System.Drawing.Color.Black;
+            this.btnDemitir.Location = new System.Drawing.Point(300, 376);
+            this.btnDemitir.Name = "btnDemitir";
+            this.btnDemitir.Size = new System.Drawing.Size(107, 30);
+            this.btnDemitir.TabIndex = 644;
+            this.btnDemitir.Text = "Demitir";
+            this.btnDemitir.UseVisualStyleBackColor = false;
+            this.btnDemitir.Click += new System.EventHandler(this.btnDemitir_Click);
+            // 
+            // mtxtCEP
+            // 
+            this.mtxtCEP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtCEP.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCEP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCEP.Location = new System.Drawing.Point(407, 133);
+            this.mtxtCEP.Mask = "00000-000";
+            this.mtxtCEP.Name = "mtxtCEP";
+            this.mtxtCEP.ReadOnly = true;
+            this.mtxtCEP.Size = new System.Drawing.Size(299, 23);
+            this.mtxtCEP.TabIndex = 618;
+            // 
+            // lblCEP
+            // 
+            this.lblCEP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCEP.AutoSize = true;
+            this.lblCEP.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCEP.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCEP.Location = new System.Drawing.Point(361, 135);
+            this.lblCEP.Name = "lblCEP";
+            this.lblCEP.Size = new System.Drawing.Size(39, 19);
+            this.lblCEP.TabIndex = 617;
+            this.lblCEP.Text = "CEP:";
+            // 
             // panel
             // 
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
-            this.panel.Controls.Add(this.chkCRM);
-            this.panel.Controls.Add(this.chkEstoque);
-            this.panel.Controls.Add(this.chkFinanceiro);
-            this.panel.Controls.Add(this.chkRH);
-            this.panel.Controls.Add(this.chkFuncionário);
-            this.panel.Controls.Add(this.chkAdministrador);
-            this.panel.Controls.Add(this.dataGridView16);
-            this.panel.Controls.Add(this.nudId);
+            this.panel.Controls.Add(this.dataGridView17);
+            this.panel.Controls.Add(this.panel1);
             this.panel.Controls.Add(this.lblID);
+            this.panel.Controls.Add(this.nudId);
+            this.panel.Controls.Add(this.mtxtCEP);
+            this.panel.Controls.Add(this.lblCEP);
             this.panel.Controls.Add(this.btnDemitir);
+            this.panel.Controls.Add(this.rdbFuncionário);
+            this.panel.Controls.Add(this.rdbGerente);
+            this.panel.Controls.Add(this.dataGridView16);
             this.panel.Controls.Add(this.txtSenha);
             this.panel.Controls.Add(this.lblSenha);
             this.panel.Controls.Add(this.txtEmail);
@@ -143,8 +209,6 @@
             this.panel.Controls.Add(this.lblComplemento);
             this.panel.Controls.Add(this.txtEndereço);
             this.panel.Controls.Add(this.lblEndereço);
-            this.panel.Controls.Add(this.mtxtCEP);
-            this.panel.Controls.Add(this.lblCEP);
             this.panel.Controls.Add(this.cboEstado);
             this.panel.Controls.Add(this.dataGridView8);
             this.panel.Controls.Add(this.lblEstado);
@@ -167,10 +231,119 @@
             this.panel.Controls.Add(this.lblSobrenome);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
-            this.panel.Location = new System.Drawing.Point(0, 41);
+            this.panel.Location = new System.Drawing.Point(0, 39);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(711, 418);
-            this.panel.TabIndex = 564;
+            this.panel.Size = new System.Drawing.Size(709, 418);
+            this.panel.TabIndex = 648;
+            // 
+            // dataGridView17
+            // 
+            this.dataGridView17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView17.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView17.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView17.Location = new System.Drawing.Point(-1, 320);
+            this.dataGridView17.Name = "dataGridView17";
+            this.dataGridView17.Size = new System.Drawing.Size(250, 2);
+            this.dataGridView17.TabIndex = 699;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.chkCRM);
+            this.panel1.Controls.Add(this.chkEstoque);
+            this.panel1.Controls.Add(this.chkFinanceiro);
+            this.panel1.Controls.Add(this.chkFornecedor);
+            this.panel1.Controls.Add(this.chkRH);
+            this.panel1.Location = new System.Drawing.Point(0, 322);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(249, 95);
+            this.panel1.TabIndex = 698;
+            // 
+            // chkCRM
+            // 
+            this.chkCRM.AutoSize = true;
+            this.chkCRM.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkCRM.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkCRM.Location = new System.Drawing.Point(7, 6);
+            this.chkCRM.Name = "chkCRM";
+            this.chkCRM.Size = new System.Drawing.Size(52, 19);
+            this.chkCRM.TabIndex = 686;
+            this.chkCRM.Text = "CRM";
+            this.chkCRM.UseVisualStyleBackColor = true;
+            // 
+            // chkEstoque
+            // 
+            this.chkEstoque.AutoSize = true;
+            this.chkEstoque.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
+            this.chkEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkEstoque.Location = new System.Drawing.Point(6, 31);
+            this.chkEstoque.Name = "chkEstoque";
+            this.chkEstoque.Size = new System.Drawing.Size(71, 19);
+            this.chkEstoque.TabIndex = 685;
+            this.chkEstoque.Text = "Estoque";
+            this.chkEstoque.UseVisualStyleBackColor = true;
+            // 
+            // chkFinanceiro
+            // 
+            this.chkFinanceiro.AutoSize = true;
+            this.chkFinanceiro.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
+            this.chkFinanceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkFinanceiro.Location = new System.Drawing.Point(6, 56);
+            this.chkFinanceiro.Name = "chkFinanceiro";
+            this.chkFinanceiro.Size = new System.Drawing.Size(83, 19);
+            this.chkFinanceiro.TabIndex = 684;
+            this.chkFinanceiro.Text = "Financeiro";
+            this.chkFinanceiro.UseVisualStyleBackColor = true;
+            // 
+            // chkFornecedor
+            // 
+            this.chkFornecedor.AutoSize = true;
+            this.chkFornecedor.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
+            this.chkFornecedor.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkFornecedor.Location = new System.Drawing.Point(122, 6);
+            this.chkFornecedor.Name = "chkFornecedor";
+            this.chkFornecedor.Size = new System.Drawing.Size(90, 19);
+            this.chkFornecedor.TabIndex = 687;
+            this.chkFornecedor.Text = "Fornecedor";
+            this.chkFornecedor.UseVisualStyleBackColor = true;
+            // 
+            // chkRH
+            // 
+            this.chkRH.AutoSize = true;
+            this.chkRH.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
+            this.chkRH.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkRH.Location = new System.Drawing.Point(122, 31);
+            this.chkRH.Name = "chkRH";
+            this.chkRH.Size = new System.Drawing.Size(43, 19);
+            this.chkRH.TabIndex = 683;
+            this.chkRH.Text = "RH";
+            this.chkRH.UseVisualStyleBackColor = true;
+            // 
+            // rdbFuncionário
+            // 
+            this.rdbFuncionário.AutoSize = true;
+            this.rdbFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.rdbFuncionário.ForeColor = System.Drawing.Color.White;
+            this.rdbFuncionário.Location = new System.Drawing.Point(7, 293);
+            this.rdbFuncionário.Name = "rdbFuncionário";
+            this.rdbFuncionário.Size = new System.Drawing.Size(109, 23);
+            this.rdbFuncionário.TabIndex = 697;
+            this.rdbFuncionário.TabStop = true;
+            this.rdbFuncionário.Text = "Funcionário";
+            this.rdbFuncionário.UseVisualStyleBackColor = true;
+            // 
+            // rdbGerente
+            // 
+            this.rdbGerente.AutoSize = true;
+            this.rdbGerente.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.rdbGerente.ForeColor = System.Drawing.Color.White;
+            this.rdbGerente.Location = new System.Drawing.Point(122, 293);
+            this.rdbGerente.Name = "rdbGerente";
+            this.rdbGerente.Size = new System.Drawing.Size(82, 23);
+            this.rdbGerente.TabIndex = 696;
+            this.rdbGerente.TabStop = true;
+            this.rdbGerente.Text = "Gerente";
+            this.rdbGerente.UseVisualStyleBackColor = true;
             // 
             // dataGridView16
             // 
@@ -178,46 +351,10 @@
             this.dataGridView16.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView16.Location = new System.Drawing.Point(1, 33);
+            this.dataGridView16.Location = new System.Drawing.Point(0, 33);
             this.dataGridView16.Name = "dataGridView16";
             this.dataGridView16.Size = new System.Drawing.Size(709, 2);
             this.dataGridView16.TabIndex = 647;
-            // 
-            // nudId
-            // 
-            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(48, 6);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(120, 23);
-            this.nudId.TabIndex = 646;
-            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblID.Location = new System.Drawing.Point(5, 5);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(37, 26);
-            this.lblID.TabIndex = 645;
-            this.lblID.Text = "ID:";
-            // 
-            // btnDemitir
-            // 
-            this.btnDemitir.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDemitir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDemitir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDemitir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDemitir.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDemitir.ForeColor = System.Drawing.Color.Black;
-            this.btnDemitir.Location = new System.Drawing.Point(489, 328);
-            this.btnDemitir.Name = "btnDemitir";
-            this.btnDemitir.Size = new System.Drawing.Size(107, 30);
-            this.btnDemitir.TabIndex = 644;
-            this.btnDemitir.Text = "Demitir";
-            this.btnDemitir.UseVisualStyleBackColor = false;
-            this.btnDemitir.Click += new System.EventHandler(this.btnDemitir_Click);
             // 
             // txtSenha
             // 
@@ -225,7 +362,7 @@
             this.txtSenha.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSenha.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(423, 259);
+            this.txtSenha.Location = new System.Drawing.Point(422, 259);
             this.txtSenha.MaxLength = 20;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.ReadOnly = true;
@@ -239,7 +376,7 @@
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenha.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSenha.Location = new System.Drawing.Point(362, 261);
+            this.lblSenha.Location = new System.Drawing.Point(361, 261);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(55, 19);
             this.lblSenha.TabIndex = 642;
@@ -251,11 +388,11 @@
             this.txtEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(70, 259);
+            this.txtEmail.Location = new System.Drawing.Point(62, 259);
             this.txtEmail.MaxLength = 64;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(277, 23);
+            this.txtEmail.Size = new System.Drawing.Size(285, 23);
             this.txtEmail.TabIndex = 641;
             // 
             // lblEmail
@@ -264,7 +401,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(10, 261);
+            this.lblEmail.Location = new System.Drawing.Point(2, 261);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(54, 19);
             this.lblEmail.TabIndex = 640;
@@ -276,7 +413,7 @@
             this.dataGridView15.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView15.Location = new System.Drawing.Point(1, 286);
+            this.dataGridView15.Location = new System.Drawing.Point(0, 286);
             this.dataGridView15.Name = "dataGridView15";
             this.dataGridView15.Size = new System.Drawing.Size(709, 2);
             this.dataGridView15.TabIndex = 639;
@@ -287,7 +424,7 @@
             this.dataGridView14.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView14.Location = new System.Drawing.Point(354, 256);
+            this.dataGridView14.Location = new System.Drawing.Point(353, 256);
             this.dataGridView14.Name = "dataGridView14";
             this.dataGridView14.Size = new System.Drawing.Size(2, 30);
             this.dataGridView14.TabIndex = 638;
@@ -298,7 +435,7 @@
             this.mtxtTelefone.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTelefone.Location = new System.Drawing.Point(440, 227);
+            this.mtxtTelefone.Location = new System.Drawing.Point(439, 227);
             this.mtxtTelefone.Mask = "(999) 9999-9999";
             this.mtxtTelefone.Name = "mtxtTelefone";
             this.mtxtTelefone.ReadOnly = true;
@@ -311,7 +448,7 @@
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTelefone.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTelefone.Location = new System.Drawing.Point(362, 229);
+            this.lblTelefone.Location = new System.Drawing.Point(361, 229);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(72, 19);
             this.lblTelefone.TabIndex = 636;
@@ -323,11 +460,11 @@
             this.mtxtCelular.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCelular.Location = new System.Drawing.Point(71, 227);
+            this.mtxtCelular.Location = new System.Drawing.Point(69, 227);
             this.mtxtCelular.Mask = "(999) 99999-9999";
             this.mtxtCelular.Name = "mtxtCelular";
             this.mtxtCelular.ReadOnly = true;
-            this.mtxtCelular.Size = new System.Drawing.Size(277, 23);
+            this.mtxtCelular.Size = new System.Drawing.Size(278, 23);
             this.mtxtCelular.TabIndex = 635;
             // 
             // dataGridView12
@@ -336,7 +473,7 @@
             this.dataGridView12.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Location = new System.Drawing.Point(1, 254);
+            this.dataGridView12.Location = new System.Drawing.Point(0, 254);
             this.dataGridView12.Name = "dataGridView12";
             this.dataGridView12.Size = new System.Drawing.Size(709, 2);
             this.dataGridView12.TabIndex = 634;
@@ -347,7 +484,7 @@
             this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Location = new System.Drawing.Point(354, 224);
+            this.dataGridView11.Location = new System.Drawing.Point(353, 224);
             this.dataGridView11.Name = "dataGridView11";
             this.dataGridView11.Size = new System.Drawing.Size(2, 30);
             this.dataGridView11.TabIndex = 633;
@@ -358,7 +495,7 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCelular.Location = new System.Drawing.Point(4, 229);
+            this.lblCelular.Location = new System.Drawing.Point(2, 229);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(61, 19);
             this.lblCelular.TabIndex = 632;
@@ -370,7 +507,7 @@
             this.dataGridView13.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView13.Location = new System.Drawing.Point(1, 222);
+            this.dataGridView13.Location = new System.Drawing.Point(0, 222);
             this.dataGridView13.Name = "dataGridView13";
             this.dataGridView13.Size = new System.Drawing.Size(709, 2);
             this.dataGridView13.TabIndex = 631;
@@ -381,7 +518,7 @@
             this.dataGridView10.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Location = new System.Drawing.Point(1, 160);
+            this.dataGridView10.Location = new System.Drawing.Point(0, 160);
             this.dataGridView10.Name = "dataGridView10";
             this.dataGridView10.Size = new System.Drawing.Size(709, 2);
             this.dataGridView10.TabIndex = 628;
@@ -392,7 +529,7 @@
             this.dataGridView9.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Location = new System.Drawing.Point(1, 128);
+            this.dataGridView9.Location = new System.Drawing.Point(0, 128);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.Size = new System.Drawing.Size(709, 2);
             this.dataGridView9.TabIndex = 627;
@@ -403,7 +540,7 @@
             this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(1, 96);
+            this.dataGridView5.Location = new System.Drawing.Point(0, 96);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(709, 2);
             this.dataGridView5.TabIndex = 626;
@@ -414,7 +551,7 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(1, 64);
+            this.dataGridView3.Location = new System.Drawing.Point(0, 64);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.Size = new System.Drawing.Size(709, 2);
             this.dataGridView3.TabIndex = 625;
@@ -424,7 +561,7 @@
             this.txtComplemento.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtComplemento.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtComplemento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtComplemento.Location = new System.Drawing.Point(478, 182);
+            this.txtComplemento.Location = new System.Drawing.Point(477, 182);
             this.txtComplemento.MaxLength = 128;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.ReadOnly = true;
@@ -437,7 +574,7 @@
             this.lblComplemento.AutoSize = true;
             this.lblComplemento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComplemento.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblComplemento.Location = new System.Drawing.Point(362, 183);
+            this.lblComplemento.Location = new System.Drawing.Point(361, 184);
             this.lblComplemento.Name = "lblComplemento";
             this.lblComplemento.Size = new System.Drawing.Size(110, 19);
             this.lblComplemento.TabIndex = 623;
@@ -449,11 +586,11 @@
             this.txtEndereço.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEndereço.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEndereço.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereço.Location = new System.Drawing.Point(87, 172);
+            this.txtEndereço.Location = new System.Drawing.Point(85, 172);
             this.txtEndereço.MaxLength = 128;
             this.txtEndereço.Name = "txtEndereço";
             this.txtEndereço.ReadOnly = true;
-            this.txtEndereço.Size = new System.Drawing.Size(260, 41);
+            this.txtEndereço.Size = new System.Drawing.Size(262, 41);
             this.txtEndereço.TabIndex = 622;
             this.txtEndereço.Text = "";
             // 
@@ -463,36 +600,11 @@
             this.lblEndereço.AutoSize = true;
             this.lblEndereço.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEndereço.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEndereço.Location = new System.Drawing.Point(4, 183);
+            this.lblEndereço.Location = new System.Drawing.Point(2, 181);
             this.lblEndereço.Name = "lblEndereço";
             this.lblEndereço.Size = new System.Drawing.Size(77, 19);
             this.lblEndereço.TabIndex = 619;
             this.lblEndereço.Text = "Endereço:";
-            // 
-            // mtxtCEP
-            // 
-            this.mtxtCEP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtxtCEP.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mtxtCEP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxtCEP.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCEP.Location = new System.Drawing.Point(407, 133);
-            this.mtxtCEP.Mask = "00000-000";
-            this.mtxtCEP.Name = "mtxtCEP";
-            this.mtxtCEP.ReadOnly = true;
-            this.mtxtCEP.Size = new System.Drawing.Size(300, 23);
-            this.mtxtCEP.TabIndex = 618;
-            // 
-            // lblCEP
-            // 
-            this.lblCEP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCEP.AutoSize = true;
-            this.lblCEP.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCEP.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCEP.Location = new System.Drawing.Point(362, 135);
-            this.lblCEP.Name = "lblCEP";
-            this.lblCEP.Size = new System.Drawing.Size(39, 19);
-            this.lblCEP.TabIndex = 617;
-            this.lblCEP.Text = "CEP:";
             // 
             // cboEstado
             // 
@@ -529,10 +641,10 @@
             "São Paulo",
             "Sergipe",
             "Tocantins"});
-            this.cboEstado.Location = new System.Drawing.Point(70, 133);
+            this.cboEstado.Location = new System.Drawing.Point(68, 133);
             this.cboEstado.MaxLength = 32;
             this.cboEstado.Name = "cboEstado";
-            this.cboEstado.Size = new System.Drawing.Size(278, 23);
+            this.cboEstado.Size = new System.Drawing.Size(279, 23);
             this.cboEstado.TabIndex = 616;
             // 
             // dataGridView8
@@ -541,7 +653,7 @@
             this.dataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Location = new System.Drawing.Point(354, 130);
+            this.dataGridView8.Location = new System.Drawing.Point(353, 130);
             this.dataGridView8.Name = "dataGridView8";
             this.dataGridView8.Size = new System.Drawing.Size(2, 30);
             this.dataGridView8.TabIndex = 614;
@@ -552,7 +664,7 @@
             this.lblEstado.AutoSize = true;
             this.lblEstado.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEstado.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Location = new System.Drawing.Point(4, 133);
+            this.lblEstado.Location = new System.Drawing.Point(2, 135);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(60, 19);
             this.lblEstado.TabIndex = 613;
@@ -564,7 +676,7 @@
             this.dtpNascimento.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
             this.dtpNascimento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(582, 101);
+            this.dtpNascimento.Location = new System.Drawing.Point(581, 101);
             this.dtpNascimento.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(125, 23);
@@ -577,7 +689,7 @@
             this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(418, 98);
+            this.dataGridView7.Location = new System.Drawing.Point(417, 98);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.Size = new System.Drawing.Size(2, 30);
             this.dataGridView7.TabIndex = 611;
@@ -588,7 +700,7 @@
             this.lblNascimento.AutoSize = true;
             this.lblNascimento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNascimento.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNascimento.Location = new System.Drawing.Point(426, 102);
+            this.lblNascimento.Location = new System.Drawing.Point(425, 103);
             this.lblNascimento.Name = "lblNascimento";
             this.lblNascimento.Size = new System.Drawing.Size(150, 19);
             this.lblNascimento.TabIndex = 610;
@@ -605,7 +717,7 @@
             this.cboSexo.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cboSexo.Location = new System.Drawing.Point(258, 101);
+            this.cboSexo.Location = new System.Drawing.Point(257, 101);
             this.cboSexo.MaxLength = 32;
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(154, 23);
@@ -617,7 +729,7 @@
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSexo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSexo.Location = new System.Drawing.Point(206, 102);
+            this.lblSexo.Location = new System.Drawing.Point(205, 102);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(46, 19);
             this.lblSexo.TabIndex = 608;
@@ -628,10 +740,9 @@
             this.nudDependentes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudDependentes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudDependentes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudDependentes.Location = new System.Drawing.Point(114, 101);
+            this.nudDependentes.Location = new System.Drawing.Point(112, 103);
             this.nudDependentes.Name = "nudDependentes";
-            this.nudDependentes.ReadOnly = true;
-            this.nudDependentes.Size = new System.Drawing.Size(66, 20);
+            this.nudDependentes.Size = new System.Drawing.Size(79, 20);
             this.nudDependentes.TabIndex = 607;
             // 
             // lblDependentes
@@ -640,7 +751,7 @@
             this.lblDependentes.AutoSize = true;
             this.lblDependentes.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDependentes.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDependentes.Location = new System.Drawing.Point(4, 103);
+            this.lblDependentes.Location = new System.Drawing.Point(2, 103);
             this.lblDependentes.Name = "lblDependentes";
             this.lblDependentes.Size = new System.Drawing.Size(104, 19);
             this.lblDependentes.TabIndex = 606;
@@ -652,7 +763,7 @@
             this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(198, 98);
+            this.dataGridView4.Location = new System.Drawing.Point(197, 98);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.Size = new System.Drawing.Size(2, 30);
             this.dataGridView4.TabIndex = 604;
@@ -663,7 +774,7 @@
             this.mtxtRG.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtRG.Location = new System.Drawing.Point(401, 69);
+            this.mtxtRG.Location = new System.Drawing.Point(400, 69);
             this.mtxtRG.Mask = "00.000.000-0";
             this.mtxtRG.Name = "mtxtRG";
             this.mtxtRG.ReadOnly = true;
@@ -676,7 +787,7 @@
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblRG.Location = new System.Drawing.Point(362, 69);
+            this.lblRG.Location = new System.Drawing.Point(361, 71);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 602;
@@ -688,11 +799,11 @@
             this.mtxtCPF.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.Location = new System.Drawing.Point(61, 69);
+            this.mtxtCPF.Location = new System.Drawing.Point(47, 69);
             this.mtxtCPF.Mask = "000000000/00";
             this.mtxtCPF.Name = "mtxtCPF";
             this.mtxtCPF.ReadOnly = true;
-            this.mtxtCPF.Size = new System.Drawing.Size(287, 23);
+            this.mtxtCPF.Size = new System.Drawing.Size(300, 23);
             this.mtxtCPF.TabIndex = 601;
             // 
             // lblCPF
@@ -701,7 +812,7 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCPF.Location = new System.Drawing.Point(4, 70);
+            this.lblCPF.Location = new System.Drawing.Point(2, 71);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(39, 19);
             this.lblCPF.TabIndex = 601;
@@ -713,7 +824,7 @@
             this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Location = new System.Drawing.Point(354, 66);
+            this.dataGridView6.Location = new System.Drawing.Point(353, 66);
             this.dataGridView6.Name = "dataGridView6";
             this.dataGridView6.Size = new System.Drawing.Size(2, 30);
             this.dataGridView6.TabIndex = 599;
@@ -724,7 +835,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, 1);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 1);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(709, 2);
             this.dataGridView1.TabIndex = 598;
@@ -735,7 +846,7 @@
             this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(354, 34);
+            this.dataGridView2.Location = new System.Drawing.Point(353, 34);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;
@@ -746,7 +857,7 @@
             this.txtSobrenome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtSobrenome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSobrenome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(461, 37);
+            this.txtSobrenome.Location = new System.Drawing.Point(458, 38);
             this.txtSobrenome.MaxLength = 32;
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.ReadOnly = true;
@@ -760,7 +871,7 @@
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSobrenome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSobrenome.Location = new System.Drawing.Point(361, 39);
+            this.lblSobrenome.Location = new System.Drawing.Point(362, 40);
             this.lblSobrenome.Name = "lblSobrenome";
             this.lblSobrenome.Size = new System.Drawing.Size(92, 19);
             this.lblSobrenome.TabIndex = 567;
@@ -773,11 +884,11 @@
             this.txtNome.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNome.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(63, 37);
+            this.txtNome.Location = new System.Drawing.Point(63, 38);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
             this.txtNome.ReadOnly = true;
-            this.txtNome.Size = new System.Drawing.Size(286, 23);
+            this.txtNome.Size = new System.Drawing.Size(283, 23);
             this.txtNome.TabIndex = 566;
             // 
             // lblNome
@@ -785,7 +896,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNome.Location = new System.Drawing.Point(3, 39);
+            this.lblNome.Location = new System.Drawing.Point(3, 40);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
             this.lblNome.TabIndex = 563;
@@ -797,84 +908,12 @@
             this.lblDemitirFuncionário.AutoSize = true;
             this.lblDemitirFuncionário.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDemitirFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDemitirFuncionário.Location = new System.Drawing.Point(222, 10);
+            this.lblDemitirFuncionário.Location = new System.Drawing.Point(228, 9);
             this.lblDemitirFuncionário.Name = "lblDemitirFuncionário";
             this.lblDemitirFuncionário.Size = new System.Drawing.Size(262, 28);
-            this.lblDemitirFuncionário.TabIndex = 563;
+            this.lblDemitirFuncionário.TabIndex = 647;
             this.lblDemitirFuncionário.Text = "Demitir Funcionário";
             this.lblDemitirFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // chkCRM
-            // 
-            this.chkCRM.AutoSize = true;
-            this.chkCRM.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkCRM.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkCRM.Location = new System.Drawing.Point(211, 386);
-            this.chkCRM.Name = "chkCRM";
-            this.chkCRM.Size = new System.Drawing.Size(61, 23);
-            this.chkCRM.TabIndex = 685;
-            this.chkCRM.Text = "CRM";
-            this.chkCRM.UseVisualStyleBackColor = true;
-            // 
-            // chkEstoque
-            // 
-            this.chkEstoque.AutoSize = true;
-            this.chkEstoque.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkEstoque.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkEstoque.Location = new System.Drawing.Point(211, 357);
-            this.chkEstoque.Name = "chkEstoque";
-            this.chkEstoque.Size = new System.Drawing.Size(84, 23);
-            this.chkEstoque.TabIndex = 684;
-            this.chkEstoque.Text = "Estoque";
-            this.chkEstoque.UseVisualStyleBackColor = true;
-            // 
-            // chkFinanceiro
-            // 
-            this.chkFinanceiro.AutoSize = true;
-            this.chkFinanceiro.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkFinanceiro.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkFinanceiro.Location = new System.Drawing.Point(211, 328);
-            this.chkFinanceiro.Name = "chkFinanceiro";
-            this.chkFinanceiro.Size = new System.Drawing.Size(100, 23);
-            this.chkFinanceiro.TabIndex = 683;
-            this.chkFinanceiro.Text = "Financeiro";
-            this.chkFinanceiro.UseVisualStyleBackColor = true;
-            // 
-            // chkRH
-            // 
-            this.chkRH.AutoSize = true;
-            this.chkRH.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkRH.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkRH.Location = new System.Drawing.Point(211, 299);
-            this.chkRH.Name = "chkRH";
-            this.chkRH.Size = new System.Drawing.Size(48, 23);
-            this.chkRH.TabIndex = 682;
-            this.chkRH.Text = "RH";
-            this.chkRH.UseVisualStyleBackColor = true;
-            // 
-            // chkFuncionário
-            // 
-            this.chkFuncionário.AutoSize = true;
-            this.chkFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkFuncionário.Location = new System.Drawing.Point(14, 328);
-            this.chkFuncionário.Name = "chkFuncionário";
-            this.chkFuncionário.Size = new System.Drawing.Size(110, 23);
-            this.chkFuncionário.TabIndex = 681;
-            this.chkFuncionário.Text = "Funcionário";
-            this.chkFuncionário.UseVisualStyleBackColor = true;
-            // 
-            // chkAdministrador
-            // 
-            this.chkAdministrador.AutoSize = true;
-            this.chkAdministrador.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkAdministrador.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.chkAdministrador.Location = new System.Drawing.Point(14, 299);
-            this.chkAdministrador.Name = "chkAdministrador";
-            this.chkAdministrador.Size = new System.Drawing.Size(128, 23);
-            this.chkAdministrador.TabIndex = 680;
-            this.chkAdministrador.Text = "Administrador";
-            this.chkAdministrador.UseVisualStyleBackColor = true;
             // 
             // frmDismissEmployee
             // 
@@ -888,10 +927,13 @@
             this.Name = "frmDismissEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dismiss Employee";
+            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
@@ -914,9 +956,22 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.Button btnDemitir;
+        public System.Windows.Forms.MaskedTextBox mtxtCEP;
+        private System.Windows.Forms.Label lblCEP;
+        private System.Windows.Forms.NumericUpDown nudId;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.DataGridView dataGridView17;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.CheckBox chkCRM;
+        public System.Windows.Forms.CheckBox chkEstoque;
+        public System.Windows.Forms.CheckBox chkFinanceiro;
+        public System.Windows.Forms.CheckBox chkFornecedor;
+        public System.Windows.Forms.CheckBox chkRH;
+        private System.Windows.Forms.RadioButton rdbFuncionário;
+        private System.Windows.Forms.RadioButton rdbGerente;
+        private System.Windows.Forms.DataGridView dataGridView16;
         public System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblSenha;
         public System.Windows.Forms.TextBox txtEmail;
@@ -938,8 +993,6 @@
         private System.Windows.Forms.Label lblComplemento;
         public System.Windows.Forms.RichTextBox txtEndereço;
         private System.Windows.Forms.Label lblEndereço;
-        public System.Windows.Forms.MaskedTextBox mtxtCEP;
-        private System.Windows.Forms.Label lblCEP;
         public System.Windows.Forms.ComboBox cboEstado;
         private System.Windows.Forms.DataGridView dataGridView8;
         private System.Windows.Forms.Label lblEstado;
@@ -960,17 +1013,8 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         public System.Windows.Forms.TextBox txtSobrenome;
         private System.Windows.Forms.Label lblSobrenome;
-        protected System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblDemitirFuncionário;
-        private System.Windows.Forms.DataGridView dataGridView16;
-        private System.Windows.Forms.NumericUpDown nudId;
-        private System.Windows.Forms.Label lblID;
-        public System.Windows.Forms.CheckBox chkCRM;
-        public System.Windows.Forms.CheckBox chkEstoque;
-        public System.Windows.Forms.CheckBox chkFinanceiro;
-        public System.Windows.Forms.CheckBox chkRH;
-        public System.Windows.Forms.CheckBox chkFuncionário;
-        public System.Windows.Forms.CheckBox chkAdministrador;
     }
 }

@@ -93,7 +93,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 Model.EmployeesModel.tellphone = string.Empty;
                 Model.EmployeesModel.email = string.Empty;
                 Model.EmployeesModel.password = string.Empty;
-                Model.EmployeesModel.admin = Convert.ToBoolean(string.Empty);
+                Model.EmployeesModel.manager = Convert.ToBoolean(string.Empty);
                 Model.EmployeesModel.employeer = Convert.ToBoolean(string.Empty);
                 Model.EmployeesModel.RH = Convert.ToBoolean(string.Empty);
                 Model.EmployeesModel.financial = Convert.ToBoolean(string.Empty);
@@ -128,13 +128,14 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             registerEmployee.mtxtTelefone.Text = Model.EmployeesModel.tellphone;
             registerEmployee.txtEmail.Text = Model.EmployeesModel.email;
             registerEmployee.txtSenha.Text = Model.EmployeesModel.password;
-            registerEmployee.chkAdministrador.Checked = Model.EmployeesModel.admin;
-            registerEmployee.chkFuncionário.Checked = Model.EmployeesModel.employeer;
+            registerEmployee.rdbGerente.Checked = Model.EmployeesModel.manager;
+            registerEmployee.rdbFuncionário.Checked = Model.EmployeesModel.employeer;
             registerEmployee.chkRH.Checked = Model.EmployeesModel.RH;
             registerEmployee.chkFinanceiro.Checked = Model.EmployeesModel.financial;
             registerEmployee.chkEstoque.Checked = Model.EmployeesModel.stock;
             registerEmployee.chkCRM.Checked = Model.EmployeesModel.CRM;
             registerEmployee.ShowDialog();
+            Hide();
         }
     }
 }

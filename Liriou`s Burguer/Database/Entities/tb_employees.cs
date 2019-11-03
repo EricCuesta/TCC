@@ -43,15 +43,13 @@ namespace Liriou_s_Burguer.Database.Entities
         public string pw_password { get; set; }
         public string dt_hiring { get; set; }
         public string dt_resignation { get; set; }
-        public Nullable<bool> bt_admin { get; set; }
-        public Nullable<bool> bt_funcionaro { get; set; }
+        public Nullable<bool> bt_manager { get; set; }
+        public Nullable<bool> bt_employee { get; set; }
         public Nullable<bool> bt_rh { get; set; }
         public Nullable<bool> bt_financial { get; set; }
         public Nullable<bool> bt_provider { get; set; }
         public Nullable<bool> bt_stock { get; set; }
         public Nullable<bool> bt_crm { get; set; }
-        public string dt_unavailability { get; set; }
-        public string ds_unavailability { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_department> tb_department { get; set; }

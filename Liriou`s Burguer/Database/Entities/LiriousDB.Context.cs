@@ -32,6 +32,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public virtual DbSet<tb_cpp> tb_cpp { get; set; }
         public virtual DbSet<tb_department> tb_department { get; set; }
         public virtual DbSet<tb_discounts> tb_discounts { get; set; }
+        public virtual DbSet<tb_employees> tb_employees { get; set; }
         public virtual DbSet<tb_enterprise> tb_enterprise { get; set; }
         public virtual DbSet<tb_financial> tb_financial { get; set; }
         public virtual DbSet<tb_function> tb_function { get; set; }
@@ -44,6 +45,5 @@ namespace Liriou_s_Burguer.Database.Entities
         public virtual DbSet<tb_timecard> tb_timecard { get; set; }
         public virtual DbSet<tb_cnae> tb_cnae { get; set; }
         public virtual DbSet<tb_crm> tb_crm { get; set; }
-        public virtual DbSet<tb_employees> tb_employees { get; set; }
     }
 }

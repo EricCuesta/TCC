@@ -23,7 +23,7 @@ namespace Liriou_s_Burguer.Screens.Manager
         public void LoadScreen(Database.Entities.tb_employees employees)
         {
             toolStripStatusUsuário.Text = employees.nm_firstName + " entrou  às " + DateTime.Now;
-            if (employees.bt_admin == false)
+            if (employees.bt_manager == false)
             {
                 if(employees.bt_rh == false)
                 {
@@ -71,12 +71,16 @@ namespace Liriou_s_Burguer.Screens.Manager
             panelSubMenuFornecedor.Visible = false;
             panelSubMenuEstoque.Visible = false;
             panelSubMenuCRM.Visible = false;
+            panelObrigatório.Visible = false;
         }
 
         private void HideSubMenu()
         {
             if (panelSubMenuRecursosHumanos.Visible == true)
+            {
                 panelSubMenuRecursosHumanos.Visible = false;
+                panelObrigatório.Visible = false;
+            }
             if (panelSubMenuFinanceiro.Visible == true)
                 panelSubMenuFinanceiro.Visible = false;
             if (panelSubMenuFornecedor.Visible == true)
