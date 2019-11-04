@@ -124,7 +124,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 mtxtTelefone.Text = employees.nr_tellphone;
                 txtEmail.Text = employees.ds_email;
                 txtSenha.Text = employees.pw_password;
-                rdbFuncionário.Checked = Convert.ToBoolean(employees.tb_function);
+                rdbFuncionário.Checked = Convert.ToBoolean(employees.bt_employee);
                 rdbGerente.Checked = Convert.ToBoolean(employees.bt_manager);
                 chkRH.Checked = Convert.ToBoolean(employees.bt_rh);
                 chkFinanceiro.Checked = Convert.ToBoolean(employees.bt_financial);

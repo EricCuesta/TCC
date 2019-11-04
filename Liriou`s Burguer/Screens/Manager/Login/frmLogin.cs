@@ -36,7 +36,9 @@ namespace Liriou_s_Burguer.Screens.Login
                 }
                 else if (verificacao == false)
                 {
-
+                    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
+                    tela.Show();
+                    Hide();
                 }
             }
             catch (Exception)

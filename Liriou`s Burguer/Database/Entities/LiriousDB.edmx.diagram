@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="643c95e7a9a94d3aa300dd0b4ae18cda" Name="Diagram1">
+      <Diagram DiagramId="d088a30cd770496d90d3f0ea98b54a55" Name="Diagram1">
         <EntityTypeShape EntityType="liriousdbModel.tb_account" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_bankaccount" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_benefits" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />

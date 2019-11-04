@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Claud\Source\Repos\liriou-s-burguer\Liriou`s Burguer\Database\Entities\LiriousDB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\vanep\Source\Repos\liriou-s-burguer2\Liriou`s Burguer\Database\Entities\LiriousDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

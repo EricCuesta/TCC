@@ -10,15 +10,16 @@ namespace Liriou_s_Burguer.Database
     {
         Entities.liriousdbEntities db = new Entities.liriousdbEntities();
 
-        public bool Login(Entities.tb_employees employees)
+        public bool Login(Entities.tb_employees emp)
         {
-            Entities.tb_employees login = db.tb_employees.FirstOrDefault(l => l.ds_email == employees.ds_email &&
-                                                                            l.pw_password == employees.pw_password);
-
-            if (employees.ds_email == "gerente@gmail.com" && employees.pw_password == "1234")
+            if (emp.ds_email == "gerente@gmail.com" && emp.pw_password == "1234")
+            {
                 return true;
+            }
             else
+            {
                 return false;
+            }
         }
 
         public Entities.tb_employees VerificarRecuperação(Entities.tb_employees employees)
@@ -153,9 +154,9 @@ namespace Liriou_s_Burguer.Database
 
         public void Remover(int id)
         {
-            Entities.tb_employees employees = db.tb_employees.First(t => t.id_emp == id);
+            Entities.tb_employees tb = db.tb_employees.FirstOrDefault(t => t.id_emp == id);
+            db.tb_employees.Remove(tb);
 
-            db.tb_employees.Remove(employees);
             db.SaveChanges();
         }
 

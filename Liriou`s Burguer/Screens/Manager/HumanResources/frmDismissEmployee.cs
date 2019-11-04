@@ -32,7 +32,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 mtxtCPF.Text = string.Empty;
                 nudDependentes.Value = 0;
                 cboSexo.Text = null;
-                dtpNascimento.Value = DateTime.Now;
+                dtpNascimento.Value = new DateTime(0000, 00, 00);
                 cboEstado.Text = null;
                 mtxtCEP.Text = string.Empty;
                 txtComplemento.Text = string.Empty;
