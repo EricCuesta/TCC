@@ -598,7 +598,6 @@
     <None Include="Resources\Visto01.png" />
     <None Include="Resources\Visto.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\Entities\LiriousDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

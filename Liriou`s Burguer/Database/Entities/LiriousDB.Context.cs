@@ -13,10 +13,10 @@ namespace Liriou_s_Burguer.Database.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class liriousdbEntities : DbContext
+    public partial class db_a4fc0b_liriousEntities : DbContext
     {
-        public liriousdbEntities()
-            : base("name=liriousdbEntities")
+        public db_a4fc0b_liriousEntities()
+            : base("name=db_a4fc0b_liriousEntities")
         {
         }
     
