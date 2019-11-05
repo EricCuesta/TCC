@@ -78,28 +78,8 @@ namespace Liriou_s_Burguer.Business
             Match match = regex.Match(employees.ds_email);
             if (match.Success == false)
                 throw new ArgumentException(employees.ds_email + " é um e-mail inválido!");
-
-            Model.EmployeesModel.firstName = employees.nm_firstName;
-            Model.EmployeesModel.lastName = employees.nm_lastName;
-            Model.EmployeesModel.RG = employees.nr_rg;
-            Model.EmployeesModel.CPF = employees.nr_cpf;
-            Model.EmployeesModel.dependents = employees.nr_dependents;
-            Model.EmployeesModel.sex = employees.ds_sex;
-            Model.EmployeesModel.birth = employees.dt_birth;
-            Model.EmployeesModel.state = employees.ds_state;
-            Model.EmployeesModel.CEP = employees.nr_cep;
-            Model.EmployeesModel.address = employees.ds_state;
-            Model.EmployeesModel.note = employees.ds_note;
-            Model.EmployeesModel.cellphone = employees.nr_cellphone;
-            Model.EmployeesModel.tellphone = employees.nr_tellphone;
-            Model.EmployeesModel.email = employees.ds_email;
-            Model.EmployeesModel.password = employees.pw_password;
-            Model.EmployeesModel.manager = Convert.ToBoolean(employees.bt_manager);
-            Model.EmployeesModel.employeer = Convert.ToBoolean(employees.bt_employee);
-            Model.EmployeesModel.RH = Convert.ToBoolean(employees.bt_rh);
-            Model.EmployeesModel.financial = Convert.ToBoolean(employees.bt_financial);
-            Model.EmployeesModel.stock = Convert.ToBoolean(employees.bt_financial);
-            Model.EmployeesModel.CRM = Convert.ToBoolean(employees.bt_crm);
+            if (employees.bt_employee == false && employees.bt_manager == false)
+                throw new ArgumentException("Escolha Funcionario ou Gerente!");
         }
 
         public void Inserir1(Database.Entities.tb_employees employees)

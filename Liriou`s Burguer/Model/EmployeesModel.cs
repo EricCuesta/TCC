@@ -30,5 +30,6 @@ namespace Liriou_s_Burguer.Model
         public static bool financial { get; set; }
         public static bool stock { get; set; }
         public static bool CRM { get; set; }
+        public static bool Provider { get; set; }
     }
 }

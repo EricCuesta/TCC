@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Liriou_s_Burguer.Model;
 
 namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 {
@@ -32,35 +33,39 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-                employees.nm_firstName = txtNome.Text.Trim();
-                employees.nm_lastName = txtSobrenome.Text.Trim();
-                employees.nr_rg = mtxtRG.Text.Trim();
-                employees.nr_cpf = mtxtCPF.Text.Trim();
-                employees.nr_dependents = Convert.ToInt32(nudDependentes.Value);
-                employees.ds_sex = cboSexo.Text;
-                employees.dt_birth = dtpNascimento.Value.ToLongDateString();
-                employees.ds_state = cboEstado.Text;
-                employees.nr_cep = mtxtCEP.Text.Trim();
-                employees.ds_note = txtComplemento.Text.Trim();
-                employees.ds_address = txtEndereço.Text.Trim();
-                employees.nr_cellphone = mtxtCelular.Text.Trim();
-                employees.nr_tellphone = mtxtTelefone.Text.Trim();
-                employees.ds_email = txtEmail.Text.Trim();
-                employees.pw_password = txtSenha.Text.Trim();
-                employees.bt_manager = rdbGerente.Checked;
-                employees.bt_employee = rdbFuncionário.Checked;
-                employees.bt_rh = chkRH.Checked;
-                employees.bt_financial = chkFinanceiro.Checked;
-                employees.bt_stock = chkEstoque.Checked;
-                employees.bt_crm = chkCRM.Checked;
+                this.InserirModel();
+
+                Database.Entities.tb_employees employees = new Database.Entities.tb_employees
+                {
+                    nm_firstName = txtNome.Text.Trim(),
+                    nm_lastName = txtSobrenome.Text.Trim(),
+                    nr_rg = mtxtRG.Text.Trim(),
+                    nr_cpf = mtxtCPF.Text.Trim(),
+                    nr_dependents = Convert.ToInt32(nudDependentes.Value),
+                    ds_sex = cboSexo.Text,
+                    dt_birth = dtpNascimento.Value.ToLongDateString(),
+                    ds_state = cboEstado.Text,
+                    nr_cep = mtxtCEP.Text.Trim(),
+                    ds_note = txtComplemento.Text.Trim(),
+                    ds_address = txtEndereço.Text.Trim(),
+                    nr_cellphone = mtxtCelular.Text.Trim(),
+                    nr_tellphone = mtxtTelefone.Text.Trim(),
+                    ds_email = txtEmail.Text.Trim(),
+                    pw_password = txtSenha.Text.Trim(),
+                    bt_manager = rdbGerente.Checked,
+                    bt_employee = rdbFuncionário.Checked,
+                    bt_rh = chkRH.Checked,
+                    bt_financial = chkFinanceiro.Checked,
+                    bt_stock = chkEstoque.Checked,
+                    bt_crm = chkCRM.Checked
+                };
 
                 Business.EmployeesBusiness db = new Business.EmployeesBusiness();
                 db.Inserir(employees);
 
-                frmRegisterEmployee1 registerEmployee1 = new frmRegisterEmployee1();
-                registerEmployee1.ShowDialog();
-                Hide();
+                frmRegisterEmployee1 tela = new frmRegisterEmployee1();
+                this.Hide();
+                tela.Show();
             }
             catch (ArgumentException ex)
             {
@@ -70,6 +75,32 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void InserirModel()
+        {
+            EmployeesModel.firstName = txtNome.Text;
+            EmployeesModel.lastName = txtSenha.Text;
+            EmployeesModel.RG = mtxtRG.Text;
+            EmployeesModel.CPF = mtxtCPF.Text;
+            EmployeesModel.dependents = Convert.ToInt32(nudDependentes.Value);
+            EmployeesModel.sex = cboSexo.Text;
+            EmployeesModel.birth = dtpNascimento.Value.ToString();
+            EmployeesModel.state = cboEstado.Text;
+            EmployeesModel.CEP = mtxtCEP.Text;
+            EmployeesModel.address = txtEndereço.Text;
+            EmployeesModel.note = txtComplemento.Text;
+            EmployeesModel.cellphone = mtxtCelular.Text;
+            EmployeesModel.tellphone = mtxtTelefone.Text;
+            EmployeesModel.email = txtEmail.Text;
+            EmployeesModel.password = txtSenha.Text;
+            EmployeesModel.employeer = rdbFuncionário.Checked;
+            EmployeesModel.manager = rdbGerente.Checked;
+            EmployeesModel.CRM = chkCRM.Checked;
+            EmployeesModel.Provider = chkFornecedor.Checked;
+            EmployeesModel.stock = chkEstoque.Checked;
+            EmployeesModel.RH = chkRH.Checked;
+            EmployeesModel.financial = chkFinanceiro.Checked;
         }
     }
 }

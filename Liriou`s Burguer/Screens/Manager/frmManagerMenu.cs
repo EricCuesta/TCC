@@ -131,7 +131,7 @@ namespace Liriou_s_Burguer.Screens.Manager
         }
 
         private Form activeForm = null;
-        private void openContedor(Form Contedor)
+        public void openContedor(Form Contedor)
         {
             if (activeForm != null)
                 activeForm.Close();

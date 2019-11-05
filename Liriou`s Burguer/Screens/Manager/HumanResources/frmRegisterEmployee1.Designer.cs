@@ -585,6 +585,11 @@
             this.cboDepartamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDepartamento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboDepartamento.FormattingEnabled = true;
+            this.cboDepartamento.Items.AddRange(new object[] {
+            "T.I",
+            "ADM",
+            "R.H",
+            "Limpeza"});
             this.cboDepartamento.Location = new System.Drawing.Point(367, 30);
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(154, 23);
@@ -605,6 +610,10 @@
             this.cboCargo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCargo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCargo.FormattingEnabled = true;
+            this.cboCargo.Items.AddRange(new object[] {
+            "Desenvolvedor",
+            "Faxineiro",
+            "hahahhaha"});
             this.cboCargo.Location = new System.Drawing.Point(544, 30);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(154, 23);

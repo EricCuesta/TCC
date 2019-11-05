@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="db_a4fc0b_liriousModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_account">
           <Key>
             <PropertyRef Name="id_account" />
@@ -420,7 +420,7 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_a4fc0b_liriousModelStoreContainer">
+        <EntityContainer Name="liriousdbModelStoreContainer">
           <EntitySet Name="tb_account" EntityType="Self.tb_account" Schema="db_a4fc0b_lirious" store:Type="Tables" />
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" Schema="db_a4fc0b_lirious" store:Type="Tables" />
           <EntitySet Name="tb_benefits" EntityType="Self.tb_benefits" Schema="db_a4fc0b_lirious" store:Type="Tables" />
@@ -511,7 +511,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="db_a4fc0b_liriousModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="liriousdbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="tb_account">
           <Key>
             <PropertyRef Name="id_account" />
@@ -946,7 +946,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="db_a4fc0b_liriousEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="liriousdbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_account" EntityType="Self.tb_account" />
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" />
           <EntitySet Name="tb_benefits" EntityType="Self.tb_benefits" />
@@ -1025,9 +1025,9 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="db_a4fc0b_liriousModelStoreContainer" CdmEntityContainer="db_a4fc0b_liriousEntities">
+        <EntityContainerMapping StorageEntityContainer="liriousdbModelStoreContainer" CdmEntityContainer="liriousdbEntities">
           <EntitySetMapping Name="tb_account">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_account">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_account">
               <MappingFragment StoreEntitySet="tb_account">
                 <ScalarProperty Name="id_account" ColumnName="id_account" />
                 <ScalarProperty Name="nm_account" ColumnName="nm_account" />
@@ -1039,7 +1039,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_bankaccount">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_bankaccount">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_bankaccount">
               <MappingFragment StoreEntitySet="tb_bankaccount">
                 <ScalarProperty Name="id_bankAccount" ColumnName="id_bankAccount" />
                 <ScalarProperty Name="nm_bank" ColumnName="nm_bank" />
@@ -1050,7 +1050,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_benefits">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_benefits">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_benefits">
               <MappingFragment StoreEntitySet="tb_benefits">
                 <ScalarProperty Name="id_benefits" ColumnName="id_benefits" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
@@ -1064,7 +1064,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_client">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_client">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_client">
               <MappingFragment StoreEntitySet="tb_client">
                 <ScalarProperty Name="id_client" ColumnName="id_client" />
                 <ScalarProperty Name="nm_firstName" ColumnName="nm_firstName" />
@@ -1084,7 +1084,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_cpp">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_cpp">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_cpp">
               <MappingFragment StoreEntitySet="tb_cpp">
                 <ScalarProperty Name="id_cpp" ColumnName="id_cpp" />
                 <ScalarProperty Name="id_enterprise" ColumnName="id_enterprise" />
@@ -1094,7 +1094,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_department">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_department">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_department">
               <MappingFragment StoreEntitySet="tb_department">
                 <ScalarProperty Name="id_department" ColumnName="id_department" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
@@ -1103,7 +1103,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_discounts">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_discounts">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_discounts">
               <MappingFragment StoreEntitySet="tb_discounts">
                 <ScalarProperty Name="id_discounts" ColumnName="id_discounts" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
@@ -1116,7 +1116,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_employees">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_employees">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_employees">
               <MappingFragment StoreEntitySet="tb_employees">
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
                 <ScalarProperty Name="nm_firstName" ColumnName="nm_firstName" />
@@ -1147,7 +1147,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_enterprise">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_enterprise">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_enterprise">
               <MappingFragment StoreEntitySet="tb_enterprise">
                 <ScalarProperty Name="id_enterprise" ColumnName="id_enterprise" />
                 <ScalarProperty Name="nm_enterprise" ColumnName="nm_enterprise" />
@@ -1166,7 +1166,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_financial">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_financial">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_financial">
               <MappingFragment StoreEntitySet="tb_financial">
                 <ScalarProperty Name="id_salary" ColumnName="id_salary" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
@@ -1179,7 +1179,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_function">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_function">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_function">
               <MappingFragment StoreEntitySet="tb_function">
                 <ScalarProperty Name="id_function" ColumnName="id_function" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
@@ -1188,7 +1188,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_iten">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_iten">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_iten">
               <MappingFragment StoreEntitySet="tb_iten">
                 <ScalarProperty Name="id_iten" ColumnName="id_iten" />
                 <ScalarProperty Name="id_sale" ColumnName="id_sale" />
@@ -1199,7 +1199,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_points">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_points">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_points">
               <MappingFragment StoreEntitySet="tb_points">
                 <ScalarProperty Name="id_point" ColumnName="id_point" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
@@ -1213,7 +1213,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_product">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_product">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_product">
               <MappingFragment StoreEntitySet="tb_product">
                 <ScalarProperty Name="id_product" ColumnName="id_product" />
                 <ScalarProperty Name="ds_placeStock" ColumnName="ds_placeStock" />
@@ -1226,7 +1226,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_provider">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_provider">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_provider">
               <MappingFragment StoreEntitySet="tb_provider">
                 <ScalarProperty Name="id_provider" ColumnName="id_provider" />
                 <ScalarProperty Name="nm_provider" ColumnName="nm_provider" />
@@ -1244,7 +1244,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_sale">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_sale">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_sale">
               <MappingFragment StoreEntitySet="tb_sale">
                 <ScalarProperty Name="id_sale" ColumnName="id_sale" />
                 <ScalarProperty Name="id_client" ColumnName="id_client" />
@@ -1254,7 +1254,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_supply">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_supply">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_supply">
               <MappingFragment StoreEntitySet="tb_supply">
                 <ScalarProperty Name="id_supply" ColumnName="id_supply" />
                 <ScalarProperty Name="ds_placeStock" ColumnName="ds_placeStock" />
@@ -1266,7 +1266,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_timecard">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_timecard">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_timecard">
               <MappingFragment StoreEntitySet="tb_timecard">
                 <ScalarProperty Name="id_timecard" ColumnName="id_timecard" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
@@ -1278,7 +1278,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_cnae">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_cnae">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_cnae">
               <MappingFragment StoreEntitySet="tb_cnae">
                 <ScalarProperty Name="id_enterprise" ColumnName="id_enterprise" />
                 <ScalarProperty Name="dt_tableYear" ColumnName="dt_tableYear" />
@@ -1288,7 +1288,7 @@ FROM `tb_crm` AS `tb_crm`</DefiningQuery>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tb_crm">
-            <EntityTypeMapping TypeName="db_a4fc0b_liriousModel.tb_crm">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_crm">
               <MappingFragment StoreEntitySet="tb_crm">
                 <ScalarProperty Name="id_client" ColumnName="id_client" />
                 <ScalarProperty Name="ds_mood" ColumnName="ds_mood" />

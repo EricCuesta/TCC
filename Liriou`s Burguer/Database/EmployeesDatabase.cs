@@ -34,7 +34,7 @@ namespace Liriou_s_Burguer.Database
         {
             if (employees.nr_cpf != string.Empty)
             {
-                Entities.tb_employees novo = db.tb_employees.First(u => u.nr_cpf == employees.nr_cpf);
+                Entities.tb_employees novo = db.tb_employees.First(u => u.pw_password == employees.pw_password);
                 novo.pw_password = employees.pw_password;
                 db.SaveChanges();
             }

@@ -8,6 +8,8 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Liriou_s_Burguer.Database.Entities;
+using Liriou_s_Burguer.Business;
 
 namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 {
@@ -35,26 +37,26 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Database.Entities.tb_employees tbemployees = new Database.Entities.tb_employees();
-                Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
+                tb_employees tbemployees = new tb_employees();
+                EmployeesBusiness busemployee = new EmployeesBusiness();
 
-                Database.Entities.tb_discounts tbdiscounts = new Database.Entities.tb_discounts();
-                Business.DiscountsBusiness busdiscounts = new Business.DiscountsBusiness();
+                tb_discounts tbdiscounts = new tb_discounts();
+                DiscountsBusiness busdiscounts = new DiscountsBusiness();
 
-                Database.Entities.tb_function tbfunction = new Database.Entities.tb_function();
-                Business.FunctionBusiness busfunction = new Business.FunctionBusiness();
+                tb_function tbfunction = new tb_function();
+                FunctionBusiness busfunction = new FunctionBusiness();
 
-                Database.Entities.tb_timecard tbtimecard = new Database.Entities.tb_timecard();
-                Business.TimeCardBusiness bustimecard = new Business.TimeCardBusiness();
+                tb_timecard tbtimecard = new tb_timecard();
+                TimeCardBusiness bustimecard = new TimeCardBusiness();
 
-                Database.Entities.tb_financial financial = new Database.Entities.tb_financial();
-                Business.FinancialBusiness busfinancial = new Business.FinancialBusiness();
+                tb_financial financial = new tb_financial();
+                FinancialBusiness busfinancial = new FinancialBusiness();
 
-                Database.Entities.tb_benefits tbbenefits = new Database.Entities.tb_benefits();
-                Business.BenefitsBusiness busbenefits = new Business.BenefitsBusiness();
+                tb_benefits tbbenefits = new tb_benefits();
+                BenefitsBusiness busbenefits = new BenefitsBusiness();
 
-                Database.Entities.tb_department tbdepartment = new Database.Entities.tb_department();
-                Business.DepartmentBusiness busdepartment = new Business.DepartmentBusiness();
+                tb_department tbdepartment = new tb_department();
+                DepartmentBusiness busdepartment = new DepartmentBusiness();
 
                 tbemployees.dt_hiring = dtpContratação.Value.ToLongDateString();
                 tbemployees.dt_resignation = dtpDemissão.Value.ToLongDateString();
@@ -68,7 +70,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 tbbenefits.bt_planHealth = Convert.ToBoolean(chkPlanoDeSáude.Checked);
                 tbbenefits.bt_planDental = Convert.ToBoolean(chkPlanoDental.Checked);
 
-                busemployees.Inserir(tbemployees);
+                busemployee.Inserir1(tbemployees);
                 busdiscounts.Inserir(tbdiscounts);
                 busfunction.Inserir(tbfunction);
                 bustimecard.Inserir(tbtimecard);
@@ -83,15 +85,13 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 Model.EmployeesModel.RG = string.Empty;
                 Model.EmployeesModel.CPF = string.Empty;
                 Model.EmployeesModel.dependents = 0;
-                Model.EmployeesModel.sex = null;
                 Model.EmployeesModel.birth = Convert.ToString(DateTime.Now);
-                Model.EmployeesModel.state = null;
                 Model.EmployeesModel.CEP = string.Empty;
                 Model.EmployeesModel.note = string.Empty;
                 Model.EmployeesModel.address = string.Empty;
+                Model.EmployeesModel.email = string.Empty;
                 Model.EmployeesModel.cellphone = string.Empty;
                 Model.EmployeesModel.tellphone = string.Empty;
-                Model.EmployeesModel.email = string.Empty;
                 Model.EmployeesModel.password = string.Empty;
                 Model.EmployeesModel.manager = Convert.ToBoolean(string.Empty);
                 Model.EmployeesModel.employeer = Convert.ToBoolean(string.Empty);
@@ -102,11 +102,11 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message, "atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("ocorreu um erro!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -131,11 +131,12 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             registerEmployee.rdbGerente.Checked = Model.EmployeesModel.manager;
             registerEmployee.rdbFuncionário.Checked = Model.EmployeesModel.employeer;
             registerEmployee.chkRH.Checked = Model.EmployeesModel.RH;
+            registerEmployee.chkFornecedor.Checked = Model.EmployeesModel.Provider;
             registerEmployee.chkFinanceiro.Checked = Model.EmployeesModel.financial;
             registerEmployee.chkEstoque.Checked = Model.EmployeesModel.stock;
             registerEmployee.chkCRM.Checked = Model.EmployeesModel.CRM;
             registerEmployee.ShowDialog();
-            Hide();
+            this.Hide();
         }
     }
 }

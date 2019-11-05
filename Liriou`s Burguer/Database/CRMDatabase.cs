@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Liriou_s_Burguer.Database;
 
 namespace Liriou_s_Burguer.Database
 {
