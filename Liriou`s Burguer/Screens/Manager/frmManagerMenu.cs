@@ -13,43 +13,63 @@ namespace Liriou_s_Burguer.Screens.Manager
 {
     public partial class frmManagerMenu : Form
     {
+        Database.Entities.tb_employees emp;
+
         public frmManagerMenu()
         {
             InitializeComponent();
             panelContedor.Visible = false;
             CustomizeDesign();
+
+            string email = Model.LoginModel.Email;
+            string senha = Model.LoginModel.Senha;
+
+            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
+            emp = DB.UsuárioLogado(email, senha);
+            LoadScreen(emp);
         }
 
-        public void LoadScreen(Database.Entities.tb_employees employees)
+        public void LoadScreen(Database.Entities.tb_employees emp)
         {
-            toolStripStatusUsuário.Text = employees.nm_firstName + " entrou  às " + DateTime.Now;
-            if (employees.bt_manager == false)
+            btnRecursosHumanos.Visible = true;
+
+            if (emp.bt_provider == false)
             {
-                if(employees.bt_rh == false)
-                {
-                    btnRecursosHumanos.Visible = false;
-                }
-
-                if (employees.bt_provider == false)
-                {
-                    btnFornecedor.Visible = false;
-                }
-
-                if (employees.bt_financial == false)
-                {
-                    btnFinanceiro.Visible = false;
-                }
-
-                if(employees.bt_stock == false)
-                {
-                    btnEstoque.Visible = false;
-                }
-
-                if(employees.bt_crm == false)
-                {
-                    btnCRM.Visible = false;
-                }
+                btnFornecedor.Visible = false;
             }
+            if (emp.bt_financial == false)
+            {
+                btnFinanceiro.Visible = false;
+            }
+            if (emp.bt_stock == false)
+            {
+                btnEstoque.Visible = false;
+            }
+            if (emp.bt_crm == false)
+            {
+                btnCRM.Visible = false;
+            }
+
+            string usuário = "Usuário: ";
+            if (emp.bt_manager == true && emp.bt_employee == false)
+            {
+                usuário = "Gerente: ";
+            }
+            else if (emp.bt_manager == false && emp.bt_employee == true)
+            {
+                usuário = "Funcionário: ";
+            }
+            else
+            {
+                btnCartãoDePonto.Visible = false;
+                btnRecursosHumanos.Visible = false;
+                btnFornecedor.Visible = false;
+                btnFinanceiro.Visible = false;
+                btnEstoque.Visible = false;
+                btnCRM.Visible = false;
+            }
+
+            lblUsuário.Text = usuário + emp.nm_firstName + " " + emp.nm_lastName + " / Entrou ás: " + DateTime.Now.ToString();
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -71,7 +91,6 @@ namespace Liriou_s_Burguer.Screens.Manager
             panelSubMenuFornecedor.Visible = false;
             panelSubMenuEstoque.Visible = false;
             panelSubMenuCRM.Visible = false;
-            panelObrigatório.Visible = false;
         }
 
         private void HideSubMenu()
@@ -79,16 +98,23 @@ namespace Liriou_s_Burguer.Screens.Manager
             if (panelSubMenuRecursosHumanos.Visible == true)
             {
                 panelSubMenuRecursosHumanos.Visible = false;
-                panelObrigatório.Visible = false;
             }
             if (panelSubMenuFinanceiro.Visible == true)
+            {
                 panelSubMenuFinanceiro.Visible = false;
+            }
             if (panelSubMenuFornecedor.Visible == true)
+            {
                 panelSubMenuFornecedor.Visible = false;
+            }
             if (panelSubMenuEstoque.Visible == true)
+            {
                 panelSubMenuEstoque.Visible = false;
+            }
             if (panelSubMenuCRM.Visible == true)
+            {
                 panelSubMenuCRM.Visible = false;
+            }
         }
 
         private void ShowSubMenu(Panel SubMenu)
@@ -107,7 +133,20 @@ namespace Liriou_s_Burguer.Screens.Manager
 
         private void btnRecursosHumanos_Click(object sender, EventArgs e)
         {
-            ShowSubMenu(panelSubMenuRecursosHumanos);
+            if (emp.bt_manager == true && emp.bt_employee == false)
+            {
+                ShowSubMenu(panelSubMenuRecursosHumanos);
+            }
+            else
+            {
+                btnCadastrarFuncionário.Enabled = false;
+                btnConsultarFuncionário.Enabled = false;
+                btnAlterarFuncionário.Enabled = false;
+                btnDemitirFuncionário.Enabled = false;
+                btnFolhaDePagamento.Enabled = false;
+
+                ShowSubMenu(panelSubMenuRecursosHumanos);
+            }
         }
 
         private void btnFinanceiro_Click(object sender, EventArgs e)
@@ -351,6 +390,23 @@ namespace Liriou_s_Burguer.Screens.Manager
         private void imgLogotipo_Click(object sender, EventArgs e)
         {
             panelContedor.Visible = false;
+        }
+
+        private void btnCartãoDePonto_Click_1(object sender, EventArgs e)
+        {
+            openContedor(new Employee.frmEmployeeTimeCard());
+            HideSubMenu();
+        }
+
+        private void Hrs_Tick(object sender, EventArgs e)
+        {
+            lblhrs.Text = "Hrs: " + DateTime.Now.ToString("HH:mm:ss");
+        }
+
+        private void btnCartãoDePonto1_Click(object sender, EventArgs e)
+        {
+            openContedor(new Employee.frmEmployeeTimeCard());
+            HideSubMenu();
         }
     }
 }

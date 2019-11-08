@@ -8,20 +8,20 @@ namespace Liriou_s_Burguer.Business
     {
         Database.EmployeesDatabase db = new Database.EmployeesDatabase();
 
-        public bool Login(Database.Entities.tb_employees employees)
+        public bool Login(Database.Entities.tb_employees emp)
         {
-            if (employees.ds_email == string.Empty || employees.ds_email == "Email do usuário")
+            if (emp.ds_email == string.Empty || emp.ds_email == "Email do usuário")
+            {
                 throw new ArgumentException("O campo email deve ser preenchido");
-
-            if (employees.pw_password == string.Empty || employees.pw_password == "Senha do usuário")
+            }
+            else if (emp.pw_password == string.Empty || emp.pw_password == "Senha do usuário")
+            {
                 throw new ArgumentException("O campo senha deve ser preenchido");
-
-            bool verificacao = db.Login(employees);
-
-            if (verificacao == true)
-                return true;
+            }
             else
-                return false;
+            {
+                return db.Login(emp);
+            }
         }
 
         public void VerificarRecuperação(Database.Entities.tb_employees employees)

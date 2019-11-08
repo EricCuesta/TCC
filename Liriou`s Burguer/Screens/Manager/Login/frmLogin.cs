@@ -21,12 +21,12 @@ namespace Liriou_s_Burguer.Screens.Login
         {
             try
             {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-                employees.ds_email = txtEmail.Text.Trim();
-                employees.pw_password = txtSenha.Text.Trim();
+                Database.Entities.tb_employees emp = new Database.Entities.tb_employees();
+                emp.ds_email = Model.LoginModel.Email = txtEmail.Text.Trim();
+                emp.pw_password = Model.LoginModel.Senha = txtSenha.Text.Trim();
 
                 Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
-                bool verificacao = busemp.Login(employees);
+                bool verificacao = busemp.Login(emp);
 
                 if (verificacao == true)
                 {
@@ -34,11 +34,9 @@ namespace Liriou_s_Burguer.Screens.Login
                     tela.Show();
                     Hide();
                 }
-                else if (verificacao == false)
+                else
                 {
-                    Manager.frmManagerMenu tela = new Manager.frmManagerMenu();
-                    tela.Show();
-                    Hide();
+                    MessageBox.Show("Usuário Inexistente!");
                 }
             }
             catch (Exception)

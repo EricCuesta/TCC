@@ -12,7 +12,10 @@ namespace Liriou_s_Burguer.Database
 
         public bool Login(Entities.tb_employees emp)
         {
-            if (emp.ds_email == "gerente@gmail.com" && emp.pw_password == "1234")
+            Entities.tb_employees tb = db.tb_employees.FirstOrDefault(t => t.ds_email == emp.ds_email &&
+                                                                      t.pw_password == emp.pw_password);
+
+            if (tb != null)
             {
                 return true;
             }
@@ -20,6 +23,12 @@ namespace Liriou_s_Burguer.Database
             {
                 return false;
             }
+        }
+
+        public Entities.tb_employees UsuárioLogado(string email, string senha)
+        {
+            return db.tb_employees.FirstOrDefault(t => t.ds_email == email && t.pw_password == senha);
+
         }
 
         public Entities.tb_employees VerificarRecuperação(Entities.tb_employees employees)
