@@ -15,41 +15,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
         public frmDeleteSupplier()
         {
             InitializeComponent();
-            CustomizeDesign();
-        }
-
-        private void CustomizeDesign()
-        {
-            lblCPF.Visible = false;
-            mtxtCPF.Visible = false;
-            lblCNPJ.Visible = false;
-            mtxtCNPJ.Visible = false;
-        }
-
-        private void Limpar()
-        {
-            mtxtCPF.Clear();
-            mtxtCNPJ.Clear();
-        }
-
-        private void cboTipoDePessoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboTipoDePessoa.Text == "Física")
-            {
-                lblCNPJ.Visible = false;
-                mtxtCNPJ.Visible = false;
-                lblCPF.Visible = true;
-                mtxtCPF.Visible = true;
-                Limpar();
-            }
-            if (cboTipoDePessoa.Text == "Jurídica")
-            {
-                lblCPF.Visible = false;
-                mtxtCPF.Visible = false;
-                lblCNPJ.Visible = true;
-                mtxtCNPJ.Visible = true;
-                Limpar();
-            }
         }
 
         private void nudId_ValueChanged(object sender, EventArgs e)
@@ -64,7 +29,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 txtNome.Text = string.Empty;
                 txtNomeFantásia.Text = string.Empty;
                 cboTipoDePessoa.Text = null;
-                CustomizeDesign();
+                HideControls();
                 Limpar();
                 cboEstado.Text = null;
                 txtEndereço.Text = string.Empty;
@@ -81,10 +46,17 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 cboTipoDePessoa.Text = provider.ds_typePerson;
                 if (cboTipoDePessoa.Text == "Física")
                 {
+                    HideControls();
+                    Limpar();
+                    lblCPF.Visible = true;
+                    mtxtCPF.Visible = true;
                     mtxtCPF.Text = provider.nr_identification;
                 }
                 if (cboTipoDePessoa.Text == "Jurídica")
                 {
+                    HideControls();
+                    lblCNPJ.Visible = true;
+                    mtxtCNPJ.Visible = true;
                     mtxtCPF.Text = provider.nr_identification;
                 }
                 cboEstado.Text = provider.ds_state;
@@ -101,10 +73,24 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
         {
             int id = Convert.ToInt32(nudId.Value);
 
-            Business.ClientBusiness busclient = new Business.ClientBusiness();
+            Business.ProviderBusiness busclient = new Business.ProviderBusiness();
             busclient.Remover(id);
 
             MessageBox.Show("Fornecedor deletado com sucesso");
+        }
+
+        private void HideControls()
+        {
+            lblCPF.Visible = false;
+            mtxtCPF.Visible = false;
+            lblCNPJ.Visible = false;
+            mtxtCNPJ.Visible = false;
+        }
+
+        private void Limpar()
+        {
+            mtxtCPF.Clear();
+            mtxtCNPJ.Clear();
         }
     }
 }

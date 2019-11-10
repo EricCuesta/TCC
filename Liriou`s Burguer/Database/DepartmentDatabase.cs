@@ -42,7 +42,7 @@ namespace Liriou_s_Burguer.Database
         {
             Entities.tb_department list = db.tb_department.First(t => t.id_department == department.id_department);
             list.nm_department = department.nm_department;
-            
+
             db.SaveChanges();
         }
 

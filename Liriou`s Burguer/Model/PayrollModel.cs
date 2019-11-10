@@ -9,7 +9,6 @@ namespace Liriou_s_Burguer.Model
     static class PayrollModel
     {
         public static string data { get; set; }
-
         public static string RG { get; set; }
     }
 }

@@ -33,10 +33,12 @@ namespace Liriou_s_Burguer.Business
         {
             List<Database.Entities.tb_account> list = new List<Database.Entities.tb_account>();
 
-            if (account.nm_account != string.Empty && account.nr_identification == string.Empty)
+            if (account.nm_account != null && account.nr_identification == "-")
                 list = db.ConsultarPorNome(account);
-            else if (account.nm_account == string.Empty && account.nr_identification != string.Empty)
+            else if (account.nm_account == null || account.nm_account == string.Empty && account.nr_identification != "-")
                 list = db.ConsultarPorIdentificação(account);
+            else if (account.nm_account != null && account.nr_identification != "-")
+                list = db.ConsultarPorNomeIdentificação(account);
 
             return list;
         }

@@ -29,7 +29,7 @@ namespace Liriou_s_Burguer.Database
             Entities.tb_cpp list = db.tb_cpp.First(t => t.id_cpp == cpp.id_cpp);
             list.vl_cpp = list.vl_cpp;
             list.vl_fgts = list.vl_fgts;
-            
+
             db.SaveChanges();
         }
 

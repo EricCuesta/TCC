@@ -63,6 +63,13 @@ namespace Liriou_s_Burguer.Database
             return list;
         }
 
+        public List<Entities.tb_client> ConsultarPorNomeRGSexo(Entities.tb_client client)
+        {
+            List<Entities.tb_client> list = db.tb_client.Where(l => l.nm_firstName == client.nm_firstName && l.nr_rg == client.nr_rg && l.ds_sex == client.ds_sex).ToList();
+
+            return list;
+        }
+
         public List<Entities.tb_client> ConsultarTodos()
         {
             List<Entities.tb_client> list = db.tb_client.ToList();

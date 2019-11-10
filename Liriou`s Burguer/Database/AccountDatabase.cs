@@ -38,6 +38,13 @@ namespace Liriou_s_Burguer.Database
             return list;
         }
 
+        public List<Entities.tb_account> ConsultarPorNomeIdentificação(Entities.tb_account account)
+        {
+            List<Entities.tb_account> list = db.tb_account.Where(l => l.nm_account == account.nm_account && l.nr_identification == account.nr_identification).ToList();
+
+            return list;
+        }
+
         public List<Entities.tb_account> ConsultarTodos()
         {
             List<Entities.tb_account> list = db.tb_account.ToList();

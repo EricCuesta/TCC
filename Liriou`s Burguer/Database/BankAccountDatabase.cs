@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Liriou_s_Burguer.Database
 {
-    class BenefitsDatabase
+    class BankAccountDatabase
     {
         Entities.liriousdbEntities db = new Entities.liriousdbEntities();
 

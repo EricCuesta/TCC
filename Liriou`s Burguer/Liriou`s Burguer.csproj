@@ -69,6 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\AccountBusiness.cs" />
+    <Compile Include="Business\BankAccountBusiness.cs" />
     <Compile Include="Business\BenefitsBusiness.cs" />
     <Compile Include="Business\ClientBusiness.cs" />
     <Compile Include="Business\CNAEBusiness.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Business\TimeCardBusiness.cs" />
     <Compile Include="CorreioApi\CorreioApi.cs" />
     <Compile Include="Database\AccountDatabase.cs" />
+    <Compile Include="Database\BankAccountDatabase.cs" />
     <Compile Include="Database\BenefitsDatabase.cs" />
     <Compile Include="Database\ClientDatabase.cs" />
     <Compile Include="Database\CNAEDatabase.cs" />
@@ -270,11 +272,11 @@
     <Compile Include="Screens\Manager\Provider\frmRegisterSupplier.Designer.cs">
       <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\frmManagerMenu.cs">
+    <Compile Include="Screens\Manager\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\frmManagerMenu.Designer.cs">
-      <DependentUpon>frmManagerMenu.cs</DependentUpon>
+    <Compile Include="Screens\Manager\frmMenu.Designer.cs">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\Login\frmRecovery.cs">
       <SubType>Form</SubType>
@@ -442,8 +444,8 @@
     <EmbeddedResource Include="Screens\Manager\Provider\frmRegisterSupplier.resx">
       <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\frmManagerMenu.resx">
-      <DependentUpon>frmManagerMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\Manager\frmMenu.resx">
+      <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

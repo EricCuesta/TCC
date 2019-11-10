@@ -50,11 +50,12 @@ namespace Liriou_s_Burguer.Business
         {
             List<Database.Entities.tb_provider> list = new List<Database.Entities.tb_provider>();
 
-            if (provider.nm_provider != string.Empty && provider.ds_typePerson == string.Empty)
+            if (provider.nm_provider != string.Empty && provider.ds_typePerson == "-")
                 list = db.ConsultarPorNome(provider);
-            else if (provider.nm_provider == string.Empty && provider.ds_typePerson != string.Empty)
+            else if (provider.nm_provider == string.Empty || provider.nm_provider == null && provider.ds_typePerson != "-")
                 list = db.ConsultarPorTipoDePessoa(provider);
-
+            else if (provider.nm_provider != string.Empty && provider.ds_typePerson != "-")
+                list = db.ConsultarPorTipoDePessoa(provider);
 
             return list;
         }
@@ -93,9 +94,9 @@ namespace Liriou_s_Burguer.Business
             db.Alterar(provider);
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
-            db.Deletar(id);
+            db.Remover(id);
         }
     }
 }

@@ -82,7 +82,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 client.nr_rg = mtxtRG.Text.Trim();
                 client.nr_cpf = mtxtCPF.Text.Trim();
                 client.ds_sex = cboSexo.Text;
-                client.dt_birth = dtpNascimento.Value.ToLongDateString();
+                client.dt_birth = dtpNascimento.Value.ToShortDateString();
                 client.ds_state = cboEstado.Text;
                 client.nr_cep = mtxtCEP.Text.Trim();
                 client.ds_address = txtEndereço.Text.Trim();

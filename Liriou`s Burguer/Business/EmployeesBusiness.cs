@@ -53,7 +53,7 @@ namespace Liriou_s_Burguer.Business
             if (employees.nr_rg == string.Empty)
                 throw new ArgumentException("O campo RG deve ser preenchido");
             if (employees.nr_cpf == string.Empty)
-                throw new ArgumentException("O campo CPF deve ser preenchido");       
+                throw new ArgumentException("O campo CPF deve ser preenchido");
             if (employees.ds_sex == string.Empty)
                 throw new ArgumentException("O campo sexo deve ser preenchido");
             if (employees.ds_sex == "Masculino")
@@ -68,7 +68,7 @@ namespace Liriou_s_Burguer.Business
                 throw new ArgumentException("O campo endereço deve ser preenchido");
             if (employees.ds_note == string.Empty)
                 throw new ArgumentException("O campo complemento deve ser preenchido");
-            if (employees.nr_cellphone== string.Empty && employees.nr_tellphone == string.Empty)
+            if (employees.nr_cellphone == string.Empty && employees.nr_tellphone == string.Empty)
                 throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
             if (employees.ds_email == string.Empty)
                 throw new ArgumentException("O campo nome deve ser preenchido");

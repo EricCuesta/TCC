@@ -1,6 +1,6 @@
 ﻿namespace Liriou_s_Burguer.Screens.Manager
 {
-    partial class frmManagerMenu
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagerMenu));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.MenuVertical = new System.Windows.Forms.Panel();
+            this.panelSubMenuCRM = new System.Windows.Forms.Panel();
+            this.panel40 = new System.Windows.Forms.Panel();
+            this.panel39 = new System.Windows.Forms.Panel();
+            this.panel38 = new System.Windows.Forms.Panel();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.btnDeletarCliente = new System.Windows.Forms.Button();
+            this.btnAlterarCliente = new System.Windows.Forms.Button();
+            this.btnConsultarCliente = new System.Windows.Forms.Button();
+            this.btnCadastrarCliente = new System.Windows.Forms.Button();
             this.panelCRM = new System.Windows.Forms.Panel();
             this.btnCRM = new System.Windows.Forms.Button();
             this.panel19 = new System.Windows.Forms.Panel();
@@ -106,16 +115,8 @@
             this.imgFechar = new System.Windows.Forms.PictureBox();
             this.panelContedor = new System.Windows.Forms.Panel();
             this.Hrs = new System.Windows.Forms.Timer(this.components);
-            this.btnCadastrarCliente = new System.Windows.Forms.Button();
-            this.btnConsultarCliente = new System.Windows.Forms.Button();
-            this.btnAlterarCliente = new System.Windows.Forms.Button();
-            this.btnDeletarCliente = new System.Windows.Forms.Button();
-            this.panel37 = new System.Windows.Forms.Panel();
-            this.panel38 = new System.Windows.Forms.Panel();
-            this.panel39 = new System.Windows.Forms.Panel();
-            this.panel40 = new System.Windows.Forms.Panel();
-            this.panelSubMenuCRM = new System.Windows.Forms.Panel();
             this.MenuVertical.SuspendLayout();
+            this.panelSubMenuCRM.SuspendLayout();
             this.panelCRM.SuspendLayout();
             this.panelSubMenuEstoque.SuspendLayout();
             this.panelEstoque.SuspendLayout();
@@ -129,7 +130,6 @@
             this.panelTítulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).BeginInit();
-            this.panelSubMenuCRM.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuVertical
@@ -152,6 +152,135 @@
             this.MenuVertical.Name = "MenuVertical";
             this.MenuVertical.Size = new System.Drawing.Size(240, 500);
             this.MenuVertical.TabIndex = 14;
+            // 
+            // panelSubMenuCRM
+            // 
+            this.panelSubMenuCRM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelSubMenuCRM.Controls.Add(this.panel40);
+            this.panelSubMenuCRM.Controls.Add(this.panel39);
+            this.panelSubMenuCRM.Controls.Add(this.panel38);
+            this.panelSubMenuCRM.Controls.Add(this.panel37);
+            this.panelSubMenuCRM.Controls.Add(this.btnDeletarCliente);
+            this.panelSubMenuCRM.Controls.Add(this.btnAlterarCliente);
+            this.panelSubMenuCRM.Controls.Add(this.btnConsultarCliente);
+            this.panelSubMenuCRM.Controls.Add(this.btnCadastrarCliente);
+            this.panelSubMenuCRM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1105);
+            this.panelSubMenuCRM.Name = "panelSubMenuCRM";
+            this.panelSubMenuCRM.Size = new System.Drawing.Size(223, 132);
+            this.panelSubMenuCRM.TabIndex = 26;
+            // 
+            // panel40
+            // 
+            this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel40.Location = new System.Drawing.Point(22, 4);
+            this.panel40.Name = "panel40";
+            this.panel40.Size = new System.Drawing.Size(5, 26);
+            this.panel40.TabIndex = 13;
+            // 
+            // panel39
+            // 
+            this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel39.Location = new System.Drawing.Point(22, 36);
+            this.panel39.Name = "panel39";
+            this.panel39.Size = new System.Drawing.Size(5, 26);
+            this.panel39.TabIndex = 14;
+            // 
+            // panel38
+            // 
+            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel38.Location = new System.Drawing.Point(22, 68);
+            this.panel38.Name = "panel38";
+            this.panel38.Size = new System.Drawing.Size(5, 26);
+            this.panel38.TabIndex = 15;
+            // 
+            // panel37
+            // 
+            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel37.Location = new System.Drawing.Point(22, 100);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(5, 26);
+            this.panel37.TabIndex = 16;
+            // 
+            // btnDeletarCliente
+            // 
+            this.btnDeletarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnDeletarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletarCliente.FlatAppearance.BorderSize = 0;
+            this.btnDeletarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeletarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnDeletarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnDeletarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletarCliente.Location = new System.Drawing.Point(25, 100);
+            this.btnDeletarCliente.Name = "btnDeletarCliente";
+            this.btnDeletarCliente.Size = new System.Drawing.Size(215, 26);
+            this.btnDeletarCliente.TabIndex = 15;
+            this.btnDeletarCliente.Text = "Deletar Cliente";
+            this.btnDeletarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletarCliente.UseVisualStyleBackColor = false;
+            this.btnDeletarCliente.Click += new System.EventHandler(this.btnDeletarCliente_Click);
+            // 
+            // btnAlterarCliente
+            // 
+            this.btnAlterarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnAlterarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterarCliente.FlatAppearance.BorderSize = 0;
+            this.btnAlterarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnAlterarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlterarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarCliente.Location = new System.Drawing.Point(25, 68);
+            this.btnAlterarCliente.Name = "btnAlterarCliente";
+            this.btnAlterarCliente.Size = new System.Drawing.Size(215, 26);
+            this.btnAlterarCliente.TabIndex = 14;
+            this.btnAlterarCliente.Text = "Alterar Cliente";
+            this.btnAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterarCliente.UseVisualStyleBackColor = false;
+            this.btnAlterarCliente.Click += new System.EventHandler(this.btnAlterarCliente_Click);
+            // 
+            // btnConsultarCliente
+            // 
+            this.btnConsultarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConsultarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarCliente.FlatAppearance.BorderSize = 0;
+            this.btnConsultarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnConsultarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnConsultarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarCliente.Location = new System.Drawing.Point(25, 36);
+            this.btnConsultarCliente.Name = "btnConsultarCliente";
+            this.btnConsultarCliente.Size = new System.Drawing.Size(215, 26);
+            this.btnConsultarCliente.TabIndex = 13;
+            this.btnConsultarCliente.Text = "Consultar Cliente";
+            this.btnConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultarCliente.UseVisualStyleBackColor = false;
+            this.btnConsultarCliente.Click += new System.EventHandler(this.btnConsultarCliente_Click);
+            // 
+            // btnCadastrarCliente
+            // 
+            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnCadastrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarCliente.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCadastrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnCadastrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarCliente.Location = new System.Drawing.Point(25, 4);
+            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
+            this.btnCadastrarCliente.Size = new System.Drawing.Size(215, 26);
+            this.btnCadastrarCliente.TabIndex = 11;
+            this.btnCadastrarCliente.Text = "Cadastrar Cliente";
+            this.btnCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
+            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
             // 
             // panelCRM
             // 
@@ -891,7 +1020,7 @@
             this.btnCartãoDePonto.Text = "Cartão de Ponto";
             this.btnCartãoDePonto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCartãoDePonto.UseVisualStyleBackColor = false;
-            this.btnCartãoDePonto.Click += new System.EventHandler(this.btnCartãoDePonto_Click_1);
+            this.btnCartãoDePonto.Click += new System.EventHandler(this.btnCartãoDePonto_Click);
             // 
             // panel14
             // 
@@ -1195,136 +1324,7 @@
             this.Hrs.Interval = 1000;
             this.Hrs.Tick += new System.EventHandler(this.Hrs_Tick);
             // 
-            // btnCadastrarCliente
-            // 
-            this.btnCadastrarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnCadastrarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarCliente.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnCadastrarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnCadastrarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarCliente.Location = new System.Drawing.Point(25, 4);
-            this.btnCadastrarCliente.Name = "btnCadastrarCliente";
-            this.btnCadastrarCliente.Size = new System.Drawing.Size(215, 26);
-            this.btnCadastrarCliente.TabIndex = 11;
-            this.btnCadastrarCliente.Text = "Cadastrar Cliente";
-            this.btnCadastrarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCadastrarCliente.UseVisualStyleBackColor = false;
-            this.btnCadastrarCliente.Click += new System.EventHandler(this.btnCadastrarCliente_Click);
-            // 
-            // btnConsultarCliente
-            // 
-            this.btnConsultarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConsultarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarCliente.FlatAppearance.BorderSize = 0;
-            this.btnConsultarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnConsultarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnConsultarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnConsultarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarCliente.Location = new System.Drawing.Point(25, 36);
-            this.btnConsultarCliente.Name = "btnConsultarCliente";
-            this.btnConsultarCliente.Size = new System.Drawing.Size(215, 26);
-            this.btnConsultarCliente.TabIndex = 13;
-            this.btnConsultarCliente.Text = "Consultar Cliente";
-            this.btnConsultarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultarCliente.UseVisualStyleBackColor = false;
-            this.btnConsultarCliente.Click += new System.EventHandler(this.btnConsultarCliente_Click);
-            // 
-            // btnAlterarCliente
-            // 
-            this.btnAlterarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnAlterarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterarCliente.FlatAppearance.BorderSize = 0;
-            this.btnAlterarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnAlterarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnAlterarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAlterarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnAlterarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarCliente.Location = new System.Drawing.Point(25, 68);
-            this.btnAlterarCliente.Name = "btnAlterarCliente";
-            this.btnAlterarCliente.Size = new System.Drawing.Size(215, 26);
-            this.btnAlterarCliente.TabIndex = 14;
-            this.btnAlterarCliente.Text = "Alterar Cliente";
-            this.btnAlterarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterarCliente.UseVisualStyleBackColor = false;
-            this.btnAlterarCliente.Click += new System.EventHandler(this.btnAlterarCliente_Click);
-            // 
-            // btnDeletarCliente
-            // 
-            this.btnDeletarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnDeletarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletarCliente.FlatAppearance.BorderSize = 0;
-            this.btnDeletarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDeletarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.btnDeletarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeletarCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDeletarCliente.ForeColor = System.Drawing.Color.White;
-            this.btnDeletarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarCliente.Location = new System.Drawing.Point(25, 100);
-            this.btnDeletarCliente.Name = "btnDeletarCliente";
-            this.btnDeletarCliente.Size = new System.Drawing.Size(215, 26);
-            this.btnDeletarCliente.TabIndex = 15;
-            this.btnDeletarCliente.Text = "Deletar Cliente";
-            this.btnDeletarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletarCliente.UseVisualStyleBackColor = false;
-            this.btnDeletarCliente.Click += new System.EventHandler(this.btnDeletarCliente_Click);
-            // 
-            // panel37
-            // 
-            this.panel37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel37.Location = new System.Drawing.Point(22, 100);
-            this.panel37.Name = "panel37";
-            this.panel37.Size = new System.Drawing.Size(5, 26);
-            this.panel37.TabIndex = 16;
-            // 
-            // panel38
-            // 
-            this.panel38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel38.Location = new System.Drawing.Point(22, 68);
-            this.panel38.Name = "panel38";
-            this.panel38.Size = new System.Drawing.Size(5, 26);
-            this.panel38.TabIndex = 15;
-            // 
-            // panel39
-            // 
-            this.panel39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel39.Location = new System.Drawing.Point(22, 36);
-            this.panel39.Name = "panel39";
-            this.panel39.Size = new System.Drawing.Size(5, 26);
-            this.panel39.TabIndex = 14;
-            // 
-            // panel40
-            // 
-            this.panel40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
-            this.panel40.Location = new System.Drawing.Point(22, 4);
-            this.panel40.Name = "panel40";
-            this.panel40.Size = new System.Drawing.Size(5, 26);
-            this.panel40.TabIndex = 13;
-            // 
-            // panelSubMenuCRM
-            // 
-            this.panelSubMenuCRM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.panelSubMenuCRM.Controls.Add(this.panel40);
-            this.panelSubMenuCRM.Controls.Add(this.panel39);
-            this.panelSubMenuCRM.Controls.Add(this.panel38);
-            this.panelSubMenuCRM.Controls.Add(this.panel37);
-            this.panelSubMenuCRM.Controls.Add(this.btnDeletarCliente);
-            this.panelSubMenuCRM.Controls.Add(this.btnAlterarCliente);
-            this.panelSubMenuCRM.Controls.Add(this.btnConsultarCliente);
-            this.panelSubMenuCRM.Controls.Add(this.btnCadastrarCliente);
-            this.panelSubMenuCRM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1105);
-            this.panelSubMenuCRM.Name = "panelSubMenuCRM";
-            this.panelSubMenuCRM.Size = new System.Drawing.Size(223, 132);
-            this.panelSubMenuCRM.TabIndex = 26;
-            // 
-            // frmManagerMenu
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1336,10 +1336,11 @@
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(950, 500);
-            this.Name = "frmManagerMenu";
+            this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liriou`s Burguer";
             this.MenuVertical.ResumeLayout(false);
+            this.panelSubMenuCRM.ResumeLayout(false);
             this.panelCRM.ResumeLayout(false);
             this.panelSubMenuEstoque.ResumeLayout(false);
             this.panelEstoque.ResumeLayout(false);
@@ -1353,7 +1354,6 @@
             this.panelTítulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgFechar)).EndInit();
-            this.panelSubMenuCRM.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

@@ -41,9 +41,9 @@ namespace Liriou_s_Burguer.Database
         public void Alterar(Entities.tb_function function)
         {
             Entities.tb_function list = db.tb_function.First(t => t.id_function == function.id_function);
-          
+
             list.nm_function = list.nm_function;
-            
+
             db.SaveChanges();
         }
 

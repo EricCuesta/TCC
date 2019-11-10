@@ -171,7 +171,7 @@
             this.panelAlterarSenha.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAlterarSenha.Location = new System.Drawing.Point(0, 171);
             this.panelAlterarSenha.Name = "panelAlterarSenha";
-            this.panelAlterarSenha.Size = new System.Drawing.Size(400, 75);
+            this.panelAlterarSenha.Size = new System.Drawing.Size(400, 58);
             this.panelAlterarSenha.TabIndex = 320;
             this.panelAlterarSenha.Visible = false;
             // 
@@ -181,9 +181,9 @@
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(67, 47);
+            this.txtSenha.Location = new System.Drawing.Point(63, 24);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(313, 19);
+            this.txtSenha.Size = new System.Drawing.Size(331, 19);
             this.txtSenha.TabIndex = 250;
             this.txtSenha.Text = "Senha do usuário";
             // 
@@ -192,15 +192,15 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(67, 72);
+            this.dataGridView1.Location = new System.Drawing.Point(63, 49);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(313, 2);
+            this.dataGridView1.Size = new System.Drawing.Size(331, 2);
             this.dataGridView1.TabIndex = 249;
             // 
             // imgSenha
             // 
             this.imgSenha.Image = global::Liriou_s_Burguer.Properties.Resources.Senha;
-            this.imgSenha.Location = new System.Drawing.Point(17, 29);
+            this.imgSenha.Location = new System.Drawing.Point(12, 6);
             this.imgSenha.Name = "imgSenha";
             this.imgSenha.Size = new System.Drawing.Size(45, 45);
             this.imgSenha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -222,20 +222,20 @@
             // 
             this.mtxtCelular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtCelular.ForeColor = System.Drawing.Color.White;
-            this.mtxtCelular.Location = new System.Drawing.Point(79, 6);
+            this.mtxtCelular.Location = new System.Drawing.Point(75, 6);
             this.mtxtCelular.Mask = "(000) 00000-0000";
             this.mtxtCelular.Name = "mtxtCelular";
-            this.mtxtCelular.Size = new System.Drawing.Size(309, 16);
-            this.mtxtCelular.TabIndex = 531;
+            this.mtxtCelular.Size = new System.Drawing.Size(319, 19);
+            this.mtxtCelular.TabIndex = 509;
             // 
             // lblCelular
             // 
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.White;
-            this.lblCelular.Location = new System.Drawing.Point(12, 5);
+            this.lblCelular.Location = new System.Drawing.Point(8, 6);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(61, 19);
             this.lblCelular.TabIndex = 507;
@@ -263,13 +263,14 @@
             this.mtxtCPF.Name = "mtxtCPF";
             this.mtxtCPF.Size = new System.Drawing.Size(337, 19);
             this.mtxtCPF.TabIndex = 508;
+            this.mtxtCPF.ValidatingType = typeof(System.DateTime);
             // 
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.White;
-            this.lblCPF.Location = new System.Drawing.Point(12, 5);
+            this.lblCPF.Location = new System.Drawing.Point(8, 5);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(39, 19);
             this.lblCPF.TabIndex = 507;
@@ -291,7 +292,7 @@
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRG.ForeColor = System.Drawing.Color.White;
-            this.lblRG.Location = new System.Drawing.Point(12, 5);
+            this.lblRG.Location = new System.Drawing.Point(8, 5);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 507;
@@ -306,7 +307,7 @@
             this.mtxtRG.Location = new System.Drawing.Point(51, 5);
             this.mtxtRG.Mask = "00.000.000-0";
             this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(337, 19);
+            this.mtxtRG.Size = new System.Drawing.Size(343, 19);
             this.mtxtRG.TabIndex = 247;
             // 
             // panelOpção
@@ -340,8 +341,7 @@
             this.cboOpção.Items.AddRange(new object[] {
             "RG",
             "CPF",
-            "Número do Celular",
-            "Número do Telefone"});
+            "Número do Celular"});
             this.cboOpção.Location = new System.Drawing.Point(0, 21);
             this.cboOpção.Name = "cboOpção";
             this.cboOpção.Size = new System.Drawing.Size(400, 21);
@@ -401,7 +401,6 @@
         private System.Windows.Forms.PictureBox imgMinimizar;
         private System.Windows.Forms.PictureBox imgVoltar;
         private System.Windows.Forms.Panel panelSubMenuCelular;
-        private System.Windows.Forms.MaskedTextBox mtxtCelular;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Panel panelSubMenuCPF;
         private System.Windows.Forms.Label lblCPF;
@@ -412,5 +411,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cboOpção;
         private System.Windows.Forms.MaskedTextBox mtxtCPF;
+        private System.Windows.Forms.MaskedTextBox mtxtCelular;
     }
 }

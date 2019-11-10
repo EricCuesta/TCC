@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Liriou_s_Burguer.Database.Entities;
 
 namespace Liriou_s_Burguer.Business
 {
@@ -11,7 +10,7 @@ namespace Liriou_s_Burguer.Business
     {
         Database.FinancialDatabase db = new Database.FinancialDatabase();
 
-        public void Inserir(tb_financial financial)
+        public void Inserir(Database.Entities.tb_financial financial)
         {
             db.Inserir(financial);
         }
@@ -38,7 +37,7 @@ namespace Liriou_s_Burguer.Business
             id = db.Consultar(rg);
         }
 
-        liriousdbEntities DB = new liriousdbEntities();
+        Database.Entities.liriousdbEntities DB = new Database.Entities.liriousdbEntities();
         public int QtdDeDiasUteis(int ano, int mes)
         {
             int qtdDias = DateTime.DaysInMonth(ano, mes);
@@ -61,33 +60,33 @@ namespace Liriou_s_Burguer.Business
 
         public string NomeCompleto()
         {
-            tb_employees tb = DB.tb_employees.First(t => t.id_emp == id);
+            Database.Entities.tb_employees tb = DB.tb_employees.First(t => t.id_emp == id);
             return tb.nm_firstName + " " + tb.nm_lastName;
         }
 
         public string Dependents()
         {
-            tb_employees tb = DB.tb_employees.First(t => t.id_emp == id);
+            Database.Entities.tb_employees tb = DB.tb_employees.First(t => t.id_emp == id);
             return tb.nr_dependents.ToString();
         }
 
         public string Bruto()
         {
-            tb_financial tb = DB.tb_financial.First(t => t.id_emp == id);
+            Database.Entities.tb_financial tb = DB.tb_financial.First(t => t.id_emp == id);
             return "R$ " + tb.vl_grossSalary;
         }
 
         public string HorasÁPagar()
         {
-            tb_points tb = DB.tb_points.First(t => t.id_emp == id);
+            Database.Entities.tb_points tb = DB.tb_points.First(t => t.id_emp == id);
             return tb.hr_toPay + " Hrs";
         }
 
         decimal SL = 0;
         public string ValeTransporte(int ano, int mes)
         {
-            tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
-            tb_financial F = DB.tb_financial.First(t => t.id_emp == id);
+            Database.Entities.tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
+            Database.Entities.tb_financial F = DB.tb_financial.First(t => t.id_emp == id);
             if (tb.bt_transport == true)
             {
                 int qtdDiasUteis = this.QtdDeDiasUteis(ano, mes);
@@ -108,7 +107,7 @@ namespace Liriou_s_Burguer.Business
 
         public string ValeAlimentação(int ano, int mes)
         {
-            tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
+            Database.Entities.tb_benefits tb = DB.tb_benefits.First(t => t.id_emp == id);
             if (tb.bt_food == true)
             {
                 int qtdDiasUteis = this.QtdDeDiasUteis(ano, mes);
@@ -127,7 +126,7 @@ namespace Liriou_s_Burguer.Business
             return "R$ " + SL;
         }
 
-        public void Alterar(tb_financial financial)
+        public void Alterar(Database.Entities.tb_financial financial)
         {
             db.Alterar(financial);
         }

@@ -30,7 +30,7 @@ namespace Liriou_s_Burguer.Database
             Entities.tb_crm list = db.tb_crm.First(t => t.id_client == crm.id_client);
             list.ds_mood = list.ds_mood;
             list.ds_note = list.ds_note;
-           
+
             db.SaveChanges();
         }
 

@@ -54,7 +54,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Financial
             {
                 if (e.RowIndex >= 0)
                 {
-                    Database.Entities.tb_account account= new Database.Entities.tb_account();
+                    Database.Entities.tb_account account = new Database.Entities.tb_account();
                     DataGridViewRow row = this.dgvConsultarConta.Rows[e.RowIndex];
                 }
             }

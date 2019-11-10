@@ -55,10 +55,5 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 lblLíquido.Text = FB.Liquido();
             }
         }
-
-        private void btnGerarFolha_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

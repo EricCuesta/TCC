@@ -26,7 +26,7 @@ namespace Liriou_s_Burguer.Database
 
         public List<Entities.tb_provider> ConsultarPorNome(Entities.tb_provider provider)
         {
-            List<Entities.tb_provider> list = db.tb_provider.Where(l => l.nm_name == provider.nm_provider).ToList();
+            List<Entities.tb_provider> list = db.tb_provider.Where(l => l.nm_provider == provider.nm_provider).ToList();
 
             return list;
         }
@@ -34,6 +34,13 @@ namespace Liriou_s_Burguer.Database
         public List<Entities.tb_provider> ConsultarPorTipoDePessoa(Entities.tb_provider provider)
         {
             List<Entities.tb_provider> list = db.tb_provider.Where(l => l.ds_typePerson == provider.ds_typePerson).ToList();
+
+            return list;
+        }
+
+        public List<Entities.tb_provider> ConsultarPorNomeTipoDePessoa(Entities.tb_provider provider)
+        {
+            List<Entities.tb_provider> list = db.tb_provider.Where(l => l.nm_provider == provider.nm_provider && l.ds_typePerson == provider.ds_typePerson).ToList();
 
             return list;
         }
@@ -63,7 +70,7 @@ namespace Liriou_s_Burguer.Database
             db.SaveChanges();
         }
 
-        public void Deletar(int id)
+        public void Remover(int id)
         {
             Entities.tb_provider provider = db.tb_provider.First(t => t.id_provider == id);
 

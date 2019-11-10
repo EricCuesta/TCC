@@ -54,19 +54,20 @@ namespace Liriou_s_Burguer.Business
         {
             List<Database.Entities.tb_client> list = new List<Database.Entities.tb_client>();
 
-
-            if (client.nr_rg == string.Empty && client.ds_sex == null)
+            if (client.nm_firstName != null && client.nr_rg == "  ,   ,   -" && client.ds_sex == null)
                 list = db.ConsultarPorNome(client);
-            else if (client.nm_firstName == string.Empty && client.ds_sex == null)
+            else if (client.nm_firstName == null || client.nm_firstName == string.Empty && client.nr_rg != "  ,   ,   -" && client.ds_sex == null)
                 list = db.ConsultarPorRG(client);
-            else if (client.nm_firstName == string.Empty && client.nr_rg == string.Empty)
+            else if (client.nm_firstName == null || client.nm_firstName == string.Empty && client.nr_rg == "  ,   ,   -" && client.ds_sex != null)
                 list = db.ConsultarPorSexo(client);
-            else if (client.ds_sex == null)
+            else if (client.nm_firstName != null && client.nr_rg != "  ,   ,   -" && client.ds_sex == null)
                 list = db.ConsultarPorNomeRG(client);
-            else if (client.nm_firstName != string.Empty && client.ds_sex != null)
+            else if (client.nm_firstName != null && client.nr_rg == "  ,   ,   -" && client.ds_sex != null)
                 list = db.ConsultarPorNomeSexo(client);
-            else if (client.nr_rg != string.Empty && client.ds_sex != null)
+            else if (client.nm_firstName == null || client.nm_firstName == string.Empty && client.nr_rg != "  ,   ,   -" && client.ds_sex != null)
                 list = db.ConsultarPorRGSexo(client);
+            else if (client.nm_firstName != null && client.nr_rg != "  ,   ,   -" && client.ds_sex != null)
+                list = db.ConsultarPorNomeRGSexo(client);
 
             return list;
         }

@@ -15,40 +15,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
         public frmRegisterSupplier()
         {
             InitializeComponent();
-            CustomizeDesign();
-        }
-
-        private void CustomizeDesign()
-        {
-            panelCPF.Visible = false;
-            panelCNPJ.Visible = false;
-        }
-
-        private void HideSubMenu()
-        {
-            if (panelCPF.Visible == true)
-                panelCPF.Visible = false;
-            if (panelCNPJ.Visible == true)
-                panelCNPJ.Visible = false;
-        }
-
-        private void ShowSubMenu(Panel SubMenu)
-        {
-            if (SubMenu.Visible == false)
-            {
-                HideSubMenu();
-                SubMenu.Visible = true;
-            }
-            else
-            {
-                SubMenu.Visible = false;
-            }
-        }
-
-        private void Limpar()
-        {
-            mtxtCPF.Clear();
-            mtxtCNPJ.Clear();
         }
 
         private void mtxtCEP_TextChanged(object sender, EventArgs e)
@@ -61,21 +27,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
             }
         }
 
-        private void cboTipoDePessoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboTipoDePessoa.Text == "Física")
-            {
-                HideSubMenu();
-                ShowSubMenu(panelCPF);
-                Limpar();
-            }
-            if (cboTipoDePessoa.Text == "Jurídica")
-            {
-                HideSubMenu();
-                ShowSubMenu(panelCNPJ);
-                Limpar();
-            }
-        }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -116,6 +67,38 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
             {
                 MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        } 
+        }
+
+        private void cboTipoDePessoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboTipoDePessoa.Text == "Física")
+            {
+                HideControls();
+                Limpar();
+                lblCPF.Visible = true;
+                mtxtCPF.Visible = true;
+            }
+            else if (cboTipoDePessoa.Text == "Jurídica")
+            {
+                HideControls();
+                Limpar();
+                lblCNPJ.Visible = true;
+                mtxtCNPJ.Visible = true;
+            }
+        }
+
+        private void HideControls()
+        {
+            lblCPF.Visible = false;
+            mtxtCPF.Visible = false;
+            lblCNPJ.Visible = false;
+            mtxtCNPJ.Visible = false;
+        }
+
+        private void Limpar()
+        {
+            mtxtCPF.Clear();
+            mtxtCNPJ.Clear();
+        }
     }
 }

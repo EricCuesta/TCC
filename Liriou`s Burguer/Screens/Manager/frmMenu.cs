@@ -11,65 +11,22 @@ using System.Windows.Forms;
 
 namespace Liriou_s_Burguer.Screens.Manager
 {
-    public partial class frmManagerMenu : Form
+    public partial class frmMenu : Form
     {
+        public static frmMenu Current;
+
         Database.Entities.tb_employees emp;
 
-        public frmManagerMenu()
+        public frmMenu()
         {
             InitializeComponent();
-            panelContedor.Visible = false;
+            Current = this;
             CustomizeDesign();
-
-            string email = Model.LoginModel.Email;
-            string senha = Model.LoginModel.Senha;
-
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            emp = DB.UsuárioLogado(email, senha);
-            LoadScreen(emp);
         }
 
-        public void LoadScreen(Database.Entities.tb_employees emp)
+        private void Hrs_Tick(object sender, EventArgs e)
         {
-            btnRecursosHumanos.Visible = true;
-
-            if (emp.bt_provider == false)
-            {
-                btnFornecedor.Visible = false;
-            }
-            if (emp.bt_financial == false)
-            {
-                btnFinanceiro.Visible = false;
-            }
-            if (emp.bt_stock == false)
-            {
-                btnEstoque.Visible = false;
-            }
-            if (emp.bt_crm == false)
-            {
-                btnCRM.Visible = false;
-            }
-
-            string usuário = "Usuário: ";
-            if (emp.bt_manager == true && emp.bt_employee == false)
-            {
-                usuário = "Gerente: ";
-            }
-            else if (emp.bt_manager == false && emp.bt_employee == true)
-            {
-                usuário = "Funcionário: ";
-            }
-            else
-            {
-                btnCartãoDePonto.Visible = false;
-                btnRecursosHumanos.Visible = false;
-                btnFornecedor.Visible = false;
-                btnFinanceiro.Visible = false;
-                btnEstoque.Visible = false;
-                btnCRM.Visible = false;
-            }
-
-            lblUsuário.Text = usuário + emp.nm_firstName + " " + emp.nm_lastName + " / Entrou ás: " + DateTime.Now.ToString();
+            lblhrs.Text = "Hrs: " + DateTime.Now.ToString("HH:mm:ss");
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -133,20 +90,7 @@ namespace Liriou_s_Burguer.Screens.Manager
 
         private void btnRecursosHumanos_Click(object sender, EventArgs e)
         {
-            if (emp.bt_manager == true && emp.bt_employee == false)
-            {
-                ShowSubMenu(panelSubMenuRecursosHumanos);
-            }
-            else
-            {
-                btnCadastrarFuncionário.Enabled = false;
-                btnConsultarFuncionário.Enabled = false;
-                btnAlterarFuncionário.Enabled = false;
-                btnDemitirFuncionário.Enabled = false;
-                btnFolhaDePagamento.Enabled = false;
-
-                ShowSubMenu(panelSubMenuRecursosHumanos);
-            }
+            ShowSubMenu(panelSubMenuRecursosHumanos);
         }
 
         private void btnFinanceiro_Click(object sender, EventArgs e)
@@ -255,15 +199,15 @@ namespace Liriou_s_Burguer.Screens.Manager
             HideSubMenu();
         }
 
-        private void btnFluxoDeCaixa_Click(object sender, EventArgs e)
-        {
-            openContedor(new Financial.frmCashflow());
-            HideSubMenu();
-        }
-
         private void btnCartãoDePonto_Click(object sender, EventArgs e)
         {
             openContedor(new Employee.frmEmployeeTimeCard());
+            HideSubMenu();
+        }
+
+        private void btnFluxoDeCaixa_Click(object sender, EventArgs e)
+        {
+            openContedor(new Financial.frmCashflow());
             HideSubMenu();
         }
 
@@ -390,23 +334,6 @@ namespace Liriou_s_Burguer.Screens.Manager
         private void imgLogotipo_Click(object sender, EventArgs e)
         {
             panelContedor.Visible = false;
-        }
-
-        private void btnCartãoDePonto_Click_1(object sender, EventArgs e)
-        {
-            openContedor(new Employee.frmEmployeeTimeCard());
-            HideSubMenu();
-        }
-
-        private void Hrs_Tick(object sender, EventArgs e)
-        {
-            lblhrs.Text = "Hrs: " + DateTime.Now.ToString("HH:mm:ss");
-        }
-
-        private void btnCartãoDePonto1_Click(object sender, EventArgs e)
-        {
-            openContedor(new Employee.frmEmployeeTimeCard());
-            HideSubMenu();
         }
     }
 }

@@ -730,7 +730,6 @@
             this.btnGerarFolha.TabIndex = 674;
             this.btnGerarFolha.Text = "Gerar Folha";
             this.btnGerarFolha.UseVisualStyleBackColor = false;
-            this.btnGerarFolha.Click += new System.EventHandler(this.btnGerarFolha_Click);
             // 
             // btnCalcular
             // 

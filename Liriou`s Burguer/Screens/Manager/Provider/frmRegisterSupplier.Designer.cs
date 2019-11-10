@@ -30,8 +30,7 @@
         {
             this.panel = new System.Windows.Forms.Panel();
             this.panelCPF = new System.Windows.Forms.Panel();
-            this.panelCNPJ = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblCNPJ = new System.Windows.Forms.Label();
             this.mtxtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.mtxtCPF = new System.Windows.Forms.MaskedTextBox();
@@ -69,8 +68,6 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCadastrarFornecedor = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
-            this.panelCPF.SuspendLayout();
-            this.panelCNPJ.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
@@ -89,6 +86,9 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel.Controls.Add(this.mtxtCNPJ);
+            this.panel.Controls.Add(this.mtxtCPF);
+            this.panel.Controls.Add(this.lblCNPJ);
             this.panel.Controls.Add(this.panelCPF);
             this.panel.Controls.Add(this.label1);
             this.panel.Controls.Add(this.cboTipoDePessoa);
@@ -122,6 +122,7 @@
             this.panel.Controls.Add(this.lblNomeFantásia);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
+            this.panel.Controls.Add(this.lblCPF);
             this.panel.Location = new System.Drawing.Point(1, 40);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(709, 418);
@@ -129,36 +130,24 @@
             // 
             // panelCPF
             // 
-            this.panelCPF.Controls.Add(this.panelCNPJ);
-            this.panelCPF.Controls.Add(this.lblCPF);
-            this.panelCPF.Controls.Add(this.mtxtCPF);
-            this.panelCPF.Location = new System.Drawing.Point(356, 35);
+            this.panelCPF.Location = new System.Drawing.Point(304, 281);
             this.panelCPF.Name = "panelCPF";
             this.panelCPF.Size = new System.Drawing.Size(353, 30);
             this.panelCPF.TabIndex = 649;
             this.panelCPF.Visible = false;
             // 
-            // panelCNPJ
+            // lblCNPJ
             // 
-            this.panelCNPJ.Controls.Add(this.label2);
-            this.panelCNPJ.Controls.Add(this.mtxtCNPJ);
-            this.panelCNPJ.Location = new System.Drawing.Point(0, 0);
-            this.panelCNPJ.Name = "panelCNPJ";
-            this.panelCNPJ.Size = new System.Drawing.Size(353, 30);
-            this.panelCNPJ.TabIndex = 650;
-            this.panelCNPJ.Visible = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(3, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 19);
-            this.label2.TabIndex = 646;
-            this.label2.Text = "CNPJ:";
+            this.lblCNPJ.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCNPJ.AutoSize = true;
+            this.lblCNPJ.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCNPJ.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCNPJ.Location = new System.Drawing.Point(361, 40);
+            this.lblCNPJ.Name = "lblCNPJ";
+            this.lblCNPJ.Size = new System.Drawing.Size(48, 19);
+            this.lblCNPJ.TabIndex = 646;
+            this.lblCNPJ.Text = "CNPJ:";
+            this.lblCNPJ.Visible = false;
             // 
             // mtxtCNPJ
             // 
@@ -166,10 +155,10 @@
             this.mtxtCNPJ.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCNPJ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCNPJ.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCNPJ.Location = new System.Drawing.Point(57, 3);
+            this.mtxtCNPJ.Location = new System.Drawing.Point(415, 39);
             this.mtxtCNPJ.Mask = "00.000.000/0000-00";
             this.mtxtCNPJ.Name = "mtxtCNPJ";
-            this.mtxtCNPJ.Size = new System.Drawing.Size(292, 23);
+            this.mtxtCNPJ.Size = new System.Drawing.Size(290, 23);
             this.mtxtCNPJ.TabIndex = 645;
             // 
             // lblCPF
@@ -178,11 +167,12 @@
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPF.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCPF.Location = new System.Drawing.Point(3, 5);
+            this.lblCPF.Location = new System.Drawing.Point(361, 40);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(78, 19);
             this.lblCPF.TabIndex = 646;
             this.lblCPF.Text = "CNPJ/CPF:";
+            this.lblCPF.Visible = false;
             // 
             // mtxtCPF
             // 
@@ -190,11 +180,12 @@
             this.mtxtCPF.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCPF.Location = new System.Drawing.Point(87, 3);
+            this.mtxtCPF.Location = new System.Drawing.Point(445, 39);
             this.mtxtCPF.Mask = "000000000/00";
             this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(262, 23);
+            this.mtxtCPF.Size = new System.Drawing.Size(260, 23);
             this.mtxtCPF.TabIndex = 645;
+            this.mtxtCPF.Visible = false;
             // 
             // label1
             // 
@@ -568,10 +559,10 @@
             this.txtNomeFantásia.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtNomeFantásia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomeFantásia.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeFantásia.Location = new System.Drawing.Point(458, 6);
+            this.txtNomeFantásia.Location = new System.Drawing.Point(459, 6);
             this.txtNomeFantásia.MaxLength = 32;
             this.txtNomeFantásia.Name = "txtNomeFantásia";
-            this.txtNomeFantásia.Size = new System.Drawing.Size(247, 23);
+            this.txtNomeFantásia.Size = new System.Drawing.Size(246, 23);
             this.txtNomeFantásia.TabIndex = 568;
             // 
             // lblNomeFantásia
@@ -581,7 +572,7 @@
             this.lblNomeFantásia.AutoSize = true;
             this.lblNomeFantásia.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomeFantásia.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNomeFantásia.Location = new System.Drawing.Point(361, 10);
+            this.lblNomeFantásia.Location = new System.Drawing.Point(362, 9);
             this.lblNomeFantásia.Name = "lblNomeFantásia";
             this.lblNomeFantásia.Size = new System.Drawing.Size(91, 15);
             this.lblNomeFantásia.TabIndex = 567;
@@ -638,10 +629,6 @@
             this.Text = "Register Supplier";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
-            this.panelCPF.ResumeLayout(false);
-            this.panelCPF.PerformLayout();
-            this.panelCNPJ.ResumeLayout(false);
-            this.panelCNPJ.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
@@ -694,8 +681,7 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label lblCadastrarFornecedor;
         private System.Windows.Forms.Panel panelCPF;
-        private System.Windows.Forms.Panel panelCNPJ;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblCNPJ;
         public System.Windows.Forms.MaskedTextBox mtxtCNPJ;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox cboTipoDePessoa;

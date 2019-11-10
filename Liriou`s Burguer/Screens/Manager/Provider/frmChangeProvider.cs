@@ -15,21 +15,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
         public frmChangeProvider()
         {
             InitializeComponent();
-            CustomizeDesign();
-        }
-
-        private void CustomizeDesign()
-        {
-            lblCPF.Visible = false;
-            mtxtCPF.Visible = false;
-            lblCNPJ.Visible = false;
-            mtxtCNPJ.Visible = false;
-        }
-
-        private void Limpar()
-        {
-            mtxtCPF.Clear();
-            mtxtCNPJ.Clear();
         }
 
         private void mtxtCEP_TextChanged(object sender, EventArgs e)
@@ -39,26 +24,6 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 string CEP = mtxtCEP.Text;
                 CorreioApi.CorreioApi api = new CorreioApi.CorreioApi();
                 txtEndereço.Text = api.Buscar(CEP);
-            }
-        }
-
-        private void cboTipoDePessoa_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cboTipoDePessoa.Text == "Física")
-            {
-                lblCNPJ.Visible = false;
-                mtxtCNPJ.Visible = false;
-                lblCPF.Visible = true;
-                mtxtCPF.Visible = true;
-                Limpar();
-            }
-            if (cboTipoDePessoa.Text == "Jurídica")
-            {
-                lblCPF.Visible = false;
-                mtxtCPF.Visible = false;
-                lblCNPJ.Visible = true;
-                mtxtCNPJ.Visible = true;
-                Limpar();
             }
         }
 
@@ -74,7 +39,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 txtNome.Text = string.Empty;
                 txtNomeFantásia.Text = string.Empty;
                 cboTipoDePessoa.Text = null;
-                CustomizeDesign();
+                HideControls();
                 Limpar();
                 cboEstado.Text = null;
                 txtEndereço.Text = string.Empty;
@@ -137,7 +102,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 Business.ProviderBusiness busprovider = new Business.ProviderBusiness();
                 busprovider.Alterar(provider);
 
-                MessageBox.Show("Fornecedor cadastrado com sucesso");
+                MessageBox.Show("Fornecedor alterado com sucesso");
             }
             catch (ArgumentException ex)
             {
@@ -147,6 +112,38 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
             {
                 MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void cboTipoDePessoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboTipoDePessoa.Text == "Física")
+            {
+                HideControls();
+                Limpar();
+                lblCPF.Visible = true;
+                mtxtCPF.Visible = true;
+            }
+            else if (cboTipoDePessoa.Text == "Jurídica")
+            {
+                HideControls();
+                Limpar();
+                lblCNPJ.Visible = true;
+                mtxtCNPJ.Visible = true;
+            }
+        }
+
+        private void HideControls()
+        {
+            lblCPF.Visible = false;
+            mtxtCPF.Visible = false;
+            lblCNPJ.Visible = false;
+            mtxtCNPJ.Visible = false;
+        }
+
+        private void Limpar()
+        {
+            mtxtCPF.Clear();
+            mtxtCNPJ.Clear();
         }
     }
 }

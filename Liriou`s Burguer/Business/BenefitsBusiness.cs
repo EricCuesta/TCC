@@ -30,6 +30,5 @@ namespace Liriou_s_Burguer.Business
         {
             db.Remover(id);
         }
-
     }
 }

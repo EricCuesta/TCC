@@ -25,12 +25,6 @@ namespace Liriou_s_Burguer.Database
             }
         }
 
-        public Entities.tb_employees UsuárioLogado(string email, string senha)
-        {
-            return db.tb_employees.FirstOrDefault(t => t.ds_email == email && t.pw_password == senha);
-
-        }
-
         public Entities.tb_employees VerificarRecuperação(Entities.tb_employees employees)
         {
             Entities.tb_employees verificar = db.tb_employees.FirstOrDefault(l => l.nr_cpf == employees.nr_cpf ||
@@ -168,6 +162,5 @@ namespace Liriou_s_Burguer.Database
 
             db.SaveChanges();
         }
-
     }
 }
