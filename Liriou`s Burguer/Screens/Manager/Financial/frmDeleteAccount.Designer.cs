@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeleteAccount));
             this.panel = new System.Windows.Forms.Panel();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.nudId = new System.Windows.Forms.NumericUpDown();
+            this.nudID = new System.Windows.Forms.NumericUpDown();
             this.lblID = new System.Windows.Forms.Label();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
@@ -49,7 +50,7 @@
             this.lblDeletarConta = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
@@ -63,9 +64,9 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Controls.Add(this.dataGridView5);
-            this.panel.Controls.Add(this.nudId);
+            this.panel.Controls.Add(this.nudID);
             this.panel.Controls.Add(this.lblID);
             this.panel.Controls.Add(this.dataGridView11);
             this.panel.Controls.Add(this.dataGridView4);
@@ -89,28 +90,28 @@
             // dataGridView5
             // 
             this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Location = new System.Drawing.Point(-4, 33);
+            this.dataGridView5.Location = new System.Drawing.Point(1, 33);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.Size = new System.Drawing.Size(709, 2);
             this.dataGridView5.TabIndex = 666;
             // 
-            // nudId
+            // nudID
             // 
-            this.nudId.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudId.Location = new System.Drawing.Point(45, 6);
-            this.nudId.Name = "nudId";
-            this.nudId.Size = new System.Drawing.Size(121, 23);
-            this.nudId.TabIndex = 665;
-            this.nudId.ValueChanged += new System.EventHandler(this.nudId_ValueChanged);
+            this.nudID.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudID.Location = new System.Drawing.Point(45, 6);
+            this.nudID.Name = "nudID";
+            this.nudID.Size = new System.Drawing.Size(121, 23);
+            this.nudID.TabIndex = 665;
+            this.nudID.ValueChanged += new System.EventHandler(this.nudID_ValueChanged);
             // 
             // lblID
             // 
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblID.ForeColor = System.Drawing.Color.Black;
             this.lblID.Location = new System.Drawing.Point(2, 5);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(37, 26);
@@ -120,7 +121,7 @@
             // dataGridView11
             // 
             this.dataGridView11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView11.Location = new System.Drawing.Point(354, 96);
@@ -131,7 +132,7 @@
             // dataGridView4
             // 
             this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(354, 67);
@@ -155,7 +156,7 @@
             this.lblValor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblValor.AutoSize = true;
             this.lblValor.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValor.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblValor.ForeColor = System.Drawing.Color.Black;
             this.lblValor.Location = new System.Drawing.Point(361, 71);
             this.lblValor.Name = "lblValor";
             this.lblValor.Size = new System.Drawing.Size(69, 19);
@@ -177,7 +178,7 @@
             this.lblDescrição.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescrição.AutoSize = true;
             this.lblDescrição.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescrição.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDescrição.ForeColor = System.Drawing.Color.Black;
             this.lblDescrição.Location = new System.Drawing.Point(3, 78);
             this.lblDescrição.Name = "lblDescrição";
             this.lblDescrição.Size = new System.Drawing.Size(79, 19);
@@ -199,7 +200,7 @@
             // btnDeletar
             // 
             this.btnDeletar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnDeletar.BackColor = System.Drawing.Color.Transparent;
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeletar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -215,7 +216,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(1, 65);
@@ -226,7 +227,7 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
@@ -237,7 +238,7 @@
             // dataGridView2
             // 
             this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(354, 35);
@@ -251,7 +252,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIdentificação.AutoSize = true;
             this.lblIdentificação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificação.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdentificação.ForeColor = System.Drawing.Color.Black;
             this.lblIdentificação.Location = new System.Drawing.Point(361, 40);
             this.lblIdentificação.Name = "lblIdentificação";
             this.lblIdentificação.Size = new System.Drawing.Size(101, 19);
@@ -275,7 +276,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(3, 40);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -286,8 +287,9 @@
             // 
             this.lblDeletarConta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblDeletarConta.AutoSize = true;
+            this.lblDeletarConta.BackColor = System.Drawing.Color.Transparent;
             this.lblDeletarConta.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDeletarConta.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDeletarConta.ForeColor = System.Drawing.Color.Black;
             this.lblDeletarConta.Location = new System.Drawing.Point(242, 9);
             this.lblDeletarConta.Name = "lblDeletarConta";
             this.lblDeletarConta.Size = new System.Drawing.Size(182, 28);
@@ -299,18 +301,20 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Liriou_s_Burguer.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblDeletarConta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDeleteAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delete Account";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
@@ -326,7 +330,7 @@
 
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.NumericUpDown nudId;
+        private System.Windows.Forms.NumericUpDown nudID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.DataGridView dataGridView11;
         private System.Windows.Forms.DataGridView dataGridView4;

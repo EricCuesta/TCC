@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQueryAccount));
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarConta = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -61,7 +62,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Controls.Add(this.dgvConsultarConta);
             this.panel.Controls.Add(this.mtxtIdentificação);
             this.panel.Controls.Add(this.btnConsultar);
@@ -84,11 +85,11 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvConsultarConta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvConsultarConta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarConta.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dgvConsultarConta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -103,11 +104,11 @@
             this.Coluna5,
             this.Coluna6});
             this.dgvConsultarConta.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConsultarConta.Location = new System.Drawing.Point(3, 77);
+            this.dgvConsultarConta.Location = new System.Drawing.Point(0, 77);
             this.dgvConsultarConta.Name = "dgvConsultarConta";
             this.dgvConsultarConta.ReadOnly = true;
             this.dgvConsultarConta.RowTemplate.Height = 25;
-            this.dgvConsultarConta.Size = new System.Drawing.Size(704, 338);
+            this.dgvConsultarConta.Size = new System.Drawing.Size(710, 341);
             this.dgvConsultarConta.TabIndex = 654;
             this.dgvConsultarConta.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarConta_CellDoubleClick);
             // 
@@ -184,7 +185,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultar.BackColor = System.Drawing.Color.Transparent;
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -200,7 +201,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(1, 33);
@@ -211,7 +212,7 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
@@ -222,7 +223,7 @@
             // dataGridView2
             // 
             this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(354, 3);
@@ -236,7 +237,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblIdentificação.AutoSize = true;
             this.lblIdentificação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdentificação.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdentificação.ForeColor = System.Drawing.Color.Black;
             this.lblIdentificação.Location = new System.Drawing.Point(361, 8);
             this.lblIdentificação.Name = "lblIdentificação";
             this.lblIdentificação.Size = new System.Drawing.Size(101, 19);
@@ -261,7 +262,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(3, 8);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -272,8 +273,9 @@
             // 
             this.lblConsultarConta.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblConsultarConta.AutoSize = true;
+            this.lblConsultarConta.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultarConta.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultarConta.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblConsultarConta.ForeColor = System.Drawing.Color.Black;
             this.lblConsultarConta.Location = new System.Drawing.Point(242, 9);
             this.lblConsultarConta.Name = "lblConsultarConta";
             this.lblConsultarConta.Size = new System.Drawing.Size(211, 28);
@@ -292,11 +294,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Liriou_s_Burguer.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblConsultarConta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmQueryAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Query Account";

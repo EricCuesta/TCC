@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecovery));
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnVerificar = new System.Windows.Forms.Button();
             this.lblAlterarSenha = new System.Windows.Forms.Label();
@@ -224,7 +225,7 @@
             this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtCelular.ForeColor = System.Drawing.Color.White;
-            this.mtxtCelular.Location = new System.Drawing.Point(75, 6);
+            this.mtxtCelular.Location = new System.Drawing.Point(75, 5);
             this.mtxtCelular.Mask = "(000) 00000-0000";
             this.mtxtCelular.Name = "mtxtCelular";
             this.mtxtCelular.Size = new System.Drawing.Size(319, 19);
@@ -235,7 +236,7 @@
             this.lblCelular.AutoSize = true;
             this.lblCelular.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCelular.ForeColor = System.Drawing.Color.White;
-            this.lblCelular.Location = new System.Drawing.Point(8, 6);
+            this.lblCelular.Location = new System.Drawing.Point(8, 5);
             this.lblCelular.Name = "lblCelular";
             this.lblCelular.Size = new System.Drawing.Size(61, 19);
             this.lblCelular.TabIndex = 507;
@@ -258,10 +259,10 @@
             this.mtxtCPF.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mtxtCPF.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtCPF.ForeColor = System.Drawing.Color.White;
-            this.mtxtCPF.Location = new System.Drawing.Point(57, 5);
+            this.mtxtCPF.Location = new System.Drawing.Point(53, 5);
             this.mtxtCPF.Mask = "000000000/00";
             this.mtxtCPF.Name = "mtxtCPF";
-            this.mtxtCPF.Size = new System.Drawing.Size(337, 19);
+            this.mtxtCPF.Size = new System.Drawing.Size(341, 19);
             this.mtxtCPF.TabIndex = 508;
             this.mtxtCPF.ValidatingType = typeof(System.DateTime);
             // 
@@ -304,10 +305,10 @@
             this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.mtxtRG.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtRG.ForeColor = System.Drawing.Color.White;
-            this.mtxtRG.Location = new System.Drawing.Point(51, 5);
+            this.mtxtRG.Location = new System.Drawing.Point(47, 5);
             this.mtxtRG.Mask = "00.000.000-0";
             this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(343, 19);
+            this.mtxtRG.Size = new System.Drawing.Size(347, 19);
             this.mtxtRG.TabIndex = 247;
             // 
             // panelOpção
@@ -363,6 +364,7 @@
             this.Controls.Add(this.panelOpção);
             this.Controls.Add(this.panelTítulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRecovery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recovery";

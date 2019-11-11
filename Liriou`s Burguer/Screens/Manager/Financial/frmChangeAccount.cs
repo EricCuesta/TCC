@@ -17,9 +17,9 @@ namespace Liriou_s_Burguer.Screens.Manager.Financial
             InitializeComponent();
         }
 
-        private void nudId_ValueChanged(object sender, EventArgs e)
+        private void nudID_ValueChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.AccountBusiness busaccount = new Business.AccountBusiness();
             Database.Entities.tb_account account = busaccount.ConsultarPorID(id);
@@ -45,7 +45,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Financial
             try
             {
                 Database.Entities.tb_account account = new Database.Entities.tb_account();
-                account.id_account = Convert.ToInt32(nudId.Value);
+                account.id_account = Convert.ToInt32(nudID.Value);
                 account.nm_account = txtNome.Text.Trim();
                 account.nr_identification = mtxtIdentificação.Text.Trim();
                 account.vl_value = Convert.ToDecimal(nudValor.Value);

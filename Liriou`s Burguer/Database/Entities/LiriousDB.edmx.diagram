@@ -4,30 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4bcd63feca3d44769ac3559947fcc540" Name="Diagram1">
-        <EntityTypeShape EntityType="liriousdbModel.tb_account" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_bankaccount" Width="1.5" PointX="5.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_benefits" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_client" Width="1.5" PointX="5.75" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_cpp" Width="1.5" PointX="13" PointY="9" IsExpanded="true" />
+      <Diagram DiagramId="398d9933d9344f50a4b46175c2709a5d" Name="Diagram1">
+        <EntityTypeShape EntityType="liriousdbModel.tb_account" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_bankaccount" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_benefits" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_client" Width="1.5" PointX="9.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_cpp" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_department" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_discounts" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_employees" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_enterprise" Width="1.5" PointX="10.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_enterprise" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_financial" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_function" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_iten" Width="1.5" PointX="10.25" PointY="4.5" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_points" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_product" Width="1.5" PointX="8" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_provider" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_sale" Width="1.5" PointX="8" PointY="6.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_supply" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_product" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_provider" Width="1.5" PointX="11.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_supply" Width="1.5" PointX="7.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="liriousdbModel.tb_timecard" Width="1.5" PointX="3" PointY="16.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_cnae" Width="1.5" PointX="13" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="liriousdbModel.tb_crm" Width="1.5" PointX="8" PointY="9.125" IsExpanded="true" />
-        <AssociationConnector Association="liriousdbModel.tb_crm_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="liriousdbModel.tb_iten_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="liriousdbModel.tb_sale_ibfk_1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="liriousdbModel.tb_cnae" Width="1.5" PointX="8" PointY="3.75" IsExpanded="true" />
         <AssociationConnector Association="liriousdbModel.tb_cpp_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="liriousdbModel.tb_department_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="liriousdbModel.tb_discounts_ibfk_1" ManuallyRouted="false" />
@@ -36,8 +30,6 @@
         <AssociationConnector Association="liriousdbModel.tb_points_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="liriousdbModel.tb_timecard_ibfk_1" ManuallyRouted="false" />
         <AssociationConnector Association="liriousdbModel.tb_cnae_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="liriousdbModel.tb_iten_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="liriousdbModel.tb_iten_ibfk_3" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

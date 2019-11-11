@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterEmployee1));
             this.panel = new System.Windows.Forms.Panel();
+            this.mtxtCódigoDoBanco = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtAgênciaDoBanco = new System.Windows.Forms.MaskedTextBox();
+            this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
+            this.txtNomeDoBanco = new System.Windows.Forms.TextBox();
             this.dtpDemissão = new System.Windows.Forms.DateTimePicker();
             this.dtpContratação = new System.Windows.Forms.DateTimePicker();
-            this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
-            this.txtAgênciaDoBanco = new System.Windows.Forms.TextBox();
-            this.txtCódigoDoBanco = new System.Windows.Forms.TextBox();
-            this.txtNomeDoBanco = new System.Windows.Forms.TextBox();
             this.nudSalárioBruto = new System.Windows.Forms.NumericUpDown();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.mtxtTérminoIntervalo = new System.Windows.Forms.MaskedTextBox();
@@ -46,7 +47,7 @@
             this.dataGridView21 = new System.Windows.Forms.DataGridView();
             this.lblInícioIntervalo = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtInício = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView22 = new System.Windows.Forms.DataGridView();
             this.dataGridView20 = new System.Windows.Forms.DataGridView();
             this.dataGridView16 = new System.Windows.Forms.DataGridView();
@@ -120,13 +121,13 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.Controls.Add(this.mtxtCódigoDoBanco);
+            this.panel.Controls.Add(this.mtxtAgênciaDoBanco);
+            this.panel.Controls.Add(this.cboTipoDePessoa);
+            this.panel.Controls.Add(this.txtNomeDoBanco);
             this.panel.Controls.Add(this.dtpDemissão);
             this.panel.Controls.Add(this.dtpContratação);
-            this.panel.Controls.Add(this.cboTipoDePessoa);
-            this.panel.Controls.Add(this.txtAgênciaDoBanco);
-            this.panel.Controls.Add(this.txtCódigoDoBanco);
-            this.panel.Controls.Add(this.txtNomeDoBanco);
             this.panel.Controls.Add(this.nudSalárioBruto);
             this.panel.Controls.Add(this.btnSalvar);
             this.panel.Controls.Add(this.mtxtTérminoIntervalo);
@@ -138,7 +139,7 @@
             this.panel.Controls.Add(this.dataGridView21);
             this.panel.Controls.Add(this.lblInícioIntervalo);
             this.panel.Controls.Add(this.label2);
-            this.panel.Controls.Add(this.maskedTextBox1);
+            this.panel.Controls.Add(this.mtxtInício);
             this.panel.Controls.Add(this.dataGridView22);
             this.panel.Controls.Add(this.dataGridView20);
             this.panel.Controls.Add(this.dataGridView16);
@@ -183,6 +184,56 @@
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 564;
             // 
+            // mtxtCódigoDoBanco
+            // 
+            this.mtxtCódigoDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCódigoDoBanco.Location = new System.Drawing.Point(424, 134);
+            this.mtxtCódigoDoBanco.Mask = "000";
+            this.mtxtCódigoDoBanco.Name = "mtxtCódigoDoBanco";
+            this.mtxtCódigoDoBanco.Size = new System.Drawing.Size(283, 23);
+            this.mtxtCódigoDoBanco.TabIndex = 709;
+            this.mtxtCódigoDoBanco.ValidatingType = typeof(System.DateTime);
+            // 
+            // mtxtAgênciaDoBanco
+            // 
+            this.mtxtAgênciaDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtAgênciaDoBanco.Location = new System.Drawing.Point(434, 166);
+            this.mtxtAgênciaDoBanco.Mask = "00000-0";
+            this.mtxtAgênciaDoBanco.Name = "mtxtAgênciaDoBanco";
+            this.mtxtAgênciaDoBanco.Size = new System.Drawing.Size(273, 23);
+            this.mtxtAgênciaDoBanco.TabIndex = 708;
+            this.mtxtAgênciaDoBanco.ValidatingType = typeof(System.DateTime);
+            // 
+            // cboTipoDePessoa
+            // 
+            this.cboTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cboTipoDePessoa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cboTipoDePessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipoDePessoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.cboTipoDePessoa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipoDePessoa.FormattingEnabled = true;
+            this.cboTipoDePessoa.Items.AddRange(new object[] {
+            "Física",
+            "Jurídica"});
+            this.cboTipoDePessoa.Location = new System.Drawing.Point(481, 198);
+            this.cboTipoDePessoa.MaxLength = 32;
+            this.cboTipoDePessoa.Name = "cboTipoDePessoa";
+            this.cboTipoDePessoa.Size = new System.Drawing.Size(226, 23);
+            this.cboTipoDePessoa.TabIndex = 707;
+            // 
+            // txtNomeDoBanco
+            // 
+            this.txtNomeDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNomeDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNomeDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomeDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeDoBanco.Location = new System.Drawing.Point(416, 102);
+            this.txtNomeDoBanco.MaxLength = 32;
+            this.txtNomeDoBanco.Name = "txtNomeDoBanco";
+            this.txtNomeDoBanco.Size = new System.Drawing.Size(291, 23);
+            this.txtNomeDoBanco.TabIndex = 706;
+            // 
             // dtpDemissão
             // 
             this.dtpDemissão.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -209,62 +260,6 @@
             this.dtpContratação.TabIndex = 698;
             this.dtpContratação.Value = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             // 
-            // cboTipoDePessoa
-            // 
-            this.cboTipoDePessoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboTipoDePessoa.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cboTipoDePessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTipoDePessoa.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cboTipoDePessoa.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboTipoDePessoa.FormattingEnabled = true;
-            this.cboTipoDePessoa.Items.AddRange(new object[] {
-            "Física",
-            "Jurídica"});
-            this.cboTipoDePessoa.Location = new System.Drawing.Point(481, 199);
-            this.cboTipoDePessoa.MaxLength = 32;
-            this.cboTipoDePessoa.Name = "cboTipoDePessoa";
-            this.cboTipoDePessoa.Size = new System.Drawing.Size(226, 23);
-            this.cboTipoDePessoa.TabIndex = 697;
-            // 
-            // txtAgênciaDoBanco
-            // 
-            this.txtAgênciaDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAgênciaDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtAgênciaDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAgênciaDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAgênciaDoBanco.Location = new System.Drawing.Point(434, 166);
-            this.txtAgênciaDoBanco.MaxLength = 32;
-            this.txtAgênciaDoBanco.Name = "txtAgênciaDoBanco";
-            this.txtAgênciaDoBanco.Size = new System.Drawing.Size(273, 23);
-            this.txtAgênciaDoBanco.TabIndex = 696;
-            // 
-            // txtCódigoDoBanco
-            // 
-            this.txtCódigoDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCódigoDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtCódigoDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCódigoDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCódigoDoBanco.Location = new System.Drawing.Point(424, 134);
-            this.txtCódigoDoBanco.MaxLength = 32;
-            this.txtCódigoDoBanco.Name = "txtCódigoDoBanco";
-            this.txtCódigoDoBanco.Size = new System.Drawing.Size(283, 23);
-            this.txtCódigoDoBanco.TabIndex = 695;
-            // 
-            // txtNomeDoBanco
-            // 
-            this.txtNomeDoBanco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNomeDoBanco.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNomeDoBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomeDoBanco.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeDoBanco.Location = new System.Drawing.Point(416, 102);
-            this.txtNomeDoBanco.MaxLength = 32;
-            this.txtNomeDoBanco.Name = "txtNomeDoBanco";
-            this.txtNomeDoBanco.Size = new System.Drawing.Size(291, 23);
-            this.txtNomeDoBanco.TabIndex = 694;
-            // 
             // nudSalárioBruto
             // 
             this.nudSalárioBruto.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -278,7 +273,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -328,7 +323,7 @@
             // 
             this.lblTérminoServiço.AutoSize = true;
             this.lblTérminoServiço.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTérminoServiço.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTérminoServiço.ForeColor = System.Drawing.Color.Black;
             this.lblTérminoServiço.Location = new System.Drawing.Point(534, 266);
             this.lblTérminoServiço.Name = "lblTérminoServiço";
             this.lblTérminoServiço.Size = new System.Drawing.Size(117, 15);
@@ -337,7 +332,7 @@
             // 
             // dataGridView19
             // 
-            this.dataGridView19.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView19.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView19.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView19.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView19.Location = new System.Drawing.Point(526, 259);
@@ -349,7 +344,7 @@
             // 
             this.lblTérminoIntervalo.AutoSize = true;
             this.lblTérminoIntervalo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTérminoIntervalo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTérminoIntervalo.ForeColor = System.Drawing.Color.Black;
             this.lblTérminoIntervalo.Location = new System.Drawing.Point(348, 266);
             this.lblTérminoIntervalo.Name = "lblTérminoIntervalo";
             this.lblTérminoIntervalo.Size = new System.Drawing.Size(126, 15);
@@ -358,7 +353,7 @@
             // 
             // dataGridView21
             // 
-            this.dataGridView21.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView21.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView21.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView21.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView21.Location = new System.Drawing.Point(336, 259);
@@ -370,7 +365,7 @@
             // 
             this.lblInícioIntervalo.AutoSize = true;
             this.lblInícioIntervalo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInícioIntervalo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblInícioIntervalo.ForeColor = System.Drawing.Color.Black;
             this.lblInícioIntervalo.Location = new System.Drawing.Point(168, 266);
             this.lblInícioIntervalo.Name = "lblInícioIntervalo";
             this.lblInícioIntervalo.Size = new System.Drawing.Size(110, 15);
@@ -381,27 +376,27 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(7, 266);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 683;
             this.label2.Text = "Início do Serviço:";
             // 
-            // maskedTextBox1
+            // mtxtInício
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(114, 262);
-            this.maskedTextBox1.Mask = "00:00";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(40, 23);
-            this.maskedTextBox1.TabIndex = 682;
-            this.maskedTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            this.mtxtInício.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtInício.Location = new System.Drawing.Point(114, 262);
+            this.mtxtInício.Mask = "00:00";
+            this.mtxtInício.Name = "mtxtInício";
+            this.mtxtInício.Size = new System.Drawing.Size(40, 23);
+            this.mtxtInício.TabIndex = 682;
+            this.mtxtInício.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtxtInício.ValidatingType = typeof(System.DateTime);
             // 
             // dataGridView22
             // 
-            this.dataGridView22.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView22.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView22.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView22.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView22.Location = new System.Drawing.Point(160, 259);
@@ -412,7 +407,7 @@
             // dataGridView20
             // 
             this.dataGridView20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView20.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView20.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView20.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView20.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView20.Location = new System.Drawing.Point(0, 289);
@@ -423,7 +418,7 @@
             // dataGridView16
             // 
             this.dataGridView16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView16.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView16.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView16.Location = new System.Drawing.Point(0, 257);
@@ -435,7 +430,7 @@
             // 
             this.lblHorário.AutoSize = true;
             this.lblHorário.Font = new System.Drawing.Font("Candara", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorário.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblHorário.ForeColor = System.Drawing.Color.Black;
             this.lblHorário.Location = new System.Drawing.Point(2, 229);
             this.lblHorário.Name = "lblHorário";
             this.lblHorário.Size = new System.Drawing.Size(86, 26);
@@ -446,7 +441,7 @@
             // 
             this.chkPlanoDental.AutoSize = true;
             this.chkPlanoDental.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkPlanoDental.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkPlanoDental.ForeColor = System.Drawing.Color.Black;
             this.chkPlanoDental.Location = new System.Drawing.Point(201, 193);
             this.chkPlanoDental.Name = "chkPlanoDental";
             this.chkPlanoDental.Size = new System.Drawing.Size(115, 23);
@@ -458,7 +453,7 @@
             // 
             this.chkPlanoDeSáude.AutoSize = true;
             this.chkPlanoDeSáude.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkPlanoDeSáude.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkPlanoDeSáude.ForeColor = System.Drawing.Color.Black;
             this.chkPlanoDeSáude.Location = new System.Drawing.Point(201, 150);
             this.chkPlanoDeSáude.Name = "chkPlanoDeSáude";
             this.chkPlanoDeSáude.Size = new System.Drawing.Size(132, 23);
@@ -470,7 +465,7 @@
             // 
             this.chkSeguroDeVida.AutoSize = true;
             this.chkSeguroDeVida.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkSeguroDeVida.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkSeguroDeVida.ForeColor = System.Drawing.Color.Black;
             this.chkSeguroDeVida.Location = new System.Drawing.Point(201, 108);
             this.chkSeguroDeVida.Name = "chkSeguroDeVida";
             this.chkSeguroDeVida.Size = new System.Drawing.Size(130, 23);
@@ -482,7 +477,7 @@
             // 
             this.chkValeRefeição.AutoSize = true;
             this.chkValeRefeição.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkValeRefeição.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkValeRefeição.ForeColor = System.Drawing.Color.Black;
             this.chkValeRefeição.Location = new System.Drawing.Point(11, 193);
             this.chkValeRefeição.Name = "chkValeRefeição";
             this.chkValeRefeição.Size = new System.Drawing.Size(120, 23);
@@ -494,7 +489,7 @@
             // 
             this.chkValeTransporte.AutoSize = true;
             this.chkValeTransporte.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkValeTransporte.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkValeTransporte.ForeColor = System.Drawing.Color.Black;
             this.chkValeTransporte.Location = new System.Drawing.Point(10, 150);
             this.chkValeTransporte.Name = "chkValeTransporte";
             this.chkValeTransporte.Size = new System.Drawing.Size(135, 23);
@@ -506,7 +501,7 @@
             // 
             this.chkValeAlimentação.AutoSize = true;
             this.chkValeAlimentação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkValeAlimentação.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.chkValeAlimentação.ForeColor = System.Drawing.Color.Black;
             this.chkValeAlimentação.Location = new System.Drawing.Point(10, 108);
             this.chkValeAlimentação.Name = "chkValeAlimentação";
             this.chkValeAlimentação.Size = new System.Drawing.Size(146, 23);
@@ -518,7 +513,7 @@
             // 
             this.lblTipoDePessoa.AutoSize = true;
             this.lblTipoDePessoa.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoDePessoa.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTipoDePessoa.ForeColor = System.Drawing.Color.Black;
             this.lblTipoDePessoa.Location = new System.Drawing.Point(360, 200);
             this.lblTipoDePessoa.Name = "lblTipoDePessoa";
             this.lblTipoDePessoa.Size = new System.Drawing.Size(114, 19);
@@ -529,7 +524,7 @@
             // 
             this.lblAgência.AutoSize = true;
             this.lblAgência.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgência.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblAgência.ForeColor = System.Drawing.Color.Black;
             this.lblAgência.Location = new System.Drawing.Point(360, 168);
             this.lblAgência.Name = "lblAgência";
             this.lblAgência.Size = new System.Drawing.Size(68, 19);
@@ -540,7 +535,7 @@
             // 
             this.lblCódigo.AutoSize = true;
             this.lblCódigo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCódigo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCódigo.ForeColor = System.Drawing.Color.Black;
             this.lblCódigo.Location = new System.Drawing.Point(356, 136);
             this.lblCódigo.Name = "lblCódigo";
             this.lblCódigo.Size = new System.Drawing.Size(62, 19);
@@ -551,7 +546,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(356, 104);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -562,8 +557,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Candara", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(355, 69);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(359, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 26);
             this.label1.TabIndex = 664;
@@ -573,7 +568,7 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCargo.ForeColor = System.Drawing.Color.Black;
             this.lblCargo.Location = new System.Drawing.Point(586, 8);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(54, 19);
@@ -597,7 +592,7 @@
             // 
             // dataGridView18
             // 
-            this.dataGridView18.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView18.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView18.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView18.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView18.Location = new System.Drawing.Point(532, 3);
@@ -623,7 +618,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDepartamento.ForeColor = System.Drawing.Color.Black;
             this.lblDepartamento.Location = new System.Drawing.Point(386, 8);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(113, 19);
@@ -634,7 +629,7 @@
             // 
             this.lblSalárioBruto.AutoSize = true;
             this.lblSalárioBruto.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalárioBruto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSalárioBruto.ForeColor = System.Drawing.Color.Black;
             this.lblSalárioBruto.Location = new System.Drawing.Point(3, 72);
             this.lblSalárioBruto.Name = "lblSalárioBruto";
             this.lblSalárioBruto.Size = new System.Drawing.Size(126, 19);
@@ -645,7 +640,7 @@
             // 
             this.lblDemissão.AutoSize = true;
             this.lblDemissão.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDemissão.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDemissão.ForeColor = System.Drawing.Color.Black;
             this.lblDemissão.Location = new System.Drawing.Point(3, 40);
             this.lblDemissão.Name = "lblDemissão";
             this.lblDemissão.Size = new System.Drawing.Size(134, 19);
@@ -656,7 +651,7 @@
             // 
             this.lblContratação.AutoSize = true;
             this.lblContratação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContratação.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblContratação.ForeColor = System.Drawing.Color.Black;
             this.lblContratação.Location = new System.Drawing.Point(3, 8);
             this.lblContratação.Name = "lblContratação";
             this.lblContratação.Size = new System.Drawing.Size(153, 19);
@@ -666,7 +661,7 @@
             // dataGridView14
             // 
             this.dataGridView14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView14.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView14.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView14.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView14.Location = new System.Drawing.Point(0, 225);
@@ -677,7 +672,7 @@
             // dataGridView15
             // 
             this.dataGridView15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView15.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView15.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView15.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView15.Location = new System.Drawing.Point(354, 193);
@@ -688,7 +683,7 @@
             // dataGridView17
             // 
             this.dataGridView17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView17.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView17.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView17.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView17.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView17.Location = new System.Drawing.Point(354, 195);
@@ -699,7 +694,7 @@
             // dataGridView10
             // 
             this.dataGridView10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView10.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView10.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView10.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView10.Location = new System.Drawing.Point(354, 161);
@@ -710,7 +705,7 @@
             // dataGridView11
             // 
             this.dataGridView11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView11.Location = new System.Drawing.Point(354, 129);
@@ -721,7 +716,7 @@
             // dataGridView12
             // 
             this.dataGridView12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView12.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView12.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView12.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView12.Location = new System.Drawing.Point(354, 163);
@@ -732,7 +727,7 @@
             // dataGridView13
             // 
             this.dataGridView13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView13.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView13.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView13.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView13.Location = new System.Drawing.Point(354, 131);
@@ -743,7 +738,7 @@
             // dataGridView7
             // 
             this.dataGridView7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView7.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView7.Location = new System.Drawing.Point(354, 97);
@@ -754,7 +749,7 @@
             // dataGridView9
             // 
             this.dataGridView9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView9.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView9.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView9.Location = new System.Drawing.Point(1, 97);
@@ -765,7 +760,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(1, 65);
@@ -776,7 +771,7 @@
             // dataGridView5
             // 
             this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Location = new System.Drawing.Point(1, 33);
@@ -787,7 +782,7 @@
             // dataGridView8
             // 
             this.dataGridView8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView8.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Location = new System.Drawing.Point(354, 99);
@@ -798,7 +793,7 @@
             // dataGridView4
             // 
             this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(354, 67);
@@ -809,7 +804,7 @@
             // dataGridView6
             // 
             this.dataGridView6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView6.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Location = new System.Drawing.Point(354, 35);
@@ -820,7 +815,7 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
@@ -831,7 +826,7 @@
             // dataGridView2
             // 
             this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(354, 3);
@@ -843,8 +838,9 @@
             // 
             this.lblCadastrarFuncionário.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCadastrarFuncionário.AutoSize = true;
+            this.lblCadastrarFuncionário.BackColor = System.Drawing.Color.Transparent;
             this.lblCadastrarFuncionário.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrarFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCadastrarFuncionário.ForeColor = System.Drawing.Color.Black;
             this.lblCadastrarFuncionário.Location = new System.Drawing.Point(211, 9);
             this.lblCadastrarFuncionário.Name = "lblCadastrarFuncionário";
             this.lblCadastrarFuncionário.Size = new System.Drawing.Size(288, 28);
@@ -854,8 +850,9 @@
             // 
             // imgVoltar
             // 
+            this.imgVoltar.BackColor = System.Drawing.Color.Transparent;
             this.imgVoltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgVoltar.Image = global::Liriou_s_Burguer.Properties.Resources.Voltar01;
+            this.imgVoltar.Image = global::Liriou_s_Burguer.Properties.Resources.Voltar;
             this.imgVoltar.Location = new System.Drawing.Point(12, 12);
             this.imgVoltar.Name = "imgVoltar";
             this.imgVoltar.Size = new System.Drawing.Size(25, 25);
@@ -868,12 +865,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Liriou_s_Burguer.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.imgVoltar);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblCadastrarFuncionário);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegisterEmployee1";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -960,16 +959,16 @@
         private System.Windows.Forms.DataGridView dataGridView21;
         private System.Windows.Forms.Label lblInícioIntervalo;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox mtxtInício;
         private System.Windows.Forms.DataGridView dataGridView22;
         private System.Windows.Forms.PictureBox imgVoltar;
         private System.Windows.Forms.Button btnSalvar;
         public System.Windows.Forms.NumericUpDown nudSalárioBruto;
-        protected System.Windows.Forms.TextBox txtAgênciaDoBanco;
-        protected System.Windows.Forms.TextBox txtCódigoDoBanco;
-        protected System.Windows.Forms.TextBox txtNomeDoBanco;
-        public System.Windows.Forms.ComboBox cboTipoDePessoa;
         public System.Windows.Forms.DateTimePicker dtpDemissão;
         public System.Windows.Forms.DateTimePicker dtpContratação;
+        private System.Windows.Forms.MaskedTextBox mtxtCódigoDoBanco;
+        private System.Windows.Forms.MaskedTextBox mtxtAgênciaDoBanco;
+        public System.Windows.Forms.ComboBox cboTipoDePessoa;
+        protected System.Windows.Forms.TextBox txtNomeDoBanco;
     }
 }

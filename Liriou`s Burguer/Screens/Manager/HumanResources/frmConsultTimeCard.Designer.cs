@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultTimeCard));
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarCartãoDePonto = new System.Windows.Forms.DataGridView();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +87,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Controls.Add(this.dgvConsultarCartãoDePonto);
             this.panel.Controls.Add(this.dataGridView7);
             this.panel.Controls.Add(this.dataGridView9);
@@ -128,10 +129,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvConsultarCartãoDePonto.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvConsultarCartãoDePonto.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarCartãoDePonto.BackgroundColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -146,9 +147,9 @@
             this.Coluna5,
             this.Coluna6,
             this.Coluna7});
-            this.dgvConsultarCartãoDePonto.Location = new System.Drawing.Point(3, 163);
+            this.dgvConsultarCartãoDePonto.Location = new System.Drawing.Point(0, 163);
             this.dgvConsultarCartãoDePonto.Name = "dgvConsultarCartãoDePonto";
-            this.dgvConsultarCartãoDePonto.Size = new System.Drawing.Size(703, 252);
+            this.dgvConsultarCartãoDePonto.Size = new System.Drawing.Size(710, 255);
             this.dgvConsultarCartãoDePonto.TabIndex = 691;
             // 
             // Coluna1
@@ -196,10 +197,10 @@
             // dataGridView7
             // 
             this.dataGridView7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView7.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView7.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Location = new System.Drawing.Point(1, 158);
+            this.dataGridView7.Location = new System.Drawing.Point(1, 157);
             this.dataGridView7.Name = "dataGridView7";
             this.dataGridView7.Size = new System.Drawing.Size(709, 2);
             this.dataGridView7.TabIndex = 690;
@@ -207,7 +208,7 @@
             // dataGridView9
             // 
             this.dataGridView9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView9.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView9.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView9.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView9.Location = new System.Drawing.Point(470, 97);
@@ -218,7 +219,7 @@
             // dataGridView8
             // 
             this.dataGridView8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView8.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Location = new System.Drawing.Point(238, 97);
@@ -229,7 +230,7 @@
             // dataGridView11
             // 
             this.dataGridView11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView11.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView11.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView11.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView11.Location = new System.Drawing.Point(71, 97);
@@ -241,7 +242,7 @@
             // 
             this.lblHorarioTérmino.AutoSize = true;
             this.lblHorarioTérmino.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorarioTérmino.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblHorarioTérmino.ForeColor = System.Drawing.Color.Black;
             this.lblHorarioTérmino.Location = new System.Drawing.Point(564, 126);
             this.lblHorarioTérmino.Name = "lblHorarioTérmino";
             this.lblHorarioTérmino.Size = new System.Drawing.Size(49, 19);
@@ -252,7 +253,7 @@
             // 
             this.lblHorárioInícioTérminoDoIntervalo.AutoSize = true;
             this.lblHorárioInícioTérminoDoIntervalo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorárioInícioTérminoDoIntervalo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblHorárioInícioTérminoDoIntervalo.ForeColor = System.Drawing.Color.Black;
             this.lblHorárioInícioTérminoDoIntervalo.Location = new System.Drawing.Point(306, 126);
             this.lblHorárioInícioTérminoDoIntervalo.Name = "lblHorárioInícioTérminoDoIntervalo";
             this.lblHorárioInícioTérminoDoIntervalo.Size = new System.Drawing.Size(99, 19);
@@ -263,7 +264,7 @@
             // 
             this.lblHorárioInício.AutoSize = true;
             this.lblHorárioInício.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorárioInício.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblHorárioInício.ForeColor = System.Drawing.Color.Black;
             this.lblHorárioInício.Location = new System.Drawing.Point(127, 126);
             this.lblHorárioInício.Name = "lblHorárioInício";
             this.lblHorárioInício.Size = new System.Drawing.Size(49, 19);
@@ -274,7 +275,7 @@
             // 
             this.lblTérmino.AutoSize = true;
             this.lblTérmino.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTérmino.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblTérmino.ForeColor = System.Drawing.Color.Black;
             this.lblTérmino.Location = new System.Drawing.Point(555, 100);
             this.lblTérmino.Name = "lblTérmino";
             this.lblTérmino.Size = new System.Drawing.Size(65, 19);
@@ -285,7 +286,7 @@
             // 
             this.lblInícioTérminoDoIntervalo.AutoSize = true;
             this.lblInícioTérminoDoIntervalo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInícioTérminoDoIntervalo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblInícioTérminoDoIntervalo.ForeColor = System.Drawing.Color.Black;
             this.lblInícioTérminoDoIntervalo.Location = new System.Drawing.Point(257, 100);
             this.lblInícioTérminoDoIntervalo.Name = "lblInícioTérminoDoIntervalo";
             this.lblInícioTérminoDoIntervalo.Size = new System.Drawing.Size(192, 19);
@@ -296,7 +297,7 @@
             // 
             this.lblInício.AutoSize = true;
             this.lblInício.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInício.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblInício.ForeColor = System.Drawing.Color.Black;
             this.lblInício.Location = new System.Drawing.Point(130, 100);
             this.lblInício.Name = "lblInício";
             this.lblInício.Size = new System.Drawing.Size(46, 19);
@@ -307,7 +308,7 @@
             // 
             this.lblHorárioDeTrabalho.AutoSize = true;
             this.lblHorárioDeTrabalho.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorárioDeTrabalho.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblHorárioDeTrabalho.ForeColor = System.Drawing.Color.Black;
             this.lblHorárioDeTrabalho.Location = new System.Drawing.Point(3, 100);
             this.lblHorárioDeTrabalho.Name = "lblHorárioDeTrabalho";
             this.lblHorárioDeTrabalho.Size = new System.Drawing.Size(61, 38);
@@ -327,7 +328,7 @@
             // 
             this.lblMêsReferente.AutoSize = true;
             this.lblMêsReferente.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMêsReferente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblMêsReferente.ForeColor = System.Drawing.Color.Black;
             this.lblMêsReferente.Location = new System.Drawing.Point(529, 39);
             this.lblMêsReferente.Name = "lblMêsReferente";
             this.lblMêsReferente.Size = new System.Drawing.Size(114, 19);
@@ -338,7 +339,7 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCargo.ForeColor = System.Drawing.Color.Black;
             this.lblCargo.Location = new System.Drawing.Point(322, 39);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(54, 19);
@@ -369,7 +370,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDepartamento.ForeColor = System.Drawing.Color.Black;
             this.lblDepartamento.Location = new System.Drawing.Point(61, 38);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(113, 19);
@@ -393,7 +394,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(3, 8);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -413,7 +414,7 @@
             // 
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblRG.ForeColor = System.Drawing.Color.Black;
             this.lblRG.Location = new System.Drawing.Point(361, 8);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
@@ -423,7 +424,7 @@
             // dataGridView6
             // 
             this.dataGridView6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView6.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView6.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView6.Location = new System.Drawing.Point(470, 35);
@@ -434,7 +435,7 @@
             // dataGridView4
             // 
             this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(238, 35);
@@ -445,7 +446,7 @@
             // dataGridView5
             // 
             this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Location = new System.Drawing.Point(1, 95);
@@ -456,7 +457,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(1, 33);
@@ -467,7 +468,7 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
@@ -478,7 +479,7 @@
             // dataGridView2
             // 
             this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(354, 3);
@@ -490,8 +491,9 @@
             // 
             this.lblCadastrarFuncionário.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblCadastrarFuncionário.AutoSize = true;
+            this.lblCadastrarFuncionário.BackColor = System.Drawing.Color.Transparent;
             this.lblCadastrarFuncionário.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCadastrarFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCadastrarFuncionário.ForeColor = System.Drawing.Color.Black;
             this.lblCadastrarFuncionário.Location = new System.Drawing.Point(189, 9);
             this.lblCadastrarFuncionário.Name = "lblCadastrarFuncionário";
             this.lblCadastrarFuncionário.Size = new System.Drawing.Size(334, 28);
@@ -503,11 +505,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Liriou_s_Burguer.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblCadastrarFuncionário);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultTimeCard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consult Time Card";

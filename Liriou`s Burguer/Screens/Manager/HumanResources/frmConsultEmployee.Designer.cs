@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultEmployee));
             this.panel = new System.Windows.Forms.Panel();
             this.btnConsulatar = new System.Windows.Forms.Button();
             this.cboSexo = new System.Windows.Forms.ComboBox();
@@ -82,7 +83,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Controls.Add(this.btnConsulatar);
             this.panel.Controls.Add(this.cboSexo);
             this.panel.Controls.Add(this.lblSexo);
@@ -110,7 +111,7 @@
             // 
             // btnConsulatar
             // 
-            this.btnConsulatar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsulatar.BackColor = System.Drawing.Color.Transparent;
             this.btnConsulatar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsulatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsulatar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -141,7 +142,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSexo.ForeColor = System.Drawing.Color.Black;
             this.lblSexo.Location = new System.Drawing.Point(3, 69);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(63, 19);
@@ -161,7 +162,7 @@
             // 
             this.lblNascimento.AutoSize = true;
             this.lblNascimento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNascimento.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNascimento.ForeColor = System.Drawing.Color.Black;
             this.lblNascimento.Location = new System.Drawing.Point(3, 40);
             this.lblNascimento.Name = "lblNascimento";
             this.lblNascimento.Size = new System.Drawing.Size(144, 19);
@@ -171,7 +172,7 @@
             // dataGridView5
             // 
             this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Location = new System.Drawing.Point(1, 97);
@@ -181,7 +182,7 @@
             // 
             // dataGridView4
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(353, 35);
@@ -193,7 +194,7 @@
             // 
             this.lblCargo.AutoSize = true;
             this.lblCargo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCargo.ForeColor = System.Drawing.Color.Black;
             this.lblCargo.Location = new System.Drawing.Point(585, 40);
             this.lblCargo.Name = "lblCargo";
             this.lblCargo.Size = new System.Drawing.Size(54, 19);
@@ -213,7 +214,7 @@
             // 
             // dataGridView18
             // 
-            this.dataGridView18.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView18.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView18.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView18.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView18.Location = new System.Drawing.Point(531, 35);
@@ -236,7 +237,7 @@
             // 
             this.lblDepartamento.AutoSize = true;
             this.lblDepartamento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDepartamento.ForeColor = System.Drawing.Color.Black;
             this.lblDepartamento.Location = new System.Drawing.Point(385, 40);
             this.lblDepartamento.Name = "lblDepartamento";
             this.lblDepartamento.Size = new System.Drawing.Size(113, 19);
@@ -251,10 +252,10 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvConsultarEmpregado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvConsultarEmpregado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarEmpregado.BackgroundColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -277,9 +278,9 @@
             this.Coluna13,
             this.Coluna14,
             this.Coluna15});
-            this.dgvConsultarEmpregado.Location = new System.Drawing.Point(3, 141);
+            this.dgvConsultarEmpregado.Location = new System.Drawing.Point(0, 141);
             this.dgvConsultarEmpregado.Name = "dgvConsultarEmpregado";
-            this.dgvConsultarEmpregado.Size = new System.Drawing.Size(703, 274);
+            this.dgvConsultarEmpregado.Size = new System.Drawing.Size(710, 277);
             this.dgvConsultarEmpregado.TabIndex = 691;
             // 
             // Coluna1
@@ -390,7 +391,7 @@
             this.txtNome.Location = new System.Drawing.Point(63, 6);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(285, 23);
+            this.txtNome.Size = new System.Drawing.Size(284, 23);
             this.txtNome.TabIndex = 650;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
@@ -398,7 +399,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(3, 8);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -418,7 +419,7 @@
             // 
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblRG.ForeColor = System.Drawing.Color.Black;
             this.lblRG.Location = new System.Drawing.Point(361, 8);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
@@ -428,7 +429,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(1, 33);
@@ -439,7 +440,7 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
@@ -450,10 +451,10 @@
             // dataGridView2
             // 
             this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(354, 3);
+            this.dataGridView2.Location = new System.Drawing.Point(353, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(2, 30);
             this.dataGridView2.TabIndex = 597;
@@ -462,8 +463,9 @@
             // 
             this.lblConsultarFuncionário.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblConsultarFuncionário.AutoSize = true;
+            this.lblConsultarFuncionário.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultarFuncionário.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultarFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblConsultarFuncionário.ForeColor = System.Drawing.Color.Black;
             this.lblConsultarFuncionário.Location = new System.Drawing.Point(218, 9);
             this.lblConsultarFuncionário.Name = "lblConsultarFuncionário";
             this.lblConsultarFuncionário.Size = new System.Drawing.Size(278, 28);
@@ -475,11 +477,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Liriou_s_Burguer.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblConsultarFuncionário);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consult Employee";

@@ -17,9 +17,9 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
             InitializeComponent();
         }
 
-        private void nudId_ValueChanged(object sender, EventArgs e)
+        private void nudID_ValueChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.ProviderBusiness busprovider = new Business.ProviderBusiness();
             Database.Entities.tb_provider provider = busprovider.ConsultarPorID(id);
@@ -71,7 +71,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.ProviderBusiness busclient = new Business.ProviderBusiness();
             busclient.Remover(id);

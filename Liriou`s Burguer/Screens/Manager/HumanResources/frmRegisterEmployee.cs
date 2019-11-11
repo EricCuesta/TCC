@@ -43,7 +43,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                     nr_cpf = mtxtCPF.Text.Trim(),
                     nr_dependents = Convert.ToInt32(nudDependentes.Value),
                     ds_sex = cboSexo.Text,
-                    dt_birth = dtpNascimento.Value.ToLongDateString(),
+                    dt_birth = dtpNascimento.Value.ToShortDateString(),
                     ds_state = cboEstado.Text,
                     nr_cep = mtxtCEP.Text.Trim(),
                     ds_note = txtComplemento.Text.Trim(),
@@ -63,9 +63,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 Business.EmployeesBusiness db = new Business.EmployeesBusiness();
                 db.Inserir(employees);
 
-                frmRegisterEmployee1 tela = new frmRegisterEmployee1();
-                this.Hide();
-                tela.Show();
+                frmMenu.Current.openContedor(new frmRegisterEmployee1());
             }
             catch (ArgumentException ex)
             {
@@ -79,28 +77,44 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void InserirModel()
         {
-            EmployeesModel.firstName = txtNome.Text;
-            EmployeesModel.lastName = txtSenha.Text;
-            EmployeesModel.RG = mtxtRG.Text;
-            EmployeesModel.CPF = mtxtCPF.Text;
-            EmployeesModel.dependents = Convert.ToInt32(nudDependentes.Value);
-            EmployeesModel.sex = cboSexo.Text;
-            EmployeesModel.birth = dtpNascimento.Value.ToString();
-            EmployeesModel.state = cboEstado.Text;
-            EmployeesModel.CEP = mtxtCEP.Text;
-            EmployeesModel.address = txtEndereço.Text;
-            EmployeesModel.note = txtComplemento.Text;
-            EmployeesModel.cellphone = mtxtCelular.Text;
-            EmployeesModel.tellphone = mtxtTelefone.Text;
-            EmployeesModel.email = txtEmail.Text;
-            EmployeesModel.password = txtSenha.Text;
-            EmployeesModel.employeer = rdbFuncionário.Checked;
-            EmployeesModel.manager = rdbGerente.Checked;
-            EmployeesModel.CRM = chkCRM.Checked;
-            EmployeesModel.Provider = chkFornecedor.Checked;
-            EmployeesModel.stock = chkEstoque.Checked;
-            EmployeesModel.RH = chkRH.Checked;
-            EmployeesModel.financial = chkFinanceiro.Checked;
+            Model.EmployeesModel.firstName = txtNome.Text;
+            Model.EmployeesModel.lastName = txtSenha.Text;
+            Model.EmployeesModel.RG = mtxtRG.Text;
+            Model.EmployeesModel.CPF = mtxtCPF.Text;
+            Model.EmployeesModel.dependents = Convert.ToInt32(nudDependentes.Value);
+            Model.EmployeesModel.sex = cboSexo.Text;
+            Model.EmployeesModel.birth = dtpNascimento.Value.ToShortDateString();
+            Model.EmployeesModel.state = cboEstado.Text;
+            Model.EmployeesModel.CEP = mtxtCEP.Text;
+            Model.EmployeesModel.address = txtEndereço.Text;
+            Model.EmployeesModel.note = txtComplemento.Text;
+            Model.EmployeesModel.cellphone = mtxtCelular.Text;
+            Model.EmployeesModel.tellphone = mtxtTelefone.Text;
+            Model.EmployeesModel.email = txtEmail.Text;
+            Model.EmployeesModel.password = txtSenha.Text;
+            Model.EmployeesModel.employeer = rdbFuncionário.Checked;
+            Model.EmployeesModel.manager = rdbGerente.Checked;
+            Model.EmployeesModel.CRM = chkCRM.Checked;
+            Model.EmployeesModel.Provider = chkFornecedor.Checked;
+            Model.EmployeesModel.stock = chkEstoque.Checked;
+            Model.EmployeesModel.RH = chkRH.Checked;
+            Model.EmployeesModel.financial = chkFinanceiro.Checked;
+        }
+
+        private void rdbFuncionário_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbFuncionário.Checked == true)
+            {
+                panelFunções.Visible = true;
+            }
+        }
+
+        private void rdbGerente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbGerente.Checked == true)
+            {
+                panelFunções.Visible = false;
+            }
         }
     }
 }

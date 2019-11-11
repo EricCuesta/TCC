@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPayroll));
             this.lblFolhaDePagamento = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.dataGridView8 = new System.Windows.Forms.DataGridView();
@@ -36,6 +37,7 @@
             this.lblBruto = new System.Windows.Forms.Label();
             this.lblSalárioBruto1 = new System.Windows.Forms.Label();
             this.groupProventos = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblHorasÁPagar = new System.Windows.Forms.Label();
             this.lblSalário = new System.Windows.Forms.Label();
             this.lblDependentes = new System.Windows.Forms.Label();
@@ -92,7 +94,6 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             this.groupProventos.SuspendLayout();
@@ -110,8 +111,9 @@
             // lblFolhaDePagamento
             // 
             this.lblFolhaDePagamento.AutoSize = true;
+            this.lblFolhaDePagamento.BackColor = System.Drawing.Color.Transparent;
             this.lblFolhaDePagamento.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFolhaDePagamento.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblFolhaDePagamento.ForeColor = System.Drawing.Color.Black;
             this.lblFolhaDePagamento.Location = new System.Drawing.Point(226, 9);
             this.lblFolhaDePagamento.Name = "lblFolhaDePagamento";
             this.lblFolhaDePagamento.Size = new System.Drawing.Size(258, 28);
@@ -123,7 +125,7 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Controls.Add(this.dataGridView8);
             this.panel.Controls.Add(this.lblLíquido);
             this.panel.Controls.Add(this.lblLíquido1);
@@ -149,7 +151,7 @@
             // 
             // dataGridView8
             // 
-            this.dataGridView8.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView8.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView8.Location = new System.Drawing.Point(24, 386);
@@ -160,8 +162,9 @@
             // lblLíquido
             // 
             this.lblLíquido.AutoSize = true;
+            this.lblLíquido.BackColor = System.Drawing.Color.Transparent;
             this.lblLíquido.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLíquido.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLíquido.ForeColor = System.Drawing.Color.Black;
             this.lblLíquido.Location = new System.Drawing.Point(536, 392);
             this.lblLíquido.Name = "lblLíquido";
             this.lblLíquido.Size = new System.Drawing.Size(138, 19);
@@ -171,8 +174,9 @@
             // lblLíquido1
             // 
             this.lblLíquido1.AutoSize = true;
+            this.lblLíquido1.BackColor = System.Drawing.Color.Transparent;
             this.lblLíquido1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLíquido1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblLíquido1.ForeColor = System.Drawing.Color.Black;
             this.lblLíquido1.Location = new System.Drawing.Point(466, 394);
             this.lblLíquido1.Name = "lblLíquido1";
             this.lblLíquido1.Size = new System.Drawing.Size(65, 16);
@@ -182,8 +186,9 @@
             // lblBruto
             // 
             this.lblBruto.AutoSize = true;
+            this.lblBruto.BackColor = System.Drawing.Color.Transparent;
             this.lblBruto.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBruto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblBruto.ForeColor = System.Drawing.Color.Black;
             this.lblBruto.Location = new System.Drawing.Point(79, 392);
             this.lblBruto.Name = "lblBruto";
             this.lblBruto.Size = new System.Drawing.Size(138, 19);
@@ -193,8 +198,9 @@
             // lblSalárioBruto1
             // 
             this.lblSalárioBruto1.AutoSize = true;
+            this.lblSalárioBruto1.BackColor = System.Drawing.Color.Transparent;
             this.lblSalárioBruto1.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalárioBruto1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSalárioBruto1.ForeColor = System.Drawing.Color.Black;
             this.lblSalárioBruto1.Location = new System.Drawing.Point(21, 394);
             this.lblSalárioBruto1.Name = "lblSalárioBruto1";
             this.lblSalárioBruto1.Size = new System.Drawing.Size(52, 16);
@@ -203,6 +209,7 @@
             // 
             // groupProventos
             // 
+            this.groupProventos.BackColor = System.Drawing.Color.Transparent;
             this.groupProventos.Controls.Add(this.label1);
             this.groupProventos.Controls.Add(this.lblHorasÁPagar);
             this.groupProventos.Controls.Add(this.lblSalário);
@@ -218,13 +225,24 @@
             this.groupProventos.Controls.Add(this.lblNulo11);
             this.groupProventos.Controls.Add(this.lblNulo12);
             this.groupProventos.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupProventos.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupProventos.ForeColor = System.Drawing.Color.Black;
             this.groupProventos.Location = new System.Drawing.Point(467, 103);
             this.groupProventos.Name = "groupProventos";
             this.groupProventos.Size = new System.Drawing.Size(217, 284);
             this.groupProventos.TabIndex = 677;
             this.groupProventos.TabStop = false;
             this.groupProventos.Text = "Proventos";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(108, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 15);
+            this.label1.TabIndex = 198;
+            this.label1.Text = "__";
             // 
             // lblHorasÁPagar
             // 
@@ -368,6 +386,7 @@
             // 
             // groupDespesas
             // 
+            this.groupDespesas.BackColor = System.Drawing.Color.Transparent;
             this.groupDespesas.Controls.Add(this.lblPA);
             this.groupDespesas.Controls.Add(this.lblFGTS);
             this.groupDespesas.Controls.Add(this.lblINSS);
@@ -382,7 +401,7 @@
             this.groupDespesas.Controls.Add(this.lblValeTransporte);
             this.groupDespesas.Controls.Add(this.lblNulo);
             this.groupDespesas.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupDespesas.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupDespesas.ForeColor = System.Drawing.Color.Black;
             this.groupDespesas.Location = new System.Drawing.Point(247, 103);
             this.groupDespesas.Name = "groupDespesas";
             this.groupDespesas.Size = new System.Drawing.Size(214, 284);
@@ -525,6 +544,7 @@
             // 
             // groupItens
             // 
+            this.groupItens.BackColor = System.Drawing.Color.Transparent;
             this.groupItens.Controls.Add(this.dataGridView9);
             this.groupItens.Controls.Add(this.lbl0SalárioFamília);
             this.groupItens.Controls.Add(this.lbl0PlanoDeSaúde);
@@ -543,7 +563,7 @@
             this.groupItens.Controls.Add(this.lbl0HorasÁPagar);
             this.groupItens.Controls.Add(this.lbl0Salário);
             this.groupItens.Font = new System.Drawing.Font("Century", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupItens.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupItens.ForeColor = System.Drawing.Color.Black;
             this.groupItens.Location = new System.Drawing.Point(24, 103);
             this.groupItens.Name = "groupItens";
             this.groupItens.Size = new System.Drawing.Size(217, 284);
@@ -719,7 +739,7 @@
             // 
             // btnGerarFolha
             // 
-            this.btnGerarFolha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnGerarFolha.BackColor = System.Drawing.Color.Transparent;
             this.btnGerarFolha.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGerarFolha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarFolha.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -733,7 +753,7 @@
             // 
             // btnCalcular
             // 
-            this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnCalcular.BackColor = System.Drawing.Color.Transparent;
             this.btnCalcular.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCalcular.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -757,8 +777,9 @@
             // lblMêsReferente
             // 
             this.lblMêsReferente.AutoSize = true;
+            this.lblMêsReferente.BackColor = System.Drawing.Color.Transparent;
             this.lblMêsReferente.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMêsReferente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblMêsReferente.ForeColor = System.Drawing.Color.Black;
             this.lblMêsReferente.Location = new System.Drawing.Point(361, 7);
             this.lblMêsReferente.Name = "lblMêsReferente";
             this.lblMêsReferente.Size = new System.Drawing.Size(114, 19);
@@ -786,8 +807,9 @@
             // lblNomeDoFuncionário
             // 
             this.lblNomeDoFuncionário.AutoSize = true;
+            this.lblNomeDoFuncionário.BackColor = System.Drawing.Color.Transparent;
             this.lblNomeDoFuncionário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeDoFuncionário.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNomeDoFuncionário.ForeColor = System.Drawing.Color.Black;
             this.lblNomeDoFuncionário.Location = new System.Drawing.Point(3, 39);
             this.lblNomeDoFuncionário.Name = "lblNomeDoFuncionário";
             this.lblNomeDoFuncionário.Size = new System.Drawing.Size(95, 19);
@@ -797,8 +819,9 @@
             // lblRG
             // 
             this.lblRG.AutoSize = true;
+            this.lblRG.BackColor = System.Drawing.Color.Transparent;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblRG.ForeColor = System.Drawing.Color.Black;
             this.lblRG.Location = new System.Drawing.Point(3, 7);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
@@ -808,7 +831,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(1, 63);
@@ -819,7 +842,7 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
@@ -830,7 +853,7 @@
             // dataGridView2
             // 
             this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(354, 43);
@@ -838,27 +861,18 @@
             this.dataGridView2.Size = new System.Drawing.Size(2, 60);
             this.dataGridView2.TabIndex = 598;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(108, 91);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 15);
-            this.label1.TabIndex = 198;
-            this.label1.Text = "__";
-            // 
             // frmPayroll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Liriou_s_Burguer.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblFolhaDePagamento);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPayroll";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payroll";

@@ -27,9 +27,9 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             }
         }
 
-        private void nudId_ValueChanged(object sender, EventArgs e)
+        private void nudID_ValueChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.ClientBusiness busclient = new Business.ClientBusiness();
             Database.Entities.tb_client client = busclient.ConsultarPorID(id);
@@ -76,7 +76,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             try
             {
                 Database.Entities.tb_client client = new Database.Entities.tb_client();
-                client.id_client = Convert.ToInt32(nudId.Value);
+                client.id_client = Convert.ToInt32(nudID.Value);
                 client.nm_firstName = txtNome.Text.Trim();
                 client.nm_lastName = txtSobrenome.Text.Trim();
                 client.nr_rg = mtxtRG.Text.Trim();

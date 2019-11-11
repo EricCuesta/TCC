@@ -62,11 +62,11 @@
             // 
             this.lblRecuperarSenha.AutoSize = true;
             this.lblRecuperarSenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblRecuperarSenha.Font = new System.Drawing.Font("Century", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecuperarSenha.Font = new System.Drawing.Font("Century", 9.75F);
             this.lblRecuperarSenha.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblRecuperarSenha.Location = new System.Drawing.Point(141, 476);
+            this.lblRecuperarSenha.Location = new System.Drawing.Point(132, 475);
             this.lblRecuperarSenha.Name = "lblRecuperarSenha";
-            this.lblRecuperarSenha.Size = new System.Drawing.Size(105, 15);
+            this.lblRecuperarSenha.Size = new System.Drawing.Size(120, 16);
             this.lblRecuperarSenha.TabIndex = 243;
             this.lblRecuperarSenha.Text = "Esqueceu a senha?";
             this.lblRecuperarSenha.Click += new System.EventHandler(this.lblRecuperarSenha_Click);
@@ -77,7 +77,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(70, 302);
+            this.txtEmail.Location = new System.Drawing.Point(71, 302);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(313, 19);
             this.txtEmail.TabIndex = 241;
@@ -92,7 +92,7 @@
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEntrar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.Black;
-            this.btnEntrar.Location = new System.Drawing.Point(128, 426);
+            this.btnEntrar.Location = new System.Drawing.Point(128, 427);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(131, 36);
             this.btnEntrar.TabIndex = 240;
@@ -188,7 +188,7 @@
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.White;
-            this.txtSenha.Location = new System.Drawing.Point(70, 376);
+            this.txtSenha.Location = new System.Drawing.Point(71, 376);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(313, 19);
             this.txtSenha.TabIndex = 247;
@@ -279,6 +279,7 @@
             this.Controls.Add(this.imgEmail);
             this.Controls.Add(this.imgLogotipo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

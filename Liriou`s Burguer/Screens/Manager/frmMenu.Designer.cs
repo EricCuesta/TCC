@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenu));
             this.MenuVertical = new System.Windows.Forms.Panel();
             this.panelSubMenuCRM = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnEnviarEmail = new System.Windows.Forms.Button();
             this.panel40 = new System.Windows.Forms.Panel();
             this.panel39 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
@@ -156,6 +158,8 @@
             // panelSubMenuCRM
             // 
             this.panelSubMenuCRM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.panelSubMenuCRM.Controls.Add(this.panel7);
+            this.panelSubMenuCRM.Controls.Add(this.btnEnviarEmail);
             this.panelSubMenuCRM.Controls.Add(this.panel40);
             this.panelSubMenuCRM.Controls.Add(this.panel39);
             this.panelSubMenuCRM.Controls.Add(this.panel38);
@@ -167,8 +171,35 @@
             this.panelSubMenuCRM.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuCRM.Location = new System.Drawing.Point(0, 1105);
             this.panelSubMenuCRM.Name = "panelSubMenuCRM";
-            this.panelSubMenuCRM.Size = new System.Drawing.Size(223, 132);
+            this.panelSubMenuCRM.Size = new System.Drawing.Size(223, 162);
             this.panelSubMenuCRM.TabIndex = 26;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.panel7.Location = new System.Drawing.Point(22, 132);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(5, 26);
+            this.panel7.TabIndex = 20;
+            // 
+            // btnEnviarEmail
+            // 
+            this.btnEnviarEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnEnviarEmail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEnviarEmail.FlatAppearance.BorderSize = 0;
+            this.btnEnviarEmail.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEnviarEmail.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(110)))), ((int)(((byte)(0)))));
+            this.btnEnviarEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEnviarEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEnviarEmail.ForeColor = System.Drawing.Color.White;
+            this.btnEnviarEmail.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviarEmail.Location = new System.Drawing.Point(25, 132);
+            this.btnEnviarEmail.Name = "btnEnviarEmail";
+            this.btnEnviarEmail.Size = new System.Drawing.Size(215, 26);
+            this.btnEnviarEmail.TabIndex = 19;
+            this.btnEnviarEmail.Text = "Enviar E-mail";
+            this.btnEnviarEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEnviarEmail.UseVisualStyleBackColor = false;
             // 
             // panel40
             // 
@@ -1257,21 +1288,21 @@
             // 
             // lblhrs
             // 
-            this.lblhrs.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.lblhrs.Location = new System.Drawing.Point(534, 6);
+            this.lblhrs.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.lblhrs.Location = new System.Drawing.Point(516, 18);
             this.lblhrs.Name = "lblhrs";
-            this.lblhrs.Size = new System.Drawing.Size(109, 27);
+            this.lblhrs.Size = new System.Drawing.Size(127, 20);
             this.lblhrs.TabIndex = 490;
             this.lblhrs.Text = "Hrs: __:__:__";
             this.lblhrs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblUsuário
             // 
-            this.lblUsuário.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUsuário.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
             this.lblUsuário.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblUsuário.Location = new System.Drawing.Point(6, 6);
+            this.lblUsuário.Location = new System.Drawing.Point(3, 20);
             this.lblUsuário.Name = "lblUsuário";
-            this.lblUsuário.Size = new System.Drawing.Size(522, 27);
+            this.lblUsuário.Size = new System.Drawing.Size(515, 19);
             this.lblUsuário.TabIndex = 489;
             this.lblUsuário.Text = "Usuário:";
             this.lblUsuário.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1335,6 +1366,7 @@
             this.Controls.Add(this.MenuVertical);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(950, 500);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1444,5 +1476,7 @@
         private System.Windows.Forms.Button btnAlterarCliente;
         private System.Windows.Forms.Button btnConsultarCliente;
         private System.Windows.Forms.Button btnCadastrarCliente;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnEnviarEmail;
     }
 }

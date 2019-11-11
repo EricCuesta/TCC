@@ -44,6 +44,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultCustomer));
             this.lblConsultarCliente = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarCliente = new System.Windows.Forms.DataGridView();
@@ -63,8 +64,6 @@
             this.Coluna14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
-            this.mtxtAnoDeNascimento = new System.Windows.Forms.MaskedTextBox();
-            this.lblNascimento = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridView4 = new System.Windows.Forms.DataGridView();
             this.mtxtRG = new System.Windows.Forms.MaskedTextBox();
@@ -74,22 +73,21 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // lblConsultarCliente
             // 
             this.lblConsultarCliente.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblConsultarCliente.AutoSize = true;
+            this.lblConsultarCliente.BackColor = System.Drawing.Color.Transparent;
             this.lblConsultarCliente.Font = new System.Drawing.Font("Century", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultarCliente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblConsultarCliente.ForeColor = System.Drawing.Color.Black;
             this.lblConsultarCliente.Location = new System.Drawing.Point(242, 9);
             this.lblConsultarCliente.Name = "lblConsultarCliente";
             this.lblConsultarCliente.Size = new System.Drawing.Size(228, 28);
@@ -102,12 +100,10 @@
             this.panel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Controls.Add(this.dgvConsultarCliente);
             this.panel.Controls.Add(this.cboSexo);
             this.panel.Controls.Add(this.lblSexo);
-            this.panel.Controls.Add(this.mtxtAnoDeNascimento);
-            this.panel.Controls.Add(this.lblNascimento);
             this.panel.Controls.Add(this.dataGridView5);
             this.panel.Controls.Add(this.dataGridView4);
             this.panel.Controls.Add(this.mtxtRG);
@@ -117,7 +113,6 @@
             this.panel.Controls.Add(this.lblNome);
             this.panel.Controls.Add(this.dataGridView3);
             this.panel.Controls.Add(this.dataGridView1);
-            this.panel.Controls.Add(this.dataGridView2);
             this.panel.Location = new System.Drawing.Point(0, 41);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
@@ -132,11 +127,11 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvConsultarCliente.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvConsultarCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
+            this.dgvConsultarCliente.BackgroundColor = System.Drawing.Color.DarkGray;
             this.dgvConsultarCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -159,9 +154,9 @@
             this.Coluna13,
             this.Coluna14});
             this.dgvConsultarCliente.GridColor = System.Drawing.Color.WhiteSmoke;
-            this.dgvConsultarCliente.Location = new System.Drawing.Point(3, 109);
+            this.dgvConsultarCliente.Location = new System.Drawing.Point(0, 109);
             this.dgvConsultarCliente.Name = "dgvConsultarCliente";
-            this.dgvConsultarCliente.Size = new System.Drawing.Size(704, 306);
+            this.dgvConsultarCliente.Size = new System.Drawing.Size(710, 309);
             this.dgvConsultarCliente.TabIndex = 651;
             // 
             // Coluna1
@@ -308,36 +303,17 @@
             this.lblSexo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblSexo.ForeColor = System.Drawing.Color.Black;
             this.lblSexo.Location = new System.Drawing.Point(362, 40);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(46, 19);
             this.lblSexo.TabIndex = 658;
             this.lblSexo.Text = "Sexo:";
             // 
-            // mtxtAnoDeNascimento
-            // 
-            this.mtxtAnoDeNascimento.Location = new System.Drawing.Point(153, 40);
-            this.mtxtAnoDeNascimento.Mask = "0000";
-            this.mtxtAnoDeNascimento.Name = "mtxtAnoDeNascimento";
-            this.mtxtAnoDeNascimento.Size = new System.Drawing.Size(194, 20);
-            this.mtxtAnoDeNascimento.TabIndex = 657;
-            // 
-            // lblNascimento
-            // 
-            this.lblNascimento.AutoSize = true;
-            this.lblNascimento.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNascimento.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNascimento.Location = new System.Drawing.Point(3, 40);
-            this.lblNascimento.Name = "lblNascimento";
-            this.lblNascimento.Size = new System.Drawing.Size(144, 19);
-            this.lblNascimento.TabIndex = 656;
-            this.lblNascimento.Text = "Ano de nascimento:";
-            // 
             // dataGridView5
             // 
             this.dataGridView5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView5.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView5.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView5.Location = new System.Drawing.Point(1, 65);
@@ -348,7 +324,7 @@
             // dataGridView4
             // 
             this.dataGridView4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView4.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView4.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView4.Location = new System.Drawing.Point(354, 35);
@@ -362,10 +338,10 @@
             this.mtxtRG.BackColor = System.Drawing.Color.WhiteSmoke;
             this.mtxtRG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtRG.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtRG.Location = new System.Drawing.Point(401, 6);
+            this.mtxtRG.Location = new System.Drawing.Point(42, 38);
             this.mtxtRG.Mask = "00.000.000-0";
             this.mtxtRG.Name = "mtxtRG";
-            this.mtxtRG.Size = new System.Drawing.Size(305, 23);
+            this.mtxtRG.Size = new System.Drawing.Size(306, 23);
             this.mtxtRG.TabIndex = 653;
             this.mtxtRG.TextChanged += new System.EventHandler(this.mtxtRG_TextChanged);
             // 
@@ -374,8 +350,8 @@
             this.lblRG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblRG.AutoSize = true;
             this.lblRG.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRG.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblRG.Location = new System.Drawing.Point(362, 8);
+            this.lblRG.ForeColor = System.Drawing.Color.Black;
+            this.lblRG.Location = new System.Drawing.Point(3, 40);
             this.lblRG.Name = "lblRG";
             this.lblRG.Size = new System.Drawing.Size(33, 19);
             this.lblRG.TabIndex = 652;
@@ -384,7 +360,7 @@
             // btnConsultar
             // 
             this.btnConsultar.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnConsultar.BackColor = System.Drawing.Color.Transparent;
             this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -407,7 +383,7 @@
             this.txtNome.Location = new System.Drawing.Point(63, 6);
             this.txtNome.MaxLength = 32;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(285, 23);
+            this.txtNome.Size = new System.Drawing.Size(644, 23);
             this.txtNome.TabIndex = 648;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
@@ -415,7 +391,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNome.ForeColor = System.Drawing.Color.Black;
             this.lblNome.Location = new System.Drawing.Point(3, 8);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(54, 19);
@@ -425,7 +401,7 @@
             // dataGridView3
             // 
             this.dataGridView3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView3.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView3.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(1, 33);
@@ -436,7 +412,7 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(1, 1);
@@ -444,26 +420,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(709, 2);
             this.dataGridView1.TabIndex = 598;
             // 
-            // dataGridView2
-            // 
-            this.dataGridView2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(354, 3);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(2, 30);
-            this.dataGridView2.TabIndex = 597;
-            // 
             // frmConsultCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(50)))), ((int)(((byte)(62)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::Liriou_s_Burguer.Properties.Resources.Fundo;
             this.ClientSize = new System.Drawing.Size(710, 459);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.lblConsultarCliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consult Customer";
@@ -474,7 +441,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,13 +456,10 @@
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridView dataGridView4;
         public System.Windows.Forms.MaskedTextBox mtxtRG;
         private System.Windows.Forms.Label lblRG;
-        private System.Windows.Forms.MaskedTextBox mtxtAnoDeNascimento;
-        private System.Windows.Forms.Label lblNascimento;
         public System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;

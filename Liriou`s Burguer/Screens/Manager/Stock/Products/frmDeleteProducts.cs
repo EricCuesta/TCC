@@ -17,9 +17,9 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             InitializeComponent();
         }
 
-        private void nudId_ValueChanged(object sender, EventArgs e)
+        private void nudID_ValueChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.ProductBusiness busproduct = new Business.ProductBusiness();
             Database.Entities.tb_product product = busproduct.ConsultarPorID(id);
@@ -46,12 +46,12 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
 
         private void btnDeletar_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.ProductBusiness busproduct = new Business.ProductBusiness();
             busproduct.Remover(id);
 
             MessageBox.Show("Produto deletado com sucesso");
-        }       
+        }
     }
 }

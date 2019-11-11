@@ -17,9 +17,9 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             InitializeComponent();
         }
 
-        private void nudId_ValueChanged(object sender, EventArgs e)
+        private void nudID_ValueChanged(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(nudId.Value);
+            int id = Convert.ToInt32(nudID.Value);
 
             Business.ProductBusiness busproduct = new Business.ProductBusiness();
             Database.Entities.tb_product product = busproduct.ConsultarPorID(id);
@@ -47,7 +47,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             try
             {
                 Database.Entities.tb_product product = new Database.Entities.tb_product();
-                product.id_product = Convert.ToInt32(nudId.Value);
+                product.id_product = Convert.ToInt32(nudID.Value);
                 product.nm_product = txtNome.Text.Trim();
                 product.ds_typeProduct = cboTipo.Text.Trim();
                 product.vl_amount = Convert.ToInt32(nudQuantidade.Value);

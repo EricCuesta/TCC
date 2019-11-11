@@ -46,11 +46,12 @@
       <HintPath>..\packages\MySql.Data.Entity.6.9.12\lib\net45\MySql.Data.Entity.EF6.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Regex, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Regex.1.0.0.0\lib\net20\System.Regex.dll</HintPath>
       <Private>True</Private>
@@ -74,7 +75,6 @@
     <Compile Include="Business\ClientBusiness.cs" />
     <Compile Include="Business\CNAEBusiness.cs" />
     <Compile Include="Business\CPPBusiness.cs" />
-    <Compile Include="Business\CRMBusiness.cs" />
     <Compile Include="Business\DepartmentBusiness.cs" />
     <Compile Include="Business\DiscountsBusiness.cs" />
     <Compile Include="Business\EmployeesBusiness.cs" />
@@ -84,7 +84,6 @@
     <Compile Include="Business\PointsBusiness.cs" />
     <Compile Include="Business\ProductBusiness.cs" />
     <Compile Include="Business\ProviderBusiness.cs" />
-    <Compile Include="Business\SaleBusiness.cs" />
     <Compile Include="Business\SupplyBusiness.cs" />
     <Compile Include="Business\TimeCardBusiness.cs" />
     <Compile Include="CorreioApi\CorreioApi.cs" />
@@ -94,7 +93,6 @@
     <Compile Include="Database\ClientDatabase.cs" />
     <Compile Include="Database\CNAEDatabase.cs" />
     <Compile Include="Database\CPPDatabase.cs" />
-    <Compile Include="Database\CRMDatabase.cs" />
     <Compile Include="Database\DepartmentDatabase.cs" />
     <Compile Include="Database\DiscountsDatabase.cs" />
     <Compile Include="Database\EmployeesDatabase.cs" />
@@ -132,9 +130,6 @@
     <Compile Include="Database\Entities\tb_cpp.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Entities\tb_crm.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Database\Entities\tb_department.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
@@ -153,9 +148,6 @@
     <Compile Include="Database\Entities\tb_function.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Database\Entities\tb_iten.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Database\Entities\tb_points.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
@@ -163,9 +155,6 @@
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_provider.cs">
-      <DependentUpon>LiriousDB.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Database\Entities\tb_sale.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_supply.cs">
@@ -179,7 +168,6 @@
     <Compile Include="Database\PointsDatabase.cs" />
     <Compile Include="Database\ProductDatabase.cs" />
     <Compile Include="Database\ProviderDatabase.cs" />
-    <Compile Include="Database\SaleDatabase.cs" />
     <Compile Include="Database\SupplyDatabase.cs" />
     <Compile Include="Database\TimeCardDatabase.cs" />
     <Compile Include="Model\EmployeesModel.cs" />
@@ -211,6 +199,12 @@
     </Compile>
     <Compile Include="Screens\Manager\CRM\frmDeleteClient.Designer.cs">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Manager\CRM\frmEmailSending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Manager\CRM\frmEmailSending.Designer.cs">
+      <DependentUpon>frmEmailSending.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Manager\CRM\frmRegisterCustomer.cs">
       <SubType>Form</SubType>
@@ -414,6 +408,9 @@
     <EmbeddedResource Include="Screens\Manager\CRM\frmDeleteClient.resx">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Manager\CRM\frmEmailSending.resx">
+      <DependentUpon>frmEmailSending.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manager\CRM\frmRegisterCustomer.resx">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -603,6 +600,7 @@
     <None Include="Resources\Visto01.png" />
     <None Include="Resources\Visto.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\Entities\LiriousDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -614,6 +612,7 @@
       <DependentUpon>LiriousDB.edmx</DependentUpon>
       <LastGenOutput>LiriousDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Fundo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

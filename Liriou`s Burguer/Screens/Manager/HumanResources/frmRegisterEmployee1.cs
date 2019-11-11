@@ -8,8 +8,6 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Liriou_s_Burguer.Database.Entities;
-using Liriou_s_Burguer.Business;
 
 namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 {
@@ -28,55 +26,58 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
           
         }
 
-        private void imgMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             try
             {
-                tb_employees tbemployees = new tb_employees();
-                EmployeesBusiness busemployee = new EmployeesBusiness();
+                Database.Entities.tb_employees tbemployees = new Database.Entities.tb_employees();
+                Business.EmployeesBusiness busemployee = new Business.EmployeesBusiness();
 
-                tb_discounts tbdiscounts = new tb_discounts();
-                DiscountsBusiness busdiscounts = new DiscountsBusiness();
+                Database.Entities.tb_department tbdepartment = new Database.Entities.tb_department();
+                Business.DepartmentBusiness busdepartment = new Business.DepartmentBusiness();
 
-                tb_function tbfunction = new tb_function();
-                FunctionBusiness busfunction = new FunctionBusiness();
+                Database.Entities.tb_function tbfunction = new Database.Entities.tb_function();
+                Business.FunctionBusiness busfunction = new Business.FunctionBusiness();
 
-                tb_timecard tbtimecard = new tb_timecard();
-                TimeCardBusiness bustimecard = new TimeCardBusiness();
+                Database.Entities.tb_timecard tbtimecard = new Database.Entities.tb_timecard();
+                Business.TimeCardBusiness bustimecard = new Business.TimeCardBusiness();
 
-                tb_financial financial = new tb_financial();
-                FinancialBusiness busfinancial = new FinancialBusiness();
+                Database.Entities.tb_financial tbfinancial = new Database.Entities.tb_financial();
+                Business.FinancialBusiness busfinancial = new Business.FinancialBusiness();
 
-                tb_benefits tbbenefits = new tb_benefits();
-                BenefitsBusiness busbenefits = new BenefitsBusiness();
+                Database.Entities.tb_benefits tbbenefits = new Database.Entities.tb_benefits();
+                Business.BenefitsBusiness busbenefits = new Business.BenefitsBusiness();
 
-                tb_department tbdepartment = new tb_department();
-                DepartmentBusiness busdepartment = new DepartmentBusiness();
+                Database.Entities.tb_bankaccount tbbank = new Database.Entities.tb_bankaccount();
+                Business.BankAccountBusiness busbank = new Business.BankAccountBusiness();
 
-                tbemployees.dt_hiring = dtpContratação.Value.ToLongDateString();
-                tbemployees.dt_resignation = dtpDemissão.Value.ToLongDateString();
-                financial.vl_grossSalary = nudSalárioBruto.Value;
+                tbemployees.dt_hiring = dtpContratação.Value.ToShortDateString();
+                tbemployees.dt_resignation = dtpDemissão.Value.ToShortDateString();
+                tbdepartment.nm_department = cboDepartamento.Text;
+                tbfunction.nm_function = cboCargo.Text;
+                tbtimecard.hr_fixedInput = mtxtInício.Text;
+                tbtimecard.hr_fixedIntInput = mtxtInícioIntervalo.Text;
+                tbtimecard.hr_fixedIntOutput = mtxtTérminoIntervalo.Text;
+                tbtimecard.hr_fixedOutput = mtxtTérminoIntervalo.Text;
+                tbfinancial.vl_grossSalary = nudSalárioBruto.Value;
                 tbbenefits.bt_food = Convert.ToBoolean(chkValeAlimentação.Checked);
                 tbbenefits.bt_meal = Convert.ToBoolean(chkValeRefeição.Checked);
                 tbbenefits.bt_lifeSafe = Convert.ToBoolean(chkSeguroDeVida.Checked);
-                tbdepartment.nm_department = cboDepartamento.Text;
-                tbfunction.nm_function = cboCargo.Text;
                 tbbenefits.bt_transport = Convert.ToBoolean(chkValeTransporte.Checked);
                 tbbenefits.bt_planHealth = Convert.ToBoolean(chkPlanoDeSáude.Checked);
                 tbbenefits.bt_planDental = Convert.ToBoolean(chkPlanoDental.Checked);
+                tbbank.nm_bank = txtNomeDoBanco.Text;
+                tbbank.nr_account = mtxtCódigoDoBanco.Text;
+                tbbank.nr_agency = Convert.ToInt32(mtxtAgênciaDoBanco.Text);
+                tbbank.ds_typePerson = cboTipoDePessoa.Text;
 
                 busemployee.Inserir1(tbemployees);
-                busdiscounts.Inserir(tbdiscounts);
+                busdepartment.Inserir(tbdepartment);
                 busfunction.Inserir(tbfunction);
                 bustimecard.Inserir(tbtimecard);
-                busfinancial.Inserir(financial);
+                busfinancial.Inserir(tbfinancial);
                 busbenefits.Inserir(tbbenefits);
-                busdepartment.Inserir(tbdepartment);
+                busbank.Inserir(tbbank);
 
                 MessageBox.Show("Funcionário cadastrado com sucesso");
 
@@ -102,11 +103,11 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, "atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception)
             {
-                MessageBox.Show("ocorreu um erro!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -131,12 +132,10 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             registerEmployee.rdbGerente.Checked = Model.EmployeesModel.manager;
             registerEmployee.rdbFuncionário.Checked = Model.EmployeesModel.employeer;
             registerEmployee.chkRH.Checked = Model.EmployeesModel.RH;
-            registerEmployee.chkFornecedor.Checked = Model.EmployeesModel.Provider;
             registerEmployee.chkFinanceiro.Checked = Model.EmployeesModel.financial;
             registerEmployee.chkEstoque.Checked = Model.EmployeesModel.stock;
             registerEmployee.chkCRM.Checked = Model.EmployeesModel.CRM;
-            registerEmployee.ShowDialog();
-            this.Hide();
+            frmMenu.Current.openContedor(registerEmployee);
         }
     }
 }

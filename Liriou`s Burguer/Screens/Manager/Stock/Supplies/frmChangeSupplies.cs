@@ -17,7 +17,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Supplies
             InitializeComponent();
         }
 
-        private void nudId_ValueChanged(object sender, EventArgs e)
+        private void nudID_ValueChanged(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(nudID.Value);
 
