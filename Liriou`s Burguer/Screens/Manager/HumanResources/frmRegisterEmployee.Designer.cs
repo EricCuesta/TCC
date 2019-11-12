@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterEmployee));
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
             this.panel = new System.Windows.Forms.Panel();
@@ -86,6 +87,7 @@
             this.lblSobrenome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
+            this.Dependentes = new System.Windows.Forms.ToolTip(this.components);
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             this.panelFunções.SuspendLayout();
@@ -727,6 +729,7 @@
             // 
             // nudDependentes
             // 
+            this.nudDependentes.AccessibleDescription = "";
             this.nudDependentes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudDependentes.BackColor = System.Drawing.Color.WhiteSmoke;
             this.nudDependentes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -734,6 +737,7 @@
             this.nudDependentes.Name = "nudDependentes";
             this.nudDependentes.Size = new System.Drawing.Size(78, 20);
             this.nudDependentes.TabIndex = 607;
+            this.Dependentes.SetToolTip(this.nudDependentes, "Somente dependentes menores ou iguais a 14 anos\r\npodem ser contados!");
             // 
             // lblDependentes
             // 
@@ -893,6 +897,16 @@
             this.lblNome.TabIndex = 563;
             this.lblNome.Text = "Nome:";
             // 
+            // Dependentes
+            // 
+            this.Dependentes.AutomaticDelay = 100;
+            this.Dependentes.AutoPopDelay = 15000;
+            this.Dependentes.InitialDelay = 100;
+            this.Dependentes.IsBalloon = true;
+            this.Dependentes.ReshowDelay = 0;
+            this.Dependentes.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.Dependentes.ToolTipTitle = "Observação!";
+            // 
             // frmRegisterEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -993,5 +1007,6 @@
         public System.Windows.Forms.RadioButton rdbGerente;
         public System.Windows.Forms.MaskedTextBox mtxtTelefone;
         public System.Windows.Forms.MaskedTextBox mtxtCelular;
+        private System.Windows.Forms.ToolTip Dependentes;
     }
 }

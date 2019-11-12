@@ -28,8 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegisterEmployee1));
             this.panel = new System.Windows.Forms.Panel();
+            this.nudPensãoAlimentícia = new System.Windows.Forms.NumericUpDown();
+            this.lblPensãoAlimentícia = new System.Windows.Forms.Label();
+            this.dataGridView25 = new System.Windows.Forms.DataGridView();
+            this.dataGridView24 = new System.Windows.Forms.DataGridView();
+            this.dataGridView23 = new System.Windows.Forms.DataGridView();
+            this.nudPlanoDental = new System.Windows.Forms.NumericUpDown();
+            this.nudPlanoDeSáude = new System.Windows.Forms.NumericUpDown();
+            this.nudTarifa = new System.Windows.Forms.NumericUpDown();
+            this.nudSeguroDeVida = new System.Windows.Forms.NumericUpDown();
+            this.nudValeAlimentação = new System.Windows.Forms.NumericUpDown();
+            this.nudValeRefeição = new System.Windows.Forms.NumericUpDown();
             this.mtxtCódigoDoBanco = new System.Windows.Forms.MaskedTextBox();
             this.mtxtAgênciaDoBanco = new System.Windows.Forms.MaskedTextBox();
             this.cboTipoDePessoa = new System.Windows.Forms.ComboBox();
@@ -56,8 +68,8 @@
             this.chkPlanoDeSáude = new System.Windows.Forms.CheckBox();
             this.chkSeguroDeVida = new System.Windows.Forms.CheckBox();
             this.chkValeRefeição = new System.Windows.Forms.CheckBox();
-            this.chkValeTransporte = new System.Windows.Forms.CheckBox();
             this.chkValeAlimentação = new System.Windows.Forms.CheckBox();
+            this.chkValeTransporte = new System.Windows.Forms.CheckBox();
             this.lblTipoDePessoa = new System.Windows.Forms.Label();
             this.lblAgência = new System.Windows.Forms.Label();
             this.lblCódigo = new System.Windows.Forms.Label();
@@ -89,7 +101,18 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.lblCadastrarFuncionário = new System.Windows.Forms.Label();
             this.imgVoltar = new System.Windows.Forms.PictureBox();
+            this.ttpObs = new System.Windows.Forms.ToolTip(this.components);
             this.panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPensãoAlimentícia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDental)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDeSáude)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTarifa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSeguroDeVida)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValeAlimentação)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValeRefeição)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView19)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView21)).BeginInit();
@@ -122,6 +145,17 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.Controls.Add(this.nudPensãoAlimentícia);
+            this.panel.Controls.Add(this.lblPensãoAlimentícia);
+            this.panel.Controls.Add(this.dataGridView25);
+            this.panel.Controls.Add(this.dataGridView24);
+            this.panel.Controls.Add(this.dataGridView23);
+            this.panel.Controls.Add(this.nudPlanoDental);
+            this.panel.Controls.Add(this.nudPlanoDeSáude);
+            this.panel.Controls.Add(this.nudTarifa);
+            this.panel.Controls.Add(this.nudSeguroDeVida);
+            this.panel.Controls.Add(this.nudValeAlimentação);
+            this.panel.Controls.Add(this.nudValeRefeição);
             this.panel.Controls.Add(this.mtxtCódigoDoBanco);
             this.panel.Controls.Add(this.mtxtAgênciaDoBanco);
             this.panel.Controls.Add(this.cboTipoDePessoa);
@@ -148,8 +182,8 @@
             this.panel.Controls.Add(this.chkPlanoDeSáude);
             this.panel.Controls.Add(this.chkSeguroDeVida);
             this.panel.Controls.Add(this.chkValeRefeição);
-            this.panel.Controls.Add(this.chkValeTransporte);
             this.panel.Controls.Add(this.chkValeAlimentação);
+            this.panel.Controls.Add(this.chkValeTransporte);
             this.panel.Controls.Add(this.lblTipoDePessoa);
             this.panel.Controls.Add(this.lblAgência);
             this.panel.Controls.Add(this.lblCódigo);
@@ -183,6 +217,170 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 564;
+            // 
+            // nudPensãoAlimentícia
+            // 
+            this.nudPensãoAlimentícia.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudPensãoAlimentícia.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudPensãoAlimentícia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudPensãoAlimentícia.DecimalPlaces = 2;
+            this.nudPensãoAlimentícia.Location = new System.Drawing.Point(172, 233);
+            this.nudPensãoAlimentícia.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
+            this.nudPensãoAlimentícia.Name = "nudPensãoAlimentícia";
+            this.nudPensãoAlimentícia.Size = new System.Drawing.Size(176, 20);
+            this.nudPensãoAlimentícia.TabIndex = 720;
+            this.ttpObs.SetToolTip(this.nudPensãoAlimentícia, "Valor da pensão alimentícia gerada vezes a\r\nquantidade de dependentes!");
+            // 
+            // lblPensãoAlimentícia
+            // 
+            this.lblPensãoAlimentícia.AutoSize = true;
+            this.lblPensãoAlimentícia.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPensãoAlimentícia.ForeColor = System.Drawing.Color.Black;
+            this.lblPensãoAlimentícia.Location = new System.Drawing.Point(3, 232);
+            this.lblPensãoAlimentícia.Name = "lblPensãoAlimentícia";
+            this.lblPensãoAlimentícia.Size = new System.Drawing.Size(163, 19);
+            this.lblPensãoAlimentícia.TabIndex = 719;
+            this.lblPensãoAlimentícia.Text = "Pensão Alimentícia: R$";
+            // 
+            // dataGridView25
+            // 
+            this.dataGridView25.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView25.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView25.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView25.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView25.Location = new System.Drawing.Point(354, 225);
+            this.dataGridView25.Name = "dataGridView25";
+            this.dataGridView25.Size = new System.Drawing.Size(2, 33);
+            this.dataGridView25.TabIndex = 718;
+            // 
+            // dataGridView24
+            // 
+            this.dataGridView24.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView24.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView24.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView24.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView24.Location = new System.Drawing.Point(354, 194);
+            this.dataGridView24.Name = "dataGridView24";
+            this.dataGridView24.Size = new System.Drawing.Size(2, 30);
+            this.dataGridView24.TabIndex = 717;
+            // 
+            // dataGridView23
+            // 
+            this.dataGridView23.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView23.BackgroundColor = System.Drawing.Color.Black;
+            this.dataGridView23.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView23.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView23.Location = new System.Drawing.Point(1, 257);
+            this.dataGridView23.Name = "dataGridView23";
+            this.dataGridView23.Size = new System.Drawing.Size(709, 2);
+            this.dataGridView23.TabIndex = 716;
+            // 
+            // nudPlanoDental
+            // 
+            this.nudPlanoDental.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudPlanoDental.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudPlanoDental.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudPlanoDental.DecimalPlaces = 2;
+            this.nudPlanoDental.Location = new System.Drawing.Point(237, 196);
+            this.nudPlanoDental.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
+            this.nudPlanoDental.Name = "nudPlanoDental";
+            this.nudPlanoDental.Size = new System.Drawing.Size(101, 20);
+            this.nudPlanoDental.TabIndex = 715;
+            this.nudPlanoDental.Visible = false;
+            // 
+            // nudPlanoDeSáude
+            // 
+            this.nudPlanoDeSáude.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudPlanoDeSáude.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudPlanoDeSáude.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudPlanoDeSáude.DecimalPlaces = 2;
+            this.nudPlanoDeSáude.Location = new System.Drawing.Point(237, 153);
+            this.nudPlanoDeSáude.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
+            this.nudPlanoDeSáude.Name = "nudPlanoDeSáude";
+            this.nudPlanoDeSáude.Size = new System.Drawing.Size(101, 20);
+            this.nudPlanoDeSáude.TabIndex = 714;
+            this.nudPlanoDeSáude.Visible = false;
+            // 
+            // nudTarifa
+            // 
+            this.nudTarifa.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudTarifa.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudTarifa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudTarifa.DecimalPlaces = 2;
+            this.nudTarifa.Location = new System.Drawing.Point(61, 111);
+            this.nudTarifa.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
+            this.nudTarifa.Name = "nudTarifa";
+            this.nudTarifa.Size = new System.Drawing.Size(101, 20);
+            this.nudTarifa.TabIndex = 713;
+            this.ttpObs.SetToolTip(this.nudTarifa, "Valor da cota diária gasta em ônibus, trem, metro e etc...");
+            this.nudTarifa.Visible = false;
+            // 
+            // nudSeguroDeVida
+            // 
+            this.nudSeguroDeVida.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudSeguroDeVida.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudSeguroDeVida.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudSeguroDeVida.DecimalPlaces = 2;
+            this.nudSeguroDeVida.Location = new System.Drawing.Point(237, 111);
+            this.nudSeguroDeVida.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
+            this.nudSeguroDeVida.Name = "nudSeguroDeVida";
+            this.nudSeguroDeVida.Size = new System.Drawing.Size(101, 20);
+            this.nudSeguroDeVida.TabIndex = 712;
+            this.nudSeguroDeVida.Visible = false;
+            // 
+            // nudValeAlimentação
+            // 
+            this.nudValeAlimentação.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudValeAlimentação.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudValeAlimentação.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudValeAlimentação.DecimalPlaces = 2;
+            this.nudValeAlimentação.Location = new System.Drawing.Point(61, 153);
+            this.nudValeAlimentação.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
+            this.nudValeAlimentação.Name = "nudValeAlimentação";
+            this.nudValeAlimentação.Size = new System.Drawing.Size(101, 20);
+            this.nudValeAlimentação.TabIndex = 711;
+            this.nudValeAlimentação.Visible = false;
+            // 
+            // nudValeRefeição
+            // 
+            this.nudValeRefeição.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudValeRefeição.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.nudValeRefeição.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudValeRefeição.DecimalPlaces = 2;
+            this.nudValeRefeição.Location = new System.Drawing.Point(61, 196);
+            this.nudValeRefeição.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
+            this.nudValeRefeição.Name = "nudValeRefeição";
+            this.nudValeRefeição.Size = new System.Drawing.Size(101, 20);
+            this.nudValeRefeição.TabIndex = 710;
+            this.nudValeRefeição.Visible = false;
             // 
             // mtxtCódigoDoBanco
             // 
@@ -267,6 +465,11 @@
             this.nudSalárioBruto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nudSalárioBruto.DecimalPlaces = 2;
             this.nudSalárioBruto.Location = new System.Drawing.Point(136, 72);
+            this.nudSalárioBruto.Maximum = new decimal(new int[] {
+            1410065407,
+            2,
+            0,
+            131072});
             this.nudSalárioBruto.Name = "nudSalárioBruto";
             this.nudSalárioBruto.Size = new System.Drawing.Size(212, 20);
             this.nudSalárioBruto.TabIndex = 693;
@@ -289,7 +492,7 @@
             // mtxtTérminoIntervalo
             // 
             this.mtxtTérminoIntervalo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTérminoIntervalo.Location = new System.Drawing.Point(480, 262);
+            this.mtxtTérminoIntervalo.Location = new System.Drawing.Point(480, 295);
             this.mtxtTérminoIntervalo.Mask = "00:00";
             this.mtxtTérminoIntervalo.Name = "mtxtTérminoIntervalo";
             this.mtxtTérminoIntervalo.Size = new System.Drawing.Size(40, 23);
@@ -300,7 +503,7 @@
             // mtxtTérminoServiço
             // 
             this.mtxtTérminoServiço.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtTérminoServiço.Location = new System.Drawing.Point(657, 262);
+            this.mtxtTérminoServiço.Location = new System.Drawing.Point(657, 295);
             this.mtxtTérminoServiço.Mask = "00:00";
             this.mtxtTérminoServiço.Name = "mtxtTérminoServiço";
             this.mtxtTérminoServiço.Size = new System.Drawing.Size(40, 23);
@@ -311,7 +514,7 @@
             // mtxtInícioIntervalo
             // 
             this.mtxtInícioIntervalo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtInícioIntervalo.Location = new System.Drawing.Point(284, 262);
+            this.mtxtInícioIntervalo.Location = new System.Drawing.Point(284, 295);
             this.mtxtInícioIntervalo.Mask = "00:00";
             this.mtxtInícioIntervalo.Name = "mtxtInícioIntervalo";
             this.mtxtInícioIntervalo.Size = new System.Drawing.Size(40, 23);
@@ -324,7 +527,7 @@
             this.lblTérminoServiço.AutoSize = true;
             this.lblTérminoServiço.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTérminoServiço.ForeColor = System.Drawing.Color.Black;
-            this.lblTérminoServiço.Location = new System.Drawing.Point(534, 266);
+            this.lblTérminoServiço.Location = new System.Drawing.Point(534, 299);
             this.lblTérminoServiço.Name = "lblTérminoServiço";
             this.lblTérminoServiço.Size = new System.Drawing.Size(117, 15);
             this.lblTérminoServiço.TabIndex = 688;
@@ -335,7 +538,7 @@
             this.dataGridView19.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView19.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView19.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView19.Location = new System.Drawing.Point(526, 259);
+            this.dataGridView19.Location = new System.Drawing.Point(526, 292);
             this.dataGridView19.Name = "dataGridView19";
             this.dataGridView19.Size = new System.Drawing.Size(2, 30);
             this.dataGridView19.TabIndex = 687;
@@ -345,7 +548,7 @@
             this.lblTérminoIntervalo.AutoSize = true;
             this.lblTérminoIntervalo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTérminoIntervalo.ForeColor = System.Drawing.Color.Black;
-            this.lblTérminoIntervalo.Location = new System.Drawing.Point(348, 266);
+            this.lblTérminoIntervalo.Location = new System.Drawing.Point(348, 299);
             this.lblTérminoIntervalo.Name = "lblTérminoIntervalo";
             this.lblTérminoIntervalo.Size = new System.Drawing.Size(126, 15);
             this.lblTérminoIntervalo.TabIndex = 686;
@@ -356,7 +559,7 @@
             this.dataGridView21.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView21.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView21.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView21.Location = new System.Drawing.Point(336, 259);
+            this.dataGridView21.Location = new System.Drawing.Point(336, 292);
             this.dataGridView21.Name = "dataGridView21";
             this.dataGridView21.Size = new System.Drawing.Size(2, 30);
             this.dataGridView21.TabIndex = 685;
@@ -366,7 +569,7 @@
             this.lblInícioIntervalo.AutoSize = true;
             this.lblInícioIntervalo.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInícioIntervalo.ForeColor = System.Drawing.Color.Black;
-            this.lblInícioIntervalo.Location = new System.Drawing.Point(168, 266);
+            this.lblInícioIntervalo.Location = new System.Drawing.Point(168, 299);
             this.lblInícioIntervalo.Name = "lblInícioIntervalo";
             this.lblInícioIntervalo.Size = new System.Drawing.Size(110, 15);
             this.lblInícioIntervalo.TabIndex = 684;
@@ -377,7 +580,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(7, 266);
+            this.label2.Location = new System.Drawing.Point(7, 299);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 683;
@@ -386,7 +589,7 @@
             // mtxtInício
             // 
             this.mtxtInício.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtInício.Location = new System.Drawing.Point(114, 262);
+            this.mtxtInício.Location = new System.Drawing.Point(114, 295);
             this.mtxtInício.Mask = "00:00";
             this.mtxtInício.Name = "mtxtInício";
             this.mtxtInício.Size = new System.Drawing.Size(40, 23);
@@ -399,7 +602,7 @@
             this.dataGridView22.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView22.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView22.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView22.Location = new System.Drawing.Point(160, 259);
+            this.dataGridView22.Location = new System.Drawing.Point(160, 292);
             this.dataGridView22.Name = "dataGridView22";
             this.dataGridView22.Size = new System.Drawing.Size(2, 30);
             this.dataGridView22.TabIndex = 681;
@@ -410,7 +613,7 @@
             this.dataGridView20.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView20.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView20.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView20.Location = new System.Drawing.Point(0, 289);
+            this.dataGridView20.Location = new System.Drawing.Point(0, 322);
             this.dataGridView20.Name = "dataGridView20";
             this.dataGridView20.Size = new System.Drawing.Size(709, 2);
             this.dataGridView20.TabIndex = 678;
@@ -421,7 +624,7 @@
             this.dataGridView16.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridView16.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView16.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView16.Location = new System.Drawing.Point(0, 257);
+            this.dataGridView16.Location = new System.Drawing.Point(0, 290);
             this.dataGridView16.Name = "dataGridView16";
             this.dataGridView16.Size = new System.Drawing.Size(709, 2);
             this.dataGridView16.TabIndex = 676;
@@ -431,7 +634,7 @@
             this.lblHorário.AutoSize = true;
             this.lblHorário.Font = new System.Drawing.Font("Candara", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHorário.ForeColor = System.Drawing.Color.Black;
-            this.lblHorário.Location = new System.Drawing.Point(2, 229);
+            this.lblHorário.Location = new System.Drawing.Point(2, 262);
             this.lblHorário.Name = "lblHorário";
             this.lblHorário.Size = new System.Drawing.Size(86, 26);
             this.lblHorário.TabIndex = 675;
@@ -442,36 +645,39 @@
             this.chkPlanoDental.AutoSize = true;
             this.chkPlanoDental.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.chkPlanoDental.ForeColor = System.Drawing.Color.Black;
-            this.chkPlanoDental.Location = new System.Drawing.Point(201, 193);
+            this.chkPlanoDental.Location = new System.Drawing.Point(186, 193);
             this.chkPlanoDental.Name = "chkPlanoDental";
-            this.chkPlanoDental.Size = new System.Drawing.Size(115, 23);
+            this.chkPlanoDental.Size = new System.Drawing.Size(165, 23);
             this.chkPlanoDental.TabIndex = 674;
-            this.chkPlanoDental.Text = "Plano Dental";
+            this.chkPlanoDental.Text = "Plano Odontológico";
             this.chkPlanoDental.UseVisualStyleBackColor = true;
+            this.chkPlanoDental.CheckedChanged += new System.EventHandler(this.chkPlanoDental_CheckedChanged);
             // 
             // chkPlanoDeSáude
             // 
             this.chkPlanoDeSáude.AutoSize = true;
             this.chkPlanoDeSáude.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.chkPlanoDeSáude.ForeColor = System.Drawing.Color.Black;
-            this.chkPlanoDeSáude.Location = new System.Drawing.Point(201, 150);
+            this.chkPlanoDeSáude.Location = new System.Drawing.Point(186, 150);
             this.chkPlanoDeSáude.Name = "chkPlanoDeSáude";
             this.chkPlanoDeSáude.Size = new System.Drawing.Size(132, 23);
             this.chkPlanoDeSáude.TabIndex = 673;
             this.chkPlanoDeSáude.Text = "Plano de Sáude";
             this.chkPlanoDeSáude.UseVisualStyleBackColor = true;
+            this.chkPlanoDeSáude.CheckedChanged += new System.EventHandler(this.chkPlanoDeSáude_CheckedChanged);
             // 
             // chkSeguroDeVida
             // 
             this.chkSeguroDeVida.AutoSize = true;
             this.chkSeguroDeVida.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.chkSeguroDeVida.ForeColor = System.Drawing.Color.Black;
-            this.chkSeguroDeVida.Location = new System.Drawing.Point(201, 108);
+            this.chkSeguroDeVida.Location = new System.Drawing.Point(186, 108);
             this.chkSeguroDeVida.Name = "chkSeguroDeVida";
             this.chkSeguroDeVida.Size = new System.Drawing.Size(130, 23);
             this.chkSeguroDeVida.TabIndex = 672;
             this.chkSeguroDeVida.Text = "Seguro de Vida";
             this.chkSeguroDeVida.UseVisualStyleBackColor = true;
+            this.chkSeguroDeVida.CheckedChanged += new System.EventHandler(this.chkSeguroDeVida_CheckedChanged);
             // 
             // chkValeRefeição
             // 
@@ -484,30 +690,33 @@
             this.chkValeRefeição.TabIndex = 671;
             this.chkValeRefeição.Text = "Vale Refeição";
             this.chkValeRefeição.UseVisualStyleBackColor = true;
-            // 
-            // chkValeTransporte
-            // 
-            this.chkValeTransporte.AutoSize = true;
-            this.chkValeTransporte.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
-            this.chkValeTransporte.ForeColor = System.Drawing.Color.Black;
-            this.chkValeTransporte.Location = new System.Drawing.Point(10, 150);
-            this.chkValeTransporte.Name = "chkValeTransporte";
-            this.chkValeTransporte.Size = new System.Drawing.Size(135, 23);
-            this.chkValeTransporte.TabIndex = 670;
-            this.chkValeTransporte.Text = "Vale Transporte";
-            this.chkValeTransporte.UseVisualStyleBackColor = true;
+            this.chkValeRefeição.CheckedChanged += new System.EventHandler(this.chkValeRefeição_CheckedChanged);
             // 
             // chkValeAlimentação
             // 
             this.chkValeAlimentação.AutoSize = true;
-            this.chkValeAlimentação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkValeAlimentação.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold);
             this.chkValeAlimentação.ForeColor = System.Drawing.Color.Black;
-            this.chkValeAlimentação.Location = new System.Drawing.Point(10, 108);
+            this.chkValeAlimentação.Location = new System.Drawing.Point(10, 150);
             this.chkValeAlimentação.Name = "chkValeAlimentação";
             this.chkValeAlimentação.Size = new System.Drawing.Size(146, 23);
-            this.chkValeAlimentação.TabIndex = 669;
+            this.chkValeAlimentação.TabIndex = 670;
             this.chkValeAlimentação.Text = "Vale Alimentação";
             this.chkValeAlimentação.UseVisualStyleBackColor = true;
+            this.chkValeAlimentação.CheckedChanged += new System.EventHandler(this.chkValeAlimentação_CheckedChanged);
+            // 
+            // chkValeTransporte
+            // 
+            this.chkValeTransporte.AutoSize = true;
+            this.chkValeTransporte.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkValeTransporte.ForeColor = System.Drawing.Color.Black;
+            this.chkValeTransporte.Location = new System.Drawing.Point(10, 108);
+            this.chkValeTransporte.Name = "chkValeTransporte";
+            this.chkValeTransporte.Size = new System.Drawing.Size(135, 23);
+            this.chkValeTransporte.TabIndex = 669;
+            this.chkValeTransporte.Text = "Vale Transporte";
+            this.chkValeTransporte.UseVisualStyleBackColor = true;
+            this.chkValeTransporte.CheckedChanged += new System.EventHandler(this.chkValeTransporte_CheckedChanged);
             // 
             // lblTipoDePessoa
             // 
@@ -861,6 +1070,16 @@
             this.imgVoltar.TabStop = false;
             this.imgVoltar.Click += new System.EventHandler(this.imgVoltar_Click);
             // 
+            // ttpObs
+            // 
+            this.ttpObs.AutomaticDelay = 100;
+            this.ttpObs.AutoPopDelay = 15000;
+            this.ttpObs.InitialDelay = 100;
+            this.ttpObs.IsBalloon = true;
+            this.ttpObs.ReshowDelay = 0;
+            this.ttpObs.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.ttpObs.ToolTipTitle = "Observação!";
+            // 
             // frmRegisterEmployee1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -879,6 +1098,16 @@
             this.Text = "Register Employee";
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPensãoAlimentícia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDental)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlanoDeSáude)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudTarifa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSeguroDeVida)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValeAlimentação)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValeRefeição)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalárioBruto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView19)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView21)).EndInit();
@@ -941,8 +1170,8 @@
         private System.Windows.Forms.Label lblCódigo;
         private System.Windows.Forms.Label lblAgência;
         private System.Windows.Forms.Label lblTipoDePessoa;
-        private System.Windows.Forms.CheckBox chkValeAlimentação;
         private System.Windows.Forms.CheckBox chkValeTransporte;
+        private System.Windows.Forms.CheckBox chkValeAlimentação;
         private System.Windows.Forms.CheckBox chkValeRefeição;
         private System.Windows.Forms.CheckBox chkSeguroDeVida;
         private System.Windows.Forms.CheckBox chkPlanoDeSáude;
@@ -970,5 +1199,17 @@
         private System.Windows.Forms.MaskedTextBox mtxtAgênciaDoBanco;
         public System.Windows.Forms.ComboBox cboTipoDePessoa;
         protected System.Windows.Forms.TextBox txtNomeDoBanco;
+        public System.Windows.Forms.NumericUpDown nudValeRefeição;
+        public System.Windows.Forms.NumericUpDown nudValeAlimentação;
+        public System.Windows.Forms.NumericUpDown nudSeguroDeVida;
+        public System.Windows.Forms.NumericUpDown nudTarifa;
+        public System.Windows.Forms.NumericUpDown nudPlanoDental;
+        public System.Windows.Forms.NumericUpDown nudPlanoDeSáude;
+        public System.Windows.Forms.NumericUpDown nudPensãoAlimentícia;
+        private System.Windows.Forms.Label lblPensãoAlimentícia;
+        private System.Windows.Forms.DataGridView dataGridView25;
+        private System.Windows.Forms.DataGridView dataGridView24;
+        private System.Windows.Forms.DataGridView dataGridView23;
+        private System.Windows.Forms.ToolTip ttpObs;
     }
 }

@@ -38,6 +38,11 @@
           <Property Name="bt_lifeSafe" Type="bool" />
           <Property Name="bt_planHealth" Type="bool" />
           <Property Name="bt_planDental" Type="bool" />
+          <Property Name="vl_meal" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_food" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_lifeSafe" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_planHealth" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_planDental" Type="decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -427,6 +432,11 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="bt_lifeSafe" Type="Boolean" />
           <Property Name="bt_planHealth" Type="Boolean" />
           <Property Name="bt_planDental" Type="Boolean" />
+          <Property Name="vl_meal" Type="Decimal" />
+          <Property Name="vl_food" Type="Decimal" />
+          <Property Name="vl_lifeSafe" Type="Decimal" />
+          <Property Name="vl_planHealth" Type="Decimal" />
+          <Property Name="vl_planDental" Type="Decimal" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -822,6 +832,11 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
                 <ScalarProperty Name="bt_lifeSafe" ColumnName="bt_lifeSafe" />
                 <ScalarProperty Name="bt_planHealth" ColumnName="bt_planHealth" />
                 <ScalarProperty Name="bt_planDental" ColumnName="bt_planDental" />
+                <ScalarProperty Name="vl_meal" ColumnName="vl_meal" />
+                <ScalarProperty Name="vl_food" ColumnName="vl_food" />
+                <ScalarProperty Name="vl_lifeSafe" ColumnName="vl_lifeSafe" />
+                <ScalarProperty Name="vl_planHealth" ColumnName="vl_planHealth" />
+                <ScalarProperty Name="vl_planDental" ColumnName="vl_planDental" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -22,5 +22,10 @@ namespace Liriou_s_Burguer.Database.Entities
         public Nullable<bool> bt_lifeSafe { get; set; }
         public Nullable<bool> bt_planHealth { get; set; }
         public Nullable<bool> bt_planDental { get; set; }
+        public Nullable<decimal> vl_meal { get; set; }
+        public Nullable<decimal> vl_food { get; set; }
+        public Nullable<decimal> vl_lifeSafe { get; set; }
+        public Nullable<decimal> vl_planHealth { get; set; }
+        public Nullable<decimal> vl_planDental { get; set; }
     }
 }

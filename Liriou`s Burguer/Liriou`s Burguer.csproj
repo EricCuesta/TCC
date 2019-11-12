@@ -600,7 +600,9 @@
     <None Include="Resources\Visto01.png" />
     <None Include="Resources\Visto.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Fundo.png" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Database\Entities\LiriousDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -612,7 +614,6 @@
       <DependentUpon>LiriousDB.edmx</DependentUpon>
       <LastGenOutput>LiriousDB.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\Fundo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

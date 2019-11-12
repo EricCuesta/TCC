@@ -19,9 +19,16 @@ namespace Liriou_s_Burguer.Database
 
         public int Consultar(string rg)
         {
-            Entities.tb_employees tb = DB.tb_employees.First(t => t.nr_rg == rg);
+            try
+            {
+                Entities.tb_employees tb = DB.tb_employees.First(t => t.nr_rg == rg);
 
-            return tb.id_emp;
+                return tb.id_emp;
+            }
+            catch (Exception)
+            {
+                throw new ArgumentException("Não foi possivel encontar o Funcionário!");
+            }
         }
 
         public void Alterar(Entities.tb_financial financial)

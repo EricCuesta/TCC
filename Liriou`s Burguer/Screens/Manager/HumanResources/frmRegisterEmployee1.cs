@@ -51,6 +51,9 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 Database.Entities.tb_bankaccount tbbank = new Database.Entities.tb_bankaccount();
                 Business.BankAccountBusiness busbank = new Business.BankAccountBusiness();
 
+                Database.Entities.tb_discounts tbdiscounts = new Database.Entities.tb_discounts();
+                Business.DiscountsBusiness busdiscounts = new Business.DiscountsBusiness();
+
                 tbemployees.dt_hiring = dtpContratação.Value.ToShortDateString();
                 tbemployees.dt_resignation = dtpDemissão.Value.ToShortDateString();
                 tbdepartment.nm_department = cboDepartamento.Text;
@@ -60,16 +63,23 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 tbtimecard.hr_fixedIntOutput = mtxtTérminoIntervalo.Text;
                 tbtimecard.hr_fixedOutput = mtxtTérminoIntervalo.Text;
                 tbfinancial.vl_grossSalary = nudSalárioBruto.Value;
-                tbbenefits.bt_food = Convert.ToBoolean(chkValeAlimentação.Checked);
+                tbbenefits.bt_food = Convert.ToBoolean(chkValeTransporte.Checked);
                 tbbenefits.bt_meal = Convert.ToBoolean(chkValeRefeição.Checked);
+                tbbenefits.vl_meal = nudValeRefeição.Value;
+                tbbenefits.vl_food = nudValeAlimentação.Value;
+                tbbenefits.vl_lifeSafe = nudSeguroDeVida.Value;
+                nudTarifa.Value = Model.PayrollModel.Tarifa;
+                tbbenefits.vl_planHealth = nudPlanoDeSáude.Value;
+                tbbenefits.vl_planDental = nudPlanoDental.Value;
                 tbbenefits.bt_lifeSafe = Convert.ToBoolean(chkSeguroDeVida.Checked);
-                tbbenefits.bt_transport = Convert.ToBoolean(chkValeTransporte.Checked);
+                tbbenefits.bt_transport = Convert.ToBoolean(chkValeAlimentação.Checked);
                 tbbenefits.bt_planHealth = Convert.ToBoolean(chkPlanoDeSáude.Checked);
                 tbbenefits.bt_planDental = Convert.ToBoolean(chkPlanoDental.Checked);
                 tbbank.nm_bank = txtNomeDoBanco.Text;
                 tbbank.nr_account = mtxtCódigoDoBanco.Text;
                 tbbank.nr_agency = Convert.ToInt32(mtxtAgênciaDoBanco.Text);
                 tbbank.ds_typePerson = cboTipoDePessoa.Text;
+                tbdiscounts.vl_foodPension = nudPensãoAlimentícia.Value;
 
                 busemployee.Inserir1(tbemployees);
                 busdepartment.Inserir(tbdepartment);
@@ -78,6 +88,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 busfinancial.Inserir(tbfinancial);
                 busbenefits.Inserir(tbbenefits);
                 busbank.Inserir(tbbank);
+                busdiscounts.Inserir(tbdiscounts);
 
                 MessageBox.Show("Funcionário cadastrado com sucesso");
 
@@ -136,6 +147,90 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             registerEmployee.chkEstoque.Checked = Model.EmployeesModel.stock;
             registerEmployee.chkCRM.Checked = Model.EmployeesModel.CRM;
             frmMenu.Current.openContedor(registerEmployee);
+        }
+
+        private void chkValeRefeição_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkValeRefeição.Checked == true)
+            {
+                chkValeRefeição.Text = "VR";
+                nudValeRefeição.Visible = true;
+            }
+            else
+            {
+                chkValeRefeição.Text = "Vale Refeição";
+                nudValeRefeição.Visible = false;
+            }
+        }
+
+        private void chkValeAlimentação_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkValeAlimentação.Checked == true)
+            {
+                chkValeAlimentação.Text = "VA";
+                nudValeAlimentação.Visible = true;
+            }
+            else
+            {
+                chkValeAlimentação.Text = "Vale Alimentação";
+                nudValeAlimentação.Visible = false;
+            }
+        }
+
+        private void chkSeguroDeVida_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkSeguroDeVida.Checked == true)
+            {
+                chkSeguroDeVida.Text = "SV";
+                nudSeguroDeVida.Visible = true;
+            }
+            else
+            {
+                chkSeguroDeVida.Text = "Seguro de Vida";
+                nudSeguroDeVida.Visible = false;
+            }
+        }
+
+        private void chkValeTransporte_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkValeTransporte.Checked == true)
+            {
+                chkValeTransporte.Text = "VT";
+                nudTarifa.Visible = true;
+            }
+            else
+            {
+                chkValeTransporte.Text = "Vale Transporte";
+                nudTarifa.Visible = false;
+            }
+        }
+
+        private void chkPlanoDeSáude_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPlanoDeSáude.Checked == true)
+            {
+                chkPlanoDeSáude.Text = "PS";
+                nudPlanoDeSáude.Visible = true;
+            }
+            else
+            {
+                chkPlanoDeSáude.Text = "Plano de Saúde";
+                nudPlanoDeSáude.Visible = false;
+            }
+        }
+
+        private void chkPlanoDental_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPlanoDental.Checked == true)
+            {
+                chkPlanoDental.Text = "PD";
+                nudPlanoDental.Visible = true;
+            }
+            else
+            {
+                chkPlanoDental.Text = "Plano Odontológico";
+                nudPlanoDental.Visible = false;
+            }
         }
     }
 }

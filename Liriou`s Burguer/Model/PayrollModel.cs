@@ -8,7 +8,8 @@ namespace Liriou_s_Burguer.Model
 {
     static class PayrollModel
     {
-        public static string data { get; set; }
+        public static string Data { get; set; }
         public static string RG { get; set; }
+        public static decimal Tarifa { get; set; }
     }
 }

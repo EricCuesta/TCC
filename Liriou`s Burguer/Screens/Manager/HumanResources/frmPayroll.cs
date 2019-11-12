@@ -23,7 +23,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             string rg0 = mtxtRG.Text.Trim();
             string mesAno = mtxtAno.Text.Trim();
 
-            Model.PayrollModel.data = mesAno;
+            Model.PayrollModel.Data = mesAno;
             Model.PayrollModel.RG = rg0;
 
             Business.FinancialBusiness FB = new Business.FinancialBusiness();
@@ -52,6 +52,15 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 lblValeTransporte.Text = FB.ValeTransporte(ano, mes);
                 txtNomeDoFuncionário.Text = FB.NomeCompleto();
                 lblValeAlimentação.Text = FB.ValeAlimentação(ano, mes);
+                lblValeRefeição.Text = FB.ValeRefeição(ano, mes);
+                lblSeguroDeVida.Text = FB.SeguroDeVida();
+                lblPlanoDeSaúde.Text = FB.PlanoDeSaúde();
+                lblPlanoDental.Text = FB.PlanoDental();
+                lblSalárioFamília.Text = FB.SalárioFamília();
+                lblINSS.Text = FB.INSS();
+                lblPA.Text = FB.PensãoAlimentícia();
+                lblIR.Text = FB.ImpostoDeRenda();
+                lblFGTS.Text = FB.FGTS();
                 lblLíquido.Text = FB.Liquido();
             }
         }
