@@ -57,7 +57,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
                 Business.ProductBusiness busproduct = new Business.ProductBusiness();
                 busproduct.Alterar(product);
 
-                MessageBox.Show("Produto alterado com sucesso");
+                MessageBox.Show("Produto alterado com sucesso", "Alterado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (ArgumentException ex)
             {

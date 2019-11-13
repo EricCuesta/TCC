@@ -51,7 +51,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Stock.Products
             Business.ProductBusiness busproduct = new Business.ProductBusiness();
             busproduct.Remover(id);
 
-            MessageBox.Show("Produto deletado com sucesso");
+            MessageBox.Show("Produto deletado com sucesso","Deletado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
