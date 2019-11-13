@@ -335,5 +335,11 @@ namespace Liriou_s_Burguer.Screens.Manager
         {
             panelContedor.Visible = false;
         }
+
+        private void btnEnviarEmail_Click(object sender, EventArgs e)
+        {
+            openContedor(new CRM.frmEmailSending());
+            HideSubMenu();
+        }
     }
 }

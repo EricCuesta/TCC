@@ -603,6 +603,7 @@
   <ItemGroup>
     <None Include="Resources\Fundo.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Database\Entities\LiriousDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

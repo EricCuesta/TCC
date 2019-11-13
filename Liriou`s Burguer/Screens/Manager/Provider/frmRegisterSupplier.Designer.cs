@@ -41,7 +41,6 @@
             this.dataGridView15 = new System.Windows.Forms.DataGridView();
             this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
-            this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView12 = new System.Windows.Forms.DataGridView();
             this.dataGridView11 = new System.Windows.Forms.DataGridView();
             this.lblCelular = new System.Windows.Forms.Label();
@@ -67,6 +66,7 @@
             this.lblNome = new System.Windows.Forms.Label();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblCadastrarFornecedor = new System.Windows.Forms.Label();
+            this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
@@ -87,6 +87,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.Transparent;
+            this.panel.Controls.Add(this.mtxtCelular);
             this.panel.Controls.Add(this.mtxtCNPJ);
             this.panel.Controls.Add(this.mtxtCPF);
             this.panel.Controls.Add(this.lblCNPJ);
@@ -98,7 +99,6 @@
             this.panel.Controls.Add(this.dataGridView15);
             this.panel.Controls.Add(this.mtxtTelefone);
             this.panel.Controls.Add(this.lblTelefone);
-            this.panel.Controls.Add(this.mtxtCelular);
             this.panel.Controls.Add(this.dataGridView12);
             this.panel.Controls.Add(this.dataGridView11);
             this.panel.Controls.Add(this.lblCelular);
@@ -254,7 +254,7 @@
             this.mtxtTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtxtTelefone.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtxtTelefone.Location = new System.Drawing.Point(441, 164);
-            this.mtxtTelefone.Mask = "(999) 9999-9999";
+            this.mtxtTelefone.Mask = "(99) 9999-9999";
             this.mtxtTelefone.Name = "mtxtTelefone";
             this.mtxtTelefone.Size = new System.Drawing.Size(266, 23);
             this.mtxtTelefone.TabIndex = 637;
@@ -270,18 +270,6 @@
             this.lblTelefone.Size = new System.Drawing.Size(72, 19);
             this.lblTelefone.TabIndex = 636;
             this.lblTelefone.Text = "Telefone:";
-            // 
-            // mtxtCelular
-            // 
-            this.mtxtCelular.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.mtxtCelular.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtxtCelular.Location = new System.Drawing.Point(72, 164);
-            this.mtxtCelular.Mask = "(999) 99999-9999";
-            this.mtxtCelular.Name = "mtxtCelular";
-            this.mtxtCelular.Size = new System.Drawing.Size(277, 23);
-            this.mtxtCelular.TabIndex = 635;
             // 
             // dataGridView12
             // 
@@ -608,6 +596,18 @@
             this.lblCadastrarFornecedor.Text = "Cadastrar Fornecedor";
             this.lblCadastrarFornecedor.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // mtxtCelular
+            // 
+            this.mtxtCelular.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtxtCelular.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.mtxtCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtxtCelular.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtxtCelular.Location = new System.Drawing.Point(72, 164);
+            this.mtxtCelular.Mask = "(+55) (00) 00000-0000";
+            this.mtxtCelular.Name = "mtxtCelular";
+            this.mtxtCelular.Size = new System.Drawing.Size(278, 23);
+            this.mtxtCelular.TabIndex = 649;
+            // 
             // frmRegisterSupplier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -651,7 +651,6 @@
         private System.Windows.Forms.DataGridView dataGridView15;
         public System.Windows.Forms.MaskedTextBox mtxtTelefone;
         private System.Windows.Forms.Label lblTelefone;
-        public System.Windows.Forms.MaskedTextBox mtxtCelular;
         private System.Windows.Forms.DataGridView dataGridView12;
         private System.Windows.Forms.DataGridView dataGridView11;
         private System.Windows.Forms.Label lblCelular;
@@ -680,5 +679,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.ComboBox cboTipoDePessoa;
         private System.Windows.Forms.DataGridView dataGridView9;
+        public System.Windows.Forms.MaskedTextBox mtxtCelular;
     }
 }

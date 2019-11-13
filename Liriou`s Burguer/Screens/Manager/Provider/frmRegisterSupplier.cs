@@ -57,7 +57,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 Business.ProviderBusiness busprovider = new Business.ProviderBusiness();
                 busprovider.Inserir(provider);
 
-                MessageBox.Show("Fornecedor cadastrado com sucesso");
+                MessageBox.Show("Fornecedor cadastrado com sucesso", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ArgumentException ex)
             {

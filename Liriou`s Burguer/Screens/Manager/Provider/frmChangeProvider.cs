@@ -102,7 +102,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
                 Business.ProviderBusiness busprovider = new Business.ProviderBusiness();
                 busprovider.Alterar(provider);
 
-                MessageBox.Show("Fornecedor alterado com sucesso");
+                MessageBox.Show("Fornecedor alterado com sucesso","Alterado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (ArgumentException ex)
             {
@@ -144,6 +144,16 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
         {
             mtxtCPF.Clear();
             mtxtCNPJ.Clear();
+        }
+
+        private void mtxtTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void mtxtTelefone_MaskInputRejected_1(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }

@@ -50,12 +50,12 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 msg.Body = rtxtConteúdo.Text;
                 msg.BodyEncoding = System.Text.Encoding.UTF8;
                 msg.IsBodyHtml = true;
-                msg.From = new System.Net.Mail.MailAddress("CONTA@GMAIL.COM");
+                msg.From = new System.Net.Mail.MailAddress("eric.vitor006@gmail.com");
 
 
                 System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
 
-                client.Credentials = new System.Net.NetworkCredential("CONTA@GMAIL.COM", "SENHA");
+                client.Credentials = new System.Net.NetworkCredential("eric.vitor006@gmail.com", "5924Capivara");
                 client.Port = 587;
                 client.EnableSsl = true;
 

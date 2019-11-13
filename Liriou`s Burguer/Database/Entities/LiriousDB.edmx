@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_account">
           <Key>
             <PropertyRef Name="id_account" />
@@ -38,8 +38,9 @@
           <Property Name="bt_lifeSafe" Type="bool" />
           <Property Name="bt_planHealth" Type="bool" />
           <Property Name="bt_planDental" Type="bool" />
-          <Property Name="vl_meal" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_food" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_transport" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_meal" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_lifeSafe" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_planHealth" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_planDental" Type="decimal" Precision="10" Scale="2" />
@@ -63,14 +64,11 @@
           <Property Name="nr_tellphone" Type="char" MaxLength="14" />
           <Property Name="ds_email" Type="varchar" MaxLength="64" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'def.liriousdb.tb_cnae' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="tb_cnae">
           <Key>
-            <PropertyRef Name="id_enterprise" />
-            <PropertyRef Name="dt_tableYear" />
-            <PropertyRef Name="nr_cnae" />
+            <PropertyRef Name="id_cnae" />
           </Key>
+          <Property Name="id_cnae" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_enterprise" Type="int" Nullable="false" />
           <Property Name="dt_tableYear" Type="char" MaxLength="4" Nullable="false" />
           <Property Name="ds_activity" Type="varchar" MaxLength="256" />
@@ -99,11 +97,11 @@ warning 6002: The table/view 'def.liriousdb.tb_cnae' does not have a primary key
           </Key>
           <Property Name="id_discounts" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="vl_incomeTax" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="vl_incomeTax" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_familySalary" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_foodPension" Type="decimal" Precision="10" Scale="2" />
-          <Property Name="vl_inss" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="vl_fgts" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="vl_inss" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_fgts" Type="decimal" Precision="10" Scale="2" />
         </EntityType>
         <EntityType Name="tb_employees">
           <Key>
@@ -160,7 +158,7 @@ warning 6002: The table/view 'def.liriousdb.tb_cnae' does not have a primary key
           <Property Name="id_salary" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
           <Property Name="vl_grossSalary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="vl_netSalary" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="vl_netSalary" Type="decimal" Precision="10" Scale="2" />
           <Property Name="ds_typeSalary" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="dt_fromDate" Type="varchar" MaxLength="10" Nullable="false" />
           <Property Name="dt_toDate" Type="varchar" MaxLength="10" Nullable="false" />
@@ -179,12 +177,12 @@ warning 6002: The table/view 'def.liriousdb.tb_cnae' does not have a primary key
           </Key>
           <Property Name="id_point" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="hr_input" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="hr_output" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="hr_intInput" Type="varchar" MaxLength="8" Nullable="false" />
-          <Property Name="hr_intOutput" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_input" Type="varchar" MaxLength="8" />
+          <Property Name="hr_output" Type="varchar" MaxLength="8" />
+          <Property Name="hr_intInput" Type="varchar" MaxLength="8" />
+          <Property Name="hr_intOutput" Type="varchar" MaxLength="8" />
           <Property Name="hr_toPay" Type="varchar" MaxLength="5" />
-          <Property Name="dt_points" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="dt_points" Type="varchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="tb_product">
           <Key>
@@ -237,110 +235,12 @@ warning 6002: The table/view 'def.liriousdb.tb_cnae' does not have a primary key
           <Property Name="hr_fixedIntInput" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="hr_fixedIntOutput" Type="varchar" MaxLength="8" Nullable="false" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="tb_benefits_ibfk_1" />-->
-        <Association Name="tb_cnae_ibfk_1">
-          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
-          <End Role="tb_cnae" Type="Self.tb_cnae" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_enterprise">
-              <PropertyRef Name="id_enterprise" />
-            </Principal>
-            <Dependent Role="tb_cnae">
-              <PropertyRef Name="id_enterprise" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_cpp_ibfk_1">
-          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
-          <End Role="tb_cpp" Type="Self.tb_cpp" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_enterprise">
-              <PropertyRef Name="id_enterprise" />
-            </Principal>
-            <Dependent Role="tb_cpp">
-              <PropertyRef Name="id_enterprise" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_department_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_department" Type="Self.tb_department" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_department">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_discounts_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_discounts" Type="Self.tb_discounts" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_discounts">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_financial_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_financial" Type="Self.tb_financial" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_financial">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_function_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_function" Type="Self.tb_function" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_function">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_points_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_points">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_timecard_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_timecard" Type="Self.tb_timecard" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_timecard">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="liriousdbModelStoreContainer">
           <EntitySet Name="tb_account" EntityType="Self.tb_account" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_benefits" EntityType="Self.tb_benefits" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_client" EntityType="Self.tb_client" Schema="liriousdb" store:Type="Tables" />
+          <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_cpp" EntityType="Self.tb_cpp" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_department" EntityType="Self.tb_department" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_discounts" EntityType="Self.tb_discounts" Schema="liriousdb" store:Type="Tables" />
@@ -353,46 +253,6 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_supply" EntityType="Self.tb_supply" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_timecard" EntityType="Self.tb_timecard" Schema="liriousdb" store:Type="Tables" />
-          <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" store:Type="Tables" store:Schema="liriousdb">
-            <DefiningQuery>SELECT
-`tb_cnae`.`id_enterprise`, 
-`tb_cnae`.`dt_tableYear`, 
-`tb_cnae`.`ds_activity`, 
-`tb_cnae`.`nr_cnae`
-FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
-          </EntitySet>
-          <AssociationSet Name="tb_cnae_ibfk_1" Association="Self.tb_cnae_ibfk_1">
-            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
-            <End Role="tb_cnae" EntitySet="tb_cnae" />
-          </AssociationSet>
-          <AssociationSet Name="tb_cpp_ibfk_1" Association="Self.tb_cpp_ibfk_1">
-            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
-            <End Role="tb_cpp" EntitySet="tb_cpp" />
-          </AssociationSet>
-          <AssociationSet Name="tb_department_ibfk_1" Association="Self.tb_department_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_department" EntitySet="tb_department" />
-          </AssociationSet>
-          <AssociationSet Name="tb_discounts_ibfk_1" Association="Self.tb_discounts_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_discounts" EntitySet="tb_discounts" />
-          </AssociationSet>
-          <AssociationSet Name="tb_financial_ibfk_1" Association="Self.tb_financial_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_financial" EntitySet="tb_financial" />
-          </AssociationSet>
-          <AssociationSet Name="tb_function_ibfk_1" Association="Self.tb_function_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_function" EntitySet="tb_function" />
-          </AssociationSet>
-          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_points" EntitySet="tb_points" />
-          </AssociationSet>
-          <AssociationSet Name="tb_timecard_ibfk_1" Association="Self.tb_timecard_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_timecard" EntitySet="tb_timecard" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -432,8 +292,9 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="bt_lifeSafe" Type="Boolean" />
           <Property Name="bt_planHealth" Type="Boolean" />
           <Property Name="bt_planDental" Type="Boolean" />
-          <Property Name="vl_meal" Type="Decimal" />
           <Property Name="vl_food" Type="Decimal" />
+          <Property Name="vl_transport" Type="Decimal" />
+          <Property Name="vl_meal" Type="Decimal" />
           <Property Name="vl_lifeSafe" Type="Decimal" />
           <Property Name="vl_planHealth" Type="Decimal" />
           <Property Name="vl_planDental" Type="Decimal" />
@@ -457,6 +318,16 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="nr_tellphone" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
+        <EntityType Name="tb_cnae">
+          <Key>
+            <PropertyRef Name="id_cnae" />
+          </Key>
+          <Property Name="id_cnae" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_enterprise" Type="Int32" Nullable="false" />
+          <Property Name="dt_tableYear" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ds_activity" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="nr_cnae" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
         <EntityType Name="tb_cpp">
           <Key>
             <PropertyRef Name="id_cpp" />
@@ -465,7 +336,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="id_enterprise" Type="Int32" Nullable="false" />
           <Property Name="vl_cpp" Type="Decimal" Nullable="false" />
           <Property Name="vl_fgts" Type="Decimal" Nullable="false" />
-          <NavigationProperty Name="tb_enterprise" Relationship="Self.tb_cpp_ibfk_1" FromRole="tb_cpp" ToRole="tb_enterprise" />
         </EntityType>
         <EntityType Name="tb_department">
           <Key>
@@ -474,7 +344,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="id_department" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="nm_department" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_department_ibfk_1" FromRole="tb_department" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_discounts">
           <Key>
@@ -482,12 +351,11 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           </Key>
           <Property Name="id_discounts" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="vl_incomeTax" Type="Decimal" Nullable="false" />
+          <Property Name="vl_incomeTax" Type="Decimal" />
           <Property Name="vl_familySalary" Type="Decimal" />
           <Property Name="vl_foodPension" Type="Decimal" />
-          <Property Name="vl_inss" Type="Decimal" Nullable="false" />
-          <Property Name="vl_fgts" Type="Decimal" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_discounts" ToRole="tb_employees" />
+          <Property Name="vl_inss" Type="Decimal" />
+          <Property Name="vl_fgts" Type="Decimal" />
         </EntityType>
         <EntityType Name="tb_employees">
           <Key>
@@ -518,12 +386,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="bt_provider" Type="Boolean" />
           <Property Name="bt_stock" Type="Boolean" />
           <Property Name="bt_crm" Type="Boolean" />
-          <NavigationProperty Name="tb_department" Relationship="Self.tb_department_ibfk_1" FromRole="tb_employees" ToRole="tb_department" />
-          <NavigationProperty Name="tb_discounts" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_employees" ToRole="tb_discounts" />
-          <NavigationProperty Name="tb_financial" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_employees" ToRole="tb_financial" />
-          <NavigationProperty Name="tb_function" Relationship="Self.tb_function_ibfk_1" FromRole="tb_employees" ToRole="tb_function" />
-          <NavigationProperty Name="tb_points" Relationship="Self.tb_points_ibfk_1" FromRole="tb_employees" ToRole="tb_points" />
-          <NavigationProperty Name="tb_timecard" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_employees" ToRole="tb_timecard" />
         </EntityType>
         <EntityType Name="tb_enterprise">
           <Key>
@@ -542,8 +404,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="nr_cellphone" Type="String" MaxLength="21" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_tellphone" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_cpp" Relationship="Self.tb_cpp_ibfk_1" FromRole="tb_enterprise" ToRole="tb_cpp" />
-          <NavigationProperty Name="tb_cnae" Relationship="Self.tb_cnae_ibfk_1" FromRole="tb_enterprise" ToRole="tb_cnae" />
         </EntityType>
         <EntityType Name="tb_financial">
           <Key>
@@ -552,11 +412,10 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="id_salary" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="vl_grossSalary" Type="Decimal" Nullable="false" />
-          <Property Name="vl_netSalary" Type="Decimal" Nullable="false" />
+          <Property Name="vl_netSalary" Type="Decimal" />
           <Property Name="ds_typeSalary" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="dt_fromDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="dt_toDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_financial" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_function">
           <Key>
@@ -565,7 +424,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="id_function" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="nm_function" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_function_ibfk_1" FromRole="tb_function" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_points">
           <Key>
@@ -573,13 +431,12 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           </Key>
           <Property Name="id_point" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="hr_input" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="hr_output" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="hr_intInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="hr_intOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_input" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="hr_output" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="hr_intInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="hr_intOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <Property Name="hr_toPay" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="dt_points" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_points_ibfk_1" FromRole="tb_points" ToRole="tb_employees" />
+          <Property Name="dt_points" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_product">
           <Key>
@@ -631,121 +488,13 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <Property Name="hr_fixedOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="hr_fixedIntInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="hr_fixedIntOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_employees" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_timecard" ToRole="tb_employees" />
         </EntityType>
-        <EntityType Name="tb_cnae">
-          <Key>
-            <PropertyRef Name="id_enterprise" />
-            <PropertyRef Name="dt_tableYear" />
-            <PropertyRef Name="nr_cnae" />
-          </Key>
-          <Property Name="id_enterprise" Type="Int32" Nullable="false" />
-          <Property Name="dt_tableYear" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="ds_activity" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
-          <Property Name="nr_cnae" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="tb_enterprise" Relationship="Self.tb_cnae_ibfk_1" FromRole="tb_cnae" ToRole="tb_enterprise" />
-        </EntityType>
-        <Association Name="tb_cpp_ibfk_1">
-          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
-          <End Role="tb_cpp" Type="Self.tb_cpp" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_enterprise">
-              <PropertyRef Name="id_enterprise" />
-            </Principal>
-            <Dependent Role="tb_cpp">
-              <PropertyRef Name="id_enterprise" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_department_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_department" Type="Self.tb_department" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_department">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_discounts_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_discounts" Type="Self.tb_discounts" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_discounts">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_financial_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_financial" Type="Self.tb_financial" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_financial">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_function_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_function" Type="Self.tb_function" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_function">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_points_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_points">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_timecard_ibfk_1">
-          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
-          <End Role="tb_timecard" Type="Self.tb_timecard" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_employees">
-              <PropertyRef Name="id_emp" />
-            </Principal>
-            <Dependent Role="tb_timecard">
-              <PropertyRef Name="id_emp" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="tb_cnae_ibfk_1">
-          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
-          <End Role="tb_cnae" Type="Self.tb_cnae" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_enterprise">
-              <PropertyRef Name="id_enterprise" />
-            </Principal>
-            <Dependent Role="tb_cnae">
-              <PropertyRef Name="id_enterprise" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="liriousdbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_account" EntityType="Self.tb_account" />
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" />
           <EntitySet Name="tb_benefits" EntityType="Self.tb_benefits" />
           <EntitySet Name="tb_client" EntityType="Self.tb_client" />
+          <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" />
           <EntitySet Name="tb_cpp" EntityType="Self.tb_cpp" />
           <EntitySet Name="tb_department" EntityType="Self.tb_department" />
           <EntitySet Name="tb_discounts" EntityType="Self.tb_discounts" />
@@ -758,39 +507,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" />
           <EntitySet Name="tb_supply" EntityType="Self.tb_supply" />
           <EntitySet Name="tb_timecard" EntityType="Self.tb_timecard" />
-          <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" />
-          <AssociationSet Name="tb_cpp_ibfk_1" Association="Self.tb_cpp_ibfk_1">
-            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
-            <End Role="tb_cpp" EntitySet="tb_cpp" />
-          </AssociationSet>
-          <AssociationSet Name="tb_department_ibfk_1" Association="Self.tb_department_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_department" EntitySet="tb_department" />
-          </AssociationSet>
-          <AssociationSet Name="tb_discounts_ibfk_1" Association="Self.tb_discounts_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_discounts" EntitySet="tb_discounts" />
-          </AssociationSet>
-          <AssociationSet Name="tb_financial_ibfk_1" Association="Self.tb_financial_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_financial" EntitySet="tb_financial" />
-          </AssociationSet>
-          <AssociationSet Name="tb_function_ibfk_1" Association="Self.tb_function_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_function" EntitySet="tb_function" />
-          </AssociationSet>
-          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_points" EntitySet="tb_points" />
-          </AssociationSet>
-          <AssociationSet Name="tb_timecard_ibfk_1" Association="Self.tb_timecard_ibfk_1">
-            <End Role="tb_employees" EntitySet="tb_employees" />
-            <End Role="tb_timecard" EntitySet="tb_timecard" />
-          </AssociationSet>
-          <AssociationSet Name="tb_cnae_ibfk_1" Association="Self.tb_cnae_ibfk_1">
-            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
-            <End Role="tb_cnae" EntitySet="tb_cnae" />
-          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -832,8 +548,9 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
                 <ScalarProperty Name="bt_lifeSafe" ColumnName="bt_lifeSafe" />
                 <ScalarProperty Name="bt_planHealth" ColumnName="bt_planHealth" />
                 <ScalarProperty Name="bt_planDental" ColumnName="bt_planDental" />
-                <ScalarProperty Name="vl_meal" ColumnName="vl_meal" />
                 <ScalarProperty Name="vl_food" ColumnName="vl_food" />
+                <ScalarProperty Name="vl_transport" ColumnName="vl_transport" />
+                <ScalarProperty Name="vl_meal" ColumnName="vl_meal" />
                 <ScalarProperty Name="vl_lifeSafe" ColumnName="vl_lifeSafe" />
                 <ScalarProperty Name="vl_planHealth" ColumnName="vl_planHealth" />
                 <ScalarProperty Name="vl_planDental" ColumnName="vl_planDental" />
@@ -857,6 +574,17 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
                 <ScalarProperty Name="nr_cellphone" ColumnName="nr_cellphone" />
                 <ScalarProperty Name="nr_tellphone" ColumnName="nr_tellphone" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_cnae">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_cnae">
+              <MappingFragment StoreEntitySet="tb_cnae">
+                <ScalarProperty Name="id_cnae" ColumnName="id_cnae" />
+                <ScalarProperty Name="id_enterprise" ColumnName="id_enterprise" />
+                <ScalarProperty Name="dt_tableYear" ColumnName="dt_tableYear" />
+                <ScalarProperty Name="ds_activity" ColumnName="ds_activity" />
+                <ScalarProperty Name="nr_cnae" ColumnName="nr_cnae" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1033,16 +761,6 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tb_cnae">
-            <EntityTypeMapping TypeName="liriousdbModel.tb_cnae">
-              <MappingFragment StoreEntitySet="tb_cnae">
-                <ScalarProperty Name="id_enterprise" ColumnName="id_enterprise" />
-                <ScalarProperty Name="dt_tableYear" ColumnName="dt_tableYear" />
-                <ScalarProperty Name="ds_activity" ColumnName="ds_activity" />
-                <ScalarProperty Name="nr_cnae" ColumnName="nr_cnae" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -1059,7 +777,7 @@ FROM `tb_cnae` AS `tb_cnae`</DefiningQuery>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

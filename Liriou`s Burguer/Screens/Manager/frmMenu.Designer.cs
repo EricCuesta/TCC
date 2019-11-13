@@ -200,6 +200,7 @@
             this.btnEnviarEmail.Text = "Enviar E-mail";
             this.btnEnviarEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEnviarEmail.UseVisualStyleBackColor = false;
+            this.btnEnviarEmail.Click += new System.EventHandler(this.btnEnviarEmail_Click);
             // 
             // panel40
             // 

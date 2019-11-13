@@ -76,7 +76,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Provider
             Business.ProviderBusiness busclient = new Business.ProviderBusiness();
             busclient.Remover(id);
 
-            MessageBox.Show("Fornecedor deletado com sucesso");
+            MessageBox.Show("Fornecedor deletado com sucesso", "Deletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
         private void HideControls()
