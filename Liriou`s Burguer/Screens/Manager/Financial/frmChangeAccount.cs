@@ -54,7 +54,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Financial
                 Business.AccountBusiness busaccount = new Business.AccountBusiness();
                 busaccount.Alterar(account);
 
-                MessageBox.Show("Produto alterado com sucesso");
+                MessageBox.Show("Produto alterado com sucesso","Alterado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (ArgumentException ex)
             {

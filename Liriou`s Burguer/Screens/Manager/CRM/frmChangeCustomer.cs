@@ -94,7 +94,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 Business.ClientBusiness busclient = new Business.ClientBusiness();
                 busclient.Alterar(client);
 
-                MessageBox.Show("Cliente alterado com sucesso");
+                MessageBox.Show("Cliente alterado com sucesso","Alterado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (ArgumentException ex)
             {

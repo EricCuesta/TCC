@@ -49,7 +49,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 Business.ClientBusiness busclient = new Business.ClientBusiness();
                 busclient.Inserir(client);
 
-                MessageBox.Show("Cliente cadastrado com sucesso");
+                MessageBox.Show("Cliente cadastrado com sucesso","Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ArgumentException ex)
             {

@@ -30,7 +30,7 @@ namespace Liriou_s_Burguer.Screens.Manager.Financial
                 Business.AccountBusiness busaccount = new Business.AccountBusiness();
                 busaccount.Inserir(account);
 
-                MessageBox.Show("Conta cadastrado com sucesso");
+                MessageBox.Show("Conta cadastrado com sucesso","OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ArgumentException ex)
             {

@@ -68,7 +68,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
             Business.ClientBusiness busclient = new Business.ClientBusiness();
             busclient.Remover(id);
 
-            MessageBox.Show("Cliente deletado com sucesso");
+            MessageBox.Show("Cliente deletado com sucesso","Deletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }

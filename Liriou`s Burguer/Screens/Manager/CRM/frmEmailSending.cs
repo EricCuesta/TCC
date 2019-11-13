@@ -62,7 +62,7 @@ namespace Liriou_s_Burguer.Screens.Manager.CRM
                 client.Host = "smtp.gmail.com";
 
                 client.Send(msg);
-                MessageBox.Show("E-mail enviado com sucesso");
+                MessageBox.Show("E-mail enviado com sucesso","Enviado!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
