@@ -76,6 +76,7 @@
     <Compile Include="Business\CNAEBusiness.cs" />
     <Compile Include="Business\CPPBusiness.cs" />
     <Compile Include="Business\DepartmentBusiness.cs" />
+    <Compile Include="Business\DeptFunctionBusiness.cs" />
     <Compile Include="Business\DiscountsBusiness.cs" />
     <Compile Include="Business\EmployeesBusiness.cs" />
     <Compile Include="Business\EnterpriseBusiness.cs" />
@@ -97,6 +98,7 @@
     <Compile Include="Database\DiscountsDatabase.cs" />
     <Compile Include="Database\EmployeesDatabase.cs" />
     <Compile Include="Database\EnterpriseDatabase.cs" />
+    <Compile Include="Database\DeptFunctionDatabase.cs" />
     <Compile Include="Database\Entities\LiriousDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -131,6 +133,9 @@
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_department.cs">
+      <DependentUpon>LiriousDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Entities\tb_deptfunction.cs">
       <DependentUpon>LiriousDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Database\Entities\tb_discounts.cs">

@@ -15,8 +15,6 @@ namespace Liriou_s_Burguer.Screens.Manager
     {
         public static frmMenu Current;
 
-        Database.Entities.tb_employees emp;
-
         public frmMenu()
         {
             InitializeComponent();
@@ -24,6 +22,7 @@ namespace Liriou_s_Burguer.Screens.Manager
             CustomizeDesign();
         }
 
+        Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
         private void Hrs_Tick(object sender, EventArgs e)
         {
             lblhrs.Text = "Hrs: " + DateTime.Now.ToString("HH:mm:ss");
@@ -48,6 +47,46 @@ namespace Liriou_s_Burguer.Screens.Manager
             panelSubMenuFornecedor.Visible = false;
             panelSubMenuEstoque.Visible = false;
             panelSubMenuCRM.Visible = false;
+
+            Database.Entities.tb_employees tb = DB.UsuárioLogado(Model.LoginModel.Email, Model.LoginModel.Senha);
+            if (tb.bt_financial != true)
+            {
+                btnFinanceiro.Visible = false;
+            }
+            if (tb.bt_crm != true)
+            {
+                btnCRM.Visible = false;
+            }
+            if (tb.bt_provider != true)
+            {
+                btnFornecedor.Visible = false;
+            }
+            if (tb.bt_rh != true)
+            {
+                btnRecursosHumanos.Visible = false;
+            }
+            if (tb.bt_stock != true)
+            {
+                btnEstoque.Visible = false;
+            }
+
+            if (tb.bt_employee == true || tb.bt_manager == true)
+            {
+                btnCartãoDePonto.Visible = true;
+                btnConsultarCartãoDePonto.Visible = true;
+            }
+
+            string usuario = "Usuário:";
+            if (tb.bt_manager == true && tb.bt_employee == false)
+            {
+                usuario = "Gerente:";
+            }
+            if (tb.bt_manager == false && tb.bt_employee == true)
+            {
+                usuario = "Funcionario:";
+            }
+
+            lblUsuário.Text = usuario + " " + tb.nm_firstName + " " + tb.nm_lastName + " / Entrou às: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
         }
 
         private void HideSubMenu()

@@ -9,6 +9,6 @@ namespace Liriou_s_Burguer.Model
     class LoginModel
     {
         public static string Email { get; set; }
-        public static string Senha { get; set; }
+        public static string Senha { get; set; } 
     }
 }

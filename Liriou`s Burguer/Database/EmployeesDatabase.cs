@@ -10,6 +10,12 @@ namespace Liriou_s_Burguer.Database
     {
         Entities.liriousdbEntities db = new Entities.liriousdbEntities();
 
+        public int InsertEmp(string cpf)
+        {
+            Entities.tb_employees tb = db.tb_employees.First(t => t.nr_cpf == cpf);
+            return tb.id_emp;
+        }
+
         public bool Login(Entities.tb_employees emp)
         {
             Entities.tb_employees tb = db.tb_employees.FirstOrDefault(t => t.ds_email == emp.ds_email &&
@@ -23,6 +29,11 @@ namespace Liriou_s_Burguer.Database
             {
                 return false;
             }
+        }
+
+        public Entities.tb_employees UsuárioLogado(string email, string senha)
+        {
+            return db.tb_employees.First(t => t.ds_email == email && t.pw_password == senha);
         }
 
         public Entities.tb_employees VerificarRecuperação(Entities.tb_employees employees)

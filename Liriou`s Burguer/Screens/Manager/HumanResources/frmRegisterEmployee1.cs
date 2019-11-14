@@ -8,6 +8,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Liriou_s_Burguer.Database.Entities;
+using Liriou_s_Burguer.Business;
+using Liriou_s_Burguer.Model;
 
 namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 {
@@ -16,6 +19,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         public frmRegisterEmployee1()
         {
             InitializeComponent();
+            CarregarCombos();
         }
 
         Database.Entities.tb_employees employees;
@@ -30,88 +34,64 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         {
             try
             {
-                Database.Entities.tb_employees tbemployees = new Database.Entities.tb_employees();
-                Business.EmployeesBusiness busemployee = new Business.EmployeesBusiness();
+                tb_employees emp = new tb_employees();
+                tb_deptfunction defu = new tb_deptfunction();
+                tb_timecard ticd = new tb_timecard();
+                tb_financial fin = new tb_financial();
+                tb_benefits ben = new tb_benefits();
+                tb_bankaccount bank = new tb_bankaccount();
+                tb_discounts dis = new tb_discounts();
 
-                Database.Entities.tb_department tbdepartment = new Database.Entities.tb_department();
-                Business.DepartmentBusiness busdepartment = new Business.DepartmentBusiness();
+                EmployeesBusiness empB = new EmployeesBusiness();
+                DeptFunctionBusiness defuB = new DeptFunctionBusiness();
+                TimeCardBusiness ticdB = new TimeCardBusiness();
+                FinancialBusiness finB = new FinancialBusiness();
+                BenefitsBusiness benB = new BenefitsBusiness();
+                BankAccountBusiness bankB = new BankAccountBusiness();
+                DiscountsBusiness disB = new DiscountsBusiness();
 
-                Database.Entities.tb_function tbfunction = new Database.Entities.tb_function();
-                Business.FunctionBusiness busfunction = new Business.FunctionBusiness();
+                emp.dt_hiring = dtpContratação.Value.ToShortDateString();
+                emp.dt_resignation = "01/01/9999";
+                defu.nm_department = cboDepartamento.Text;
+                defu.nm_function = cboCargo.Text;
+                fin.vl_grossSalary = nudSalárioBruto.Value;
+                fin.dt_fromDate = DateTime.Now.ToShortDateString();
+                fin.dt_toDate = "01/01/9999";
+                fin.ds_typeSalary = cboTipoDeSalário.Text;
+                ben.bt_transport = chkValeTransporte.Checked;
+                ben.bt_food = chkValeAlimentação.Checked;
+                ben.bt_meal = chkValeRefeição.Checked;
+                ben.bt_lifeSafe = chkSeguroDeVida.Checked;
+                ben.bt_planHealth = chkPlanoDeSáude.Checked;
+                ben.bt_planDental = chkPlanoDental.Checked;
+                ben.vl_transport = nudTarifa.Value;
+                ben.vl_food = nudValeAlimentação.Value;
+                ben.vl_meal = nudValeRefeição.Value;
+                ben.vl_lifeSafe = nudSeguroDeVida.Value;
+                ben.vl_planHealth = nudPlanoDeSáude.Value;
+                ben.vl_planDental = nudPlanoDental.Value;
+                bank.nm_bank = txtNomeDoBanco.Text;
+                bank.nr_agency = Convert.ToInt32(mtxtAgência.Text);
+                bank.nr_account = mtxtConta.Text;
+                bank.ds_typePerson = cboTipoDePessoa.Text;
+                dis.vl_foodPension = nudPensãoAlimentícia.Value;
+                ticd.hr_fixedInput = mtxtEntrada.Text;
+                ticd.hr_fixedOutput = mtxtSaída.Text;
+                ticd.hr_fixedIntInput = mtxtInícioInt.Text;
+                ticd.hr_fixedIntOutput = mtxtFinalInt.Text;
 
-                Database.Entities.tb_timecard tbtimecard = new Database.Entities.tb_timecard();
-                Business.TimeCardBusiness bustimecard = new Business.TimeCardBusiness();
-
-                Database.Entities.tb_financial tbfinancial = new Database.Entities.tb_financial();
-                Business.FinancialBusiness busfinancial = new Business.FinancialBusiness();
-
-                Database.Entities.tb_benefits tbbenefits = new Database.Entities.tb_benefits();
-                Business.BenefitsBusiness busbenefits = new Business.BenefitsBusiness();
-
-                Database.Entities.tb_bankaccount tbbank = new Database.Entities.tb_bankaccount();
-                Business.BankAccountBusiness busbank = new Business.BankAccountBusiness();
-
-                Database.Entities.tb_discounts tbdiscounts = new Database.Entities.tb_discounts();
-                Business.DiscountsBusiness busdiscounts = new Business.DiscountsBusiness();
-
-                tbemployees.dt_hiring = dtpContratação.Value.ToShortDateString();
-                tbemployees.dt_resignation = dtpDemissão.Value.ToShortDateString();
-                tbdepartment.nm_department = cboDepartamento.Text;
-                tbfunction.nm_function = cboCargo.Text;
-                tbtimecard.hr_fixedInput = mtxtInício.Text;
-                tbtimecard.hr_fixedIntInput = mtxtInícioIntervalo.Text;
-                tbtimecard.hr_fixedIntOutput = mtxtTérminoIntervalo.Text;
-                tbtimecard.hr_fixedOutput = mtxtTérminoIntervalo.Text;
-                tbfinancial.vl_grossSalary = nudSalárioBruto.Value;
-                tbbenefits.bt_food = Convert.ToBoolean(chkValeTransporte.Checked);
-                tbbenefits.bt_meal = Convert.ToBoolean(chkValeRefeição.Checked);
-                tbbenefits.vl_meal = nudValeRefeição.Value;
-                tbbenefits.vl_food = nudValeAlimentação.Value;
-                tbbenefits.vl_lifeSafe = nudSeguroDeVida.Value;
-                nudTarifa.Value = Model.PayrollModel.Tarifa;
-                tbbenefits.vl_planHealth = nudPlanoDeSáude.Value;
-                tbbenefits.vl_planDental = nudPlanoDental.Value;
-                tbbenefits.bt_lifeSafe = Convert.ToBoolean(chkSeguroDeVida.Checked);
-                tbbenefits.bt_transport = Convert.ToBoolean(chkValeAlimentação.Checked);
-                tbbenefits.bt_planHealth = Convert.ToBoolean(chkPlanoDeSáude.Checked);
-                tbbenefits.bt_planDental = Convert.ToBoolean(chkPlanoDental.Checked);
-                tbbank.nm_bank = txtNomeDoBanco.Text;
-                tbbank.nr_account = mtxtCódigoDoBanco.Text;
-                tbbank.nr_agency = Convert.ToInt32(mtxtAgênciaDoBanco.Text);
-                tbbank.ds_typePerson = cboTipoDePessoa.Text;
-                tbdiscounts.vl_foodPension = nudPensãoAlimentícia.Value;
-
-                busemployee.Inserir1(tbemployees);
-                busdepartment.Inserir(tbdepartment);
-                busfunction.Inserir(tbfunction);
-                bustimecard.Inserir(tbtimecard);
-                busfinancial.Inserir(tbfinancial);
-                busbenefits.Inserir(tbbenefits);
-                busbank.Inserir(tbbank);
-                busdiscounts.Inserir(tbdiscounts);
+                empB.Inserir1(emp);
+                defuB.Inserir(defu);
+                ticdB.Inserir(ticd);
+                finB.Inserir(fin);
+                benB.Inserir(ben);
+                bankB.Inserir(bank);
+                disB.Inserir(dis);
 
                 MessageBox.Show("Funcionário cadastrado com sucesso");
 
-                Model.EmployeesModel.firstName = string.Empty;
-                Model.EmployeesModel.lastName = string.Empty;
-                Model.EmployeesModel.RG = string.Empty;
-                Model.EmployeesModel.CPF = string.Empty;
-                Model.EmployeesModel.dependents = 0;
-                Model.EmployeesModel.birth = Convert.ToString(DateTime.Now);
-                Model.EmployeesModel.CEP = string.Empty;
-                Model.EmployeesModel.note = string.Empty;
-                Model.EmployeesModel.address = string.Empty;
-                Model.EmployeesModel.email = string.Empty;
-                Model.EmployeesModel.cellphone = string.Empty;
-                Model.EmployeesModel.tellphone = string.Empty;
-                Model.EmployeesModel.password = string.Empty;
-                Model.EmployeesModel.manager = Convert.ToBoolean(string.Empty);
-                Model.EmployeesModel.employeer = Convert.ToBoolean(string.Empty);
-                Model.EmployeesModel.RH = Convert.ToBoolean(string.Empty);
-                Model.EmployeesModel.financial = Convert.ToBoolean(string.Empty);
-                Model.EmployeesModel.stock = Convert.ToBoolean(string.Empty);
-                Model.EmployeesModel.CRM = Convert.ToBoolean(string.Empty);
-            }
+                this.Zerar();
+        }
             catch (ArgumentException ex)
             {
                 MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -124,29 +104,64 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void imgVoltar_Click(object sender, EventArgs e)
         {
-            frmRegisterEmployee registerEmployee = new frmRegisterEmployee();
-            registerEmployee.txtNome.Text = Model.EmployeesModel.firstName;
-            registerEmployee.txtSobrenome.Text = Model.EmployeesModel.lastName;
-            registerEmployee.mtxtRG.Text = Model.EmployeesModel.RG;
-            registerEmployee.mtxtCPF.Text = Model.EmployeesModel.CPF;
-            registerEmployee.nudDependentes.Value = Model.EmployeesModel.dependents;
-            registerEmployee.cboSexo.Text = Model.EmployeesModel.sex;
-            registerEmployee.dtpNascimento.Value = Convert.ToDateTime(Model.EmployeesModel.birth);
-            registerEmployee.cboEstado.Text = Model.EmployeesModel.state;
-            registerEmployee.mtxtCEP.Text = Model.EmployeesModel.CEP;
-            registerEmployee.txtEndereço.Text = Model.EmployeesModel.address;
-            registerEmployee.txtComplemento.Text = Model.EmployeesModel.note;
-            registerEmployee.mtxtCelular.Text = Model.EmployeesModel.cellphone;
-            registerEmployee.mtxtTelefone.Text = Model.EmployeesModel.tellphone;
-            registerEmployee.txtEmail.Text = Model.EmployeesModel.email;
-            registerEmployee.txtSenha.Text = Model.EmployeesModel.password;
-            registerEmployee.rdbGerente.Checked = Model.EmployeesModel.manager;
-            registerEmployee.rdbFuncionário.Checked = Model.EmployeesModel.employeer;
-            registerEmployee.chkRH.Checked = Model.EmployeesModel.RH;
-            registerEmployee.chkFinanceiro.Checked = Model.EmployeesModel.financial;
-            registerEmployee.chkEstoque.Checked = Model.EmployeesModel.stock;
-            registerEmployee.chkCRM.Checked = Model.EmployeesModel.CRM;
-            frmMenu.Current.openContedor(registerEmployee);
+            frmRegisterEmployee emp = new frmRegisterEmployee();
+            emp.txtNome.Text = EmployeesModel.firstName;
+            emp.txtSobrenome.Text = EmployeesModel.lastName;
+            emp.mtxtRG.Text = EmployeesModel.RG;
+            emp.mtxtCPF.Text = EmployeesModel.CPF;
+            emp.nudDependentes.Value = EmployeesModel.dependents;
+            emp.dtpNascimento.Value = Convert.ToDateTime(EmployeesModel.birth);
+            emp.cboEstado.Text = EmployeesModel.state;
+            emp.mtxtCEP.Text = EmployeesModel.CEP;
+            emp.txtEndereço.Text = EmployeesModel.address;
+            emp.txtComplemento.Text = EmployeesModel.note;
+            emp.mtxtCelular.Text = EmployeesModel.cellphone;
+            emp.mtxtTelefone.Text = EmployeesModel.tellphone;
+            emp.txtEmail.Text = EmployeesModel.email;
+            emp.txtSenha.Text = EmployeesModel.password;
+            emp.rdbGerente.Checked = EmployeesModel.manager;
+            emp.rdbFuncionário.Checked = EmployeesModel.employeer;
+            emp.chkFornecedor.Checked = EmployeesModel.Provider;
+            emp.chkRH.Checked = EmployeesModel.RH;
+            emp.chkFinanceiro.Checked = EmployeesModel.financial;
+            emp.chkEstoque.Checked = EmployeesModel.stock;
+            emp.chkCRM.Checked = EmployeesModel.CRM;
+            if (EmployeesModel.sex == "M")
+            {
+                emp.cboSexo.Text = "Masculino";
+            }
+            else
+            {
+                emp.cboSexo.Text = "Feminino";
+            }
+
+            frmMenu.Current.openContedor(emp);
+        }
+
+        private void Zerar()
+        {
+            EmployeesModel.firstName = string.Empty;
+            EmployeesModel.lastName = string.Empty;
+            EmployeesModel.RG = string.Empty;
+            EmployeesModel.CPF = string.Empty;
+            EmployeesModel.dependents = 0;
+            EmployeesModel.sex = string.Empty;
+            EmployeesModel.birth = "01/01/2000";
+            EmployeesModel.state = string.Empty;
+            EmployeesModel.CEP = string.Empty;
+            EmployeesModel.address = string.Empty;
+            EmployeesModel.note = string.Empty;
+            EmployeesModel.cellphone = string.Empty;
+            EmployeesModel.tellphone = string.Empty;
+            EmployeesModel.email = string.Empty;
+            EmployeesModel.password = string.Empty;
+            EmployeesModel.employeer = false;
+            EmployeesModel.manager = false;
+            EmployeesModel.CRM = false;
+            EmployeesModel.Provider = false;
+            EmployeesModel.stock = false;
+            EmployeesModel.RH = false;
+            EmployeesModel.financial = false;
         }
 
         private void chkValeRefeição_CheckedChanged(object sender, EventArgs e)
@@ -230,6 +245,22 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 chkPlanoDental.Text = "Plano Odontológico";
                 nudPlanoDental.Visible = false;
+            }
+        }
+
+        private void CarregarCombos()
+        {
+            liriousdbEntities DB = new liriousdbEntities();
+            List<tb_department> listDept = DB.tb_department.ToList();
+            List<tb_function> listFunc = DB.tb_function.ToList();
+
+            foreach (tb_department dept in listDept)
+            {
+                cboDepartamento.Items.Add(dept.nm_department);
+            }
+            foreach (tb_function func in listFunc)
+            {
+                cboCargo.Items.Add(func.nm_function);
             }
         }
     }

@@ -10,9 +10,17 @@ namespace Liriou_s_Burguer.Business
     {
         Database.DiscountsDatabase db = new Database.DiscountsDatabase();
 
-        public void Inserir(Database.Entities.tb_discounts discounts)
+        public void Inserir(Database.Entities.tb_discounts dis)
         {
-            db.Inserir(discounts);
+            if (dis.vl_foodPension == Convert.ToDecimal(0.0) && dis.tb_employees.nr_dependents != 0)
+            {
+                throw new ArgumentException("Pensão Alimentícia Obrigatória!");
+            }
+
+            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
+            dis.id_emp = DB.InsertEmp(Model.EmployeesModel.CPF);
+
+            db.Inserir(dis);
         }
 
         public List<Database.Entities.tb_discounts> Consultar()

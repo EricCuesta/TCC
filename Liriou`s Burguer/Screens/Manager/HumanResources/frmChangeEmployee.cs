@@ -118,7 +118,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 employees.bt_crm = chkCRM.Checked;
 
                 Business.EmployeesBusiness db = new Business.EmployeesBusiness();
-                db.Inserir(employees);
+                db.Inserir();
 
                 frmRegisterEmployee1 registerEmployee1 = new frmRegisterEmployee1();
                 registerEmployee1.ShowDialog();

@@ -10,9 +10,9 @@ namespace Liriou_s_Burguer.Business
     {
         Database.FunctionDatabase db = new Database.FunctionDatabase();
 
-        public void Inserir(Database.Entities.tb_function function)
+        public void Inserir(Database.Entities.tb_function func)
         {
-            db.Inserir(function);
+            db.Inserir(func);
         }
 
         public Database.Entities.tb_function ConsultarPorID(int id)

@@ -1289,8 +1289,8 @@
             // 
             // lblhrs
             // 
-            this.lblhrs.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.lblhrs.Location = new System.Drawing.Point(516, 18);
+            this.lblhrs.Font = new System.Drawing.Font("Candara", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhrs.Location = new System.Drawing.Point(516, 13);
             this.lblhrs.Name = "lblhrs";
             this.lblhrs.Size = new System.Drawing.Size(127, 20);
             this.lblhrs.TabIndex = 490;
@@ -1299,9 +1299,9 @@
             // 
             // lblUsuário
             // 
-            this.lblUsuário.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.lblUsuário.Font = new System.Drawing.Font("Candara", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuário.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lblUsuário.Location = new System.Drawing.Point(3, 20);
+            this.lblUsuário.Location = new System.Drawing.Point(3, 14);
             this.lblUsuário.Name = "lblUsuário";
             this.lblUsuário.Size = new System.Drawing.Size(515, 19);
             this.lblUsuário.TabIndex = 489;

@@ -12,13 +12,13 @@ namespace Liriou_s_Burguer.Database.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_supply
+    public partial class tb_deptfunction
     {
-        public int id_supply { get; set; }
-        public string ds_placeStock { get; set; }
-        public string nm_supply { get; set; }
-        public int vl_amount { get; set; }
-        public decimal vl_value { get; set; }
-        public string ds_note { get; set; }
+        public int id_deptFunction { get; set; }
+        public int id_emp { get; set; }
+        public string nm_department { get; set; }
+        public string nm_function { get; set; }
+    
+        public virtual tb_employees tb_employees { get; set; }
     }
 }

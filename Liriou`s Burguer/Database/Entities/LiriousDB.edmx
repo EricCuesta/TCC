@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="liriousdbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tb_account">
           <Key>
             <PropertyRef Name="id_account" />
@@ -21,6 +21,7 @@
             <PropertyRef Name="id_bankAccount" />
           </Key>
           <Property Name="id_bankAccount" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_emp" Type="int" Nullable="false" />
           <Property Name="nm_bank" Type="varchar" MaxLength="64" Nullable="false" />
           <Property Name="nr_account" Type="varchar" MaxLength="7" Nullable="false" />
           <Property Name="nr_agency" Type="int" Nullable="false" />
@@ -32,15 +33,15 @@
           </Key>
           <Property Name="id_benefits" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="bt_food" Type="bool" />
-          <Property Name="bt_transport" Type="bool" />
-          <Property Name="bt_meal" Type="bool" />
-          <Property Name="bt_lifeSafe" Type="bool" />
-          <Property Name="bt_planHealth" Type="bool" />
-          <Property Name="bt_planDental" Type="bool" />
-          <Property Name="vl_food" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="bt_food" Type="bool" Nullable="false" />
+          <Property Name="bt_transport" Type="bool" Nullable="false" />
+          <Property Name="bt_meal" Type="bool" Nullable="false" />
+          <Property Name="bt_lifeSafe" Type="bool" Nullable="false" />
+          <Property Name="bt_planHealth" Type="bool" Nullable="false" />
+          <Property Name="bt_planDental" Type="bool" Nullable="false" />
           <Property Name="vl_transport" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_meal" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="vl_food" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_lifeSafe" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_planHealth" Type="decimal" Precision="10" Scale="2" />
           <Property Name="vl_planDental" Type="decimal" Precision="10" Scale="2" />
@@ -88,8 +89,16 @@
             <PropertyRef Name="id_department" />
           </Key>
           <Property Name="id_department" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nm_department" Type="varchar" MaxLength="32" />
+        </EntityType>
+        <EntityType Name="tb_deptfunction">
+          <Key>
+            <PropertyRef Name="id_deptFunction" />
+          </Key>
+          <Property Name="id_deptFunction" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="nm_department" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="nm_department" Type="varchar" MaxLength="32" />
+          <Property Name="nm_function" Type="varchar" MaxLength="32" />
         </EntityType>
         <EntityType Name="tb_discounts">
           <Key>
@@ -168,8 +177,7 @@
             <PropertyRef Name="id_function" />
           </Key>
           <Property Name="id_function" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="nm_function" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="nm_function" Type="varchar" MaxLength="32" />
         </EntityType>
         <EntityType Name="tb_points">
           <Key>
@@ -177,12 +185,12 @@
           </Key>
           <Property Name="id_point" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_emp" Type="int" Nullable="false" />
-          <Property Name="hr_input" Type="varchar" MaxLength="8" />
-          <Property Name="hr_output" Type="varchar" MaxLength="8" />
-          <Property Name="hr_intInput" Type="varchar" MaxLength="8" />
-          <Property Name="hr_intOutput" Type="varchar" MaxLength="8" />
+          <Property Name="hr_input" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_output" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_intInput" Type="varchar" MaxLength="8" Nullable="false" />
+          <Property Name="hr_intOutput" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="hr_toPay" Type="varchar" MaxLength="5" />
-          <Property Name="dt_points" Type="varchar" MaxLength="10" />
+          <Property Name="dt_points" Type="varchar" MaxLength="10" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_product">
           <Key>
@@ -235,6 +243,105 @@
           <Property Name="hr_fixedIntInput" Type="varchar" MaxLength="8" Nullable="false" />
           <Property Name="hr_fixedIntOutput" Type="varchar" MaxLength="8" Nullable="false" />
         </EntityType>
+        <Association Name="tb_bankaccount_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_bankaccount" Type="Self.tb_bankaccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_bankaccount">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <!--Errors Found During Generation:
+warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
+        <Association Name="tb_benefits_ibfk_1" />-->
+        <Association Name="tb_cnae_ibfk_1">
+          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
+          <End Role="tb_cnae" Type="Self.tb_cnae" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enterprise">
+              <PropertyRef Name="id_enterprise" />
+            </Principal>
+            <Dependent Role="tb_cnae">
+              <PropertyRef Name="id_enterprise" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_cpp_ibfk_1">
+          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
+          <End Role="tb_cpp" Type="Self.tb_cpp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enterprise">
+              <PropertyRef Name="id_enterprise" />
+            </Principal>
+            <Dependent Role="tb_cpp">
+              <PropertyRef Name="id_enterprise" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_deptfunction_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_deptfunction" Type="Self.tb_deptfunction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_deptfunction">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_discounts_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_discounts" Type="Self.tb_discounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_discounts">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_financial_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_financial" Type="Self.tb_financial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_financial">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_points_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_points">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_timecard_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_timecard" Type="Self.tb_timecard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_timecard">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="liriousdbModelStoreContainer">
           <EntitySet Name="tb_account" EntityType="Self.tb_account" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" Schema="liriousdb" store:Type="Tables" />
@@ -243,6 +350,7 @@
           <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_cpp" EntityType="Self.tb_cpp" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_department" EntityType="Self.tb_department" Schema="liriousdb" store:Type="Tables" />
+          <EntitySet Name="tb_deptfunction" EntityType="Self.tb_deptfunction" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_discounts" EntityType="Self.tb_discounts" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_employees" EntityType="Self.tb_employees" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_enterprise" EntityType="Self.tb_enterprise" Schema="liriousdb" store:Type="Tables" />
@@ -253,6 +361,38 @@
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_supply" EntityType="Self.tb_supply" Schema="liriousdb" store:Type="Tables" />
           <EntitySet Name="tb_timecard" EntityType="Self.tb_timecard" Schema="liriousdb" store:Type="Tables" />
+          <AssociationSet Name="tb_bankaccount_ibfk_1" Association="Self.tb_bankaccount_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_bankaccount" EntitySet="tb_bankaccount" />
+          </AssociationSet>
+          <AssociationSet Name="tb_cnae_ibfk_1" Association="Self.tb_cnae_ibfk_1">
+            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
+            <End Role="tb_cnae" EntitySet="tb_cnae" />
+          </AssociationSet>
+          <AssociationSet Name="tb_cpp_ibfk_1" Association="Self.tb_cpp_ibfk_1">
+            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
+            <End Role="tb_cpp" EntitySet="tb_cpp" />
+          </AssociationSet>
+          <AssociationSet Name="tb_deptfunction_ibfk_1" Association="Self.tb_deptfunction_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_deptfunction" EntitySet="tb_deptfunction" />
+          </AssociationSet>
+          <AssociationSet Name="tb_discounts_ibfk_1" Association="Self.tb_discounts_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_discounts" EntitySet="tb_discounts" />
+          </AssociationSet>
+          <AssociationSet Name="tb_financial_ibfk_1" Association="Self.tb_financial_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_financial" EntitySet="tb_financial" />
+          </AssociationSet>
+          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_points" EntitySet="tb_points" />
+          </AssociationSet>
+          <AssociationSet Name="tb_timecard_ibfk_1" Association="Self.tb_timecard_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_timecard" EntitySet="tb_timecard" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -275,10 +415,12 @@
             <PropertyRef Name="id_bankAccount" />
           </Key>
           <Property Name="id_bankAccount" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="nm_bank" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_account" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_agency" Type="Int32" Nullable="false" />
           <Property Name="ds_typePerson" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_bankaccount_ibfk_1" FromRole="tb_bankaccount" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_benefits">
           <Key>
@@ -286,15 +428,15 @@
           </Key>
           <Property Name="id_benefits" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="bt_food" Type="Boolean" />
-          <Property Name="bt_transport" Type="Boolean" />
-          <Property Name="bt_meal" Type="Boolean" />
-          <Property Name="bt_lifeSafe" Type="Boolean" />
-          <Property Name="bt_planHealth" Type="Boolean" />
-          <Property Name="bt_planDental" Type="Boolean" />
-          <Property Name="vl_food" Type="Decimal" />
+          <Property Name="bt_food" Type="Boolean" Nullable="false" />
+          <Property Name="bt_transport" Type="Boolean" Nullable="false" />
+          <Property Name="bt_meal" Type="Boolean" Nullable="false" />
+          <Property Name="bt_lifeSafe" Type="Boolean" Nullable="false" />
+          <Property Name="bt_planHealth" Type="Boolean" Nullable="false" />
+          <Property Name="bt_planDental" Type="Boolean" Nullable="false" />
           <Property Name="vl_transport" Type="Decimal" />
           <Property Name="vl_meal" Type="Decimal" />
+          <Property Name="vl_food" Type="Decimal" />
           <Property Name="vl_lifeSafe" Type="Decimal" />
           <Property Name="vl_planHealth" Type="Decimal" />
           <Property Name="vl_planDental" Type="Decimal" />
@@ -327,6 +469,7 @@
           <Property Name="dt_tableYear" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_activity" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
           <Property Name="nr_cnae" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_enterprise" Relationship="Self.tb_cnae_ibfk_1" FromRole="tb_cnae" ToRole="tb_enterprise" />
         </EntityType>
         <EntityType Name="tb_cpp">
           <Key>
@@ -336,14 +479,24 @@
           <Property Name="id_enterprise" Type="Int32" Nullable="false" />
           <Property Name="vl_cpp" Type="Decimal" Nullable="false" />
           <Property Name="vl_fgts" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="tb_enterprise" Relationship="Self.tb_cpp_ibfk_1" FromRole="tb_cpp" ToRole="tb_enterprise" />
         </EntityType>
         <EntityType Name="tb_department">
           <Key>
             <PropertyRef Name="id_department" />
           </Key>
           <Property Name="id_department" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nm_department" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_deptfunction">
+          <Key>
+            <PropertyRef Name="id_deptFunction" />
+          </Key>
+          <Property Name="id_deptFunction" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="nm_department" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_department" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="nm_function" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_deptfunction_ibfk_1" FromRole="tb_deptfunction" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_discounts">
           <Key>
@@ -356,6 +509,7 @@
           <Property Name="vl_foodPension" Type="Decimal" />
           <Property Name="vl_inss" Type="Decimal" />
           <Property Name="vl_fgts" Type="Decimal" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_discounts" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_employees">
           <Key>
@@ -386,6 +540,12 @@
           <Property Name="bt_provider" Type="Boolean" />
           <Property Name="bt_stock" Type="Boolean" />
           <Property Name="bt_crm" Type="Boolean" />
+          <NavigationProperty Name="tb_bankaccount" Relationship="Self.tb_bankaccount_ibfk_1" FromRole="tb_employees" ToRole="tb_bankaccount" />
+          <NavigationProperty Name="tb_deptfunction" Relationship="Self.tb_deptfunction_ibfk_1" FromRole="tb_employees" ToRole="tb_deptfunction" />
+          <NavigationProperty Name="tb_discounts" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_employees" ToRole="tb_discounts" />
+          <NavigationProperty Name="tb_financial" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_employees" ToRole="tb_financial" />
+          <NavigationProperty Name="tb_points" Relationship="Self.tb_points_ibfk_1" FromRole="tb_employees" ToRole="tb_points" />
+          <NavigationProperty Name="tb_timecard" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_employees" ToRole="tb_timecard" />
         </EntityType>
         <EntityType Name="tb_enterprise">
           <Key>
@@ -404,6 +564,8 @@
           <Property Name="nr_cellphone" Type="String" MaxLength="21" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_tellphone" Type="String" MaxLength="14" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="ds_email" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_cnae" Relationship="Self.tb_cnae_ibfk_1" FromRole="tb_enterprise" ToRole="tb_cnae" />
+          <NavigationProperty Name="tb_cpp" Relationship="Self.tb_cpp_ibfk_1" FromRole="tb_enterprise" ToRole="tb_cpp" />
         </EntityType>
         <EntityType Name="tb_financial">
           <Key>
@@ -416,14 +578,14 @@
           <Property Name="ds_typeSalary" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="dt_fromDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="dt_toDate" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_financial" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_function">
           <Key>
             <PropertyRef Name="id_function" />
           </Key>
           <Property Name="id_function" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="nm_function" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nm_function" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tb_points">
           <Key>
@@ -431,12 +593,13 @@
           </Key>
           <Property Name="id_point" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_emp" Type="Int32" Nullable="false" />
-          <Property Name="hr_input" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-          <Property Name="hr_output" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-          <Property Name="hr_intInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-          <Property Name="hr_intOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="hr_input" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_output" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_intInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="hr_intOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="hr_toPay" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
-          <Property Name="dt_points" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="dt_points" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_points_ibfk_1" FromRole="tb_points" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_product">
           <Key>
@@ -488,7 +651,104 @@
           <Property Name="hr_fixedOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="hr_fixedIntInput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="hr_fixedIntOutput" Type="String" MaxLength="8" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_timecard_ibfk_1" FromRole="tb_timecard" ToRole="tb_employees" />
         </EntityType>
+        <Association Name="tb_bankaccount_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_bankaccount" Type="Self.tb_bankaccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_bankaccount">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_cnae_ibfk_1">
+          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
+          <End Role="tb_cnae" Type="Self.tb_cnae" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enterprise">
+              <PropertyRef Name="id_enterprise" />
+            </Principal>
+            <Dependent Role="tb_cnae">
+              <PropertyRef Name="id_enterprise" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_cpp_ibfk_1">
+          <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
+          <End Role="tb_cpp" Type="Self.tb_cpp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_enterprise">
+              <PropertyRef Name="id_enterprise" />
+            </Principal>
+            <Dependent Role="tb_cpp">
+              <PropertyRef Name="id_enterprise" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_deptfunction_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_deptfunction" Type="Self.tb_deptfunction" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_deptfunction">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_discounts_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_discounts" Type="Self.tb_discounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_discounts">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_financial_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_financial" Type="Self.tb_financial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_financial">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_points_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_points">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_timecard_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_timecard" Type="Self.tb_timecard" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_timecard">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="liriousdbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tb_account" EntityType="Self.tb_account" />
           <EntitySet Name="tb_bankaccount" EntityType="Self.tb_bankaccount" />
@@ -497,6 +757,7 @@
           <EntitySet Name="tb_cnae" EntityType="Self.tb_cnae" />
           <EntitySet Name="tb_cpp" EntityType="Self.tb_cpp" />
           <EntitySet Name="tb_department" EntityType="Self.tb_department" />
+          <EntitySet Name="tb_deptfunction" EntityType="Self.tb_deptfunction" />
           <EntitySet Name="tb_discounts" EntityType="Self.tb_discounts" />
           <EntitySet Name="tb_employees" EntityType="Self.tb_employees" />
           <EntitySet Name="tb_enterprise" EntityType="Self.tb_enterprise" />
@@ -507,6 +768,38 @@
           <EntitySet Name="tb_provider" EntityType="Self.tb_provider" />
           <EntitySet Name="tb_supply" EntityType="Self.tb_supply" />
           <EntitySet Name="tb_timecard" EntityType="Self.tb_timecard" />
+          <AssociationSet Name="tb_bankaccount_ibfk_1" Association="Self.tb_bankaccount_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_bankaccount" EntitySet="tb_bankaccount" />
+          </AssociationSet>
+          <AssociationSet Name="tb_cnae_ibfk_1" Association="Self.tb_cnae_ibfk_1">
+            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
+            <End Role="tb_cnae" EntitySet="tb_cnae" />
+          </AssociationSet>
+          <AssociationSet Name="tb_cpp_ibfk_1" Association="Self.tb_cpp_ibfk_1">
+            <End Role="tb_enterprise" EntitySet="tb_enterprise" />
+            <End Role="tb_cpp" EntitySet="tb_cpp" />
+          </AssociationSet>
+          <AssociationSet Name="tb_deptfunction_ibfk_1" Association="Self.tb_deptfunction_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_deptfunction" EntitySet="tb_deptfunction" />
+          </AssociationSet>
+          <AssociationSet Name="tb_discounts_ibfk_1" Association="Self.tb_discounts_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_discounts" EntitySet="tb_discounts" />
+          </AssociationSet>
+          <AssociationSet Name="tb_financial_ibfk_1" Association="Self.tb_financial_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_financial" EntitySet="tb_financial" />
+          </AssociationSet>
+          <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_points" EntitySet="tb_points" />
+          </AssociationSet>
+          <AssociationSet Name="tb_timecard_ibfk_1" Association="Self.tb_timecard_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_timecard" EntitySet="tb_timecard" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -530,6 +823,7 @@
             <EntityTypeMapping TypeName="liriousdbModel.tb_bankaccount">
               <MappingFragment StoreEntitySet="tb_bankaccount">
                 <ScalarProperty Name="id_bankAccount" ColumnName="id_bankAccount" />
+                <ScalarProperty Name="id_emp" ColumnName="id_emp" />
                 <ScalarProperty Name="nm_bank" ColumnName="nm_bank" />
                 <ScalarProperty Name="nr_account" ColumnName="nr_account" />
                 <ScalarProperty Name="nr_agency" ColumnName="nr_agency" />
@@ -548,9 +842,9 @@
                 <ScalarProperty Name="bt_lifeSafe" ColumnName="bt_lifeSafe" />
                 <ScalarProperty Name="bt_planHealth" ColumnName="bt_planHealth" />
                 <ScalarProperty Name="bt_planDental" ColumnName="bt_planDental" />
-                <ScalarProperty Name="vl_food" ColumnName="vl_food" />
                 <ScalarProperty Name="vl_transport" ColumnName="vl_transport" />
                 <ScalarProperty Name="vl_meal" ColumnName="vl_meal" />
+                <ScalarProperty Name="vl_food" ColumnName="vl_food" />
                 <ScalarProperty Name="vl_lifeSafe" ColumnName="vl_lifeSafe" />
                 <ScalarProperty Name="vl_planHealth" ColumnName="vl_planHealth" />
                 <ScalarProperty Name="vl_planDental" ColumnName="vl_planDental" />
@@ -602,8 +896,17 @@
             <EntityTypeMapping TypeName="liriousdbModel.tb_department">
               <MappingFragment StoreEntitySet="tb_department">
                 <ScalarProperty Name="id_department" ColumnName="id_department" />
+                <ScalarProperty Name="nm_department" ColumnName="nm_department" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_deptfunction">
+            <EntityTypeMapping TypeName="liriousdbModel.tb_deptfunction">
+              <MappingFragment StoreEntitySet="tb_deptfunction">
+                <ScalarProperty Name="id_deptFunction" ColumnName="id_deptFunction" />
                 <ScalarProperty Name="id_emp" ColumnName="id_emp" />
                 <ScalarProperty Name="nm_department" ColumnName="nm_department" />
+                <ScalarProperty Name="nm_function" ColumnName="nm_function" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -687,7 +990,6 @@
             <EntityTypeMapping TypeName="liriousdbModel.tb_function">
               <MappingFragment StoreEntitySet="tb_function">
                 <ScalarProperty Name="id_function" ColumnName="id_function" />
-                <ScalarProperty Name="id_emp" ColumnName="id_emp" />
                 <ScalarProperty Name="nm_function" ColumnName="nm_function" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -777,7 +1079,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>

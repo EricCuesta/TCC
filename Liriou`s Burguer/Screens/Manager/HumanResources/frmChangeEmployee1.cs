@@ -54,7 +54,7 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
                 tbbenefits.bt_planHealth = Convert.ToBoolean(chkPlanoDeSáude.Checked);
                 tbbenefits.bt_planDental = Convert.ToBoolean(chkPlanoDental.Checked);
 
-                busemployees.Inserir(tbemployees);
+                busemployees.Inserir1(tbemployees);
                 busdiscounts.Inserir(tbdiscounts);
                 busfunction.Inserir(tbfunction);
                 bustimecard.Inserir(tbtimecard);

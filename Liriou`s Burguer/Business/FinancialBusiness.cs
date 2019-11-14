@@ -10,9 +10,24 @@ namespace Liriou_s_Burguer.Business
     {
         Database.FinancialDatabase db = new Database.FinancialDatabase();
 
-        public void Inserir(Database.Entities.tb_financial financial)
+        public void Inserir(Database.Entities.tb_financial fin)
         {
-            db.Inserir(financial);
+            if (fin.vl_grossSalary == Convert.ToDecimal(0.0))
+            {
+                throw new ArgumentException("Salário Obrigatório!");
+            }
+            if (fin.ds_typeSalary == string.Empty)
+            {
+                throw new ArgumentException("Tipo de Salário Obrigatório!");
+            }
+
+            fin.dt_fromDate = DateTime.Now.ToString("dd/MM/yyyy");
+            fin.dt_toDate = "01/01/9999";
+
+            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
+            fin.id_emp = DB.InsertEmp(Model.EmployeesModel.CPF);
+
+            db.Inserir(fin);
         }
 
         public string Verificar(string mesAno, string rg0)

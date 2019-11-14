@@ -35,33 +35,8 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
             {
                 this.InserirModel();
 
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees
-                {
-                    nm_firstName = txtNome.Text.Trim(),
-                    nm_lastName = txtSobrenome.Text.Trim(),
-                    nr_rg = mtxtRG.Text.Trim(),
-                    nr_cpf = mtxtCPF.Text.Trim(),
-                    nr_dependents = Convert.ToInt32(nudDependentes.Value),
-                    ds_sex = cboSexo.Text,
-                    dt_birth = dtpNascimento.Value.ToShortDateString(),
-                    ds_state = cboEstado.Text,
-                    nr_cep = mtxtCEP.Text.Trim(),
-                    ds_note = txtComplemento.Text.Trim(),
-                    ds_address = txtEndereço.Text.Trim(),
-                    nr_cellphone = mtxtCelular.Text.Trim(),
-                    nr_tellphone = mtxtTelefone.Text.Trim(),
-                    ds_email = txtEmail.Text.Trim(),
-                    pw_password = txtSenha.Text.Trim(),
-                    bt_manager = rdbGerente.Checked,
-                    bt_employee = rdbFuncionário.Checked,
-                    bt_rh = chkRH.Checked,
-                    bt_financial = chkFinanceiro.Checked,
-                    bt_stock = chkEstoque.Checked,
-                    bt_crm = chkCRM.Checked
-                };
-
                 Business.EmployeesBusiness db = new Business.EmployeesBusiness();
-                db.Inserir(employees);
+                db.Inserir();
 
                 frmMenu.Current.openContedor(new frmRegisterEmployee1());
             }
@@ -77,28 +52,28 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 
         private void InserirModel()
         {
-            Model.EmployeesModel.firstName = txtNome.Text;
-            Model.EmployeesModel.lastName = txtSenha.Text;
-            Model.EmployeesModel.RG = mtxtRG.Text;
-            Model.EmployeesModel.CPF = mtxtCPF.Text;
-            Model.EmployeesModel.dependents = Convert.ToInt32(nudDependentes.Value);
-            Model.EmployeesModel.sex = cboSexo.Text;
-            Model.EmployeesModel.birth = dtpNascimento.Value.ToShortDateString();
-            Model.EmployeesModel.state = cboEstado.Text;
-            Model.EmployeesModel.CEP = mtxtCEP.Text;
-            Model.EmployeesModel.address = txtEndereço.Text;
-            Model.EmployeesModel.note = txtComplemento.Text;
-            Model.EmployeesModel.cellphone = mtxtCelular.Text;
-            Model.EmployeesModel.tellphone = mtxtTelefone.Text;
-            Model.EmployeesModel.email = txtEmail.Text;
-            Model.EmployeesModel.password = txtSenha.Text;
-            Model.EmployeesModel.employeer = rdbFuncionário.Checked;
-            Model.EmployeesModel.manager = rdbGerente.Checked;
-            Model.EmployeesModel.CRM = chkCRM.Checked;
-            Model.EmployeesModel.Provider = chkFornecedor.Checked;
-            Model.EmployeesModel.stock = chkEstoque.Checked;
-            Model.EmployeesModel.RH = chkRH.Checked;
-            Model.EmployeesModel.financial = chkFinanceiro.Checked;
+            EmployeesModel.firstName = txtNome.Text;
+            EmployeesModel.lastName = txtSobrenome.Text;
+            EmployeesModel.RG = mtxtRG.Text;
+            EmployeesModel.CPF = mtxtCPF.Text;
+            EmployeesModel.dependents = Convert.ToInt32(nudDependentes.Value);
+            EmployeesModel.sex = cboSexo.Text;
+            EmployeesModel.birth = dtpNascimento.Value.ToShortDateString();
+            EmployeesModel.state = cboEstado.Text;
+            EmployeesModel.CEP = mtxtCEP.Text;
+            EmployeesModel.address = txtEndereço.Text;
+            EmployeesModel.note = txtComplemento.Text;
+            EmployeesModel.cellphone = mtxtCelular.Text;
+            EmployeesModel.tellphone = mtxtTelefone.Text;
+            EmployeesModel.email = txtEmail.Text;
+            EmployeesModel.password = txtSenha.Text;
+            EmployeesModel.employeer = rdbFuncionário.Checked;
+            EmployeesModel.manager = rdbGerente.Checked;
+            EmployeesModel.CRM = chkCRM.Checked;
+            EmployeesModel.Provider = chkFornecedor.Checked;
+            EmployeesModel.stock = chkEstoque.Checked;
+            EmployeesModel.RH = chkRH.Checked;
+            EmployeesModel.financial = chkFinanceiro.Checked;
         }
 
         private void rdbFuncionário_CheckedChanged(object sender, EventArgs e)

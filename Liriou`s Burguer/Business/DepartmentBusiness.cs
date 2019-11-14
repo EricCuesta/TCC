@@ -10,9 +10,9 @@ namespace Liriou_s_Burguer.Business
     {
         Database.DepartmentDatabase db = new Database.DepartmentDatabase();
 
-        public void Inserir(Database.Entities.tb_department department)
+        public void Inserir(Database.Entities.tb_department dept)
         {
-            db.Inserir(department);
+            db.Inserir(dept);
         }
 
         public Database.Entities.tb_department ConsultarPorID(int id)

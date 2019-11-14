@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using Liriou_s_Burguer.Model;
 
 namespace Liriou_s_Burguer.Business
 {
@@ -44,68 +45,97 @@ namespace Liriou_s_Burguer.Business
             db.AlterarRecuperação(employees);
         }
 
-        public void Inserir(Database.Entities.tb_employees employees)
+        public void Inserir()
         {
-            if (employees.nm_firstName == string.Empty)
+            if (EmployeesModel.firstName == string.Empty)
+            {
                 throw new ArgumentException("O campo nome deve ser preenchido");
-            if (employees.nm_lastName == string.Empty)
+            }
+            if (EmployeesModel.lastName == string.Empty)
+            {
                 throw new ArgumentException("O campo sobrenome deve ser preenchido");
-            if (employees.nr_rg == string.Empty)
+            }
+            if (EmployeesModel.RG == string.Empty)
+            {
                 throw new ArgumentException("O campo RG deve ser preenchido");
-            if (employees.nr_cpf == string.Empty)
+            }
+            if (EmployeesModel.CPF == string.Empty)
+            {
                 throw new ArgumentException("O campo CPF deve ser preenchido");
-            if (employees.ds_sex == string.Empty)
-                throw new ArgumentException("O campo sexo deve ser preenchido");
-            if (employees.ds_sex == "Masculino")
-                employees.ds_sex = "M";
-            else
-                employees.ds_sex = "F";
-            if (employees.ds_state == string.Empty)
-                throw new ArgumentException("O campo Estado deve ser preenchido");
-            if (employees.nr_cep == string.Empty)
+            }
+            if (EmployeesModel.sex != string.Empty)
+            {
+                if (EmployeesModel.sex == "Masculino")
+                {
+                    EmployeesModel.sex = "M";
+                }
+                else
+                {
+                    EmployeesModel.sex = "F";
+                }
+            }
+            if (EmployeesModel.sex == string.Empty)
+            {
+                throw new ArgumentException("O campo sexo é obrigatório!");
+            }
+            if (EmployeesModel.state == string.Empty)
+            {
+                throw new ArgumentException("O campo estado é obrigatório!");
+            }
+            if (EmployeesModel.CEP == string.Empty)
+            {
                 throw new ArgumentException("O campo CEP deve ser preenchido");
-            if (employees.ds_address == string.Empty)
+            }
+            if (EmployeesModel.address == string.Empty)
+            {
                 throw new ArgumentException("O campo endereço deve ser preenchido");
-            if (employees.ds_note == string.Empty)
-                throw new ArgumentException("O campo complemento deve ser preenchido");
-            if (employees.nr_cellphone == string.Empty && employees.nr_tellphone == string.Empty)
-                throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
-            if (employees.ds_email == string.Empty)
+            }
+            if (EmployeesModel.email == string.Empty)
+            {
+                throw new ArgumentException("O campo email é obrigatória!");
+            }
+            if (EmployeesModel.password == string.Empty)
+            {
                 throw new ArgumentException("O campo nome deve ser preenchido");
-            if (employees.pw_password == string.Empty)
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(employees.ds_email);
-            if (match.Success == false)
-                throw new ArgumentException(employees.ds_email + " é um e-mail inválido!");
-            if (employees.bt_employee == false && employees.bt_manager == false)
+            }
+            if (EmployeesModel.employeer == false && EmployeesModel.manager == false)
+            {
                 throw new ArgumentException("Escolha Funcionario ou Gerente!");
+            }
+
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(EmployeesModel.email);
+            if (match.Success == false)
+            {
+                throw new ArgumentException(EmployeesModel.email + " é um e-mail inválido!");
+            }
         }
 
-        public void Inserir1(Database.Entities.tb_employees employees)
+        public void Inserir1(Database.Entities.tb_employees emp)
         {
-            employees.nm_firstName = Model.EmployeesModel.firstName;
-            employees.nm_lastName = Model.EmployeesModel.lastName;
-            employees.nr_rg = Model.EmployeesModel.RG;
-            employees.nr_cpf = Model.EmployeesModel.CPF;
-            employees.nr_dependents = Model.EmployeesModel.dependents;
-            employees.ds_sex = Model.EmployeesModel.sex;
-            employees.dt_birth = Model.EmployeesModel.birth;
-            employees.ds_state = Model.EmployeesModel.state;
-            employees.nr_cep = Model.EmployeesModel.CEP;
-            employees.ds_address = Model.EmployeesModel.address;
-            employees.ds_note = Model.EmployeesModel.note;
-            employees.nr_cellphone = Model.EmployeesModel.cellphone;
-            employees.nr_tellphone = Model.EmployeesModel.tellphone;
-            employees.ds_email = Model.EmployeesModel.email;
-            employees.pw_password = Model.EmployeesModel.password;
-            employees.bt_manager = Model.EmployeesModel.manager;
-            employees.bt_employee = Model.EmployeesModel.employeer;
-            employees.bt_rh = Model.EmployeesModel.RH;
-            employees.bt_financial = Model.EmployeesModel.financial;
-            employees.bt_stock = Model.EmployeesModel.stock;
-            employees.bt_crm = Model.EmployeesModel.CRM;
-            db.Inserir1(employees);
+            emp.nm_firstName = EmployeesModel.firstName;
+            emp.nm_lastName = EmployeesModel.lastName;
+            emp.nr_rg = EmployeesModel.RG;
+            emp.nr_cpf = EmployeesModel.CPF;
+            emp.nr_dependents = EmployeesModel.dependents;
+            emp.ds_sex = EmployeesModel.sex;
+            emp.dt_birth = EmployeesModel.birth;
+            emp.ds_state = EmployeesModel.state;
+            emp.nr_cep = EmployeesModel.CEP;
+            emp.ds_address = EmployeesModel.address;
+            emp.ds_note = EmployeesModel.note;
+            emp.nr_cellphone = EmployeesModel.cellphone;
+            emp.nr_tellphone = EmployeesModel.tellphone;
+            emp.ds_email = EmployeesModel.email;
+            emp.pw_password = EmployeesModel.password;
+            emp.bt_manager = EmployeesModel.manager;
+            emp.bt_employee = EmployeesModel.employeer;
+            emp.bt_rh = EmployeesModel.RH;
+            emp.bt_provider = EmployeesModel.Provider;
+            emp.bt_financial = EmployeesModel.financial;
+            emp.bt_stock = EmployeesModel.stock;
+            emp.bt_crm = EmployeesModel.CRM;
+            db.Inserir1(emp);
         }
 
         public Database.Entities.tb_employees ConsultarPorID(int id)
