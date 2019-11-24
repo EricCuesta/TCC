@@ -63,6 +63,16 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Capa {
+            get {
+                object obj = ResourceManager.GetObject("Capa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap CRM {
             get {
                 object obj = ResourceManager.GetObject("CRM", resourceCulture);
@@ -73,9 +83,19 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Email {
+        internal static System.Drawing.Bitmap CRM01 {
             get {
-                object obj = ResourceManager.GetObject("Email", resourceCulture);
+                object obj = ResourceManager.GetObject("CRM01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap E_mail01 {
+            get {
+                object obj = ResourceManager.GetObject("E-mail01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -86,6 +106,16 @@ namespace Liriou_s_Burguer.Properties {
         internal static System.Drawing.Bitmap Estoque {
             get {
                 object obj = ResourceManager.GetObject("Estoque", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Estoque01 {
+            get {
+                object obj = ResourceManager.GetObject("Estoque01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +173,36 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Financeiro01 {
+            get {
+                object obj = ResourceManager.GetObject("Financeiro01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fornecedor {
+            get {
+                object obj = ResourceManager.GetObject("Fornecedor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fornecedor01 {
+            get {
+                object obj = ResourceManager.GetObject("Fornecedor01", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Fundo {
             get {
                 object obj = ResourceManager.GetObject("Fundo", resourceCulture);
@@ -173,16 +233,6 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Hamburger_1_ {
-            get {
-                object obj = ResourceManager.GetObject("Hamburger(1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Instagram {
             get {
                 object obj = ResourceManager.GetObject("Instagram", resourceCulture);
@@ -196,16 +246,6 @@ namespace Liriou_s_Burguer.Properties {
         internal static System.Drawing.Bitmap Linkedin {
             get {
                 object obj = ResourceManager.GetObject("Linkedin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Menu {
-            get {
-                object obj = ResourceManager.GetObject("Menu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +293,9 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Senha {
+        internal static System.Drawing.Bitmap RH01 {
             get {
-                object obj = ResourceManager.GetObject("Senha", resourceCulture);
+                object obj = ResourceManager.GetObject("RH01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +303,9 @@ namespace Liriou_s_Burguer.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Suprimentos {
+        internal static System.Drawing.Bitmap Senha01 {
             get {
-                object obj = ResourceManager.GetObject("Suprimentos", resourceCulture);
+                object obj = ResourceManager.GetObject("Senha01", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
