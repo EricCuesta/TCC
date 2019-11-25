@@ -181,214 +181,208 @@
     <Compile Include="Model\UsuarioLogado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Screens\Employee\frmEmployeeTimeCard.cs">
+    <Compile Include="Screens\HumanResources\frmTimeCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Employee\frmEmployeeTimeCard.Designer.cs">
-      <DependentUpon>frmEmployeeTimeCard.cs</DependentUpon>
+    <Compile Include="Screens\HumanResources\frmTimeCard.Designer.cs">
+      <DependentUpon>frmTimeCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmChangeCustomer.cs">
+    <Compile Include="Screens\CRM\frmChangeCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmChangeCustomer.Designer.cs">
+    <Compile Include="Screens\CRM\frmChangeCustomer.Designer.cs">
       <DependentUpon>frmChangeCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmConsultCustomer.cs">
+    <Compile Include="Screens\CRM\frmConsultCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmConsultCustomer.Designer.cs">
+    <Compile Include="Screens\CRM\frmConsultCustomer.Designer.cs">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmDeleteClient.cs">
+    <Compile Include="Screens\CRM\frmDeleteClient.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmDeleteClient.Designer.cs">
+    <Compile Include="Screens\CRM\frmDeleteClient.Designer.cs">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmEmailSending.cs">
+    <Compile Include="Screens\CRM\frmEmailSending.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmEmailSending.Designer.cs">
+    <Compile Include="Screens\CRM\frmEmailSending.Designer.cs">
       <DependentUpon>frmEmailSending.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmRegisterCustomer.cs">
+    <Compile Include="Screens\CRM\frmRegisterCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\CRM\frmRegisterCustomer.Designer.cs">
+    <Compile Include="Screens\CRM\frmRegisterCustomer.Designer.cs">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmCashflow.cs">
+    <Compile Include="Screens\Financial\frmCashflow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmCashflow.Designer.cs">
+    <Compile Include="Screens\Financial\frmCashflow.Designer.cs">
       <DependentUpon>frmCashflow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmChangeAccount.cs">
+    <Compile Include="Screens\Financial\frmChangeAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmChangeAccount.Designer.cs">
+    <Compile Include="Screens\Financial\frmChangeAccount.Designer.cs">
       <DependentUpon>frmChangeAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmDeleteAccount.cs">
+    <Compile Include="Screens\Financial\frmDeleteAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmDeleteAccount.Designer.cs">
+    <Compile Include="Screens\Financial\frmDeleteAccount.Designer.cs">
       <DependentUpon>frmDeleteAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmQueryAccount.cs">
+    <Compile Include="Screens\Financial\frmQueryAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmQueryAccount.Designer.cs">
+    <Compile Include="Screens\Financial\frmQueryAccount.Designer.cs">
       <DependentUpon>frmQueryAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmRegisterAccount.cs">
+    <Compile Include="Screens\Financial\frmRegisterAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Financial\frmRegisterAccount.Designer.cs">
+    <Compile Include="Screens\Financial\frmRegisterAccount.Designer.cs">
       <DependentUpon>frmRegisterAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmChangeProvider.cs">
+    <Compile Include="Screens\Provider\frmChangeProvider.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmChangeProvider.Designer.cs">
+    <Compile Include="Screens\Provider\frmChangeProvider.Designer.cs">
       <DependentUpon>frmChangeProvider.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmConsultSupplier.cs">
+    <Compile Include="Screens\Provider\frmConsultSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmConsultSupplier.Designer.cs">
+    <Compile Include="Screens\Provider\frmConsultSupplier.Designer.cs">
       <DependentUpon>frmConsultSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmDeleteSupplier.cs">
+    <Compile Include="Screens\Provider\frmDeleteSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmDeleteSupplier.Designer.cs">
+    <Compile Include="Screens\Provider\frmDeleteSupplier.Designer.cs">
       <DependentUpon>frmDeleteSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmRegisterSupplier.cs">
+    <Compile Include="Screens\Provider\frmRegisterSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Provider\frmRegisterSupplier.Designer.cs">
+    <Compile Include="Screens\Provider\frmRegisterSupplier.Designer.cs">
       <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\frmMenu.cs">
+    <Compile Include="Screens\frmMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\frmMenu.Designer.cs">
+    <Compile Include="Screens\frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Login\frmRecovery.cs">
+    <Compile Include="Screens\Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Login\frmRecovery.Designer.cs">
-      <DependentUpon>frmRecovery.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\Manager\Login\frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Screens\Manager\Login\frmLogin.Designer.cs">
+    <Compile Include="Screens\Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmChangeEmployee.cs">
+    <Compile Include="Screens\HumanResources\frmChangeEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmChangeEmployee.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmChangeEmployee.Designer.cs">
       <DependentUpon>frmChangeEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmChangeEmployee1.cs">
+    <Compile Include="Screens\HumanResources\frmChangeEmployee1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmChangeEmployee1.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmChangeEmployee1.Designer.cs">
       <DependentUpon>frmChangeEmployee1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmConsultEmployee.cs">
+    <Compile Include="Screens\HumanResources\frmConsultEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmConsultEmployee.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmConsultEmployee.Designer.cs">
       <DependentUpon>frmConsultEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmConsultTimeCard.cs">
+    <Compile Include="Screens\HumanResources\frmConsultTimeCard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmConsultTimeCard.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmConsultTimeCard.Designer.cs">
       <DependentUpon>frmConsultTimeCard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmDismissEmployee.cs">
+    <Compile Include="Screens\HumanResources\frmDismissEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmDismissEmployee.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmDismissEmployee.Designer.cs">
       <DependentUpon>frmDismissEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmPayroll.cs">
+    <Compile Include="Screens\HumanResources\frmPayroll.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmPayroll.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmPayroll.Designer.cs">
       <DependentUpon>frmPayroll.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmRegisterEmployee.cs">
+    <Compile Include="Screens\HumanResources\frmRegisterEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmRegisterEmployee.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmRegisterEmployee.Designer.cs">
       <DependentUpon>frmRegisterEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmRegisterEmployee1.cs">
+    <Compile Include="Screens\HumanResources\frmRegisterEmployee1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\HumanResources\frmRegisterEmployee1.Designer.cs">
+    <Compile Include="Screens\HumanResources\frmRegisterEmployee1.Designer.cs">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Login\frmSplash.cs">
+    <Compile Include="Screens\Login\frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Login\frmSplash.Designer.cs">
+    <Compile Include="Screens\Login\frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmBrowseProducts.cs">
+    <Compile Include="Screens\Stock\Products\frmBrowseProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmBrowseProducts.Designer.cs">
+    <Compile Include="Screens\Stock\Products\frmBrowseProducts.Designer.cs">
       <DependentUpon>frmBrowseProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmChangeProducts.cs">
+    <Compile Include="Screens\Stock\Products\frmChangeProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmChangeProducts.Designer.cs">
+    <Compile Include="Screens\Stock\Products\frmChangeProducts.Designer.cs">
       <DependentUpon>frmChangeProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmDeleteProducts.cs">
+    <Compile Include="Screens\Stock\Products\frmDeleteProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmDeleteProducts.Designer.cs">
+    <Compile Include="Screens\Stock\Products\frmDeleteProducts.Designer.cs">
       <DependentUpon>frmDeleteProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmRegisterProducts.cs">
+    <Compile Include="Screens\Stock\Products\frmRegisterProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Products\frmRegisterProducts.Designer.cs">
+    <Compile Include="Screens\Stock\Products\frmRegisterProducts.Designer.cs">
       <DependentUpon>frmRegisterProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmChangeSupplies.cs">
+    <Compile Include="Screens\Stock\Supplies\frmChangeSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmChangeSupplies.Designer.cs">
+    <Compile Include="Screens\Stock\Supplies\frmChangeSupplies.Designer.cs">
       <DependentUpon>frmChangeSupplies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmConsultSupplies.cs">
+    <Compile Include="Screens\Stock\Supplies\frmConsultSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmConsultSupplies.Designer.cs">
+    <Compile Include="Screens\Stock\Supplies\frmConsultSupplies.Designer.cs">
       <DependentUpon>frmConsultSupplies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmDeleteSupplies.cs">
+    <Compile Include="Screens\Stock\Supplies\frmDeleteSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmDeleteSupplies.Designer.cs">
+    <Compile Include="Screens\Stock\Supplies\frmDeleteSupplies.Designer.cs">
       <DependentUpon>frmDeleteSupplies.cs</DependentUpon>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmRegisterSupplies.cs">
+    <Compile Include="Screens\Stock\Supplies\frmRegisterSupplies.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Screens\Manager\Stock\Supplies\frmRegisterSupplies.Designer.cs">
+    <Compile Include="Screens\Stock\Supplies\frmRegisterSupplies.Designer.cs">
       <DependentUpon>frmRegisterSupplies.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -401,109 +395,106 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Screens\Employee\frmEmployeeTimeCard.resx">
-      <DependentUpon>frmEmployeeTimeCard.cs</DependentUpon>
+    <EmbeddedResource Include="Screens\HumanResources\frmTimeCard.resx">
+      <DependentUpon>frmTimeCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\CRM\frmChangeCustomer.resx">
+    <EmbeddedResource Include="Screens\CRM\frmChangeCustomer.resx">
       <DependentUpon>frmChangeCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\CRM\frmConsultCustomer.resx">
+    <EmbeddedResource Include="Screens\CRM\frmConsultCustomer.resx">
       <DependentUpon>frmConsultCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\CRM\frmDeleteClient.resx">
+    <EmbeddedResource Include="Screens\CRM\frmDeleteClient.resx">
       <DependentUpon>frmDeleteClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\CRM\frmEmailSending.resx">
+    <EmbeddedResource Include="Screens\CRM\frmEmailSending.resx">
       <DependentUpon>frmEmailSending.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\CRM\frmRegisterCustomer.resx">
+    <EmbeddedResource Include="Screens\CRM\frmRegisterCustomer.resx">
       <DependentUpon>frmRegisterCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\frmCashflow.resx">
+    <EmbeddedResource Include="Screens\Financial\frmCashflow.resx">
       <DependentUpon>frmCashflow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\frmChangeAccount.resx">
+    <EmbeddedResource Include="Screens\Financial\frmChangeAccount.resx">
       <DependentUpon>frmChangeAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\frmDeleteAccount.resx">
+    <EmbeddedResource Include="Screens\Financial\frmDeleteAccount.resx">
       <DependentUpon>frmDeleteAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\frmQueryAccount.resx">
+    <EmbeddedResource Include="Screens\Financial\frmQueryAccount.resx">
       <DependentUpon>frmQueryAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Financial\frmRegisterAccount.resx">
+    <EmbeddedResource Include="Screens\Financial\frmRegisterAccount.resx">
       <DependentUpon>frmRegisterAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Provider\frmChangeProvider.resx">
+    <EmbeddedResource Include="Screens\Provider\frmChangeProvider.resx">
       <DependentUpon>frmChangeProvider.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Provider\frmConsultSupplier.resx">
+    <EmbeddedResource Include="Screens\Provider\frmConsultSupplier.resx">
       <DependentUpon>frmConsultSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Provider\frmDeleteSupplier.resx">
+    <EmbeddedResource Include="Screens\Provider\frmDeleteSupplier.resx">
       <DependentUpon>frmDeleteSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Provider\frmRegisterSupplier.resx">
+    <EmbeddedResource Include="Screens\Provider\frmRegisterSupplier.resx">
       <DependentUpon>frmRegisterSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\frmMenu.resx">
+    <EmbeddedResource Include="Screens\frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Login\frmLogin.resx">
+    <EmbeddedResource Include="Screens\Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Login\frmRecovery.resx">
-      <DependentUpon>frmRecovery.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Login\frmSplash.resx">
+    <EmbeddedResource Include="Screens\Login\frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmChangeEmployee.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmChangeEmployee.resx">
       <DependentUpon>frmChangeEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmChangeEmployee1.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmChangeEmployee1.resx">
       <DependentUpon>frmChangeEmployee1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmConsultEmployee.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmConsultEmployee.resx">
       <DependentUpon>frmConsultEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmConsultTimeCard.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmConsultTimeCard.resx">
       <DependentUpon>frmConsultTimeCard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmDismissEmployee.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmDismissEmployee.resx">
       <DependentUpon>frmDismissEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmPayroll.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmPayroll.resx">
       <DependentUpon>frmPayroll.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmRegisterEmployee.resx">
       <DependentUpon>frmRegisterEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\HumanResources\frmRegisterEmployee1.resx">
+    <EmbeddedResource Include="Screens\HumanResources\frmRegisterEmployee1.resx">
       <DependentUpon>frmRegisterEmployee1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmBrowseProducts.resx">
+    <EmbeddedResource Include="Screens\Stock\Products\frmBrowseProducts.resx">
       <DependentUpon>frmBrowseProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmChangeProducts.resx">
+    <EmbeddedResource Include="Screens\Stock\Products\frmChangeProducts.resx">
       <DependentUpon>frmChangeProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmDeleteProducts.resx">
+    <EmbeddedResource Include="Screens\Stock\Products\frmDeleteProducts.resx">
       <DependentUpon>frmDeleteProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Products\frmRegisterProducts.resx">
+    <EmbeddedResource Include="Screens\Stock\Products\frmRegisterProducts.resx">
       <DependentUpon>frmRegisterProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmChangeSupplies.resx">
+    <EmbeddedResource Include="Screens\Stock\Supplies\frmChangeSupplies.resx">
       <DependentUpon>frmChangeSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmConsultSupplies.resx">
+    <EmbeddedResource Include="Screens\Stock\Supplies\frmConsultSupplies.resx">
       <DependentUpon>frmConsultSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmDeleteSupplies.resx">
+    <EmbeddedResource Include="Screens\Stock\Supplies\frmDeleteSupplies.resx">
       <DependentUpon>frmDeleteSupplies.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Screens\Manager\Stock\Supplies\frmRegisterSupplies.resx">
+    <EmbeddedResource Include="Screens\Stock\Supplies\frmRegisterSupplies.resx">
       <DependentUpon>frmRegisterSupplies.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Database\Entities\LiriousDB.edmx">
@@ -530,80 +521,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Estoque.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Facebook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Fechar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Fechar01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Fechar02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Financeiro.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Google.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hamburger.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Instagram.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Linkedin.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimizar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimizar01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Minimizar02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RH.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Suprimentos.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Voltar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\E-mail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Senha.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Voltar01.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Voltar02.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CRM.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Hamburger%281%29.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Visto01.png" />
-    <None Include="Resources\Visto.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fundo.png" />
@@ -620,6 +538,35 @@
       <DependentUpon>LiriousDB.edmx</DependentUpon>
       <LastGenOutput>LiriousDB.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Voltar02.png" />
+    <None Include="Resources\Voltar01.png" />
+    <None Include="Resources\Voltar.png" />
+    <None Include="Resources\Visto01.png" />
+    <None Include="Resources\Visto.png" />
+    <None Include="Resources\Senha01.png" />
+    <None Include="Resources\RH01.png" />
+    <None Include="Resources\RH.png" />
+    <None Include="Resources\Minimizar02.png" />
+    <None Include="Resources\Minimizar01.png" />
+    <None Include="Resources\Minimizar.png" />
+    <None Include="Resources\Linkedin.png" />
+    <None Include="Resources\Instagram.png" />
+    <None Include="Resources\Hamburger.gif" />
+    <None Include="Resources\Google.png" />
+    <None Include="Resources\Fornecedor01.png" />
+    <None Include="Resources\Fornecedor.png" />
+    <None Include="Resources\Financeiro01.png" />
+    <None Include="Resources\Financeiro.png" />
+    <None Include="Resources\Fechar02.png" />
+    <None Include="Resources\Fechar01.png" />
+    <None Include="Resources\Fechar.png" />
+    <None Include="Resources\Facebook.png" />
+    <None Include="Resources\Estoque01.png" />
+    <None Include="Resources\Estoque.png" />
+    <None Include="Resources\E-mail01.png" />
+    <None Include="Resources\CRM01.png" />
+    <None Include="Resources\CRM.png" />
+    <None Include="Resources\Capa.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
