@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultEmployee));
             this.panel = new System.Windows.Forms.Panel();
-            this.btnConsulatar = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.cboSexo = new System.Windows.Forms.ComboBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.mtxtAno = new System.Windows.Forms.MaskedTextBox();
@@ -44,9 +44,10 @@
             this.dataGridView18 = new System.Windows.Forms.DataGridView();
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.lblDepartamento = new System.Windows.Forms.Label();
-            this.dgvConsultarEmpregado = new System.Windows.Forms.DataGridView();
+            this.dgvFuncionário = new System.Windows.Forms.DataGridView();
+            this.Coluna0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nm_last_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEmpregado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionário)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -84,7 +85,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.BackColor = System.Drawing.Color.Transparent;
-            this.panel.Controls.Add(this.btnConsulatar);
+            this.panel.Controls.Add(this.btnConsultar);
             this.panel.Controls.Add(this.cboSexo);
             this.panel.Controls.Add(this.lblSexo);
             this.panel.Controls.Add(this.mtxtAno);
@@ -96,7 +97,7 @@
             this.panel.Controls.Add(this.dataGridView18);
             this.panel.Controls.Add(this.cboCargo);
             this.panel.Controls.Add(this.lblDepartamento);
-            this.panel.Controls.Add(this.dgvConsultarEmpregado);
+            this.panel.Controls.Add(this.dgvFuncionário);
             this.panel.Controls.Add(this.txtNome);
             this.panel.Controls.Add(this.lblNome);
             this.panel.Controls.Add(this.mtxtRG);
@@ -109,34 +110,35 @@
             this.panel.Size = new System.Drawing.Size(710, 418);
             this.panel.TabIndex = 566;
             // 
-            // btnConsulatar
+            // btnConsultar
             // 
-            this.btnConsulatar.BackColor = System.Drawing.Color.Transparent;
-            this.btnConsulatar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsulatar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsulatar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsulatar.ForeColor = System.Drawing.Color.Black;
-            this.btnConsulatar.Location = new System.Drawing.Point(590, 105);
-            this.btnConsulatar.Name = "btnConsulatar";
-            this.btnConsulatar.Size = new System.Drawing.Size(107, 30);
-            this.btnConsulatar.TabIndex = 703;
-            this.btnConsulatar.Text = "Consultar";
-            this.btnConsulatar.UseVisualStyleBackColor = false;
-            this.btnConsulatar.Click += new System.EventHandler(this.btnConsulatar_Click);
+            this.btnConsultar.BackColor = System.Drawing.Color.Transparent;
+            this.btnConsultar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.Black;
+            this.btnConsultar.Location = new System.Drawing.Point(590, 105);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(107, 30);
+            this.btnConsultar.TabIndex = 703;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cboSexo
             // 
+            this.cboSexo.DisplayMember = "hi";
             this.cboSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboSexo.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
             "M",
-            "F"});
+            "F",
+            "Nenhum"});
             this.cboSexo.Location = new System.Drawing.Point(72, 69);
             this.cboSexo.Name = "cboSexo";
             this.cboSexo.Size = new System.Drawing.Size(275, 23);
             this.cboSexo.TabIndex = 702;
-            this.cboSexo.SelectedIndexChanged += new System.EventHandler(this.cboSexo_SelectedIndexChanged);
             // 
             // lblSexo
             // 
@@ -156,7 +158,6 @@
             this.mtxtAno.Name = "mtxtAno";
             this.mtxtAno.Size = new System.Drawing.Size(194, 20);
             this.mtxtAno.TabIndex = 700;
-            this.mtxtAno.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtxtAno_MaskInputRejected);
             // 
             // lblNascimento
             // 
@@ -210,7 +211,6 @@
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(154, 23);
             this.cboDepartamento.TabIndex = 695;
-            this.cboDepartamento.SelectedIndexChanged += new System.EventHandler(this.cboDepartamento_SelectedIndexChanged);
             // 
             // dataGridView18
             // 
@@ -231,7 +231,6 @@
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(154, 23);
             this.cboCargo.TabIndex = 693;
-            this.cboCargo.SelectedIndexChanged += new System.EventHandler(this.cboCargo_SelectedIndexChanged);
             // 
             // lblDepartamento
             // 
@@ -244,15 +243,15 @@
             this.lblDepartamento.TabIndex = 692;
             this.lblDepartamento.Text = "Departamento:";
             // 
-            // dgvConsultarEmpregado
+            // dgvFuncionário
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvConsultarEmpregado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvConsultarEmpregado.BackgroundColor = System.Drawing.Color.DarkGray;
+            this.dgvFuncionário.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvFuncionário.BackgroundColor = System.Drawing.Color.DarkGray;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Candara", 9.75F, System.Drawing.FontStyle.Bold);
@@ -260,11 +259,12 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvConsultarEmpregado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvConsultarEmpregado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarEmpregado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFuncionário.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvFuncionário.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFuncionário.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Coluna0,
             this.Coluna1,
-            this.Coluna2,
+            this.nm_last_name,
             this.Coluna3,
             this.Coluna4,
             this.Coluna5,
@@ -278,39 +278,51 @@
             this.Coluna13,
             this.Coluna14,
             this.Coluna15});
-            this.dgvConsultarEmpregado.Location = new System.Drawing.Point(0, 141);
-            this.dgvConsultarEmpregado.Name = "dgvConsultarEmpregado";
-            this.dgvConsultarEmpregado.Size = new System.Drawing.Size(710, 277);
-            this.dgvConsultarEmpregado.TabIndex = 691;
+            this.dgvFuncionário.Location = new System.Drawing.Point(0, 141);
+            this.dgvFuncionário.Name = "dgvFuncionário";
+            this.dgvFuncionário.Size = new System.Drawing.Size(710, 277);
+            this.dgvFuncionário.TabIndex = 691;
+            // 
+            // Coluna0
+            // 
+            this.Coluna0.DataPropertyName = "id_emp";
+            this.Coluna0.HeaderText = "ID";
+            this.Coluna0.Name = "Coluna0";
+            this.Coluna0.ReadOnly = true;
             // 
             // Coluna1
             // 
+            this.Coluna1.DataPropertyName = "nm_firstName";
             this.Coluna1.HeaderText = "Nome";
             this.Coluna1.Name = "Coluna1";
             this.Coluna1.ReadOnly = true;
             this.Coluna1.Width = 120;
             // 
-            // Coluna2
+            // nm_last_name
             // 
-            this.Coluna2.HeaderText = "Sobrenome";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            this.Coluna2.Width = 120;
+            this.nm_last_name.DataPropertyName = "nm_lastName";
+            this.nm_last_name.HeaderText = "Sobrenome";
+            this.nm_last_name.Name = "nm_last_name";
+            this.nm_last_name.ReadOnly = true;
+            this.nm_last_name.Width = 120;
             // 
             // Coluna3
             // 
+            this.Coluna3.DataPropertyName = "nr_rg";
             this.Coluna3.HeaderText = "RG";
             this.Coluna3.Name = "Coluna3";
             this.Coluna3.ReadOnly = true;
             // 
             // Coluna4
             // 
+            this.Coluna4.DataPropertyName = "nr_cpf";
             this.Coluna4.HeaderText = "CPF";
             this.Coluna4.Name = "Coluna4";
             this.Coluna4.ReadOnly = true;
             // 
             // Coluna5
             // 
+            this.Coluna5.DataPropertyName = "nr_dependents";
             this.Coluna5.HeaderText = "Depedentes";
             this.Coluna5.Name = "Coluna5";
             this.Coluna5.ReadOnly = true;
@@ -318,6 +330,7 @@
             // 
             // Coluna6
             // 
+            this.Coluna6.DataPropertyName = "ds_sex";
             this.Coluna6.HeaderText = "Sexo";
             this.Coluna6.Name = "Coluna6";
             this.Coluna6.ReadOnly = true;
@@ -325,12 +338,14 @@
             // 
             // Coluna7
             // 
+            this.Coluna7.DataPropertyName = "dt_birth";
             this.Coluna7.HeaderText = "Nascimento";
             this.Coluna7.Name = "Coluna7";
             this.Coluna7.ReadOnly = true;
             // 
             // Coluna8
             // 
+            this.Coluna8.DataPropertyName = "ds_state";
             this.Coluna8.HeaderText = "Estado";
             this.Coluna8.Name = "Coluna8";
             this.Coluna8.ReadOnly = true;
@@ -338,12 +353,14 @@
             // 
             // Coluna9
             // 
+            this.Coluna9.DataPropertyName = "nr_cep";
             this.Coluna9.HeaderText = "CEP";
             this.Coluna9.Name = "Coluna9";
             this.Coluna9.ReadOnly = true;
             // 
             // Coluna10
             // 
+            this.Coluna10.DataPropertyName = "ds_address";
             this.Coluna10.HeaderText = "Endereço";
             this.Coluna10.Name = "Coluna10";
             this.Coluna10.ReadOnly = true;
@@ -351,6 +368,7 @@
             // 
             // Coluna11
             // 
+            this.Coluna11.DataPropertyName = "ds_note";
             this.Coluna11.HeaderText = "Complemento";
             this.Coluna11.Name = "Coluna11";
             this.Coluna11.ReadOnly = true;
@@ -358,18 +376,21 @@
             // 
             // Coluna12
             // 
+            this.Coluna12.DataPropertyName = "nr_cellphone";
             this.Coluna12.HeaderText = "Celular";
             this.Coluna12.Name = "Coluna12";
             this.Coluna12.ReadOnly = true;
             // 
             // Coluna13
             // 
+            this.Coluna13.DataPropertyName = "nr_tellphone";
             this.Coluna13.HeaderText = "Telefone";
             this.Coluna13.Name = "Coluna13";
             this.Coluna13.ReadOnly = true;
             // 
             // Coluna14
             // 
+            this.Coluna14.DataPropertyName = "ds_email";
             this.Coluna14.HeaderText = "E-mail";
             this.Coluna14.Name = "Coluna14";
             this.Coluna14.ReadOnly = true;
@@ -377,6 +398,7 @@
             // 
             // Coluna15
             // 
+            this.Coluna15.DataPropertyName = "pw_password";
             this.Coluna15.HeaderText = "Senha";
             this.Coluna15.Name = "Coluna15";
             this.Coluna15.ReadOnly = true;
@@ -393,7 +415,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(284, 23);
             this.txtNome.TabIndex = 650;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // lblNome
             // 
@@ -468,9 +489,9 @@
             this.lblConsultarFuncionário.ForeColor = System.Drawing.Color.Black;
             this.lblConsultarFuncionário.Location = new System.Drawing.Point(218, 9);
             this.lblConsultarFuncionário.Name = "lblConsultarFuncionário";
-            this.lblConsultarFuncionário.Size = new System.Drawing.Size(278, 28);
+            this.lblConsultarFuncionário.Size = new System.Drawing.Size(287, 28);
             this.lblConsultarFuncionário.TabIndex = 565;
-            this.lblConsultarFuncionário.Text = "Consultar Funconário";
+            this.lblConsultarFuncionário.Text = "Consultar Funcionário";
             this.lblConsultarFuncionário.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmConsultEmployee
@@ -492,7 +513,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEmpregado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFuncionário)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -504,7 +525,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.DataGridView dgvConsultarEmpregado;
+        private System.Windows.Forms.DataGridView dgvFuncionário;
         protected System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.MaskedTextBox mtxtRG;
@@ -524,9 +545,10 @@
         private System.Windows.Forms.MaskedTextBox mtxtAno;
         private System.Windows.Forms.ComboBox cboSexo;
         private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.Button btnConsulatar;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna0;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Coluna2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nm_last_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Coluna5;

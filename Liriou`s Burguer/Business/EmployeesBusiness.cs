@@ -145,32 +145,6 @@ namespace Liriou_s_Burguer.Business
             return employees;
         }
 
-        public List<Database.Entities.tb_employees> Consultar(Database.Entities.tb_employees employees)
-        {
-            List<Database.Entities.tb_employees> list = new List<Database.Entities.tb_employees>();
-
-            if (employees.nm_firstName != string.Empty && employees.nr_rg == string.Empty && employees.ds_sex == null)
-                list = db.ConsultarPorNome(employees);
-            else if (employees.nm_firstName == string.Empty && employees.nr_rg != string.Empty && employees.ds_sex == null)
-                list = db.ConsultarPorRG(employees);
-            else if (employees.nm_firstName == string.Empty && employees.nr_rg == string.Empty && employees.ds_sex != null)
-                list = db.ConsultarPorSexo(employees);
-            else if (employees.nm_firstName != string.Empty && employees.nr_rg != string.Empty && employees.ds_sex == null)
-                list = db.ConsultarPorNomeRG(employees);
-            else if (employees.nm_firstName != string.Empty && employees.nr_rg == string.Empty && employees.ds_sex != null)
-                list = db.ConsultarPorNomeSexo(employees);
-            else if (employees.nm_firstName == string.Empty && employees.nr_rg != string.Empty && employees.ds_sex != null)
-                list = db.ConsultarPorRGSexo(employees);
-
-            return list;
-        }
-
-        public List<Database.Entities.tb_employees> ConsultarTodos()
-        {
-            List<Database.Entities.tb_employees> list = db.ConsultarTodos();
-            return list;
-        }
-
         public void Alterar(Database.Entities.tb_employees employees)
         {
             if (employees.nm_firstName == string.Empty)
@@ -234,6 +208,74 @@ namespace Liriou_s_Burguer.Business
         public void Remover(int id)
         {
             db.Remover(id);
+        }
+
+        public List<Database.Entities.tb_employees> Consultar(string nome, string ano, string sexo, string rg, string dept, string func)
+        {
+            if (sexo == "Nenhum")
+            {
+                sexo = string.Empty;
+            }
+            if (dept == "Nenhum")
+            {
+                dept = string.Empty;
+            }
+            if (func == "Nenhum")
+            {
+                func = string.Empty;
+            }
+            if (rg == "  ,   ,   -" || rg == string.Empty)
+            {
+                rg = string.Empty;
+            }
+            if (rg != "  ,   ,   -" || rg != string.Empty)
+            {
+                rg = rg.Replace(",", ".");
+            }
+
+            // Consultar Sem Filtros
+            if (nome == string.Empty && ano == string.Empty && sexo == string.Empty && rg == string.Empty && dept == string.Empty && func == string.Empty)
+            {
+                db.ConsultarSemFiltros();
+            }
+
+            // Consultar por Nome
+            if (nome != string.Empty)
+            {
+                db.ConsultarPorNome(nome);
+            }
+
+            // Consultar por Ano
+            if (ano != string.Empty)
+            {
+                db.ConsultarPorAno(ano);
+            }
+
+            // Consultar por Sexo
+            if (sexo != string.Empty)
+            {
+                db.ConsultarPorSexo(sexo);
+            }
+
+            // Consultar por RG
+            if (rg != string.Empty)
+            {
+                db.ConsultarPorRG(rg);
+            }
+
+            // Consultar por Departamento
+            if (dept != string.Empty)
+            {
+                db.ConsultarPorDept(dept);
+            }
+
+            // Consultar por Cargo
+            if (func != string.Empty)
+            {
+                db.ConsultarPorFunc(func);
+            }
+
+            return db.Consultar();
         }
     }
 }

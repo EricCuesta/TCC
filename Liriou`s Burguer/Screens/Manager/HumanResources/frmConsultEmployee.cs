@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Liriou_s_Burguer.Database.Entities;
+using Liriou_s_Burguer.Business;
 
 namespace Liriou_s_Burguer.Screens.Manager.HumanResources
 {
@@ -15,123 +17,39 @@ namespace Liriou_s_Burguer.Screens.Manager.HumanResources
         public frmConsultEmployee()
         {
             InitializeComponent();
-            dgvConsultarEmpregado.AutoGenerateColumns = false;
+            dgvFuncionário.AutoGenerateColumns = false;
+            this.CarregarCombos();
         }
 
-        private void Consulta()
+        private void CarregarCombos()
         {
-            Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-            Database.Entities.tb_department department = new Database.Entities.tb_department();
-            Database.Entities.tb_function function = new Database.Entities.tb_function();
-            employees.nm_firstName = txtNome.Text;
-            employees.nr_rg = mtxtRG.Text;
-            employees.ds_sex = cboSexo.Text;
-            department.nm_department = cboDepartamento.Text;
-            function.nm_function = cboCargo.Text;
-            
-            Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
-            List<Database.Entities.tb_employees> employeeslista = busemployees.Consultar(employees);
+            liriousdbEntities DB = new liriousdbEntities();
+            List<tb_department> listDept = DB.tb_department.ToList();
+            List<tb_function> listFunc = DB.tb_function.ToList();
 
-            Business.DepartmentBusiness busdepartments = new Business.DepartmentBusiness();
-            List<Database.Entities.tb_department> departmentslist = busdepartments.Consultar(department);
-
-            Business.FunctionBusiness busfunction = new Business.FunctionBusiness();
-            List<Database.Entities.tb_function> functionlist = busfunction.Consultar(function);
-
-            dgvConsultarEmpregado.DataSource = employeeslista;
-        }
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-            if (txtNome.Text != string.Empty)
+            foreach (tb_department dept in listDept)
             {
-                txtNome.Enabled = true;
-                mtxtAno.Enabled = true;
-                cboSexo.Enabled = true;
-
-                mtxtRG.Enabled = false;
-                cboDepartamento.Enabled = false;
-                cboCargo.Enabled = false;
-
-                this.Consulta();
+                cboDepartamento.Items.Add(dept.nm_department);
             }
-            else
+            foreach (tb_function func in listFunc)
             {
-                mtxtRG.Enabled = true;
-                txtNome.Enabled = true;
-                cboDepartamento.Enabled = true;
-                cboCargo.Enabled = true;
-                mtxtAno.Enabled = true;
-                cboSexo.Enabled = true;
+                cboCargo.Items.Add(func.nm_function);
             }
         }
 
-        private void cboSexo_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnConsultar_Click(object sender, EventArgs e)
         {
-            if (cboSexo.Text != null)
-            {
-                mtxtRG.Enabled = true;
+            string nome = txtNome.Text;
+            string ano = mtxtAno.Text;
+            string sexo = cboSexo.Text;
+            string rg = mtxtRG.Text;
+            string dept = cboDepartamento.Text;
+            string func = cboCargo.Text;
 
-                txtNome.Enabled = false;
-                cboDepartamento.Enabled = false;
-                cboCargo.Enabled = false;
-                mtxtAno.Enabled = false;
-                cboSexo.Enabled = false;
+            EmployeesBusiness EB = new EmployeesBusiness();
+            List<tb_employees> list = EB.Consultar(nome, ano, sexo, rg, dept, func);
 
-                this.Consulta();
-            }
-            else
-            {
-                mtxtRG.Enabled = true;
-                txtNome.Enabled = true;
-                cboDepartamento.Enabled = true;
-                cboCargo.Enabled = true;
-                mtxtAno.Enabled = true;
-                cboSexo.Enabled = true;
-            }
-        }
-
-        private void mtxtAno_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-            if (mtxtAno.Text != string.Empty)
-            {
-                txtNome.Enabled = true;
-                mtxtAno.Enabled = true;
-                cboSexo.Enabled = true;
-
-                mtxtRG.Enabled = false;
-                cboDepartamento.Enabled = false;
-                cboCargo.Enabled = false;
-
-                this.Consulta();
-            }
-            else
-            {
-                mtxtRG.Enabled = true;
-                txtNome.Enabled = true;
-                cboDepartamento.Enabled = true;
-                cboCargo.Enabled = true;
-                mtxtAno.Enabled = true;
-                cboSexo.Enabled = true;
-            }
-        }
-
-        private void btnConsulatar_Click(object sender, EventArgs e)
-        {
-            Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
-            List<Database.Entities.tb_employees> employeeslista = busemployees.ConsultarTodos();
-
-            dgvConsultarEmpregado.DataSource = employeeslista;
-        }
-
-        private void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.Consulta();
-        }
-
-        private void cboCargo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.Consulta();
+            dgvFuncionário.DataSource = list;
         }
     }
 }

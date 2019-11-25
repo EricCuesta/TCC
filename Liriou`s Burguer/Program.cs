@@ -16,7 +16,7 @@ namespace Liriou_s_Burguer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Screens.Login.frmSplash());
+            Application.Run(new Screens.Manager.HumanResources.frmConsultEmployee());
         }
     }
 }

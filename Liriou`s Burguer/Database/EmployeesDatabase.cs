@@ -80,62 +80,6 @@ namespace Liriou_s_Burguer.Database
             return employees;
         }
 
-        public List<Entities.tb_employees> ConsultarPorNome(Entities.tb_employees employees)
-        {
-            List<Entities.tb_employees> list = db.tb_employees.Where(l => l.nm_firstName == employees.nm_firstName).ToList();
-
-            return list;
-        }
-
-        public List<Entities.tb_employees> ConsultarPorRG(Entities.tb_employees employees)
-        {
-            List<Entities.tb_employees> list = db.tb_employees.Where(l => l.nr_rg == employees.nr_rg).ToList();
-
-            return list;
-        }
-
-        public List<Entities.tb_employees> ConsultarPorSexo(Entities.tb_employees employees)
-        {
-            List<Entities.tb_employees> list = db.tb_employees.Where(l => l.ds_sex == employees.ds_sex).ToList();
-
-            return list;
-        }
-
-        public List<Entities.tb_employees> ConsultarPorNomeRG(Entities.tb_employees employees)
-        {
-            List<Entities.tb_employees> list = db.tb_employees.Where(l => l.nm_firstName == employees.nm_firstName && l.nr_rg == employees.nr_rg).ToList();
-
-            return list;
-        }
-
-        public List<Entities.tb_employees> ConsultarPorNomeSexo(Entities.tb_employees employees)
-        {
-            List<Entities.tb_employees> list = db.tb_employees.Where(l => l.nm_firstName == employees.nm_firstName && l.ds_sex == employees.ds_sex).ToList();
-
-            return list;
-        }
-
-        public List<Entities.tb_employees> ConsultarPorRGSexo(Entities.tb_employees employees)
-        {
-            List<Entities.tb_employees> list = db.tb_employees.Where(l => l.nr_rg == employees.nr_rg && l.ds_sex == employees.ds_sex).ToList();
-
-            return list;
-        }
-
-        public List<Entities.tb_employees> ConsultarTodos()
-        {
-            List<Entities.tb_employees> list = db.tb_employees.ToList();
-
-            return list;
-        }
-
-        public List<Entities.tb_employees> Consultar()
-        {
-            List<Entities.tb_employees> list = db.tb_employees.ToList();
-
-            return list;
-        }
-
         public void Alterar(Entities.tb_employees employees)
         {
             Entities.tb_employees list = db.tb_employees.First(t => t.id_emp == employees.id_emp);
@@ -172,6 +116,131 @@ namespace Liriou_s_Burguer.Database
             db.tb_employees.Remove(tb);
 
             db.SaveChanges();
+        }
+
+        List<Entities.tb_employees> listEmployees = null;
+        public void ConsultarSemFiltros()
+        {
+            listEmployees = db.tb_employees.ToList();
+        }
+
+        public void ConsultarPorNome(string nome)
+        {
+            List<Entities.tb_employees> list = db.tb_employees.Where(t => t.nm_firstName.Contains(nome)).ToList();
+            if (listEmployees == null)
+            {
+                listEmployees = list;
+            }
+            else
+            {
+                listEmployees = listEmployees.Where(t => t.nm_firstName.Contains(nome)).ToList();
+            }
+        }
+
+        public void ConsultarPorAno(string ano)
+        {
+            List<Entities.tb_employees> list = db.tb_employees.Where(t => t.dt_birth.Substring(6, 4) == ano).ToList();
+            if (listEmployees == null)
+            {
+                listEmployees = list;
+            }
+            else
+            {
+                listEmployees = listEmployees.Where(t => t.dt_birth.Substring(6, 4) == ano).ToList();
+            }
+        }
+
+        public void ConsultarPorSexo(string sexo)
+        {
+            List<Entities.tb_employees> list = db.tb_employees.Where(t => t.ds_sex == sexo).ToList();
+            if (listEmployees == null)
+            {
+                listEmployees = list;
+            }
+            else
+            {
+                listEmployees = listEmployees.Where(t => t.ds_sex == sexo).ToList();
+            }
+        }
+
+        public void ConsultarPorRG(string rg)
+        {
+            List<Entities.tb_employees> list = db.tb_employees.Where(t => t.nr_rg == rg).ToList();
+            if (listEmployees == null)
+            {
+                listEmployees = list;
+            }
+            else
+            {
+                listEmployees = listEmployees.Where(t => t.nr_rg == rg).ToList();
+            }
+        }
+
+        public void ConsultarPorDept(string dept)
+        {
+            List<Entities.tb_deptfunction> listDept = db.tb_deptfunction.Where(t => t.nm_department == dept).ToList();
+            List<Entities.tb_employees> list = new List<Entities.tb_employees>();
+            foreach (Entities.tb_deptfunction item in listDept)
+            {
+                list.Add(item.tb_employees);
+            }
+
+            if (listEmployees == null)
+            {
+                listEmployees = list;
+            }
+            else
+            {
+                List<Entities.tb_employees> listEmp = new List<Entities.tb_employees>();
+                foreach (Entities.tb_employees item in list)
+                {
+                    Entities.tb_employees emp = new Entities.tb_employees();
+                    emp = listEmployees.FirstOrDefault(t => t.id_emp == item.id_emp);
+
+                    if (emp != null)
+                    {
+                        listEmp.Add(emp);
+                    }
+                }
+
+                listEmployees = listEmp;
+            }
+        }
+
+        public void ConsultarPorFunc(string func)
+        {
+            List<Entities.tb_deptfunction> listFunc = db.tb_deptfunction.Where(t => t.nm_function == func).ToList();
+            List<Entities.tb_employees> list = new List<Entities.tb_employees>();
+            foreach (Entities.tb_deptfunction item in listFunc)
+            {
+                list.Add(item.tb_employees);
+            }
+
+            if (listEmployees == null)
+            {
+                listEmployees = list;
+            }
+            else
+            {
+                List<Entities.tb_employees> listEmp = new List<Entities.tb_employees>();
+                foreach (Entities.tb_employees item in list)
+                {
+                    Entities.tb_employees emp = new Entities.tb_employees();
+                    emp = listEmployees.FirstOrDefault(t => t.id_emp == item.id_emp);
+
+                    if (emp != null)
+                    {
+                        listEmp.Add(emp);
+                    }
+                }
+
+                listEmployees = listEmp;
+            }
+        }
+
+        public List<Entities.tb_employees> Consultar()
+        {
+            return listEmployees;
         }
     }
 }
