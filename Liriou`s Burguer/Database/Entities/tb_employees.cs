@@ -18,6 +18,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public tb_employees()
         {
             this.tb_bankaccount = new HashSet<tb_bankaccount>();
+            this.tb_benefits = new HashSet<tb_benefits>();
             this.tb_deptfunction = new HashSet<tb_deptfunction>();
             this.tb_discounts = new HashSet<tb_discounts>();
             this.tb_financial = new HashSet<tb_financial>();
@@ -53,6 +54,8 @@ namespace Liriou_s_Burguer.Database.Entities
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_bankaccount> tb_bankaccount { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_benefits> tb_benefits { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_deptfunction> tb_deptfunction { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -508,7 +508,6 @@
             this.dtpDemissão.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDemissão.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDemissão.Location = new System.Drawing.Point(144, 38);
-            this.dtpDemissão.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dtpDemissão.Name = "dtpDemissão";
             this.dtpDemissão.Size = new System.Drawing.Size(204, 23);
             this.dtpDemissão.TabIndex = 699;
@@ -521,7 +520,6 @@
             this.dtpContratação.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpContratação.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpContratação.Location = new System.Drawing.Point(163, 6);
-            this.dtpContratação.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dtpContratação.Name = "dtpContratação";
             this.dtpContratação.Size = new System.Drawing.Size(185, 23);
             this.dtpContratação.TabIndex = 698;
@@ -867,6 +865,7 @@
             this.cboDepartamento.Name = "cboDepartamento";
             this.cboDepartamento.Size = new System.Drawing.Size(154, 23);
             this.cboDepartamento.TabIndex = 662;
+            this.cboDepartamento.SelectedIndexChanged += new System.EventHandler(this.cboDepartamento_SelectedIndexChanged);
             // 
             // dataGridView18
             // 

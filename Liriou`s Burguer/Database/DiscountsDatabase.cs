@@ -10,9 +10,9 @@ namespace Liriou_s_Burguer.Database
     {
         Entities.liriousdbEntities db = new Entities.liriousdbEntities();
 
-        public void Inserir(Entities.tb_discounts discounts)
+        public void Inserir(Entities.tb_discounts dis)
         {
-            db.tb_discounts.Add(discounts);
+            db.tb_discounts.Add(dis);
 
             db.SaveChanges();
         }
@@ -24,23 +24,24 @@ namespace Liriou_s_Burguer.Database
             return list;
         }
 
-        public void Alterar(Entities.tb_discounts discounts)
+        public void Alterar(Entities.tb_discounts dis)
         {
-            Entities.tb_discounts list = db.tb_discounts.First(t => t.id_discounts == discounts.id_discounts);
-            list.vl_fgts = list.vl_fgts;
-            list.vl_incomeTax = list.vl_incomeTax;
-            list.vl_inss = list.vl_inss;
-
+            Entities.tb_discounts tb = db.tb_discounts.FirstOrDefault(t => t.id_emp == dis.id_emp);
+            tb.vl_foodPension = dis.vl_foodPension;
 
             db.SaveChanges();
         }
 
-        public void Remover(int id)
+        public void Remover(Entities.tb_discounts dis)
         {
-            Entities.tb_discounts remover = db.tb_discounts.First(t => t.id_discounts == id);
+            db.tb_discounts.Remove(dis);
 
-            db.tb_discounts.Remove(remover);
             db.SaveChanges();
+        }
+
+        public Entities.tb_discounts ConsultarPorID(int id)
+        {
+            return db.tb_discounts.FirstOrDefault(t => t.id_emp == id);
         }
     }
 }

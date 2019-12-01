@@ -175,6 +175,7 @@
     <Compile Include="Database\ProviderDatabase.cs" />
     <Compile Include="Database\SupplyDatabase.cs" />
     <Compile Include="Database\TimeCardDatabase.cs" />
+    <Compile Include="Model\Employees1Model.cs" />
     <Compile Include="Model\EmployeesModel.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Model\PayrollModel.cs" />
@@ -526,18 +527,7 @@
   <ItemGroup>
     <None Include="Resources\Fundo.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Database\Entities\LiriousDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LiriousDB.edmx</DependentUpon>
-      <LastGenOutput>LiriousDB.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Database\Entities\LiriousDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LiriousDB.edmx</DependentUpon>
-      <LastGenOutput>LiriousDB.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\Voltar02.png" />
     <None Include="Resources\Voltar01.png" />
     <None Include="Resources\Voltar.png" />
@@ -567,6 +557,18 @@
     <None Include="Resources\CRM01.png" />
     <None Include="Resources\CRM.png" />
     <None Include="Resources\Capa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database\Entities\LiriousDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+      <LastGenOutput>LiriousDB.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database\Entities\LiriousDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LiriousDB.edmx</DependentUpon>
+      <LastGenOutput>LiriousDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -33,7 +33,7 @@
             this.mtxtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.mtxtCelular = new System.Windows.Forms.MaskedTextBox();
             this.dataGridView17 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelAcesso = new System.Windows.Forms.Panel();
             this.chkCRM = new System.Windows.Forms.CheckBox();
             this.chkEstoque = new System.Windows.Forms.CheckBox();
             this.chkFinanceiro = new System.Windows.Forms.CheckBox();
@@ -91,7 +91,7 @@
             this.lblAlterarFuncionário = new System.Windows.Forms.Label();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panelAcesso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).BeginInit();
@@ -121,7 +121,7 @@
             this.panel.Controls.Add(this.mtxtTelefone);
             this.panel.Controls.Add(this.mtxtCelular);
             this.panel.Controls.Add(this.dataGridView17);
-            this.panel.Controls.Add(this.panel1);
+            this.panel.Controls.Add(this.panelAcesso);
             this.panel.Controls.Add(this.rdbFuncionário);
             this.panel.Controls.Add(this.rdbGerente);
             this.panel.Controls.Add(this.btnContinuar);
@@ -211,18 +211,18 @@
             this.dataGridView17.Size = new System.Drawing.Size(250, 2);
             this.dataGridView17.TabIndex = 699;
             // 
-            // panel1
+            // panelAcesso
             // 
-            this.panel1.Controls.Add(this.chkCRM);
-            this.panel1.Controls.Add(this.chkEstoque);
-            this.panel1.Controls.Add(this.chkFinanceiro);
-            this.panel1.Controls.Add(this.chkFornecedor);
-            this.panel1.Controls.Add(this.chkRH);
-            this.panel1.Location = new System.Drawing.Point(0, 323);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(249, 97);
-            this.panel1.TabIndex = 698;
-            this.panel1.Visible = false;
+            this.panelAcesso.Controls.Add(this.chkCRM);
+            this.panelAcesso.Controls.Add(this.chkEstoque);
+            this.panelAcesso.Controls.Add(this.chkFinanceiro);
+            this.panelAcesso.Controls.Add(this.chkFornecedor);
+            this.panelAcesso.Controls.Add(this.chkRH);
+            this.panelAcesso.Location = new System.Drawing.Point(0, 323);
+            this.panelAcesso.Name = "panelAcesso";
+            this.panelAcesso.Size = new System.Drawing.Size(249, 97);
+            this.panelAcesso.TabIndex = 698;
+            this.panelAcesso.Visible = false;
             // 
             // chkCRM
             // 
@@ -302,6 +302,7 @@
             this.rdbFuncionário.TabStop = true;
             this.rdbFuncionário.Text = "Funcionário";
             this.rdbFuncionário.UseVisualStyleBackColor = false;
+            this.rdbFuncionário.CheckedChanged += new System.EventHandler(this.rdbFuncionário_CheckedChanged_1);
             // 
             // rdbGerente
             // 
@@ -315,6 +316,7 @@
             this.rdbGerente.TabStop = true;
             this.rdbGerente.Text = "Gerente";
             this.rdbGerente.UseVisualStyleBackColor = true;
+            this.rdbGerente.CheckedChanged += new System.EventHandler(this.rdbGerente_CheckedChanged);
             // 
             // btnContinuar
             // 
@@ -350,7 +352,7 @@
             this.nudID.Name = "nudID";
             this.nudID.Size = new System.Drawing.Size(123, 23);
             this.nudID.TabIndex = 646;
-            this.nudID.ValueChanged += new System.EventHandler(this.nudID_ValueChanged);
+            this.nudID.Leave += new System.EventHandler(this.nudID_Leave);
             // 
             // lblID
             // 
@@ -375,7 +377,6 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(284, 23);
             this.txtSenha.TabIndex = 643;
-            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // lblSenha
             // 
@@ -651,7 +652,8 @@
             "Santa Catarina",
             "São Paulo",
             "Sergipe",
-            "Tocantins"});
+            "Tocantins",
+            "Empty"});
             this.cboEstado.Location = new System.Drawing.Point(69, 134);
             this.cboEstado.MaxLength = 32;
             this.cboEstado.Name = "cboEstado";
@@ -689,7 +691,6 @@
             this.dtpNascimento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNascimento.Location = new System.Drawing.Point(582, 102);
-            this.dtpNascimento.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(125, 23);
             this.dtpNascimento.TabIndex = 612;
@@ -729,7 +730,8 @@
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
             "Masculino",
-            "Feminino"});
+            "Feminino",
+            "Empty"});
             this.cboSexo.Location = new System.Drawing.Point(258, 102);
             this.cboSexo.MaxLength = 32;
             this.cboSexo.Name = "cboSexo";
@@ -948,8 +950,8 @@
             this.panel.ResumeLayout(false);
             this.panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView17)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panelAcesso.ResumeLayout(false);
+            this.panelAcesso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView15)).EndInit();
@@ -977,7 +979,6 @@
 
         private System.Windows.Forms.Panel panel;
         private System.Windows.Forms.DataGridView dataGridView16;
-        private System.Windows.Forms.NumericUpDown nudID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Button btnContinuar;
         public System.Windows.Forms.TextBox txtSenha;
@@ -1025,15 +1026,16 @@
         private System.Windows.Forms.Label lblAlterarFuncionário;
         public System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.DataGridView dataGridView17;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelAcesso;
         public System.Windows.Forms.CheckBox chkCRM;
         public System.Windows.Forms.CheckBox chkEstoque;
         public System.Windows.Forms.CheckBox chkFinanceiro;
         public System.Windows.Forms.CheckBox chkFornecedor;
         public System.Windows.Forms.CheckBox chkRH;
-        private System.Windows.Forms.RadioButton rdbFuncionário;
-        private System.Windows.Forms.RadioButton rdbGerente;
         public System.Windows.Forms.MaskedTextBox mtxtTelefone;
         public System.Windows.Forms.MaskedTextBox mtxtCelular;
+        public System.Windows.Forms.NumericUpDown nudID;
+        public System.Windows.Forms.RadioButton rdbFuncionário;
+        public System.Windows.Forms.RadioButton rdbGerente;
     }
 }

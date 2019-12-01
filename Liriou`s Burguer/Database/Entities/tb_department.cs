@@ -14,7 +14,16 @@ namespace Liriou_s_Burguer.Database.Entities
     
     public partial class tb_department
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_department()
+        {
+            this.tb_function = new HashSet<tb_function>();
+        }
+    
         public int id_department { get; set; }
         public string nm_department { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_function> tb_function { get; set; }
     }
 }

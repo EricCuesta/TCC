@@ -2,14 +2,22 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Liriou_s_Burguer.Model;
+using Liriou_s_Burguer.Business;
+using Liriou_s_Burguer.Database.Entities;
 
 namespace Liriou_s_Burguer.Business
 {
     class EmployeesBusiness
     {
         Database.EmployeesDatabase db = new Database.EmployeesDatabase();
+        DeptFunctionBusiness defuB = new DeptFunctionBusiness();
+        TimeCardBusiness ticdB = new TimeCardBusiness();
+        FinancialBusiness finB = new FinancialBusiness();
+        BenefitsBusiness benB = new BenefitsBusiness();
+        BankAccountBusiness bankB = new BankAccountBusiness();
+        DiscountsBusiness disB = new DiscountsBusiness();
 
-        public bool Login(Database.Entities.tb_employees emp)
+        public bool Login(tb_employees emp)
         {
             if (emp.ds_email == string.Empty || emp.ds_email == "Email do usuário")
             {
@@ -45,192 +53,54 @@ namespace Liriou_s_Burguer.Business
             db.AlterarRecuperação(employees);
         }
 
-        public void Inserir()
+        public tb_employees ConsultarPorID(int id)
         {
-            if (EmployeesModel.firstName == string.Empty)
-            {
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            }
-            if (EmployeesModel.lastName == string.Empty)
-            {
-                throw new ArgumentException("O campo sobrenome deve ser preenchido");
-            }
-            if (EmployeesModel.RG == string.Empty)
-            {
-                throw new ArgumentException("O campo RG deve ser preenchido");
-            }
-            if (EmployeesModel.CPF == string.Empty)
-            {
-                throw new ArgumentException("O campo CPF deve ser preenchido");
-            }
-            if (EmployeesModel.sex != string.Empty)
-            {
-                if (EmployeesModel.sex == "Masculino")
-                {
-                    EmployeesModel.sex = "M";
-                }
-                else
-                {
-                    EmployeesModel.sex = "F";
-                }
-            }
-            if (EmployeesModel.sex == string.Empty)
-            {
-                throw new ArgumentException("O campo sexo é obrigatório!");
-            }
-            if (EmployeesModel.state == string.Empty)
-            {
-                throw new ArgumentException("O campo estado é obrigatório!");
-            }
-            if (EmployeesModel.CEP == string.Empty)
-            {
-                throw new ArgumentException("O campo CEP deve ser preenchido");
-            }
-            if (EmployeesModel.address == string.Empty)
-            {
-                throw new ArgumentException("O campo endereço deve ser preenchido");
-            }
-            if (EmployeesModel.email == string.Empty)
-            {
-                throw new ArgumentException("O campo email é obrigatória!");
-            }
-            if (EmployeesModel.password == string.Empty)
-            {
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            }
-            if (EmployeesModel.employeer == false && EmployeesModel.manager == false)
-            {
-                throw new ArgumentException("Escolha Funcionario ou Gerente!");
-            }
-
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(EmployeesModel.email);
-            if (match.Success == false)
-            {
-                throw new ArgumentException(EmployeesModel.email + " é um e-mail inválido!");
-            }
+            tb_employees emp = db.ReturnEmployee(id);
+            return emp;
         }
 
-        public void Inserir1(Database.Entities.tb_employees emp)
+        public string DeleteEmployee(int id)
         {
-            emp.nm_firstName = EmployeesModel.firstName;
-            emp.nm_lastName = EmployeesModel.lastName;
-            emp.nr_rg = EmployeesModel.RG;
-            emp.nr_cpf = EmployeesModel.CPF;
-            emp.nr_dependents = EmployeesModel.dependents;
-            emp.ds_sex = EmployeesModel.sex;
-            emp.dt_birth = EmployeesModel.birth;
-            emp.ds_state = EmployeesModel.state;
-            emp.nr_cep = EmployeesModel.CEP;
-            emp.ds_address = EmployeesModel.address;
-            emp.ds_note = EmployeesModel.note;
-            emp.nr_cellphone = EmployeesModel.cellphone;
-            emp.nr_tellphone = EmployeesModel.tellphone;
-            emp.ds_email = EmployeesModel.email;
-            emp.pw_password = EmployeesModel.password;
-            emp.bt_manager = EmployeesModel.manager;
-            emp.bt_employee = EmployeesModel.employeer;
-            emp.bt_rh = EmployeesModel.RH;
-            emp.bt_provider = EmployeesModel.Provider;
-            emp.bt_financial = EmployeesModel.financial;
-            emp.bt_stock = EmployeesModel.stock;
-            emp.bt_crm = EmployeesModel.CRM;
-            db.Inserir1(emp);
-        }
+            tb_employees emp = ConsultarPorID(id);
+            tb_deptfunction defu = defuB.ConsultarPorID(id);
+            tb_timecard ticd = ticdB.ConsultarPorID(id);
+            tb_financial fin = finB.ConsultarPorID(id);
+            tb_benefits ben = benB.ConsultarPorID(id);
+            tb_bankaccount bank = bankB.ConsultarPorID(id);
+            tb_discounts dis = disB.ConsultarPorID(id);
 
-        public Database.Entities.tb_employees ConsultarPorID(int id)
-        {
-            Database.Entities.tb_employees employees = db.ConsultaPorID(id);
-
-            return employees;
-        }
-
-        public void Alterar(Database.Entities.tb_employees employees)
-        {
-            if (employees.nm_firstName == string.Empty)
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            if (employees.nm_lastName == string.Empty)
-                throw new ArgumentException("O campo sobrenome deve ser preenchido");
-            if (employees.nr_rg == string.Empty)
-                throw new ArgumentException("O campo RG deve ser preenchido");
-            if (employees.nr_cpf == string.Empty)
-                throw new ArgumentException("O campo CPF deve ser preenchido");
-            if (employees.ds_sex == string.Empty)
-                throw new ArgumentException("O campo sexo deve ser preenchido");
-            if (employees.ds_sex == "Masculino")
-                employees.ds_sex = "M";
+            if (emp != null && defu != null && ticd != null && fin != null && ben != null && bank != null && dis != null)
+            {
+                this.Remover(emp, defu, ticd, fin, ben, bank, dis);
+                return "Funcionário Removido com Sucesso!";
+            }
             else
-                employees.ds_sex = "F";
-            if (employees.ds_state == string.Empty)
-                throw new ArgumentException("O campo Estado deve ser preenchido");
-            if (employees.nr_cep == string.Empty)
-                throw new ArgumentException("O campo CEP deve ser preenchido");
-            if (employees.ds_address == string.Empty)
-                throw new ArgumentException("O campo endereço deve ser preenchido");
-            if (employees.ds_note == string.Empty)
-                throw new ArgumentException("O campo complemento deve ser preenchido");
-            if (employees.nr_cellphone == string.Empty && employees.nr_tellphone == string.Empty)
-                throw new ArgumentException("Celular ou Telefone devem ser preenchidos");
-            if (employees.ds_email == string.Empty)
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            if (employees.pw_password == string.Empty)
-                throw new ArgumentException("O campo nome deve ser preenchido");
-            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
-            Match match = regex.Match(employees.ds_email);
-            if (match.Success == false)
-                throw new ArgumentException(employees.ds_email + " é um e-mail inválido!");
-
-            Model.EmployeesModel.firstName = employees.nm_firstName;
-            Model.EmployeesModel.lastName = employees.nm_lastName;
-            Model.EmployeesModel.RG = employees.nr_rg;
-            Model.EmployeesModel.CPF = employees.nr_cpf;
-            Model.EmployeesModel.dependents = employees.nr_dependents;
-            Model.EmployeesModel.sex = employees.ds_sex;
-            Model.EmployeesModel.birth = employees.dt_birth;
-            Model.EmployeesModel.state = employees.ds_state;
-            Model.EmployeesModel.CEP = employees.nr_cep;
-            Model.EmployeesModel.address = employees.ds_state;
-            Model.EmployeesModel.note = employees.ds_note;
-            Model.EmployeesModel.cellphone = employees.nr_cellphone;
-            Model.EmployeesModel.tellphone = employees.nr_tellphone;
-            Model.EmployeesModel.email = employees.ds_email;
-            Model.EmployeesModel.password = employees.pw_password;
-            Model.EmployeesModel.manager = Convert.ToBoolean(employees.bt_manager);
-            Model.EmployeesModel.employeer = Convert.ToBoolean(employees.bt_employee);
-            Model.EmployeesModel.RH = Convert.ToBoolean(employees.bt_rh);
-            Model.EmployeesModel.financial = Convert.ToBoolean(employees.bt_financial);
-            Model.EmployeesModel.stock = Convert.ToBoolean(employees.bt_stock);
-            Model.EmployeesModel.CRM = Convert.ToBoolean(employees.bt_crm);
-
-            db.Alterar(employees);
+            {
+                return "Funcionário Inexistente!";
+            }
         }
 
-        public void Remover(int id)
+        public List<tb_employees> Consultar(string nome, string ano, string sexo, string rg, string dept, string func)
         {
-            db.Remover(id);
-        }
-
-        public List<Database.Entities.tb_employees> Consultar(string nome, string ano, string sexo, string rg, string dept, string func)
-        {
-            if (sexo == "Nenhum")
+            if (sexo == "Empty")
             {
                 sexo = string.Empty;
             }
-            if (dept == "Nenhum")
+            if (dept == "Empty")
             {
                 dept = string.Empty;
             }
-            if (func == "Nenhum")
+            if (func == "Empty")
             {
                 func = string.Empty;
             }
-            if (rg == "  ,   ,   -" || rg == string.Empty)
-            {
-                rg = string.Empty;
-            }
-            if (rg != "  ,   ,   -" || rg != string.Empty)
+            if (rg.Contains(","))
             {
                 rg = rg.Replace(",", ".");
+            }
+            if (rg == "  .   .   -" || rg == string.Empty)
+            {
+                rg = string.Empty;
             }
 
             // Consultar Sem Filtros
@@ -276,6 +146,220 @@ namespace Liriou_s_Burguer.Business
             }
 
             return db.Consultar();
+        }
+
+        public string VericarParametros(tb_employees emp)
+        {
+            if (emp.nm_firstName == string.Empty)
+            {
+                return "O campo nome deve ser preenchido!";
+            }
+            if (emp.nm_lastName == string.Empty)
+            {
+                return "O campo sobrenome deve ser preenchido!";
+            }
+            if (emp.nr_rg == string.Empty)
+            {
+                return "O campo RG deve ser preenchido!";
+            }
+            if (emp.nr_cpf == string.Empty)
+            {
+                return "O campo CPF deve ser preenchido!";
+            }
+            if (emp.ds_sex != "Masculino" && emp.ds_sex != "Feminino")
+            {
+                return "O campo sexo deve ser preenchido!";
+            }
+            if (emp.ds_sex == "Masculino")
+            {
+                emp.ds_sex = "M";
+            }
+            if (emp.ds_sex == "Feminino")
+            {
+                emp.ds_sex = "F";
+            }
+            if (emp.ds_state == string.Empty)
+            {
+                return "O campo estado deve ser preenchido!";
+            }
+            if (emp.nr_cep == string.Empty)
+            {
+                return "O campo CEP deve ser preenchido!";
+            }
+            if (emp.ds_address == string.Empty)
+            {
+                return "O campo endereço deve ser preenchido!";
+            }
+            if (emp.ds_email == string.Empty)
+            {
+                return "O campo email deve ser preenchido!";
+            }
+            if (emp.ds_email != string.Empty)
+            {
+                Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+                Match match = regex.Match(emp.ds_email);
+                if (match.Success == false)
+                {
+                    return emp.ds_email + " Não é um email válido";
+                }
+            }
+            if (emp.pw_password == string.Empty)
+            {
+                return "O campo senha deve ser preenchido!";
+            }
+            if (emp.bt_employee == false && emp.bt_manager == false)
+            {
+                return "Escolha Funcionario ou Gerente!";
+            }
+            if (emp.bt_manager == true && emp.bt_employee == false)
+            {
+                emp.bt_crm = true;
+                emp.bt_provider = true;
+                emp.bt_financial = true;
+                emp.bt_rh = true;
+                emp.bt_stock = true;
+            }
+
+            return string.Empty;
+        }
+
+        public string InsertEmployee(tb_employees emp, tb_deptfunction defu, tb_timecard ticd,
+        tb_financial fin, tb_benefits ben, tb_bankaccount bank, tb_discounts dis)
+        {
+            string error = string.Empty;
+
+            if (error == string.Empty)
+            {
+                error = this.VericarParametros(emp);
+            }
+
+            if (error == string.Empty)
+            {
+                error = defuB.VericarParametros(defu);
+            }
+
+            if (error == string.Empty)
+            {
+                error = ticdB.VericarParametros(ticd);
+            }
+
+            if (error == string.Empty)
+            {
+                error = finB.VericarParametros(fin);
+            }
+
+            if (error == string.Empty)
+            {
+                error = benB.VericarParametros(ben);
+            }
+
+            if (error == string.Empty)
+            {
+                error = bankB.VericarParametros(bank);
+            }
+
+            if (error == string.Empty)
+            {
+                error = disB.VericarParametros(dis);
+            }
+
+            if (error == string.Empty)
+            {
+                this.Insirir(emp, defu, ticd, fin, ben, bank, dis);
+                return "Insirido com sucesso!";
+            }
+            else
+            {
+                return error;
+            }
+        }
+
+        public string UpdateEmployee(tb_employees emp, tb_deptfunction defu, tb_timecard ticd,
+        tb_financial fin, tb_benefits ben, tb_bankaccount bank, tb_discounts dis)
+        {
+            string error = string.Empty;
+
+            if (error == string.Empty)
+            {
+                error = this.VericarParametros(emp);
+            }
+
+            if (error == string.Empty)
+            {
+                error = defuB.VericarParametros(defu);
+            }
+
+            if (error == string.Empty)
+            {
+                error = ticdB.VericarParametros(ticd);
+            }
+
+            if (error == string.Empty)
+            {
+                error = finB.VericarParametros(fin);
+            }
+
+            if (error == string.Empty)
+            {
+                error = benB.VericarParametros(ben);
+            }
+
+            if (error == string.Empty)
+            {
+                error = bankB.VericarParametros(bank);
+            }
+
+            if (error == string.Empty)
+            {
+                error = disB.VericarParametros(dis);
+            }
+
+            if (error == string.Empty)
+            {
+                this.Alterar(emp, defu, ticd, fin, ben, bank, dis);
+                return "Alterado com sucesso!";
+            }
+            else
+            {
+                return error;
+            }
+        }
+
+        private void Insirir(tb_employees emp, tb_deptfunction defu, tb_timecard ticd,
+        tb_financial fin, tb_benefits ben, tb_bankaccount bank, tb_discounts dis)
+        {
+            int id = db.Insirir(emp);
+            defuB.Insirir(defu, id);
+            ticdB.Insirir(ticd, id);
+            finB.insirir(fin, id);
+            benB.Insirir(ben, id);
+            bankB.Insirir(bank, id);
+            disB.insirir(dis, id);
+        }
+
+        private void Alterar(tb_employees emp, tb_deptfunction defu, tb_timecard ticd,
+        tb_financial fin, tb_benefits ben, tb_bankaccount bank, tb_discounts dis)
+        {
+            int id = EmployeesModel.ID;
+            defuB.Alterar(defu, id);
+            ticdB.Alterar(ticd, id);
+            finB.Alterar(fin, id);
+            benB.Alterar(ben, id);
+            bankB.Alterar(bank, id);
+            disB.Alterar(dis, id);
+            db.Alterar(emp, id);
+        }
+
+        public void Remover(tb_employees emp, tb_deptfunction defu, tb_timecard ticd,
+        tb_financial fin, tb_benefits ben, tb_bankaccount bank, tb_discounts dis)
+        {
+            defuB.Remover(defu);
+            ticdB.Remover(ticd);
+            finB.Remover(fin);
+            benB.Remover(ben);
+            bankB.Remover(bank);
+            disB.Remover(dis);
+            db.Remover(emp);
         }
     }
 }

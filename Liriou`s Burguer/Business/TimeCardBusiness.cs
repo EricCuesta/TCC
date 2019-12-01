@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Liriou_s_Burguer.Database.Entities;
 
 namespace Liriou_s_Burguer.Business
 {
@@ -10,34 +11,45 @@ namespace Liriou_s_Burguer.Business
     {
         Database.TimeCardDatabase db = new Database.TimeCardDatabase();
 
-        public void Inserir(Database.Entities.tb_timecard ticd)
+        public void Insirir(tb_timecard ticd, int id)
         {
-            if (ticd.hr_fixedInput == string.Empty || ticd.hr_fixedOutput == string.Empty
-            || ticd.hr_fixedIntInput == string.Empty || ticd.hr_fixedIntOutput == string.Empty)
-            {
-                throw new ArgumentException("Horários de entrada e saída Obrigatórios!");
-            }
-
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            ticd.id_emp = DB.InsertEmp(Model.EmployeesModel.CPF);
+            ticd.id_emp = id;
 
             db.Inserir(ticd);
         }
 
-        public List<Database.Entities.tb_timecard> Consultar()
+        public string VericarParametros(tb_timecard ticd)
         {
-            List<Database.Entities.tb_timecard> list = db.Consultar();
+            if (ticd.hr_fixedInput == string.Empty || ticd.hr_fixedOutput == string.Empty
+            || ticd.hr_fixedIntInput == string.Empty || ticd.hr_fixedIntOutput == string.Empty)
+            {
+                return "Horários de entrada e saída Obrigatórios!";
+            }
+
+            return string.Empty;
+        }
+
+        public List<tb_timecard> Consultar()
+        {
+            List<tb_timecard> list = db.Consultar();
             return list;
         }
 
-        public void Alterar(Database.Entities.tb_timecard timecard, Database.Entities.tb_points points)
+        public void Alterar(tb_timecard ticd, int id)
         {
-            db.Alterar(timecard, points);
+            ticd.id_emp = id;
+
+            db.Alterar(ticd);
         }
 
-        public void Remover(int id)
+        public tb_timecard ConsultarPorID(int id)
         {
-            db.Remover(id);
+            return db.ConsultarPorID(id);
+        }
+
+        public void Remover(tb_timecard ticd)
+        {
+            db.Remover(ticd);
         }
     }
 }

@@ -630,7 +630,8 @@
             "Santa Catarina",
             "São Paulo",
             "Sergipe",
-            "Tocantins"});
+            "Tocantins",
+            "Empty"});
             this.cboEstado.Location = new System.Drawing.Point(70, 101);
             this.cboEstado.MaxLength = 32;
             this.cboEstado.Name = "cboEstado";
@@ -668,7 +669,6 @@
             this.dtpNascimento.Font = new System.Drawing.Font("Cambria", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNascimento.Location = new System.Drawing.Point(582, 69);
-            this.dtpNascimento.MaxDate = new System.DateTime(2001, 1, 1, 0, 0, 0, 0);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(124, 23);
             this.dtpNascimento.TabIndex = 612;
@@ -708,7 +708,8 @@
             this.cboSexo.FormattingEnabled = true;
             this.cboSexo.Items.AddRange(new object[] {
             "Masculino",
-            "Feminino"});
+            "Feminino",
+            "Empty"});
             this.cboSexo.Location = new System.Drawing.Point(258, 69);
             this.cboSexo.MaxLength = 32;
             this.cboSexo.Name = "cboSexo";

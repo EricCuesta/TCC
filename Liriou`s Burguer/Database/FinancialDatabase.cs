@@ -31,24 +31,28 @@ namespace Liriou_s_Burguer.Database
             }
         }
 
-        public void Alterar(Entities.tb_financial financial)
+        public void Alterar(Entities.tb_financial fin)
         {
-            Entities.tb_financial list = DB.tb_financial.First(t => t.id_salary == financial.id_salary);
-
-            list.dt_fromDate = list.dt_fromDate;
-            list.dt_toDate = list.dt_toDate;
-            list.vl_grossSalary = list.vl_grossSalary;
-            list.vl_netSalary = list.vl_netSalary;
+            Entities.tb_financial tb = DB.tb_financial.FirstOrDefault(t => t.id_emp == fin.id_emp);
+            tb.vl_grossSalary = fin.vl_grossSalary;
+            tb.vl_netSalary = fin.vl_netSalary;
+            tb.ds_typeSalary = fin.ds_typeSalary;
+            tb.dt_fromDate = fin.dt_fromDate;
+            tb.dt_toDate = fin.dt_toDate;
 
             DB.SaveChanges();
         }
 
-        public void Remover(int id)
+        public void Remover(Entities.tb_financial fin)
         {
-            Entities.tb_financial remover = DB.tb_financial.First(t => t.id_salary == id);
+            DB.tb_financial.Remove(fin);
 
-            DB.tb_financial.Remove(remover);
             DB.SaveChanges();
+        }
+
+        public Entities.tb_financial ConsultarPorID(int id)
+        {
+            return DB.tb_financial.FirstOrDefault(t => t.id_emp == id);
         }
     }
 }

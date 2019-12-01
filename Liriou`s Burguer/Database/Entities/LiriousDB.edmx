@@ -116,7 +116,7 @@
           <Key>
             <PropertyRef Name="id_emp" />
           </Key>
-          <Property Name="id_emp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_emp" Type="int" Nullable="false" />
           <Property Name="nm_firstName" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="nm_lastName" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="nr_rg" Type="char" MaxLength="12" Nullable="false" />
@@ -177,6 +177,7 @@
             <PropertyRef Name="id_function" />
           </Key>
           <Property Name="id_function" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_department" Type="int" Nullable="false" />
           <Property Name="nm_function" Type="varchar" MaxLength="32" />
         </EntityType>
         <EntityType Name="tb_points">
@@ -255,9 +256,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <!--Errors Found During Generation:
-warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not part of the key of the table on the primary side of the relationship. The relationship was excluded.
-        <Association Name="tb_benefits_ibfk_1" />-->
+        <Association Name="tb_benefits_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_benefits" Type="Self.tb_benefits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_benefits">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="tb_cnae_ibfk_1">
           <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
           <End Role="tb_cnae" Type="Self.tb_cnae" Multiplicity="*" />
@@ -318,6 +328,18 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="tb_function_ibfk_1">
+          <End Role="tb_department" Type="Self.tb_department" Multiplicity="1" />
+          <End Role="tb_function" Type="Self.tb_function" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_department">
+              <PropertyRef Name="id_department" />
+            </Principal>
+            <Dependent Role="tb_function">
+              <PropertyRef Name="id_department" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="tb_points_ibfk_1">
           <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
           <End Role="tb_points" Type="Self.tb_points" Multiplicity="*" />
@@ -365,6 +387,10 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             <End Role="tb_employees" EntitySet="tb_employees" />
             <End Role="tb_bankaccount" EntitySet="tb_bankaccount" />
           </AssociationSet>
+          <AssociationSet Name="tb_benefits_ibfk_1" Association="Self.tb_benefits_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_benefits" EntitySet="tb_benefits" />
+          </AssociationSet>
           <AssociationSet Name="tb_cnae_ibfk_1" Association="Self.tb_cnae_ibfk_1">
             <End Role="tb_enterprise" EntitySet="tb_enterprise" />
             <End Role="tb_cnae" EntitySet="tb_cnae" />
@@ -384,6 +410,10 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <AssociationSet Name="tb_financial_ibfk_1" Association="Self.tb_financial_ibfk_1">
             <End Role="tb_employees" EntitySet="tb_employees" />
             <End Role="tb_financial" EntitySet="tb_financial" />
+          </AssociationSet>
+          <AssociationSet Name="tb_function_ibfk_1" Association="Self.tb_function_ibfk_1">
+            <End Role="tb_department" EntitySet="tb_department" />
+            <End Role="tb_function" EntitySet="tb_function" />
           </AssociationSet>
           <AssociationSet Name="tb_points_ibfk_1" Association="Self.tb_points_ibfk_1">
             <End Role="tb_employees" EntitySet="tb_employees" />
@@ -440,6 +470,7 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <Property Name="vl_lifeSafe" Type="Decimal" />
           <Property Name="vl_planHealth" Type="Decimal" />
           <Property Name="vl_planDental" Type="Decimal" />
+          <NavigationProperty Name="tb_employees" Relationship="Self.tb_benefits_ibfk_1" FromRole="tb_benefits" ToRole="tb_employees" />
         </EntityType>
         <EntityType Name="tb_client">
           <Key>
@@ -487,6 +518,7 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           </Key>
           <Property Name="id_department" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nm_department" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_function" Relationship="Self.tb_function_ibfk_1" FromRole="tb_department" ToRole="tb_function" />
         </EntityType>
         <EntityType Name="tb_deptfunction">
           <Key>
@@ -515,7 +547,7 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <Key>
             <PropertyRef Name="id_emp" />
           </Key>
-          <Property Name="id_emp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_emp" Type="Int32" Nullable="false" />
           <Property Name="nm_firstName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nm_lastName" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="nr_rg" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
@@ -541,6 +573,7 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <Property Name="bt_stock" Type="Boolean" />
           <Property Name="bt_crm" Type="Boolean" />
           <NavigationProperty Name="tb_bankaccount" Relationship="Self.tb_bankaccount_ibfk_1" FromRole="tb_employees" ToRole="tb_bankaccount" />
+          <NavigationProperty Name="tb_benefits" Relationship="Self.tb_benefits_ibfk_1" FromRole="tb_employees" ToRole="tb_benefits" />
           <NavigationProperty Name="tb_deptfunction" Relationship="Self.tb_deptfunction_ibfk_1" FromRole="tb_employees" ToRole="tb_deptfunction" />
           <NavigationProperty Name="tb_discounts" Relationship="Self.tb_discounts_ibfk_1" FromRole="tb_employees" ToRole="tb_discounts" />
           <NavigationProperty Name="tb_financial" Relationship="Self.tb_financial_ibfk_1" FromRole="tb_employees" ToRole="tb_financial" />
@@ -585,7 +618,9 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             <PropertyRef Name="id_function" />
           </Key>
           <Property Name="id_function" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_department" Type="Int32" Nullable="false" />
           <Property Name="nm_function" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tb_department" Relationship="Self.tb_function_ibfk_1" FromRole="tb_function" ToRole="tb_department" />
         </EntityType>
         <EntityType Name="tb_points">
           <Key>
@@ -665,6 +700,18 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="tb_benefits_ibfk_1">
+          <End Role="tb_employees" Type="Self.tb_employees" Multiplicity="1" />
+          <End Role="tb_benefits" Type="Self.tb_benefits" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_employees">
+              <PropertyRef Name="id_emp" />
+            </Principal>
+            <Dependent Role="tb_benefits">
+              <PropertyRef Name="id_emp" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="tb_cnae_ibfk_1">
           <End Role="tb_enterprise" Type="Self.tb_enterprise" Multiplicity="1" />
           <End Role="tb_cnae" Type="Self.tb_cnae" Multiplicity="*" />
@@ -686,6 +733,18 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             </Principal>
             <Dependent Role="tb_cpp">
               <PropertyRef Name="id_enterprise" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_function_ibfk_1">
+          <End Role="tb_department" Type="Self.tb_department" Multiplicity="1" />
+          <End Role="tb_function" Type="Self.tb_function" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_department">
+              <PropertyRef Name="id_department" />
+            </Principal>
+            <Dependent Role="tb_function">
+              <PropertyRef Name="id_department" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -772,6 +831,10 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             <End Role="tb_employees" EntitySet="tb_employees" />
             <End Role="tb_bankaccount" EntitySet="tb_bankaccount" />
           </AssociationSet>
+          <AssociationSet Name="tb_benefits_ibfk_1" Association="Self.tb_benefits_ibfk_1">
+            <End Role="tb_employees" EntitySet="tb_employees" />
+            <End Role="tb_benefits" EntitySet="tb_benefits" />
+          </AssociationSet>
           <AssociationSet Name="tb_cnae_ibfk_1" Association="Self.tb_cnae_ibfk_1">
             <End Role="tb_enterprise" EntitySet="tb_enterprise" />
             <End Role="tb_cnae" EntitySet="tb_cnae" />
@@ -779,6 +842,10 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
           <AssociationSet Name="tb_cpp_ibfk_1" Association="Self.tb_cpp_ibfk_1">
             <End Role="tb_enterprise" EntitySet="tb_enterprise" />
             <End Role="tb_cpp" EntitySet="tb_cpp" />
+          </AssociationSet>
+          <AssociationSet Name="tb_function_ibfk_1" Association="Self.tb_function_ibfk_1">
+            <End Role="tb_department" EntitySet="tb_department" />
+            <End Role="tb_function" EntitySet="tb_function" />
           </AssociationSet>
           <AssociationSet Name="tb_deptfunction_ibfk_1" Association="Self.tb_deptfunction_ibfk_1">
             <End Role="tb_employees" EntitySet="tb_employees" />
@@ -990,6 +1057,7 @@ warning 6035: The relationship 'tb_benefits_ibfk_1' has columns that are not par
             <EntityTypeMapping TypeName="liriousdbModel.tb_function">
               <MappingFragment StoreEntitySet="tb_function">
                 <ScalarProperty Name="id_function" ColumnName="id_function" />
+                <ScalarProperty Name="id_department" ColumnName="id_department" />
                 <ScalarProperty Name="nm_function" ColumnName="nm_function" />
               </MappingFragment>
             </EntityTypeMapping>

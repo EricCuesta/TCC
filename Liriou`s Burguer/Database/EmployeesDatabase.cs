@@ -9,17 +9,10 @@ namespace Liriou_s_Burguer.Database
     class EmployeesDatabase
     {
         Entities.liriousdbEntities db = new Entities.liriousdbEntities();
-
-        public int InsertEmp(string cpf)
-        {
-            Entities.tb_employees tb = db.tb_employees.First(t => t.nr_cpf == cpf);
-            return tb.id_emp;
-        }
-
         public bool Login(Entities.tb_employees emp)
         {
-            Entities.tb_employees tb = db.tb_employees.FirstOrDefault(t => t.ds_email == emp.ds_email &&
-                                                                      t.pw_password == emp.pw_password);
+            Entities.tb_employees tb = db.tb_employees.FirstOrDefault(t => t.ds_email.ToLower() == emp.ds_email &&
+                                                                      t.pw_password.ToLower() == emp.pw_password);
 
             if (tb != null)
             {
@@ -66,54 +59,46 @@ namespace Liriou_s_Burguer.Database
             }
         }
 
-        public void Inserir1(Entities.tb_employees employees)
+        public Entities.tb_employees ConsultarPorID(int id)
         {
-            db.tb_employees.Add(employees);
-
-            db.SaveChanges();
+            Entities.tb_employees emp = db.tb_employees.FirstOrDefault(t => t.id_emp == id);
+            return emp;
         }
 
-        public Entities.tb_employees ConsultaPorID(int id)
-        {
-            Entities.tb_employees employees = db.tb_employees.FirstOrDefault(t => t.id_emp == id);
-
-            return employees;
-        }
-
-        public void Alterar(Entities.tb_employees employees)
-        {
-            Entities.tb_employees list = db.tb_employees.First(t => t.id_emp == employees.id_emp);
-            list.nm_firstName = employees.nm_firstName;
-            list.nm_lastName = employees.nm_lastName;
-            list.nr_rg = employees.nr_rg;
-            list.nr_cpf = employees.nr_cpf;
-            list.nr_dependents = employees.nr_dependents;
-            list.ds_sex = employees.ds_sex;
-            list.dt_birth = employees.dt_birth;
-            list.ds_state = employees.ds_state;
-            list.nr_cep = employees.nr_cep;
-            list.ds_address = employees.ds_address;
-            list.ds_note = employees.ds_note;
-            list.nr_cellphone = employees.nr_cellphone;
-            list.nr_tellphone = employees.nr_tellphone;
-            list.ds_email = employees.ds_email;
-            list.pw_password = employees.pw_password;
-            list.bt_manager = employees.bt_manager;
-            list.bt_employee = employees.bt_employee;
-            list.bt_rh = employees.bt_rh;
-            list.bt_financial = employees.bt_financial;
-            list.bt_stock = employees.bt_stock;
-            list.bt_crm = employees.bt_crm;
-            list.dt_hiring = list.dt_hiring;
-            list.dt_resignation = list.dt_resignation;
-
-            db.SaveChanges();
-        }
-
-        public void Remover(int id)
+        public void Alterar(Entities.tb_employees emp, int id)
         {
             Entities.tb_employees tb = db.tb_employees.FirstOrDefault(t => t.id_emp == id);
-            db.tb_employees.Remove(tb);
+            tb.nm_firstName = emp.nm_firstName;
+            tb.nm_lastName = emp.nm_lastName;
+            tb.nr_cpf = emp.nr_cpf;
+            tb.nr_rg = emp.nr_rg;
+            tb.nr_dependents = emp.nr_dependents;
+            tb.ds_sex = emp.ds_sex;
+            tb.dt_birth = emp.dt_birth;
+            tb.ds_state = emp.ds_state;
+            tb.nr_cep = emp.nr_cep;
+            tb.ds_address = emp.ds_address;
+            tb.ds_note = emp.ds_note;
+            tb.nr_cellphone = emp.nr_cellphone;
+            tb.nr_tellphone = emp.nr_tellphone;
+            tb.ds_email = emp.ds_email;
+            tb.pw_password = emp.pw_password;
+            tb.dt_hiring = emp.dt_hiring;
+            tb.dt_resignation = emp.dt_resignation;
+            tb.bt_employee = emp.bt_employee;
+            tb.bt_manager = emp.bt_manager;
+            tb.bt_crm = emp.bt_crm;
+            tb.bt_provider = emp.bt_provider;
+            tb.bt_stock = emp.bt_stock;
+            tb.bt_rh = emp.bt_rh;
+            tb.bt_financial = emp.bt_financial;
+
+            db.SaveChanges();
+        }
+
+        public void Remover(Entities.tb_employees emp)
+        {
+            db.tb_employees.Remove(emp);
 
             db.SaveChanges();
         }
@@ -241,6 +226,22 @@ namespace Liriou_s_Burguer.Database
         public List<Entities.tb_employees> Consultar()
         {
             return listEmployees;
+        }
+
+        public int Insirir(Entities.tb_employees emp)
+        {
+            int idEmp = db.tb_employees.Max(t => t.id_emp) + 1;
+            emp.id_emp = idEmp;
+
+            db.tb_employees.Add(emp);
+            db.SaveChanges();
+
+            return idEmp;
+        }
+
+        public Entities.tb_employees ReturnEmployee(int id)
+        {
+            return db.tb_employees.FirstOrDefault(t => t.id_emp == id);
         }
     }
 }

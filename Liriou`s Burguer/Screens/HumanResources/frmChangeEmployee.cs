@@ -8,6 +8,9 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Liriou_s_Burguer.Model;
+using Liriou_s_Burguer.Business;
+using Liriou_s_Burguer.Database.Entities;
 
 namespace Liriou_s_Burguer.Screens.HumanResources
 {
@@ -28,110 +31,131 @@ namespace Liriou_s_Burguer.Screens.HumanResources
             }
         }
 
-        private void nudID_ValueChanged(object sender, EventArgs e)
-        {
-            int id = Convert.ToInt32(nudID.Value);
-
-            Business.EmployeesBusiness busemployees = new Business.EmployeesBusiness();
-            Database.Entities.tb_employees employees = busemployees.ConsultarPorID(id);
-
-            if (employees == null)
-            {
-                txtNome.Text = string.Empty;
-                txtSobrenome.Text = string.Empty;
-                mtxtRG.Text = string.Empty;
-                mtxtCPF.Text = string.Empty;
-                nudDependentes.Value = 0;
-                cboSexo.Text = null;
-                dtpNascimento.Value = DateTime.Now;
-                cboEstado.Text = null;
-                mtxtCEP.Text = string.Empty;
-                txtEndereço.Text = string.Empty;
-                txtComplemento.Text = string.Empty;
-                mtxtCelular.Text = string.Empty;
-                mtxtTelefone.Text = string.Empty;
-                txtEmail.Text = string.Empty;
-                txtSenha.Text = string.Empty;
-                rdbFuncionário.Checked = Convert.ToBoolean(string.Empty);
-                rdbGerente.Checked = Convert.ToBoolean(string.Empty);
-                chkRH.Checked = Convert.ToBoolean(string.Empty);
-                chkFinanceiro.Checked = Convert.ToBoolean(string.Empty);
-                chkFornecedor.Checked = Convert.ToBoolean(string.Empty);
-                chkEstoque.Checked = Convert.ToBoolean(string.Empty);
-                chkCRM.Checked = Convert.ToBoolean(string.Empty);
-            }
-            else
-            {
-                txtNome.Text = employees.nm_firstName;
-                txtSobrenome.Text = employees.nm_lastName;
-                mtxtRG.Text = employees.nr_rg;
-                mtxtCPF.Text = employees.nr_cpf;
-                if (employees.ds_sex == "M")
-                    cboSexo.Text = "Masculino";
-                else
-                    cboEstado.Text = "Feminino";
-                nudDependentes.Value = employees.nr_dependents;
-                dtpNascimento.Value = Convert.ToDateTime(employees.dt_birth);
-                cboEstado.Text = employees.ds_state;
-                mtxtCEP.Text = employees.nr_cep;
-                txtEndereço.Text = employees.ds_address;
-                txtComplemento.Text = employees.ds_note;
-                mtxtCelular.Text = employees.nr_cellphone;
-                mtxtTelefone.Text = employees.nr_tellphone;
-                txtEmail.Text = employees.ds_email;
-                txtSenha.Text = employees.pw_password;
-                rdbFuncionário.Checked = Convert.ToBoolean(employees.bt_employee);
-                rdbGerente.Checked = Convert.ToBoolean(employees.bt_manager);
-                chkRH.Checked = Convert.ToBoolean(employees.bt_rh);
-                chkFinanceiro.Checked = Convert.ToBoolean(employees.bt_financial);
-                chkFornecedor.Checked = Convert.ToBoolean(employees.bt_provider);
-                chkEstoque.Checked = Convert.ToBoolean(employees.bt_stock);
-                chkCRM.Checked = Convert.ToBoolean(employees.bt_crm);
-            }
-        }
-
         private void btnContinuar_Click(object sender, EventArgs e)
         {
             try
             {
-                Database.Entities.tb_employees employees = new Database.Entities.tb_employees();
-                employees.nm_firstName = txtNome.Text.Trim();
-                employees.nm_lastName = txtSobrenome.Text.Trim();
-                employees.nr_rg = mtxtRG.Text.Trim();
-                employees.nr_cpf = mtxtCPF.Text.Trim();
-                employees.nr_dependents = Convert.ToInt32(nudDependentes.Value);
-                employees.ds_sex = cboSexo.Text;
-                employees.dt_birth = dtpNascimento.Value.ToLongDateString();
-                employees.ds_state = cboEstado.Text;
-                employees.nr_cep = mtxtCEP.Text.Trim();
-                employees.ds_note = txtComplemento.Text.Trim();
-                employees.ds_address = txtEndereço.Text.Trim();
-                employees.nr_cellphone = mtxtCelular.Text.Trim();
-                employees.nr_tellphone = mtxtTelefone.Text.Trim();
-                employees.ds_email = txtEmail.Text.Trim();
-                employees.pw_password = txtSenha.Text.Trim();
-                employees.bt_manager = rdbGerente.Checked;
-                employees.bt_employee = rdbFuncionário.Checked;
-                employees.bt_rh = chkRH.Checked;
-                employees.bt_financial = chkFinanceiro.Checked;
-                employees.bt_stock = chkEstoque.Checked;
-                employees.bt_crm = chkCRM.Checked;
+                this.ReadControls();
 
-                Business.EmployeesBusiness db = new Business.EmployeesBusiness();
-                db.Inserir();
-
-                frmRegisterEmployee1 registerEmployee1 = new frmRegisterEmployee1();
-                registerEmployee1.ShowDialog();
-                Hide();
+                frmMenu.Current.openContedor(new frmChangeEmployee1());
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Ocorreu um erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        EmployeesBusiness EB = new EmployeesBusiness();
+        private void nudID_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                tb_employees emp = EB.ConsultarPorID(Convert.ToInt32(nudID.Value));
+                if (emp != null)
+                {
+                    txtNome.Text = emp.nm_firstName;
+                    txtSobrenome.Text = emp.nm_lastName;
+                    mtxtRG.Text = emp.nr_rg;
+                    mtxtCPF.Text = emp.nr_cpf;
+                    nudDependentes.Value = emp.nr_dependents;
+                    cboSexo.Text = emp.ds_sex == "M" ? "Masculino" : "Feminino";
+                    dtpNascimento.Value = Convert.ToDateTime(emp.dt_birth);
+                    cboEstado.Text = emp.ds_state;
+                    mtxtCEP.Text = emp.nr_cep;
+                    txtEndereço.Text = emp.ds_address;
+                    txtComplemento.Text = emp.ds_note;
+                    mtxtCelular.Text = emp.nr_cellphone;
+                    mtxtTelefone.Text = emp.nr_tellphone;
+                    txtEmail.Text = emp.ds_email;
+                    txtSenha.Text = emp.pw_password;
+                    rdbFuncionário.Checked = Convert.ToBoolean(emp.bt_employee);
+                    rdbGerente.Checked = Convert.ToBoolean(emp.bt_manager);
+                    chkCRM.Checked = Convert.ToBoolean(emp.bt_crm);
+                    chkFornecedor.Checked = Convert.ToBoolean(emp.bt_provider);
+                    chkEstoque.Checked = Convert.ToBoolean(emp.bt_stock);
+                    chkRH.Checked = Convert.ToBoolean(emp.bt_rh);
+                    chkFinanceiro.Checked = Convert.ToBoolean(emp.bt_financial);
+                }
+                else
+                {
+                    this.EmptyControls();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ocorreu um erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ReadControls()
+        {
+            EmployeesModel.ID = Convert.ToInt32(nudID.Value);
+            EmployeesModel.firstName = txtNome.Text;
+            EmployeesModel.lastName = txtSobrenome.Text;
+            EmployeesModel.RG = mtxtRG.Text;
+            EmployeesModel.CPF = mtxtCPF.Text;
+            EmployeesModel.dependents = Convert.ToInt32(nudDependentes.Value);
+            EmployeesModel.sex = cboSexo.Text;
+            EmployeesModel.birth = dtpNascimento.Value.ToShortDateString();
+            EmployeesModel.state = cboEstado.Text;
+            EmployeesModel.CEP = mtxtCEP.Text;
+            EmployeesModel.address = txtEndereço.Text;
+            EmployeesModel.note = txtComplemento.Text;
+            EmployeesModel.cellphone = mtxtCelular.Text;
+            EmployeesModel.tellphone = mtxtTelefone.Text;
+            EmployeesModel.email = txtEmail.Text;
+            EmployeesModel.password = txtSenha.Text;
+            EmployeesModel.employeer = rdbFuncionário.Checked;
+            EmployeesModel.manager = rdbGerente.Checked;
+            EmployeesModel.CRM = chkCRM.Checked;
+            EmployeesModel.Provider = chkFornecedor.Checked;
+            EmployeesModel.stock = chkEstoque.Checked;
+            EmployeesModel.RH = chkRH.Checked;
+            EmployeesModel.financial = chkFinanceiro.Checked;
+        }
+
+        private void EmptyControls()
+        {
+            txtNome.Text = string.Empty;
+            txtSobrenome.Text = string.Empty;
+            mtxtRG.Text = string.Empty;
+            mtxtCPF.Text = string.Empty;
+            nudDependentes.Value = 0;
+            dtpNascimento.Value = DateTime.Today;
+            cboSexo.Text = "Empty";
+            cboEstado.Text = "Empty";
+            mtxtCEP.Text = string.Empty;
+            txtEndereço.Text = string.Empty;
+            txtComplemento.Text = string.Empty;
+            mtxtCelular.Text = string.Empty;
+            mtxtTelefone.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtSenha.Text = string.Empty;
+            rdbFuncionário.Checked = false;
+            rdbGerente.Checked = false;
+            chkCRM.Checked = false;
+            chkFornecedor.Checked = false;
+            chkEstoque.Checked = false;
+            chkRH.Checked = false;
+            chkFinanceiro.Checked = false;
+        }
+
+        private void rdbFuncionário_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (rdbFuncionário.Checked == true)
+            {
+                panelAcesso.Visible = true;
+            }
+        }
+
+        private void rdbGerente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbGerente.Checked == true)
+            {
+                panelAcesso.Visible = false;
+            }
+        }
+
+
     }
 }

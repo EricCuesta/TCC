@@ -33,24 +33,17 @@ namespace Liriou_s_Burguer.Screens.HumanResources
         {
             try
             {
-                this.InserirModel();
-
-                Business.EmployeesBusiness db = new Business.EmployeesBusiness();
-                db.Inserir();
+                this.ReadControls();
 
                 frmMenu.Current.openContedor(new frmRegisterEmployee1());
             }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Ocorreu um Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void InserirModel()
+        private void ReadControls()
         {
             EmployeesModel.firstName = txtNome.Text;
             EmployeesModel.lastName = txtSobrenome.Text;

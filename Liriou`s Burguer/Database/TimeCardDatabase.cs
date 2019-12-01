@@ -10,9 +10,9 @@ namespace Liriou_s_Burguer.Database
     {
         Entities.liriousdbEntities db = new Entities.liriousdbEntities();
 
-        public void Inserir(Entities.tb_timecard timecard)
+        public void Inserir(Entities.tb_timecard ticd)
         {
-            db.tb_timecard.Add(timecard);
+            db.tb_timecard.Add(ticd);
 
             db.SaveChanges();
         }
@@ -24,29 +24,27 @@ namespace Liriou_s_Burguer.Database
             return list;
         }
 
-        public void Alterar(Entities.tb_timecard timecard, Entities.tb_points points)
+        public void Alterar(Entities.tb_timecard ticd)
         {
-            Entities.tb_timecard list = db.tb_timecard.First(t => t.id_timecard == timecard.id_timecard);
-            Entities.tb_points list1 = db.tb_points.First(t => t.id_point == points.id_point);
-            list.hr_fixedInput = list.hr_fixedInput;
-            list.hr_fixedOutput = list.hr_fixedOutput;
-            list.hr_fixedInput = list.hr_fixedInput;
-            list.hr_fixedIntOutput = list.hr_fixedIntOutput;
-            list1.hr_input = list1.hr_input;
-            list1.hr_output = list1.hr_output;
-            list1.hr_intInput = list1.hr_intInput;
-            list1.hr_intOutput = list1.hr_intOutput;
-            list1.hr_toPay = list1.hr_toPay;
+            Entities.tb_timecard tb = db.tb_timecard.FirstOrDefault(t => t.id_emp == ticd.id_emp);
+            tb.hr_fixedInput = ticd.hr_fixedInput;
+            tb.hr_fixedOutput = ticd.hr_fixedOutput;
+            tb.hr_fixedIntInput = ticd.hr_fixedIntInput;
+            tb.hr_fixedIntOutput = ticd.hr_fixedIntOutput;
 
             db.SaveChanges();
         }
 
-        public void Remover(int id)
+        public void Remover(Entities.tb_timecard ticd)
         {
-            Entities.tb_timecard remover = db.tb_timecard.First(t => t.id_timecard == id);
+            db.tb_timecard.Remove(ticd);
 
-            db.tb_timecard.Remove(remover);
             db.SaveChanges();
+        }
+
+        public Entities.tb_timecard ConsultarPorID(int id)
+        {
+            return db.tb_timecard.FirstOrDefault(t => t.id_emp == id);
         }
     }
 }

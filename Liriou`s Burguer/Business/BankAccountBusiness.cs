@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Liriou_s_Burguer.Database.Entities;
 
 namespace Liriou_s_Burguer.Business
 {
@@ -10,29 +11,50 @@ namespace Liriou_s_Burguer.Business
     {
         Database.BankAccountDatabase db = new Database.BankAccountDatabase();
 
-        public void Inserir(Database.Entities.tb_bankaccount bank)
+        public void Insirir(tb_bankaccount bank, int id)
+        {
+            bank.id_emp = id;
+
+            db.Inserir(bank);
+        }
+
+        public string VericarParametros(tb_bankaccount bank)
         {
             if (bank.nm_bank == string.Empty)
             {
-                throw new ArgumentException("Nome do Banco Obrigatório!");
+                return "Nome do Banco Obrigatório!";
             }
             if (bank.nr_account == string.Empty)
             {
-                throw new ArgumentException("Conta Obrigatória!");
+                return "Conta Obrigatória!";
             }
             if (bank.nr_agency == 0)
             {
-                throw new ArgumentException("Agência Obrigatória!");
+                return "Agência Obrigatória!";
             }
             if (bank.ds_typePerson == string.Empty)
             {
-                throw new ArgumentException("Tipo de Pessoa Obrigatória!");
+                return "Tipo de Pessoa Obrigatória!";
             }
 
-            Database.EmployeesDatabase DB = new Database.EmployeesDatabase();
-            bank.id_emp = DB.InsertEmp(Model.EmployeesModel.CPF);
+            return string.Empty;
+        }
 
-            db.Inserir(bank);
+        public void Alterar(tb_bankaccount bank, int id)
+        {
+            bank.id_emp = id;
+
+            db.Alterar(bank);
+        }
+
+        public tb_bankaccount ConsultarPorID(int id)
+        {
+            return db.ConsultarPorID(id);
+        }
+
+        public void Remover(tb_bankaccount bank)
+        {
+            db.Remover(bank);
         }
     }
 }

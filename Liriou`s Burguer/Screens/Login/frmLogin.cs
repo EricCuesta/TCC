@@ -22,11 +22,11 @@ namespace Liriou_s_Burguer.Screens.Login
             try
             {
                 Database.Entities.tb_employees emp = new Database.Entities.tb_employees();
-                emp.ds_email = Model.LoginModel.Email = txtEmail.Text.Trim();
-                emp.pw_password = Model.LoginModel.Senha = txtSenha.Text.Trim();
+                emp.ds_email = Model.LoginModel.Email = txtEmail.Text.Trim().ToLower();
+                emp.pw_password = Model.LoginModel.Senha = txtSenha.Text.Trim().ToLower();
 
-                Business.EmployeesBusiness busemp = new Business.EmployeesBusiness();
-                bool verificacao = busemp.Login(emp);
+                Business.EmployeesBusiness EB = new Business.EmployeesBusiness();
+                bool verificacao = EB.Login(emp);
 
                 if (verificacao == true)
                 {

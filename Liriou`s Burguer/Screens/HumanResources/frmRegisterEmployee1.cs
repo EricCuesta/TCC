@@ -22,85 +22,36 @@ namespace Liriou_s_Burguer.Screens.HumanResources
             CarregarCombos();
         }
 
-        Database.Entities.tb_employees employees;
+        tb_employees employees;
 
-        public void CarregarFuncionario(Database.Entities.tb_employees employees)
+        public void CarregarFuncionario(tb_employees employees)
         {
             this.employees = employees;
-          
+
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             try
             {
-                tb_employees emp = new tb_employees();
-                tb_deptfunction defu = new tb_deptfunction();
-                tb_timecard ticd = new tb_timecard();
-                tb_financial fin = new tb_financial();
-                tb_benefits ben = new tb_benefits();
-                tb_bankaccount bank = new tb_bankaccount();
-                tb_discounts dis = new tb_discounts();
+                tb_employees emp = this.ReadEmployees();
+                tb_deptfunction defu = this.ReadDeptFunction();
+                tb_timecard ticd = this.ReadTimeCard();
+                tb_financial fin = this.ReadFinancial();
+                tb_benefits ben = this.ReadBenefits();
+                tb_bankaccount bank = this.ReadBankAccount();
+                tb_discounts dis = this.ReadDiscounts();
 
-                EmployeesBusiness empB = new EmployeesBusiness();
-                DeptFunctionBusiness defuB = new DeptFunctionBusiness();
-                TimeCardBusiness ticdB = new TimeCardBusiness();
-                FinancialBusiness finB = new FinancialBusiness();
-                BenefitsBusiness benB = new BenefitsBusiness();
-                BankAccountBusiness bankB = new BankAccountBusiness();
-                DiscountsBusiness disB = new DiscountsBusiness();
+                EmployeesBusiness EB = new EmployeesBusiness();
+                string res = EB.InsertEmployee(emp, defu, ticd, fin, ben, bank, dis);
 
-                emp.dt_hiring = dtpContratação.Value.ToShortDateString();
-                emp.dt_resignation = "01/01/9999";
-                defu.nm_department = cboDepartamento.Text;
-                defu.nm_function = cboCargo.Text;
-                fin.vl_grossSalary = nudSalárioBruto.Value;
-                fin.dt_fromDate = DateTime.Now.ToShortDateString();
-                fin.dt_toDate = "01/01/9999";
-                fin.ds_typeSalary = cboTipoDeSalário.Text;
-                ben.bt_transport = chkValeTransporte.Checked;
-                ben.bt_food = chkValeAlimentação.Checked;
-                ben.bt_meal = chkValeRefeição.Checked;
-                ben.bt_lifeSafe = chkSeguroDeVida.Checked;
-                ben.bt_planHealth = chkPlanoDeSáude.Checked;
-                ben.bt_planDental = chkPlanoDental.Checked;
-                ben.vl_transport = nudTarifa.Value;
-                ben.vl_food = nudValeAlimentação.Value;
-                ben.vl_meal = nudValeRefeição.Value;
-                ben.vl_lifeSafe = nudSeguroDeVida.Value;
-                ben.vl_planHealth = nudPlanoDeSáude.Value;
-                ben.vl_planDental = nudPlanoDental.Value;
-                bank.nm_bank = txtNomeDoBanco.Text;
-                bank.nr_agency = Convert.ToInt32(mtxtAgência.Text);
-                bank.nr_account = mtxtConta.Text;
-                bank.ds_typePerson = cboTipoDePessoa.Text;
-                dis.vl_foodPension = nudPensãoAlimentícia.Value;
-                ticd.hr_fixedInput = mtxtEntrada.Text;
-                ticd.hr_fixedOutput = mtxtSaída.Text;
-                ticd.hr_fixedIntInput = mtxtInícioInt.Text;
-                ticd.hr_fixedIntOutput = mtxtFinalInt.Text;
-
-                empB.Inserir1(emp);
-                defuB.Inserir(defu);
-                ticdB.Inserir(ticd);
-                finB.Inserir(fin);
-                benB.Inserir(ben);
-                bankB.Inserir(bank);
-                disB.Inserir(dis);
-
-                MessageBox.Show("Funcionário cadastrado com sucesso");
-
-                this.Zerar();
+                MessageBox.Show(res, "liriou's Burguer", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-            catch (ArgumentException ex)
+            catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show(ex.Message, "Ocorreu um Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocorreu um erro!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+}
 
         private void imgVoltar_Click(object sender, EventArgs e)
         {
@@ -110,6 +61,7 @@ namespace Liriou_s_Burguer.Screens.HumanResources
             emp.mtxtRG.Text = EmployeesModel.RG;
             emp.mtxtCPF.Text = EmployeesModel.CPF;
             emp.nudDependentes.Value = EmployeesModel.dependents;
+            emp.cboSexo.Text = EmployeesModel.sex;
             emp.dtpNascimento.Value = Convert.ToDateTime(EmployeesModel.birth);
             emp.cboEstado.Text = EmployeesModel.state;
             emp.mtxtCEP.Text = EmployeesModel.CEP;
@@ -126,42 +78,8 @@ namespace Liriou_s_Burguer.Screens.HumanResources
             emp.chkFinanceiro.Checked = EmployeesModel.financial;
             emp.chkEstoque.Checked = EmployeesModel.stock;
             emp.chkCRM.Checked = EmployeesModel.CRM;
-            if (EmployeesModel.sex == "M")
-            {
-                emp.cboSexo.Text = "Masculino";
-            }
-            else
-            {
-                emp.cboSexo.Text = "Feminino";
-            }
 
             frmMenu.Current.openContedor(emp);
-        }
-
-        private void Zerar()
-        {
-            EmployeesModel.firstName = string.Empty;
-            EmployeesModel.lastName = string.Empty;
-            EmployeesModel.RG = string.Empty;
-            EmployeesModel.CPF = string.Empty;
-            EmployeesModel.dependents = 0;
-            EmployeesModel.sex = string.Empty;
-            EmployeesModel.birth = "01/01/2000";
-            EmployeesModel.state = string.Empty;
-            EmployeesModel.CEP = string.Empty;
-            EmployeesModel.address = string.Empty;
-            EmployeesModel.note = string.Empty;
-            EmployeesModel.cellphone = string.Empty;
-            EmployeesModel.tellphone = string.Empty;
-            EmployeesModel.email = string.Empty;
-            EmployeesModel.password = string.Empty;
-            EmployeesModel.employeer = false;
-            EmployeesModel.manager = false;
-            EmployeesModel.CRM = false;
-            EmployeesModel.Provider = false;
-            EmployeesModel.stock = false;
-            EmployeesModel.RH = false;
-            EmployeesModel.financial = false;
         }
 
         private void chkValeRefeição_CheckedChanged(object sender, EventArgs e)
@@ -248,17 +166,124 @@ namespace Liriou_s_Burguer.Screens.HumanResources
             }
         }
 
+        private tb_employees ReadEmployees()
+        {
+            tb_employees emp = new tb_employees();
+            emp.nm_firstName = EmployeesModel.firstName;
+            emp.nm_lastName = EmployeesModel.lastName;
+            emp.nr_rg = EmployeesModel.RG.Contains(",") ? EmployeesModel.RG.Replace(",", ".") : EmployeesModel.RG;
+            emp.nr_cpf = EmployeesModel.CPF;
+            emp.nr_dependents = EmployeesModel.dependents;
+            emp.ds_sex = EmployeesModel.sex;
+            emp.dt_birth = EmployeesModel.birth;
+            emp.ds_state = EmployeesModel.state;
+            emp.nr_cep = EmployeesModel.CEP;
+            emp.ds_address = EmployeesModel.address;
+            emp.ds_note = EmployeesModel.note;
+            emp.nr_cellphone = EmployeesModel.cellphone;
+            emp.nr_tellphone = EmployeesModel.tellphone;
+            emp.ds_email = EmployeesModel.email;
+            emp.pw_password = EmployeesModel.password;
+            emp.bt_manager = EmployeesModel.manager;
+            emp.bt_employee = EmployeesModel.employeer;
+            emp.bt_rh = EmployeesModel.RH;
+            emp.bt_provider = EmployeesModel.Provider;
+            emp.bt_financial = EmployeesModel.financial;
+            emp.bt_stock = EmployeesModel.stock;
+            emp.bt_crm = EmployeesModel.CRM;
+            emp.dt_hiring = dtpContratação.Value.ToShortDateString();
+            emp.dt_resignation = "01/01/9998";
+
+            return emp;
+        }
+
+        private tb_deptfunction ReadDeptFunction()
+        {
+            tb_deptfunction defu = new tb_deptfunction();
+            defu.nm_department = cboDepartamento.Text;
+            defu.nm_function = cboCargo.Text;
+
+            return defu;
+        }
+
+        private tb_timecard ReadTimeCard()
+        {
+            tb_timecard ticd = new tb_timecard();
+            ticd.hr_fixedInput = mtxtEntrada.Text;
+            ticd.hr_fixedOutput = mtxtSaída.Text;
+            ticd.hr_fixedIntInput = mtxtInícioInt.Text;
+            ticd.hr_fixedIntOutput = mtxtFinalInt.Text;
+
+            return ticd;
+        }
+
+        private tb_financial ReadFinancial()
+        {
+            tb_financial fin = new tb_financial();
+            fin.vl_grossSalary = nudSalárioBruto.Value;
+            fin.dt_fromDate = DateTime.Now.ToShortDateString();
+            fin.dt_toDate = "01/01/9998";
+            fin.ds_typeSalary = cboTipoDeSalário.Text;
+            fin.dt_fromDate = DateTime.Now.ToString("dd/MM/yyyy");
+            fin.dt_toDate = "01/01/9998";
+
+            return fin;
+        }
+
+        private tb_benefits ReadBenefits()
+        {
+            tb_benefits ben = new tb_benefits();
+            ben.bt_transport = chkValeTransporte.Checked;
+            ben.bt_food = chkValeAlimentação.Checked;
+            ben.bt_meal = chkValeRefeição.Checked;
+            ben.bt_lifeSafe = chkSeguroDeVida.Checked;
+            ben.bt_planHealth = chkPlanoDeSáude.Checked;
+            ben.bt_planDental = chkPlanoDental.Checked;
+            ben.vl_transport = nudTarifa.Value;
+            ben.vl_food = nudValeAlimentação.Value;
+            ben.vl_meal = nudValeRefeição.Value;
+            ben.vl_lifeSafe = nudSeguroDeVida.Value;
+            ben.vl_planHealth = nudPlanoDeSáude.Value;
+            ben.vl_planDental = nudPlanoDental.Value;
+
+            return ben;
+        }
+
+        private tb_bankaccount ReadBankAccount()
+        {
+            tb_bankaccount bank = new tb_bankaccount();
+            bank.nm_bank = txtNomeDoBanco.Text;
+            bank.nr_agency = mtxtAgência.Text == "" ? 0 : Convert.ToInt32(mtxtAgência.Text);
+            bank.nr_account = mtxtConta.Text;
+            bank.ds_typePerson = cboTipoDePessoa.Text;
+
+            return bank;
+        }
+
+        private tb_discounts ReadDiscounts()
+        {
+            tb_discounts dis = new tb_discounts();
+            dis.vl_foodPension = nudPensãoAlimentícia.Value;
+
+            return dis;
+        }
+
+        liriousdbEntities DB = new liriousdbEntities();
         private void CarregarCombos()
         {
-            liriousdbEntities DB = new liriousdbEntities();
-            List<tb_department> listDept = DB.tb_department.ToList();
-            List<tb_function> listFunc = DB.tb_function.ToList();
-
-            foreach (tb_department dept in listDept)
+            List<tb_department> list = DB.tb_department.ToList();
+            foreach (tb_department dept in list)
             {
                 cboDepartamento.Items.Add(dept.nm_department);
             }
-            foreach (tb_function func in listFunc)
+        }
+
+        private void cboDepartamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cboCargo.Items.Clear();
+
+            List<tb_function> list = DB.tb_function.Where(t => t.tb_department.nm_department == cboDepartamento.Text).ToList();
+            foreach (tb_function func in list)
             {
                 cboCargo.Items.Add(func.nm_function);
             }

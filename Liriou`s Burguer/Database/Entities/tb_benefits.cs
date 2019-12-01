@@ -28,5 +28,7 @@ namespace Liriou_s_Burguer.Database.Entities
         public Nullable<decimal> vl_lifeSafe { get; set; }
         public Nullable<decimal> vl_planHealth { get; set; }
         public Nullable<decimal> vl_planDental { get; set; }
+    
+        public virtual tb_employees tb_employees { get; set; }
     }
 }

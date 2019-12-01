@@ -15,6 +15,9 @@ namespace Liriou_s_Burguer.Database.Entities
     public partial class tb_function
     {
         public int id_function { get; set; }
+        public int id_department { get; set; }
         public string nm_function { get; set; }
+    
+        public virtual tb_department tb_department { get; set; }
     }
 }
