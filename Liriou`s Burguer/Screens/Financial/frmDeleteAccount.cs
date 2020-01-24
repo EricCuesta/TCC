@@ -47,7 +47,7 @@ namespace Liriou_s_Burguer.Screens.Financial
             Business.AccountBusiness busAccount = new Business.AccountBusiness();
             busAccount.Remover(id);
 
-            MessageBox.Show("Produto deletado com sucesso","Deletado", MessageBoxButtons.OK);
+            MessageBox.Show("Produto deletado com sucesso","Deletado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
     }
 }
