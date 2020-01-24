@@ -33,6 +33,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCashflow));
             this.panel = new System.Windows.Forms.Panel();
             this.dgvConsultarConta = new System.Windows.Forms.DataGridView();
+            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mtxtIdentificação = new System.Windows.Forms.MaskedTextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -42,14 +50,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
             this.lblFluxoDeCaixa = new System.Windows.Forms.Label();
-            this.Coluna1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Coluna8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarConta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -113,6 +113,59 @@
             this.dgvConsultarConta.Size = new System.Drawing.Size(710, 341);
             this.dgvConsultarConta.TabIndex = 654;
             // 
+            // Coluna1
+            // 
+            this.Coluna1.HeaderText = "ID";
+            this.Coluna1.Name = "Coluna1";
+            this.Coluna1.ReadOnly = true;
+            this.Coluna1.Width = 50;
+            // 
+            // Coluna2
+            // 
+            this.Coluna2.HeaderText = "Data & Hora";
+            this.Coluna2.Name = "Coluna2";
+            this.Coluna2.ReadOnly = true;
+            // 
+            // Coluna3
+            // 
+            this.Coluna3.HeaderText = "Tipo";
+            this.Coluna3.Name = "Coluna3";
+            this.Coluna3.ReadOnly = true;
+            this.Coluna3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Coluna3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Coluna4
+            // 
+            this.Coluna4.HeaderText = "Nome";
+            this.Coluna4.Name = "Coluna4";
+            this.Coluna4.ReadOnly = true;
+            this.Coluna4.Width = 120;
+            // 
+            // Coluna5
+            // 
+            this.Coluna5.HeaderText = "Quantidade";
+            this.Coluna5.Name = "Coluna5";
+            this.Coluna5.ReadOnly = true;
+            // 
+            // Coluna6
+            // 
+            this.Coluna6.HeaderText = "Tipo de Pagamento";
+            this.Coluna6.Name = "Coluna6";
+            this.Coluna6.ReadOnly = true;
+            // 
+            // Coluna7
+            // 
+            this.Coluna7.HeaderText = "Valor";
+            this.Coluna7.Name = "Coluna7";
+            this.Coluna7.ReadOnly = true;
+            // 
+            // Coluna8
+            // 
+            this.Coluna8.HeaderText = "Descrição";
+            this.Coluna8.Name = "Coluna8";
+            this.Coluna8.ReadOnly = true;
+            this.Coluna8.Width = 120;
+            // 
             // mtxtIdentificação
             // 
             this.mtxtIdentificação.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -139,6 +192,7 @@
             this.btnConsultar.TabIndex = 644;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // dataGridView3
             // 
@@ -223,59 +277,6 @@
             this.lblFluxoDeCaixa.TabIndex = 569;
             this.lblFluxoDeCaixa.Text = "Fluxo de Caixa";
             this.lblFluxoDeCaixa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Coluna1
-            // 
-            this.Coluna1.HeaderText = "ID";
-            this.Coluna1.Name = "Coluna1";
-            this.Coluna1.ReadOnly = true;
-            this.Coluna1.Width = 50;
-            // 
-            // Coluna2
-            // 
-            this.Coluna2.HeaderText = "Data & Hora";
-            this.Coluna2.Name = "Coluna2";
-            this.Coluna2.ReadOnly = true;
-            // 
-            // Coluna3
-            // 
-            this.Coluna3.HeaderText = "Tipo";
-            this.Coluna3.Name = "Coluna3";
-            this.Coluna3.ReadOnly = true;
-            this.Coluna3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Coluna3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Coluna4
-            // 
-            this.Coluna4.HeaderText = "Nome";
-            this.Coluna4.Name = "Coluna4";
-            this.Coluna4.ReadOnly = true;
-            this.Coluna4.Width = 120;
-            // 
-            // Coluna5
-            // 
-            this.Coluna5.HeaderText = "Quantidade";
-            this.Coluna5.Name = "Coluna5";
-            this.Coluna5.ReadOnly = true;
-            // 
-            // Coluna6
-            // 
-            this.Coluna6.HeaderText = "Tipo de Pagamento";
-            this.Coluna6.Name = "Coluna6";
-            this.Coluna6.ReadOnly = true;
-            // 
-            // Coluna7
-            // 
-            this.Coluna7.HeaderText = "Valor";
-            this.Coluna7.Name = "Coluna7";
-            this.Coluna7.ReadOnly = true;
-            // 
-            // Coluna8
-            // 
-            this.Coluna8.HeaderText = "Descrição";
-            this.Coluna8.Name = "Coluna8";
-            this.Coluna8.ReadOnly = true;
-            this.Coluna8.Width = 120;
             // 
             // frmCashflow
             // 

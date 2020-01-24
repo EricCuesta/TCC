@@ -16,5 +16,10 @@ namespace Liriou_s_Burguer.Screens.Financial
         {
             InitializeComponent();
         }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
